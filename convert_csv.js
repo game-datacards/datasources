@@ -14,7 +14,7 @@ const readCsv = async (file) => {
       const headers = allRows[0].split('|').slice(0, -1);
       const obj = {};
       row.split('|').slice(0, -1).forEach((val, i) => {
-        obj[headers[i]] = val.replace("'", '');
+        obj[headers[i]] = val.replace("'", '').replace(/(<([^>]+)>)/gi, '');
       });
       return obj;
     })
