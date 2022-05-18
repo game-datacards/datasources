@@ -18,7 +18,9 @@ const readCsv = async (file) => {
       });
       return obj;
     })
-    .slice(1);
+    .slice(1)
+    .map( (row) => row)
+    .slice(0,-1);
 
   fs.writeFileSync(`json/${file.replace('.csv', '')}.json`, JSON.stringify(res, null, 2));
 };
