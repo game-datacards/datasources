@@ -10,8 +10,8 @@ const readCsv = async (file) => {
 
   res = res
     .split('\r\n')
-    .map((row, index, allRows) => {
-      const headers = allRows[0].split('|').slice(0, -1);
+    .map((row, _index, allRows) => {
+      const headers = allRows[0].split('|').slice(0, -1).filter( h => h);
       const obj = {};
       row.split('|').slice(0, -1).forEach((val, i) => {
         obj[headers[i]] = val.replace("'", '').replace(/(<([^>]+)>)/gi, '');
@@ -22,7 +22,7 @@ const readCsv = async (file) => {
     .map( (row) => row)
     .slice(0,-1);
 
-  fs.writeFileSync(`json/${file.replace('.csv', '')}.json`, JSON.stringify(res, null, 2));
+  fs.writeFileSync(`40k/json/${file.replace('.csv', '')}.json`, JSON.stringify(res, null, 2));
 };
 
 fs.readdir("./", function (err, files) {
