@@ -18,8 +18,6 @@ const readCsv = async (file, cleanTags = true) => {
 
         if(cleanTags) {
           val = val.replace(/(<([^>]+)>)/gi, '');
-        } else {
-          val = val.replace("<", '&#60;').replace(">", '&#62;');
         }
 
         obj[headers[i]] = val;
