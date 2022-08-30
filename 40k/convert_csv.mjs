@@ -1,12 +1,15 @@
 import fs from 'fs';
 
 import { stripHtml } from "string-strip-html";
+import TurndownService from 'turndown';
 
 const readCsv = async (file, cleanTags = true) => {
   if (!file) {
     return;
   }
   let res = fs.readFileSync(file, 'utf8');
+
+  let service = new TurndownService();
 
   res = res.toString('utf8').replace(/^\uFEFF/, '');
 
@@ -19,12 +22,8 @@ const readCsv = async (file, cleanTags = true) => {
         val = val.replace("'", '');
 
         if(cleanTags) {
-          // val = val.replace(/(<([^>]+)>)/gi, '');
           val = stripHtml(val, { ignoreTags: ["table", "b", "i", "u", "ul", "li", "br" ]}).result;
-          val = val.replaceAll('\"', "&quot;");
-          val = val.replaceAll("'", '&apos;');
-          val = val.replaceAll("’", '&apos;');
-          val = val.replaceAll("‘", '&apos;');
+          val = service.turndown(val);
         }
 
         obj[headers[i]] = val;
