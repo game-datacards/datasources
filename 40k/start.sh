@@ -1,5 +1,7 @@
 
 rm -rf ./*.csv
+rm -rf ./*.xlsx
+
 wget http://wahapedia.ru/wh40k9ed/Last_update.csv
 wget http://wahapedia.ru/wh40k9ed/Abilities.csv
 wget http://wahapedia.ru/wh40k9ed/Datasheets.csv
