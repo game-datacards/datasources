@@ -23,4 +23,4 @@ wget http://wahapedia.ru/wh40k9ed/Wargear_list.csv
 wget http://wahapedia.ru/wh40k9ed/Warlord_traits.csv
 wget https://wahapedia.ru/wh40k9ed/Export%20Data%20Specs.xlsx
 
-node ./convert_csv.js
+node ./convert_csv.mjs
