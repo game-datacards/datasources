@@ -30,6 +30,7 @@ const dataDamage = await readJson('./json/Datasheets_damage.json');
 const dataFactions = await readJson('./json/Factions.json');
 const sheets = await readJson('./json/Datasheets.json');
 const dataSecondaries = await readJson('./json/Secondaries.json');
+const dataPsychic = await readJson('./json/PsychicPowers.json');
 
 dataFactions.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -48,6 +49,12 @@ const mappedSecondaries = dataSecondaries.map((secondary) => {
   secondary['cardType'] = 'secondary';
   secondary['source'] = '40k';
   return secondary;
+});
+
+const mappedPsychicPowers = dataPsychic.map((power) => {
+  power['cardType'] = 'psychic';
+  power['source'] = '40k';
+  return power;
 });
 
 mappedSecondaries.sort((a, b) => a.category.localeCompare(b.category));
@@ -134,6 +141,12 @@ mainFactions.map((faction) => {
     .sort((a, b) => {
       return a.name.localeCompare(b.name);
     });
+  faction['psychicpowers'] = mappedPsychicPowers
+    .filter((power) => power.faction_id === faction.id)
+    .sort((a, b) => {
+      return a.name.localeCompare(b.name);
+    });
+
   faction['secondaries'] = mappedSecondaries.filter((secondary) => {
     return (
       secondary.game === 'War Zone Nephilim: Grand Tournament' &&
