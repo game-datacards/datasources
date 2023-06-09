@@ -1,19 +1,6 @@
 import fs from 'fs';
 
-import pdfToText from 'pdf-to-text';
-
 import { v4 as uuidv4 } from 'uuid';
-
-for (let index = 7; index < 88; index++) {
-  if (index % 2 === 1) {
-    const options = { from: index, to: index };
-
-    pdfToText.pdfToText('./tyranids_index.pdf', options, function (err, data) {
-      if (err) throw err;
-      fs.writeFileSync(`tyranids-${index}.text`, data);
-    });
-  }
-}
 
 const readFile = async (file) => {
   if (!file) {
@@ -26,22 +13,28 @@ const readFile = async (file) => {
   return res;
 };
 
+const inputFolder = './marines_leviathan/';
+const outputFile = 'marines_leviathan';
+const factionId = 'SMLV';
+const factionName = 'Space Marines - Leviathan';
+const lineOfStats = 4;
+
 const units = [];
-fs.readdir('./', function (err, files) {
+fs.readdir(inputFolder, function (err, files) {
   files.forEach(async function (file) {
     if (file.indexOf('.text') > -1) {
-      let res = await readFile(file);
-      let splitText = res.split('\n');
+      let res = await readFile(inputFolder + file);
+      let splitText = res.replaceAll('\u0007', '').split('\n');
 
       let name = splitText[0].toLowerCase();
-      console.log(name);
-      const stats = splitText[3].split(' ').filter((val) => val);
+      console.log(file, name);
+      const stats = splitText[lineOfStats].split(' ').filter((val) => val);
 
       let coreKeywords = [];
       let factionKeywords = [];
       let invul;
       let damageRange;
-      let damageTableDescription = "";
+      let damageTableDescription = '';
       let startOfAbilities = { line: 0, pos: 0 };
       let startOfRanged = { line: 0, pos: 0 };
       let startOfMelee = { line: 0, pos: 0 };
@@ -100,40 +93,42 @@ fs.readdir('./', function (err, files) {
         }
       });
       let abilities = [];
-
-      for (let index = startOfAbilities.line + 1; index < splitText.length; index++) {
-        let line = splitText[index].substring(startOfAbilities.pos);
-        if (
-          line.indexOf('INVULNERABLE SAVE') > -1 ||
-          line.indexOf('FACTION KEYWORDS') > -1 ||
-          line.indexOf('DAMAGED:') > -1 ||
-          line.indexOf('Designer’s Note') > -1
-          
-        ) {
-          break;
+      try {
+        for (let index = startOfAbilities.line + 1; index < splitText.length; index++) {
+          let line = splitText[index].substring(startOfAbilities.pos);
+          if (
+            line.indexOf('INVULNERABLE SAVE') > -1 ||
+            line.indexOf('FACTION KEYWORDS') > -1 ||
+            line.indexOf('DAMAGED:') > -1 ||
+            line.indexOf('Designer’s Note') > -1
+          ) {
+            break;
+          }
+          if (line.length === 0) {
+            continue;
+          }
+          if (
+            line.indexOf(':') > -1 &&
+            line.indexOf('D6') === -1 &&
+            line.indexOf('phase:') === -1 &&
+            line.indexOf('model:') === -1 &&
+            line.indexOf('following:') === -1
+          ) {
+            abilities.push({
+              name: line.substring(0, line.indexOf(':')),
+              description: line.substring(line.indexOf(':') + 1),
+              showAbility: true,
+              showDescription: true,
+            });
+          } else {
+            const ab = abilities[abilities.length - 1];
+            abilities[abilities.length - 1].description =
+              abilities[abilities.length - 1].description + ' ' + line.trim();
+          }
         }
-        if (line.length === 0) {
-          continue;
-        }
-
-        if (
-          line.indexOf(':') > -1 &&
-          line.indexOf('D6') === -1 &&
-          line.indexOf('phase:') === -1 &&
-          line.indexOf('model:') === -1 &&
-          line.indexOf('following:') === -1
-        ) {
-          abilities.push({
-            name: line.substring(0, line.indexOf(':')),
-            description: line.substring(line.indexOf(':') + 1),
-            showAbility: true,
-            showDescription: true,
-          });
-        } else {
-          abilities[abilities.length - 1].description = abilities[abilities.length - 1].description + ' ' + line.trim();
-        }
+      } catch (e) {
+        console.error('error', name, e);
       }
-
       for (let index = startOfDamage.line + 1; index < splitText.length; index++) {
         let line = splitText[index].substring(startOfAbilities.pos);
         if (line.indexOf('INVULNERABLE SAVE') > -1 || line.indexOf('FACTION KEYWORDS') > -1) {
@@ -147,23 +142,52 @@ fs.readdir('./', function (err, files) {
       }
 
       const rangedWeapons = [];
+      let multiLineWeapon = 0;
       for (let index = startOfRanged.line + 1; index < startOfRanged.endLine; index++) {
         let line = splitText[index].substring(0, startOfAbilities.pos);
         if (line.trim().length > 0) {
           let name = line.substring(0, startOfRanged.pos).trim();
-          const stats = line
+          let stats = line
             .substring(startOfRanged.pos)
             .split(' ')
             .filter((val) => val);
 
+          console.log(line, multiLineWeapon);
+          if (multiLineWeapon === 1) {
+            multiLineWeapon = 2;
+            continue;
+          }
+          if (multiLineWeapon === 2) {
+            multiLineWeapon = 0;
+            continue;
+          }
+
           let keywords = [];
-          if (name.indexOf('[') > -1) {
-            keywords = name
-              .substring(name.indexOf('[') + 1, name.length - 1)
-              .toLowerCase()
-              .split(',')
-              .map((val) => val.trim());
-            name = name.substring(0, name.indexOf('['));
+          if (name.length > 0 && stats.length === 0) {
+            //probably a multiple line weapon, so get those lines here.
+            multiLineWeapon = 1;
+            stats = splitText[index + 1]
+              .substring(0, startOfAbilities.pos)
+              .substring(startOfRanged.pos, startOfAbilities.pos)
+              .split(' ')
+              .filter((val) => val);
+
+            if (splitText[index + 2].indexOf('[') > -1) {
+              keywords = splitText[index + 2]
+                .substring(splitText[index + 2].indexOf('[') + 1, splitText[index + 2].indexOf(']'))
+                .toLowerCase()
+                .split(',')
+                .map((val) => val.trim());
+            }
+          } else {
+            if (name.indexOf('[') > -1) {
+              keywords = name
+                .substring(name.indexOf('[') + 1, name.length - 1)
+                .toLowerCase()
+                .split(',')
+                .map((val) => val.trim());
+              name = name.substring(0, name.indexOf('['));
+            }
           }
           if (name.indexOf('–') > -1) {
             if (
@@ -221,28 +245,57 @@ fs.readdir('./', function (err, files) {
       }
 
       const meleeWeapons = [];
+      multiLineWeapon = 0;
       for (let index = startOfMelee.line + 1; index < startOfMelee.endLine; index++) {
         let line = splitText[index].substring(0, startOfAbilities.pos);
         if (line.trim().length > 0) {
           let name = line.substring(0, startOfMelee.pos).trim();
 
           if (name.indexOf('Before selecting targets for this ') > -1) {
+            break;
+          }
+          console.log(line, multiLineWeapon);
+          if (multiLineWeapon === 1) {
+            multiLineWeapon = 2;
+            continue;
+          }
+          if (multiLineWeapon === 2) {
+            multiLineWeapon = 0;
             continue;
           }
 
-          const stats = line
-            .substring(startOfMelee.pos)
+          let stats = line
+            .substring(startOfMelee.pos, startOfAbilities.pos)
             .split(' ')
             .filter((val) => val);
 
           let keywords = [];
-          if (name.indexOf('[') > -1) {
-            keywords = name
-              .substring(name.indexOf('[') + 1, name.length - 1)
-              .toLowerCase()
-              .split(',')
-              .map((val) => val.trim());
-            name = name.substring(0, name.indexOf('['));
+
+          if (name.length > 0 && stats.length === 0) {
+            //probably a multiple line weapon, so get those lines here.
+            multiLineWeapon = 1;
+            stats = splitText[index + 1]
+              .substring(0, startOfAbilities.pos)
+              .substring(startOfMelee.pos, startOfAbilities.pos)
+              .split(' ')
+              .filter((val) => val);
+
+            if (splitText[index + 2].indexOf('[') > -1) {
+              keywords = splitText[index + 2]
+                .substring(splitText[index + 2].indexOf('[') + 1, splitText[index + 2].indexOf(']'))
+                .toLowerCase()
+                .split(',')
+                .map((val) => val.trim());
+            }
+          } else {
+            if (name.indexOf('[') > -1) {
+              keywords = name
+                .substring(name.indexOf('[') + 1, name.length - 1)
+                .toLowerCase()
+                .split(',')
+                .map((val) => val.trim());
+              name = name.substring(0, name.indexOf('['));
+            }
           }
 
           if (name.indexOf('–') > -1) {
@@ -321,12 +374,12 @@ fs.readdir('./', function (err, files) {
       for (var i = 0; i < nameArray.length; i++) {
         nameArray[i] = nameArray[i].charAt(0).toUpperCase() + nameArray[i].slice(1);
       }
-      name = nameArray.join(" ");
+      name = nameArray.join(' ');
       const newUnit = {
         id: uuidv4(),
         name,
         source: '40k-10e',
-        faction_id: 'TYR',
+        faction_id: factionId,
         cardType: 'DataCard',
         abilities: {
           core: coreKeywords,
@@ -362,11 +415,21 @@ fs.readdir('./', function (err, files) {
         rangedWeapons,
         meleeWeapons,
         keywords,
-        factions: ['Tyranids'],
+        factions: ['Adeptus Astartes'],
       };
       units.push(newUnit);
     }
-    units.sort( (a, b) => a.name.localeCompare(b.name));
-    fs.writeFileSync(`./json/tyranids.json`, JSON.stringify(units, null, 2));
+    units.sort((a, b) => a.name.localeCompare(b.name));
+
+    const factions = {
+      id: factionId,
+      link: 'https://game-datacard.eu',
+      name: factionName,
+      is_subfaction: false,
+      parent_id: '',
+      datasheets: units,
+    };
+
+    fs.writeFileSync(`./json/${outputFile}.json`, JSON.stringify(factions, null, 2));
   });
 });
