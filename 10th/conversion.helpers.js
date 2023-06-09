@@ -12,10 +12,34 @@ const getKeywords = (lines, searchText) => {
 const getInvulValue = (lines) => {
   for (const [_index, line] of lines.entries()) {
     if (line.includes('INVULNERABLE SAVE')) {
-      return line.substring(line.indexOf('INVULNERABLE SAVE') + 'INVULNERABLE SAVE'.length).trim();
+      return line.substring(line.indexOf('INVULNERABLE SAVE') + 1 + 'INVULNERABLE SAVE'.length).trim();
     }
   }
   return '';
+};
+
+const getInvulInfo = (lines) => {
+  let invulInfo = '';
+  let startOfInfo = 0;
+  for (const [index, line] of lines.entries()) {
+    if (startOfInfo > 0) {
+      let textLine = line.substring(startOfInfo);
+
+      if (textLine.length === 0) {
+        continue;
+      }
+      if (textLine.includes('FACTION KEYWORDS')) {
+        break;
+      }
+
+      invulInfo = invulInfo + ' ' + textLine.trim();
+    }
+    if (line.includes('INVULNERABLE SAVE*')) {
+      startOfInfo = lines[index + 1].indexOf('*');
+    }
+  }
+
+  return invulInfo.trim();
 };
 
 const getFactionName = (lines) => {
@@ -36,14 +60,17 @@ const getFactionName = (lines) => {
     }
   }
 
-  return factionName.trim();
+  return factionName
+    .trim()
+    .split(',')
+    .map((faction) => faction.trim());
 };
 
 const getUnitComposition = (lines) => {
   let value = '';
   let startOfBlock = 0;
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('LEADER') || line.includes('FACTION KEYWORDS') || line.includes('TRANSPORT') ) {
+    if (line.includes('LEADER') || line.includes('FACTION KEYWORDS') || line.includes('TRANSPORT')) {
       break;
     }
     if (startOfBlock > 0) {
@@ -166,6 +193,15 @@ const getStartOfWeaponsBlock = (lines, block) => {
   return { line: 0, pos: 0 };
 };
 
+const getPrimarchBlock = (lines, block) => {
+  for (const [index, line] of lines.entries()) {
+    if (line.includes(block)) {
+      return { line: index, pos: line.indexOf(block), endLine: lines.length };
+    }
+  }
+  return { line: 0, pos: 0 };
+};
+
 const getUnitKeywords = (lines, startOfAbilities) => {
   for (const [index, l] of lines.entries()) {
     const line = l.substring(0, startOfAbilities.pos);
@@ -202,4 +238,5 @@ module.exports = {
   getLeader,
   getWargear,
   getTransport,
+  getInvulInfo,
 };

@@ -3,6 +3,7 @@ import fs from 'fs';
 import { v4 as uuidv4 } from 'uuid';
 import {
   getFactionName,
+  getInvulInfo,
   getInvulValue,
   getKeywords,
   getLeader,
@@ -16,7 +17,7 @@ import {
   getWeaponEndline,
 } from './conversion.helpers.js';
 
-const readFile = async (file) => {
+const readFile = (file) => {
   if (!file) {
     return;
   }
@@ -26,17 +27,22 @@ const readFile = async (file) => {
 
   return res;
 };
+const skippedNames = ['adeptus astartes armoury', 'astartes servitors'];
 
 const convertTextToJson = (inputFolder, outputFile, factionId, factionName, lineOfStats) => {
   const units = [];
   fs.readdir(inputFolder, function (err, files) {
-    files.forEach(async function (file) {
+    for (const [index, file] of files.entries()) {
       if (file.indexOf('.text') > -1) {
-        let res = await readFile(inputFolder + file);
+        let res = readFile(inputFolder + file);
         let pages = res.split('---PAGE 2---');
         let splitText = pages[0].replaceAll('\u0007', '').split('\n');
 
         let name = getName(splitText[0].toLowerCase());
+
+        if (skippedNames.includes(name.toLowerCase())) {
+          continue;
+        }
 
         const stats = splitText[lineOfStats].split(' ').filter((val) => val);
 
@@ -44,13 +50,16 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
         let damageTableDescription = '';
 
         let startOfAbilities = getStartOfBlock(splitText, 'FACTION');
+        let startOfWargearAbilities = getStartOfBlock(splitText, 'WARGEAR ABILITIES');
         let startOfDamage = getStartOfBlock(splitText, 'DAMAGED:');
         let startOfRanged = getStartOfWeaponsBlock(splitText, 'RANGED WEAPONS');
         let startOfMelee = getStartOfWeaponsBlock(splitText, 'MELEE WEAPONS');
+        let startOfPrimarch = getStartOfBlock(splitText, 'AUTHOR OF THE CODEX');
         let coreKeywords = getKeywords(splitText, 'CORE:');
         let factionName = getFactionName(splitText);
         let factionKeywords = getKeywords(splitText, 'FACTION:');
         let invul = getInvulValue(splitText);
+        let invulInfo = getInvulInfo(splitText);
         let keywords = getUnitKeywords(splitText, startOfAbilities);
 
         if (startOfRanged.endLine > 0 && startOfMelee.line > 0) {
@@ -69,36 +78,116 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
         });
 
         let abilities = [];
-        for (let index = startOfAbilities.line + 1; index < splitText.length; index++) {
-          let line = splitText[index].substring(startOfAbilities.pos);
-          if (
-            line.indexOf('INVULNERABLE SAVE') > -1 ||
-            line.indexOf('FACTION KEYWORDS') > -1 ||
-            line.indexOf('DAMAGED:') > -1 ||
-            line.indexOf('Designer’s Note') > -1
-          ) {
-            break;
+        try {
+          for (let index = startOfAbilities.line + 1; index < splitText.length; index++) {
+            let line = splitText[index].substring(startOfAbilities.pos);
+            if (
+              line.indexOf('INVULNERABLE SAVE') > -1 ||
+              line.indexOf('FACTION KEYWORDS') > -1 ||
+              line.indexOf('DAMAGED:') > -1 ||
+              line.indexOf('Designer’s Note') > -1 ||
+              line.indexOf('WARGEAR ABILITIES') > -1
+            ) {
+              break;
+            }
+            if (line.length === 0) {
+              continue;
+            }
+            // console.log(file, index, line);
+            if (
+              line.indexOf(':') > -1 &&
+              line.indexOf('D6') === -1 &&
+              line.indexOf('phase:') === -1 &&
+              line.indexOf('model:') === -1 &&
+              line.indexOf('following:') === -1
+            ) {
+              abilities.push({
+                name: line.substring(0, line.indexOf(':')),
+                description: line.substring(line.indexOf(':') + 1),
+                showAbility: true,
+                showDescription: true,
+              });
+            } else {
+              abilities[abilities.length - 1].description =
+                abilities[abilities.length - 1].description + ' ' + line.trim();
+            }
           }
-          if (line.length === 0) {
-            continue;
+        } catch (error) {
+          console.log(file);
+          console.log('error', error);
+        }
+
+        let wargearAbilities = [];
+        if (startOfWargearAbilities.line > 0) {
+          try {
+            for (let index = startOfWargearAbilities.line + 1; index < splitText.length; index++) {
+              let line = splitText[index].substring(startOfWargearAbilities.pos);
+              if (
+                line.indexOf('INVULNERABLE SAVE') > -1 ||
+                line.indexOf('FACTION KEYWORDS') > -1 ||
+                line.indexOf('DAMAGED:') > -1 ||
+                line.indexOf('Designer’s Note') > -1 ||
+                line.indexOf('WARGEAR ABILITIES') > -1
+              ) {
+                break;
+              }
+              if (line.length === 0) {
+                continue;
+              }
+              // console.log(file, index, line);
+              if (
+                line.indexOf(':') > -1 &&
+                line.indexOf('D6') === -1 &&
+                line.indexOf('phase:') === -1 &&
+                line.indexOf('model:') === -1 &&
+                line.indexOf('following:') === -1
+              ) {
+                wargearAbilities.push({
+                  name: line.substring(0, line.indexOf(':')),
+                  description: line.substring(line.indexOf(':') + 1),
+                  showAbility: true,
+                  showDescription: true,
+                });
+              } else {
+                wargearAbilities[wargearAbilities.length - 1].description =
+                  wargearAbilities[wargearAbilities.length - 1].description + ' ' + line.trim();
+              }
+            }
+          } catch (error) {
+            console.log(file);
+            console.log('error', error);
           }
-          if (
-            line.indexOf(':') > -1 &&
-            line.indexOf('D6') === -1 &&
-            line.indexOf('phase:') === -1 &&
-            line.indexOf('model:') === -1 &&
-            line.indexOf('following:') === -1
-          ) {
-            abilities.push({
-              name: line.substring(0, line.indexOf(':')),
-              description: line.substring(line.indexOf(':') + 1),
-              showAbility: true,
-              showDescription: true,
-            });
-          } else {
-            const ab = abilities[abilities.length - 1];
-            abilities[abilities.length - 1].description =
-              abilities[abilities.length - 1].description + ' ' + line.trim();
+        }
+
+        let primarchAbilities = [];
+        if (startOfPrimarch.line > 0) {
+          try {
+            for (let index = startOfPrimarch.line + 1; index < splitText.length; index++) {
+              if (splitText[index].includes('KEYWORDS:')) {
+                break;
+              }
+
+              let line = splitText[index].substring(startOfPrimarch.pos, startOfAbilities.pos);
+
+              if (line.length === 0) {
+                continue;
+              }
+              // console.log(file, index, line);
+              if (line.includes(':')) {
+                primarchAbilities.push({
+                  name: line.substring(0, line.indexOf(':')),
+                  description: line.substring(line.indexOf(':') + 1),
+                  showAbility: true,
+                  showDescription: true,
+                });
+              } else {
+                primarchAbilities[primarchAbilities.length - 1].description =
+                  primarchAbilities[primarchAbilities.length - 1].description + ' ' + line.trim();
+              }
+            }
+          } catch (error) {
+            console.log(file);
+            console.log('error', error);
           }
         }
 
@@ -224,7 +313,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
           if (line.trim().length > 0) {
             let name = line.substring(0, startOfMelee.pos).trim();
 
-            if (name.indexOf('Before selecting targets for this ') > -1) {
+            if (name.includes('Before selecting targets for this ') || name.includes('AUTHOR OF THE CODEX')) {
               break;
             }
 
@@ -341,13 +430,15 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
           wargear: unitWargear,
           transport: unitTransport,
           abilities: {
+            wargear: wargearAbilities,
             core: coreKeywords,
             faction: factionKeywords,
+            primarch: primarchAbilities,
             invul: {
               value: invul,
-              info: '',
+              info: invulInfo,
               showInvulnerableSave: invul ? true : false,
-              showInfo: false,
+              showInfo: invulInfo ? true : false,
             },
             other: abilities,
             damaged: {
@@ -390,9 +481,10 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
       };
 
       fs.writeFileSync(`./json/${outputFile}.json`, JSON.stringify(factions, null, 2));
-    });
+    }
   });
 };
 
-convertTextToJson('./marines_leviathan/', 'marines_leviathan', 'SMLV', 'Space Marines - Leviathan', 4);
-convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', 3);
+// convertTextToJson('./marines_leviathan/', 'marines_leviathan', 'SMLV', 'Space Marines - Leviathan', 4);
+// convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', 3);
+convertTextToJson('./spacemarines/', 'space_marines', 'SM', 'Space Marines', 3);
