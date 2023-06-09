@@ -240,11 +240,16 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
         for (let index = startOfRanged.line + 1; index < startOfRanged.endLine; index++) {
           let line = splitText[index].substring(0, startOfAbilities.pos);
           if (line.trim().length > 0) {
+            if (line.includes('One Shot:')) {
+              continue;
+            }
+
             let name = line.substring(0, startOfRanged.pos).trim();
             let stats = line
               .substring(startOfRanged.pos)
               .split(' ')
               .filter((val) => val);
+
 
             if (multiLineWeapon === 1) {
               multiLineWeapon = 2;

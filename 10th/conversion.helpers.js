@@ -213,8 +213,20 @@ const getUnitKeywords = (lines, startOfAbilities) => {
       }
       return keyWordsLine.split(',').map((val) => val.trim().replace('\x07', ''));
     }
+    if (line.includes('KEYWORDS – ALL MODELS:')) {
+      let keyWordsLine;
+      if (line.includes('|')) {
+        keyWordsLine = line
+          .substring(line.indexOf('KEYWORDS – ALL MODELS:') + 'KEYWORDS – ALL MODELS:'.length, line.indexOf('|'))
+          .trim();
+      } else {
+        keyWordsLine = line.substring(line.indexOf('KEYWORDS – ALL MODELS:') + 'KEYWORDS – ALL MODELS:'.length).trim();
+      }
+
+      return keyWordsLine.split(',').map((val) => val.trim().replace('\x07', ''));
+    }
   }
-  return { line: 0, pos: 0 };
+  return [];
 };
 
 const getName = (name) => {
