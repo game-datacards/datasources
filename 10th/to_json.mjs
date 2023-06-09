@@ -1,6 +1,6 @@
 import fs from 'fs';
 
-import { v4 as uuidv4 } from 'uuid';
+import { v5 as uuidv5 } from 'uuid';
 import {
   getFactionName,
   getInvulInfo,
@@ -456,7 +456,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
         }
 
         const newUnit = {
-          id: uuidv4(),
+          id: uuidv5(name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'),
           name,
           source: '40k-10e',
           faction_id: factionId,
@@ -496,7 +496,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
 
       const factions = {
         id: factionId,
-        link: 'https://game-datacard.eu',
+        link: 'https://game-datacards.eu',
         name: factionName,
         is_subfaction: false,
         parent_id: '',
