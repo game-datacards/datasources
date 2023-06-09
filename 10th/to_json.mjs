@@ -44,7 +44,39 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
           continue;
         }
 
-        const stats = splitText[lineOfStats].split(' ').filter((val) => val);
+        const stats = [];
+        for (let index = 2; index < 7; index++) {
+          const splitStats = splitText[index].split(' ').filter((val) => val);
+
+          if (splitStats.length >= 7) {
+            stats.push({
+              m: splitStats[0],
+              t: splitStats[1],
+              sv: splitStats[2],
+              w: splitStats[3],
+              ld: splitStats[4],
+              oc: splitStats[5],
+              name: splitStats.slice(6).join(' '),
+              showDamagedMarker: false,
+              showName: false,
+              active: true,
+            });
+          }
+          if (splitStats.length === 6) {
+            stats.push({
+              m: splitStats[0],
+              t: splitStats[1],
+              sv: splitStats[2],
+              w: splitStats[3],
+              ld: splitStats[4],
+              oc: splitStats[5],
+              name,
+              showDamagedMarker: false,
+              showName: false,
+              active: true,
+            });
+          }
+        }
 
         let damageRange;
         let damageTableDescription = '';
@@ -419,6 +451,10 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
         let unitWargear = getWargear(secondPageLines);
         let unitTransport = getTransport(secondPageLines);
 
+        if (damageRange) {
+          stats[0].showDamagedMarker = true;
+        }
+
         const newUnit = {
           id: uuidv4(),
           name,
@@ -448,20 +484,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               description: damageRange ? damageTableDescription : '',
             },
           },
-          stats: [
-            {
-              m: stats[0],
-              t: stats[1],
-              sv: stats[2],
-              w: stats[3],
-              ld: stats[4],
-              oc: stats[5],
-              name,
-              showDamagedMarker: damageRange ? true : false,
-              showName: false,
-              active: true,
-            },
-          ],
+          stats,
           rangedWeapons,
           meleeWeapons,
           keywords,
