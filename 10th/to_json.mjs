@@ -102,8 +102,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               line.indexOf('following:') === -1
             ) {
               abilities.push({
-                name: line.substring(0, line.indexOf(':')),
-                description: line.substring(line.indexOf(':') + 1),
+                name: line.substring(0, line.indexOf(':')).trim(),
+                description: line.substring(line.indexOf(':') + 1).trim(),
                 showAbility: true,
                 showDescription: true,
               });
@@ -143,8 +143,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                 line.indexOf('following:') === -1
               ) {
                 wargearAbilities.push({
-                  name: line.substring(0, line.indexOf(':')),
-                  description: line.substring(line.indexOf(':') + 1),
+                  name: line.substring(0, line.indexOf(':')).trim(),
+                  description: line.substring(line.indexOf(':') + 1).trim(),
                   showAbility: true,
                   showDescription: true,
                 });
@@ -175,8 +175,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               // console.log(file, index, line);
               if (line.includes(':')) {
                 primarchAbilities.push({
-                  name: line.substring(0, line.indexOf(':')),
-                  description: line.substring(line.indexOf(':') + 1),
+                  name: line.substring(0, line.indexOf(':')).trim(),
+                  description: line.substring(line.indexOf(':') + 1).trim(),
                   showAbility: true,
                   showDescription: true,
                 });
@@ -485,6 +485,6 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
   });
 };
 
-// convertTextToJson('./marines_leviathan/', 'marines_leviathan', 'SMLV', 'Space Marines - Leviathan', 4);
-// convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', 3);
+convertTextToJson('./marines_leviathan/', 'marines_leviathan', 'SMLV', 'Space Marines - Leviathan', 4);
+convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', 3);
 convertTextToJson('./spacemarines/', 'space_marines', 'SM', 'Space Marines', 3);

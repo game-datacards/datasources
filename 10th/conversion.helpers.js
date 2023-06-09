@@ -170,7 +170,7 @@ const getTransport = (lines) => {
 const getStartOfBlock = (lines, block) => {
   for (const [index, line] of lines.entries()) {
     if (line.includes(block)) {
-      return { line: index, pos: line.indexOf(block) };
+      return { line: index, pos: line.indexOf(block) - 1 };
     }
   }
   return { line: 0, pos: 0 };
