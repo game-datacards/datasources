@@ -58,7 +58,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               oc: splitStats[5],
               name: splitStats.slice(6).join(' '),
               showDamagedMarker: false,
-              showName: false,
+              showName: true,
               active: true,
             });
           }
