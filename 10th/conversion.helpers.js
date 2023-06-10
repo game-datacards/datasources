@@ -324,6 +324,30 @@ const getSpecialAbilities = (lines) => {
   return [];
 };
 
+const checkForManualFixes = (unit) => {
+  switch (unit.name) {
+    case 'Marneus Calgar':
+      unit.keywords = [
+        'ALL MODELS',
+        'Infantry',
+        'Imperium',
+        '|',
+        'MARNEUS CALGAR',
+        'Character',
+        'Epic Hero',
+        'Gravis',
+        'Chapter Master',
+        'Marneus Calgar',
+      ];
+      break;
+
+    default:
+      unit = unit;
+      break;
+  }
+  return unit;
+};
+
 function includesString(longString, specialAbilityKeywords) {
   let containsKeyword = false;
 
@@ -351,4 +375,5 @@ module.exports = {
   getInvulInfo,
   getUnitLoadout,
   getSpecialAbilities,
+  checkForManualFixes,
 };

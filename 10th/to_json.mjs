@@ -2,6 +2,7 @@ import fs from 'fs';
 
 import { v5 as uuidv5 } from 'uuid';
 import {
+  checkForManualFixes,
   getFactionName,
   getInvulInfo,
   getInvulValue,
@@ -120,7 +121,6 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               line.indexOf('INVULNERABLE SAVE') > -1 ||
               line.indexOf('FACTION KEYWORDS') > -1 ||
               line.indexOf('DAMAGED:') > -1 ||
-              line.indexOf('Designer’s Note') > -1 ||
               line.indexOf('WARGEAR ABILITIES') > -1
             ) {
               break;
@@ -138,7 +138,9 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               !line.includes('army:') &&
               !line.includes('(see reverse):') &&
               !line.includes('result:') &&
-              !line.includes('0CP:')
+              !line.includes('0CP:') &&
+              !line.includes('■') &&
+              !line.includes('Designer’s Note')
             ) {
               abilities.push({
                 name: line.substring(0, line.indexOf(':')).trim(),
@@ -467,7 +469,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
           stats[0].showDamagedMarker = true;
         }
 
-        const newUnit = {
+        let newUnit = {
           id: uuidv5(name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'),
           name,
           source: '40k-10e',
@@ -504,6 +506,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
           keywords,
           factions: factionName,
         };
+
+        newUnit = checkForManualFixes(newUnit);
         units.push(newUnit);
       }
       units.sort((a, b) => a.name.localeCompare(b.name));
