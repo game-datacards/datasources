@@ -8,11 +8,13 @@ import {
   getKeywords,
   getLeader,
   getName,
+  getSpecialAbilities,
   getStartOfBlock,
   getStartOfWeaponsBlock,
   getTransport,
   getUnitComposition,
   getUnitKeywords,
+  getUnitLoadout,
   getWargear,
   getWeaponEndline,
 } from './conversion.helpers.js';
@@ -35,6 +37,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
     for (const [index, file] of files.entries()) {
       if (file.indexOf('.text') > -1) {
         let res = readFile(inputFolder + file);
+        res = res.replaceAll('', '');
         let pages = res.split('---PAGE 2---');
         let splitText = pages[0].replaceAll('\u0007', '').split('\n');
 
@@ -128,10 +131,14 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
             // console.log(file, index, line);
             if (
               line.indexOf(':') > -1 &&
-              line.indexOf('D6') === -1 &&
-              line.indexOf('phase:') === -1 &&
-              line.indexOf('model:') === -1 &&
-              line.indexOf('following:') === -1
+              !line.includes('D6') &&
+              !line.includes('phase:') &&
+              !line.includes('model:') &&
+              !line.includes('following:') &&
+              !line.includes('army:') &&
+              !line.includes('(see reverse):') &&
+              !line.includes('result:') &&
+              !line.includes('0CP:')
             ) {
               abilities.push({
                 name: line.substring(0, line.indexOf(':')).trim(),
@@ -169,10 +176,12 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               // console.log(file, index, line);
               if (
                 line.indexOf(':') > -1 &&
-                line.indexOf('D6') === -1 &&
-                line.indexOf('phase:') === -1 &&
-                line.indexOf('model:') === -1 &&
-                line.indexOf('following:') === -1
+                !line.includes('D6') &&
+                !line.includes('phase:') &&
+                !line.includes('model:') &&
+                !line.includes('following:') &&
+                !line.includes('army:') &&
+                !line.includes('result:')
               ) {
                 wargearAbilities.push({
                   name: line.substring(0, line.indexOf(':')).trim(),
@@ -234,7 +243,6 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
 
           damageTableDescription = damageTableDescription + ' ' + line.trim();
         }
-
         const rangedWeapons = [];
         let multiLineWeapon = 0;
         for (let index = startOfRanged.line + 1; index < startOfRanged.endLine; index++) {
@@ -243,13 +251,21 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
             if (line.includes('One Shot:')) {
               continue;
             }
-
+            if (line.includes('Hive Defences:')) {
+              index = index + 2;
+              continue;
+            }
+            if (line.includes('Defensive Array:')) {
+              break;
+            }
+            if (line.includes('KEYWORDS:')) {
+              break;
+            }
             let name = line.substring(0, startOfRanged.pos).trim();
             let stats = line
               .substring(startOfRanged.pos)
               .split(' ')
               .filter((val) => val);
-
 
             if (multiLineWeapon === 1) {
               multiLineWeapon = 2;
@@ -292,40 +308,12 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                 rangedWeapons.length > 0 &&
                 rangedWeapons[rangedWeapons.length - 1].profiles[0].name.indexOf('–') > -1
               ) {
-                rangedWeapons[rangedWeapons.length - 1].profiles.push({
-                  active: true,
-                  name,
-                  keywords,
-                  range: stats[0],
-                  attacks: stats[1],
-                  skill: stats[2],
-                  strength: stats[3],
-                  ap: stats[4],
-                  damage: stats[5],
-                });
-              } else {
-                rangedWeapons.push({
-                  active: true,
-                  profiles: [
-                    {
-                      active: true,
-                      name,
-                      keywords,
-                      range: stats[0],
-                      attacks: stats[1],
-                      skill: stats[2],
-                      strength: stats[3],
-                      ap: stats[4],
-                      damage: stats[5],
-                    },
-                  ],
-                });
-              }
-            } else {
-              rangedWeapons.push({
-                active: true,
-                profiles: [
-                  {
+                //Check if previous multi-line weapon has the same name...
+                const prevWeaponName = rangedWeapons[rangedWeapons.length - 1].profiles[0].name.split('–')[0].trim();
+                const newWeaponName = name.split('–')[0].trim();
+
+                if (prevWeaponName === newWeaponName) {
+                  rangedWeapons[rangedWeapons.length - 1].profiles.push({
                     active: true,
                     name,
                     keywords,
@@ -335,10 +323,27 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                     strength: stats[3],
                     ap: stats[4],
                     damage: stats[5],
-                  },
-                ],
-              });
+                  });
+                  continue;
+                }
+              }
             }
+            rangedWeapons.push({
+              active: true,
+              profiles: [
+                {
+                  active: true,
+                  name,
+                  keywords,
+                  range: stats[0],
+                  attacks: stats[1],
+                  skill: stats[2],
+                  strength: stats[3],
+                  ap: stats[4],
+                  damage: stats[5],
+                },
+              ],
+            });
           }
         }
 
@@ -455,6 +460,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
         let unitLeader = getLeader(secondPageLines);
         let unitWargear = getWargear(secondPageLines);
         let unitTransport = getTransport(secondPageLines);
+        let unitLoadout = getUnitLoadout(secondPageLines);
+        let specialAbilities = getSpecialAbilities(secondPageLines);
 
         if (damageRange) {
           stats[0].showDamagedMarker = true;
@@ -468,6 +475,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
           cardType: 'DataCard',
           leader: unitLeader,
           composition: unitComposition,
+          loadout: unitLoadout,
           wargear: unitWargear,
           transport: unitTransport,
           abilities: {
@@ -482,18 +490,19 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               showInfo: invulInfo ? true : false,
             },
             other: abilities,
+            special: specialAbilities,
             damaged: {
               showDamagedAbility: damageRange ? true : false,
               showDescription: damageTableDescription ? true : false,
               range: damageRange ? damageRange : '',
-              description: damageRange ? damageTableDescription : '',
+              description: damageRange ? damageTableDescription.trim() : '',
             },
           },
           stats,
           rangedWeapons,
           meleeWeapons,
           keywords,
-          factions: [factionName],
+          factions: factionName,
         };
         units.push(newUnit);
       }

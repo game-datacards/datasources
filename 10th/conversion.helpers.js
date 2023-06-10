@@ -70,7 +70,12 @@ const getUnitComposition = (lines) => {
   let value = '';
   let startOfBlock = 0;
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('LEADER') || line.includes('FACTION KEYWORDS') || line.includes('TRANSPORT')) {
+    if (
+      line.includes('LEADER') ||
+      line.includes('FACTION KEYWORDS') ||
+      line.includes('TRANSPORT') ||
+      line.includes('equipped with')
+    ) {
       break;
     }
     if (startOfBlock > 0) {
@@ -85,6 +90,46 @@ const getUnitComposition = (lines) => {
     }
     if (line.includes('UNIT COMPOSITION')) {
       startOfBlock = line.indexOf('UNIT COMPOSITION');
+    }
+  }
+
+  return value.trim();
+};
+const getUnitLoadout = (lines) => {
+  const keywords = [
+    'TANK COMMANDER',
+    'SUPREME COMMANDER',
+    'CRIMSON FISTS',
+    'SERVITOR RETINUE',
+    'TRANSPORT',
+    'FACTION KEYWORDS',
+    'LEADER',
+    'HUNTER ORGANISM',
+    'LAST SURVIVOR',
+  ];
+
+  let value = '';
+  let startOfBlock = 0;
+  let startOfEquipment = false;
+  for (const [_index, line] of lines.entries()) {
+    if (includesString(line, keywords)) {
+      break;
+    }
+    if (line.includes('equipped with:')) {
+      startOfEquipment = true;
+    }
+    if (startOfEquipment && startOfBlock > 0) {
+      let textLine = line.substring(startOfBlock).trim();
+
+      if (textLine.length === 0) {
+        continue;
+      }
+      if (textLine.trim().length > 0) {
+        value = value + ' ' + textLine.trim();
+      }
+    }
+    if (line.includes('UNIT COMPOSITION')) {
+      startOfBlock = line.indexOf('UNIT COMPOSITION') - 1;
     }
   }
 
@@ -136,7 +181,7 @@ const getWargear = (lines) => {
     }
     if (line.includes('WARGEAR OPTIONS')) {
       startOfBlock = line.indexOf('WARGEAR OPTIONS');
-      endOfBlock = line.indexOf('UNIT COMPOSITION') - startOfBlock;
+      endOfBlock = line.indexOf('UNIT COMPOSITION') - startOfBlock - 2;
     }
   }
 
@@ -236,7 +281,60 @@ const getName = (name) => {
   }
   return nameArray.join(' ');
 };
+const getSpecialAbilities = (lines) => {
+  const specialAbilityKeywords = [
+    'TANK COMMANDER',
+    'SUPREME COMMANDER',
+    'CRIMSON FISTS',
+    'SERVITOR RETINUE',
+    'HUNTER ORGANISM',
+    'LAST SURVIVOR',
+  ];
 
+  let ability = { name: '', description: '' };
+  let startOfBlock = 0;
+  let startOfAbility = false;
+  for (const [_index, line] of lines.entries()) {
+    if (line.includes('FACTION KEYWORDS')) {
+      break;
+    }
+    if (includesString(line, specialAbilityKeywords)) {
+      startOfAbility = true;
+      ability.name = line.substring(startOfBlock);
+      continue;
+    }
+    if (startOfAbility && startOfBlock > 0) {
+      let textLine = line.substring(startOfBlock).trim();
+
+      if (textLine.length === 0) {
+        continue;
+      }
+      if (textLine.trim().length > 0) {
+        ability.description = ability.description + ' ' + textLine.trim();
+      }
+    }
+    if (line.includes('UNIT COMPOSITION')) {
+      startOfBlock = line.indexOf('UNIT COMPOSITION') - 1;
+    }
+  }
+  if (startOfAbility) {
+    return [{ name: ability.name.trim(), description: ability.description.trim() }];
+  }
+
+  return [];
+};
+
+function includesString(longString, specialAbilityKeywords) {
+  let containsKeyword = false;
+
+  specialAbilityKeywords.forEach((keyword) => {
+    if (longString.includes(keyword)) {
+      containsKeyword = true;
+    }
+  });
+
+  return containsKeyword;
+}
 module.exports = {
   getKeywords,
   getInvulValue,
@@ -251,4 +349,6 @@ module.exports = {
   getWargear,
   getTransport,
   getInvulInfo,
+  getUnitLoadout,
+  getSpecialAbilities,
 };
