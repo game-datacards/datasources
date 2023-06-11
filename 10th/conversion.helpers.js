@@ -70,16 +70,17 @@ const getUnitComposition = (lines) => {
   let value = '';
   let startOfBlock = 0;
   for (const [_index, line] of lines.entries()) {
-    if (
-      line.includes('LEADER') ||
-      line.includes('FACTION KEYWORDS') ||
-      line.includes('TRANSPORT') ||
-      line.includes('equipped with')
-    ) {
-      break;
-    }
     if (startOfBlock > 0) {
       let textLine = line.substring(startOfBlock).trim();
+
+      if (
+        textLine.includes('LEADER') ||
+        textLine.includes('FACTION KEYWORDS') ||
+        textLine.includes('TRANSPORT') ||
+        textLine.includes('equipped with')
+      ) {
+        break;
+      }
 
       if (textLine.length === 0) {
         continue;
@@ -318,7 +319,9 @@ const getSpecialAbilities = (lines) => {
     }
   }
   if (startOfAbility) {
-    return [{ name: ability.name.trim(), description: ability.description.trim() }];
+    return [
+      { name: ability.name.trim(), description: ability.description.trim(), showAbility: true, showDescription: true },
+    ];
   }
 
   return [];
@@ -340,7 +343,26 @@ const checkForManualFixes = (unit) => {
         'Marneus Calgar',
       ];
       break;
-
+    case 'Adeptus Astartes Armoury':
+      unit.abilities.special = [
+        {
+          name: 'WEAPON LISTS',
+          description:
+            'Several Adeptus Astartes models have the option to be equipped with one or more weapons whose profiles are not listed on their datasheet. The profiles for these weapons are instead listed on this card.',
+          showAbility: true,
+          showDescription: true,
+        },
+      ];
+      unit.abilities.other = [
+        {
+          name: 'Special Weapons',
+          description:
+            '* If a Captain or Lieutenant model is equipped with this weapon, improve this weapon’s Ballistic Skill characteristic by 1.',
+          showAbility: true,
+          showDescription: true,
+        },
+      ];
+      break;
     default:
       unit = unit;
       break;
