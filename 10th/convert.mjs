@@ -31,7 +31,7 @@ pdfToText.info('./spacemarines_index.pdf', function (err, data) {
   if (err) throw err;
   for (let index = 6; index < data.pages; index++) {
     if (index % 2 === 1) {
-      const options = { from: index, to: index + 1 };
+      const options = { from: index, to: index + 1,  };
 
       pdfToText.pdfToText('./spacemarines_index.pdf', options, function (err, data) {
         if (err) throw err;
