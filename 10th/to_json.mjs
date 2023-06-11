@@ -224,8 +224,12 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
         }
 
         let primarchAbilities = [];
+        let primarchAbility = { name: "", abilities: []};
         if (startOfPrimarch.line > 0) {
           try {
+            primarchAbility.name = splitText[startOfPrimarch.line]
+              .substring(startOfPrimarch.pos, startOfAbilities.pos)
+              .trim();
             for (let index = startOfPrimarch.line + 1; index < splitText.length; index++) {
               if (splitText[index].includes('KEYWORDS:')) {
                 break;
@@ -238,15 +242,15 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               }
               // console.log(file, index, line);
               if (line.includes(':')) {
-                primarchAbilities.push({
+                primarchAbility.abilities.push({
                   name: line.substring(0, line.indexOf(':')).trim(),
                   description: line.substring(line.indexOf(':') + 1).trim(),
                   showAbility: true,
                   showDescription: true,
                 });
               } else {
-                primarchAbilities[primarchAbilities.length - 1].description =
-                  primarchAbilities[primarchAbilities.length - 1].description + ' ' + line.trim();
+                primarchAbility.abilities[primarchAbility.abilities.length - 1].description =
+                  primarchAbility.abilities[primarchAbility.abilities.length - 1].description + ' ' + line.trim();
               }
             }
           } catch (error) {
@@ -254,18 +258,20 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
             console.log('error', error);
           }
         }
-
-        for (let index = startOfDamage.line + 1; index < splitText.length; index++) {
-          let line = splitText[index].substring(startOfAbilities.pos);
-          if (line.indexOf('INVULNERABLE SAVE') > -1 || line.indexOf('FACTION KEYWORDS') > -1) {
-            break;
-          }
-          if (line.length === 0) {
-            continue;
-          }
-
-          damageTableDescription = damageTableDescription + ' ' + line.trim();
+        if (primarchAbility.name !== "") {
+          primarchAbilities.push(primarchAbility);
         }
+          for (let index = startOfDamage.line + 1; index < splitText.length; index++) {
+            let line = splitText[index].substring(startOfAbilities.pos);
+            if (line.indexOf('INVULNERABLE SAVE') > -1 || line.indexOf('FACTION KEYWORDS') > -1) {
+              break;
+            }
+            if (line.length === 0) {
+              continue;
+            }
+
+            damageTableDescription = damageTableDescription + ' ' + line.trim();
+          }
         const rangedWeapons = [];
         let multiLineWeapon = 0;
         for (let index = startOfRanged.line + 1; index < startOfRanged.endLine; index++) {
