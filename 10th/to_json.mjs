@@ -38,7 +38,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
     for (const [index, file] of files.entries()) {
       if (file.indexOf('.text') > -1) {
         let res = readFile(inputFolder + file);
-        res = res.replaceAll('', '');
+        res = res.replaceAll('', ' ');
         let pages = res.split('---PAGE 2---');
         let splitText = pages[0].replaceAll('\u0007', '').split('\n');
 

@@ -94,7 +94,10 @@ const getUnitComposition = (lines) => {
     }
   }
 
-  return value.trim();
+  return value
+    .split('■')
+    .map((unit) => unit.trim())
+    .filter((unit) => unit);
 };
 const getUnitLoadout = (lines) => {
   const keywords = [
@@ -167,6 +170,9 @@ const getWargear = (lines) => {
   let value = '';
   let startOfBlock = 0;
   let endOfBlock = 0;
+  let multiColumn = false;
+  let columnStart = 0;
+  let secondColumnValue = '';
 
   for (const [_index, line] of lines.entries()) {
     if (line.includes('FACTION KEYWORDS')) {
@@ -174,19 +180,33 @@ const getWargear = (lines) => {
     }
     if (startOfBlock > 0) {
       let textLine = line.substring(startOfBlock, endOfBlock).trim();
-
       if (textLine.length === 0) {
         continue;
       }
-      value = value + ' ' + textLine;
+      let count = countSubstringOccurrences(textLine, '■');
+      if (count > 1) {
+        multiColumn = true;
+        columnStart = textLine.lastIndexOf('■');
+      }
+      if (multiColumn) {
+        value = value + ' ' + line.substring(startOfBlock, endOfBlock).substring(0, columnStart).trim();
+        secondColumnValue =
+          secondColumnValue + ' ' + line.substring(startOfBlock, endOfBlock).substring(columnStart, endOfBlock).trim();
+      } else {
+        value = value + ' ' + textLine;
+      }
     }
     if (line.includes('WARGEAR OPTIONS')) {
       startOfBlock = line.indexOf('WARGEAR OPTIONS');
-      endOfBlock = line.indexOf('UNIT COMPOSITION') - startOfBlock - 2;
+      endOfBlock = line.indexOf('UNIT COMPOSITION') - startOfBlock;
     }
   }
 
-  return value.trim();
+  const fullGear = value.trim() + secondColumnValue.trim();
+  return fullGear
+    .split('■')
+    .map((gear) => gear.trim())
+    .filter((gear) => gear);
 };
 
 const getTransport = (lines) => {
@@ -274,7 +294,11 @@ const getUnitKeywords = (lines, startOfAbilities) => {
   }
   return [];
 };
-
+function countSubstringOccurrences(longString, substring) {
+  const regex = new RegExp(substring, 'g');
+  const matches = longString.match(regex);
+  return matches ? matches.length : 0;
+}
 const getName = (name) => {
   const nameArray = name.split(' ');
   for (var i = 0; i < nameArray.length; i++) {
