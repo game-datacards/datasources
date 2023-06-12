@@ -105,11 +105,19 @@ const getUnitLoadout = (lines) => {
     'SUPREME COMMANDER',
     'CRIMSON FISTS',
     'SERVITOR RETINUE',
-    'TRANSPORT',
-    'FACTION KEYWORDS',
-    'LEADER',
     'HUNTER ORGANISM',
     'LAST SURVIVOR',
+    'ATTACHED UNIT',
+    'TYCHO',
+    'DEATH COMPANY',
+    'FLESH TEARERS',
+    'LOGAN GRIMNAR',
+    'MASTER OF MISCHIEF',
+    'FORCE OF UNTAMED DESTRUCTION',
+    'WOLFKIN',
+    'LEADER',
+    'FACTION KEYWORDS',
+    'TRANSPORT',
   ];
 
   let value = '';
@@ -143,9 +151,13 @@ const getUnitLoadout = (lines) => {
 const getLeader = (lines) => {
   let value = '';
   let startOfBlock = 0;
+  let startOfExtraBlock = 0;
   for (const [_index, line] of lines.entries()) {
     if (line.includes('FACTION KEYWORDS') || line.includes('TRANSPORT')) {
       break;
+    }
+    if (line.includes('UNIT COMPOSITION')) {
+      startOfExtraBlock = line.indexOf('UNIT COMPOSITION') - 1;
     }
     if (startOfBlock > 0) {
       let textLine = line.substring(startOfBlock).trim();
@@ -158,7 +170,8 @@ const getLeader = (lines) => {
         value = value + ' ' + textLine.trim();
       }
     }
-    if (line.includes('LEADER')) {
+
+    if (startOfExtraBlock > 0 && line.includes('LEADER')) {
       startOfBlock = line.indexOf('LEADER');
     }
   }
@@ -241,6 +254,17 @@ const getStartOfBlock = (lines, block) => {
   }
   return { line: 0, pos: 0 };
 };
+const getStartOfBlockList = (lines, blockList) => {
+  for (const [index, line] of lines.entries()) {
+    for (const [_bIndex, block] of blockList.entries()) {
+      if (line.includes(block)) {
+        return { line: index, pos: line.indexOf(block) - 1 };
+      }
+    }
+  }
+  return { line: 0, pos: 0 };
+};
+
 const getWeaponEndline = (lines) => {
   for (const [index, line] of lines.entries()) {
     if (line.includes('KEYWORDS:')) {
@@ -314,19 +338,29 @@ const getSpecialAbilities = (lines) => {
     'SERVITOR RETINUE',
     'HUNTER ORGANISM',
     'LAST SURVIVOR',
+    'ATTACHED UNIT',
+    'TYCHO',
+    'DEATH COMPANY',
+    'FLESH TEARERS',
+    'LOGAN GRIMNAR',
+    'MASTER OF MISCHIEF',
+    'FORCE OF UNTAMED DESTRUCTION',
+    'WOLFKIN',
   ];
 
   let ability = { name: '', description: '' };
   let startOfBlock = 0;
   let startOfAbility = false;
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('FACTION KEYWORDS')) {
+    if (line.includes('FACTION KEYWORDS') || line.includes('* The profile for')) {
       break;
     }
-    if (includesString(line, specialAbilityKeywords)) {
-      startOfAbility = true;
-      ability.name = line.substring(startOfBlock);
-      continue;
+    if (startOfBlock > 0) {
+      if (includesString(line.substring(startOfBlock), specialAbilityKeywords)) {
+        startOfAbility = true;
+        ability.name = line.substring(startOfBlock);
+        continue;
+      }
     }
     if (startOfAbility && startOfBlock > 0) {
       let textLine = line.substring(startOfBlock).trim();
@@ -344,7 +378,11 @@ const getSpecialAbilities = (lines) => {
   }
   if (startOfAbility) {
     return [
-      { name: ability.name.trim(), description: ability.description.trim(), showAbility: true, showDescription: true },
+      {
+        name: ability.name.trim(),
+        description: ability.description.trim(),
+        showAbility: true, showDescription: true
+      },
     ];
   }
 
@@ -396,7 +434,6 @@ const checkForManualFixes = (unit) => {
 
 function includesString(longString, specialAbilityKeywords) {
   let containsKeyword = false;
-
   specialAbilityKeywords.forEach((keyword) => {
     if (longString.includes(keyword)) {
       containsKeyword = true;
@@ -411,6 +448,7 @@ module.exports = {
   getUnitKeywords,
   getStartOfWeaponsBlock,
   getStartOfBlock,
+  getStartOfBlockList,
   getFactionName,
   getWeaponEndline,
   getName,
@@ -422,4 +460,5 @@ module.exports = {
   getUnitLoadout,
   getSpecialAbilities,
   checkForManualFixes,
+  includesString,
 };
