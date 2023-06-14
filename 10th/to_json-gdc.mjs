@@ -88,7 +88,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
           startOfAbilities = { line: -1, pos: 118 };
         }
         if (file === 'chaos_spacemarines_index.pdf-105.text') {
-          // HERETIC ASTARTES ARMOURY
+          //HERETIC ASTARTES ARMOURY
           startOfAbilities = { line: -1, pos: 120 };
         }
 
@@ -128,9 +128,9 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               ld: splitStats[4],
               oc: splitStats[5],
               name: splitStats.slice(6).join(' '),
-              // showDamagedMarker: false,
-              // showName: true,
-              // active: true,
+              showDamagedMarker: false,
+              showName: true,
+              active: true,
             });
           }
           if (splitStats.length === 6) {
@@ -142,9 +142,9 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               ld: splitStats[4],
               oc: splitStats[5],
               name,
-              // showDamagedMarker: false,
-              // showName: false,
-              // active: true,
+              showDamagedMarker: false,
+              showName: false,
+              active: true,
             });
           }
         }
@@ -174,7 +174,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               if (line.length === 0) {
                 continue;
               }
-              // console.log(file, index, line);
+              console.log(file, index, line);
               if (
                 line.indexOf(':') > -1 &&
                 !line.includes('D6') &&
@@ -192,8 +192,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                 abilities.push({
                   name: line.substring(0, line.indexOf(':')).trim(),
                   description: line.substring(line.indexOf(':') + 1).trim(),
-                  // showAbility: true,
-                  // showDescription: true,
+                  showAbility: true,
+                  showDescription: true,
                 });
               } else {
                 if (abilities.length > 0) {
@@ -225,7 +225,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               if (line.length === 0) {
                 continue;
               }
-              // console.log(file, index, line);
+              console.log(file, index, line);
               if (
                 line.indexOf(':') > -1 &&
                 !line.includes('D6') &&
@@ -239,8 +239,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                 wargearAbilities.push({
                   name: line.substring(0, line.indexOf(':')).trim(),
                   description: line.substring(line.indexOf(':') + 1).trim(),
-                  // showAbility: true,
-                  // showDescription: true,
+                  showAbility: true,
+                  showDescription: true,
                 });
               } else {
                 wargearAbilities[wargearAbilities.length - 1].description =
@@ -336,7 +336,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
 
                 if (prevWeaponName === newWeaponName) {
                   rangedWeapons[rangedWeapons.length - 1].profiles.push({
-                    // active: true,
+                    active: true,
                     name: name.trim(),
                     keywords,
                     range: stats[0],
@@ -351,10 +351,10 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               }
             }
             rangedWeapons.push({
-              // active: true,
+              active: true,
               profiles: [
                 {
-                  // active: true,
+                  active: true,
                   name: name.trim(),
                   keywords,
                   range: stats[0],
@@ -429,17 +429,14 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
             }
 
             if (name.indexOf('–') > -1) {
-              if (
-                meleeWeapons.length > 0 &&
-                meleeWeapons[meleeWeapons.length - 1].profiles[0].name.indexOf('–') > -1
-              ) {
+              if (meleeWeapons.length > 0 && meleeWeapons[meleeWeapons.length - 1].profiles[0].name.indexOf('–') > -1) {
                 //Check if previous multi-line weapon has the same name...
                 const prevWeaponName = meleeWeapons[meleeWeapons.length - 1].profiles[0].name.split('–')[0].trim();
                 const newWeaponName = name.split('–')[0].trim();
 
                 if (prevWeaponName === newWeaponName) {
                   meleeWeapons[meleeWeapons.length - 1].profiles.push({
-                    // active: true,
+                    active: true,
                     name: name.trim(),
                     keywords,
                     range: stats[0],
@@ -454,10 +451,10 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               }
             }
             meleeWeapons.push({
-              // active: true,
+              active: true,
               profiles: [
                 {
-                  // active: true,
+                  active: true,
                   name: name.trim(),
                   keywords,
                   range: stats[0],
@@ -491,16 +488,16 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
         let unitLoadout = getUnitLoadout(secondPageLines);
         let specialAbilities = getSpecialAbilities(secondPageLines);
 
-        // if (damageRange) {
-        //   stats[0].showDamagedMarker = true;
-        // }
+        if (damageRange) {
+          stats[0].showDamagedMarker = true;
+        }
 
         let newUnit = {
           id: uuidv5(name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'),
           name,
-          // source: '40k-10e',
+          source: '40k-10e',
           faction_id: factionId,
-          // cardType: 'DataCard',
+          cardType: 'DataCard',
           leader: unitLeader,
           composition: unitComposition,
           loadout: unitLoadout,
@@ -514,14 +511,14 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
             invul: {
               value: invul,
               info: invulInfo,
-              // showInvulnerableSave: invul ? true : false,
-              // showInfo: invulInfo ? true : false,
+              showInvulnerableSave: invul ? true : false,
+              showInfo: invulInfo ? true : false,
             },
             other: abilities,
             special: specialAbilities,
             damaged: {
-              // showDamagedAbility: damageRange ? true : false,
-              // showDescription: damageTableDescription ? true : false,
+              showDamagedAbility: damageRange ? true : false,
+              showDescription: damageTableDescription ? true : false,
               range: damageRange ? damageRange : '',
               description: damageRange ? damageTableDescription.trim() : '',
             },
@@ -542,17 +539,17 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
         id: factionId,
         link: 'https://game-datacards.eu',
         name: factionName,
-        // is_subfaction: false,
-        // parent_id: '',
+        is_subfaction: false,
+        parent_id: '',
         datasheets: units,
       };
 
-      fs.writeFileSync(`./json/${outputFile}.json`, JSON.stringify(factions, null, 2));
+      fs.writeFileSync(`./gdc/${outputFile}.json`, JSON.stringify(factions, null, 2));
     }
   });
-};
+};1
 
-// convertTextToJson('./marines_leviathan/', 'marines_leviathan', 'SMLV', 'Space Marines - Leviathan', 4);
+convertTextToJson('./marines_leviathan/', 'marines_leviathan', 'SMLV', 'Space Marines - Leviathan', 4);
 convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', 3);
 convertTextToJson('./spacemarines/', 'space_marines', 'SM', 'Space Marines', 3);
 convertTextToJson('./bloodangels/', 'bloodangels', 'CHBA', 'Blood Angels', 3);

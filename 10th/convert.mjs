@@ -41,59 +41,84 @@ import pdfToText from 'pdf-to-text';
 //     }
 //   }
 // });
-pdfToText.info('./blacktemplar_index.pdf', function (err, data) {
-  if (err) throw err;
-  for (let index = 6; index < data.pages; index++) {
-    if (index % 2 === 1) {
-      const options = { from: index, to: index + 1 };
+// pdfToText.info('./blacktemplar_index.pdf', function (err, data) {
+//   if (err) throw err;
+//   for (let index = 6; index < data.pages; index++) {
+//     if (index % 2 === 1) {
+//       const options = { from: index, to: index + 1 };
 
-      pdfToText.pdfToText('./blacktemplar_index.pdf', options, function (err, data) {
-        if (err) throw err;
-        let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
-        fs.writeFileSync(`./blacktemplar/blacktemplar_index.pdf-${index}.text`, text);
-      });
-    }
-  }
-});
-pdfToText.info('./bloodangels_index.pdf', function (err, data) {
-  if (err) throw err;
-  for (let index = 6; index < data.pages; index++) {
-    if (index % 2 === 1) {
-      const options = { from: index, to: index + 1 };
+//       pdfToText.pdfToText('./blacktemplar_index.pdf', options, function (err, data) {
+//         if (err) throw err;
+//         let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
+//         fs.writeFileSync(`./blacktemplar/blacktemplar_index.pdf-${index}.text`, text);
+//       });
+//     }
+//   }
+// });
+// pdfToText.info('./bloodangels_index.pdf', function (err, data) {
+//   if (err) throw err;
+//   for (let index = 6; index < data.pages; index++) {
+//     if (index % 2 === 1) {
+//       const options = { from: index, to: index + 1 };
 
-      pdfToText.pdfToText('./bloodangels_index.pdf', options, function (err, data) {
-        if (err) throw err;
-        let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
-        fs.writeFileSync(`./bloodangels/bloodangels_index.pdf-${index}.text`, text);
-      });
-    }
-  }
-});
-pdfToText.info('./spacewolves_index.pdf', function (err, data) {
-  if (err) throw err;
-  for (let index = 6; index < data.pages; index++) {
-    if (index % 2 === 1) {
-      const options = { from: index, to: index + 1 };
+//       pdfToText.pdfToText('./bloodangels_index.pdf', options, function (err, data) {
+//         if (err) throw err;
+//         let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
+//         fs.writeFileSync(`./bloodangels/bloodangels_index.pdf-${index}.text`, text);
+//       });
+//     }
+//   }
+// });
+// pdfToText.info('./spacewolves_index.pdf', function (err, data) {
+//   if (err) throw err;
+//   for (let index = 6; index < data.pages; index++) {
+//     if (index % 2 === 1) {
+//       const options = { from: index, to: index + 1 };
 
-      pdfToText.pdfToText('./spacewolves_index.pdf', options, function (err, data) {
-        if (err) throw err;
-        let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
-        fs.writeFileSync(`./spacewolves/spacewolves_index.pdf-${index}.text`, text);
-      });
-    }
-  }
-});
-pdfToText.info('./darkangels_index.pdf', function (err, data) {
-  if (err) throw err;
-  for (let index = 6; index < data.pages; index++) {
-    if (index % 2 === 1) {
-      const options = { from: index, to: index + 1 };
+//       pdfToText.pdfToText('./spacewolves_index.pdf', options, function (err, data) {
+//         if (err) throw err;
+//         let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
+//         fs.writeFileSync(`./spacewolves/spacewolves_index.pdf-${index}.text`, text);
+//       });
+//     }
+//   }
+// });
+// pdfToText.info('./darkangels_index.pdf', function (err, data) {
+//   if (err) throw err;
+//   for (let index = 6; index < data.pages; index++) {
+//     if (index % 2 === 1) {
+//       const options = { from: index, to: index + 1 };
 
-      pdfToText.pdfToText('./darkangels_index.pdf', options, function (err, data) {
-        if (err) throw err;
-        let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
-        fs.writeFileSync(`./darkangels/darkangels_index.pdf-${index}.text`, text);
-      });
+//       pdfToText.pdfToText('./darkangels_index.pdf', options, function (err, data) {
+//         if (err) throw err;
+//         let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
+//         fs.writeFileSync(`./darkangels/darkangels_index.pdf-${index}.text`, text);
+//       });
+//     }
+//   }
+// });
+
+function extractPDF(name) {
+  pdfToText.info(`./${name}_index.pdf`, function (err, data) {
+    if (err) throw err;
+    for (let index = 6; index < data.pages; index++) {
+      if (index % 2 === 1) {
+        const options = { from: index, to: index + 1 };
+
+        pdfToText.pdfToText(`./${name}_index.pdf`, options, function (err, data) {
+          if (err) throw err;
+          let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
+          fs.writeFileSync(`./${name}/${name}_index.pdf-${index}.text`, text);
+        });
+      }
     }
-  }
-});
+  });
+}
+
+extractPDF('deathwatch');
+extractPDF('deathguard');
+extractPDF('thousandsons');
+extractPDF('worldeaters');
+extractPDF('chaosdaemons');
+extractPDF('chaos_spacemarines');
+extractPDF('chaosknights');

@@ -11,6 +11,9 @@ const getKeywords = (lines, searchText) => {
 };
 const getInvulValue = (lines) => {
   for (const [_index, line] of lines.entries()) {
+    if (line.includes('INVULNERABLE SAVE *')) {
+      return line.substring(line.indexOf('INVULNERABLE SAVE *') + 1 + 'INVULNERABLE SAVE *'.length).trim();
+    }
     if (line.includes('INVULNERABLE SAVE')) {
       return line.substring(line.indexOf('INVULNERABLE SAVE') + 1 + 'INVULNERABLE SAVE'.length).trim();
     }
@@ -35,6 +38,9 @@ const getInvulInfo = (lines) => {
       invulInfo = invulInfo + ' ' + textLine.trim();
     }
     if (line.includes('INVULNERABLE SAVE*')) {
+      startOfInfo = lines[index + 1].indexOf('*');
+    }
+    if (line.includes('INVULNERABLE SAVE *')) {
       startOfInfo = lines[index + 1].indexOf('*');
     }
   }
@@ -77,7 +83,8 @@ const getUnitComposition = (lines) => {
         textLine.includes('LEADER') ||
         textLine.includes('FACTION KEYWORDS') ||
         textLine.includes('TRANSPORT') ||
-        textLine.includes('equipped with')
+        textLine.includes('equipped with') ||
+        textLine.includes('CASSIUS')
       ) {
         break;
       }
@@ -99,6 +106,7 @@ const getUnitComposition = (lines) => {
     .map((unit) => unit.trim())
     .filter((unit) => unit);
 };
+
 const getUnitLoadout = (lines) => {
   const keywords = [
     'TANK COMMANDER',
@@ -118,12 +126,15 @@ const getUnitLoadout = (lines) => {
     'LEADER',
     'FACTION KEYWORDS',
     'TRANSPORT',
+    'CASSIUS',
+    'AHRIMAN',
+    'EMPEROR’S CHILDREN',
   ];
 
   let value = '';
   let startOfBlock = 0;
   let startOfEquipment = false;
-  for (const [_index, line] of lines.entries()) {
+  for (const [_index, line] of lines.slice(2).entries()) {
     if (includesString(line, keywords)) {
       break;
     }
@@ -193,6 +204,10 @@ const getWargear = (lines) => {
     }
     if (startOfBlock > 0) {
       let textLine = line.substring(startOfBlock, endOfBlock).trim();
+
+      if (textLine.includes('ATTACHED UNIT') || textLine.includes('DAEMONIC ALLEGIANCE')) {
+        break;
+      }
       if (textLine.length === 0) {
         continue;
       }
@@ -211,6 +226,11 @@ const getWargear = (lines) => {
     }
     if (line.includes('WARGEAR OPTIONS')) {
       startOfBlock = line.indexOf('WARGEAR OPTIONS');
+      endOfBlock = line.indexOf('UNIT COMPOSITION') - startOfBlock;
+      continue;
+    }
+    if (line.includes('WARGEAR')) {
+      startOfBlock = line.indexOf('WARGEAR');
       endOfBlock = line.indexOf('UNIT COMPOSITION') - startOfBlock;
     }
   }
@@ -305,12 +325,41 @@ const getUnitKeywords = (lines, startOfAbilities) => {
     }
     if (line.includes('KEYWORDS – ALL MODELS:')) {
       let keyWordsLine;
-      if (line.includes('|')) {
-        keyWordsLine = line
-          .substring(line.indexOf('KEYWORDS – ALL MODELS:') + 'KEYWORDS – ALL MODELS:'.length, line.indexOf('|'))
-          .trim();
-      } else {
-        keyWordsLine = line.substring(line.indexOf('KEYWORDS – ALL MODELS:') + 'KEYWORDS – ALL MODELS:'.length).trim();
+      keyWordsLine = line.substring(line.indexOf('KEYWORDS – ALL MODELS:') + 'KEYWORDS – ALL MODELS:'.length).trim();
+
+      if (
+        keyWordsLine.substring(keyWordsLine.length - 1) === ',' ||
+        keyWordsLine.substring(keyWordsLine.length - 1) === '|' ||
+        keyWordsLine.substring(keyWordsLine.length - 1) === '–'
+      ) {
+        keyWordsLine =
+          keyWordsLine +
+          lines[index + 1].substring(line.indexOf('KEYWORDS – ALL MODELS:'), startOfAbilities.pos).trim();
+
+        keyWordsLine = 'ALL MODELS: ' + keyWordsLine;
+      }
+
+      if (keyWordsLine.includes('|')) {
+        const multiModelSplit = keyWordsLine.split('|').map((line) => {
+          const lines = line.split(':');
+          if (lines.length === 1) {
+            return lines;
+          }
+
+          return [lines[0] + ':', ...lines.slice(1)];
+        });
+        keyWordsLine = multiModelSplit.join(',');
+      }
+      if (keyWordsLine.includes('–')) {
+        const multiModelSplit = keyWordsLine.split('–').map((line) => {
+          const lines = line.split(':');
+          if (lines.length === 1) {
+            return lines;
+          }
+
+          return [lines[0] + ':', ...lines.slice(1)];
+        });
+        keyWordsLine = multiModelSplit.join(',');
       }
 
       return keyWordsLine.split(',').map((val) => val.trim().replace('\x07', ''));
@@ -346,6 +395,9 @@ const getSpecialAbilities = (lines) => {
     'MASTER OF MISCHIEF',
     'FORCE OF UNTAMED DESTRUCTION',
     'WOLFKIN',
+    'CASSIUS',
+    'AHRIMAN',
+    'EMPEROR’S CHILDREN',
   ];
 
   let ability = { name: '', description: '' };
@@ -381,7 +433,8 @@ const getSpecialAbilities = (lines) => {
       {
         name: ability.name.trim(),
         description: ability.description.trim(),
-        showAbility: true, showDescription: true
+        // showAbility: true,
+        // showDescription: true,
       },
     ];
   }
@@ -389,30 +442,63 @@ const getSpecialAbilities = (lines) => {
   return [];
 };
 
+const getPrimarchAbilities = (lines, blockStart, startOfAbilities, file = '') => {
+  let primarchAbilities = [];
+  let primarchAbility = { name: '', /* showAbility: true, */ abilities: [] };
+
+  if (blockStart.line > 0) {
+    try {
+      primarchAbility.name = lines[blockStart.line].substring(blockStart.pos, startOfAbilities.pos).trim();
+
+      for (let index = blockStart.line + 1; index < lines.length; index++) {
+        if (lines[index].includes('KEYWORDS:') || lines[index].includes('Before selecting')) {
+          break;
+        }
+
+        let line = lines[index].substring(blockStart.pos, startOfAbilities.pos);
+
+        if (line.trim().length === 0) {
+          continue;
+        }
+        if (line.includes(':')) {
+          primarchAbility.abilities.push({
+            name: line.substring(0, line.indexOf(':')).trim(),
+            description: line.substring(line.indexOf(':') + 1).trim(),
+            // showAbility: true,
+            // showDescription: true,
+          });
+        } else {
+          if (primarchAbility.abilities.length === 0) {
+            primarchAbility.abilities.push({
+              name: primarchAbility.name,
+              description: '',
+            });
+          }
+          primarchAbility.abilities[primarchAbility.abilities.length - 1].description =
+            primarchAbility.abilities[primarchAbility.abilities.length - 1].description + ' ' + line.trim();
+        }
+      }
+    } catch (error) {
+      console.log('error', error);
+    }
+  }
+
+  if (primarchAbility.name !== '') {
+    primarchAbilities.push(primarchAbility);
+  }
+  return primarchAbilities;
+};
+
 const checkForManualFixes = (unit) => {
   switch (unit.name) {
-    case 'Marneus Calgar':
-      unit.keywords = [
-        'ALL MODELS',
-        'Infantry',
-        'Imperium',
-        '|',
-        'MARNEUS CALGAR',
-        'Character',
-        'Epic Hero',
-        'Gravis',
-        'Chapter Master',
-        'Marneus Calgar',
-      ];
-      break;
     case 'Adeptus Astartes Armoury':
       unit.abilities.special = [
         {
           name: 'WEAPON LISTS',
           description:
             'Several Adeptus Astartes models have the option to be equipped with one or more weapons whose profiles are not listed on their datasheet. The profiles for these weapons are instead listed on this card.',
-          showAbility: true,
-          showDescription: true,
+          // showAbility: true,
+          // showDescription: true,
         },
       ];
       unit.abilities.other = [
@@ -420,8 +506,79 @@ const checkForManualFixes = (unit) => {
           name: 'Special Weapons',
           description:
             '* If a Captain or Lieutenant model is equipped with this weapon, improve this weapon’s Ballistic Skill characteristic by 1.',
-          showAbility: true,
-          showDescription: true,
+          // showAbility: true,
+          // showDescription: true,
+        },
+      ];
+      break;
+    case 'Kill Team Cassius':
+      unit.stats = [
+        {
+          m: '6"',
+          t: '4',
+          sv: '3+',
+          w: '4',
+          ld: '5+',
+          oc: '2',
+          name: 'CHAPLAIN CASSIUS',
+        },
+        {
+          m: '5"',
+          t: '5',
+          sv: '2+',
+          w: '3',
+          ld: '6+',
+          oc: '2',
+          name: 'KILL TEAM TERMINATOR',
+        },
+        {
+          m: '6"',
+          t: '4',
+          sv: '3+',
+          w: '2',
+          ld: '6+',
+          oc: '2',
+          name: 'KILL TEAM VETERAN',
+        },
+        {
+          m: '12"',
+          t: '5',
+          sv: '3+',
+          w: '3',
+          ld: '6+',
+          oc: '2',
+          name: 'KILL TEAM BIKER',
+        },
+      ];
+      break;
+    case 'Proteus Kill Team':
+      unit.stats = [
+        {
+          m: '6"',
+          t: '4',
+          sv: '3+',
+          w: '2',
+          ld: '6+',
+          oc: '1',
+          name: 'KILL TEAM VETERANS',
+        },
+        {
+          m: '12"',
+          t: '5',
+          sv: '3+',
+          w: '3',
+          ld: '6+',
+          oc: '2',
+          name: 'KILL TEAM BIKER',
+        },
+        {
+          m: '5"',
+          t: '5',
+          sv: '2+',
+          w: '3',
+          ld: '6+',
+          oc: '1',
+          name: 'KILL TEAM TERMINATOR',
         },
       ];
       break;
@@ -461,4 +618,5 @@ module.exports = {
   getSpecialAbilities,
   checkForManualFixes,
   includesString,
+  getPrimarchAbilities,
 };
