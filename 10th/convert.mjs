@@ -115,10 +115,18 @@ function extractPDF(name) {
   });
 }
 
-extractPDF('deathwatch');
+/*extractPDF('deathwatch');
 extractPDF('deathguard');
 extractPDF('thousandsons');
 extractPDF('worldeaters');
 extractPDF('chaosdaemons');
 extractPDF('chaos_spacemarines');
-extractPDF('chaosknights');
+extractPDF('chaosknights');*/
+extractPDF('imperialknights');
+extractPDF('adeptasororitas');
+extractPDF('adeptuscustodes');
+extractPDF('adeptusmechanicus');
+extractPDF('astramilitarum');
+extractPDF('greyknights');
+extractPDF('imperialagents');
+extractPDF('chaos_spacemarines');

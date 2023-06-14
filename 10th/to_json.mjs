@@ -553,7 +553,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
 };
 
 // convertTextToJson('./marines_leviathan/', 'marines_leviathan', 'SMLV', 'Space Marines - Leviathan', 4);
-convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', 3);
+/*convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', 3);
 convertTextToJson('./spacemarines/', 'space_marines', 'SM', 'Space Marines', 3);
 convertTextToJson('./bloodangels/', 'bloodangels', 'CHBA', 'Blood Angels', 3);
 convertTextToJson('./darkangels/', 'darkangels', 'CHDA', 'Dark Angels', 3);
@@ -561,8 +561,15 @@ convertTextToJson('./blacktemplar/', 'blacktemplar', 'CHBT', 'Black Templar', 3)
 convertTextToJson('./spacewolves/', 'spacewolves', 'CHSW', 'Space Wolves', 3);
 convertTextToJson('./deathwatch/', 'deathwatch', 'CHDW', 'Death Watch', 3);
 convertTextToJson('./thousandsons/', 'thousandsons', 'TS', 'Thousand Sons', 3);
-convertTextToJson('./worldeaters/', 'worldeaters', 'WE', 'World Eaters', 3);
+convertTextToJson('./worldeaters/', 'worldeaters', 'WE', 'World Eaters', 3);*/
 convertTextToJson('./chaos_spacemarines/', 'chaos_spacemarines', 'CSM', 'Chaos Space Marines', 3);
-convertTextToJson('./chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', 3);
+/*convertTextToJson('./chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', 3);
 convertTextToJson('./deathguard/', 'deathguard', 'DG', 'Death Guard', 3);
-convertTextToJson('./chaosknights/', 'chaosknights', 'CK', 'Chaos Knights', 3);
+convertTextToJson('./chaosknights/', 'chaosknights', 'CK', 'Chaos Knights', 3);*/
+convertTextToJson('./imperialknights/', 'imperialknights', 'IK', 'Imperial Knights', 3);
+convertTextToJson('./adeptasororitas/', 'adeptasororitas', 'AS', 'Adepta Sororitas', 3);
+convertTextToJson('./adeptuscustodes/', 'adeptuscustodes', 'AC', 'Adeptus Custodes', 3);
+convertTextToJson('./adeptusmechanicus/', 'adeptusmechanicus', 'ADM', 'Adeptus Mechanicus', 3);
+convertTextToJson('./astramilitarum/', 'astramilitarum', 'ASM', 'Astra Militarum', 3);
+convertTextToJson('./greyknights/', 'greyknights', 'GK', 'Grey Knights', 3);
+convertTextToJson('./imperialagents/', 'imperialagents', 'IA', 'Imperial Agents', 3);
