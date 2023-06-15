@@ -84,6 +84,7 @@ const getUnitComposition = (lines) => {
         textLine.includes('FACTION KEYWORDS') ||
         textLine.includes('TRANSPORT') ||
         textLine.includes('equipped with') ||
+        textLine.includes('The Master of Ordnance and Officer of the Fleet are both') ||
         textLine.includes('CASSIUS')
       ) {
         break;
@@ -129,6 +130,9 @@ const getUnitLoadout = (lines) => {
     'CASSIUS',
     'AHRIMAN',
     'EMPEROR’S CHILDREN',
+    'ATTACHÉS',
+    'LONER',
+    'This unit can have up to two Leader units attached',
   ];
 
   let value = '';
@@ -138,9 +142,10 @@ const getUnitLoadout = (lines) => {
     if (includesString(line, keywords)) {
       break;
     }
-    if (line.includes('equipped with:')) {
+    if (line.includes('equipped with:') || line.includes('The Master of Ordnance and Officer of the Fleet are both')) {
       startOfEquipment = true;
     }
+
     if (startOfEquipment && startOfBlock > 0) {
       let textLine = line.substring(startOfBlock).trim();
 
@@ -164,8 +169,11 @@ const getLeader = (lines) => {
   let startOfBlock = 0;
   let startOfExtraBlock = 0;
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('FACTION KEYWORDS') || line.includes('TRANSPORT')) {
+    if (line.includes('FACTION KEYWORDS') || line.includes('TRANSPORT') || line.includes('SUPREME COMMANDER')) {
       break;
+    }
+    if (startOfExtraBlock > 0 && line.includes('This unit can have up to two Leader')) {
+      startOfBlock = line.indexOf('This unit can have up to two Leader');
     }
     if (line.includes('UNIT COMPOSITION')) {
       startOfExtraBlock = line.indexOf('UNIT COMPOSITION') - 1;
@@ -199,7 +207,7 @@ const getWargear = (lines) => {
   let secondColumnValue = '';
 
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('FACTION KEYWORDS')) {
+    if (line.includes('FACTION KEYWORDS') || line.includes('KEYWORDS –')) {
       break;
     }
     if (startOfBlock > 0) {
@@ -287,7 +295,7 @@ const getStartOfBlockList = (lines, blockList) => {
 
 const getWeaponEndline = (lines) => {
   for (const [index, line] of lines.entries()) {
-    if (line.includes('KEYWORDS:')) {
+    if (line.includes('KEYWORDS:') || line.includes('KEYWORDS –')) {
       return index;
     }
   }
@@ -398,6 +406,8 @@ const getSpecialAbilities = (lines) => {
     'CASSIUS',
     'AHRIMAN',
     'EMPEROR’S CHILDREN',
+    'ATTACHÉS',
+    'LONER',
   ];
 
   let ability = { name: '', description: '' };
