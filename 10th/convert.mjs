@@ -98,10 +98,13 @@ import pdfToText from 'pdf-to-text';
 //   }
 // });
 
-function extractPDF(name) {
+function extractPDF(name, max = 0) {
   pdfToText.info(`./${name}_index.pdf`, function (err, data) {
     if (err) throw err;
-    for (let index = 6; index < data.pages; index++) {
+    if(max === 0) {
+      max = data.pages;
+    }
+    for (let index = 6; index < max; index++) {
       if (index % 2 === 1) {
         const options = { from: index, to: index + 1 };
 
@@ -122,3 +125,12 @@ extractPDF('worldeaters');
 extractPDF('chaosdaemons');
 extractPDF('chaos_spacemarines');
 extractPDF('chaosknights');
+
+// extractPDF('titanlegions');
+extractPDF('greyknights');
+extractPDF('adeptasororitas');
+extractPDF('adeptusmechanicus');
+extractPDF('adeptuscustodes');
+extractPDF('agents');
+extractPDF('astramilitarum');
+extractPDF('imperialknights', 29);

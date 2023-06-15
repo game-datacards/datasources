@@ -33,7 +33,7 @@ const readFile = (file) => {
 
   return res;
 };
-const skippedNames = [];
+const skippedNames = ['aegis defence line', 'canis rex', 'sir hekhtur', 'triumph of saint katherine'];
 
 const PRIMARCH_ABILITIES_LIST = [
   'AUTHOR OF THE CODEX',
@@ -45,6 +45,8 @@ const PRIMARCH_ABILITIES_LIST = [
   'DAEMONIC ALLEGIANCE',
   'SHADOW FORM ABILITIES',
   'HOST OF PLAGUES',
+  'RELICS OF THE MATRIARCHS',
+  'CANTICLES OF THE OMNISSIAH',
 ];
 
 const convertTextToJson = (inputFolder, outputFile, factionId, factionName, lineOfStats) => {
@@ -68,6 +70,13 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
 
         let startOfAbilities = getStartOfBlock(splitText, 'FACTION:');
 
+        if (startOfAbilities.line === 0) {
+          startOfAbilities = getStartOfBlock(splitText, 'CORE:');
+        }
+        if (startOfAbilities.line === 0) {
+          startOfAbilities = getStartOfBlock(splitText, 'ABILITIES');
+        }
+
         if (file === 'spacemarines_index-51.text') {
           startOfAbilities = { line: 8, pos: 118 };
         }
@@ -88,8 +97,16 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
           startOfAbilities = { line: -1, pos: 118 };
         }
         if (file === 'chaos_spacemarines_index.pdf-105.text') {
-          // HERETIC ASTARTES ARMOURY
+          //HERETIC ASTARTES ARMOURY
           startOfAbilities = { line: -1, pos: 120 };
+        }
+        if (file === 'astramilitarum_index.pdf-127.text') {
+          //Astra Militarum Infantry Armoury
+          startOfAbilities = { line: -1, pos: 127 };
+        }
+        if (file === 'adeptasororitas_index.pdf-71.text') {
+          //ADEPTA SORORITAS ARMOURY
+          startOfAbilities = { line: -1, pos: 118 };
         }
 
         let startOfWargearAbilities = getStartOfBlock(splitText, 'WARGEAR ABILITIES');
@@ -187,7 +204,9 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                 !line.includes('0CP:') &&
                 !line.includes('■') &&
                 !line.includes('Designer’s Note') &&
-                !line.includes('Warlord:')
+                !line.includes('Warlord:') &&
+                !line.includes('that unit:') &&
+                !line.includes('Daemon keyword:')
               ) {
                 abilities.push({
                   name: line.substring(0, line.indexOf(':')).trim(),
@@ -264,6 +283,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
 
           damageTableDescription = damageTableDescription + ' ' + line.trim();
         }
+        //RANGED WEAPON BLOCK
         const rangedWeapons = [];
         let multiLineWeapon = 0;
         for (let index = startOfRanged.line + 1; index < startOfRanged.endLine; index++) {
@@ -280,6 +300,9 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
               break;
             }
             if (line.includes('KEYWORDS:') || line.includes('Before selecting targets for this ')) {
+              break;
+            }
+            if (line.includes('* If this weapon is')) {
               break;
             }
 
@@ -308,12 +331,27 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                 .split(' ')
                 .filter((val) => val);
 
-              if (splitText[index + 2].indexOf('[') > -1) {
-                keywords = splitText[index + 2]
-                  .substring(splitText[index + 2].indexOf('[') + 1, splitText[index + 2].indexOf(']'))
+              if (splitText[index].includes('[')) {
+                keywords = splitText[index]
+                  .substring(splitText[index].indexOf('[') + 1, startOfAbilities.pos)
                   .toLowerCase()
                   .split(',')
-                  .map((val) => val.trim());
+                  .map((val) => val.trim())
+                  .filter((val) => val);
+
+                console.log(keywords);
+                name = splitText[index].substring(0, splitText[index].indexOf('[')).trim();
+              }
+              if (splitText[index + 2].includes('[') || splitText[index + 2].includes(']')) {
+                keywords = [
+                  ...keywords,
+                  ...splitText[index + 2]
+                    .substring(splitText[index + 2].indexOf('[') + 1, splitText[index + 2].indexOf(']'))
+                    .toLowerCase()
+                    .split(',')
+                    .map((val) => val.trim())
+                    .filter((val) => val),
+                ];
               }
             } else {
               if (name.indexOf('[') > -1) {
@@ -323,6 +361,14 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                   .split(',')
                   .map((val) => val.trim());
                 name = name.substring(0, name.indexOf('['));
+              }
+              if (name.includes('(')) {
+                keywords = name
+                  .substring(name.indexOf('(') + 1, name.length - 1)
+                  .toLowerCase()
+                  .split(',')
+                  .map((val) => val.trim());
+                name = name.substring(0, name.indexOf('('));
               }
             }
             if (name.indexOf('–') > -1) {
@@ -368,7 +414,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
             });
           }
         }
-
+        //MELEE WEAPON BLOCK
         const meleeWeapons = [];
         multiLineWeapon = 0;
 
@@ -410,12 +456,27 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                 .split(' ')
                 .filter((val) => val);
 
-              if (splitText[index + 2].indexOf('[') > -1) {
-                keywords = splitText[index + 2]
-                  .substring(splitText[index + 2].indexOf('[') + 1, splitText[index + 2].indexOf(']'))
+              if (splitText[index].includes('[')) {
+                keywords = splitText[index]
+                  .substring(splitText[index].indexOf('[') + 1, startOfAbilities.pos)
                   .toLowerCase()
                   .split(',')
-                  .map((val) => val.trim());
+                  .map((val) => val.trim())
+                  .filter((val) => val);
+
+                console.log(keywords);
+                name = splitText[index].substring(0, splitText[index].indexOf('[')).trim();
+              }
+              if (splitText[index + 2].includes('[') || splitText[index + 2].includes(']')) {
+                keywords = [
+                  ...keywords,
+                  ...splitText[index + 2]
+                    .substring(splitText[index + 2].indexOf('[') + 1, splitText[index + 2].indexOf(']'))
+                    .toLowerCase()
+                    .split(',')
+                    .map((val) => val.trim())
+                    .filter((val) => val),
+                ];
               }
             } else {
               if (name.indexOf('[') > -1) {
@@ -426,13 +487,18 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                   .map((val) => val.trim());
                 name = name.substring(0, name.indexOf('['));
               }
+              if (name.includes('(')) {
+                keywords = name
+                  .substring(name.indexOf('(') + 1, name.length - 1)
+                  .toLowerCase()
+                  .split(',')
+                  .map((val) => val.trim());
+                name = name.substring(0, name.indexOf('('));
+              }
             }
 
             if (name.indexOf('–') > -1) {
-              if (
-                meleeWeapons.length > 0 &&
-                meleeWeapons[meleeWeapons.length - 1].profiles[0].name.indexOf('–') > -1
-              ) {
+              if (meleeWeapons.length > 0 && meleeWeapons[meleeWeapons.length - 1].profiles[0].name.indexOf('–') > -1) {
                 //Check if previous multi-line weapon has the same name...
                 const prevWeaponName = meleeWeapons[meleeWeapons.length - 1].profiles[0].name.split('–')[0].trim();
                 const newWeaponName = name.split('–')[0].trim();
@@ -553,16 +619,25 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
 };
 
 // convertTextToJson('./marines_leviathan/', 'marines_leviathan', 'SMLV', 'Space Marines - Leviathan', 4);
-convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', 3);
-convertTextToJson('./spacemarines/', 'space_marines', 'SM', 'Space Marines', 3);
-convertTextToJson('./bloodangels/', 'bloodangels', 'CHBA', 'Blood Angels', 3);
-convertTextToJson('./darkangels/', 'darkangels', 'CHDA', 'Dark Angels', 3);
-convertTextToJson('./blacktemplar/', 'blacktemplar', 'CHBT', 'Black Templar', 3);
-convertTextToJson('./spacewolves/', 'spacewolves', 'CHSW', 'Space Wolves', 3);
-convertTextToJson('./deathwatch/', 'deathwatch', 'CHDW', 'Death Watch', 3);
-convertTextToJson('./thousandsons/', 'thousandsons', 'TS', 'Thousand Sons', 3);
-convertTextToJson('./worldeaters/', 'worldeaters', 'WE', 'World Eaters', 3);
-convertTextToJson('./chaos_spacemarines/', 'chaos_spacemarines', 'CSM', 'Chaos Space Marines', 3);
-convertTextToJson('./chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', 3);
-convertTextToJson('./deathguard/', 'deathguard', 'DG', 'Death Guard', 3);
-convertTextToJson('./chaosknights/', 'chaosknights', 'CK', 'Chaos Knights', 3);
+// convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', 3);
+// convertTextToJson('./spacemarines/', 'space_marines', 'SM', 'Space Marines', 3);
+// convertTextToJson('./bloodangels/', 'bloodangels', 'CHBA', 'Blood Angels', 3);
+// convertTextToJson('./darkangels/', 'darkangels', 'CHDA', 'Dark Angels', 3);
+// convertTextToJson('./blacktemplar/', 'blacktemplar', 'CHBT', 'Black Templar', 3);
+// convertTextToJson('./spacewolves/', 'spacewolves', 'CHSW', 'Space Wolves', 3);
+// convertTextToJson('./deathwatch/', 'deathwatch', 'CHDW', 'Death Watch', 3);
+// convertTextToJson('./thousandsons/', 'thousandsons', 'TS', 'Thousand Sons', 3);
+// convertTextToJson('./worldeaters/', 'worldeaters', 'WE', 'World Eaters', 3);
+// convertTextToJson('./chaos_spacemarines/', 'chaos_spacemarines', 'CSM', 'Chaos Space Marines', 3);
+// convertTextToJson('./chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', 3);
+// convertTextToJson('./deathguard/', 'deathguard', 'DG', 'Death Guard', 3);
+// convertTextToJson('./chaosknights/', 'chaosknights', 'CK', 'Chaos Knights', 3);
+
+convertTextToJson('./astramilitarum/', 'astramilitarum', 'AM', 'Astra Militarum', 3);
+convertTextToJson('./imperialknights/', 'imperialknights', 'IK', 'Imperial Knights', 3);
+convertTextToJson('./greyknights/', 'greyknights', 'gk', 'Grey Knights', 3);
+convertTextToJson('./adeptasororitas/', 'adeptasororitas', 'AS', 'Adepta Sororitas', 3);
+convertTextToJson('./adeptusmechanicus/', 'adeptusmechanicus', 'AdM', 'Adeptus Mechanicus', 3);
+convertTextToJson('./adeptuscustodes/', 'adeptuscustodes', 'AC', 'Adeptus Custodes', 3);
+convertTextToJson('./agents/', 'agents', 'IA', 'Agents of the Imperium', 3);
+// convertTextToJson('./titanlegions/', 'titanlegions', 'TL', 'Titan Legions', 3);
