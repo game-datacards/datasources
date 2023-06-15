@@ -134,3 +134,12 @@ extractPDF('adeptuscustodes');
 extractPDF('agents');
 extractPDF('astramilitarum');
 extractPDF('imperialknights', 29);
+
+extractPDF('tau');
+extractPDF('aeldari');
+extractPDF('drukhari');
+extractPDF('necrons');
+extractPDF('gsc');
+extractPDF('orks');
+extractPDF('votann');
+

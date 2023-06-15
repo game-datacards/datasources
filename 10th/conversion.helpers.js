@@ -4,7 +4,8 @@ const getKeywords = (lines, searchText) => {
       return line
         .substring(line.indexOf(searchText) + searchText.length)
         .split(',')
-        .map((val) => val.trim());
+        .map((val) => val.trim())
+        .filter((val) => val);
     }
   }
   return [];
@@ -85,6 +86,7 @@ const getUnitComposition = (lines) => {
         textLine.includes('TRANSPORT') ||
         textLine.includes('equipped with') ||
         textLine.includes('The Master of Ordnance and Officer of the Fleet are both') ||
+        textLine.includes('Every Corsair Voidscarred') ||
         textLine.includes('CASSIUS')
       ) {
         break;
@@ -133,6 +135,13 @@ const getUnitLoadout = (lines) => {
     'ATTACHÉS',
     'LONER',
     'This unit can have up to two Leader units attached',
+    'BODYGUARD',
+    'ENSLAVED STAR GOD',
+    'DEPLOYMENT',
+    'CRYPTEK RETINUE',
+    'TRIARCHAL MENHIRS',
+    'PATH OF DAMNATION',
+    'TROUPE MASTER',
   ];
 
   let value = '';
@@ -142,7 +151,11 @@ const getUnitLoadout = (lines) => {
     if (includesString(line, keywords)) {
       break;
     }
-    if (line.includes('equipped with:') || line.includes('The Master of Ordnance and Officer of the Fleet are both')) {
+    if (
+      line.includes('equipped with:') ||
+      line.includes('The Master of Ordnance and Officer of the Fleet are both') ||
+      line.includes('Every Corsair Voidscarred')
+    ) {
       startOfEquipment = true;
     }
 
@@ -169,7 +182,12 @@ const getLeader = (lines) => {
   let startOfBlock = 0;
   let startOfExtraBlock = 0;
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('FACTION KEYWORDS') || line.includes('TRANSPORT') || line.includes('SUPREME COMMANDER')) {
+    if (
+      line.includes('FACTION KEYWORDS') ||
+      line.includes('TRANSPORT') ||
+      line.includes('SUPREME COMMANDER') ||
+      line.includes('TROUPE MASTER')
+    ) {
       break;
     }
     if (startOfExtraBlock > 0 && line.includes('This unit can have up to two Leader')) {
@@ -323,6 +341,7 @@ const getPrimarchBlock = (lines, block) => {
 const getUnitKeywords = (lines, startOfAbilities) => {
   for (const [index, l] of lines.entries()) {
     const line = l.substring(0, startOfAbilities.pos);
+
     if (line.includes('KEYWORDS:')) {
       let keyWordsLine = line.substring(line.indexOf('KEYWORDS:') + 'KEYWORDS:'.length).trim();
       if (keyWordsLine.substring(keyWordsLine.length - 1) === ',') {
@@ -372,6 +391,49 @@ const getUnitKeywords = (lines, startOfAbilities) => {
 
       return keyWordsLine.split(',').map((val) => val.trim().replace('\x07', ''));
     }
+    if (line.includes('KEYWORDS –')) {
+      let keyWordsLine;
+      keyWordsLine = lines[index + 1]
+        .substring(
+          lines[index + 1].indexOf('ALL MODELS:') + 'ALL MODELS:'.length,
+          startOfAbilities.pos - 'ALL MODELS:'.length
+        )
+        .trim();
+
+      if (
+        keyWordsLine.substring(keyWordsLine.length - 1) === ',' ||
+        keyWordsLine.substring(keyWordsLine.length - 1) === '|' ||
+        keyWordsLine.substring(keyWordsLine.length - 1) === '–'
+      ) {
+        keyWordsLine = keyWordsLine + lines[index + 2].substring(0, startOfAbilities.pos).trim();
+        keyWordsLine = 'ALL MODELS: ' + keyWordsLine;
+      }
+
+      if (keyWordsLine.includes('|')) {
+        const multiModelSplit = keyWordsLine.split('|').map((tempLine) => {
+          const tempLines = tempLine.split(':');
+          if (tempLines.length === 1) {
+            return tempLines;
+          }
+
+          return [tempLines[0] + ':', ...tempLines.slice(1)];
+        });
+        keyWordsLine = multiModelSplit.join(',');
+      }
+      if (keyWordsLine.includes('–')) {
+        const multiModelSplit = keyWordsLine.split('–').map((tempLine) => {
+          const tempLines = tempLine.split(':');
+          if (tempLines.length === 1) {
+            return tempLines;
+          }
+
+          return [tempLines[0] + ':', ...tempLines.slice(1)];
+        });
+        keyWordsLine = multiModelSplit.join(',');
+      }
+
+      return keyWordsLine.split(',').map((val) => val.trim().replace('\x07', ''));
+    }
   }
   return [];
 };
@@ -408,9 +470,18 @@ const getSpecialAbilities = (lines) => {
     'EMPEROR’S CHILDREN',
     'ATTACHÉS',
     'LONER',
+    'BODYGUARD',
+    'ENSLAVED STAR GOD',
+    'DEPLOYMENT',
+    'CRYPTEK RETINUE',
+    'TRIARCHAL MENHIRS',
+    'PATH OF DAMNATION',
+    'TROUPE MASTER',
+    'ORDERS',
   ];
 
   let ability = { name: '', description: '' };
+  let abilities = [];
   let startOfBlock = 0;
   let startOfAbility = false;
   for (const [_index, line] of lines.entries()) {
@@ -419,8 +490,17 @@ const getSpecialAbilities = (lines) => {
     }
     if (startOfBlock > 0) {
       if (includesString(line.substring(startOfBlock), specialAbilityKeywords)) {
+        if (startOfAbility) {
+          abilities.push({
+            name: ability.name.trim(),
+            description: ability.description.trim(),
+            // showAbility: true,
+            // showDescription: true,
+          });
+        }
         startOfAbility = true;
         ability.name = line.substring(startOfBlock);
+        ability.description = '';
         continue;
       }
     }
@@ -439,14 +519,15 @@ const getSpecialAbilities = (lines) => {
     }
   }
   if (startOfAbility) {
-    return [
-      {
+    if (startOfAbility) {
+      abilities.push({
         name: ability.name.trim(),
         description: ability.description.trim(),
         // showAbility: true,
         // showDescription: true,
-      },
-    ];
+      });
+    }
+    return abilities;
   }
 
   return [];
