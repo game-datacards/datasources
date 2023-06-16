@@ -197,7 +197,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, line
                 line.indexOf('INVULNERABLE SAVE') > -1 ||
                 line.indexOf('FACTION KEYWORDS') > -1 ||
                 line.indexOf('DAMAGED:') > -1 ||
-                line.indexOf('WARGEAR ABILITIES') > -1
+                line.indexOf('WARGEAR ABILITIES') > -1 ||
+                line.indexOf('ORDERS') > -1
               ) {
                 break;
               }
@@ -716,3 +717,5 @@ convertTextToJson('./tau/', 'tau', 'TAU', "T'au Empire", 3);
 convertTextToJson('./necrons/', 'necrons', 'NEC', 'Necrons', 3);
 convertTextToJson('./aeldari/', 'aeldari', 'AE', 'Aeldari', 3);
 convertTextToJson('./drukhari/', 'drukhari', 'DRU', 'Drukhari', 3);
+
+convertTextToJson('./gsc/', 'gsc', 'GSC', 'Genestealer Cults', 3);

@@ -494,8 +494,8 @@ const getSpecialAbilities = (lines) => {
           abilities.push({
             name: ability.name.trim(),
             description: ability.description.trim(),
-            // showAbility: true,
-            // showDescription: true,
+            showAbility: true,
+            showDescription: true,
           });
         }
         startOfAbility = true;
@@ -523,8 +523,8 @@ const getSpecialAbilities = (lines) => {
       abilities.push({
         name: ability.name.trim(),
         description: ability.description.trim(),
-        // showAbility: true,
-        // showDescription: true,
+        showAbility: true,
+        showDescription: true,
       });
     }
     return abilities;
@@ -535,7 +535,7 @@ const getSpecialAbilities = (lines) => {
 
 const getPrimarchAbilities = (lines, blockStart, startOfAbilities, file = '') => {
   let primarchAbilities = [];
-  let primarchAbility = { name: '', /* showAbility: true, */ abilities: [] };
+  let primarchAbility = { name: '', showAbility: true, abilities: [] };
 
   if (blockStart.line > 0) {
     try {
@@ -555,8 +555,8 @@ const getPrimarchAbilities = (lines, blockStart, startOfAbilities, file = '') =>
           primarchAbility.abilities.push({
             name: line.substring(0, line.indexOf(':')).trim(),
             description: line.substring(line.indexOf(':') + 1).trim(),
-            // showAbility: true,
-            // showDescription: true,
+            showAbility: true,
+            showDescription: true,
           });
         } else {
           if (primarchAbility.abilities.length === 0) {
@@ -588,8 +588,8 @@ const checkForManualFixes = (unit) => {
           name: 'WEAPON LISTS',
           description:
             'Several Adeptus Astartes models have the option to be equipped with one or more weapons whose profiles are not listed on their datasheet. The profiles for these weapons are instead listed on this card.',
-          // showAbility: true,
-          // showDescription: true,
+          showAbility: true,
+          showDescription: true,
         },
       ];
       unit.abilities.other = [
@@ -597,8 +597,8 @@ const checkForManualFixes = (unit) => {
           name: 'Special Weapons',
           description:
             '* If a Captain or Lieutenant model is equipped with this weapon, improve this weapon’s Ballistic Skill characteristic by 1.',
-          // showAbility: true,
-          // showDescription: true,
+          showAbility: true,
+          showDescription: true,
         },
       ];
       break;
@@ -612,6 +612,8 @@ const checkForManualFixes = (unit) => {
           ld: '5+',
           oc: '2',
           name: 'CHAPLAIN CASSIUS',
+          active: true,
+          showName: true,
         },
         {
           m: '5"',
@@ -621,6 +623,8 @@ const checkForManualFixes = (unit) => {
           ld: '6+',
           oc: '2',
           name: 'KILL TEAM TERMINATOR',
+          active: true,
+          showName: true,
         },
         {
           m: '6"',
@@ -630,6 +634,8 @@ const checkForManualFixes = (unit) => {
           ld: '6+',
           oc: '2',
           name: 'KILL TEAM VETERAN',
+          active: true,
+          showName: true,
         },
         {
           m: '12"',
@@ -639,6 +645,8 @@ const checkForManualFixes = (unit) => {
           ld: '6+',
           oc: '2',
           name: 'KILL TEAM BIKER',
+          active: true,
+          showName: true,
         },
       ];
       break;
@@ -652,6 +660,8 @@ const checkForManualFixes = (unit) => {
           ld: '6+',
           oc: '1',
           name: 'KILL TEAM VETERANS',
+          active: true,
+          showName: true,
         },
         {
           m: '12"',
@@ -661,6 +671,8 @@ const checkForManualFixes = (unit) => {
           ld: '6+',
           oc: '2',
           name: 'KILL TEAM BIKER',
+          active: true,
+          showName: true,
         },
         {
           m: '5"',
@@ -670,6 +682,8 @@ const checkForManualFixes = (unit) => {
           ld: '6+',
           oc: '1',
           name: 'KILL TEAM TERMINATOR',
+          active: true,
+          showName: true,
         },
       ];
       break;
