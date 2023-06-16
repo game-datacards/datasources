@@ -151,10 +151,11 @@ const getUnitLoadout = (lines) => {
     if (includesString(line, keywords)) {
       break;
     }
+    
     if (
-      line.includes('equipped with:') ||
-      line.includes('The Master of Ordnance and Officer of the Fleet are both') ||
-      line.includes('Every Corsair Voidscarred')
+      line.substring(startOfBlock).includes('equipped with:') ||
+      line.substring(startOfBlock).includes('The Master of Ordnance and Officer of the Fleet are both') ||
+      line.substring(startOfBlock).includes('Every Corsair Voidscarred')
     ) {
       startOfEquipment = true;
     }
