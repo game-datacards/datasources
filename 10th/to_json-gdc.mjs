@@ -21,6 +21,8 @@ import {
   getWargear,
   getWeaponEndline,
   includesString,
+  getInvulValueFw,
+  getInvulInfoFw,
 } from './conversion.helpers.js';
 
 const readFile = (file) => {
@@ -33,16 +35,7 @@ const readFile = (file) => {
 
   return res;
 };
-const skippedNames = [
-  'aegis defence line',
-  'canis rex',
-  'sir hekhtur',
-  'triumph of saint katherine',
-  'mekboy workshop',
-  't’au empire',
-  'tidewall shieldline',
-  'webway gate',
-];
+const skippedNames = ['aegis defence line', 'mekboy workshop', 'webway gate'];
 
 const PRIMARCH_ABILITIES_LIST = [
   'AUTHOR OF THE CODEX',
@@ -58,6 +51,50 @@ const PRIMARCH_ABILITIES_LIST = [
   'CANTICLES OF THE OMNISSIAH',
   'TRIARCH ABILITIES',
 ];
+
+const pointsFile = readFile('points.val');
+const pointsLines = pointsFile.split(/\r?\n/);
+
+function parse40kData(lines) {
+  let currentFaction = null;
+  let currentUnit = null;
+  const parsedData = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) {
+      continue;
+    }
+
+    if (line.includes('pts')) {
+      let match = line.match(/(\d+) models?.*?(\d+) pts/);
+      let numModels, cost;
+
+      if (match) {
+        [, numModels, cost] = match;
+      } else {
+        match = line.match(/(.*?)(\d+) pts/);
+        numModels = '1';
+        [, currentUnit, cost] = match;
+        currentUnit = currentUnit.trim();
+      }
+
+      parsedData.push([currentFaction, currentUnit.toLowerCase(), numModels, cost]);
+    } else {
+      if (currentFaction === null) {
+        currentFaction = line;
+      } else if (i + 1 < lines.length && !lines[i + 1].includes('pts')) {
+        currentFaction = line;
+      } else {
+        currentUnit = line;
+      }
+    }
+  }
+
+  return parsedData;
+}
+
+const points = parse40kData(pointsLines);
 
 const convertTextToJson = (inputFolder, outputFile, factionId, factionName, header, banner, lineOfStats) => {
   const units = [];
@@ -123,6 +160,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         let startOfWargearAbilities = getStartOfBlock(splitText, 'WARGEAR ABILITIES');
 
         let startOfDamage = getStartOfBlock(splitText, 'DAMAGED:');
+
         let startOfOrders = getStartOfBlock(splitText, 'ORDERS');
         let startOfRanged = getStartOfWeaponsBlock(splitText, 'RANGED WEAPONS');
         let startOfMelee = getStartOfWeaponsBlock(splitText, 'MELEE WEAPONS');
@@ -135,8 +173,20 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         let keywords = getUnitKeywords(splitText, startOfAbilities);
         let endOfStats = 7;
 
-        if (startOfRanged.line > 0) {
-          endOfStats = startOfRanged.line;
+        if (file.includes('_fw')) {
+          let startOfInvul = getStartOfBlock(splitText, 'INVULNERABLE SAVE');
+          if (startOfInvul.line > 0) {
+            endOfStats = startOfInvul.line;
+          } else {
+            endOfStats = startOfRanged.line;
+          }
+
+          invulInfo = getInvulInfoFw(splitText);
+          invul = getInvulValueFw(splitText);
+        } else {
+          if (startOfRanged.line > 0) {
+            endOfStats = startOfRanged.line;
+          }
         }
         if (startOfRanged.endLine > 0 && startOfMelee.line > 0) {
           startOfRanged.endLine = startOfMelee.line - 1;
@@ -224,6 +274,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
                 !line.includes(' attacks:') &&
                 !line.includes('unit:') &&
                 !line.includes('shrieker cannon:') &&
+                !line.includes('this turn:') &&
                 !line.includes('range of it:')
               ) {
                 abilities.push({
@@ -270,7 +321,10 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
                 !line.includes('following:') &&
                 !line.includes('army:') &&
                 !line.includes('result:') &&
-                !line.includes('Warlord:')
+                !line.includes('Warlord:') &&
+                !line.includes('this turn:') &&
+                !line.includes('Vehicle:') &&
+                !line.includes('within 6":')
               ) {
                 wargearAbilities.push({
                   name: line.substring(0, line.indexOf(':')).trim(),
@@ -320,7 +374,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         for (let index = startOfRanged.line + 1; index < startOfRanged.endLine; index++) {
           let line = splitText[index].substring(0, startOfAbilities.pos);
           if (line.trim().length > 0) {
-            if (line.includes('One Shot:')) {
+            if (line.toLowerCase().includes('one shot:')) {
               continue;
             }
             if (line.includes('Snagged:')) {
@@ -340,8 +394,16 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
               index = index + 1;
               continue;
             }
+            if (line.includes('Psychic Assassin:')) {
+              index = index + 1;
+              continue;
+            }
             if (line.includes('Dead Choppy:')) {
               index = index + 2;
+              continue;
+            }
+            if (line.includes('Plasma Warhead:')) {
+              index = index + 7;
               continue;
             }
 
@@ -392,6 +454,24 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
                   .substring(0, startOfAbilities.pos)
                   .substring(0, splitText[index].indexOf('['))
                   .trim();
+              }
+              if (
+                splitText[index + 1].substring(0, startOfAbilities.pos).includes('[') &&
+                !splitText[index + 1].substring(0, startOfAbilities.pos).includes(']')
+              ) {
+                keywords = [
+                  ...keywords,
+                  ...splitText[index + 1]
+                    .substring(0, startOfAbilities.pos)
+                    .substring(
+                      splitText[index + 1].substring(0, startOfAbilities.pos).indexOf('[') + 1,
+                      startOfAbilities.pos
+                    )
+                    .toLowerCase()
+                    .split(',')
+                    .map((val) => val.trim())
+                    .filter((val) => val),
+                ];
               }
               if (
                 splitText[index + 2].substring(0, startOfAbilities.pos).includes('[') ||
@@ -485,6 +565,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
             if (
               name.includes('Before selecting targets for this ') ||
               name.includes('Reverberating Summons:') ||
+              name.includes('WARGEAR ABILITIES') ||
               includesString(name, PRIMARCH_ABILITIES_LIST)
             ) {
               break;
@@ -631,7 +712,15 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
           };
           specialAbilities = [...specialAbilities, ordersAbility];
         }
-
+        const unitPoints = points
+          .filter((pointsLine) => {
+            return pointsLine[1].toLowerCase() === name.toLowerCase();
+          })
+          .map((pointsLine) => {
+            let numModels, cost;
+            [, , numModels, cost] = pointsLine;
+            return { models: numModels, cost, active: true };
+          });
         let newUnit = {
           id: uuidv5(name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'),
           name,
@@ -643,6 +732,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
           loadout: unitLoadout,
           wargear: unitWargear,
           transport: unitTransport,
+          points: unitPoints,
           abilities: {
             wargear: wargearAbilities,
             core: coreKeywords,
@@ -673,27 +763,92 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         newUnit = checkForManualFixes(newUnit);
         units.push(newUnit);
       }
-      units.sort((a, b) => a.name.localeCompare(b.name));
-
-      const factions = {
-        id: factionId,
-        link: 'https://game-datacards.eu',
-        name: factionName,
-        is_subfaction: false,
-        parent_id: '',
-        datasheets: units,
-        colours: {
-          banner,
-          header 
-        }
-      };
-
-      fs.writeFileSync(`./gdc/${outputFile}.json`, JSON.stringify(factions, null, 2));
     }
+    units.sort((a, b) => a.name.localeCompare(b.name));
+
+    for (let i = 0; i < units.length; i++) {
+      const unit = units[i];
+
+      if (unit.leader) {
+        // console.log(i, unit.name, unit.leader);
+        let assignedUnits = undefined;
+
+        if (unit.leader.includes('You can attach')) {
+          assignedUnits = unit.leader
+            .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You can attach'))
+            .split('■')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+        } else if (unit.leader.includes('You must attach')) {
+          assignedUnits = unit.leader
+            .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You must attach'))
+            .split('■')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+        } else if (unit.leader.includes('This model can be attached to a')) {
+          assignedUnits = unit.leader
+            .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model can be attached to a'))
+            .split('■')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+        } else if (unit.leader.includes('This model cannot be attached to a')) {
+          assignedUnits = unit.leader
+            .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model cannot be attached to a'))
+            .split('■')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+        } else if (unit.leader.includes('If this unit’s Bodyguard')) {
+          assignedUnits = unit.leader
+            .substring(unit.leader.indexOf('■'), unit.leader.indexOf('If this unit’s'))
+            .split('■')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+        } else if (unit.leader.includes('(see Drukhari)')) {
+          assignedUnits = unit.leader
+            .substring(unit.leader.indexOf('■'), unit.leader.indexOf('(see Drukhari)'))
+            .split('■')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+        } else {
+          assignedUnits = unit.leader
+            .substring(unit.leader.indexOf('■'))
+            .split('■')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+        }
+        if (assignedUnits.length > 0) {
+          assignedUnits.forEach((atUnit) => {
+            const foundUnitIndex = units.findIndex((u) => u.name.toLowerCase().trim() === atUnit.toLowerCase().trim());
+            if (foundUnitIndex >= 0 && units[foundUnitIndex].ledBy && units[foundUnitIndex].ledBy.length > 0) {
+              units[foundUnitIndex].ledBy.push(unit.name);
+            } else if (foundUnitIndex >= 0) {
+              units[foundUnitIndex].ledBy = [unit.name];
+            } else {
+              // console.log(unit.name, 'not found:', atUnit);
+            }
+          });
+        }
+      }
+    }
+
+    const factions = {
+      id: factionId,
+      link: 'https://game-datacards.eu',
+      name: factionName,
+      is_subfaction: false,
+      parent_id: '',
+      datasheets: units,
+      colours: {
+        banner,
+        header,
+      },
+    };
+
+    fs.writeFileSync(`./gdc/${outputFile}.json`, JSON.stringify(factions, null, 2));
   });
 };
 
-convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', '#381a3a','#411f41',  3);
+convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', '#381a3a', '#411f41', 3);
 convertTextToJson('./spacemarines/', 'space_marines', 'SM', 'Space Marines', '#4b6262', '#092135', 3);
 convertTextToJson('./bloodangels/', 'bloodangels', 'CHBA', 'Blood Angels', '#72191c', '#631210', 3);
 convertTextToJson('./darkangels/', 'darkangels', 'CHDA', 'Dark Angels', '#013a17', '#16291a', 3);
