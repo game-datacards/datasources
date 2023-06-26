@@ -4,6 +4,36 @@
   "name": "Adeptus Custodes",
   "is_subfaction": false,
   "parent_id": "",
+  "enhancements": [
+    {
+      "name": "UNSTOPPABLE DESTROYER",
+      "description": "■ Adeptus Custodes model only (excluding Anathema Psykana models). Each time the bearer ends a Charge move, select one enemy unit within Engagement Range of the bearer and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds. ■ Once per battle, after the bearer’s unit ends a Charge move, all enemy units within 6\" of the bearer must take a Battle-shock test.",
+      "keywords": ["Adeptus Custodes"],
+      "exclusions": ["Anathema Psykana"],
+      "cost": "25"
+    },
+    {
+      "name": "INSPIRATIONAL EXEMPLAR",
+      "description": "■ Adeptus Custodes model only (excluding Anathema Psykana models). The bearer has a Leadership characteristic of 5+. ■ Once per battle, at the start of any phase, you can select one friendly Adeptus Custodes unit that is Battle-shocked and within 12\" of the bearer; that unit is no longer Battle-shocked.",
+      "keywords": ["Adeptus Custodes"],
+      "exclusions": ["Anathema Psykana"],
+      "cost": "10"
+    },
+    {
+      "name": "VEILED BLADE",
+      "description": "■ Adeptus Custodes model only (excluding Anathema Psykana models). Add 2 to the Attacks characteristic of the bearer’s melee weapons. ■ Once per battle, at the start of any Command phase, triple the bearer’s Objective Control characteristic until the end of the turn.",
+      "keywords": ["Adeptus Custodes"],
+      "exclusions": ["Anathema Psykana"],
+      "cost": "25"
+    },
+    {
+      "name": "CEASELESS HUNTER",
+      "description": "■ Adeptus Custodes model only (excluding Anathema Psykana models). The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back. ■ Once per battle, when an enemy unit ends a Normal,Advance or Fall Back move within 9\" of the bearer, if the bearer’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
+      "keywords": ["Adeptus Custodes"],
+      "exclusions": ["Anathema Psykana"],
+      "cost": "30"
+    }
+  ],
   "datasheets": [
     {
       "id": "d711fcf3-cd9c-56e2-936f-3e7d7ce404f1",
@@ -12,21 +42,28 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "3-6 Agamatus Custodians"
-      ],
+      "composition": ["3-6 Agamatus Custodians"],
       "loadout": "Every model is equipped with: lastrum bolt cannon; interceptor lance.",
       "wargear": [
         "Any number of models can each have their lastrum bolt cannon replaced with one of the following: ◦ 1 adrathic devastator ◦ 1 twin las-pulsar"
       ],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "3",
+          "cost": "280",
+          "active": true
+        },
+        {
+          "models": "6",
+          "cost": "560",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -100,9 +137,7 @@
             {
               "active": true,
               "name": "Lastrum bolt cannon",
-              "keywords": [
-                "sustained hits 1"
-              ],
+              "keywords": ["sustained hits 1"],
               "range": "36\"",
               "attacks": "3",
               "skill": "2+",
@@ -118,9 +153,7 @@
             {
               "active": true,
               "name": "Twin las-pulsar",
-              "keywords": [
-                "twin-linked"
-              ],
+              "keywords": ["twin-linked"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -138,9 +171,7 @@
             {
               "active": true,
               "name": "Interceptor lance",
-              "keywords": [
-                "lance"
-              ],
+              "keywords": ["lance"],
               "range": "Melee",
               "attacks": "5",
               "skill": "2+",
@@ -151,15 +182,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Mounted",
-        "Fly",
-        "Imperium",
-        "Agamatus Custodians"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Mounted", "Fly", "Imperium", "Agamatus Custodians"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "2973a1e7-49ab-5c6f-a61f-0abefe87bfe5",
@@ -168,13 +192,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Prosecutors ■ Vigilators ■ Witchseekers",
-      "composition": [
-        "1 Aleya – Epic Hero"
-      ],
+      "composition": ["1 Aleya – Epic Hero"],
       "loadout": "This model is equipped with: Somnus.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
       "points": [
         {
@@ -185,11 +205,7 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Feel No Pain 5+",
-          "Leader",
-          "Scouts 6\""
-        ],
+        "core": ["Feel No Pain 5+", "Leader", "Scouts 6\""],
         "faction": [],
         "primarch": [],
         "invul": {
@@ -248,10 +264,7 @@
             {
               "active": true,
               "name": "Somnus",
-              "keywords": [
-                "anti-psyker 4+",
-                "devastating wounds"
-              ],
+              "keywords": ["anti-psyker 4+", "devastating wounds"],
               "range": "Melee",
               "attacks": "4",
               "skill": "2+",
@@ -262,16 +275,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Epic Hero",
-        "Imperium",
-        "Aleya"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Character", "Epic Hero", "Imperium", "Aleya"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "1d52b4a3-4514-5a3e-adab-3594c2a60fa0",
@@ -280,9 +285,7 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "2-6 Allarus Custodians"
-      ],
+      "composition": ["2-6 Allarus Custodians"],
       "loadout": "Every model is equipped with: balistus grenade launcher; guardian spear.",
       "wargear": [
         "Any number of models can each have their guardian spear replaced with 1 castellan axe.",
@@ -320,12 +323,8 @@
             "showDescription": true
           }
         ],
-        "core": [
-          "Deep Strike"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -376,9 +375,7 @@
             {
               "active": true,
               "name": "Balistus grenade launcher",
-              "keywords": [
-                "blast"
-              ],
+              "keywords": ["blast"],
               "range": "18\"",
               "attacks": "D6",
               "skill": "2+",
@@ -394,9 +391,7 @@
             {
               "active": true,
               "name": "Castellan axe",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -412,9 +407,7 @@
             {
               "active": true,
               "name": "Guardian spear",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -475,18 +468,9 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Terminator",
-        "Imperium",
-        "Allarus Custodians"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "ledBy": [
-        "Shield-captain In Allarus Terminator Armour"
-      ]
+      "keywords": ["Infantry", "Terminator", "Imperium", "Allarus Custodians"],
+      "factions": ["Adeptus Custodes"],
+      "ledBy": ["Shield-captain In Allarus Terminator Armour"]
     },
     {
       "id": "2e5ba22b-8a92-5e30-aa84-5610a5081445",
@@ -495,13 +479,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Anathema Psykana Rhino"
-      ],
+      "composition": ["1 Anathema Psykana Rhino"],
       "loadout": "This model is equipped with: storm bolter; armoured tracks.",
-      "wargear": [
-        "This model can be equipped with 1 hunter-killer missile."
-      ],
+      "wargear": ["This model can be equipped with 1 hunter-killer missile."],
       "transport": "This model has a transport capacity of 12 Anathema Psykana Infantry models.",
       "points": [
         {
@@ -512,9 +492,7 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise D3"
-        ],
+        "core": ["Deadly Demise D3"],
         "faction": [],
         "primarch": [],
         "invul": {
@@ -566,9 +544,7 @@
             {
               "active": true,
               "name": "Hunter-killer missile",
-              "keywords": [
-                "one shot"
-              ],
+              "keywords": ["one shot"],
               "range": "48\"",
               "attacks": "1",
               "skill": "2+",
@@ -584,9 +560,7 @@
             {
               "active": true,
               "name": "Storm bolter",
-              "keywords": [
-                "rapid fire 2"
-              ],
+              "keywords": ["rapid fire 2"],
               "range": "24\"",
               "attacks": "2",
               "skill": "3+",
@@ -615,18 +589,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Transport",
-        "Dedicated Transport",
-        "Smoke",
-        "Imperium",
-        "Anathema Psykana",
-        "Rhino"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Transport", "Dedicated Transport", "Smoke", "Imperium", "Anathema Psykana", "Rhino"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "fd3600e1-2b97-5ed3-9d4f-d943b864caf1",
@@ -635,24 +599,29 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "3-6 Aquilon Custodians"
-      ],
+      "composition": ["3-6 Aquilon Custodians"],
       "loadout": "Every model is equipped with: lastrum storm bolter; solerite power gauntlet.",
       "wargear": [
         "Any number of models can each have their lastrum storm bolter replaced with one of the following: ◦ 1 infernus firepike ◦ 1 twin adrathic destructor",
         "Any number of models can each have their solerite power gauntlet replaced with 1 solerite power talon."
       ],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "3",
+          "cost": "230",
+          "active": true
+        },
+        {
+          "models": "6",
+          "cost": "460",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deep Strike"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -710,10 +679,7 @@
             {
               "active": true,
               "name": "Infernus firepike",
-              "keywords": [
-                "ignores cover",
-                "torrent"
-              ],
+              "keywords": ["ignores cover", "torrent"],
               "range": "12\"",
               "attacks": "D6",
               "skill": "N/A",
@@ -729,9 +695,7 @@
             {
               "active": true,
               "name": "Lastrum storm bolter",
-              "keywords": [
-                "rapid fire 2"
-              ],
+              "keywords": ["rapid fire 2"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -747,9 +711,7 @@
             {
               "active": true,
               "name": "Twin adrathic destructor",
-              "keywords": [
-                "twin-linked"
-              ],
+              "keywords": ["twin-linked"],
               "range": "18\"",
               "attacks": "1",
               "skill": "2+",
@@ -794,15 +756,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Terminator",
-        "Imperium",
-        "Aquilon Custodians"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Terminator", "Imperium", "Aquilon Custodians"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "b8ed7302-d7b0-5075-bfde-8077f6e2f414",
@@ -811,24 +766,21 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Ares Gunship"
-      ],
+      "composition": ["1 Ares Gunship"],
       "loadout": "This model is equipped with: 2 arachnus heavy blaze cannons; arachnus magna-blaze cannon; armoured hull.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "1",
+          "cost": "580",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise D6",
-          "Hover"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise D6", "Hover"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "5+",
@@ -918,16 +870,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Aircraft",
-        "Fly",
-        "Imperium",
-        "Ares Gunship"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Aircraft", "Fly", "Imperium", "Ares Gunship"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "e3d44ca2-252c-517f-8702-19e20f311930",
@@ -936,13 +880,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Custodian Guard ■ Custodian Wardens",
-      "composition": [
-        "1 Blade Champion"
-      ],
+      "composition": ["1 Blade Champion"],
       "loadout": "This model is equipped with: vaultswords.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
       "points": [
         {
@@ -953,13 +893,8 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deep Strike",
-          "Leader"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike", "Leader"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -1011,9 +946,7 @@
             {
               "active": true,
               "name": "Vaultswords – Behemor",
-              "keywords": [
-                "precision"
-              ],
+              "keywords": ["precision"],
               "range": "Melee",
               "attacks": "6",
               "skill": "2+",
@@ -1024,9 +957,7 @@
             {
               "active": true,
               "name": "Vaultswords – Hurricanus",
-              "keywords": [
-                "sustained hits 1"
-              ],
+              "keywords": ["sustained hits 1"],
               "range": "Melee",
               "attacks": "9",
               "skill": "2+",
@@ -1037,9 +968,7 @@
             {
               "active": true,
               "name": "Vaultswords – Victus",
-              "keywords": [
-                "devastating wounds"
-              ],
+              "keywords": ["devastating wounds"],
               "range": "Melee",
               "attacks": "5",
               "skill": "2+",
@@ -1050,15 +979,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Imperium",
-        "Blade Champion"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Character", "Imperium", "Blade Champion"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "67a406c1-4870-58e0-a260-38b87888d4a1",
@@ -1067,23 +989,23 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Caladius Grav-tank"
-      ],
+      "composition": ["1 Caladius Grav-tank"],
       "loadout": "This model is equipped with: twin iliastus accelerator cannon; twin lastrum bolt cannon; armoured hull.",
       "wargear": [
         "This model’s twin iliastus accelerator cannon can be replaced with 1 twin arachnus heavy blaze cannon."
       ],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "1",
+          "cost": "215",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise D3"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "5+",
@@ -1128,9 +1050,7 @@
             {
               "active": true,
               "name": "Twin arachnus heavy blaze cannon",
-              "keywords": [
-                "twin-linked"
-              ],
+              "keywords": ["twin-linked"],
               "range": "48\"",
               "attacks": "4",
               "skill": "2+",
@@ -1146,10 +1066,7 @@
             {
               "active": true,
               "name": "Twin iliastus accelerator cannon",
-              "keywords": [
-                "rapid fire 4",
-                "twin-linked"
-              ],
+              "keywords": ["rapid fire 4", "twin-linked"],
               "range": "48\"",
               "attacks": "4",
               "skill": "2+",
@@ -1165,9 +1082,7 @@
             {
               "active": true,
               "name": "Twin lastrum bolt cannon",
-              "keywords": [
-                "sustained hits 1"
-              ],
+              "keywords": ["sustained hits 1"],
               "range": "36\"",
               "attacks": "3",
               "skill": "2+",
@@ -1196,15 +1111,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Fly",
-        "Imperium",
-        "Caladius Grav-tank"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Fly", "Imperium", "Caladius Grav-tank"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "f0073ee1-10b4-5ece-a72c-9e22f7eadab5",
@@ -1213,23 +1121,23 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Contemptor-Achillus Dreadnought"
-      ],
+      "composition": ["1 Contemptor-Achillus Dreadnought"],
       "loadout": "This model is equipped with: 2 lastrum storm bolters; Achillus dreadspear.",
       "wargear": [
         "This model’s 2 lastrum storm bolters can be replaced with one of the following: ◦ 2 infernus incinerators ◦ 2 twin adrathic destructors ◦ 1 lastrum storm bolter and 1 infernus incinerator ◦ 1 lastrum storm bolter and 1 twin adrathic destructor ◦ 1 infernus incinerator and 1 twin adrathic destructor"
       ],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "1",
+          "cost": "155",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise 1"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise 1"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "5+",
@@ -1290,10 +1198,7 @@
             {
               "active": true,
               "name": "Infernus incinerator",
-              "keywords": [
-                "torrent",
-                "ignores cover"
-              ],
+              "keywords": ["torrent", "ignores cover"],
               "range": "12\"",
               "attacks": "D6",
               "skill": "N/A",
@@ -1309,9 +1214,7 @@
             {
               "active": true,
               "name": "Lastrum storm bolter",
-              "keywords": [
-                "rapid fire 2"
-              ],
+              "keywords": ["rapid fire 2"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -1327,9 +1230,7 @@
             {
               "active": true,
               "name": "Twin adrathic destructor",
-              "keywords": [
-                "twin-linked"
-              ],
+              "keywords": ["twin-linked"],
               "range": "18\"",
               "attacks": "1",
               "skill": "2+",
@@ -1347,9 +1248,7 @@
             {
               "active": true,
               "name": "Achillus dreadspear",
-              "keywords": [
-                "lance"
-              ],
+              "keywords": ["lance"],
               "range": "Melee",
               "attacks": "5",
               "skill": "2+",
@@ -1360,15 +1259,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Walker",
-        "Imperium",
-        "Contemptor-Achillus Dreadnought"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Walker", "Imperium", "Contemptor-Achillus Dreadnought"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "134142f6-2a60-56ed-8dfd-21373c195102",
@@ -1377,23 +1269,21 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Contemptor-Galatus Dreadnought"
-      ],
+      "composition": ["1 Contemptor-Galatus Dreadnought"],
       "loadout": "This model is equipped with: Galatus warblade.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "1",
+          "cost": "175",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise 1"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise 1"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -1438,11 +1328,7 @@
             {
               "active": true,
               "name": "Galatus warblade",
-              "keywords": [
-                "ignores cover",
-                "torrent",
-                "twin-linked"
-              ],
+              "keywords": ["ignores cover", "torrent", "twin-linked"],
               "range": "12\"",
               "attacks": "D6",
               "skill": "N/A",
@@ -1471,15 +1357,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Walker",
-        "Imperium",
-        "Contemptor-Galatus Dreadnought"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Walker", "Imperium", "Contemptor-Galatus Dreadnought"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "f0b82110-5f91-5f45-9280-d686ae2823cd",
@@ -1488,23 +1367,21 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Coronus Grav-carrier"
-      ],
+      "composition": ["1 Coronus Grav-carrier"],
       "loadout": "This model is equipped with: twin arachnus blaze cannon; twin lastrum bolt cannon; armoured hull.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "This model has a transport capacity of 8 Adeptus Custodes Infantry models.",
-      "points": [],
+      "points": [
+        {
+          "models": "1",
+          "cost": "200",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise D6"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "5+",
@@ -1549,10 +1426,7 @@
             {
               "active": true,
               "name": "Twin arachnus blaze cannon",
-              "keywords": [
-                "devastating wounds",
-                "twin-linked"
-              ],
+              "keywords": ["devastating wounds", "twin-linked"],
               "range": "24\"",
               "attacks": "8",
               "skill": "2+",
@@ -1568,9 +1442,7 @@
             {
               "active": true,
               "name": "Twin lastrum bolt cannon",
-              "keywords": [
-                "sustained hits 1"
-              ],
+              "keywords": ["sustained hits 1"],
               "range": "36\"",
               "attacks": "3",
               "skill": "2+",
@@ -1599,16 +1471,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Transport",
-        "Fly",
-        "Imperium",
-        "Coronus Grav-carrier"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Transport", "Fly", "Imperium", "Coronus Grav-carrier"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "923d8a4f-3a80-5328-bd04-8d3bcee4d6e2",
@@ -1617,9 +1481,7 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "4-10 Custodian Guard"
-      ],
+      "composition": ["4-10 Custodian Guard"],
       "loadout": "Every model is equipped with: guardian spear.",
       "wargear": [
         "Any number of models can each have their guardian spear replaced with 1 sentinel blade and 1 praesidium shield.",
@@ -1663,12 +1525,8 @@
             "showDescription": true
           }
         ],
-        "core": [
-          "Deep Strike"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -1719,9 +1577,7 @@
             {
               "active": true,
               "name": "Guardian spear",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -1737,10 +1593,7 @@
             {
               "active": true,
               "name": "Sentinel blade",
-              "keywords": [
-                "assault",
-                "pistol"
-              ],
+              "keywords": ["assault", "pistol"],
               "range": "12\"",
               "attacks": "2",
               "skill": "2+",
@@ -1801,21 +1654,9 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Battleline",
-        "Imperium",
-        "Custodian Guard"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "ledBy": [
-        "Blade Champion",
-        "Shield-captain",
-        "Trajann Valoris",
-        "Valerian"
-      ]
+      "keywords": ["Infantry", "Battleline", "Imperium", "Custodian Guard"],
+      "factions": ["Adeptus Custodes"],
+      "ledBy": ["Blade Champion", "Shield-captain", "Trajann Valoris", "Valerian"]
     },
     {
       "id": "550e4175-7149-5870-a7b3-58e842cfce32",
@@ -1824,23 +1665,21 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "5 Custodian Guard with Adrasite and Pyrithite Spears"
-      ],
+      "composition": ["5 Custodian Guard with Adrasite and Pyrithite Spears"],
       "loadout": "Every model is equipped with: adrasite spear.",
-      "wargear": [
-        "Any number of models can each have their adrasite spear replaced with 1 pyrithite spear."
-      ],
+      "wargear": ["Any number of models can each have their adrasite spear replaced with 1 pyrithite spear."],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "5",
+          "cost": "325",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deep Strike"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -1914,9 +1753,7 @@
             {
               "active": true,
               "name": "Pyrithite spear",
-              "keywords": [
-                "melta 2"
-              ],
+              "keywords": ["melta 2"],
               "range": "12\"",
               "attacks": "1",
               "skill": "2+",
@@ -1961,14 +1798,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Imperium",
-        "Custodian Guard with Adrasite and"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Imperium", "Custodian Guard with Adrasite and"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "84afd6cb-2f70-5b2d-87ee-e5c581b96817",
@@ -1977,9 +1808,7 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "3-6 Custodian Wardens"
-      ],
+      "composition": ["3-6 Custodian Wardens"],
       "loadout": "Every model is equipped with: guardian spear.",
       "wargear": [
         "Any number of models can each have their guardian spear replaced with 1 castellan axe.",
@@ -2007,12 +1836,8 @@
             "showDescription": true
           }
         ],
-        "core": [
-          "Deep Strike"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -2063,9 +1888,7 @@
             {
               "active": true,
               "name": "Castellan axe",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -2081,9 +1904,7 @@
             {
               "active": true,
               "name": "Guardian spear",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -2128,20 +1949,9 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Imperium",
-        "Custodian Wardens"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "ledBy": [
-        "Blade Champion",
-        "Shield-captain",
-        "Trajann Valoris",
-        "Valerian"
-      ]
+      "keywords": ["Infantry", "Imperium", "Custodian Wardens"],
+      "factions": ["Adeptus Custodes"],
+      "ledBy": ["Blade Champion", "Shield-captain", "Trajann Valoris", "Valerian"]
     },
     {
       "id": "1502c79d-c7ba-5714-8de1-c24b51efefd8",
@@ -2150,9 +1960,7 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Prosecutors ■ Vigilators ■ Witchseekers",
-      "composition": [
-        "1 Knight-Centura"
-      ],
+      "composition": ["1 Knight-Centura"],
       "loadout": "This model is equipped with: executioner greatblade.",
       "wargear": [
         "This model’s executioner greatblade can be replaced with one of the following: ◦ 1 master-crafted boltgun ◦ 1 Witchseeker flamer"
@@ -2167,10 +1975,7 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Leader",
-          "Scouts 6\""
-        ],
+        "core": ["Leader", "Scouts 6\""],
         "faction": [],
         "primarch": [],
         "invul": {
@@ -2228,9 +2033,7 @@
             {
               "active": true,
               "name": "Master-crafted boltgun",
-              "keywords": [
-                "rapid fire 1"
-              ],
+              "keywords": ["rapid fire 1"],
               "range": "24\"",
               "attacks": "1",
               "skill": "2+",
@@ -2246,10 +2049,7 @@
             {
               "active": true,
               "name": "Witchseeker flamer",
-              "keywords": [
-                "ignores cover",
-                "torrent"
-              ],
+              "keywords": ["ignores cover", "torrent"],
               "range": "12\"",
               "attacks": "D6",
               "skill": "N/A",
@@ -2267,10 +2067,7 @@
             {
               "active": true,
               "name": "Executioner greatblade",
-              "keywords": [
-                "anti-psyker 4+",
-                "devastating wounds"
-              ],
+              "keywords": ["anti-psyker 4+", "devastating wounds"],
               "range": "Melee",
               "attacks": "3",
               "skill": "2+",
@@ -2281,16 +2078,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Imperium",
-        "Anathema Psykana",
-        "Knight-Centura"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Character", "Imperium", "Anathema Psykana", "Knight-Centura"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "335a4762-5e7e-5012-9ff2-9d53d3f8a66d",
@@ -2299,24 +2088,21 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Orion Assault Dropship"
-      ],
+      "composition": ["1 Orion Assault Dropship"],
       "loadout": "This model is equipped with: 2 arachnus heavy blaze cannons; 2 twin lastrum bolt cannons; 2 spiculus heavy bolt launchers; armoured hull.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "This model has a transport capacity of 12 Adeptus Custodes Infantry models. This model can also transport 1 Venerable Contemptor Dreadnought, 1 Contemptor-Achillus Dreadnought or 1 Contemptor Galatus-Dreadnought; while doing so, its transport capacity is reduced to 6 Adeptus Custodes Infantry models.",
-      "points": [],
+      "points": [
+        {
+          "models": "1",
+          "cost": "690",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise D6",
-          "Hover"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise D6", "Hover"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "5+",
@@ -2377,9 +2163,7 @@
             {
               "active": true,
               "name": "Spiculus heavy bolt launcher",
-              "keywords": [
-                "blast"
-              ],
+              "keywords": ["blast"],
               "range": "36\"",
               "attacks": "D6+6",
               "skill": "2+",
@@ -2395,9 +2179,7 @@
             {
               "active": true,
               "name": "Twin lastrum bolt cannon",
-              "keywords": [
-                "sustained hits 1"
-              ],
+              "keywords": ["sustained hits 1"],
               "range": "36\"",
               "attacks": "3",
               "skill": "2+",
@@ -2426,17 +2208,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Transport",
-        "Aircraft",
-        "Fly",
-        "Imperium",
-        "Orion Assault Dropship"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Transport", "Aircraft", "Fly", "Imperium", "Orion Assault Dropship"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "5d5d209e-d797-5a54-b0c4-2ce818faa24b",
@@ -2445,23 +2218,21 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Pallas Grav-attack"
-      ],
+      "composition": ["1 Pallas Grav-attack"],
       "loadout": "This model is equipped with: twin arachnus blaze cannon; armoured hull.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "1",
+          "cost": "120",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise D3"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "5+",
@@ -2506,10 +2277,7 @@
             {
               "active": true,
               "name": "Twin arachnus blaze cannon",
-              "keywords": [
-                "devastating wounds",
-                "twin-linked"
-              ],
+              "keywords": ["devastating wounds", "twin-linked"],
               "range": "24\"",
               "attacks": "8",
               "skill": "2+",
@@ -2538,15 +2306,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Fly",
-        "Imperium",
-        "Pallas Grav-attack"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Fly", "Imperium", "Pallas Grav-attack"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "c88e2168-63a7-58d4-92f7-599f8240099a",
@@ -2555,14 +2316,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Prosecutor Sister Superior",
-        "3-9 Prosecutors"
-      ],
+      "composition": ["1 Prosecutor Sister Superior", "3-9 Prosecutors"],
       "loadout": "Every model is equipped with: boltgun; close combat weapon.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
       "points": [
         {
@@ -2640,9 +2396,7 @@
             {
               "active": true,
               "name": "Boltgun",
-              "keywords": [
-                "rapid fire 1"
-              ],
+              "keywords": ["rapid fire 1"],
               "range": "24\"",
               "attacks": "1",
               "skill": "3+",
@@ -2671,20 +2425,9 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Battleline",
-        "Imperium",
-        "Anathema Psykana",
-        "Prosecutors"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "ledBy": [
-        "Aleya",
-        "Knight-centura"
-      ]
+      "keywords": ["Infantry", "Battleline", "Imperium", "Anathema Psykana", "Prosecutors"],
+      "factions": ["Adeptus Custodes"],
+      "ledBy": ["Aleya", "Knight-centura"]
     },
     {
       "id": "6faae4f4-5ef4-5bba-9bd3-17a82eb610f9",
@@ -2693,23 +2436,21 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "5 Sagittarum Custodians"
-      ],
+      "composition": ["5 Sagittarum Custodians"],
       "loadout": "Every model is equipped with: adrastus bolt caliver; misericordia.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "5",
+          "cost": "250",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deep Strike"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -2767,9 +2508,7 @@
             {
               "active": true,
               "name": "Adrastus bolt caliver",
-              "keywords": [
-                "sustained hits 1"
-              ],
+              "keywords": ["sustained hits 1"],
               "range": "36\"",
               "attacks": "3",
               "skill": "2+",
@@ -2798,14 +2537,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Imperium",
-        "Sagittarum Custodians"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Imperium", "Sagittarum Custodians"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "7e5fe5ef-d517-5317-a4a3-532012b2ab27",
@@ -2814,9 +2547,7 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Custodian Guard ■ Custodian Wardens",
-      "composition": [
-        "1 Shield-Captain"
-      ],
+      "composition": ["1 Shield-Captain"],
       "loadout": "This model is equipped with: guardian spear.",
       "wargear": [
         "This model’s guardian spear can be replaced with one of the following: ◦ 1 castellan axe ◦ 1 sentinel blade ◦ 1 sentinel blade and 1 praesidium shield"
@@ -2838,13 +2569,8 @@
             "showDescription": true
           }
         ],
-        "core": [
-          "Deep Strike",
-          "Leader"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike", "Leader"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -2895,9 +2621,7 @@
             {
               "active": true,
               "name": "Castellan axe",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -2913,9 +2637,7 @@
             {
               "active": true,
               "name": "Guardian spear",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -2931,10 +2653,7 @@
             {
               "active": true,
               "name": "Sentinel blade",
-              "keywords": [
-                "assault",
-                "pistol"
-              ],
+              "keywords": ["assault", "pistol"],
               "range": "12\"",
               "attacks": "2",
               "skill": "2+",
@@ -2995,15 +2714,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Imperium",
-        "Shield-Captain"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Character", "Imperium", "Shield-Captain"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "4bff1d84-eb9d-5f8f-80c2-4eef6bc38553",
@@ -3012,13 +2724,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "This model can be attached to the following unit: ■ Allarus Custodians",
-      "composition": [
-        "1 Shield-Captain in Allarus Terminator Armour"
-      ],
+      "composition": ["1 Shield-Captain in Allarus Terminator Armour"],
       "loadout": "This model is equipped with: balistus grenade launcher; guardian spear.",
-      "wargear": [
-        "This model’s guardian spear can be replaced with 1 castellan axe."
-      ],
+      "wargear": ["This model’s guardian spear can be replaced with 1 castellan axe."],
       "transport": "",
       "points": [
         {
@@ -3029,13 +2737,8 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deep Strike",
-          "Leader"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike", "Leader"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -3086,9 +2789,7 @@
             {
               "active": true,
               "name": "Balistus grenade launcher",
-              "keywords": [
-                "blast"
-              ],
+              "keywords": ["blast"],
               "range": "18\"",
               "attacks": "D6",
               "skill": "2+",
@@ -3104,9 +2805,7 @@
             {
               "active": true,
               "name": "Castellan axe",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -3122,9 +2821,7 @@
             {
               "active": true,
               "name": "Guardian spear",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -3169,16 +2866,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Imperium",
-        "Terminator",
-        "Shield-Captain"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Character", "Imperium", "Terminator", "Shield-Captain"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "e803a504-7890-5595-8868-d52189fbe26e",
@@ -3187,13 +2876,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "This model can be attached to the following unit: ■ Vertus Praetors",
-      "composition": [
-        "1 Shield-Captain on Dawneagle Jetbike"
-      ],
+      "composition": ["1 Shield-Captain on Dawneagle Jetbike"],
       "loadout": "This model is equipped with: salvo launcher; interceptor lance.",
-      "wargear": [
-        "This model’s salvo launcher can be replaced with 1 Vertus hurricane bolter."
-      ],
+      "wargear": ["This model’s salvo launcher can be replaced with 1 Vertus hurricane bolter."],
       "transport": "",
       "points": [
         {
@@ -3204,12 +2889,8 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Leader"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Leader"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -3260,10 +2941,7 @@
             {
               "active": true,
               "name": "Vertus hurricane bolter",
-              "keywords": [
-                "rapid fire 3",
-                "twin-linked"
-              ],
+              "keywords": ["rapid fire 3", "twin-linked"],
               "range": "18\"",
               "attacks": "3",
               "skill": "2+",
@@ -3297,9 +2975,7 @@
             {
               "active": true,
               "name": "Interceptor lance",
-              "keywords": [
-                "lance"
-              ],
+              "keywords": ["lance"],
               "range": "Melee",
               "attacks": "6",
               "skill": "2+",
@@ -3310,17 +2986,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Mounted",
-        "Character",
-        "Fly",
-        "Imperium",
-        "Dawneagle Jetbike",
-        "Shield-Captain"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Mounted", "Character", "Fly", "Imperium", "Dawneagle Jetbike", "Shield-Captain"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "20c06da2-729f-52ce-8989-b2b98ea909b3",
@@ -3329,23 +2996,23 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Telemon Heavy Dreadnought"
-      ],
+      "composition": ["1 Telemon Heavy Dreadnought"],
       "loadout": "This model is equipped with: 2 iliastus accelerator culverins; spiculus bolt launcher; armoured feet.",
       "wargear": [
         "This model’s 2 iliastus accelerator culverins can be replaced with one of the following: ◦ 2 arachnus storm cannons ◦ 2 Telemon caestus and 2 twin plasma projectors ◦ 1 iliastus accelerator culverin and 1 arachnus storm cannon ◦ 1 iliastus accelerator culverin, 1 Telemon caestus and 1 twin plasma projector ◦ 1 arachnus storm cannon, 1 Telemon caestus and 1 twin plasma projector"
       ],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "1",
+          "cost": "235",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise D3"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -3390,9 +3057,7 @@
             {
               "active": true,
               "name": "Arachnus storm cannon",
-              "keywords": [
-                "devastating wounds"
-              ],
+              "keywords": ["devastating wounds"],
               "range": "24\"",
               "attacks": "12",
               "skill": "2+",
@@ -3424,9 +3089,7 @@
             {
               "active": true,
               "name": "Spiculus bolt launcher",
-              "keywords": [
-                "blast"
-              ],
+              "keywords": ["blast"],
               "range": "36\"",
               "attacks": "D6+3",
               "skill": "2+",
@@ -3442,10 +3105,7 @@
             {
               "active": true,
               "name": "Twin plasma projector",
-              "keywords": [
-                "torrent",
-                "twin-linked"
-              ],
+              "keywords": ["torrent", "twin-linked"],
               "range": "12\"",
               "attacks": "D3",
               "skill": "N/A",
@@ -3490,15 +3150,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Walker",
-        "Imperium",
-        "Telemon Heavy Dreadnought"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Walker", "Imperium", "Telemon Heavy Dreadnought"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "8d484fc2-0de6-5a20-b6fb-888f23a18b3f",
@@ -3507,13 +3160,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Custodian Guard ■ Custodian Wardens",
-      "composition": [
-        "1 Trajann Valoris – Epic Hero"
-      ],
+      "composition": ["1 Trajann Valoris – Epic Hero"],
       "loadout": "This model is equipped with: Watcher’s Axe.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
       "points": [
         {
@@ -3524,14 +3173,8 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deep Strike",
-          "Feel No Pain 5+",
-          "Leader"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike", "Feel No Pain 5+", "Leader"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -3589,9 +3232,7 @@
             {
               "active": true,
               "name": "Watcher’s Axe",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -3620,16 +3261,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Epic Hero",
-        "Imperium",
-        "Trajann Valoris"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Character", "Epic Hero", "Imperium", "Trajann Valoris"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "12edb3d1-de71-5dce-8515-c95f86fa9b05",
@@ -3638,13 +3271,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Custodian Guard ■ Custodian Wardens",
-      "composition": [
-        "1 Valerian – Epic Hero"
-      ],
+      "composition": ["1 Valerian – Epic Hero"],
       "loadout": "This model is equipped with: Gnosis.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
       "points": [
         {
@@ -3655,13 +3284,8 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Feel No Pain 6+",
-          "Leader"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Feel No Pain 6+", "Leader"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -3712,9 +3336,7 @@
             {
               "active": true,
               "name": "Gnosis",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "3",
               "skill": "2+",
@@ -3743,17 +3365,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Epic Hero",
-        "Imperium",
-        "Shield-Captain",
-        "Valerian"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Character", "Epic Hero", "Imperium", "Shield-Captain", "Valerian"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "d9fb2942-b113-5191-8a92-f7b99cce3504",
@@ -3762,15 +3375,24 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "3-6 Venatari Custodians"
-      ],
+      "composition": ["3-6 Venatari Custodians"],
       "loadout": "Every model is equipped with: Venatari lance.",
       "wargear": [
         "Any number of models can each have their Venatari lance replaced with 1 kinetic destroyer and 1 tarsus buckler."
       ],
       "transport": "",
-      "points": [],
+      "points": [
+        {
+          "models": "3",
+          "cost": "235",
+          "active": true
+        },
+        {
+          "models": "6",
+          "cost": "470",
+          "active": true
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -3780,12 +3402,8 @@
             "showDescription": true
           }
         ],
-        "core": [
-          "Deep Strike"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deep Strike"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -3843,10 +3461,7 @@
             {
               "active": true,
               "name": "Kinetic destroyer",
-              "keywords": [
-                "pistol",
-                "sustained hits 1"
-              ],
+              "keywords": ["pistol", "sustained hits 1"],
               "range": "12\"",
               "attacks": "2",
               "skill": "2+",
@@ -3862,9 +3477,7 @@
             {
               "active": true,
               "name": "Venatari lance",
-              "keywords": [
-                "assault"
-              ],
+              "keywords": ["assault"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -3898,9 +3511,7 @@
             {
               "active": true,
               "name": "Venatari lance",
-              "keywords": [
-                "lance"
-              ],
+              "keywords": ["lance"],
               "range": "Melee",
               "attacks": "5",
               "skill": "2+",
@@ -3911,16 +3522,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Fly",
-        "Jump Pack",
-        "Imperium",
-        "Venatari Custodians"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Infantry", "Fly", "Jump Pack", "Imperium", "Venatari Custodians"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "cf2b9789-37cf-5eaf-bd1f-6b126b5173b2",
@@ -3929,13 +3532,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Venerable Contemptor Dreadnought"
-      ],
+      "composition": ["1 Venerable Contemptor Dreadnought"],
       "loadout": "This model is equipped with: combi-bolter; multi-melta; Contemptor combat weapon.",
-      "wargear": [
-        "This model’s multi-melta can be replaced with 1 Kheres-pattern assault cannon."
-      ],
+      "wargear": ["This model’s multi-melta can be replaced with 1 Kheres-pattern assault cannon."],
       "transport": "",
       "points": [
         {
@@ -3946,12 +3545,8 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise 1"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise 1"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "5+",
@@ -3996,9 +3591,7 @@
             {
               "active": true,
               "name": "Combi-bolter",
-              "keywords": [
-                "rapid fire 2"
-              ],
+              "keywords": ["rapid fire 2"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -4014,9 +3607,7 @@
             {
               "active": true,
               "name": "Kheres-pattern assault cannon",
-              "keywords": [
-                "devastating wounds"
-              ],
+              "keywords": ["devastating wounds"],
               "range": "24\"",
               "attacks": "6",
               "skill": "2+",
@@ -4032,9 +3623,7 @@
             {
               "active": true,
               "name": "Multi-melta",
-              "keywords": [
-                "melta 2"
-              ],
+              "keywords": ["melta 2"],
               "range": "18\"",
               "attacks": "2",
               "skill": "2+",
@@ -4063,15 +3652,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Walker",
-        "Imperium",
-        "Venerable Contemptor Dreadnought"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Walker", "Imperium", "Venerable Contemptor Dreadnought"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "bf47a8d1-d746-5e58-a1f7-46863e3c0f38",
@@ -4080,9 +3662,7 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Venerable Land Raider"
-      ],
+      "composition": ["1 Venerable Land Raider"],
       "loadout": "This model is equipped with: 2 godhammer lascannons; twin heavy bolter; armoured tracks.",
       "wargear": [
         "This model can be equipped with 1 hunter-killer missile.",
@@ -4098,12 +3678,8 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Deadly Demise D6"
-        ],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "",
@@ -4164,9 +3740,7 @@
             {
               "active": true,
               "name": "Hunter-killer missile",
-              "keywords": [
-                "one shot"
-              ],
+              "keywords": ["one shot"],
               "range": "48\"",
               "attacks": "1",
               "skill": "2+",
@@ -4182,9 +3756,7 @@
             {
               "active": true,
               "name": "Storm bolter",
-              "keywords": [
-                "rapid fire 2"
-              ],
+              "keywords": ["rapid fire 2"],
               "range": "24\"",
               "attacks": "2",
               "skill": "2+",
@@ -4200,10 +3772,7 @@
             {
               "active": true,
               "name": "Twin heavy bolter",
-              "keywords": [
-                "sustained hits 1",
-                "twin-linked"
-              ],
+              "keywords": ["sustained hits 1", "twin-linked"],
               "range": "36\"",
               "attacks": "3",
               "skill": "2+",
@@ -4232,16 +3801,8 @@
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Imperium",
-        "Transport",
-        "Smoke",
-        "Venerable Land Raider"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ]
+      "keywords": ["Vehicle", "Imperium", "Transport", "Smoke", "Venerable Land Raider"],
+      "factions": ["Adeptus Custodes"]
     },
     {
       "id": "e3558fff-5623-5899-8bb0-e6a2aa3881cd",
@@ -4250,13 +3811,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "2-6 Vertus Praetors"
-      ],
+      "composition": ["2-6 Vertus Praetors"],
       "loadout": "Every model is equipped with: salvo launcher; interceptor lance.",
-      "wargear": [
-        "Any number of models can each have their salvo launcher replaced with 1 Vertus hurricane bolter."
-      ],
+      "wargear": ["Any number of models can each have their salvo launcher replaced with 1 Vertus hurricane bolter."],
       "transport": "",
       "points": [
         {
@@ -4283,9 +3840,7 @@
       "abilities": {
         "wargear": [],
         "core": [],
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "faction": ["Martial Ka’tah"],
         "primarch": [],
         "invul": {
           "value": "4+",
@@ -4352,10 +3907,7 @@
             {
               "active": true,
               "name": "Vertus hurricane bolter",
-              "keywords": [
-                "rapid fire 3",
-                "twin-linked"
-              ],
+              "keywords": ["rapid fire 3", "twin-linked"],
               "range": "18\"",
               "attacks": "3",
               "skill": "2+",
@@ -4373,9 +3925,7 @@
             {
               "active": true,
               "name": "Interceptor lance",
-              "keywords": [
-                "lance"
-              ],
+              "keywords": ["lance"],
               "range": "Melee",
               "attacks": "5",
               "skill": "2+",
@@ -4386,18 +3936,9 @@
           ]
         }
       ],
-      "keywords": [
-        "Mounted",
-        "Fly",
-        "Imperium",
-        "Vertus Praetors"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "ledBy": [
-        "Shield-captain On Dawneagle Jetbike"
-      ]
+      "keywords": ["Mounted", "Fly", "Imperium", "Vertus Praetors"],
+      "factions": ["Adeptus Custodes"],
+      "ledBy": ["Shield-captain On Dawneagle Jetbike"]
     },
     {
       "id": "a625fffb-42af-51c1-99a0-20a2f699b2fa",
@@ -4406,14 +3947,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Vigilator Sister Superior",
-        "3-9 Vigilators"
-      ],
+      "composition": ["1 Vigilator Sister Superior", "3-9 Vigilators"],
       "loadout": "Every model is equipped with: executioner greatblade.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
       "points": [
         {
@@ -4492,10 +4028,7 @@
             {
               "active": true,
               "name": "Executioner greatblade",
-              "keywords": [
-                "anti-psyker 4+",
-                "devastating wounds"
-              ],
+              "keywords": ["anti-psyker 4+", "devastating wounds"],
               "range": "Melee",
               "attacks": "2",
               "skill": "3+",
@@ -4506,19 +4039,9 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Imperium",
-        "Anathema Psykana",
-        "Vigilators"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "ledBy": [
-        "Aleya",
-        "Knight-centura"
-      ]
+      "keywords": ["Infantry", "Imperium", "Anathema Psykana", "Vigilators"],
+      "factions": ["Adeptus Custodes"],
+      "ledBy": ["Aleya", "Knight-centura"]
     },
     {
       "id": "9232d973-cdd6-519b-a8da-4c68e578ca7f",
@@ -4527,14 +4050,9 @@
       "faction_id": "AC",
       "cardType": "DataCard",
       "leader": "",
-      "composition": [
-        "1 Witchseeker Sister Superior",
-        "3-9 Witchseekers"
-      ],
+      "composition": ["1 Witchseeker Sister Superior", "3-9 Witchseekers"],
       "loadout": "Every model is equipped with: Witchseeker flamer; close combat weapon.",
-      "wargear": [
-        "None"
-      ],
+      "wargear": ["None"],
       "transport": "",
       "points": [
         {
@@ -4560,9 +4078,7 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [
-          "Scouts 6\""
-        ],
+        "core": ["Scouts 6\""],
         "faction": [],
         "primarch": [],
         "invul": {
@@ -4614,10 +4130,7 @@
             {
               "active": true,
               "name": "Witchseeker flamer",
-              "keywords": [
-                "ignores cover",
-                "torrent"
-              ],
+              "keywords": ["ignores cover", "torrent"],
               "range": "12\"",
               "attacks": "D6",
               "skill": "N/A",
@@ -4646,19 +4159,9 @@
           ]
         }
       ],
-      "keywords": [
-        "Infantry",
-        "Imperium",
-        "Anathema Psykana",
-        "Witchseekers"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "ledBy": [
-        "Aleya",
-        "Knight-centura"
-      ]
+      "keywords": ["Infantry", "Imperium", "Anathema Psykana", "Witchseekers"],
+      "factions": ["Adeptus Custodes"],
+      "ledBy": ["Aleya", "Knight-centura"]
     }
   ],
   "colours": {
