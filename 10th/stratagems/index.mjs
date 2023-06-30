@@ -21,6 +21,7 @@ import orcs from './orcs.mjs';
 import space_marines from './space_marines.mjs';
 import spacewolves from './spacewolves.mjs';
 import tau from './tau.mjs';
+import thousandsons from './thousandsons.mjs';
 
 const data = {
   core,
@@ -47,6 +48,7 @@ const data = {
   space_marines,
   spacewolves,
   tau,
+  thousandsons,
 }
 
 export default data;
