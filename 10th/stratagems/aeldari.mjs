@@ -1,4 +1,4 @@
-import {TURN, TYPE, PHASE } from './CONSTANTS';
+import {TURN, TYPE, PHASE } from './CONSTANTS.mjs';
 
 const detachment = 'Battle Host';
 
