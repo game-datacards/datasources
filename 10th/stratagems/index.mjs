@@ -22,6 +22,7 @@ import space_marines from './space_marines.mjs';
 import spacewolves from './spacewolves.mjs';
 import tau from './tau.mjs';
 import thousandsons from './thousandsons.mjs';
+import tyranids from './tyranids.mjs';
 
 const data = {
   core,
@@ -49,6 +50,7 @@ const data = {
   spacewolves,
   tau,
   thousandsons,
+  tyranids,
 }
 
 export default data;
