@@ -11,6 +11,7 @@ import chaosdaemons from './chaosdaemons.mjs';
 import chaosknights from './chaosknights.mjs';
 import darkangels from './darkangels.mjs';
 import deathguard from './deathguard.mjs';
+import deathwatch from './deathwatch.mjs';
 
 import imperialknights from './imperialknights.mjs';
 import space_marines from './space_marines.mjs';
@@ -30,6 +31,7 @@ const data = {
   chaosknights,
   darkangels,
   deathguard,
+  deathwatch,
 
   imperialknights,
   space_marines,
