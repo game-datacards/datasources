@@ -16,6 +16,7 @@ import drukhari from './drukhari.mjs';
 import greyknights from './greyknights.mjs';
 import gsc from './gsc.mjs';
 import necrons from './necrons.mjs';
+import orcs from './orcs.mjs';
 
 import imperialknights from './imperialknights.mjs';
 import space_marines from './space_marines.mjs';
@@ -41,7 +42,7 @@ const data = {
   gsc,
   imperialknights,
   necrons,
-
+  orcs,
   space_marines,
 }
 
