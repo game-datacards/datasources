@@ -6,6 +6,7 @@ import aeldari from './aeldari.mjs';
 import astramilitarum from './astramilitarum.mjs';
 import blacktemplar from './blacktemplar.mjs';
 import bloodangels from './bloodangels.mjs';
+import chaos_spacemarines from './chaos_spacemarines.mjs';
 
 import chaosknights from './chaosknights.mjs';
 import imperialknights from './imperialknights.mjs';
@@ -21,6 +22,7 @@ const data = {
   astramilitarum,
   blacktemplar,
   bloodangels,
+  chaos_spacemarines,
 
   chaosknights,
   imperialknights,
