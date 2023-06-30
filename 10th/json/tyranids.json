@@ -2,7 +2,121 @@
   "id": "TYR",
   "link": "https://game-datacards.eu",
   "name": "Tyranids",
+  "is_subfaction": false,
+  "parent_id": "",
+  "enhancements": [
+    {
+      "name": "Adaptive Biology",
+      "description": "Tyranids model only. The bearer has the Feel No Pain 5+ ability. At the start of any turn, if the bearer has fewer than its starting number of wounds remaining, until the end of the battle, it has the Feel No Pain 4+ ability instead.",
+      "keywords": ["Tyranids"],
+      "excludes": [],
+      "cost": "25"
+    },
+    {
+      "name": "Alien Cunning",
+      "description": "Tyranids model only. After both players have deployed their armies, select up to three Tyranids units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves if you wish, regardless of how many units are already in Strategic Reserves.",
+      "keywords": ["Tyranids"],
+      "excludes": [],
+      "cost": "30"
+    },
+    {
+      "name": "Perfectly Adapted",
+      "description": "Tyranids model only. Once per turn, you can re-roll one Hit roll, one Wound roll, one Damage roll, one Advance roll, one Charge roll or one saving throw made for the bearer.",
+      "keywords": ["Tyranids"],
+      "excludes": [],
+      "cost": "15"
+    },
+    {
+      "name": "Synaptic Linchpin",
+      "description": "Tyranids model only. While a friendly Tyranids unit is within 9\" of the bearer, that unit is within Synapse Range of your army.",
+      "keywords": ["Tyranids"],
+      "excludes": [],
+      "cost": "10"
+    }
+  ],
   "datasheets": [
+    {
+      "id": "82098053-7629-50ba-ac7d-8b3df944f84f",
+      "name": "Barbed Hierodule",
+      "faction_id": "TYR",
+      "leader": "",
+      "composition": ["1 Barbed Hierodule"],
+      "loadout": "This model is equipped with: 2 bio-cannons; Hierodule scything talons.",
+      "wargear": ["None"],
+      "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "305"
+        }
+      ],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Synapse"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Overgrown Barbs",
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit (excluding Titanic units) that was hit by one or more of those attacks. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-6 WOUNDS REMAINING",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "8\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "18",
+          "ld": "8+",
+          "oc": "5",
+          "name": "Barbed Hierodule"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Bio-cannon",
+              "keywords": ["blast"],
+              "range": "48\"",
+              "attacks": "D6+3",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Hierodule scything talons",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "8",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-2",
+              "damage": "D3+3"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Monster", "Great Devourer", "Barbed Hierodule"],
+      "factions": ["Tyranids"]
+    },
     {
       "id": "f9800d2a-a62c-5ad0-9374-39169c572515",
       "name": "Barbgaunts",
@@ -12,6 +126,16 @@
       "loadout": "Every model is equipped with: bio-cannon; xenos claws and teeth.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "5",
+          "cost": "50"
+        },
+        {
+          "models": "10",
+          "cost": "100"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -88,6 +212,20 @@
       "loadout": "Every model is equipped with: Spore Mine launcher; chitin-barbed limbs.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "40"
+        },
+        {
+          "models": "2",
+          "cost": "80"
+        },
+        {
+          "models": "3",
+          "cost": "120"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise 1"],
@@ -169,6 +307,12 @@
       "loadout": "This model is equipped with: Broodlord claws and talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "100"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader", "Scouts 8\""],
@@ -245,6 +389,16 @@
         "Any number of models can each be equipped with 1 spine banks."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "125"
+        },
+        {
+          "models": "2",
+          "cost": "250"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise 1"],
@@ -422,7 +576,8 @@
         }
       ],
       "keywords": ["Monster", "Great Devourer", "Carnifexes"],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "ledBy": ["Old One Eye"]
     },
     {
       "id": "624f081f-0912-5c5d-a443-b8b558de9a1f",
@@ -433,6 +588,12 @@
       "loadout": "This model is equipped with: Lictor claws and talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "80"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Fights First", "Infiltrators", "Lone Operative", "Stealth"],
@@ -509,6 +670,12 @@
       "loadout": "This model is equipped with: bio-plasmic cannon; powerful limbs.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "135"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -585,6 +752,16 @@
       "loadout": "Every model is equipped with: fleshborer; blinding venom.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "10",
+          "cost": "75"
+        },
+        {
+          "models": "20",
+          "cost": "150"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike"],
@@ -657,7 +834,8 @@
         "Endless Multitude",
         "Gargoyles"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "ledBy": ["Winged Tyranid Prime"]
     },
     {
       "id": "a2e7de56-15c2-56ab-ae84-c2ddb15cf630",
@@ -668,6 +846,16 @@
       "loadout": "Every model is equipped with: Genestealer claws and talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "5",
+          "cost": "90"
+        },
+        {
+          "models": "10",
+          "cost": "180"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Scouts 8\""],
@@ -718,7 +906,8 @@
         }
       ],
       "keywords": ["Infantry", "Great Devourer", "Genestealers"],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "ledBy": ["Broodlord"]
     },
     {
       "id": "f1ca1132-af5d-5073-9411-2fa0a02d5c20",
@@ -731,6 +920,12 @@
         "This model’s twin stranglethorn cannon can be replaced with 1 twin heavy venom cannon."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "170"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3", "Hover"],
@@ -827,6 +1022,96 @@
       "factions": ["Tyranids"]
     },
     {
+      "id": "566eaac5-daad-5c8e-833d-a8c69749d04c",
+      "name": "Harridan",
+      "faction_id": "TYR",
+      "leader": "",
+      "composition": ["1 Harridan"],
+      "loadout": "This model is equipped with: 2 dire bio-cannons; gargantuan scything talons.",
+      "wargear": ["None"],
+      "transport": "This model has a transport capacity of 20 Gargoyles models and 1 Winged Tyranid Prime model.",
+      "points": [
+        {
+          "models": "1",
+          "cost": "655"
+        }
+      ],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 2D6", "Hover"],
+        "faction": ["Synapse"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Frenzied Metabolism",
+            "description": "Each time this model is selected to shoot, you can use this ability. If you do, until the end of the phase, each time this model makes an attack, add 1 to the Wound roll. After resolving those attacks, roll one D6: on a 2+, this model suffers D3 mortal wounds."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-10 WOUNDS REMAINING",
+          "description": "While this model has 1-10 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "20+\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "30",
+          "ld": "8+",
+          "oc": "0",
+          "name": "Harridan"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Dire bio-cannon",
+              "keywords": ["blast"],
+              "range": "48\"",
+              "attacks": "D6+6",
+              "skill": "3+",
+              "strength": "10",
+              "ap": "-3",
+              "damage": "3"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Gargantuan scything talons",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-2",
+              "damage": "D6"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Monster",
+        "Titanic",
+        "Fly",
+        "Aircraft",
+        "Transport",
+        "Great Devourer",
+        "Harridan"
+      ],
+      "factions": ["Tyranids"]
+    },
+    {
       "id": "b7f8d67b-a254-50e3-b8bf-38346df1546f",
       "name": "Haruspex",
       "faction_id": "TYR",
@@ -835,6 +1120,12 @@
       "loadout": "This model is equipped with: grasping tongue; ravenous maw; shovelling claws.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "125"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -917,6 +1208,127 @@
       "factions": ["Tyranids"]
     },
     {
+      "id": "56dcf747-9ed9-5ee6-b4cc-5b4dc564324f",
+      "name": "Hierophant",
+      "faction_id": "TYR",
+      "leader": "",
+      "composition": ["1 Hierophant"],
+      "loadout": "This model is equipped with: bio-plasma torrent; 2 dire bio-cannons; lashwhip pods; titanic scything talons.",
+      "wargear": ["None"],
+      "transport": "This model has a transport capacity of 20 Tyranids Infantry models. Each model with a Wounds characteristic of more than 1 takes up the space of 3 models. This model cannot transport models that can Fly.",
+      "points": [
+        {
+          "models": "1",
+          "cost": "810"
+        }
+      ],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 2D6"],
+        "faction": ["Synapse"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Apex-beast",
+            "description": "Each time this model makes an attack that targets a unit that is Battle-shocked, add 1 to the Hit roll."
+          },
+          {
+            "name": "Stalking Forward",
+            "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding Titanic models) and terrain features that are 4\" or less in height as if they were not there."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-10 WOUNDS REMAINING",
+          "description": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "14",
+          "sv": "2+",
+          "w": "30",
+          "ld": "8+",
+          "oc": "12",
+          "name": "Hierophant"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Bio-plasma torrent",
+              "keywords": ["assault", "torrent"],
+              "range": "12\"",
+              "attacks": "3D6",
+              "skill": "N/A",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Dire bio-cannon",
+              "keywords": ["blast"],
+              "range": "48\"",
+              "attacks": "D6+6",
+              "skill": "3+",
+              "strength": "10",
+              "ap": "-3",
+              "damage": "3"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Lashwhip pods",
+              "keywords": ["extra attacks"],
+              "range": "Melee",
+              "attacks": "10",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Titanic scything talons",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "8",
+              "skill": "3+",
+              "strength": "20",
+              "ap": "-2",
+              "damage": "D6+1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Monster",
+        "Titanic",
+        "Towering",
+        "Transport",
+        "Great Devourer",
+        "Hierophant"
+      ],
+      "factions": ["Tyranids"]
+    },
+    {
       "id": "6aee35fc-ced8-5243-a844-4ed9638eb360",
       "name": "Hive Crone",
       "faction_id": "TYR",
@@ -925,6 +1337,12 @@
       "loadout": "This model is equipped with: drool cannon; stinger salvoes; tentaclids; scything wings; thorax spur.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "200"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3", "Hover"],
@@ -1051,6 +1469,16 @@
         "Any number of models can each have their shockcannon replaced with 1 impaler cannon."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "100"
+        },
+        {
+          "models": "6",
+          "cost": "200"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -1144,6 +1572,12 @@
         "This model’s monstrous scything talons can be replaced with one of the following: ◦ 1 heavy venom cannon* ◦ 1 stranglethorn cannon* *  This model cannot be equipped with both a stranglethorn cannon and a heavy venom cannon. This model cannot be equipped with more than 1 heavy venom cannon, and it cannot be equipped with more than 1 stranglethorn cannon."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "220"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3", "Leader"],
@@ -1259,6 +1693,16 @@
       "loadout": "Every model is equipped with: Hormagaunt talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "10",
+          "cost": "70"
+        },
+        {
+          "models": "20",
+          "cost": "140"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -1326,6 +1770,12 @@
       "loadout": "This model is equipped with: Lictor claws and talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "75"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Fights First", "Infiltrators", "Lone Operative", "Stealth"],
@@ -1391,6 +1841,12 @@
       "loadout": "This model is equipped with: psychic overload; massive scything talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "165"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -1483,6 +1939,12 @@
       "loadout": "This model is equipped with: distensible jaw; Mawloc scything talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "145"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike"],
@@ -1562,6 +2024,16 @@
       "loadout": "Every model is equipped with: nothing.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "45"
+        },
+        {
+          "models": "2",
+          "cost": "90"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike"],
@@ -1612,6 +2084,16 @@
       "loadout": "Every model is equipped with: xenos claws and teeth. * This unit can only contain 2 Neurogaunt Nodebeasts if it contains 20 Neurogaunts.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "11",
+          "cost": "45"
+        },
+        {
+          "models": "22",
+          "cost": "90"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -1667,7 +2149,8 @@
         "Endless Multitude",
         "Neurogaunts"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "ledBy": ["Neurotyrant"]
     },
     {
       "id": "690228cc-b07b-5d25-9643-7b50d9db5d5d",
@@ -1678,6 +2161,12 @@
       "loadout": "This model is equipped with: psychic scream; Neurotyrant claws and lashes.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "105"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -1770,6 +2259,12 @@
       "loadout": "This model is equipped with: Old One Eye’s claws and talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "140"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Feel No Pain 5+", "Leader"],
@@ -1851,6 +2346,12 @@
       "loadout": "This model is equipped with: barbed ovipositor; clawed limbs.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "90"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike", "Lone Operative", "Stealth"],
@@ -1936,6 +2437,12 @@
       "loadout": "This model is equipped with: psychoclastic torrent; talons and betentacled maw.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "125"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise 1", "Feel No Pain 5+"],
@@ -2016,6 +2523,20 @@
       "loadout": "Every model is equipped with: flamespurt; chitin-barbed limbs.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "30"
+        },
+        {
+          "models": "2",
+          "cost": "60"
+        },
+        {
+          "models": "3",
+          "cost": "90"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise 1"],
@@ -2094,6 +2615,16 @@
         "Any number of models can each be equipped with 1 thoracic bio-weapon."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "75"
+        },
+        {
+          "models": "6",
+          "cost": "150"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike"],
@@ -2172,6 +2703,16 @@
         "All models in this unit can each be equipped with 1 spinemaws."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "35"
+        },
+        {
+          "models": "6",
+          "cost": "70"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike"],
@@ -2248,6 +2789,12 @@
       "loadout": "This model is equipped with: bio-plasmic scream; Screamer-Killer talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "180"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise 1"],
@@ -2316,6 +2863,88 @@
       "factions": ["Tyranids"]
     },
     {
+      "id": "1c91f934-1556-543b-96e8-826242b407c6",
+      "name": "Scythed Hierodule",
+      "faction_id": "TYR",
+      "leader": "",
+      "composition": ["1 Scythed Hierodule"],
+      "loadout": "This model is equipped with: bio-acid spray; Hierodule scything talons.",
+      "wargear": ["None"],
+      "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "305"
+        }
+      ],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Synapse"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Irresistible Force",
+            "description": "This model is eligible to declare a charge in a turn in which it Fell Back."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-6 WOUNDS REMAINING",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "18",
+          "ld": "8+",
+          "oc": "5",
+          "name": "Scythed Hierodule"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Bio-acid spray",
+              "keywords": ["torrent"],
+              "range": "18\"",
+              "attacks": "3D6",
+              "skill": "N/A",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Hierodule scything talons",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "10",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-2",
+              "damage": "D3+3"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Monster", "Great Devourer", "Scythed Hierodule"],
+      "factions": ["Tyranids"]
+    },
+    {
       "id": "041d0bee-aee2-5ac5-9311-6dface0f50db",
       "name": "Spore Mines",
       "faction_id": "TYR",
@@ -2324,6 +2953,16 @@
       "loadout": "Every model is equipped with: nothing.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "50"
+        },
+        {
+          "models": "6",
+          "cost": "100"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike"],
@@ -2374,6 +3013,12 @@
       "loadout": "This model is equipped with: Sporocyst bio-weapons; flensing whips.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "145"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -2453,6 +3098,16 @@
         "All models in this unit can each have their fleshborer replaced with 1 Termagant spinefists."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "10",
+          "cost": "60"
+        },
+        {
+          "models": "20",
+          "cost": "120"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -2565,6 +3220,12 @@
         "This model’s massive scything talons can be replaced with 1 massive crushing claws."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "200"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6"],
@@ -2676,6 +3337,12 @@
       "loadout": "This model is equipped with: synaptic pulse; bone sabres.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "250"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3", "Leader"],
@@ -2768,6 +3435,12 @@
       "loadout": "This model is equipped with: massive toxic lashes.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "200"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -2848,6 +3521,12 @@
       "loadout": "This model is equipped with: bio-electric pulse; Trygon scything talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "180"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike"],
@@ -2924,6 +3603,16 @@
       "loadout": "Every model is equipped with: bio-weapons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "90"
+        },
+        {
+          "models": "6",
+          "cost": "180"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -2978,7 +3667,8 @@
         "Synapse",
         "Tyranid Warriors with Melee Bio-weapons"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "ledBy": ["Winged Tyranid Prime"]
     },
     {
       "id": "7cf26389-f7e6-5bb5-83db-4e93a8ade176",
@@ -2993,6 +3683,16 @@
         "For every 3 models in this unit, 1 model’s devourer can be replaced with 1 venom cannon."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "70"
+        },
+        {
+          "models": "6",
+          "cost": "140"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -3118,7 +3818,8 @@
         "Synapse",
         "Tyranid Warriors with Ranged Bio-weapons"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "ledBy": ["Winged Tyranid Prime"]
     },
     {
       "id": "fd1b3b32-8417-51ca-876f-082d5eef9851",
@@ -3129,6 +3830,12 @@
       "loadout": "This model is equipped with: Tyrannocyte bio-weapons; flensing whips.",
       "wargear": ["None"],
       "transport": "This model has a transport capacity of 20 Tyranids Infantry models, or 1 Tyranids Monster model with a Wounds characteristic of 12 or less. Each Infantry model with a Wounds characteristic of more than 1 takes up the space of 3 models.",
+      "points": [
+        {
+          "models": "1",
+          "cost": "105"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3", "Deep Strike"],
@@ -3214,6 +3921,12 @@
         "This model’s fleshborer hive can be replaced with one of the following: ◦ 1 acid spray ◦ 1 rupture cannon"
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "200"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6"],
@@ -3334,6 +4047,16 @@
         "Any number of models can each have their scything talons and rending claws replaced with one of the following: ◦ 1 bone cleaver, lash whip and rending claws ◦ 1 crushing claws and rending claws"
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "95"
+        },
+        {
+          "models": "6",
+          "cost": "190"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -3412,7 +4135,8 @@
         }
       ],
       "keywords": ["Infantry", "Great Devourer", "Tyrant Guard"],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "ledBy": ["Hive Tyrant", "Neurotyrant", "The Swarmlord"]
     },
     {
       "id": "2e0c66ae-f16b-54cf-bb28-daf55aac09c5",
@@ -3423,6 +4147,16 @@
       "loadout": "Every model is equipped with: toxic lashes.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "70"
+        },
+        {
+          "models": "6",
+          "cost": "140"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Stealth"],
@@ -3484,6 +4218,16 @@
       "loadout": "Every model is equipped with: Leaper’s talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "75"
+        },
+        {
+          "models": "6",
+          "cost": "150"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Fights First", "Infiltrators", "Stealth"],
@@ -3547,6 +4291,12 @@
         "This model’s monstrous bonesword and lash whip can be replaced with one of the following: ◦ 1 heavy venom cannon ◦ 1 stranglethorn cannon ◦ 1 monstrous scything talons"
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "195"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3", "Deep Strike"],
@@ -3677,6 +4427,12 @@
       "loadout": "This model is equipped with: Prime talons.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "80"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike", "Leader"],
@@ -3749,6 +4505,16 @@
       "loadout": "Every model is equipped with: Warp Blast; xenos claws and teeth.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "90"
+        },
+        {
+          "models": "6",
+          "cost": "180"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -3837,5 +4603,9 @@
       ],
       "factions": ["Tyranids"]
     }
-  ]
+  ],
+  "colours": {
+    "banner": "#411f41",
+    "header": "#381a3a"
+  }
 }
