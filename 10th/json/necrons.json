@@ -2,6 +2,38 @@
   "id": "NEC",
   "link": "https://game-datacards.eu",
   "name": "Necrons",
+  "is_subfaction": false,
+  "parent_id": "",
+  "enhancements": [
+    {
+      "name": "VEIL OF DARKNESS",
+      "description": "Necrons model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of any enemy units, the bearer can use this Enhancement. If it does, remove that unit from the battlefield. Then, in the Reinforcements step of your next Movement phase, set up that unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy models.",
+      "keywords": ["Necrons"],
+      "excludes": [],
+      "cost": "20"
+    },
+    {
+      "name": "HYPERMATERIAL ABLATOR",
+      "description": "Necrons model only. While the bearer is leading a unit, models in that unit have the Stealth ability. In addition, each time a ranged attack targets the bearer’s unit, if the attacker is not within 12\", models in that unit have the Benefit of Cover.",
+      "keywords": ["Necrons"],
+      "excludes": [],
+      "cost": "25"
+    },
+    {
+      "name": "THE SOVEREIGN CORONAL (AURA)",
+      "description": "Necrons model only. While a friendly Necrons unit is within 6\" of the bearer, that unit counts as being led by a Necrons Character model.\n\nDesigner’s Note: This means that units within range of this Aura ability will benefit from the Command Protocols ability and will count as containing a Character for the purposes of any Awakened Dynasty Stratagems.",
+      "keywords": ["Necrons"],
+      "excludes": [],
+      "cost": "30"
+    },
+    {
+      "name": "SEMPITERNAL WEAVE",
+      "description": "Necrons model only. The bearer has the Feel No Pain 4+ ability.",
+      "keywords": ["Necrons"],
+      "excludes": [],
+      "cost": "10"
+    }
+  ],
   "datasheets": [
     {
       "id": "a80a9cb1-793f-59b4-b0e6-ec18824c6acc",
@@ -14,6 +46,12 @@
         "This model’s gauss cannon can be replaced with 1 tesla cannon."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "115"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise 1"],
@@ -118,6 +156,12 @@
       "loadout": "This model is equipped with: tachyon arrow; warscythe.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "95"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -204,6 +248,12 @@
       "loadout": "This model is equipped with: cosmic insanity; golden fists.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "265"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6", "Stealth"],
@@ -299,6 +349,12 @@
       "loadout": "This model is equipped with: gaze of death; Scythe of the Nightbringer.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "255"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6"],
@@ -396,6 +452,12 @@
       "loadout": "This model is equipped with: Spear of the Void Dragon; voltaic storm; Canoptek tail blades.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "270"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6"],
@@ -517,6 +579,92 @@
       "factions": ["Necrons"]
     },
     {
+      "id": "0c18a5f3-364d-515a-b900-0674d9cbf1e7",
+      "name": "Canoptek Acanthrites",
+      "faction_id": "NEC",
+      "leader": "",
+      "composition": ["3-6 Canoptek Acanthrites"],
+      "loadout": "Every model is equipped with: cutting beam; voidblade.",
+      "wargear": ["None"],
+      "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "85"
+        },
+        {
+          "models": "6",
+          "cost": "170"
+        }
+      ],
+      "abilities": {
+        "wargear": [],
+        "core": ["Infiltrators"],
+        "faction": ["Reanimation Protocols"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Damaged Armour",
+            "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly Necrons model makes an attack that targets that unit, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "2",
+          "ld": "8+",
+          "oc": "2",
+          "name": "Canoptek Acanthrites"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Cutting beam",
+              "keywords": ["melta 2"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Voidblade",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Beasts", "Fly", "Canoptek", "Acanthrites"],
+      "factions": ["Necrons"]
+    },
+    {
       "id": "7dfc54da-b57e-55f9-a991-8de1ccf802a0",
       "name": "Canoptek Doomstalker",
       "faction_id": "NEC",
@@ -525,6 +673,12 @@
       "loadout": "This model is equipped with: doomsday blaster; twin gauss flayer; Doomstalker limbs.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "125"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -615,6 +769,12 @@
       "loadout": "This model is equipped with: 2 atomiser beams; Reanimator’s claws.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "95"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Feel No Pain 4+"],
@@ -691,6 +851,16 @@
       "loadout": "Every model is equipped with: feeder mandibles.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "40"
+        },
+        {
+          "models": "6",
+          "cost": "80"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise 1"],
@@ -760,6 +930,16 @@
         "Any number of models can each be equipped with 1 gloom prism."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "75"
+        },
+        {
+          "models": "2",
+          "cost": "150"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -837,6 +1017,180 @@
       "factions": ["Necrons"]
     },
     {
+      "id": "f7f79059-f88a-5fcc-bdb4-503e4332b6c9",
+      "name": "Canoptek Tomb Sentinel",
+      "faction_id": "NEC",
+      "leader": "",
+      "composition": ["1 Canoptek Tomb Sentinel"],
+      "loadout": "This model is equipped with: exile cannon; Tomb Sentinel claws; gloom prism.",
+      "wargear": ["None"],
+      "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "115"
+        }
+      ],
+      "abilities": {
+        "wargear": [
+          {
+            "name": "Gloom Prism (Aura)",
+            "description": "While a friendly Necrons unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+          }
+        ],
+        "core": ["Deep Strike"],
+        "faction": ["Reanimation Protocols"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Aggressor Guardian",
+            "description": "Each time an attack targets this model, if this model is within range of an objective marker, worsen the Armour Penetration characteristic of that attack by 1. In addition, each time this model makes an attack that targets a unit within range of an objective marker, improve the Armour Penetration characteristic of that attack by 1."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "9",
+          "ld": "8+",
+          "oc": "3",
+          "name": "Canoptek Tomb Sentinel"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Exile cannon",
+              "keywords": ["blast"],
+              "range": "18\"",
+              "attacks": "D6+1",
+              "skill": "4+",
+              "strength": "10",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Tomb Sentinel claws",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Monster", "Canoptek", "Tomb Sentinel"],
+      "factions": ["Necrons"]
+    },
+    {
+      "id": "4b3e4c5d-9a26-55a6-984c-4a9b21df6a7a",
+      "name": "Canoptek Tomb Stalker",
+      "faction_id": "NEC",
+      "leader": "",
+      "composition": ["1 Canoptek Tomb Stalker"],
+      "loadout": "This model is equipped with: gauss slicers; Tomb Stalker claws; gloom prism.",
+      "wargear": ["None"],
+      "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "130"
+        }
+      ],
+      "abilities": {
+        "wargear": [
+          {
+            "name": "Gloom Prism (Aura)",
+            "description": "While a friendly Necrons unit is within 6\" of the bearer, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks."
+          }
+        ],
+        "core": ["Deep Strike"],
+        "faction": ["Reanimation Protocols"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Snaking Ambush",
+            "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "9",
+          "ld": "8+",
+          "oc": "3",
+          "name": "Canoptek Tomb Stalker"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Gauss slicers",
+              "keywords": ["lethal hits"],
+              "range": "24\"",
+              "attacks": "8",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Tomb Stalker claws",
+              "keywords": ["sustained hits 1"],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Monster", "Canoptek", "Tomb Stalker"],
+      "factions": ["Necrons"]
+    },
+    {
       "id": "4793e7d8-15bd-5e65-81a8-9ab86598479f",
       "name": "Canoptek Wraiths",
       "faction_id": "NEC",
@@ -848,6 +1202,16 @@
         "Any number of models can each have their vicious claws replaced with whip coils."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "110"
+        },
+        {
+          "models": "6",
+          "cost": "220"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -956,6 +1320,12 @@
         "This model can be equipped with 1 resurrection orb."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "150"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -1083,6 +1453,12 @@
       "loadout": "This model is equipped with: aeonstave.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "50"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -1163,6 +1539,12 @@
       "loadout": "Every model is equipped with: transdimensional abductor.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "255"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -1237,6 +1619,12 @@
       "loadout": "Every model is equipped with: scouring eye; scythed limbs.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "2",
+          "cost": "40"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Feel No Pain 4+"],
@@ -1322,6 +1710,16 @@
       "loadout": "Every model is equipped with: synaptic disintegrator; close combat weapon.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "5",
+          "cost": "65"
+        },
+        {
+          "models": "10",
+          "cost": "130"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike"],
@@ -1398,6 +1796,12 @@
       "loadout": "This model is equipped with: heavy death ray; twin tesla destructor; armoured bulk.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "225"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -1492,6 +1896,12 @@
       "loadout": "This model is equipped with: doomsday cannon; 2 gauss flayer arrays; armoured bulk.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "185"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -1582,6 +1992,16 @@
       "loadout": "Every model is equipped with: flayer claws.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "5",
+          "cost": "70"
+        },
+        {
+          "models": "10",
+          "cost": "140"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Infiltrators", "Stealth"],
@@ -1643,6 +2063,12 @@
       "loadout": "This model is equipped with: 2 gauss flayer arrays; armoured bulk.",
       "wargear": ["None"],
       "transport": "This model has a transport capacity of 10 Necron Warrior models and 1 Necrons Infantry Character model.",
+      "points": [
+        {
+          "models": "1",
+          "cost": "125"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -1725,6 +2151,12 @@
       "loadout": "Every model is equipped with: enmitic disintegrator pistols; close combat weapon.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "70"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike", "Lone Operative"],
@@ -1805,6 +2237,12 @@
       "loadout": "This model is equipped with: eldritch lance; impaling legs.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "220"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Feel No Pain 4+"],
@@ -1911,6 +2349,16 @@
         "All models in this unit can each have their gauss blaster replaced with 1 tesla carbine."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "5",
+          "cost": "70"
+        },
+        {
+          "models": "10",
+          "cost": "140"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -1990,7 +2438,22 @@
         }
       ],
       "keywords": ["Infantry", "Battleline", "Immortals"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "ledBy": [
+        "Anrakyr The Traveller",
+        "Chronomancer",
+        "Imotekh The Stormlord",
+        "Lord",
+        "Nemesor Zahndrekh",
+        "Orikan The Diviner",
+        "Overlord",
+        "Plasmancer",
+        "Psychomancer",
+        "Royal Warden",
+        "Technomancer",
+        "Trazyn The Infinite",
+        "Vargard Obyron"
+      ]
     },
     {
       "id": "f816b5e2-127c-50cc-808d-a8534db0d7b8",
@@ -2001,6 +2464,12 @@
       "loadout": "This model is equipped with: Gauntlet of Fire; Staff of the Destroyer.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "105"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -2101,6 +2570,24 @@
       "loadout": "Every model is equipped with: gauss cannon; close combat weapon.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "30"
+        },
+        {
+          "models": "2",
+          "cost": "60"
+        },
+        {
+          "models": "3",
+          "cost": "90"
+        },
+        {
+          "models": "6",
+          "cost": "180"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -2166,7 +2653,8 @@
         }
       ],
       "keywords": ["Mounted", "Fly", "Lokhust Destroyers"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "ledBy": ["Lokhust Lord"]
     },
     {
       "id": "deb1c9d5-feb2-56fe-b925-b3fc37add660",
@@ -2179,6 +2667,20 @@
         "Any number of models can each have their gauss destructor replaced with 1 enmitic exterminator."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "45"
+        },
+        {
+          "models": "2",
+          "cost": "90"
+        },
+        {
+          "models": "3",
+          "cost": "135"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -2258,7 +2760,8 @@
         }
       ],
       "keywords": ["Mounted", "Fly", "Lokhust Heavy Destroyers"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "ledBy": ["Lokhust Lord"]
     },
     {
       "id": "c2de5f45-5c43-5f22-9160-fee26a35b5a5",
@@ -2272,6 +2775,12 @@
         "This model can be equipped with one of the following: ◦ 1 phylactery ◦ 1 resurrection orb"
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "85"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -2378,6 +2887,12 @@
         "This model can be equipped with 1 resurrection orb."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "65"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -2479,6 +2994,16 @@
         "All models in this unit can each have their warscythe replaced with 1 hyperphase sword and 1 dispersion shield."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "5",
+          "cost": "95"
+        },
+        {
+          "models": "10",
+          "cost": "190"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -2548,7 +3073,20 @@
         }
       ],
       "keywords": ["Infantry", "Lychguard"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "ledBy": [
+        "Chronomancer",
+        "Imotekh The Stormlord",
+        "Lord",
+        "Nemesor Zahndrekh",
+        "Orikan The Diviner",
+        "Overlord",
+        "Plasmancer",
+        "Psychomancer",
+        "Technomancer",
+        "Trazyn The Infinite",
+        "Vargard Obyron"
+      ]
     },
     {
       "id": "73c29a81-5e70-55e8-b659-e64f8f8d1350",
@@ -2561,6 +3099,12 @@
         "This model’s 4 gauss flux arcs can be replaced with 4 death rays."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "385"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6", "Deep Strike"],
@@ -2667,6 +3211,16 @@
         "Any number of models can each have their gauss flayer replaced with 1 gauss reaper."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "10",
+          "cost": "120"
+        },
+        {
+          "models": "20",
+          "cost": "240"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": [],
@@ -2746,7 +3300,21 @@
         }
       ],
       "keywords": ["Infantry", "Battleline", "Necron Warriors"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "ledBy": [
+        "Chronomancer",
+        "Imotekh The Stormlord",
+        "Lord",
+        "Nemesor Zahndrekh",
+        "Orikan The Diviner",
+        "Overlord",
+        "Plasmancer",
+        "Psychomancer",
+        "Royal Warden",
+        "Technomancer",
+        "Trazyn The Infinite",
+        "Vargard Obyron"
+      ]
     },
     {
       "id": "651307c1-cb80-5515-9fb5-daf847a0aa0e",
@@ -2757,6 +3325,12 @@
       "loadout": "This model is equipped with: staff of light.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "85"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -2847,6 +3421,12 @@
       "loadout": "This model is equipped with: twin tesla destructor; armoured bulk.",
       "wargear": ["None"],
       "transport": "This model has a transport capacity of 1 Necrons Infantry unit.",
+      "points": [
+        {
+          "models": "1",
+          "cost": "145"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -2923,6 +3503,12 @@
       "loadout": "This model is equipped with: 4 tesla spheres; armoured bulk.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "325"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6", "Deep Strike"],
@@ -3005,6 +3591,16 @@
         "For every 3 models in this unit, this unit can have 1 Plasmacyte."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "110"
+        },
+        {
+          "models": "6",
+          "cost": "220"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -3071,6 +3667,12 @@
       "loadout": "This model is equipped with: Staff of Tomorrow.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "80"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -3146,6 +3748,12 @@
         "If this model is not equipped with a tachyon arrow, it can be equipped with 1 resurrection orb."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "85"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -3273,6 +3881,12 @@
       "loadout": "This model is equipped with: plasmic lance.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "55"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -3353,6 +3967,12 @@
       "loadout": "This model is equipped with: abyssal lance.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "50"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -3433,6 +4053,12 @@
       "loadout": "This model is equipped with: relic gauss blaster; close combat weapon.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "40"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -3505,6 +4131,138 @@
       "factions": ["Necrons"]
     },
     {
+      "id": "9e73708e-63b1-5a21-8c87-734ae7a9c16d",
+      "name": "Seraptek Heavy Construct",
+      "faction_id": "NEC",
+      "leader": "",
+      "composition": ["1 Seraptek Heavy Construct"],
+      "loadout": "This model is equipped with: 2 singularity generators; titanic forelimbs.",
+      "wargear": [
+        "This model’s 2 singularity generators can be replaced with 2 synaptic obliterators and 2 transdimensional projectors."
+      ],
+      "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "470"
+        }
+      ],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6+2"],
+        "faction": ["Reanimation Protocols"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Terrifying Monstrosity",
+            "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test."
+          },
+          {
+            "name": "Titanic Walker",
+            "description": "Each time this model makes a Normal, Advance or Fall Back move, it can move over models (excluding Titanic models) and terrain features that are 4\" or less in height as if they were not there."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-9 WOUNDS REMAINING",
+          "description": "While this model has 1-9 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "12",
+          "sv": "3+",
+          "w": "24",
+          "ld": "7+",
+          "oc": "10",
+          "name": "Seraptek Heavy Construct"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Singularity generator",
+              "keywords": ["blast", "devastating wounds"],
+              "range": "36\"",
+              "attacks": "2D6",
+              "skill": "3+",
+              "strength": "10",
+              "ap": "-3",
+              "damage": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Synaptic obliterator",
+              "keywords": ["sustained hits 2"],
+              "range": "48\"",
+              "attacks": "8",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Transdimensional projector",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "24",
+              "ap": "-4",
+              "damage": "D6+4"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Titanic forelimbs – strike",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "5"
+            },
+            {
+              "name": "Titanic forelimbs – sweep",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "12",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Titanic",
+        "Towering",
+        "Seraptek Heavy Construct"
+      ],
+      "factions": ["Necrons"]
+    },
+    {
       "id": "575dd16a-9a30-54d4-8c21-c7e3a5f2bce5",
       "name": "Skorpekh Destroyers",
       "faction_id": "NEC",
@@ -3515,6 +4273,16 @@
         "For every 3 models in this unit, this unit can have 1 Plasmacyte."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "110"
+        },
+        {
+          "models": "6",
+          "cost": "220"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -3570,7 +4338,8 @@
         }
       ],
       "keywords": ["Infantry", "Skorpekh Destroyers"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "ledBy": ["Skorpekh Lord"]
     },
     {
       "id": "dc0545fd-6c44-55ac-8f68-c4be42cd29bf",
@@ -3581,6 +4350,12 @@
       "loadout": "This model is equipped with: enmitic annihilator; flensing claw; hyperphase harvester.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "115"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -3677,6 +4452,12 @@
         "This model’s Canoptek cloak can be replaced with 1 Canoptek control node."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "60"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -3758,6 +4539,142 @@
       "factions": ["Necrons"]
     },
     {
+      "id": "277cba7f-1bcd-5e66-bf12-3c3305219cab",
+      "name": "Tesseract Ark",
+      "faction_id": "NEC",
+      "leader": "",
+      "composition": ["1 Tesseract Ark"],
+      "loadout": "This model is equipped with: tesseract singularity chamber; 2 tesla cannons; armoured bulk.",
+      "wargear": [
+        "This model’s 2 tesla cannons can be replaced with one of the following: ◦ 2 gauss cannons ◦  2 particle beamers"
+      ],
+      "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "130"
+        }
+      ],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 1"],
+        "faction": ["Reanimation Protocols"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Gravitational Field",
+            "description": "Each time an enemy unit selects this model as the target of a charge, subtract 2 from the Charge roll (this is not cumulative with any other reductions to that Charge roll)."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "9\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "3",
+          "name": "Tesseract Ark"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Gauss cannon",
+              "keywords": ["lethal hits"],
+              "range": "24\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Particle beamer",
+              "keywords": ["blast", "devastating wounds"],
+              "range": "18\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Tesla cannon",
+              "keywords": ["sustained hits 2"],
+              "range": "24\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Tesseract singularity chamber – particle",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6+3",
+              "skill": "N/A",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "2"
+            },
+            {
+              "name": "Tesseract singularity chamber – seismic lash",
+              "keywords": ["blast"],
+              "range": "36\"",
+              "attacks": "D3",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured bulk",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Fly", "Tesseract Ark"],
+      "factions": ["Necrons"]
+    },
+    {
       "id": "aaf70701-a3e2-5308-994f-7310ec7d0018",
       "name": "Tesseract Vault",
       "faction_id": "NEC",
@@ -3766,6 +4683,12 @@
       "loadout": "This model is equipped with: 4 tesla spheres; armoured bulk.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "425"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6+3"],
@@ -3902,6 +4825,12 @@
       "loadout": "Szarekh is equipped with: Sceptre of Eternal Glory; Staff of Stars; Scythe of Dust. Every Triarchal Menhir is equipped with: annihilator beam; close combat weapon.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "470"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6+3"],
@@ -4070,6 +4999,16 @@
         "Any number of models can each be equipped with one of the following: ◦ 1 nebuloscope ◦ 1 shadowloom"
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "3",
+          "cost": "80"
+        },
+        {
+          "models": "6",
+          "cost": "160"
+        }
+      ],
       "abilities": {
         "wargear": [
           {
@@ -4187,6 +5126,12 @@
       "loadout": "This model is equipped with: seismic assault; crackling tendrils.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "280"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6", "Deep Strike"],
@@ -4272,6 +5217,12 @@
       "loadout": "This model is equipped with: Empathic Obliterator.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "75"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -4345,6 +5296,16 @@
         "All models in this unit can each have their rod of covenant replaced with 1 particle caster and 1 voidblade."
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "5",
+          "cost": "135"
+        },
+        {
+          "models": "10",
+          "cost": "270"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deep Strike"],
@@ -4451,6 +5412,12 @@
         "This model’s heat ray can be replaced with one of the following: ◦ 1 particle shredder ◦ 1 twin heavy gauss cannon"
       ],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "125"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D3"],
@@ -4565,6 +5532,12 @@
       "loadout": "This model is equipped with: warscythe.",
       "wargear": ["None"],
       "transport": "",
+      "points": [
+        {
+          "models": "1",
+          "cost": "85"
+        }
+      ],
       "abilities": {
         "wargear": [],
         "core": ["Leader"],
@@ -4621,5 +5594,9 @@
       "keywords": ["Infantry", "Character", "Epic Hero", "Vargard Obyron"],
       "factions": ["Necrons"]
     }
-  ]
+  ],
+  "colours": {
+    "banner": "#032b16",
+    "header": "#04532a"
+  }
 }
