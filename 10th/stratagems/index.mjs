@@ -17,6 +17,7 @@ import greyknights from './greyknights.mjs';
 import gsc from './gsc.mjs';
 import necrons from './necrons.mjs';
 import orcs from './orcs.mjs';
+import spacewolves from './spacewolves.mjs';
 
 import imperialknights from './imperialknights.mjs';
 import space_marines from './space_marines.mjs';
@@ -44,6 +45,7 @@ const data = {
   necrons,
   orcs,
   space_marines,
+  spacewolves,
 }
 
 export default data;
