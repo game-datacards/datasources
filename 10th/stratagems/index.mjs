@@ -14,6 +14,7 @@ import deathguard from './deathguard.mjs';
 import deathwatch from './deathwatch.mjs';
 import drukhari from './drukhari.mjs';
 import greyknights from './greyknights.mjs';
+import gsc from './gsc.mjs';
 
 import imperialknights from './imperialknights.mjs';
 import space_marines from './space_marines.mjs';
@@ -36,8 +37,9 @@ const data = {
   deathwatch,
   drukhari,
   greyknights,
-
+  gsc,
   imperialknights,
+
   space_marines,
 }
 
