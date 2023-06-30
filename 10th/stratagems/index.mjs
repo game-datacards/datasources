@@ -24,6 +24,7 @@ import tau from './tau.mjs';
 import thousandsons from './thousandsons.mjs';
 import tyranids from './tyranids.mjs';
 import votann from './votann.mjs';
+import worldeaters from './worldeaters.mjs';
 
 const data = {
   core,
@@ -53,6 +54,7 @@ const data = {
   thousandsons,
   tyranids,
   votann,
+  worldeaters,
 }
 
 export default data;
