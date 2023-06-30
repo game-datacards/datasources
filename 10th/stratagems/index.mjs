@@ -10,6 +10,7 @@ import chaos_spacemarines from './chaos_spacemarines.mjs';
 import chaosdaemons from './chaosdaemons.mjs';
 import chaosknights from './chaosknights.mjs';
 import darkangels from './darkangels.mjs';
+import deathguard from './deathguard.mjs';
 
 import imperialknights from './imperialknights.mjs';
 import space_marines from './space_marines.mjs';
@@ -28,6 +29,7 @@ const data = {
   chaosdaemons,
   chaosknights,
   darkangels,
+  deathguard,
 
   imperialknights,
   space_marines,
