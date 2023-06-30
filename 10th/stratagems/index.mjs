@@ -7,8 +7,9 @@ import astramilitarum from './astramilitarum.mjs';
 import blacktemplar from './blacktemplar.mjs';
 import bloodangels from './bloodangels.mjs';
 import chaos_spacemarines from './chaos_spacemarines.mjs';
-
+import chaosdaemons from './chaosdaemons.mjs';
 import chaosknights from './chaosknights.mjs';
+
 import imperialknights from './imperialknights.mjs';
 import space_marines from './space_marines.mjs';
 
@@ -23,8 +24,9 @@ const data = {
   blacktemplar,
   bloodangels,
   chaos_spacemarines,
-
+  chaosdaemons,
   chaosknights,
+
   imperialknights,
   space_marines,
 }

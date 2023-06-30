@@ -18,4 +18,5 @@ export const PHASE = {
   shooting: 'shooting',
   charge: 'charge',
   fight: 'fight',
+  endOfTurn: 'endOfTurn'
 };
