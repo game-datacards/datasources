@@ -4,6 +4,86 @@
   "name": "Adeptus Mechanicus",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "BALEFUL HALO",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Rad-Cohort",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "A haze of deadly radiation hangs around\nthe warriors of a Rad-Cohort, every\nexhalation they make adding to the\nisotopic fog, sapping the strength and\nstamina of those who are not inured to\nits effects.",
+      "when": "Fight phase, just after an enemy\nunit has selected its targets.",
+      "target": "One Adeptus Mechanicus unit\nfrom your army (excluding Vehicle units)\nthat was selected as the target of one or\nmore of that enemy unit’s attacks.",
+      "effect": "Until the end of the turn, each\ntime an attack is made that targets your\nunit, subtract 1 from the Wound roll.",
+      "restrictions": ""
+    },
+    {
+      "name": "EXTINCTION ORDER",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Rad-Cohort",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "As Tech-Priests order the purge of an area\nof the battlefield, rad-bombardments are\nredoubled in the hopes of turning it into\na wasteland.",
+      "when": "Your Command phase.",
+      "target": "One Tech-Priest model from\nyour army and one objective marker\nwithin 24\" of that model.",
+      "effect": "Roll one D6 for each enemy unit\nwithin range of that objective marker. On a\n4+, that unit suffers 1 mortal wound and it\nmust take a Battle-shock test.",
+      "restrictions": ""
+    },
+    {
+      "name": "LETHAL DOSAGE",
+      "cost": 2,
+      "type": "Wargear",
+      "detachment": "Rad-Cohort",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "Sanctified with the Tri-fold Litany, the\nmost blessed power cells, fuel canisters\nand solid slugs have spent a decade\nin the oldest and most irradiated forge\ntemple to certify their lethality.",
+      "when": "Your Shooting phase.",
+      "target": "One Adeptus Mechanicus\nunit from your army that has not been\nselected to shoot this phase.",
+      "effect": "Until the end of the phase,\neach time a model in your unit makes a\nranged attack that targets an enemy unit\n(excluding Vehicle units), add 1 to the\nWound roll.",
+      "restrictions": ""
+    },
+    {
+      "name": "AGGRESSOR IMPERATIVE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Rad-Cohort",
+      "turn": "your",
+      "phase": ["charge"],
+      "fluff": "The Skitarii feel the press of an invisible\nhand upon their minds as the Machine\nGod drives them forward. Servos are\npushed to their structural limits as fibre\nbundles fill with the boundless energy of\nthe Motive Force and propel the faithful on\nan unstoppable crusade.",
+      "when": "Your Charge phase.",
+      "target": "One Skitarii unit from your army\nthat Advanced this turn.",
+      "effect": "Until the end of the turn, your unit\nis eligible to declare a charge even though\nit Advanced this turn.",
+      "restrictions": "You can only use this\nStratagem if the Conqueror Imperative is\nactive for your army."
+    },
+    {
+      "name": "VENGEFUL FALLOUT",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Rad-Cohort",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "The sentence for those who dare strike\nat the Tech-Priests' holy creations has\nbeen carefully prepared in advance and\nit can be unleashed with an anger born of\nfanatical faith.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has resolved\nits attacks.",
+      "target": "One Adeptus Mechanicus unit\nfrom your army that was selected as\nthe target of one or more of that enemy\nunit’s attacks.",
+      "effect": "Your unit can shoot as if it were\nyour Shooting phase, but it must target\nonly that enemy unit when doing so, and\nit can only do so if that enemy unit is an\neligible target. After your unit has finished\nmaking these attacks, it is not eligible to\nshoot again this turn.",
+      "restrictions": ""
+    },
+    {
+      "name": "BULWARK IMPERATIVE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Rad-Cohort",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "The warrior wisdom of experienced\nReductors is force-loaded into the Skitarii’s\nminds. Each pulse of data bestows a\nsensation of sacred invulnerability upon\nthe Tech-Priests’ soldiers.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has selected\nits targets.",
+      "target": "One Skitarii unit from your army\nthat was selected as the target of one or\nmore of that enemy unit’s attacks.",
+      "effect": "Until the end of the turn, models\nin your unit have a 4+ invulnerable save.\nRESTRICTIONS: You can only use this\nStratagem if the Protector Imperative is\nactive for your army.",
+      "restrictions": ""
+    }
+  ],
   "enhancements": [
     {
       "name": "Archived Purge Protocols",
@@ -715,7 +795,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Electro-Priests", "Corpuscarii"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
         "Tech-priest Manipulus",
@@ -824,7 +904,11 @@
         "Tech-Priest",
         "Cybernetica Datasmith"
       ],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": ["Kastelan Robots"],
+        "extra": "You must attach this model to a Kastelan Robots unit, even if one or more other Cybernetica Datasmith models have already been attached to it. In such cases, if that Bodyguard unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths. If you cannot attach this model to a Kastelan Robots unit, this model cannot be deployed and counts as having been destroyed during the first battle round."
+      }
     },
     {
       "id": "f6c2e253-82e2-54bf-9125-5e195516b349",
@@ -911,7 +995,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Electro-Priests", "Fulgurite"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
         "Tech-priest Manipulus",
@@ -1248,7 +1332,7 @@
       ],
       "keywords": ["Vehicle", "Walker", "Imperium", "Kastelan Robots"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": ["Cybernetica Datasmith"]
+      "leadBy": ["Cybernetica Datasmith"]
     },
     {
       "id": "8277da97-bfc9-5597-99dc-cbed85744e0e",
@@ -1387,7 +1471,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Kataphron", "Breachers"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
         "Tech-priest Manipulus",
@@ -1558,7 +1642,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Kataphron", "Destroyers"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
         "Tech-priest Manipulus",
@@ -2570,7 +2654,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Servitors"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": ["Tech-priest Enginseer"]
+      "leadBy": ["Tech-priest Enginseer"]
     },
     {
       "id": "3b98c029-9ae1-54d3-a3c4-f008382cca2b",
@@ -2949,7 +3033,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Imperium", "Skitarii", "Marshal"],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": ["Skitarii Rangers", "Skitarii Vanguard"],
+        "extra": ""
+      }
     },
     {
       "id": "dce7d828-db1b-5c95-9190-0fe0b05960bc",
@@ -3163,7 +3251,7 @@
       ],
       "keywords": ["Infantry", "Battleline", "Imperium", "Skitarii", "Rangers"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Skitarii Marshal",
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
@@ -3389,7 +3477,7 @@
         "Vanguard"
       ],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Skitarii Marshal",
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
@@ -3987,7 +4075,18 @@
         "Tech-Priest",
         "Dominus"
       ],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": [
+          "Corpuscarii Electro-Priests",
+          "Fulgurite Electro-Priests",
+          "Kataphron Breachers",
+          "Kataphron Destroyers",
+          "Skitarii Rangers",
+          "Skitarii Vanguard"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "8d5f2317-c4d1-5591-8a54-7f153f91e212",
@@ -4119,7 +4218,19 @@
         "Tech-Priest",
         "Enginseer"
       ],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": [
+          "Corpuscarii Electro-Priests",
+          "Fulgurite Electro-Priests",
+          "Kataphron Breachers",
+          "Kataphron Destroyers",
+          "Servitors",
+          "Skitarii Rangers",
+          "Skitarii Vanguard"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "7fc12fcd-9030-53ac-9a4c-bc5b861368f3",
@@ -4247,7 +4358,18 @@
         "Tech-Priest",
         "Manipulus"
       ],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": [
+          "Corpuscarii Electro-Priests",
+          "Fulgurite Electro-Priests",
+          "Kataphron Breachers",
+          "Kataphron Destroyers",
+          "Skitarii Rangers",
+          "Skitarii Vanguard"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "0f22e6a2-5162-5a89-847d-54d8b9a931f1",
@@ -4357,7 +4479,18 @@
         "Tech-Priest",
         "Technoarcheologist"
       ],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": [
+          "Corpuscarii Electro-Priests",
+          "Fulgurite Electro-Priests",
+          "Kataphron Breachers",
+          "Kataphron Destroyers",
+          "Skitarii Rangers",
+          "Skitarii Vanguard"
+        ],
+        "extra": ""
+      }
     }
   ],
   "colours": {

@@ -4,6 +4,86 @@
   "name": "Chaos Space Marines",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "INFERNAL RITES",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Slaves to Darkness",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "With gruesome offerings and ritualised\npromises, the Chaos Space Marines seek\nthe protection of their infernal masters.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Heretic Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, worsen\nthe Armour Penetration characteristic of\nthat attack by 1.",
+      "restrictions": ""
+    },
+    {
+      "name": "PROFANE ZEAL",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Slaves to Darkness",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "Fervent mortal followers flock to the\nchampions of Chaos, damning their souls\nseeking promises of dark power.",
+      "when": "Your Shooting phase or the\nFight phase.",
+      "target": "One Heretic Astartes unit from\nyour army that has not been selected to\nshoot or fight this phase.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit makes an\nattack, re-roll a Hit roll of 1 and re-roll a\nWound roll of 1. If your unit is a Chaos\nUndivided unit, you can instead re-roll\nthe Hit roll and you can re-roll the Wound\nroll for that attack.",
+      "restrictions": ""
+    },
+    {
+      "name": "ETERNAL HATE",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Slaves to Darkness",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Heretic Astartes are fuelled by hate, a searing\nspite that burns fiercely within them unto the\nvery moment of death. Even as their life force\npours from terrible wounds, this loathing can\ndrive them to fight on in a second wind of\nwrath. Those Heretic Astartes in thrall to the\nBlood God feel this enmity to an even greater\nextent than others, exploding with violence\njust as the enemy think they have finally\nended them.",
+      "when": "Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Heretic Astartes unit from\nyour army that was selected as the target of\none or more of the attacking unit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit is destroyed, if that\nmodel has not fought this phase, roll one\nD6, adding 1 to the result if it is a Khorne\nunit: on a 4+, do not remove it from play. That\ndestroyed model can fight after the attacking\nmodel’s unit has finished making its attacks,\nand is then removed from play.",
+      "restrictions": ""
+    },
+    {
+      "name": "SKINSHIFT",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Slaves to Darkness",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "With the Dark Gods and the powers of the\nwarp on their side, Chaos Space Marines\ncan cheat death altogether. Their foes\nlook on in horror as killing wounds knit\nthemselves together in a cacophony\nof hideous cracks and squelches and\nshattered armour reforms. After such a\nblessing, the Heretic Astartes are both\nsomething far greater, and far less, than\nwhat they once were.",
+      "when": "Your Command phase.",
+      "target": "One Heretic Astartes unit from\nyour army.",
+      "effect": "One model in your unit regains\nup to 3 lost wounds. In addition, if your\nunit is a Tzeentch unit below its Starting\nStrength, one destroyed model (excluding\nCharacter models) is returned to your\nunit with its full wounds remaining.",
+      "restrictions": ""
+    },
+    {
+      "name": "UNNATURAL SWIFTNESS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Slaves to Darkness",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "\nSome Heretic Astartes appear to move\nwith a speed that should be impossible,\nweapons and bodies seemingly moving\nfrom one place to another in the blink of\nan eye.",
+      "when": "Your Movement phase.",
+      "target": "One Heretic Astartes unit from\nyour army.",
+      "effect": "Until the end of the turn, your unit\nis eligible to shoot and declare a charge in\na turn in which it Fell Back. In addition, if\nyour unit is a Slaanesh unit, until the end\nof the turn, your unit is eligible to shoot\nand declare a charge in a turn in which\nit Advanced.",
+      "restrictions": ""
+    },
+    {
+      "name": "DARK OBSCURATION",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Slaves to Darkness",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "Choking fogs echoing with the screams\nof tortured souls; dense clouds of bloated\nflies; deluges of bloody rain; whirlwinds of\ncoruscating flames blazing in a thousand\nhues. Such warp-born phenomena can\nappear on the battlefield in an instant,\nand disappear just as quickly. All serve\nto obscure the Heretic Astartes from their\nterrified foes.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has selected\nits targets.",
+      "target": "One Heretic Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, your\nunit has the Stealth ability. In addition, if\nyour unit is a Nurgle unit, until the end of\nthe phase, your unit can only be selected\nas the target of a ranged attack if the\nattacking model is within 12\".",
+      "restrictions": ""
+    }
+  ],
   "enhancements": [
     {
       "name": "Eye of Tzeentch",
@@ -204,7 +284,11 @@
         "Tzeentch",
         "Abaddon the Despoiler"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chaos Terminator Squad", "Legionaries"],
+        "extra": ""
+      }
     },
     {
       "id": "0aebcd54-01be-5b23-8581-92df7041b89e",
@@ -319,7 +403,7 @@
       ],
       "keywords": ["Infantry", "Chaos", "Accursed Cultists"],
       "factions": ["Heretic Astartes"],
-      "ledBy": ["Dark Apostle", "Dark Commune"]
+      "leadBy": ["Dark Apostle", "Dark Commune"]
     },
     {
       "id": "db58b3d7-f885-5481-9390-a02d1e435051",
@@ -955,7 +1039,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Grenades", "Chaos", "Chaos Lord"],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries"],
+        "extra": ""
+      }
     },
     {
       "id": "696bc104-92ae-5efc-a2d5-860f6b09cd80",
@@ -1137,7 +1225,11 @@
         "Terminator",
         "Chaos Lord in Terminator Armour"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chaos Terminator Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "3773dc53-7315-5caf-9abd-01d88825732c",
@@ -1944,7 +2036,7 @@
       ],
       "keywords": ["Infantry", "Chaos", "Terminator", "Chaos Terminator Squad"],
       "factions": ["Heretic Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Abaddon The Despoiler",
         "Chaos Lord In Terminator Armour",
         "Sorcerer In Terminator Armour"
@@ -2313,7 +2405,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Chaos", "Chosen"],
       "factions": ["Heretic Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Chaos Lord",
         "Dark Apostle",
         "Exalted Champion",
@@ -2546,7 +2638,7 @@
         "Cultist Mob"
       ],
       "factions": ["Heretic Astartes"],
-      "ledBy": ["Dark Apostle", "Dark Commune"]
+      "leadBy": ["Dark Apostle", "Dark Commune"]
     },
     {
       "id": "c9b83cec-f13d-5c5b-92fb-d374ee5696d7",
@@ -2804,7 +2896,11 @@
         }
       ],
       "keywords": ["Infantry", "Grenades", "Chaos"],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Accursed Cultists", "Chosen", "Cultist Mob", "Legionaries"],
+        "extra": ""
+      }
     },
     {
       "id": "5d2476fb-2e9f-5491-b9d2-e32a25fdc3ab",
@@ -3002,7 +3098,11 @@
         "Character",
         "Cult Demagogue"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Accursed Cultists", "Cultist Mob"],
+        "extra": ""
+      }
     },
     {
       "id": "fa9a5ed6-8820-5755-9090-c577692e8e2e",
@@ -3366,7 +3466,11 @@
         "Chaos",
         "Exalted Champion"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries"],
+        "extra": "You can attach this model to one of the above units even if one other Character model has already been attached to it (a unit cannot have two Exalted Champions attached to it). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "b868b873-5795-5118-9e85-b13e135ca800",
@@ -3529,7 +3633,11 @@
         "Epic Hero",
         "Fabius Bile"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries"],
+        "extra": ""
+      }
     },
     {
       "id": "f4a92fc2-8727-56b7-b3cd-473f9d962f90",
@@ -4000,7 +4108,11 @@
         "Chaos Undivided",
         "Haarken Worldclaimer"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Raptors"],
+        "extra": ""
+      }
     },
     {
       "id": "8ac4b6f6-8adb-5f06-b9f5-51e4c1e4ed0d",
@@ -4242,7 +4354,7 @@
       ],
       "keywords": ["Infantry", "Chaos", "Havocs"],
       "factions": ["Heretic Astartes"],
-      "ledBy": ["Warpsmith"]
+      "leadBy": ["Warpsmith"]
     },
     {
       "id": "0b020c25-102b-5feb-93f5-5eda796bd1d5",
@@ -5253,7 +5365,11 @@
         "Chaos Undivided",
         "Huron Blackheart"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries"],
+        "extra": ""
+      }
     },
     {
       "id": "76e4a353-b80c-5294-a3aa-df5a9c382696",
@@ -5738,7 +5854,7 @@
         "Legionaries"
       ],
       "factions": ["Heretic Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Abaddon The Despoiler",
         "Chaos Lord",
         "Dark Apostle",
@@ -6073,7 +6189,11 @@
         "Slaanesh",
         "Lucius the Eternal"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Legionaries", "Noise Marines"],
+        "extra": ""
+      }
     },
     {
       "id": "3bd99d34-0e1f-5f4d-a0c1-67838dd7a8b3",
@@ -6183,7 +6303,11 @@
         "Chaos",
         "Master of Executions"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries"],
+        "extra": "You can attach this model to one of the above units even if one other Character model has already been attached to it (a unit cannot have two Masters of Executions attached to it). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "d4d2f0c5-3988-5eb7-a688-ea19abd859cf",
@@ -6326,7 +6450,11 @@
         "Chaos",
         "Master of Possession"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries", "Possessed"],
+        "extra": ""
+      }
     },
     {
       "id": "90f24438-6cf8-523c-969d-a952f329016a",
@@ -6809,7 +6937,7 @@
         "Noise Marines"
       ],
       "factions": ["Heretic Astartes"],
-      "ledBy": ["Lucius The Eternal"]
+      "leadBy": ["Lucius The Eternal"]
     },
     {
       "id": "b9136516-2614-531c-83da-dead15dc5000",
@@ -7028,7 +7156,7 @@
       ],
       "keywords": ["Infantry", "Chaos", "Daemon", "Possessed"],
       "factions": ["Heretic Astartes"],
-      "ledBy": ["Master Of Possession"]
+      "leadBy": ["Master Of Possession"]
     },
     {
       "id": "1968abec-d0d8-53c5-8897-ae74b9cf80f1",
@@ -7276,7 +7404,7 @@
       ],
       "keywords": ["Infantry", "Fly", "Jump Pack", "Chaos", "Raptors"],
       "factions": ["Heretic Astartes"],
-      "ledBy": ["Haarken Worldclaimer"]
+      "leadBy": ["Haarken Worldclaimer"]
     },
     {
       "id": "7ae1d3cd-10ba-53c7-85bb-e6b388b02db6",
@@ -7420,7 +7548,11 @@
         "Chaos",
         "Sorcerer"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries"],
+        "extra": ""
+      }
     },
     {
       "id": "aaaf08fa-e45a-533c-98b2-ef488d3aec69",
@@ -7588,7 +7720,11 @@
         "Terminator",
         "Sorcerer in Terminator Armour"
       ],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chaos Terminator Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "56c7b2e3-0c94-5072-a260-5aa929ff98aa",
@@ -7720,7 +7856,11 @@
         }
       ],
       "keywords": ["Infantry", "Chaos", "Grenades"],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Traitor Guardsmen Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "6bff0798-d546-575d-beb2-75d752372f8f",
@@ -7989,7 +8129,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Chaos", "Traitor Guardsmen Squad"],
       "factions": ["Heretic Astartes"],
-      "ledBy": ["Traitor Enforcer"]
+      "leadBy": ["Traitor Enforcer"]
     },
     {
       "id": "9bb81b71-c313-51bc-addf-437609998d97",
@@ -8474,7 +8614,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Chaos", "Warpsmith"],
-      "factions": ["Heretic Astartes"]
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Havocs", "Legionaries"],
+        "extra": ""
+      }
     }
   ],
   "colours": {

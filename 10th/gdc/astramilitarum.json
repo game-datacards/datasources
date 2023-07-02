@@ -4,6 +4,86 @@
   "name": "Astra Militarum",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "REINFORCEMENTS!",
+      "cost": 2,
+      "type": "Strategic Ploy",
+      "detachment": "Combined Regiment",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "The Astra Militarum can call upon a nearly\ninexhaustible supply of warriors.",
+      "when": "Any phase.",
+      "target": "One Regiment unit from your\narmy that was just destroyed. You can use\nthis Stratagem on that unit even though it\nwas just destroyed.",
+      "effect": "Add a new unit to your army\nidentical to your destroyed unit, in\nStrategic Reserves, at its Starting Strength\nand with all of its wounds remaining.",
+      "restrictions": "This Stratagem cannot\nbe used to return destroyed Character\nunits to Attached units."
+    },
+    {
+      "name": "FIELDS OF FIRE",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Combined Regiment",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "Astra Militarum combat doctrine utilises\nthe concentration of focused firepower to\nhammer the foe from multiple angles.",
+      "when": "Your Shooting phase.",
+      "target": "One Regiment or Squadron\nunit from your army that has not been\nselected to shoot this phase.",
+      "effect": "After your unit has resolved its\nattacks, select one enemy unit that was\ntargeted by one or more of those attacks.\nUntil the end of the phase, each time an\nattack is made against that enemy unit\nby a Regiment or Squadron model from\nyour army, unless the attacking unit\nis Battle-shocked, improve the Armour\nPenetration characteristic of that attack\nby 1.",
+      "restrictions": ""
+    },
+    {
+      "name": "SUPPRESSION FIRE",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Combined Regiment",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "Ordered to focus a rapid and repeated\nvolley of fire, soldiers are able to rattle even\nthe staunchest foe with a blizzard of shots.",
+      "when": "Your Shooting phase.",
+      "target": "One Astra Militarum Infantry\nunit from your army that has not been\nselected to shoot this phase, and one\nenemy unit (excluding Monsters\nand Vehicles).",
+      "effect": "If your Astra Militarum unit\nscores one or more hits against that\nenemy unit this phase, until the end of\nyour opponent’s next turn, each time\na model in that enemy unit makes an\nattack, subtract 1 from the Hit roll.",
+      "restrictions": ""
+    },
+    {
+      "name": "EXPERT BOMBARDIERS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Combined Regiment",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "Skilled in coordinating their targeting with\nforward spotter elements, this regiment’s\nartillery crews are capable of devastating\nprecision shelling.",
+      "when": "Start of your Shooting phase.",
+      "target": "One Astra Militarum unit from\nyour army equipped with a vox-caster, and\none enemy unit that is visible to that unit.",
+      "effect": "Until the end of the phase, each\ntime an Astra Militarum model from\nyour army makes an attack with an\nIndirect Fire weapon that targets that\nenemy unit, unless the attacking model is\nBattle-shocked, add 1 to the Hit roll.",
+      "restrictions": ""
+    },
+    {
+      "name": "INSPIRED COMMAND",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Combined Regiment",
+      "turn": "opponents",
+      "phase": ["command"],
+      "fluff": "This officer is known for their strategic\nexcellence, as are those they command.\nHoned over many years, their curt,\nwell-established battle cant is wielded\nwith consummate efficiency, reinforced\nby the inspirational example they\nthemselves set.",
+      "when": "Your opponent’s Command phase.",
+      "target": "One Astra Militarum Officer\nunit from your army.",
+      "effect": "Your Officer can issue one Order\nas if it were your Command phase.",
+      "restrictions": "Your Officer cannot issue\nthat Order to a Battle-shocked unit."
+    },
+    {
+      "name": "ARMOURED MIGHT",
+      "cost": 2,
+      "type": "Wargear",
+      "detachment": "Combined Regiment",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "The tanks of the Imperial Guard are\narmoured not only in reinforced\nplas-steel, but with devout faith in the\nEmperor and utter contempt for their foes.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has selected\nits targets.",
+      "target": "One Astra Militarum Vehicle\nunit from your army that was selected as\nthe target of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack is allocated to your unit,\nsubtract 1 from the Damage characteristic\nof that attack",
+      "restrictions": ""
+    }
+  ],
   "enhancements": [
     {
       "name": "Death Mask of Ollanius",
@@ -179,7 +259,11 @@
         "Officer",
         "‘Iron Hand’ Straken"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": ["Catachan Jungle Fighters"],
+        "extra": ""
+      }
     },
     {
       "id": "56eaf04a-5f63-59fc-b025-381848088631",
@@ -810,7 +894,7 @@
         "Attilan Rough Riders"
       ],
       "factions": ["Astra Militarum"],
-      "ledBy": ["Lord Solar Leontus"]
+      "leadBy": ["Lord Solar Leontus"]
     },
     {
       "id": "2be420d2-e4c2-5d95-aa9c-ee61903ff086",
@@ -1958,7 +2042,11 @@
         "Cadian",
         "Cadian Castellan"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": ["Cadian Shock Troops", "Infantry Squad", "Kasrkin"],
+        "extra": ""
+      }
     },
     {
       "id": "d2188f5b-7080-5831-93c3-f438a73d11aa",
@@ -2255,7 +2343,11 @@
         "Character",
         "Officer"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": ["Cadian Shock Troops"],
+        "extra": ""
+      }
     },
     {
       "id": "f19c1e48-ee95-5516-9bd6-bf7be6f57024",
@@ -2533,7 +2625,7 @@
         "Cadian Shock Troops"
       ],
       "factions": ["Astra Militarum"],
-      "ledBy": [
+      "leadBy": [
         "Cadian Castellan",
         "Cadian Command Squad",
         "Commissar",
@@ -2542,7 +2634,13 @@
         "Regimental Enginseer",
         "Regimental Preacher",
         "Ursula Creed"
-      ]
+      ],
+      "leads": {
+        "units": [
+          "This unit can have up to two Leader units attached to it, provided no more than one of those units is a Command Squad unit. If it does, and this Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "6469b4b2-c04f-5b12-ad65-deb78d406756",
@@ -2961,7 +3059,7 @@
         "Catachan Jungle Fighters"
       ],
       "factions": ["Astra Militarum"],
-      "ledBy": [
+      "leadBy": [
         "‘iron Hand’ Straken",
         "Commissar",
         "Lord Solar Leontus",
@@ -2970,7 +3068,13 @@
         "Regimental Enginseer",
         "Regimental Preacher",
         "Sergeant Harker"
-      ]
+      ],
+      "leads": {
+        "units": [
+          "This unit can have up to two Leader units attached to it, provided no more than one of those units is a Command Squad unit. If it does, and this Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "24e3a4cd-a808-51f7-90ad-342da891568b",
@@ -3515,7 +3619,18 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Imperium", "Officer", "Commissar"],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": [
+          "Cadian Shock Troops",
+          "Catachan Jungle Fighters",
+          "Death Korps of Krieg",
+          "Infantry Squad",
+          "Kasrkin",
+          "Tempestus Scions"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "04b01f35-3155-5eeb-a203-97fdc4d50c63",
@@ -3881,7 +3996,11 @@
         "Officer",
         "Death Korps Marshal"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": ["Death Korps of Krieg", "Infantry Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "75399a95-5436-5eee-ba91-8172529e66b3",
@@ -4164,7 +4283,7 @@
         "Death Korps of Krieg"
       ],
       "factions": ["Astra Militarum"],
-      "ledBy": [
+      "leadBy": [
         "Commissar",
         "Death Korps Marshal",
         "Lord Solar Leontus",
@@ -4172,7 +4291,13 @@
         "Primaris Psyker",
         "Regimental Enginseer",
         "Regimental Preacher"
-      ]
+      ],
+      "leads": {
+        "units": [
+          "This unit can have up to two Leader units attached to it, provided no more than one of those units is a Command Squad unit. If it does, and this Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "2f72b922-8d03-5307-be9a-a370400d2290",
@@ -4343,7 +4468,7 @@
         "Death Rider Squadron"
       ],
       "factions": ["Astra Militarum"],
-      "ledBy": ["Death Rider Squadron Commander"]
+      "leadBy": ["Death Rider Squadron Commander"]
     },
     {
       "id": "72a75b1e-af61-5b29-8ea3-080a837ccbad",
@@ -4522,7 +4647,11 @@
         "Officer",
         "Death Rider Squadron Commander"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": ["Death Rider Squadron"],
+        "extra": ""
+      }
     },
     {
       "id": "afa5ded6-303a-5c0e-be6d-4e05d71849c1",
@@ -6480,7 +6609,7 @@
         "Infantry Squad"
       ],
       "factions": ["Astra Militarum"],
-      "ledBy": [
+      "leadBy": [
         "Cadian Castellan",
         "Commissar",
         "Death Korps Marshal",
@@ -6490,7 +6619,13 @@
         "Regimental Enginseer",
         "Regimental Preacher",
         "Ursula Creed"
-      ]
+      ],
+      "leads": {
+        "units": [
+          "This unit can have up to two Leader units attached to it, provided no more than one of those units is a Command Squad unit. If it does, and this Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "8f7dddb7-e40d-5ed9-ba49-4eb1782957b4",
@@ -6775,7 +6910,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Grenades", "Regiment", "Kasrkin"],
       "factions": ["Astra Militarum"],
-      "ledBy": [
+      "leadBy": [
         "Cadian Castellan",
         "Commissar",
         "Lord Solar Leontus",
@@ -8670,7 +8805,18 @@
         "Officer",
         "Lord Solar Leontus"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": [
+          "Attilan Rough Riders",
+          "Cadian Shock Troops",
+          "Catachan Jungle Fighters",
+          "Death Korps of Krieg",
+          "Infantry Squad",
+          "Kasrkin"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "6cf07190-3331-5ec4-9a46-32b6571bf05c",
@@ -10986,7 +11132,11 @@
         }
       ],
       "keywords": ["Infantry", "Imperium", "Grenades", "Regiment", "Militarum"],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": ["Tempestus Scions"],
+        "extra": ""
+      }
     },
     {
       "id": "c6440514-2819-570e-ab48-09a895e09ce3",
@@ -11153,7 +11303,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Munitorum Servitors"],
       "factions": ["Astra Militarum"],
-      "ledBy": ["Regimental Enginseer"]
+      "leadBy": ["Regimental Enginseer"]
     },
     {
       "id": "2aa9ed72-e758-5a5e-9316-80096aa9f049",
@@ -11890,7 +12040,15 @@
         "Character",
         "Officer"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": [
+          "Catachan Jungle Fighters",
+          "Death Korps of Krieg",
+          "Infantry Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "ac9daa90-5179-508f-b9f5-1f66286d6a00",
@@ -12197,7 +12355,18 @@
         "Imperium",
         "Primaris Psyker"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": [
+          "Cadian Shock Troops",
+          "Catachan Jungle Fighters",
+          "Death Korps of Krieg",
+          "Infantry Squad",
+          "Kasrkin",
+          "Tempestus Scions"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "ba31f169-9b19-5658-8e1c-ca15ecf43fde",
@@ -12678,7 +12847,18 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Imperium", "Regimental Enginseer"],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": [
+          "Cadian Shock Troops",
+          "Catachan Jungle Fighters",
+          "Death Korps of Krieg",
+          "Infantry Squad",
+          "Kasrkin",
+          "Munitorum Servitors"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "c065c66d-a4e0-5213-8126-f9f49c9c54db",
@@ -12838,7 +13018,18 @@
         "Grenades",
         "Regimental Preacher"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": [
+          "Cadian Shock Troops",
+          "Catachan Jungle Fighters",
+          "Death Korps of Krieg",
+          "Infantry Squad",
+          "Kasrkin",
+          "Tempestus Scions"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "8d01f1ba-a813-5e47-9a04-520b6d74f0e2",
@@ -13448,7 +13639,11 @@
         "Officer",
         "Sergeant Harker"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": ["Catachan Jungle Fighters"],
+        "extra": ""
+      }
     },
     {
       "id": "62baec66-a524-59fc-996c-09704aa94053",
@@ -15246,12 +15441,18 @@
         "Tempestus Scions"
       ],
       "factions": ["Astra Militarum"],
-      "ledBy": [
+      "leadBy": [
         "Commissar",
         "Militarum Tempestus Command Squad",
         "Primaris Psyker",
         "Regimental Preacher"
-      ]
+      ],
+      "leads": {
+        "units": [
+          "This unit can have up to two Leader units attached to it, provided no more than one of those units is a Command Squad unit. If it does, and this Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "a011f2a0-6787-5be0-96e8-ebeb4415d2b8",
@@ -15646,7 +15847,11 @@
         "Officer",
         "Ursula Creed"
       ],
-      "factions": ["Astra Militarum"]
+      "factions": ["Astra Militarum"],
+      "leads": {
+        "units": ["Cadian Shock Troops", "Infantry Squad", "Kasrkin"],
+        "extra": ""
+      }
     },
     {
       "id": "331e84a5-47be-505c-99d9-6d9bed5f45f3",

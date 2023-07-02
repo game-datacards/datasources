@@ -4,6 +4,86 @@
   "name": "Votann",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "WARRIOR PRIDE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Oathband",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "The warriors of the Leagues of Votann\npride themselves on their martial skill\nand proficiency in combat, and when the\nAncestors are watching their actions they\ncan quickly overwhelm and pick apart\ntheir foes.",
+      "when": "Fight phase.",
+      "target": "One Leagues of Votann unit\nfrom your army, and one enemy unit\nthat has one or more Judgement tokens\nand is within Engagement Range of that\nLeagues of Votann unit.",
+      "effect": "Until the end of the phase,\neach time a model in your unit makes\na melee attack that targets that enemy\nunit, improve the Armour Penetration\ncharacteristic of that attack by 1 for each\nJudgement token that enemy unit has.",
+      "restrictions": ""
+    },
+    {
+      "name": "ORDERED RETREAT",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Oathband",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "Not for the Kin the sudden panic of the\nrout. Instead, they fall back steadily\nand by squads, laying down furious\nsuppressing fire before launching\nfresh assaults.",
+      "when": "Your Movement phase, just after a\nLeagues of Votann unit from your army\nFalls Back.",
+      "target": "That Leagues of Votann unit.",
+      "effect": "Until the end of the turn, your unit\nis eligible to shoot and declare a charge.",
+      "restrictions": ""
+    },
+    {
+      "name": "ANCESTRAL SENTENCE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Oathband",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "Some foes are so loathed that the\nAncestors themselves are said to pass\nsentence upon them, marking them\nfor death.",
+      "when": "Your Shooting phase.",
+      "target": "One Leagues of Votann unit\nfrom your army.",
+      "effect": "Until the end of the phase,\neach time a model in your unit makes\na ranged attack, that attack has the\n[SUSTAINED HITS 1] ability, and each time\na model in your unit makes a ranged\nattack that targets a unit that has one or\nmore Judgement tokens, that attack has\nthe [SUSTAINED HITS 2] ability instead.",
+      "restrictions": ""
+    },
+    {
+      "name": "REACTIVE REPRISAL",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Oathband",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "Once an enemy target has been marked out\nby the Eye of the Ancestors, the Kin focus their\nefforts upon its destruction, redoubling their\nfury should it attempt to engage.",
+      "when": "Your opponent’s Shooting phase, just\nafter an enemy unit that has one or more\nJudgement tokens has resolved its attacks.",
+      "target": "One Leagues of Votann unit from\nyour army that was selected as the target of\none or more of the attacking unit’s attacks.",
+      "effect": "Your Leagues of Votann unit can\nshoot as if it were your Shooting phase, but it\nmust target the enemy unit that just attacked\nit, and can only do so if that enemy unit is an\neligible target.",
+      "restrictions": ""
+    },
+    {
+      "name": "NEWFOUND NEMESIS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Oathband",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "To strike down Kin is to earn the\nimmediate and murderous ire of all their\nwarrior comrades.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas resolved its attacks.",
+      "target": "One Leagues of Votann\nInfantry or Leagues of Votann\nMounted unit from your army that was\nreduced to Below Half-strength as a result\nof the attacking unit’s attacks.",
+      "effect": "The attacking unit gains 1\nJudgement token, or up to 2 Judgement\ntokens instead if that Leagues of Votann\nunit contained your Warlord when it was\ntargeted by those attacks.",
+      "restrictions": ""
+    },
+    {
+      "name": "VOID ARMOUR",
+      "cost": 1,
+      "type": "Wargear",
+      "detachment": "Oathband",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "Void armour comprises hardened,\njointed segments hooked into the\nvoid suit beneath. It is fashioned from\nmagnaferrite weave, and often reinforced\nwith adamantine and enhanced with\nmicrofield generators.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Leagues of Votann unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your Leagues\nof Votann unit, worsen the Armour\nPenteration characteristic of that attack\nby 1.",
+      "restrictions": ""
+    }
+  ],
   "enhancements": [
     {
       "name": "APPRAISING GLARE",
@@ -251,7 +331,11 @@
         "BRÔKHYR IRON-MASTER MODEL:",
         "Character"
       ],
-      "factions": ["Leagues of Votann"]
+      "factions": ["Leagues of Votann"],
+      "leads": {
+        "units": ["Hearthkyn Warriors", "Brôkhyr Thunderkyn"],
+        "extra": ""
+      }
     },
     {
       "id": "6c6112d4-601f-5bc8-b253-5d211b7900e3",
@@ -390,7 +474,7 @@
       ],
       "keywords": ["Infantry", "Exo-frame", "Brôkhyr Thunderkyn"],
       "factions": ["Leagues of Votann"],
-      "ledBy": ["Brôkhyr Iron-master"]
+      "leadBy": ["Brôkhyr Iron-master"]
     },
     {
       "id": "e01321d0-cdcf-5427-85a0-656d03e62368",
@@ -682,7 +766,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Exo-armour", "Einhyr Champion"],
-      "factions": ["Leagues of Votann"]
+      "factions": ["Leagues of Votann"],
+      "leads": {
+        "units": ["Einhyr Hearthguard"],
+        "extra": ""
+      }
     },
     {
       "id": "cfd5032a-2dc7-507a-a400-a0fc45d1e82a",
@@ -868,7 +956,7 @@
       ],
       "keywords": ["Infantry", "Exo-armour", "Einhyr Hearthguard"],
       "factions": ["Leagues of Votann"],
-      "ledBy": ["Einhyr Champion", "Kâhl", "Ûthar The Destined"]
+      "leadBy": ["Einhyr Champion", "Kâhl", "Ûthar The Destined"]
     },
     {
       "id": "e2762237-0be3-570b-a1f2-f49c8e865a37",
@@ -1037,7 +1125,11 @@
         "Character",
         "Psyker"
       ],
-      "factions": ["Leagues of Votann"]
+      "factions": ["Leagues of Votann"],
+      "leads": {
+        "units": ["Hearthkyn Warriors"],
+        "extra": ""
+      }
     },
     {
       "id": "0fd9319f-37fc-5325-8bbe-3bc58f5834f2",
@@ -1338,7 +1430,7 @@
       ],
       "keywords": ["Infantry", "Battleline", "Grenades", "Hearthkyn Warriors"],
       "factions": ["Leagues of Votann"],
-      "ledBy": ["Brôkhyr Iron-master", "Grimnyr", "Kâhl", "Ûthar The Destined"]
+      "leadBy": ["Brôkhyr Iron-master", "Grimnyr", "Kâhl", "Ûthar The Destined"]
     },
     {
       "id": "3b568802-2de2-5f29-8a5b-e2797105a2a2",
@@ -1869,7 +1961,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Kâhl"],
-      "factions": ["Leagues of Votann"]
+      "factions": ["Leagues of Votann"],
+      "leads": {
+        "units": ["Einhyr Hearthguard", "Hearthkyn Warriors"],
+        "extra": ""
+      }
     },
     {
       "id": "6d880dd3-d9e1-5a41-a2fd-5354f8c988c4",
@@ -2161,7 +2257,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Epic Hero", "Ûthar the Destined"],
-      "factions": ["Leagues of Votann"]
+      "factions": ["Leagues of Votann"],
+      "leads": {
+        "units": ["Einhyr Hearthguard", "Hearthkyn Warriors"],
+        "extra": ""
+      }
     }
   ],
   "colours": {

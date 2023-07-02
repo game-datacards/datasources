@@ -4,6 +4,86 @@
   "name": "Space Wolves",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "ARMOUR OF CONTEMPT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Champions of Russ",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The belligerency of the Adeptus Astartes,\ncombined with their transhuman\nphysiology, makes them unyielding foes\nto face.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, worsen\nthe Armour Penetration characteristic of\nthat attack by 1.",
+      "restrictions": ""
+    },
+    {
+      "name": "GO FOR THE THROAT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Champions of Russ",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "With the scent of blood in the air and the\nrushing joy of battle surging through\nevery true warrior’s hearts, even the\ngreatest quarry can be brought down.",
+      "when": "Fight phase.",
+      "target": "One Adeptus Astartes unit from\nyour army that has not been selected to\nfight this phase.",
+      "effect": "Until the end of the phase,\nimprove the Armour Penetration\ncharacteristic of melee weapons\nequipped by models in your unit by 1.\nIf the Saga of the Beastslayer has been\ncompleted by your army, until the end\nof the phase, such weapons have the\n[LANCE] ability as well.",
+      "restrictions": ""
+    },
+    {
+      "name": "RUNIC WARDS",
+      "cost": 1,
+      "type": "Wargear",
+      "detachment": "Champions of Russ",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "Imbued as they are with the cunning\npsychic might of the Rune Priests,\nshamanistic totems, tattoos and fetishes\nare a potent shield against baleful attacks\nand the foul sorcery of witches.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase,\nmodels in your unit have the Feel No\nPain 5+ ability against mortal wounds\nand Psychic Attacks. If the Saga of the\nBear has been completed by your army,\nuntil the end of the phase, models in\nyour unit have the Feel No Pain 4+ ability\nagainst mortal wounds and Psychic\nAttacks instead.",
+      "restrictions": ""
+    },
+    {
+      "name": "DEATH HOWL",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Champions of Russ",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Having stalked their prey or run them\nto ground, all that remains is to go for\nthe enemy’s weakest points, to rip them\napart in a furious bloodletting. Onlookers\nare stricken with terror at the bloody\nspectacle, an instant before the sons of\nRuss pounce upon them.",
+      "when": "Fight phase.",
+      "target": "One Adeptus Astartes unit from\nyour army that destroyed one or more\nenemy units this phase.",
+      "effect": "Until the end of the phase,\neach time a model in your unit makes\na Consolidation move, it can move up\nto 6\" instead of up to 3\", provided your\nunit ends that Consolidation move in\nUnit Coherency and within Engagement\nRange of one or more enemy units. In\naddition, if the Saga of Majesty has been\ncompleted by your army, each enemy\nunit within 6\" of your unit when it ends\nthat Consolidation move must take a\nBattle-shock test",
+      "restrictions": ""
+    },
+    {
+      "name": "WARRIOR PRIDE",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Champions of Russ",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "The greatest champions amongst the\nsons of Russ must take the fight to the\nenemy, leading by example to uphold the\nhonour of their Chapter.",
+      "when": "Your Command phase.",
+      "target": "One Adeptus Astartes\nCharacter model from your army.",
+      "effect": "Select one Saga that has not\nyet been completed by your army.\nUntil the end of the turn, models in your\nCharacter’s unit have the benefit of the\nselected Saga as if it had been completed\nby your army.",
+      "restrictions": ""
+    },
+    {
+      "name": "RELENTLESS ASSAULT",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Champions of Russ",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "Once their blades and claws run red with\nthe enemy’s blood, nothing will hold the\nsavage sons of Russ back from new prey.",
+      "when": "Your Movement phase, just after\nan Adeptus Astartes unit from your army\nmakes a Fall Back or Advance move.",
+      "target": "That Adeptus Astartes unit.",
+      "effect": "Until the end of the turn, your unit\nis eligible to shoot even though it Fell Back\nor Advanced this phase. If the Saga of the\nWarrior Born has been completed by your\narmy, until the end of the turn, your unit is\nalso eligible to declare a charge. ",
+      "restrictions": ""
+    }
+  ],
   "enhancements": [
     {
       "name": "BLACK DEATH",
@@ -144,7 +224,16 @@
         "Terminator",
         "Arjac Rockfist"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad",
+          "Wolf Guard Terminators"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "e2e577e1-3362-5054-a7dc-ec4a4e81b140",
@@ -648,7 +737,7 @@
         "Blood Claws"
       ],
       "factions": ["Adeptus Astartes", "Space Wolves"],
-      "ledBy": [
+      "leadBy": [
         "Iron Priest",
         "Krom Dragongaze",
         "Lukas The Trickster",
@@ -782,7 +871,11 @@
         "Imperium",
         "Canis Wolfborn"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Fenrisian Wolves", "Thunderwolf Cavalry"],
+        "extra": ""
+      }
     },
     {
       "id": "e0803be6-0ad7-53cb-bcea-d4acbb965234",
@@ -876,7 +969,11 @@
         }
       ],
       "keywords": ["Beast", "Character", "Imperium", "Cyberwolf"],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Fenrisian Wolves"],
+        "extra": "You must attach this model to the above unit, even if Canis Wolfborn has been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed. WOLFKIN This model cannot be your Warlord and cannot be given Enhancements."
+      }
     },
     {
       "id": "813450b5-2d22-5134-8274-91854c51eac2",
@@ -963,7 +1060,7 @@
       ],
       "keywords": ["Beasts", "Imperium", "Fenrisian Wolves"],
       "factions": ["Adeptus Astartes", "Space Wolves"],
-      "ledBy": ["Canis Wolfborn", "Cyberwolf"]
+      "leadBy": ["Canis Wolfborn", "Cyberwolf"]
     },
     {
       "id": "4b6c3e90-12a2-5555-8d6a-8823a984108f",
@@ -1250,7 +1347,7 @@
         "Grey Hunters"
       ],
       "factions": ["Adeptus Astartes", "Space Wolves"],
-      "ledBy": [
+      "leadBy": [
         "Iron Priest",
         "Krom Dragongaze",
         "Ragnar Blackmane",
@@ -1385,7 +1482,11 @@
         "Captain",
         "Harald Deathwolf"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Thunderwolf Cavalry"],
+        "extra": ""
+      }
     },
     {
       "id": "ca957215-0bd1-5727-a499-009f5e253530",
@@ -1651,7 +1752,16 @@
         "Techmarine",
         "Iron Priest"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": [
+          "Astartes Servitors",
+          "Blood Claws",
+          "Grey Hunters",
+          "Long Fangs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "454dc0e4-a704-57b8-98ea-d953925c4783",
@@ -1763,7 +1873,11 @@
         "Captain",
         "Krom Dragongaze"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Blood Claws", "Grey Hunters", "Wolf Guard"],
+        "extra": ""
+      }
     },
     {
       "id": "75374f5c-5b30-5b87-b2e4-1f8c176b21e6",
@@ -2341,7 +2455,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Long Fangs"],
       "factions": ["Space Wolves"],
-      "ledBy": [
+      "leadBy": [
         "Iron Priest",
         "Ulrik The Slayer",
         "Wolf Guard Pack Leader",
@@ -2475,7 +2589,11 @@
         "Imperium",
         "Lukas the Trickster"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Blood Claws"],
+        "extra": ""
+      }
     },
     {
       "id": "cbc3fcf5-ecb4-5134-a733-a67e904e4698",
@@ -2743,7 +2861,16 @@
         "Terminator",
         "Njal Stormcaller"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad",
+          "Wolf Guard Terminators"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "f7c221df-be2f-5050-9b4d-1af14f9d6716",
@@ -2856,7 +2983,18 @@
         "Captain",
         "Ragnar Blackmane"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": [
+          "Wolf Guard",
+          "Blood Claws",
+          "Grey Hunters",
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Intercessor Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "1776e9fd-926e-503e-a319-438429ed5650",
@@ -3133,7 +3271,7 @@
         "Skyclaws"
       ],
       "factions": ["Adeptus Astartes", "Space Wolves"],
-      "ledBy": ["Wolf Guard Pack Leader With Jump Pack"]
+      "leadBy": ["Wolf Guard Pack Leader With Jump Pack"]
     },
     {
       "id": "14ab1913-93d6-5ccf-a3fe-1b0482fcbce8",
@@ -4226,7 +4364,7 @@
       ],
       "keywords": ["Mounted", "Grenades", "Imperium", "Thunderwolf Cavalry"],
       "factions": ["Adeptus Astartes", "Space Wolves"],
-      "ledBy": [
+      "leadBy": [
         "Canis Wolfborn",
         "Harald Deathwolf",
         "Wolf Guard Battle Leader On Thunderwolf",
@@ -4353,7 +4491,11 @@
         "Imperium",
         "Ulrik the Slayer"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Blood Claws", "Grey Hunters", "Long Fangs", "Wolf Guard"],
+        "extra": ""
+      }
     },
     {
       "id": "bd10ec7d-6877-5c3f-a760-cd6d113feb14",
@@ -4552,7 +4694,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Wolf Guard"],
       "factions": ["Adeptus Astartes", "Space Wolves"],
-      "ledBy": ["Krom Dragongaze", "Ragnar Blackmane", "Ulrik The Slayer"]
+      "leadBy": ["Krom Dragongaze", "Ragnar Blackmane", "Ulrik The Slayer"]
     },
     {
       "id": "6792404e-8e12-58cd-b3d0-50377d1f645a",
@@ -4767,7 +4909,16 @@
         "Terminator",
         "Wolf Guard Battle Leader in Terminator Armour"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad",
+          "Wolf Guard Terminators"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "29f04894-8fed-5ddf-9d6f-4d2f45ad4add",
@@ -5047,7 +5198,11 @@
         "Imperium",
         "Wolf Guard Battle Leader on Thunderwolf"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Thunderwolf Cavalry"],
+        "extra": "You can attach this model to the above unit even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "06183523-025f-5f5c-95c6-dd748b948f91",
@@ -5327,7 +5482,11 @@
         "Pack Leader",
         "Wolf Guard Pack Leader"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Blood Claws", "Grey Hunters", "Long Fangs"],
+        "extra": "You must attach this model to one of the above units, and can do so even if one or more Character units have already been attached to that unit, but a unit can never include more than one Pack Leader model. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed."
+      }
     },
     {
       "id": "50037b61-971a-5f93-b972-b0e03a140bc5",
@@ -5593,7 +5752,11 @@
         "Pack Leader",
         "Wolf Guard Pack Leader in Terminator Armour"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Blood Claws", "Grey Hunters", "Long Fangs"],
+        "extra": "You must attach this model to one of the above units, and can do so even if one or more Character units have already been attached to that unit, but a unit can never include more than one Pack Leader model. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed."
+      }
     },
     {
       "id": "266d7533-7fb8-5cbd-93cb-3a1a70cbf888",
@@ -5843,7 +6006,11 @@
         "Pack Leader",
         "Wolf Guard Pack Leader with Jump Pack"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Skyclaws"],
+        "extra": "You must attach this model to the above unit, and can do so even if one or more Character units have already been attached to that unit, but a unit can never include more than one Pack Leader model. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths. If it is not possible to attach this model to a unit, it does not take part in the battle and counts as having been destroyed."
+      }
     },
     {
       "id": "b2efd0c3-1e96-53b3-af25-531fda7b309b",
@@ -6117,7 +6284,7 @@
         "Wolf Guard Terminators"
       ],
       "factions": ["Adeptus Astartes", "Space Wolves"],
-      "ledBy": [
+      "leadBy": [
         "Arjac Rockfist",
         "Njal Stormcaller",
         "Wolf Guard Battle Leader In Terminator Armour"
@@ -6402,7 +6569,11 @@
         "Captain",
         "Wolf Lord on Thunderwolf"
       ],
-      "factions": ["Adeptus Astartes", "Space Wolves"]
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Thunderwolf Cavalry"],
+        "extra": ""
+      }
     },
     {
       "id": "c086546e-a615-5212-be4a-d91d1f6a1b70",

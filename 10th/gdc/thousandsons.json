@@ -4,6 +4,86 @@
   "name": "Thousand Sons",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "PSYCHIC DOMINION",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Cult of Magic",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "To pit one’s own psychic prowess against\nthe sorcerous might of the Thousand Sons\nis to be trapped, helpless and screaming,\nwithin one’s own mind.",
+      "when": "Any phase, just after an enemy\nunit has selected its targets.",
+      "target": "One Thousand Sons unit from\nyour army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, all\nattacks made against your unit with\nPsychic weapons have the [HAZARDOUS]\nability and all models in your unit have\nthe Feel No Pain 4+ ability against\nPsychic Attacks",
+      "restrictions": ""
+    },
+    {
+      "name": "DESTINED BY FATE",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Cult of Magic",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "The Architect of Fate has great designs\nfor his pawns, which do not include their\nuntimely demise just yet…",
+      "when": "Any phase, when a saving throw is\nfailed for a Thousand Sons Psyker model\nfrom your army.",
+      "target": "That Psyker model.",
+      "effect": "Change the Damage\ncharacteristic of that attack to 0.",
+      "restrictions": ""
+    },
+    {
+      "name": "DEVASTATING SORCERY",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Cult of Magic",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "This warrior’s veins burn with raw\nsorcery. The sheer unstoppable might\nof their conjurations is such that, when\nunleashed with destructive intent, there\nis little that can prevent them from\ndevastating manifestation.",
+      "when": "Your Shooting phase.",
+      "target": "One Thousand Sons Psyker\nunit from your army that has not been\nselected to shoot this phase.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit makes a Psychic\nAttack, you can re-roll the Hit roll and you\ncan re-roll the Wound roll.",
+      "restrictions": ""
+    },
+    {
+      "name": "ENSORCELLED INFUSION",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Cult of Magic",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "Utilising the fell powers of the warp,\nThousand Sons Sorcerers infuse their\nminions’ bolter rounds with empyric\nenergies to render them even deadlier.",
+      "when": "Your Shooting phase.",
+      "target": "One Thousand Sons Psyker\nunit from your army that has not been\nselected to shoot this phase.",
+      "effect": "Until the end of the phase, all\ninferno bolt pistols, inferno boltguns,\ninferno combi-bolters and inferno\ncombi-weapons equipped by models in\nyour unit have the [PSYCHIC] ability and a\nStrength characteristic of 5. ",
+      "restrictions": ""
+    },
+    {
+      "name": "SORCEROUS MIGHT",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Cult of Magic",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "The most powerful sorcerers of the\nThousand Sons are battle-psykers who\ncan, if the need is dire enough, siphon a\nsliver of their corrupted souls into their\neldritch assaults to temporarily boost\ntheir potency.",
+      "when": "Your Shooting phase.",
+      "target": "One Thousand Sons Psyker\nunit from your army that has not been\nselected to shoot this phase.",
+      "effect": "Until the end of the phase, add 9\"\nto the range of Psychic weapons equipped\nby your unit.",
+      "restrictions": ""
+    },
+    {
+      "name": "WARP SIGHT",
+      "cost": 2,
+      "type": "Strategic Ploy",
+      "detachment": "Cult of Magic",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "With their tainted souls melded as one in\nthe warp, what one champion of the cabal\nsees, all their fellows see also.",
+      "when": "Your Shooting phase.",
+      "target": "One Thousand Sons Psyker unit\nfrom your army and one enemy unit that\nis visible to that unit.",
+      "effect": "Until the end of the phase, each\ntime a friendly Thousand Sons Psyker\nmodel makes an attack with a Psychic\nweapon that targets that enemy unit,\nthat attack has the [INDIRECT FIRE] and\n[IGNORES COVER] abilities. ",
+      "restrictions": ""
+    }
+  ],
   "enhancements": [
     {
       "name": "Arcane Vortex",
@@ -494,7 +574,11 @@
         "Tzeentch",
         "Exalted Sorcerer"
       ],
-      "factions": ["Thousand Sons"]
+      "factions": ["Thousand Sons"],
+      "leads": {
+        "units": ["Rubric Marines"],
+        "extra": ""
+      }
     },
     {
       "id": "30b886e4-88fd-5a6a-a85f-ccdc99ac2f28",
@@ -684,7 +768,11 @@
         "Tzeentch",
         "Exalted Sorcerer"
       ],
-      "factions": ["Thousand Sons"]
+      "factions": ["Thousand Sons"],
+      "leads": {
+        "units": ["Rubric Marines"],
+        "extra": ""
+      }
     },
     {
       "id": "fa38ccf7-a6fc-5328-9f65-d7631b1c7a12",
@@ -823,7 +911,11 @@
         "Tzeentch",
         "Infernal Master"
       ],
-      "factions": ["Thousand Sons"]
+      "factions": ["Thousand Sons"],
+      "leads": {
+        "units": ["Rubric Marines"],
+        "extra": ""
+      }
     },
     {
       "id": "4c38a598-03aa-5f90-9407-33bd484da21c",
@@ -1398,7 +1490,7 @@
         "Psyker"
       ],
       "factions": ["Thousand Sons"],
-      "ledBy": [
+      "leadBy": [
         "Exalted Sorcerer",
         "Exalted Sorcerer On Disc Of Tzeentch",
         "Infernal Master",
@@ -1608,7 +1700,7 @@
         "Psyker"
       ],
       "factions": ["Thousand Sons"],
-      "ledBy": ["Thousand Sons Sorcerer In Terminator Armour"]
+      "leadBy": ["Thousand Sons Sorcerer In Terminator Armour"]
     },
     {
       "id": "d45b410a-deec-598f-bf5e-0638da19c52a",
@@ -3868,7 +3960,11 @@
         "Tzeentch",
         "Sorcerer"
       ],
-      "factions": ["Thousand Sons"]
+      "factions": ["Thousand Sons"],
+      "leads": {
+        "units": ["Rubric Marines"],
+        "extra": ""
+      }
     },
     {
       "id": "143c0245-2ac6-54a7-8bc9-334c793a115a",
@@ -4033,7 +4129,11 @@
         "Tzeentch",
         "Sorcerer"
       ],
-      "factions": ["Thousand Sons"]
+      "factions": ["Thousand Sons"],
+      "leads": {
+        "units": ["Scarab Occult Terminators"],
+        "extra": ""
+      }
     },
     {
       "id": "4f69fa1f-800d-5963-bfa9-68ea87a4c8da",
@@ -4346,7 +4446,7 @@
         "Tzaangor Enlightened"
       ],
       "factions": ["Thousand Sons"],
-      "ledBy": ["Tzaangor Shaman"]
+      "leadBy": ["Tzaangor Shaman"]
     },
     {
       "id": "867d4f01-a499-5f02-ae56-be3461285c68",
@@ -4458,7 +4558,11 @@
         "Tzeentch",
         "Tzaangor Shaman"
       ],
-      "factions": ["Thousand Sons"]
+      "factions": ["Thousand Sons"],
+      "leads": {
+        "units": ["Tzaangor Enlightened", "Tzaangors"],
+        "extra": ""
+      }
     },
     {
       "id": "e6a01d5b-aafa-5195-9052-45eae4dadbbe",
@@ -4595,7 +4699,7 @@
       ],
       "keywords": ["Infantry", "Battleline", "Chaos", "Tzeentch", "Tzaangors"],
       "factions": ["Thousand Sons"],
-      "ledBy": ["Tzaangor Shaman"]
+      "leadBy": ["Tzaangor Shaman"]
     }
   ],
   "colours": {

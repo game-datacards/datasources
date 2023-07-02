@@ -4,6 +4,86 @@
   "name": "Blood Angels",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "ANGEL'S SACRIFICE",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Sons of Sanguinius",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "The Blood Angels would gladly put\nthemselves in harm’s way to protect\nothers, exemplifying the sacrifice\nof Sanguinius.",
+      "when": "Any phase.",
+      "target": "One Adeptus Astartes\nCharacter unit from your army that\nwas just destroyed. You can use this\nStratagem on that unit even though it was\njust destroyed.",
+      "effect": "Until the end of the battle, each\ntime a friendly Adeptus Astartes unit\nmakes an attack that targets the enemy\nunit that just destroyed your Character\nunit, you can re-roll the Hit roll.",
+      "restrictions": ""
+    },
+    {
+      "name": "ARMOUR OF CONTEMPT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Sons of Sanguinius",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The belligerency of the Adeptus Astartes\ncombined with their transhuman\nphysiology makes them unyielding foes\nto face.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, worsen\nthe Armour Penetration characteristic of\nthat attack by 1.",
+      "restrictions": ""
+    },
+    {
+      "name": "AGGRESSIVE ONSLAUGHT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Sons of Sanguinius",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "The Sons of Sanguinius constantly\npush towards new foes, the bloodlust\nsinging in their veins unleashed in a\ncontrolled dynamism.",
+      "when": "Fight phase.",
+      "target": "One Adeptus Astartes\nunit from your army, just before that\nunit Consolidates.",
+      "effect": "Until the end of the phase,\neach time a model in your unit makes a\nConsolidation move, it can move up to\n6\" instead of up to 3\", provided your unit\nends that Consolidation move in Unit\nCoherency and within Engagement Range\nof one or more enemy units.",
+      "restrictions": ""
+    },
+    {
+      "name": "RED RAMPAGE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Sons of Sanguinius",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "In times of great desperation, fury and\nferocity can be a warrior’s strongest allies.",
+      "when": "Fight phase.",
+      "target": "One Adeptus Astartes unit from\nyour army that has not been selected to\nfight this phase.",
+      "effect": "Until the end of the phase,\nmelee weapons equipped by models\nin your unit have the [LANCE] and\n[LETHAL HITS] abilities.",
+      "restrictions": ""
+    },
+    {
+      "name": "ONLY IN DEATH DOES DUTY END",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Sons of Sanguinius",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Imminent death does not prevent a Space\nMarine from enacting his final justice\nupon the enemies of the Imperium.",
+      "when": "Fight phase, just after an enemy\nunit has selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit is destroyed, if\nthat model has not fought this phase, do\nnot remove it from play. The destroyed\nmodel can fight after the attacking\nmodel’s unit has finished making its\nattacks, and is then removed from play.",
+      "restrictions": ""
+    },
+    {
+      "name": "RELENTLESS ASSAULT",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Sons of Sanguinius",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "The Blood Angels are loathe to resort to\nthe defensive strategies favoured by\nother Chapters, and a tactical withdrawal\nis but a prelude to re-entering the fray.",
+      "when": "Your Movement phase, just after\nan Adeptus Astartes unit from your army\nFalls Back.",
+      "target": "That Adeptus Astartes unit.",
+      "effect": "Until the end of the turn, your unit\nis eligible to declare a charge even though\nit Fell Back this phase.",
+      "restrictions": ""
+    }
+  ],
   "enhancements": [
     {
       "name": "Archangel’s Shard",
@@ -147,7 +227,11 @@
         "Chaplain",
         "Astorath"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": ["Death Company Marines with Jump Packs"],
+        "extra": ""
+      }
     },
     {
       "id": "9ce6d8b7-7943-518e-be4d-d89fd9f9a057",
@@ -442,7 +526,16 @@
         "Sanguinary Priest",
         "Brother Corbulo"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Devastator Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "3324eec6-662c-52c9-ba6e-b1cb445e411e",
@@ -739,7 +832,15 @@
         "Tacticus",
         "Chief Librarian Mephiston"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "e5145978-72b9-5509-a15a-d1213bda57a0",
@@ -854,7 +955,15 @@
         "Chapter Master",
         "Commander Dante"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Sanguinary Guard",
+          "Vanguard Veteran Squad with Jump Packs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "3ee2094c-aa41-580b-bc63-43da2b51f238",
@@ -1843,7 +1952,7 @@
         "Death Company Marines with Jump Packs"
       ],
       "factions": ["Adeptus Astartes", "Blood Angels"],
-      "ledBy": ["Astorath", "Lemartes"]
+      "leadBy": ["Astorath", "Lemartes"]
     },
     {
       "id": "58f4f83e-cc8d-5ca8-8e9e-c254c3e665d9",
@@ -2152,7 +2261,16 @@
         "Chapter Master",
         "Gabriel Seth"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "1e784468-8db7-572a-922f-87d8a0060dd2",
@@ -2266,7 +2384,11 @@
         "Chaplain",
         "Lemartes"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": ["Death Company Marines with Jump Packs"],
+        "extra": ""
+      }
     },
     {
       "id": "a5a75670-2c87-557a-a77d-cbc682a2f5e3",
@@ -2647,7 +2769,7 @@
         "Sanguinary Guard"
       ],
       "factions": ["Adeptus Astartes", "Blood Angels"],
-      "ledBy": ["Commander Dante"]
+      "leadBy": ["Commander Dante"]
     },
     {
       "id": "d893b19a-cb3f-59e5-8a1f-bd75238d3ff8",
@@ -2757,7 +2879,16 @@
         "Imperium",
         "Sanguinary Priest"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Devastator Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": "You can attach this model to one of the above units, even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "5c7d67d6-95de-5d69-8dac-ac0345c0d45d",
@@ -2869,7 +3000,14 @@
         "Jump Pack",
         "Sanguinary Priest"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Vanguard Veteran Squad with Jump packs"
+        ],
+        "extra": "You can attach this model to one of the above units, even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "ea9e7286-4775-5e55-b2e0-b1c2c7c63b12",
