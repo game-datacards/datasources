@@ -4,6 +4,86 @@
   "name": "Chaos Daemons",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "CORRUPT REALSPACE",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Demonic Incursion",
+      "turn": "either",
+      "phase": ["command"],
+      "fluff": "Daemons instinctively feel the need\nto despoil and corrupt every corner of\nrealspace, the better to sustain their\notherworldly forms.",
+      "when": "Start of any Command phase.",
+      "target": "One Legiones Daemonica unit\nfrom your army that is within range of an\nobjective marker you control.",
+      "effect": "That objective marker is said to\nbe Corrupted and remains under your\ncontrol, even if you have no models within\nrange of it, until your opponent controls it\nat the start or end of any turn. In addition,\nwhile an objective marker is Corrupted\nand under your control, the area of the\nbattlefield within 6\" of that objective\nmarker is considered to be within your\narmy’s Shadow of Chaos. ",
+      "restrictions": ""
+    },
+    {
+      "name": "WARP SURGE",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Demonic Incursion",
+      "turn": "your",
+      "phase": ["charge"],
+      "fluff": "The winds of the warp blow strong,\ninvigorating daemonkind and lending\nthem supernatural speed and ferocity.",
+      "when": "Your Charge phase.",
+      "target": "One Legiones Daemonica unit\nfrom your army that is within your army’s\nShadow of Chaos.",
+      "effect": "Until the end of the phase, your\nunit is eligible to declare a charge even if it\nAdvanced this turn",
+      "restrictions": ""
+    },
+    {
+      "name": "DRAUGHT OF TERROR",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Demonic Incursion",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The swelling fear of their mortal prey serves\nas an intoxicating elixir to the daemonic\nfollowers, each draught invigorating their\nforms with deadly power.",
+      "when": "Your Shooting phase or the\nFight phase.",
+      "target": "One Legiones Daemonica\nunit from your army that has not been\nselected to shoot or fight this phase.",
+      "effect": "Until the end of the phase,\nimprove the Armour Penetration\ncharacteristic of weapons equipped by\nmodels in that unit by 1. In addition,\nuntil the end of the phase, each time\nsuch a weapon targets a unit that is\nBattle-shocked, you can re-roll the\nWound roll.",
+      "restrictions": ""
+    },
+    {
+      "name": "DENIZENS OF THE WARP",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Demonic Incursion",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "Ever lurking in the warp, daemons will\nwait until the barriers between realms thin\nbefore tearing their way into realspace.",
+      "when": "Your Movement phase.",
+      "target": "One Legiones Daemonica unit\nfrom your army that is arriving using the\nDeep Strike ability this phase.",
+      "effect": "Your unit can be set up anywhere\non the battlefield that is more than 3\"\nhorizontally away from all enemy models.",
+      "restrictions": "A unit targeted by this\nStratagem is not eligible to declare a\ncharge in the same turn."
+    },
+    {
+      "name": "THE REALM OF CHAOS",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Demonic Incursion",
+      "turn": "opponents",
+      "phase": ["endOfTurn"],
+      "fluff": "When the energies of the warp bleed into\nrealspace, the Legiones Daemonica can rip\nopen portals in seeming thin-air, returning\nto their hellscapes only to rematerialise\namidst their foes a heartbeat later.",
+      "when": "End of your opponent’s turn.",
+      "target": "Up to two Legiones Daemonica\nunits from your army that are within\nyour army’s Shadow of Chaos, or one\nother Legiones Daemonica unit from\nyour army.",
+      "effect": "Remove the targeted units\nfrom the battlefield and place them into\nStrategic Reserves. They will arrive back\non the battlefield in the Reinforcements\nstep of your next Movement phase using\nthe Deep Strike ability.",
+      "restrictions": "You cannot target units\nthat are within Engagement Range of one\nor more enemy units with this Stratagem"
+    },
+    {
+      "name": "DAEMONIC INVULNERABILITY",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Demonic Incursion",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "Daemons are madness given form. Their\nvery bodies are fashioned from the stuff\nof the warp, and are difficult to destroy\nthrough conventional means.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has selected\nits targets.",
+      "target": "One Legiones Daemonica unit\nfrom your army that was selected as\nthe target of one or more of that enemy\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an invulnerable saving throw is made\nfor a model in your unit, re-roll a saving\nthrow of 1.",
+      "restrictions": ""
+    }
+  ],
   "enhancements": [
     {
       "name": "A’rgath, the King of Blades",
@@ -292,7 +372,7 @@
       ],
       "keywords": ["Beast", "Chaos", "Daemon", "Nurgle", "Beasts of Nurgle"],
       "factions": ["Legiones Daemonica"],
-      "ledBy": ["Horticulous Slimux"]
+      "leadBy": ["Horticulous Slimux"]
     },
     {
       "id": "d42abf8d-e119-5791-90a7-70a1183240c7",
@@ -411,7 +491,7 @@
       ],
       "keywords": ["Mounted", "Chaos", "Daemon", "Khorne", "Bloodcrushers"],
       "factions": ["Legiones Daemonica"],
-      "ledBy": ["Skullmaster"]
+      "leadBy": ["Skullmaster"]
     },
     {
       "id": "25ab9e93-fc0c-52b2-b6a7-5ca993d15f1b",
@@ -516,7 +596,7 @@
         "Bloodletters"
       ],
       "factions": ["Legiones Daemonica"],
-      "ledBy": ["Bloodmaster", "Skulltaker"]
+      "leadBy": ["Bloodmaster", "Skulltaker"]
     },
     {
       "id": "6317a045-4a71-59a1-9291-4808c2b82e4b",
@@ -610,7 +690,11 @@
         "Khorne",
         "Bloodmaster"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Bloodletters"],
+        "extra": ""
+      }
     },
     {
       "id": "7d466720-589e-54d0-abb0-1bd094a28515",
@@ -949,7 +1033,7 @@
         "Brimstone"
       ],
       "factions": ["Legiones Daemonica"],
-      "ledBy": ["Changecaster", "Fluxmaster"]
+      "leadBy": ["Changecaster", "Fluxmaster"]
     },
     {
       "id": "ab00821d-d054-5125-964d-0837d7520ca9",
@@ -1197,7 +1281,11 @@
         "Tzeentch",
         "Changecaster"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Blue Horrors", "Pink Horrors"],
+        "extra": ""
+      }
     },
     {
       "id": "d7bf34ae-8c48-5d7c-8004-ddc81179e195",
@@ -1307,7 +1395,11 @@
         "SLaanesh",
         "Contorted Epitome"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Daemonettes"],
+        "extra": ""
+      }
     },
     {
       "id": "e697d09c-4032-564a-8548-f5954454e0e2",
@@ -1723,7 +1815,7 @@
         "Daemonettes"
       ],
       "factions": ["Legiones Daemonica"],
-      "ledBy": [
+      "leadBy": [
         "Contorted Epitome",
         "Infernal Enrapturess",
         "Syll’esske",
@@ -1823,7 +1915,11 @@
         "Nurgle",
         "Epidemius"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Plaguebearers"],
+        "extra": ""
+      }
     },
     {
       "id": "06ac659a-793f-5875-9b7f-7bd9d029e1e4",
@@ -1946,7 +2042,11 @@
         "Tzeentch",
         "Exalted Flamer"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Flamers"],
+        "extra": ""
+      }
     },
     {
       "id": "723bc56b-59c5-5507-8fcb-a507aa4b68d6",
@@ -2206,7 +2306,11 @@
         "Tzeentch",
         "Fateskimmer"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Screamers"],
+        "extra": ""
+      }
     },
     {
       "id": "8b1e01e1-3fc5-514d-bdb6-96e69847b2e2",
@@ -2478,7 +2582,7 @@
       ],
       "keywords": ["Infantry", "Fly", "Chaos", "Daemon", "Tzeentch", "Flamers"],
       "factions": ["Legiones Daemonica"],
-      "ledBy": ["Exalted Flamer"]
+      "leadBy": ["Exalted Flamer"]
     },
     {
       "id": "60704431-7e62-56a6-beba-9c10ad2a1171",
@@ -2589,7 +2693,7 @@
       ],
       "keywords": ["Beast", "Chaos", "Daemon", "Khorne", "Flesh Hounds"],
       "factions": ["Legiones Daemonica"],
-      "ledBy": ["Karanak"]
+      "leadBy": ["Karanak"]
     },
     {
       "id": "6dbed53c-517a-5ddd-9f17-4078d05e6982",
@@ -2713,7 +2817,11 @@
         "Tzeentch",
         "Fluxmaster"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Pink Horrors", "Blue Horrors"],
+        "extra": ""
+      }
     },
     {
       "id": "6b7fccf5-1fe5-51e5-a673-3196ce719cb2",
@@ -3139,7 +3247,11 @@
         "Nurgle",
         "Horticulous Slimux"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Beasts of Nurgle"],
+        "extra": ""
+      }
     },
     {
       "id": "73ce7eb3-eba7-5b49-b445-2997882ce3b0",
@@ -3261,7 +3373,11 @@
         "Slaanesh",
         "Infernal Enrapturess"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Daemonettes"],
+        "extra": ""
+      }
     },
     {
       "id": "b6121698-cc24-5d82-9131-60726b8b49e7",
@@ -3488,7 +3604,11 @@
         "Khorne",
         "Karanak"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Flesh Hounds"],
+        "extra": ""
+      }
     },
     {
       "id": "5aaecdd2-4226-5150-aecb-fc3aaaae4e6b",
@@ -4128,7 +4248,7 @@
         "Horrors"
       ],
       "factions": ["Legiones Daemonica"],
-      "ledBy": ["Changecaster", "Fluxmaster"]
+      "leadBy": ["Changecaster", "Fluxmaster"]
     },
     {
       "id": "b214a7a1-f34e-5855-8c03-15953cef43bc",
@@ -4375,7 +4495,7 @@
         "Plaguebearers"
       ],
       "factions": ["Legiones Daemonica"],
-      "ledBy": [
+      "leadBy": [
         "Epidemius",
         "Poxbringer",
         "Sloppity Bilepiper",
@@ -4475,7 +4595,11 @@
         "Nurgle",
         "Poxbringer"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Plaguebearers"],
+        "extra": ""
+      }
     },
     {
       "id": "3cd09f82-fab8-5f13-9c09-940dffac6081",
@@ -4796,7 +4920,7 @@
       ],
       "keywords": ["Beast", "Fly", "Chaos", "Daemon", "Tzeentch", "Screamers"],
       "factions": ["Legiones Daemonica"],
-      "ledBy": ["Fateskimmer"]
+      "leadBy": ["Fateskimmer"]
     },
     {
       "id": "63f69a3c-0e96-56a8-ace9-5de1ce1f3834",
@@ -5617,7 +5741,11 @@
         "Khorne",
         "Skullmaster"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Bloodcrushers"],
+        "extra": ""
+      }
     },
     {
       "id": "b4d5c7ca-e189-5eb3-a9b4-f7d875684a64",
@@ -5712,7 +5840,11 @@
         "Khorne",
         "Skulltaker"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Bloodletters"],
+        "extra": ""
+      }
     },
     {
       "id": "b37ad4ff-c5b5-5030-85a9-6c37637459b5",
@@ -5806,7 +5938,11 @@
         "Nurgle",
         "Sloppity Bilepiper"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Plaguebearers"],
+        "extra": ""
+      }
     },
     {
       "id": "03ca041c-bfbd-5b28-a804-2f69d5238dcd",
@@ -6146,7 +6282,11 @@
         "Nurgle",
         "Spoilpox Scrivener"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Plaguebearers"],
+        "extra": ""
+      }
     },
     {
       "id": "1e8cc116-d5f4-5574-b069-865316656cb5",
@@ -6313,7 +6453,11 @@
         "Slaanesh",
         "Syll’esske"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Daemonettes"],
+        "extra": ""
+      }
     },
     {
       "id": "2883a92d-8f1a-5847-8cb5-e7bc961fc5e3",
@@ -6852,7 +6996,11 @@
         "Slaanesh",
         "Tranceweaver"
       ],
-      "factions": ["Legiones Daemonica"]
+      "factions": ["Legiones Daemonica"],
+      "leads": {
+        "units": ["Daemonettes"],
+        "extra": ""
+      }
     }
   ],
   "colours": {

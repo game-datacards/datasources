@@ -4,6 +4,86 @@
   "name": "Space Marines",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "ONLY IN DEATH DOES DUTY END",
+      "cost": 2,
+      "type": "Epic Deed",
+      "detachment": "Gladius Task Force",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Imminent death does not prevent a Space\nMarine from enacting his final justice\nupon the enemies of the Imperium.",
+      "when": "Fight phase, just after an enemy\nunit has selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit is destroyed, if\nthat model has not fought this phase, do\nnot remove it from play. The destroyed\nmodel can fight after the attacking\nmodel’s unit has finished making its\nattacks, and is then removed from play.",
+      "restrictions": ""
+    },
+    {
+      "name": "HONOUR THE CHAPTER",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Gladius Task Force",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Every Chapter has forged its own tales of\nheroism, and none of its battle-brothers\nwould see that noble record besmirched.",
+      "when": "Fight phase.",
+      "target": "One Adeptus Astartes unit from\nyour army.",
+      "effect": "Until the end of the phase, melee\nweapons equipped by models in your unit\nhave the [LANCE] ability. If your unit is\nunder the effects of the Assault Doctrine,\nuntil the end of the phase, improve the\nArmour Penetration characteristic of such\nweapons by 1 as well.",
+      "restrictions": ""
+    },
+    {
+      "name": "ARMOUR OF CONTEMPT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Gladius Task Force",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The belligerency of the Adeptus Astartes,\ncombined with their transhuman\nphysiology, makes them unyielding foes\nto face.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, worsen\nthe Armour Penetration characteristic of\nthat attack by 1.",
+      "restrictions": ""
+    },
+    {
+      "name": "ADAPTIVE STRATEGY",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Gladius Task Force",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "The tenets of the Codex Astartes allow for\nunorthodox use of combat tactics and\nthe employment of divergent strategic\ndoctrines if doing so will lead to victory.",
+      "when": "Your Command phase.",
+      "target": "One Adeptus Astartes unit from\nyour army.",
+      "effect": "Select the Devastator Doctrine,\nTactical Doctrine or Assault Doctrine. Until\nthe start of your next Command phase,\nthat Combat Doctrine is active for that unit\ninstead of any other Combat Doctrine that\nis active for your army, even if you have\nalready selected that doctrine this battle.",
+      "restrictions": ""
+    },
+    {
+      "name": "STORM OF FIRE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Gladius Task Force",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "There is no escaping the wrath of the\nSpace Marines, and they use their\nweapons to bring swift death to their foes\nwherever they may hide, expertly placing\ntheir shots to wreak maximum damage.",
+      "when": "Your Shooting phase.",
+      "target": "One Adeptus Astartes unit from\nyour army.",
+      "effect": "Until the end of the phase, ranged\nweapons equipped by models in your\nunit have the [IGNORES COVER] ability.\nIf your unit is under the effects of the\nDevastator Doctrine, until the end of the\nphase, improve the Armour Penetration\ncharacteristic of such weapons by 1\nas well.",
+      "restrictions": ""
+    },
+    {
+      "name": "SQUAD TACTICS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Gladius Task Force",
+      "turn": "opponents",
+      "phase": ["movement"],
+      "fluff": "Space Marines know precisely when\nto give ground in order to leave their\nenemies floundering, before surging back\ninto the fight and driving them from the\nfield in disarray.",
+      "when": "Your opponent’s Movement phase,\njust after an enemy unit ends a Normal,\nAdvance or Fall Back move.",
+      "target": "One Adeptus Astartes Infantry\nor Adeptus Astartes Mounted unit from\nyour army that is within 9\" of the enemy\nunit that just ended that move.",
+      "effect": "Your unit can make a Normal\nmove of up to D6\", or a Normal move of up\nto 6\" instead if it is under the effects of the\nTactical Doctrine.",
+      "restrictions": "You cannot select a unit\nthat is within Engagement Range of one or\nmore enemy units."
+    }
+  ],
   "enhancements": [
     {
       "name": "ADEPT OF THE CODEX",
@@ -474,7 +554,16 @@
         "Captain",
         "Adrax Agatone"
       ],
-      "factions": ["Adeptus Astartes", "Salamanders"]
+      "factions": ["Adeptus Astartes", "Salamanders"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "c9e75539-37ab-5990-a16a-952209ccad7a",
@@ -612,7 +701,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Gravis", "Aggressor Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Apothecary Biologis",
         "Captain In Gravis Armour",
         "Iron Father Feirros",
@@ -818,7 +907,15 @@
         "Terminator",
         "Ancient"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Squad",
+          "Terminator Assault Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "7af3435c-e3c2-5096-a4e8-45b5066d0e46",
@@ -928,7 +1025,15 @@
         "Gravis",
         "Apothecary Biologis"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "f17f9afa-b67f-54db-94eb-4e3b3cb3eee9",
@@ -1136,7 +1241,7 @@
         "Assault Intercessor Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Adrax Agatone",
         "Chief Librarian Tigurius",
         "Judiciar",
@@ -1434,7 +1539,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Assault Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain",
         "Captain Sicarius",
         "Chaplain",
@@ -1735,7 +1840,7 @@
         "Assault Squad with Jump Packs"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain With Jump Pack",
         "Chaplain With Jump Pack",
         "Kayvaan Shrike",
@@ -1907,7 +2012,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Astartes Servitors"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Primaris Techmarine", "Techmarine"]
+      "leadBy": ["Primaris Techmarine", "Techmarine"]
     },
     {
       "id": "743808c1-22b5-56a7-8ab2-1782a3ab6995",
@@ -2727,7 +2832,7 @@
       ],
       "keywords": ["Mounted", "Grenades", "Imperium", "Bike Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain On Bike", "Chaplain On Bike"]
+      "leadBy": ["Captain On Bike", "Chaplain On Bike"]
     },
     {
       "id": "01dd9844-2d3e-5c90-ad47-5da21d4dd9ff",
@@ -2838,7 +2943,11 @@
         "Tacticus",
         "Bladeguard Ancient"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Bladeguard Veteran Squad"],
+        "extra": "You can attach this model to the above unit even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "3a13a631-0ca2-5801-91bf-3ed7b2a524ab",
@@ -2996,7 +3105,7 @@
         "Bladeguard Veteran Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Bladeguard Ancient",
         "Judiciar",
         "Marneus Calgar",
@@ -3472,7 +3581,16 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Grenades", "Imperium", "Captain"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "6be6254a-af8a-51f6-a317-0405f91e6963",
@@ -3665,7 +3783,15 @@
         "Gravis",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "3bcd32e4-b4fe-5f5e-8bf4-dba4da3a48b6",
@@ -3792,7 +3918,18 @@
         "Phobos",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Eliminator Squad",
+          "Incursor Squad",
+          "Infiltrator Squad",
+          "Reiver Squad",
+          "Scout Squad",
+          "Scout Sniper Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "a61cd885-4d38-5de2-bcd7-d74522a8c9f8",
@@ -4004,7 +4141,15 @@
         "Terminator",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "b59a6260-99a9-5bbf-9cdd-6df93aea97e6",
@@ -4306,7 +4451,11 @@
         }
       ],
       "keywords": ["Mounted", "Character", "Grenades", "Imperium", "Captain"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Bike Squad", "Outrider Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "2ce922b0-d248-5152-bbc2-856ef8e49186",
@@ -4417,7 +4566,17 @@
         "Captain",
         "Sicarius"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Sternguard Veteran Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "dfaa283d-f1f4-55f4-b674-3715eda043c2",
@@ -4711,7 +4870,14 @@
         "Imperium",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Vanguard Veteran Squad with Jump Packs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "5689c57d-bec3-54f4-92dc-d5cca77534f0",
@@ -5288,7 +5454,16 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Grenades", "Imperium", "Chaplain"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "35a9d1d2-73bd-5f29-bf88-afd1782bad21",
@@ -5403,7 +5578,18 @@
         "Imperium",
         "Chaplain Cassius"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Sternguard Veteran Squad",
+          "Tactical Squad",
+          "Tyrannic War Veterans",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "30fe2cd6-9c34-59f5-910e-3f5fcbab2413",
@@ -5535,7 +5721,15 @@
         "Terminator",
         "Chaplain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "68e51be1-da54-5873-a47e-242434d86e04",
@@ -5655,7 +5849,11 @@
         }
       ],
       "keywords": ["Mounted", "Character", "Grenades", "Imperium", "Chaplain"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Bike Squad", "Outrider Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "d6954fe8-4a09-5f1e-b9cf-29de7e511081",
@@ -5911,7 +6109,14 @@
         "Imperium",
         "Chaplain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Vanguard Veteran Squad with Jump Packs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "aad0f52c-e204-5ddd-a9db-84b0a4707b2e",
@@ -6049,7 +6254,15 @@
         "Imperium",
         "Chief Librarian Tigurius"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "59dea85f-cc3f-5001-b591-3de575734304",
@@ -6365,7 +6578,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Command Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain",
         "Captain Sicarius",
         "Chaplain",
@@ -6601,7 +6814,15 @@
         "Captain",
         "Darnath Lysander"
       ],
-      "factions": ["Adeptus Astartes", "Imperial Fists"]
+      "factions": ["Adeptus Astartes", "Imperial Fists"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "89a5bc47-72bc-50c4-a6c0-7952a6d8fb41",
@@ -6778,7 +6999,11 @@
         "Desolation Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Primaris Ancient", "Primaris Apothecary", "Primaris Librarian"]
+      "leadBy": [
+        "Primaris Ancient",
+        "Primaris Apothecary",
+        "Primaris Librarian"
+      ]
     },
     {
       "id": "f715322f-e40b-5c04-bbee-e34a13203a6b",
@@ -7574,7 +7799,7 @@
         "Eliminator Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain In Phobos Armour", "Librarian In Phobos Armour"]
+      "leadBy": ["Captain In Phobos Armour", "Librarian In Phobos Armour"]
     },
     {
       "id": "b3a4b88e-2164-580c-8fb1-a5c6e4e8e62a",
@@ -7718,7 +7943,7 @@
         "Eradicator Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Apothecary Biologis",
         "Captain In Gravis Armour",
         "Iron Father Feirros",
@@ -8600,7 +8825,7 @@
         "Heavy Intercessor Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Apothecary Biologis",
         "Captain In Gravis Armour",
         "Iron Father Feirros",
@@ -8772,7 +8997,7 @@
         "Hellblaster Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Primaris Ancient",
         "Primaris Apothecary",
         "Primaris Captain",
@@ -9397,7 +9622,7 @@
         "Incursor Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain In Phobos Armour",
         "Librarian In Phobos Armour",
         "Lieutenant In Phobos Armour"
@@ -9527,7 +9752,7 @@
         "Infernus Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Adrax Agatone",
         "Judiciar",
         "Marneus Calgar",
@@ -9682,7 +9907,7 @@
         "Infiltrator Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain In Phobos Armour",
         "Librarian In Phobos Armour",
         "Lieutenant In Phobos Armour"
@@ -9951,7 +10176,7 @@
         "Intercessor Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Adrax Agatone",
         "Chief Librarian Tigurius",
         "Judiciar",
@@ -10438,7 +10663,15 @@
         "Gravis",
         "Iron Father Feirros"
       ],
-      "factions": ["Adeptus Astartes", "Iron Hands"]
+      "factions": ["Adeptus Astartes", "Iron Hands"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "62e97a7c-c4ae-54b9-9d0c-7cf1115ac7c6",
@@ -10757,7 +10990,17 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Imperium", "Tacticus", "Judiciar"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "54abfd41-d81e-5238-be09-db481da796ac",
@@ -10870,7 +11113,14 @@
         "Chapter Master",
         "Kayvaan Shrike"
       ],
-      "factions": ["Adeptus Astartes", "Raven Guard"]
+      "factions": ["Adeptus Astartes", "Raven Guard"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Vanguard Veteran Squad with Jump Packs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "990cf04d-3c9b-5891-8513-cc95e7a5ac0f",
@@ -10981,7 +11231,15 @@
         "Captain",
         "Kor’sarro Khan"
       ],
-      "factions": ["Adeptus Astartes", "White Scars"]
+      "factions": ["Adeptus Astartes", "White Scars"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "d63b5215-7378-55b6-b363-5d768a81474d",
@@ -12289,7 +12547,16 @@
         "Imperium",
         "Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "d2c541f2-7cc0-578b-b51e-46c647773ebe",
@@ -12428,7 +12695,16 @@
         "Phobos",
         "Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Eliminator Squad",
+          "Incursor Squad",
+          "Infiltrator Squad",
+          "Reiver Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "2253b01e-9a65-551b-b690-50a460cedced",
@@ -12588,7 +12864,15 @@
         "Terminator",
         "Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "7c3e0867-fcf7-5e57-8b7d-1f6fa74b9754",
@@ -12857,7 +13141,14 @@
         "Imperium",
         "Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Vanguard Veteran Squad with Jump Packs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "206eeab4-32a1-57f3-99bf-d1d8e96cef39",
@@ -13165,7 +13456,16 @@
         "Imperium",
         "Lieutenant"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "0141d981-5ebf-54d1-bbf8-20e83757a8e1",
@@ -13292,7 +13592,11 @@
         "Phobos",
         "Lieutenant"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Incursor Squad", "Infiltrator Squad", "Reiver Squad"],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "823f24d9-9549-557f-844a-564d44db7951",
@@ -13404,7 +13708,11 @@
         "Phobos",
         "Lieutenant in Reiver Armour"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Reiver Squad"],
+        "extra": "You can attach this model to the above unit even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "fff1718a-d5f7-56d5-82a0-7188d027a3f1",
@@ -13680,7 +13988,20 @@
         "Chapter Master",
         "Marneus Calgar"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "7a701c86-8b99-5ef2-94a7-15e3cb64e34a",
@@ -13866,7 +14187,7 @@
       ],
       "keywords": ["Mounted", "Grenades", "Imperium", "Outrider Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain On Bike", "Chaplain On Bike"]
+      "leadBy": ["Captain On Bike", "Chaplain On Bike"]
     },
     {
       "id": "a5466eb5-f937-5880-bdb0-43b0ce3cbce6",
@@ -13985,7 +14306,15 @@
         "Chapter Master",
         "Pedro Kantor"
       ],
-      "factions": ["Adeptus Astartes", "Imperial Fists"]
+      "factions": ["Adeptus Astartes", "Imperial Fists"],
+      "leads": {
+        "units": [
+          "Command Squad",
+          "Sternguard Veteran Squad",
+          "Tactical Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "ae8823f4-1e44-58db-a791-de6260571359",
@@ -14462,7 +14791,18 @@
         "Tacticus",
         "Primaris Ancient"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad",
+          "Desolation Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "2162d470-0f65-5dbd-8ce1-8daab106ecfd",
@@ -14589,7 +14929,18 @@
         "Tacticus",
         "Primaris Apothecary"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Desolation Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "16f27cd6-dea9-5e95-89be-c86367865115",
@@ -14802,7 +15153,18 @@
         "Primaris",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": "This model cannot be attached to a Bladeguard Veteran Squad unless it is equipped with a relic shield, and cannot be attached to a Hellblaster Squad unless it is equipped with a plasma pistol."
+      }
     },
     {
       "id": "2bc45778-d185-5f3d-85e8-22dcb6c9e0d7",
@@ -14913,7 +15275,18 @@
         "Tacticus",
         "Primaris Chaplain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "d8a18490-faa0-56d6-a47a-e3a439e805b4",
@@ -15024,7 +15397,17 @@
         "Tacticus",
         "Primaris Company Champion"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "c8191307-5675-5725-a8d5-2f8435370f9d",
@@ -15163,7 +15546,18 @@
         "Tacticus",
         "Primaris Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Desolation Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "f0933f21-2018-5243-b5b8-3f1b46be1b90",
@@ -15393,7 +15787,18 @@
         "Tacticus",
         "Primaris Lieutenant"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "040aad89-8de4-5c5d-aea9-132cbfa465d3",
@@ -15542,7 +15947,15 @@
         "Tacticus",
         "Primaris Techmarine"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Astartes Servitors",
+          "Intercessor Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "270018ea-69b6-553f-976f-7dff195a88bf",
@@ -16092,7 +16505,7 @@
         "Reiver Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain In Phobos Armour",
         "Librarian In Phobos Armour",
         "Lieutenant In Phobos Armour",
@@ -16343,7 +16756,7 @@
         "Relic Terminator Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Ancient In Terminator Armour",
         "Captain In Terminator Armour",
         "Chaplain In Terminator Armour",
@@ -17496,7 +17909,7 @@
         "Scout Sniper Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain In Phobos Armour", "Sergeant Telion"]
+      "leadBy": ["Captain In Phobos Armour", "Sergeant Telion"]
     },
     {
       "id": "5c07fa81-89e6-54aa-acbc-3e4499579637",
@@ -17759,7 +18172,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Smoke", "Imperium", "Scout Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain In Phobos Armour", "Sergeant Telion"]
+      "leadBy": ["Captain In Phobos Armour", "Sergeant Telion"]
     },
     {
       "id": "50d536da-a4fc-5e03-a1ea-149d966905b3",
@@ -18002,7 +18415,11 @@
         "Imperium",
         "Sergeant Telion"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": ["Scout Squad", "Scout Sniper Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "fd140c7e-4195-5892-b169-4d2426bc64ad",
@@ -18308,7 +18725,7 @@
         "Sternguard veteran Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Adrax Agatone",
         "Captain Sicarius",
         "Chaplain Cassius",
@@ -19740,7 +20157,7 @@
         "Tactical Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain",
         "Captain Sicarius",
         "Chaplain",
@@ -20057,7 +20474,11 @@
         "Imperium",
         "Techmarine"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Astartes Servitors", "Tactical Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "f995c048-454a-5054-82bf-d3eca07582d6",
@@ -20183,7 +20604,7 @@
         "Terminator Assault Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Ancient In Terminator Armour",
         "Captain In Terminator Armour",
         "Chaplain In Terminator Armour",
@@ -20393,7 +20814,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Terminator", "Terminator Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Ancient In Terminator Armour",
         "Captain In Terminator Armour",
         "Chaplain In Terminator Armour",
@@ -20859,7 +21280,15 @@
         "Captain",
         "Tor Garadon"
       ],
-      "factions": ["Adeptus Astartes", "Imperial Fists"]
+      "factions": ["Adeptus Astartes", "Imperial Fists"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "f2c7620f-cfbb-5a3f-92e8-f25d72264657",
@@ -20974,7 +21403,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Tyrannic War Veterans"],
       "factions": ["Adeptus Astartes", "Ultramarines"],
-      "ledBy": ["Chaplain Cassius"]
+      "leadBy": ["Chaplain Cassius"]
     },
     {
       "id": "896d350b-6346-59b7-941d-7164cdb4cf36",
@@ -21101,7 +21530,15 @@
         "Captain",
         "Uriel Ventris"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "d818ad4a-fd8b-5b29-8416-c0d0ad2d759b",
@@ -21294,7 +21731,7 @@
         "Vanguard Veteran Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain",
         "Captain Sicarius",
         "Chaplain",
@@ -21499,7 +21936,7 @@
         "Vanguard Veteran Squad with Jump Packs"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain With Jump Pack",
         "Chaplain With Jump Pack",
         "Kayvaan Shrike",
@@ -21765,7 +22202,16 @@
         "Captain",
         "Vulkan He’stan"
       ],
-      "factions": ["Adeptus Astartes", "Salamanders"]
+      "factions": ["Adeptus Astartes", "Salamanders"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Infernus Squad",
+          "Tactical Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "82cf4278-37e8-5c09-8c97-b795d77f3667",

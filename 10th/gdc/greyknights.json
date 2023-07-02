@@ -4,6 +4,86 @@
   "name": "Grey Knights",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "RADIANT STRIKE",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Teleport Strike Force",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Psychic fire rimes the blades of the Grey\nKnights as they charge at the foe, fanned\nby their battle fury. At the moment of\ncontact, the empyric charge is unleashed\nin a blast of azure light.",
+      "when": "Fight phase.",
+      "target": "One Grey Knights Psyker unit\nfrom your army.",
+      "effect": "Until the end of the phase, melee\nweapons equipped by models in your unit\nwith the [PSYCHIC] ability also have the\n[DEVASTATING WOUNDS] ability.",
+      "restrictions": ""
+    },
+    {
+      "name": "PROGNISTICATED ARRIVAL",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Teleport Strike Force",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "Accessing a vision granted by the\nChapter’s Prognosticars, the Grey\nKnights perceive the hidden ways of the\nbattlefield and a sliver of the enemy’s\nintentions, granting them a prophetic\nsituational awareness that aids their\nstrategic disposition.",
+      "when": "Your Movement phase.",
+      "target": "One Grey Knights Psyker unit\nfrom your army that is arriving using the\nDeep Strike or Teleport Assault abilities\nthis phase.",
+      "effect": "Your unit can be set up anywhere\non the battlefield that is more than 3\"\nhorizontally away from all enemy models.\nRESTRICTIONS: A unit targeted by this\nStratagem is not eligible to declare a\ncharge in the same turn.",
+      "restrictions": ""
+    },
+    {
+      "name": "DEATH FROM THE WARP",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Teleport Strike Force",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "Utilising their warp-attuned senses during\nthe timeless instant of teleportation, Grey\nKnights know exactly where the enemy\nare before they arrive. They emerge\nfrom the blinding flare of warp energies\nalready firing.",
+      "when": "Your Movement phase.",
+      "target": "One Grey Knights Psyker unit\nfrom your army that either Advanced this\nturn or arrived using the Deep Strike or\nTeleport Assault abilities this turn.",
+      "effect": "Until the end of the phase, ranged\nweapons equipped by models in your unit\nhave the [ASSAULT] ability and each time\na model in your unit makes an attack, add\n1 to the Hit roll. ",
+      "restrictions": ""
+    },
+    {
+      "name": "HALOED IN SOULFIRE",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Teleport Strike Force",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "The blazing glare of ancient technology\nand the shrouding coils of the\nimmaterium often linger, obscuring the\nGrey Knights’ presence.",
+      "when": "Your Movement phase.",
+      "target": "One Grey Knights Psyker unit\nfrom your army that is arriving using the\nDeep Strike or Teleport Assault abilities\nthis phase.",
+      "effect": "Until the start of your next\nMovement phase, your unit cannot be\ntargeted by ranged attacks unless the\nattacking model is within 12\". ",
+      "restrictions": ""
+    },
+    {
+      "name": "MISTS OF DEIMOS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Teleport Strike Force",
+      "turn": "opponents",
+      "phase": ["movement"],
+      "fluff": "When the enemy closes in, the Grey\nKnights wreathe themselves in psychic\nmists to confound the foe while they\nreposition until the time is ready to launch\na counter-blow.",
+      "when": "Your opponent’s Movement phase,\njust after an enemy unit ends a Normal,\nAdvance or Fall Back move.",
+      "target": "One Grey Knights Psyker unit\nfrom your army that is within 9\" of that\nenemy unit.",
+      "effect": "Your unit can make a Normal\nmove of up to 6\" as if it were your\nMovement phase or, if it has the Deep\nStrike ability, it can be placed into\nStrategic Reserves.",
+      "restrictions": "You cannot select a unit\nthat is within Engagement Range of one or\nmore enemy units."
+    },
+    {
+      "name": "TRUESILVER ARMOUR",
+      "cost": 1,
+      "type": "Wargear",
+      "detachment": "Teleport Strike Force",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "Grey Knights battle plate incorporates\nlitanies of purity, strands of sanctified\nsilver and other sacred wards, whose\ndefences can be further empowered by\nritual mantras.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Grey Knights unit from your\narmy that was selected as the target of\none or more of that enemy unit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, worsen\nthe Armour Penetration characteristic of\nthat attack by 1.",
+      "restrictions": ""
+    }
+  ],
   "enhancements": [
     {
       "name": "First to the Fray",
@@ -194,7 +274,11 @@
         "Imperium",
         "Brother-Captain"
       ],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Brotherhood Terminator Squad", "Paladin Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "29dae550-63b2-50fa-9176-d68af9541d34",
@@ -306,7 +390,11 @@
         "Terminator",
         "Brother-Captain Stern"
       ],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Brotherhood Terminator Squad", "Paladin Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "116708b0-8e85-502e-bade-efc6cffe2251",
@@ -416,7 +504,11 @@
         "Imperium",
         "Brotherhood Champion"
       ],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Purgation Squad", "Strike Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "a196334f-705a-5c01-939c-29532382942a",
@@ -527,7 +619,11 @@
         "Imperium",
         "Brotherhood Chaplain"
       ],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Brotherhood Terminator Squad", "Paladin Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "ed58e505-b825-5724-83a6-a0271413d051",
@@ -680,7 +776,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Terminator", "Psyker", "Imperium"],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Brotherhood Terminator Squad", "Paladin Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "eeb060e8-3807-55c1-a07d-c836e0cd370d",
@@ -871,7 +971,11 @@
         "Imperium",
         "Brotherhood Techmarine"
       ],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Servitors", "Strike Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "09b7e6e4-9a1c-5fa8-bcd2-119f1feda5fe",
@@ -1048,7 +1152,7 @@
         "Brotherhood Terminator Squad"
       ],
       "factions": ["Grey Knights"],
-      "ledBy": [
+      "leadBy": [
         "Brother-captain",
         "Brother-captain Stern",
         "Brotherhood Chaplain",
@@ -1183,7 +1287,11 @@
         "Imperium",
         "Castellan Crowe"
       ],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Purifier Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "f29aef55-8607-5cfb-8bac-1d235c1ca41a",
@@ -1345,7 +1453,11 @@
         "Imperium",
         "Grand Master"
       ],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Brotherhood Terminator Squad", "Paladin Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "cf718708-be2e-50fc-80e7-4da3f6637da3",
@@ -1646,7 +1758,11 @@
         "Imperium",
         "Grand Master Voldus"
       ],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Brotherhood Terminator Squad", "Paladin Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "689e1001-9d6b-5dd2-a513-9346daaf23b4",
@@ -3814,7 +3930,11 @@
         "Imperium",
         "Kaldor Draigo"
       ],
-      "factions": ["Grey Knights"]
+      "factions": ["Grey Knights"],
+      "leads": {
+        "units": ["Brotherhood Terminator Squad", "Paladin Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "3c7a2d6a-ccc8-5bfc-855e-79dbcff9a034",
@@ -4338,7 +4458,7 @@
         "Paladin Squad"
       ],
       "factions": ["Grey Knights"],
-      "ledBy": [
+      "leadBy": [
         "Brother-captain",
         "Brother-captain Stern",
         "Brotherhood Chaplain",
@@ -4522,7 +4642,7 @@
         "Purgation Squad"
       ],
       "factions": ["Grey Knights"],
-      "ledBy": ["Brotherhood Champion"]
+      "leadBy": ["Brotherhood Champion"]
     },
     {
       "id": "d10cbe49-479b-5d84-b030-e7a1ed0bcfb0",
@@ -4714,7 +4834,7 @@
         "Purifier Squad"
       ],
       "factions": ["Grey Knights"],
-      "ledBy": ["Castellan Crowe"]
+      "leadBy": ["Castellan Crowe"]
     },
     {
       "id": "98f32d4e-f2e4-5b8a-a274-bf31c4467a77",
@@ -4892,7 +5012,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Servitors"],
       "factions": ["Grey Knights"],
-      "ledBy": ["Brotherhood Techmarine"]
+      "leadBy": ["Brotherhood Techmarine"]
     },
     {
       "id": "c5e2fdc0-70ae-50af-907a-6c8c4714c95b",
@@ -5069,7 +5189,7 @@
         "Strike Squad"
       ],
       "factions": ["Grey Knights"],
-      "ledBy": ["Brotherhood Champion", "Brotherhood Techmarine"]
+      "leadBy": ["Brotherhood Champion", "Brotherhood Techmarine"]
     }
   ],
   "colours": {
