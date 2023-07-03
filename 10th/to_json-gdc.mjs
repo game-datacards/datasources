@@ -866,7 +866,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
       name: factionName,
       is_subfaction: false,
       parent_id: '',
-      stratagems: data[outputFile].map((val) => {
+      stratagems: data[outputFile]?.map((val) => {
         return { ...val, id: uuidv5(val.name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e') };
       }),
       enhancements: enhancement?.enhancements,

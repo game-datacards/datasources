@@ -17,7 +17,7 @@ import greyknights from './greyknights.mjs';
 import gsc from './gsc.mjs';
 import imperialknights from './imperialknights.mjs';
 import necrons from './necrons.mjs';
-import orcs from './orcs.mjs';
+import orks from './orks.mjs';
 import space_marines from './space_marines.mjs';
 import spacewolves from './spacewolves.mjs';
 import tau from './tau.mjs';
@@ -47,7 +47,7 @@ const data = {
   gsc,
   imperialknights,
   necrons,
-  orcs,
+  orks,
   space_marines,
   spacewolves,
   tau,
