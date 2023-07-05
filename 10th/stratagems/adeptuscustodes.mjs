@@ -66,7 +66,7 @@ unit has the Fights First ability.`,
   restrictions: ``
 },{
   name: 'ARCANE GENETIC ALCHEMY',
-  cost: 1,
+  cost: 2,
   type: TYPE['Battle Tactic'],
   detachment,
   turn: TURN.either,
