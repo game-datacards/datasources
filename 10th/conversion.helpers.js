@@ -167,6 +167,7 @@ const getUnitLoadout = (lines) => {
     'JUMP PACKS',
     'SPEED FREEKS MOB',
     'COMPACT',
+    'SECUTARII',
   ];
 
   let value = '';
@@ -226,6 +227,7 @@ const getLeader = (lines) => {
       line.includes('JUMP PACKS') ||
       line.includes('SPEED FREEKS MOB') ||
       line.includes('COMPACT') ||
+      line.includes('SECUTARII') ||
       line.includes('JETBIKE OUTRIDERS')
     ) {
       break;
@@ -353,7 +355,7 @@ const getStartOfBlockList = (lines, blockList) => {
 
 const getWeaponEndline = (lines) => {
   for (const [index, line] of lines.entries()) {
-    if (line.includes('KEYWORDS:') || line.includes('KEYWORDS –')) {
+    if (line.includes('KEYWORDS:') || line.includes('KEYWORDS –') || line.includes('Before selecting targets')) {
       return index;
     }
   }
@@ -525,6 +527,7 @@ const getSpecialAbilities = (lines) => {
     'JUMP PACKS',
     'SPEED FREEKS MOB',
     'COMPACT',
+    'SECUTARII',
   ];
 
   let ability = { name: '', description: '' };
@@ -636,6 +639,1181 @@ const checkForManualFixes = (unit) => {
         showAbility: true,
         showDescription: true,
       };
+      break;
+    case 'Skull Altar':
+      unit.keywords = ['Fortification', 'Chaos', 'Daemon', 'Khorne', 'Skull Altar'];
+      break;
+    case 'Tiger Shark':
+      unit.rangedWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Burst cannon',
+              keywords: [],
+              range: '18"',
+              attacks: '4',
+              skill: '4+',
+              strength: '5',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Ion cannon – standard',
+              keywords: ['blast'],
+              range: '60"',
+              attacks: 'D6+3',
+              skill: '4+',
+              strength: '7',
+              ap: '-1',
+              damage: '2',
+            },
+            {
+              active: true,
+              name: 'Ion cannon – overcharge',
+              keywords: ['blast', 'hazardous'],
+              range: '60"',
+              attacks: 'D6+3',
+              skill: '4+',
+              strength: '8',
+              ap: '-2',
+              damage: '3',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Missile pod',
+              keywords: [],
+              range: '30"',
+              attacks: '2',
+              skill: '4+',
+              strength: '7',
+              ap: '-1',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Seeker missile',
+              keywords: ['one shot'],
+              range: '48"',
+              attacks: '1',
+              skill: '4+',
+              strength: '14',
+              ap: '-3',
+              damage: 'D6+1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Skyspear missile rack',
+              keywords: ['anti-fly 3+', 'blast'],
+              range: '72"',
+              attacks: 'D6+1',
+              skill: '4+',
+              strength: '6',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Swiftstrike burst cannon',
+              keywords: [],
+              range: '36"',
+              attacks: '16',
+              skill: '4+',
+              strength: '6',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Swiftstrike railgun',
+              keywords: ['devastating wounds'],
+              range: '72"',
+              attacks: '1',
+              skill: '4+',
+              strength: '20',
+              ap: '-5',
+              damage: 'D6+6',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Manta':
+      unit.rangedWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Heavy rail cannon',
+              keywords: ['devastating wounds'],
+              range: '120"',
+              attacks: '1',
+              skill: '4+',
+              strength: '26',
+              ap: '-5',
+              damage: '12',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Ion cannon – standard',
+              keywords: ['blast'],
+              range: '60"',
+              attacks: 'D6+3',
+              skill: '4+',
+              strength: '7',
+              ap: '-1',
+              damage: '2',
+            },
+            {
+              active: true,
+              name: 'Ion cannon – overcharge',
+              keywords: ['blast', 'hazardous'],
+              range: '60"',
+              attacks: 'D6+3',
+              skill: '4+',
+              strength: '8',
+              ap: '-2',
+              damage: '3',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Long-barrelled burst cannon array',
+              keywords: [],
+              range: '24"',
+              attacks: '32',
+              skill: '4+',
+              strength: '6',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Missile pod',
+              keywords: [],
+              range: '30"',
+              attacks: '2',
+              skill: '4+',
+              strength: '7',
+              ap: '-1',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Seeker missile',
+              keywords: ['one shot'],
+              range: '48"',
+              attacks: '1',
+              skill: '4+',
+              strength: '14',
+              ap: '-3',
+              damage: 'D6+1',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Aun’va':
+      unit.keywords = ['ALL MODELS:', 'Infantry', "AUN'VA:", 'Character', 'Epic Hero', 'Ethereal', "Aun'Va"];
+      break;
+    case 'Space Wolves Venerable Dreadnought':
+      unit.meleeWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Close combat weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '5',
+              skill: '3+',
+              strength: '6',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Dreadnought combat weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '5',
+              skill: '3+',
+              strength: '12',
+              ap: '-2',
+              damage: '3',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Fenrisian great axe – strike',
+              keywords: [],
+              range: 'Melee',
+              attacks: '5',
+              skill: '3+',
+              strength: '10',
+              ap: '-2',
+              damage: 'D6+1',
+            },
+            {
+              active: true,
+              name: 'Fenrisian great axe – sweep',
+              keywords: [],
+              range: 'Melee',
+              attacks: '10',
+              skill: '3+',
+              strength: '6',
+              ap: '-2',
+              damage: '1',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Wolf Scouts':
+      unit.meleeWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Astartes chainsword',
+              keywords: [],
+              range: 'Melee',
+              attacks: '4',
+              skill: '3+',
+              strength: '4',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Close combat weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '2',
+              skill: '3+',
+              strength: '4',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Combat knife',
+              keywords: [],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '5',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Power fist',
+              keywords: [],
+              range: 'Melee',
+              attacks: '2',
+              skill: '3+',
+              strength: '8',
+              ap: '-2',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Power weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '5',
+              ap: '-2',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Thunder hammer',
+              keywords: ['devastating wounds'],
+              range: 'Melee',
+              attacks: '2',
+              skill: '4+',
+              strength: '8',
+              ap: '-2',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Twin lightning claws',
+              keywords: ['twin-linked'],
+              range: 'Melee',
+              attacks: '4',
+              skill: '3+',
+              strength: '5',
+              ap: '-2',
+              damage: '1',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Long Fangs':
+      unit.meleeWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Astartes chainsword',
+              keywords: [],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '4',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Close combat weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '2',
+              skill: '3+',
+              strength: '4',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Power fist',
+              keywords: [],
+              range: 'Melee',
+              attacks: '2',
+              skill: '3+',
+              strength: '8',
+              ap: '-2',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Power weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '2',
+              skill: '3+',
+              strength: '5',
+              ap: '-2',
+              damage: '1',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Hunta Rig':
+      unit.meleeWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Butcha boyz',
+              keywords: ['extra attacks', 'anti-monster 4+', 'anti-vehicle 4+'],
+              range: 'Melee',
+              attacks: '4',
+              skill: '3+',
+              strength: '5',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Savage horns and hooves',
+              keywords: ['extra attacks', 'lance'],
+              range: 'Melee',
+              attacks: '4',
+              skill: '4+',
+              strength: '8',
+              ap: '-1',
+              damage: '3',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Saw blades',
+              keywords: [],
+              range: 'Melee',
+              attacks: '6',
+              skill: '3+',
+              strength: '10',
+              ap: '-1',
+              damage: '2',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Mek Gunz':
+      unit.meleeWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Grot crew',
+              keywords: [],
+              range: 'Melee',
+              attacks: '6',
+              skill: '5+',
+              strength: '2',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Razorwing Jetfighter':
+      unit.rangedWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Dark Lance',
+              keywords: [],
+              range: '36"',
+              attacks: '1',
+              skill: '3+',
+              strength: '12',
+              ap: '-3',
+              damage: 'D6+2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Disintegrator',
+              keywords: [],
+              range: '36"',
+              attacks: '3',
+              skill: '3+',
+              strength: '5',
+              ap: '-2',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Razorwing missiles – monoscythe missiles',
+              keywords: ['blast'],
+              range: '48"',
+              attacks: 'D6',
+              skill: '3+',
+              strength: '6',
+              ap: '-1',
+              damage: '2',
+            },
+            {
+              active: true,
+              name: 'Razorwing missiles – nuerotoxin missiles',
+              keywords: ['anti-infantry 2+', 'blast'],
+              range: '48"',
+              attacks: 'D6+3',
+              skill: '3+',
+              strength: '2',
+              ap: '0',
+              damage: '1',
+            },
+            {
+              active: true,
+              name: 'Razorwing missiles – shatterfield missiles',
+              keywords: ['blast'],
+              range: '48"',
+              attacks: 'D6',
+              skill: '3+',
+              strength: '7',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Twin splinter rifle',
+              keywords: ['anti-infantry 3+', 'assault', 'rapid fire 1', 'twin-linked'],
+              range: '24"',
+              attacks: '1',
+              skill: '3+',
+              strength: '2',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Splinter cannon',
+              keywords: ['anti-infantry 3+', 'sustained hits 1'],
+              range: '36"',
+              attacks: '3',
+              skill: '3+',
+              strength: '3',
+              ap: '-1',
+              damage: '2',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Incubi':
+      unit.stats = [
+        {
+          m: '7"',
+          t: '3',
+          sv: '3+',
+          w: '1',
+          ld: '6+',
+          oc: '1',
+          name: 'Incubi',
+          showDamagedMarker: false,
+          showName: false,
+          active: true,
+        },
+        {
+          m: '7"',
+          t: '3',
+          sv: '3+',
+          w: '2',
+          ld: '6+',
+          oc: '1',
+          name: 'KLAIVEX',
+          showDamagedMarker: false,
+          showName: true,
+          active: true,
+        },
+      ];
+      break;
+    case 'Feculent Gnarlmaw':
+      unit.keywords = ['Fortification', 'Chaos', 'Daemon', 'Nurgle', 'Feculent Gnarlmaw'];
+      break;
+    case 'Great Unclean One':
+      unit.abilities.other = [
+        ...unit.abilities.other,
+        {
+          name: 'Reverberating Summons',
+          description:
+            'Each time a model is destroyed by this weapon, you can select one friendly Plaguebearers unit within 12" of the bearer and return 1 destroyed Plaguebearer model to that unit.',
+          showAbility: true,
+          showDescription: true,
+        },
+      ];
+      unit.meleeWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Bileblade',
+              keywords: ['extra attacks', 'lethal hits'],
+              range: 'Melee',
+              attacks: '3',
+              skill: '2+',
+              strength: '6',
+              ap: '-2',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Bilesword – strike',
+              keywords: ['lethal hits'],
+              range: 'Melee',
+              attacks: '6',
+              skill: '2+',
+              strength: '8',
+              ap: '-2',
+              damage: 'D6',
+            },
+            {
+              active: true,
+              name: 'Bilesword – sweep',
+              keywords: ['lethal hits'],
+              range: 'Melee',
+              attacks: '12',
+              skill: '2+',
+              strength: '6',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Doomsday bell',
+              keywords: ['lethal hits', 'reverberating summons'],
+              range: 'Melee',
+              attacks: '6',
+              skill: '2+',
+              strength: '7',
+              ap: '-1',
+              damage: '2',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Regimental Attachés':
+      unit.keywords = ['ALL MODELS:', 'Infantry', 'Imperium', 'Regimental Attachés', 'ASTROPATH:', 'Psyker'];
+      break;
+    case 'Indomitor Kill Team':
+      unit.meleeWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Close combat weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '4',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Power fists',
+              keywords: ['twin-linked'],
+              range: 'Melee',
+              attacks: '3',
+              skill: '4+',
+              strength: '8',
+              ap: '-2',
+              damage: '2',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Fabius Bile':
+      unit.keywords = [
+        'ALL MODELS:',
+        'Infantry',
+        'Chaos',
+        'Chaos Undivided',
+        'FABIUS BILE ONLY:',
+        'Character',
+        'Epic Hero',
+        'Fabius Bile',
+      ];
+      break;
+    case 'Haarken Worldclaimer':
+      unit.keywords = [
+        'Infantry',
+        'Character',
+        'Epic Hero',
+        'Fly',
+        'Jump Pack',
+        'Chaos',
+        'Chaos Undivided',
+        'Haarken Worldclaimer',
+      ];
+      break;
+    case 'Crusader Squad':
+      unit.meleeWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Astartes chainsword',
+              keywords: [],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '4',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Combat knife',
+              keywords: [],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '4',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Close combat weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '2',
+              skill: '3+',
+              strength: '4',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Power fist',
+              keywords: [],
+              range: 'Melee',
+              attacks: '2',
+              skill: '3+',
+              strength: '8',
+              ap: '-2',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Power weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '5',
+              ap: '-2',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Thunder hammer',
+              keywords: ['devastating wounds'],
+              range: 'Melee',
+              attacks: '2',
+              skill: '4+',
+              strength: '8',
+              ap: '-2',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Twin lightning claws',
+              keywords: ['twin-linked'],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '5',
+              ap: '-2',
+              damage: '1',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Gaunt’s Ghosts':
+      unit.keywords = [
+        'ALL MODELS:',
+        'Infantry',
+        'Imperium',
+        'Grenades',
+        'Gaunt’s Ghosts',
+        'IBRAM GAUNT:',
+        'Character',
+        'Epic Hero',
+        'Officer',
+      ];
+      break;
+    case 'Wyvern':
+      unit.rangedWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Heavy bolter',
+              keywords: ['sustained hits 1'],
+              range: '36"',
+              attacks: '3',
+              skill: '4+',
+              strength: '5',
+              ap: '-1',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Heavy flamer',
+              keywords: ['ignores cover', 'torrent'],
+              range: '12"',
+              attacks: 'D6',
+              skill: 'N/A',
+              strength: '5',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Hunter-killer missile',
+              keywords: ['one shot'],
+              range: '48"',
+              attacks: '1',
+              skill: '4+',
+              strength: '14',
+              ap: '-3',
+              damage: 'D6',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Wyvern quad stormshard mortar',
+              keywords: ['blast', 'ignores cover', 'heavy', 'indirect fire', 'twin-linked'],
+              range: '48"',
+              attacks: '2D6',
+              skill: '4+',
+              strength: '5',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Fire Prism':
+      unit.rangedWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Prism cannon – dispersed pulse',
+              keywords: ['blast'],
+              range: '60"',
+              attacks: '2D6',
+              skill: '3+',
+              strength: '6',
+              ap: '-1',
+              damage: '2',
+            },
+            {
+              active: true,
+              name: 'Prism cannon – focused lances',
+              keywords: ['linked fire'],
+              range: '60"',
+              attacks: '2',
+              skill: '3+',
+              strength: '18',
+              ap: '-4',
+              damage: '6',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Shuriken cannon',
+              keywords: ['sustained hits 1'],
+              range: '24"',
+              attacks: '3',
+              skill: '3+',
+              strength: '6',
+              ap: '-1',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Twin shuriken catapult',
+              keywords: ['assault', 'twin-linked'],
+              range: '18"',
+              attacks: '2',
+              skill: '3+',
+              strength: '4',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+      ];
+      break;
+    case 'Canoness':
+      unit.rangedWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Bolt pistol',
+              keywords: ['pistol'],
+              range: '12"',
+              attacks: '1',
+              skill: '2+',
+              strength: '4',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Brazier of holy fire',
+              keywords: ['ignores cover', 'one shot', 'torrent'],
+              range: '12"',
+              attacks: 'D6',
+              skill: 'N/A',
+              strength: '6',
+              ap: '-1',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Condemnor boltgun',
+              keywords: ['anti-psyker 2+', 'devastating wounds', 'precision', 'rapid fire 1'],
+              range: '24"',
+              attacks: '1',
+              skill: '2+',
+              strength: '4',
+              ap: '0',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Inferno pistol',
+              keywords: ['melta 2', 'pistol'],
+              range: '6"',
+              attacks: '1',
+              skill: '2+',
+              strength: '8',
+              ap: '-4',
+              damage: 'D3',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Plasma pistol – standard',
+              keywords: ['pistol'],
+              range: '12"',
+              attacks: '1',
+              skill: '2+',
+              strength: '7',
+              ap: '-2',
+              damage: '1',
+            },
+            {
+              active: true,
+              name: 'Plasma pistol – supercharge',
+              keywords: ['hazardous', 'pistol'],
+              range: '12"',
+              attacks: '1',
+              skill: '2+',
+              strength: '8',
+              ap: '-3',
+              damage: '2',
+            },
+          ],
+        },
+      ];
       break;
     case 'Zodgrod Wortsnagga':
       unit.abilities.other = [
@@ -854,6 +2032,104 @@ const checkForManualFixes = (unit) => {
           name: 'KILL TEAM BIKER',
           active: true,
           showName: true,
+        },
+      ];
+      unit.meleeWeapons = [
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Artificer crozius',
+              keywords: [],
+              range: 'Melee',
+              attacks: '5',
+              skill: '2+',
+              strength: '6',
+              ap: '-1',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Close combat weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '5',
+              ap: '-2',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Force weapon',
+              keywords: ['psychic'],
+              range: 'Melee',
+              attacks: '5',
+              skill: '2+',
+              strength: '5',
+              ap: '-3',
+              damage: 'D3',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Long Vigil melee weapon',
+              keywords: [],
+              range: 'Melee',
+              attacks: '4',
+              skill: '3+',
+              strength: '4',
+              ap: '-1',
+              damage: '1',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Power fist',
+              keywords: [],
+              range: 'Melee',
+              attacks: '3',
+              skill: '3+',
+              strength: '8',
+              ap: '-2',
+              damage: '2',
+            },
+          ],
+        },
+        {
+          active: true,
+          profiles: [
+            {
+              active: true,
+              name: 'Twin lightning claws',
+              keywords: ['twin-linked'],
+              range: 'Melee',
+              attacks: '4',
+              skill: '3+',
+              strength: '5',
+              ap: '-2',
+              damage: '1',
+            },
+          ],
         },
       ];
       break;
@@ -1332,69 +2608,6 @@ const checkForManualFixes = (unit) => {
         keywords: ['Infantry', 'Grenades', 'Character', 'Epic Hero', 'Imperium', 'Triumph of Saint Katherine'],
         factions: ['Adepta Sororitas'],
       };
-      break;
-    case 'Fire Prism':
-      unit.rangedWeapons = [
-        {
-          active: true,
-          profiles: [
-            {
-              active: true,
-              name: 'Prism cannon – dispersed pulse',
-              keywords: ['blast'],
-              range: '60"',
-              attacks: '2D6',
-              skill: '3+',
-              strength: '6',
-              ap: '-1',
-              damage: '2',
-            },
-            {
-              active: true,
-              name: 'Prism cannon – focused lances',
-              keywords: ['linked fire'],
-              range: '60"',
-              attacks: '2D6',
-              skill: '3+',
-              strength: '6',
-              ap: '-1',
-              damage: '2',
-            },
-          ],
-        },
-        {
-          active: true,
-          profiles: [
-            {
-              active: true,
-              name: 'Shuriken cannon',
-              keywords: ['sustained hits 1'],
-              range: '24"',
-              attacks: '3',
-              skill: '3+',
-              strength: '6',
-              ap: '-1',
-              damage: '2',
-            },
-          ],
-        },
-        {
-          active: true,
-          profiles: [
-            {
-              active: true,
-              name: 'Twin shuriken catapult',
-              keywords: ['assault', 'twin-linked'],
-              range: '18"',
-              attacks: '2',
-              skill: '3+',
-              strength: '4',
-              ap: '-1',
-              damage: '1',
-            },
-          ],
-        },
-      ];
       break;
     case 'Tidewall Shieldline':
       unit = {

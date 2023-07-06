@@ -61,6 +61,24 @@ function extractPDF(name, max = 0) {
       }
     });
   }
+  if (fs.existsSync(`./${name}_legends.pdf`)) {
+    console.log('Found Legends index, extracting sheets.');
+    pdfToText.info(`./${name}_legends.pdf`, function (err, data) {
+      if (err) throw err;
+      max = data.pages;
+      for (let index = 1; index < max; index++) {
+        if (index % 2 === 1) {
+          const options = { from: index, to: index + 1 };
+
+          pdfToText.pdfToText(`./${name}_legends.pdf`, options, function (err, data) {
+            if (err) throw err;
+            let text = data.toString('utf8').replaceAll('', '---PAGE 2---\n\r');
+            fs.writeFileSync(`./${name}/${name}_legends.pdf-${index}.text`, text);
+          });
+        }
+      }
+    });
+  }
 }
 
 // extractPDF('deathwatch');
@@ -70,7 +88,7 @@ function extractPDF(name, max = 0) {
 // extractPDF('chaosdaemons');
 // extractPDF('chaos_spacemarines');
 // extractPDF('chaosknights');
-// extractPDF('spacemarines');
+extractPDF('spacemarines');
 
 // extractPDF('bloodangels');
 // extractPDF('darkangels');
@@ -90,7 +108,7 @@ function extractPDF(name, max = 0) {
 // extractPDF('aeldari');
 // extractPDF('drukhari');
 // extractPDF('necrons');
-extractPDF('tyranids');
+// extractPDF('tyranids');
 // extractPDF('gsc');
 // extractPDF('orks');
 // extractPDF('votann');
