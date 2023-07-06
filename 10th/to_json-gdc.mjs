@@ -123,6 +123,11 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         let splitText = pages[0].replaceAll('\u0007', '').split('\n');
 
         let name = getName(splitText[0].toLowerCase());
+        let legends = false;
+        if (name.includes('Wa R Ha M M E R L E G E N D S')) {
+          name = name.split('Wa R Ha M M E R L E G E N D S')[0].trim();
+          legends = true;
+        }
 
         if (skippedNames.includes(name.toLowerCase())) {
           continue;
@@ -189,12 +194,16 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         let keywords = getUnitKeywords(splitText, startOfAbilities);
         let endOfStats = 7;
 
-        if (file.includes('_fw')) {
+        if (file.includes('_fw') || file.includes('_legends')) {
           let startOfInvul = getStartOfBlock(splitText, 'INVULNERABLE SAVE');
+          startOfRanged = getStartOfWeaponsBlock(splitText, 'RANGED WEAPON');
+          startOfMelee = getStartOfWeaponsBlock(splitText, 'MELEE WEAPON');
           if (startOfInvul.line > 0) {
             endOfStats = startOfInvul.line;
           } else {
-            endOfStats = startOfRanged.line;
+            if (startOfRanged.line > 0) {
+              endOfStats = startOfRanged.line;
+            }
           }
 
           invulInfo = getInvulInfoFw(splitText);
@@ -291,6 +300,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
                 !line.includes('unit:') &&
                 !line.includes('shrieker cannon:') &&
                 !line.includes('this turn:') &&
+                !line.includes('Leadership test:') &&
                 !line.includes('range of it:')
               ) {
                 abilities.push({
@@ -340,6 +350,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
                 !line.includes('Warlord:') &&
                 !line.includes('this turn:') &&
                 !line.includes('Vehicle:') &&
+                !line.includes('Leadership test:') &&
                 !line.includes('within 6":')
               ) {
                 wargearAbilities.push({
@@ -390,14 +401,18 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         for (let index = startOfRanged.line + 1; index < startOfRanged.endLine; index++) {
           let line = splitText[index].substring(0, startOfAbilities.pos);
           if (line.trim().length > 0) {
-            if (line.toLowerCase().includes('one shot:')) {
+            if (line.toLowerCase().includes('one shot:') || line.toLowerCase().includes('[one shot]:')) {
               continue;
             }
-            if (line.includes('Snagged:')) {
+             if (line.includes('Snagged:')) {
               index = index + 2;
               continue;
             }
-            if (line.includes('Conversion:')) {
+             if (line.includes('[IMPALED]:')) {
+              index = index + 2;
+              continue;
+            }
+            if (line.includes('Conversion:') || line.toLowerCase().includes('[conversion:]')) {
               index = index + 2;
               continue;
             }
@@ -586,6 +601,9 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
             ) {
               break;
             }
+            if (line.includes('KEYWORDS:') || line.includes('Before selecting targets for this ')) {
+              break;
+            }
             if (line.includes('Dead Choppy:')) {
               index = index + 2;
               continue;
@@ -748,6 +766,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
           loadout: unitLoadout,
           wargear: unitWargear,
           transport: unitTransport,
+          legends: legends ? 'true' : undefined,
           points: unitPoints,
           abilities: {
             wargear: wargearAbilities,
@@ -858,7 +877,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
 
     // const stratagems = import(`./stratagems/${outputFile.toLowerCase().replaceAll(' ', '')}.mjs`);
 
-    console.log(data[outputFile]);
+    // console.log(data[outputFile]);
 
     const factions = {
       id: factionId,
