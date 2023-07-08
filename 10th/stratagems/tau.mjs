@@ -26,7 +26,7 @@ Feel No Pain 6+ ability.`,
   restrictions: ``
 },{
   name: 'STRIKE AND FADE',
-  cost: 1,
+  cost: 2,
   type: TYPE['Strategic Ploy'],
   detachment,
   turn: TURN.your,
