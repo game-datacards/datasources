@@ -910,7 +910,7 @@ convertTextToJson('./deathwatch/', 'deathwatch', 'CHDW', 'Death Watch', '#3d3e41
 convertTextToJson('./thousandsons/', 'thousandsons', 'TS', 'Thousand Sons', '#185862', '#0b3645', 3);
 convertTextToJson('./worldeaters/', 'worldeaters', 'WE', 'World Eaters', '#4d161a', '#611013', 3);
 convertTextToJson('./chaos_spacemarines/', 'chaos_spacemarines', 'CSM', 'Chaos Space Marines', '#222a2f', '#320b0d', 3);
-convertTextToJson('./chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', '#393940', '#202224', 3);
+// convertTextToJson('./chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', '#393940', '#202224', 3);
 convertTextToJson('./deathguard/', 'deathguard', 'DG', 'Death Guard', '#4d560e', '#2c290c', 3);
 convertTextToJson('./chaosknights/', 'chaosknights', 'QT', 'Chaos Knights', '#49584c', '#102824', 3);
 
@@ -929,3 +929,5 @@ convertTextToJson('./aeldari/', 'aeldari', 'AE', 'Aeldari', '#347379', '#0a353a'
 convertTextToJson('./drukhari/', 'drukhari', 'DRU', 'Drukhari', '#0f454e', '#102929', 3);
 
 convertTextToJson('./gsc/', 'gsc', 'GSC', 'Genestealer Cults', '#391625', '#291221', 3);
+
+convertTextToJson('./titan/', 'titan', 'AT', 'Adeptus Titanicus', '#4b6262', '#092135', 3);

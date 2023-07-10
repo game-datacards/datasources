@@ -12,8 +12,8 @@ function extractPDF(name, max = 0) {
       if (max === 0) {
         max = data.pages;
       }
-      for (let index = 6; index < max; index++) {
-        if (index % 2 === 1) {
+      for (let index = 2; index < max; index++) {
+        if (index % 2 === 0) {
           const options = { from: index, to: index + 1 };
 
           pdfToText.pdfToText(`./${name}_index.pdf`, options, function (err, data) {
@@ -88,7 +88,7 @@ function extractPDF(name, max = 0) {
 // extractPDF('chaosdaemons');
 // extractPDF('chaos_spacemarines');
 // extractPDF('chaosknights');
-extractPDF('spacemarines');
+// extractPDF('spacemarines');
 
 // extractPDF('bloodangels');
 // extractPDF('darkangels');
@@ -112,3 +112,4 @@ extractPDF('spacemarines');
 // extractPDF('gsc');
 // extractPDF('orks');
 // extractPDF('votann');
+extractPDF('titan');
