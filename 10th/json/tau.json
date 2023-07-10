@@ -4,6 +4,92 @@
   "name": "T'au Empire",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "STIMM INJECTORS",
+      "cost": 1,
+      "type": "Wargear",
+      "detachment": "Kauyon",
+      "turn": "either",
+      "phase": ["fight", "shooting"],
+      "fluff": "This system injects the battlesuit pilot with\na measured dose of chemical stimulants\nintended to temporarily accelerate their\nphysical aptitude and pain tolerances.",
+      "when": "Fight phase or your opponent’s\nShooting phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One T’au Empire Battlesuit\nunit from your army that was selected as\nthe target of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase,\nmodels in your unit have the\nFeel No Pain 6+ ability.",
+      "restrictions": "",
+      "id": "33248460-d12d-595b-b857-adda1a25f7f1"
+    },
+    {
+      "name": "STRIKE AND FADE",
+      "cost": 2,
+      "type": "Strategic Ploy",
+      "detachment": "Kauyon",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "T’au are experts at harrying and\noutmanoeuvring their foes, bleeding them\nwith accurate fire before fading away into\nthe shadows and luring the foe into a trap.",
+      "when": "Your Shooting phase.",
+      "target": "One T’au Empire Battlesuit\nunit from your army that can Fly whose\nattacks have been resolved this phase.",
+      "effect": "If your unit is not within\nEngagement Range of any enemy units, it\ncan make a Normal move. If it does, your\nunit cannot declare a charge this turn.",
+      "restrictions": "",
+      "id": "21eac06a-e7a0-5d21-96fa-dcbd850a335c"
+    },
+    {
+      "name": "COORDINATE TO ENGAGE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Kauyon",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "T’au combined arms groups are called\nHunter Cadres for good reason. Working in\nclose coordination, they hunt and destroy\nthe most dangerous enemy targets.",
+      "when": "Your Shooting phase.",
+      "target": "One T’au Empire unit from your\narmy that has just been selected as an\nObserver unit (see For the Greater Good).",
+      "effect": "Until the end of the phase, each\ntime a model in your unit makes an attack\nthat targets their Spotted unit, improve\nthe Ballistic Skill characteristic of that\nattack by 1 and, if your unit has the\nMarkerlight keyword, that attack has\nthe [IGNORES COVER] ability.",
+      "restrictions": "",
+      "id": "14235db9-83f6-5405-81f3-1508bfeb4bc3"
+    },
+    {
+      "name": "POINT-BLANK AMBUSH",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Kauyon",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "The Kauyon teaches to lure the enemy\ninto deadly point-blank ambushes.",
+      "when": "Your Shooting phase.",
+      "target": "One T’au Empire unit from your\narmy that has not been selected to shoot\nthis phase.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit makes a ranged\nattack that targets an enemy unit within\n9\", improve the Armour Penetration\ncharacteristic of that attack by 1.",
+      "restrictions": "You cannot use this\nStratagem during the first or second\nbattle rounds.",
+      "id": "13313fda-8145-557f-abce-6ce4c1d48de2"
+    },
+    {
+      "name": "PHOTON GRENADES",
+      "cost": 1,
+      "type": "Wargear",
+      "detachment": "Kauyon",
+      "turn": "opponents",
+      "phase": ["charge"],
+      "fluff": "Hurling a volley of photon grenades, the\nT’au leave their enemies dazzled and\ndisorientated, unable to close the distance\ninto combat at a crucial moment.",
+      "when": "Your opponent’s Charge phase,\njust after an enemy unit has declared\na charge.",
+      "target": "One T’au Empire Grenades unit\nfrom your army that was selected as one\nof the targets of that charge.",
+      "effect": "That enemy unit must\nimmediately take a Battle-shock test, and\nuntil the end of the phase, subtract 2 from\nCharge rolls made for that enemy unit.",
+      "restrictions": "",
+      "id": "ecb9ca87-4422-506b-8f47-7237df35cfbe"
+    },
+    {
+      "name": "COMBAT EMBARKATION",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Kauyon",
+      "turn": "opponents",
+      "phase": ["charge"],
+      "fluff": "Those who act as the lure in the\nKauyon must be ready to make a hasty\nwithdrawal once the enemy closes into\nkilling range, lest they be trapped.",
+      "when": "Your opponent’s Charge phase,\njust after an enemy unit has declared\na charge.",
+      "target": "One T’au Empire Infantry unit\nfrom your army that was selected as one\nof the targets of that charge, and one\nfriendly Transport.",
+      "effect": "Your unit can embark within that\nTransport. If it does, your opponent can\nselect new targets for that charge.",
+      "restrictions": "Every model in your T’au\nEmpire Infantry unit must be within\n3\" of that Transport and there must be\nsufficient transport capacity to embark\nthe entire unit.",
+      "id": "67ca015e-733d-532c-a9d9-1270dddbc17a"
+    }
+  ],
   "enhancements": [
     {
       "name": "Exemplar of the Kauyon",
@@ -104,7 +190,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Epic Hero", "Ethereal", "Aun’Shi"],
-      "factions": ["T’au Empire"]
+      "factions": ["T’au Empire"],
+      "leads": {
+        "units": ["Breacher Team", "Kroot Carnivores", "Strike Team"],
+        "extra": ""
+      }
     },
     {
       "id": "94e7039f-5196-5e24-86f7-61ea679eaf65",
@@ -678,7 +768,7 @@
         "Breacher Team"
       ],
       "factions": ["T’au Empire"],
-      "ledBy": ["Aun’shi", "Cadre Fireblade", "Ethereal"]
+      "leadBy": ["Aun’shi", "Cadre Fireblade", "Ethereal"]
     },
     {
       "id": "76bc5902-8376-5020-8d89-ccacd932f771",
@@ -925,7 +1015,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Grenades", "Cadre Fireblade"],
-      "factions": ["T’au Empire"]
+      "factions": ["T’au Empire"],
+      "leads": {
+        "units": ["Breacher Team", "Strike Team"],
+        "extra": ""
+      }
     },
     {
       "id": "5ed6cc39-b7b5-57b6-a635-7aaaf08610be",
@@ -1029,7 +1123,11 @@
         "Battlesuit",
         "Commander Farsight"
       ],
-      "factions": ["T’au Empire"]
+      "factions": ["T’au Empire"],
+      "leads": {
+        "units": ["Crisis Battlesuits"],
+        "extra": ""
+      }
     },
     {
       "id": "edce4f41-59d3-5573-a8e7-611a69c395a2",
@@ -1243,7 +1341,11 @@
         "Battlesuit",
         "Commander in Coldstar Battlesuit"
       ],
-      "factions": ["T’au Empire"]
+      "factions": ["T’au Empire"],
+      "leads": {
+        "units": ["Crisis Battlesuits"],
+        "extra": ""
+      }
     },
     {
       "id": "1a6c4bd5-4da6-5918-9c58-43b461ceda0f",
@@ -1443,7 +1545,11 @@
         "Battlesuit",
         "Commander in Crisis Battlesuit"
       ],
-      "factions": ["T’au Empire"]
+      "factions": ["T’au Empire"],
+      "leads": {
+        "units": ["Crisis Battlesuits"],
+        "extra": ""
+      }
     },
     {
       "id": "c9f00aee-454f-5e7f-8923-b7687dbdedee",
@@ -1643,7 +1749,11 @@
         "Battlesuit",
         "Commander in Enforcer Battlesuit"
       ],
-      "factions": ["T’au Empire"]
+      "factions": ["T’au Empire"],
+      "leads": {
+        "units": ["Crisis Battlesuits"],
+        "extra": ""
+      }
     },
     {
       "id": "ada4d0e5-17fc-5789-bb6c-ae0457815a4a",
@@ -1990,7 +2100,7 @@
       ],
       "keywords": ["Vehicle", "Walker", "Fly", "Battlesuit", "Crisis"],
       "factions": ["T’au Empire"],
-      "ledBy": [
+      "leadBy": [
         "Commander Farsight",
         "Commander In Coldstar Battlesuit",
         "Commander In Crisis Battlesuit",
@@ -2087,7 +2197,11 @@
         "Markerlight",
         "Darkstrider"
       ],
-      "factions": ["T’au Empire"]
+      "factions": ["T’au Empire"],
+      "leads": {
+        "units": ["Pathfinder Team"],
+        "extra": ""
+      }
     },
     {
       "id": "703c9ce7-b3d1-533c-8bb6-3183b1e44a52",
@@ -2299,7 +2413,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Ethereal"],
-      "factions": ["T’au Empire"]
+      "factions": ["T’au Empire"],
+      "leads": {
+        "units": ["Breacher Team", "Strike Team"],
+        "extra": ""
+      }
     },
     {
       "id": "7764dea0-8567-5a1b-9cb1-4c940cb496e0",
@@ -2821,7 +2939,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Kroot", "Carnivores"],
       "factions": ["T’au Empire"],
-      "ledBy": ["Aun’shi", "Kroot Shaper"]
+      "leadBy": ["Aun’shi", "Kroot Shaper"]
     },
     {
       "id": "26f6d9d6-8272-59f8-b141-c4f8fb760593",
@@ -3186,7 +3304,11 @@
         }
       ],
       "keywords": ["Character", "Grenades", "Infantry", "Kroot", "Shaper"],
-      "factions": ["T’au Empire"]
+      "factions": ["T’au Empire"],
+      "leads": {
+        "units": ["Kroot Carnivores"],
+        "extra": ""
+      }
     },
     {
       "id": "efc04c25-5e10-5308-ae2d-528c9706d08b",
@@ -3801,7 +3923,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Markerlight", "Pathfinder Team"],
       "factions": ["T’au Empire"],
-      "ledBy": ["Darkstrider"]
+      "leadBy": ["Darkstrider"]
     },
     {
       "id": "f4009805-20f9-5eb5-a532-f3f314aa15e2",
@@ -4680,7 +4802,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "405"
+          "cost": "465"
         }
       ],
       "abilities": {
@@ -5003,7 +5125,7 @@
         "Strike Team"
       ],
       "factions": ["T’au Empire"],
-      "ledBy": ["Aun’shi", "Cadre Fireblade", "Ethereal"]
+      "leadBy": ["Aun’shi", "Cadre Fireblade", "Ethereal"]
     },
     {
       "id": "c4eea76b-80a8-588e-92d3-36ae0275b22c",
@@ -5224,7 +5346,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "685"
+          "cost": "790"
         }
       ],
       "abilities": {

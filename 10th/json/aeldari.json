@@ -4,6 +4,92 @@
   "name": "Aeldari",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "FEIGNED RETREAT",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Battle Host",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "The Aeldari are forever elusive, and their\nactions are unpredictable and deceptive.\nWhat appears to be a full retreat one\nmoment is revealed as the prelude to a\ndevastating attack the next.",
+      "when": "Your Movement phase, just after\nan Aeldari unit from your army makes a\nFall Back move.",
+      "target": "That Aeldari unit.",
+      "effect": "Your unit is eligible to shoot and\ndeclare a charge this turn even though it\nFell Back",
+      "restrictions": "",
+      "id": "b8d0f13c-bda7-5427-8731-d53bd50c8aa6"
+    },
+    {
+      "name": "MATCHLESS AGILITY",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Battle Host",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "Grace in battle and merciless efficiency\nare prized virtues in craftworld armies.\nLike the shimmering blades of Khaine,\nthe Asuryani carve through the ranks of\ntheir enemies.",
+      "when": "Your Movement phase.",
+      "target": "One Aeldari unit from your\narmy that has not been selected to move\nthis phase.",
+      "effect": "Until the end of the phase, if your\nunit Advances, do not make an Advance\nroll for it. Instead, until the end of the\nphase, add 6\" to the Move characteristic\nof models in your unit.",
+      "restrictions": "",
+      "id": "5452907c-daa4-5cf1-81ef-b0fed2ad95a5"
+    },
+    {
+      "name": "FIRE AND FADE",
+      "cost": 2,
+      "type": "Strategic Ploy",
+      "detachment": "Battle Host",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "The Aeldari are masters of hit-and-run\ntactics, engaging a target with a flurry of\nshots before quickly manoeuvring into\ncover or out of sight.",
+      "when": "End of your Shooting phase.",
+      "target": "One Aeldari unit from your army.",
+      "effect": "Your unit can make a Normal\nmove. It cannot embark within a\nTransport at the end of this move.",
+      "restrictions": "You cannot select an\nAircraft unit or a unit within Engagement\nRange of one or more enemy units, and\nuntil the end of the turn, the unit you\nselected is not eligible to declare a charge.",
+      "id": "87768d64-0ade-51d3-a1c4-ece233de1cd6"
+    },
+    {
+      "name": "BLADESTORM",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Battle Host",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "The well-trained Aeldari are able to lay\ndown a hail of fire from their weapons,\ntheir superior reflexes allowing them to\ntrack even the most sudden movement\nand place every shot perfectly.",
+      "when": "Your Shooting phase.",
+      "target": "One Aeldari unit from your\narmy that has not been selected to shoot\nthis phase.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit makes an\nattack, on a Critical Wound, improve the\nArmour Penetration characteristic of that\nattack by 2.",
+      "restrictions": "",
+      "id": "77b00fca-6099-51ce-8af9-fb91fd68cfaa"
+    },
+    {
+      "name": "PHANTASM",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Battle Host",
+      "turn": "opponents",
+      "phase": ["movement"],
+      "fluff": "The Aeldari are masters of misdirection,\nand they employ holo-emitters and psychic\nphantasms to fool enemy scouts.",
+      "when": "End of your opponent’s\nMovement phase.",
+      "target": "One Aeldari unit from your army.",
+      "effect": "Your unit can make a Normal\nmove of up to 7\". It cannot embark within\na Transport at the end of this move.",
+      "restrictions": "You cannot select a unit\nwithin Engagement Range of one or more\nenemy units, and until the end of the turn,\nyou cannot target that unit with the Heroic\nIntervention Stratagem.",
+      "id": "0e4d3507-76b8-5e40-b569-62467788d249"
+    },
+    {
+      "name": "LIGHTNING-FAST REACTIONS",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Battle Host",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "The Aeldari can process battlefield\nevents at baffling speed, making their\nphysical reactions so fast that they are\nable to dodge attacks that would hit any\nother target.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Aeldari unit from your army\n(excluding Wraith Construct units) that\nwas selected as the target of one or more\nof the attacking unit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, subtract\n1 from the Hit roll.",
+      "restrictions": "",
+      "id": "4f6fdf85-7731-5541-a01a-71d629ee8bd4"
+    }
+  ],
   "enhancements": [
     {
       "name": "Fate’s Messenger",
@@ -125,7 +211,11 @@
         "Phoenix Lord",
         "Asurmen"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Dire Avengers"],
+        "extra": ""
+      }
     },
     {
       "id": "0debaad1-ddae-5650-8b46-e72bf0dcf222",
@@ -319,7 +409,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Grenades", "Autarch"],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Guardian Defenders", "Storm Guardians"],
+        "extra": ""
+      }
     },
     {
       "id": "67ce1dec-dce4-5323-be1b-e118c347213f",
@@ -455,7 +549,11 @@
         "Autarch",
         "Autarch Skyrunner"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Windriders"],
+        "extra": ""
+      }
     },
     {
       "id": "78b09f0d-6943-5caa-9c6f-683f9ddfe3c5",
@@ -853,7 +951,11 @@
         "Phoenix Lord",
         "Baharroth"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Swooping Hawks"],
+        "extra": ""
+      }
     },
     {
       "id": "b1db34cb-2c3b-5f15-991f-9581c9cf3423",
@@ -1205,7 +1307,7 @@
         "Corsair Voidreavers"
       ],
       "factions": ["Aeldari"],
-      "ledBy": ["Prince Yriel", "The Visarch", "Yvraine"]
+      "leadBy": ["Prince Yriel", "The Visarch", "Yvraine"]
     },
     {
       "id": "e9ea6d32-6a27-5001-b786-4eed3a007a31",
@@ -1474,7 +1576,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Anhrathe", "Corsair Voidscarred"],
       "factions": ["Aeldari"],
-      "ledBy": ["Prince Yriel", "The Visarch", "Yvraine"]
+      "leadBy": ["Prince Yriel", "The Visarch", "Yvraine"]
     },
     {
       "id": "8a6759ff-6329-522a-a734-a677658dfa40",
@@ -1746,7 +1848,7 @@
       ],
       "keywords": ["Infantry", "Dark Reapers"],
       "factions": ["Aeldari"],
-      "ledBy": ["Maugan Ra"]
+      "leadBy": ["Maugan Ra"]
     },
     {
       "id": "df8d1aa0-9916-5aad-82c7-7385c70f3822",
@@ -1979,7 +2081,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Dire Avengers"],
       "factions": ["Aeldari"],
-      "ledBy": ["Asurmen"]
+      "leadBy": ["Asurmen"]
     },
     {
       "id": "07769191-da02-50bd-b2dd-3c3a4e90c01a",
@@ -2086,7 +2188,11 @@
         "Farseer",
         "Eldrad Ulthran"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Guardian Defenders", "Storm Guardians", "Warlock Conclave"],
+        "extra": ""
+      }
     },
     {
       "id": "2ece8450-cd96-54db-9eea-f29ec2b1616d",
@@ -2395,7 +2501,11 @@
         }
       ],
       "keywords": ["Character", "Infantry", "Psyker", "Farseer"],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Guardian Defenders", "Storm Guardians", "Warlock Conclave"],
+        "extra": ""
+      }
     },
     {
       "id": "08f7afa4-1e01-54f1-a3ac-854d1be37640",
@@ -2546,7 +2656,11 @@
         "Farseer",
         "Farseer Skyrunner"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Warlock Skyrunner Conclave", "Windriders"],
+        "extra": ""
+      }
     },
     {
       "id": "dd651ab0-2c1d-548b-bfc2-9720ebf428ed",
@@ -2672,7 +2786,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Fire Dragons"],
       "factions": ["Aeldari"],
-      "ledBy": ["Fuegan"]
+      "leadBy": ["Fuegan"]
     },
     {
       "id": "34ab4d87-ae76-58d1-96b7-eb47d553562e",
@@ -2688,7 +2802,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "125"
+          "cost": "150"
         }
       ],
       "abilities": {
@@ -2896,7 +3010,11 @@
         "Phoenix Lord",
         "Fuegan"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Fire Dragons"],
+        "extra": ""
+      }
     },
     {
       "id": "dff35a09-3399-56d0-8c16-3801f800357d",
@@ -3080,7 +3198,7 @@
         "Guardian Defenders"
       ],
       "factions": ["Aeldari"],
-      "ledBy": [
+      "leadBy": [
         "Autarch",
         "Eldrad Ulthran",
         "Farseer",
@@ -3496,7 +3614,7 @@
       ],
       "keywords": ["Infantry", "Howling Banshees"],
       "factions": ["Aeldari"],
-      "ledBy": ["Jain Zar"]
+      "leadBy": ["Jain Zar"]
     },
     {
       "id": "623547c2-3a7d-5d0a-8200-4b05dc98caa6",
@@ -3596,7 +3714,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Epic Hero", "Illic Nightspear"],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Rangers"],
+        "extra": ""
+      }
     },
     {
       "id": "17fe1673-7bbc-5b85-a8b3-b42ba995f059",
@@ -3688,7 +3810,11 @@
         "Phoenix Lord",
         "Irillyth"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Shadow Spectres"],
+        "extra": ""
+      }
     },
     {
       "id": "750c6e6e-773d-591a-8e2a-f2e26b2e4573",
@@ -3790,7 +3916,11 @@
         "Phoenix Lord",
         "Jain Zar"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Howling Banshees"],
+        "extra": ""
+      }
     },
     {
       "id": "124bb7b9-7b78-5721-ae9a-323dce700218",
@@ -3901,7 +4031,11 @@
         "Phoenix Lord",
         "Karandras"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Striking Scorpions"],
+        "extra": ""
+      }
     },
     {
       "id": "60d3e229-db6d-5088-b786-2abc8017df6f",
@@ -4157,7 +4291,11 @@
         "Phoenix Lord",
         "Maugan Ra"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Dark Reapers"],
+        "extra": ""
+      }
     },
     {
       "id": "d06e11cd-84bf-5174-8f23-096d8322ee71",
@@ -4173,7 +4311,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "140"
+          "cost": "170"
         }
       ],
       "abilities": {
@@ -4637,7 +4775,16 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Epic Hero", "Prince Yriel"],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": [
+          "Corsair Voidreavers",
+          "Corsair Voidscarred",
+          "Guardian Defenders",
+          "Storm Guardians"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "854a02eb-6a01-5734-a1b6-43a5de76571f",
@@ -4738,7 +4885,7 @@
       ],
       "keywords": ["Infantry", "Rangers"],
       "factions": ["Aeldari"],
-      "ledBy": ["Illic Nightspear"]
+      "leadBy": ["Illic Nightspear"]
     },
     {
       "id": "b3bccfe6-2efd-5765-8c51-58307e0eaffc",
@@ -5142,7 +5289,7 @@
       ],
       "keywords": ["Infantry", "Jump Pack", "Fly", "Shadow Spectres"],
       "factions": ["Aeldari"],
-      "ledBy": ["Irillyth"]
+      "leadBy": ["Irillyth"]
     },
     {
       "id": "1b5d57e8-e866-5fa1-a017-dd224ae1a3c3",
@@ -5251,7 +5398,11 @@
         "Harlequins",
         "Shadowseer"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Troupe"],
+        "extra": ""
+      }
     },
     {
       "id": "f5f48c3a-78bc-5ecc-81f1-9de5a9b5bd12",
@@ -5557,7 +5708,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "385"
+          "cost": "440"
         }
       ],
       "abilities": {
@@ -6004,7 +6155,11 @@
         }
       ],
       "keywords": ["Character", "Infantry", "Psyker", "Spiritseer"],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Wraithblades", "Wraithguard", "Wraithlord"],
+        "extra": ""
+      }
     },
     {
       "id": "a2ab60bb-cde1-5c04-9a9e-ab83e75b5b83",
@@ -6247,13 +6402,14 @@
         "Storm Guardians"
       ],
       "factions": ["Aeldari"],
-      "ledBy": [
+      "leadBy": [
         "Autarch",
         "Eldrad Ulthran",
         "Farseer",
         "Prince Yriel",
         "The Visarch",
-        "Warlock"
+        "Warlock",
+        "Yvraine"
       ]
     },
     {
@@ -6395,7 +6551,7 @@
       ],
       "keywords": ["Infantry", "Striking Scorpions"],
       "factions": ["Aeldari"],
-      "ledBy": ["Karandras"]
+      "leadBy": ["Karandras"]
     },
     {
       "id": "4b91cd9c-5102-53f1-9df5-83ac8622bc1e",
@@ -6411,7 +6567,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "85"
+          "cost": "105"
         }
       ],
       "abilities": {
@@ -6664,7 +6820,7 @@
         "Swooping Hawks"
       ],
       "factions": ["Aeldari"],
-      "ledBy": ["Baharroth"]
+      "leadBy": ["Baharroth"]
     },
     {
       "id": "ebc4b618-c08e-5c19-9633-3a9c63bc3ec3",
@@ -6741,7 +6897,19 @@
         "Ynnari",
         "The Visarch"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": [
+          "Corsair Voidreavers",
+          "Corsair Voidscarred",
+          "Guardian Defenders",
+          "Kabalite Warriors (see Drukhari)",
+          "Storm Guardians",
+          "Troupe",
+          "Wyches (see Drukhari)"
+        ],
+        "extra": "You can attach this unit to one of the above units, even if Yvraine has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "2906941e-fa4b-5aa4-bb53-72cf83da47f1",
@@ -7002,7 +7170,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Harlequins", "Troupe"],
       "factions": ["Aeldari"],
-      "ledBy": ["Shadowseer", "The Visarch"]
+      "leadBy": ["Shadowseer", "The Visarch", "Yvraine"]
     },
     {
       "id": "058d7578-2cb1-5b5e-bc57-f17c171ea9f0",
@@ -7706,7 +7874,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Psyker", "Warlock"],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Guardian Defenders", "Storm Guardians"],
+        "extra": "You can attach this model to one of the above units, even if one other Leader unit (excluding Warlock units) has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "9a4c27e9-42d1-5228-8f74-43a7871b709e",
@@ -7841,7 +8013,7 @@
       ],
       "keywords": ["Infantry", "Psyker", "Warlocks", "Warlock Conclave"],
       "factions": ["Aeldari"],
-      "ledBy": ["Eldrad Ulthran", "Farseer"]
+      "leadBy": ["Eldrad Ulthran", "Farseer"]
     },
     {
       "id": "60c8afc3-c477-588d-9d8e-829c6f110d4b",
@@ -7988,7 +8160,11 @@
         "Warlock",
         "Warlock Skyrunner"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": ["Windriders"],
+        "extra": "You can attach this unit to the above unit, even if one other Leader unit (excluding Warlock units) has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "83cb9507-f3bb-598b-8eed-8672a2ef2f13",
@@ -8143,7 +8319,7 @@
         "Warlock Skyrunner Conclave"
       ],
       "factions": ["Aeldari"],
-      "ledBy": ["Farseer Skyrunner"]
+      "leadBy": ["Farseer Skyrunner"]
     },
     {
       "id": "b0c7ed8d-7e1f-516a-b729-3d124ff20265",
@@ -8682,7 +8858,7 @@
       ],
       "keywords": ["Mounted", "Fly", "Windriders"],
       "factions": ["Aeldari"],
-      "ledBy": ["Autarch Skyrunner", "Farseer Skyrunner", "Warlock Skyrunner"]
+      "leadBy": ["Autarch Skyrunner", "Farseer Skyrunner", "Warlock Skyrunner"]
     },
     {
       "id": "9c9af29d-b7a3-5de1-8ff6-41a86a998ca7",
@@ -8775,7 +8951,7 @@
       ],
       "keywords": ["Infantry", "Wraith Construct", "Wraithblades"],
       "factions": ["Aeldari"],
-      "ledBy": ["Spiritseer"]
+      "leadBy": ["Spiritseer"]
     },
     {
       "id": "527e915f-9575-5968-99bf-04dae1d145d0",
@@ -8878,7 +9054,7 @@
       ],
       "keywords": ["Infantry", "Wraith Construct", "Wraithguard"],
       "factions": ["Aeldari"],
-      "ledBy": ["Spiritseer"]
+      "leadBy": ["Spiritseer"]
     },
     {
       "id": "fd526d7e-34b9-517a-bab1-b7baa1e1c1e4",
@@ -8896,7 +9072,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "370"
+          "cost": "475"
         }
       ],
       "abilities": {
@@ -9265,7 +9441,7 @@
       ],
       "keywords": ["Monster", "Walker", "Wraith Construct", "Wraithlord"],
       "factions": ["Aeldari"],
-      "ledBy": ["Spiritseer"]
+      "leadBy": ["Spiritseer"]
     },
     {
       "id": "63e5a52c-23e4-54df-ac74-250e04a3f859",
@@ -9552,7 +9728,19 @@
         "Psyker",
         "Yvraine"
       ],
-      "factions": ["Aeldari"]
+      "factions": ["Aeldari"],
+      "leads": {
+        "units": [
+          "Corsair Voidscarred",
+          "Corsair Voidreavers",
+          "Guardian Defenders",
+          "Kabalite Warriors (see Drukhari)",
+          "Storm Guardians",
+          "Troupe",
+          "Wyches (see Drukhari)"
+        ],
+        "extra": ""
+      }
     }
   ],
   "colours": {

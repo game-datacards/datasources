@@ -4,6 +4,92 @@
   "name": "Necrons",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "PROTOCOL OF THE ETERNAL GUARDIAN",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Awakened Dynasty",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "Necron rulers possess sophisticated\nself-repair systems that can reknit their\ncorporeal forms so they can once more\ncommand their legions.",
+      "when": "Any phase.",
+      "target": "One Necrons Infantry\nCharacter model from your army that\nwas just destroyed.",
+      "effect": "Set your model back up on the\nbattlefield as close as possible to where\nit was destroyed and more than 1\" away\nfrom all enemy models, with half of its\nstarting number of wounds remaining.",
+      "restrictions": "Each model can only\nbe targeted with this Stratagem once\nper battle.",
+      "id": "b7bfdae3-7060-5959-8cd4-bf3af9ee4417"
+    },
+    {
+      "name": "PROTOCOL OF THE HUNGRY VOID",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Awakened Dynasty",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "The Necrons strike with data-augmented\naccuracy, their murderous attacks as\ninescapable as the killing cold of space.",
+      "when": "Fight phase.",
+      "target": "One Necrons unit from your\narmy that has not been selected to fight\nthis phase.",
+      "effect": "Until the end of the phase, add\n1 to the Strength characteristic of melee\nweapons equipped by models in your\nunit. In addition, If a Necrons Character\nis leading your unit, until the end of the\nphase, improve the Armour Penetration\ncharacteristic of melee weapons\nequipped by models in your unit by 1.",
+      "restrictions": "",
+      "id": "82107f4c-023d-5591-931d-02f38372cfd1"
+    },
+    {
+      "name": "PROTOCOL OF THE CONQUERING TYRANT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Awakened Dynasty",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "The legions employ the strategies of their\nmasters in perfect synchronicity, laying\ndown hails of mechanically coordinated fire.",
+      "when": "Your Shooting phase.",
+      "target": "One Necrons unit from your\narmy that has not been selected to shoot\nthis phase.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit makes an attack\nthat targets a unit within half of the firing\nweapon’s range, you can re-roll the Wound\nroll. If a Necrons Character is leading\nyour unit, until the end of the phase, this\neffect applies at the firing weapon’s full\nrange instead.",
+      "restrictions": "",
+      "id": "6d46a230-dfb3-5e62-9162-91b07201c6c5"
+    },
+    {
+      "name": "PROTOCOL OF THE UNDYING LEGIONS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Awakened Dynasty",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "At a hissing static signal, nanoscarabs\nare released in boiling black clouds\nthat whirl about the legions and effect\nconstant repairs.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas resolved its attacks.",
+      "target": "One Necrons unit from your\narmy that had one or more of its models\ndestroyed as a result of the attacking\nunit’s attacks.",
+      "effect": "Your unit activates its\nReanimation Protocols and reanimates\nD3 wounds. When doing so, if a Necrons\nCharacter is leading your unit, your unit\nreanimates D3+1 wounds instead.",
+      "restrictions": "",
+      "id": "c6035bd0-b959-530d-b384-3944189b8519"
+    },
+    {
+      "name": "PROTOCOL OF THE SUDDEN STORM",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Awakened Dynasty",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "Arcing energies leap from one Necron unit\nto the next, lending speed to their limbs\nand causing their eye lenses to blaze.",
+      "when": "Your Movement phase.",
+      "target": "One Necrons unit from\nyour army.",
+      "effect": "Until the end of the turn, ranged\nweapons equipped by models in your unit\nhave the [ASSAULT] ability. In addition, if a\nNecrons Character is leading your unit,\nuntil the end of the phase, you can re-roll\nAdvance rolls made for your unit.",
+      "restrictions": "",
+      "id": "f684acad-961a-5c0e-a379-7e7e3132f922"
+    },
+    {
+      "name": "PROTOCOL OF THE VENGEFUL STARS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Awakened Dynasty",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "In response to enemy attack, criss-cross\nfire leaps from the Necron ranks, forming\na blazing corona of deadly energy from\nwhich there can be no escape.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has resolved\nits attacks.",
+      "target": "One Necrons unit from your\narmy that had one or more of its models\ndestroyed as a result of the attacking\nunit’s attacks.",
+      "effect": "Your unit can shoot as if it were\nyour Shooting phase, but it must target\nthe enemy unit that just attacked it, and\ncan only do so if that enemy unit is an\neligible target. In addition, if a Necrons\nCharacter is leading your unit, until\nthe end of the phase, ranged weapons\nequipped by models in your unit have the\n[IGNORES COVER] ability. ",
+      "restrictions": "",
+      "id": "45d7ea5a-a28f-5f67-ae49-182642f805a5"
+    }
+  ],
   "enhancements": [
     {
       "name": "VEIL OF DARKNESS",
@@ -237,7 +323,11 @@
         "Noble",
         "Anrakyr the Traveller"
       ],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals"],
+        "extra": ""
+      }
     },
     {
       "id": "3aa4c97e-e10e-5022-9b5e-1c03ab55e9be",
@@ -1528,7 +1618,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Cryptek", "Chronomancer"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Lychguard", "Immortals", "Necron Warriors"],
+        "extra": "You can attach this model to one of the above units even if one Royal Warden or Noble model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "1ec67138-9438-5b99-bf7b-cc59c9d1d16c",
@@ -2439,7 +2533,7 @@
       ],
       "keywords": ["Infantry", "Battleline", "Immortals"],
       "factions": ["Necrons"],
-      "ledBy": [
+      "leadBy": [
         "Anrakyr The Traveller",
         "Chronomancer",
         "Imotekh The Stormlord",
@@ -2559,7 +2653,11 @@
         "Noble",
         "Imotekh the Stormlord"
       ],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": ""
+      }
     },
     {
       "id": "2bbffcec-ad3b-5277-802d-1c9e486a0666",
@@ -2654,7 +2752,7 @@
       ],
       "keywords": ["Mounted", "Fly", "Lokhust Destroyers"],
       "factions": ["Necrons"],
-      "ledBy": ["Lokhust Lord"]
+      "leadBy": ["Lokhust Lord"]
     },
     {
       "id": "deb1c9d5-feb2-56fe-b925-b3fc37add660",
@@ -2761,7 +2859,7 @@
       ],
       "keywords": ["Mounted", "Fly", "Lokhust Heavy Destroyers"],
       "factions": ["Necrons"],
-      "ledBy": ["Lokhust Lord"]
+      "leadBy": ["Lokhust Lord"]
     },
     {
       "id": "c2de5f45-5c43-5f22-9160-fee26a35b5a5",
@@ -2873,7 +2971,11 @@
         }
       ],
       "keywords": ["Mounted", "Character", "Fly", "Lokhust Lord"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Lokhust Destroyers", "Lokhust Heavy Destroyers"],
+        "extra": ""
+      }
     },
     {
       "id": "8224d3d2-388b-5bde-8afc-8c1cc74f7572",
@@ -2981,7 +3083,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Noble", "Lord"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": ""
+      }
     },
     {
       "id": "ec70c87c-6091-5671-81a8-403c0bf283f7",
@@ -3074,7 +3180,7 @@
       ],
       "keywords": ["Infantry", "Lychguard"],
       "factions": ["Necrons"],
-      "ledBy": [
+      "leadBy": [
         "Chronomancer",
         "Imotekh The Stormlord",
         "Lord",
@@ -3301,7 +3407,7 @@
       ],
       "keywords": ["Infantry", "Battleline", "Necron Warriors"],
       "factions": ["Necrons"],
-      "ledBy": [
+      "leadBy": [
         "Chronomancer",
         "Imotekh The Stormlord",
         "Lord",
@@ -3410,7 +3516,11 @@
         "Noble",
         "Nemesor Zahndrekh"
       ],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": ""
+      }
     },
     {
       "id": "b48568f8-e4b8-5bf4-9d88-d688768bcf52",
@@ -3734,7 +3844,11 @@
         "Chronomancer",
         "Orikan the Diviner"
       ],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": "You can attach this model to one of the above units even if one Royal Warden or Noble model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "b277b119-cbc7-54a1-9069-c004e2b4f977",
@@ -3870,7 +3984,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Noble", "Overlord"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": ""
+      }
     },
     {
       "id": "b6d6c4a7-4a8c-562e-a839-3fd476ce08a0",
@@ -3956,7 +4074,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Cryptek", "Plasmancer"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": "You can attach this model to one of the above units even if one Royal Warden or Noble model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "3ebad3d7-fc84-58a4-87fc-160adfda7708",
@@ -4042,7 +4164,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Cryptek", "Psychomancer"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": "You can attach this model to one of the above units even if one Royal Warden or Noble model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "57ac88bc-bc0f-5865-8bcb-663f9c6126e1",
@@ -4128,7 +4254,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Royal Warden"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Necron Warriors"],
+        "extra": ""
+      }
     },
     {
       "id": "9e73708e-63b1-5a21-8c87-734ae7a9c16d",
@@ -4144,7 +4274,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "470"
+          "cost": "540"
         }
       ],
       "abilities": {
@@ -4339,7 +4469,7 @@
       ],
       "keywords": ["Infantry", "Skorpekh Destroyers"],
       "factions": ["Necrons"],
-      "ledBy": ["Skorpekh Lord"]
+      "leadBy": ["Skorpekh Lord"]
     },
     {
       "id": "dc0545fd-6c44-55ac-8f68-c4be42cd29bf",
@@ -4439,7 +4569,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Skorpekh Lord"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Skorpekh Destroyers"],
+        "extra": ""
+      }
     },
     {
       "id": "c802633b-69bf-578d-bcd0-d6fe7f8df65b",
@@ -4536,7 +4670,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Cryptek", "Technomancer"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": "You can attach this model to one of the above units even if one Royal Warden or Noble model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "277cba7f-1bcd-5e66-bf12-3c3305219cab",
@@ -5283,7 +5421,11 @@
         "Noble",
         "Trazyn the Infinite"
       ],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": ""
+      }
     },
     {
       "id": "9a78c91e-bc1a-5f50-ac1b-d36016a80465",
@@ -5592,7 +5734,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Epic Hero", "Vargard Obyron"],
-      "factions": ["Necrons"]
+      "factions": ["Necrons"],
+      "leads": {
+        "units": ["Immortals", "Lychguard", "Necron Warriors"],
+        "extra": "This model can be attached to a unit even if Nemesor Zahndrekh has already been attached to it. If it is, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     }
   ],
   "colours": {

@@ -4,6 +4,92 @@
   "name": "Black Templar",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "FERVENT ACCLAMATION",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Righteous Crusaders",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "The magnetic force of this Black Templar’s\noratory inspires his fellow warriors to\nswear great vows, even in the midst of\nthe battle.",
+      "when": "Your Command phase.",
+      "target": "One Adeptus Astartes\nCharacter unit from your army.",
+      "effect": "Select one Templar Vow that is\nnot active for your army. Until the start\nof your next Command phase, while that\nCharacter is leading a unit, models in\nthat unit gain the benefits of that vow in\naddition to the vow selected to be active\nfor your army at the start of the battle.",
+      "restrictions": "",
+      "id": "fdbf86ea-ee7e-5bb7-8791-1481ad4573e2"
+    },
+    {
+      "name": "NO ESCAPE",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Righteous Crusaders",
+      "turn": "opponents",
+      "phase": ["movement"],
+      "fluff": "Glowing blades and revving chainswords\nclose off the foe’s every avenue of escape.",
+      "when": "Your opponent’s Movement phase,\nwhen an enemy unit (excluding Vehicles\nand Monsters) is selected to Fall Back.",
+      "target": "One Adeptus Astartes unit from\nyour army that is within Engagement\nRange of that enemy unit.",
+      "effect": "Roll one D6, adding 1 to the result\nif the Accept Any Challenge, No Matter\nthe Odds vow is active for your army. On\na 4+, that enemy unit cannot Fall Back\nthis phase and must Remain Stationary.\nOtherwise, that enemy unit can Fall Back\nthis phase, but if it does, all models in that\nunit must take a Desperate Escape test.",
+      "restrictions": "",
+      "id": "c05f7a78-f21d-515f-81fd-9ac9f7f4ded8"
+    },
+    {
+      "name": "DEVOUT PUSH",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Righteous Crusaders",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "With a zealous cry, the Black Templars\npress forward towards victory.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has shot.",
+      "target": "One Adeptus Astartes unit\nfrom your army that had one or more of\nits models destroyed as a result of the\nattacking unit’s attacks.",
+      "effect": "Your unit can make a Normal\nmove of up to D6\", but it must end that\nmove closer to the enemy unit that just\nshot. If the Abhor the Witch, Destroy the\nWitch vow is active for your army, your\nunit can make a Normal move of up to 6\"\ninstead, but it must end that move either\ncloser to the enemy unit that just shot, or\ncloser to the closest enemy Psyker unit. ",
+      "restrictions": "",
+      "id": "dc8763fb-bc7c-5439-bf96-217304508a85"
+    },
+    {
+      "name": "ARMOUR OF CONTEMPT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Righteous Crusaders",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The belligerency and transhuman\nphysiologies of the Adeptus Astartes make\nthem unyielding foes.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, worsen\nthe Armour Penetration characteristic of\nthat attack by 1.",
+      "restrictions": "",
+      "id": "fb6abd3d-eef4-5e85-823a-4f49dd7e9140"
+    },
+    {
+      "name": "CRUSADER'S WRATH",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Righteous Crusaders",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "The Black Templars channel their fervour\ninto a hate-fuelled flurry of blows.",
+      "when": "Fight phase.",
+      "target": "One Adeptus Astartes unit from\nyour army that has not been selected to\nfight this phase.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit makes a melee\nattack, improve the Armour Penetration\ncharacteristic of that attack by 1. If the\nSuffer Not The Unclean to Live vow is\nactive for your army, add 1 to the Strength\ncharacteristic of that attack as well.",
+      "restrictions": "",
+      "id": "16eb564f-4aab-5848-aac2-5009ff46b424"
+    },
+    {
+      "name": "VICIOUS RIPOSTE",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Righteous Crusaders",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Every blow struck against a Black Templar\nis answered in kind. Even as they are\nlaid low, their blades still lash out at the\nenemies of the divine Emperor.",
+      "when": "Fight phase, just after an enemy\nunit has selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit is destroyed,\nif that model has not fought this phase,\nroll one D6, adding 1 to the result if the\nUphold the Honour of the Emperor vow\nis active for your army. On a 4+, do not\nremove the destroyed model from play; it\ncan fight after the attacking model’s unit\nhas finished making its attacks, and is\nthen removed from play.",
+      "restrictions": "",
+      "id": "51469cba-c994-509e-b4f9-e7bd745ddf85"
+    }
+  ],
   "enhancements": [
     {
       "name": "PERDITION’S EDGE",
@@ -63,7 +149,11 @@
           "profiles": [
             {
               "name": "Combi-weapon",
-              "keywords": ["anti-infantry 4+", "devastating wounds", "rapid fire 1"],
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
               "range": "24\"",
               "attacks": "1",
               "skill": "4+",
@@ -882,7 +972,13 @@
           ]
         }
       ],
-      "keywords": ["Vehicle", "Transport", "Dedicated Transport", "Imperium", "Impulsor"],
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Dedicated Transport",
+        "Imperium",
+        "Impulsor"
+      ],
       "factions": ["Adeptus Astartes", "Black Templars"]
     },
     {
@@ -1260,7 +1356,13 @@
           ]
         }
       ],
-      "keywords": ["Vehicle", "Smoke", "Transport", "Imperium", "Repulsor Executioner"],
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Transport",
+        "Imperium",
+        "Repulsor Executioner"
+      ],
       "factions": ["Adeptus Astartes", "Black Templars"]
     },
     {
@@ -1322,7 +1424,11 @@
           "profiles": [
             {
               "name": "Combi-weapon",
-              "keywords": ["anti-infantry 4+", "devastating wounds", "rapid fire 1"],
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
               "range": "24\"",
               "attacks": "1",
               "skill": "3+",
@@ -1377,15 +1483,36 @@
           ]
         }
       ],
-      "keywords": ["Infantry", "Character", "Grenades", "Imperium", "Tacticus", "Castellan"],
-      "factions": ["Adeptus Astartes", "Black Templars"]
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Castellan"
+      ],
+      "factions": ["Adeptus Astartes", "Black Templars"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "68bd0bd6-bbf1-5464-a004-0074c02e764a",
       "name": "Chaplain Grimaldus",
       "faction_id": "CHBT",
       "leader": "This unit can be attached to the following units: ■ Assault Intercessor Squad ■ Infernus Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren",
-      "composition": ["1 Chaplain Grimaldus – Epic Hero", "3 Cenobyte Servitors"],
+      "composition": [
+        "1 Chaplain Grimaldus – Epic Hero",
+        "3 Cenobyte Servitors"
+      ],
       "loadout": "Chaplain Grimaldus is equipped with: plasma pistol; artificer crozius. Every Cenobyte Servitor is equipped with: close combat weapon.",
       "wargear": ["None"],
       "transport": "",
@@ -1525,7 +1652,17 @@
         "Grenades",
         "Chaplain Grimaldus"
       ],
-      "factions": ["Adeptus Astartes", "Black Templars"]
+      "factions": ["Adeptus Astartes", "Black Templars"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "e7576cd7-d91f-5864-bc14-9b38345b9417",
@@ -1802,7 +1939,13 @@
           ]
         }
       ],
-      "keywords": ["Infantry", "Battleline", "Grenades", "Imperium", "Crusader Squad"],
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Crusader Squad"
+      ],
       "factions": ["Adeptus Astartes", "Black Templars"]
     },
     {
@@ -1898,8 +2041,25 @@
           ]
         }
       ],
-      "keywords": ["Infantry", "Character", "Epic Hero", "Grenades", "Imperium", "Tacticus", "High Marshal Helbrecht"],
-      "factions": ["Adeptus Astartes", "Black Templars"]
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "High Marshal Helbrecht"
+      ],
+      "factions": ["Adeptus Astartes", "Black Templars"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "9892bec6-67ae-5ad3-b020-86a6f127fce7",
@@ -1908,7 +2068,9 @@
       "leader": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Infernus Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren ■ Sternguard Veteran Squad",
       "composition": ["1 Marshal"],
       "loadout": "This model is equipped with: plasma pistol; master-crafted power weapon.",
-      "wargear": ["This model’s plasma pistol can be replaced with one combi-weapon."],
+      "wargear": [
+        "This model’s plasma pistol can be replaced with one combi-weapon."
+      ],
       "transport": "",
       "points": [
         {
@@ -1957,7 +2119,11 @@
           "profiles": [
             {
               "name": "Combi-weapon",
-              "keywords": ["anti-infantry 4+", "devastating wounds", "rapid fire 1"],
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
               "range": "24\"",
               "attacks": "1",
               "skill": "3+",
@@ -2008,15 +2174,37 @@
           ]
         }
       ],
-      "keywords": ["Infantry", "Character", "Grenades", "Imperium", "Tacticus", "Marshal"],
-      "factions": ["Adeptus Astartes", "Black Templars"]
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Marshal"
+      ],
+      "factions": ["Adeptus Astartes", "Black Templars"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "98766136-bd99-5bf9-85e2-cfa97cfc2030",
       "name": "Primaris Crusader Squad",
       "faction_id": "CHBT",
       "leader": "",
-      "composition": ["1 Primaris Sword Brother", "5-11 Primaris Initiates", "4-8 Primaris Neophytes"],
+      "composition": [
+        "1 Primaris Sword Brother",
+        "5-11 Primaris Initiates",
+        "4-8 Primaris Neophytes"
+      ],
       "loadout": "The Primaris Sword Brother is equipped with: heavy bolt pistol; power weapon. Every Primaris Initiate is equipped with: bolt pistol; bolt rifle; close combat weapon. Every Primaris Neophyte is equipped with: bolt pistol; Astartes chainsword.",
       "wargear": [
         "The Primaris Sword Brother’s heavy bolt pistol can be replaced with 1 pyre pistol.",
@@ -2225,16 +2413,32 @@
           ]
         }
       ],
-      "keywords": ["Infantry", "Battleline", "Grenades", "Imperium", "Tacticus", "Primaris Crusader Squad"],
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Primaris Crusader Squad"
+      ],
       "factions": ["Adeptus Astartes", "Black Templars"],
-      "ledBy": ["Castellan", "Chaplain Grimaldus", "High Marshal Helbrecht", "Marshal", "The Emperor’s Champion"]
+      "leadBy": [
+        "Castellan",
+        "Chaplain Grimaldus",
+        "High Marshal Helbrecht",
+        "Marshal",
+        "The Emperor’s Champion"
+      ]
     },
     {
       "id": "3b3a03d0-07a9-5946-b97d-414f13fa9207",
       "name": "Primaris Sword Brethren",
       "faction_id": "CHBT",
       "leader": "",
-      "composition": ["1 Sword Brother Castellan", "4-10 Primaris Sword Brothers"],
+      "composition": [
+        "1 Sword Brother Castellan",
+        "4-10 Primaris Sword Brothers"
+      ],
       "loadout": "Every model is equipped with: heavy bolt pistol; Astartes chainsword.",
       "wargear": [
         "Any number of Primaris Sword Brothers can each have their Astartes chainsword replaced with 1 power weapon.",
@@ -2247,10 +2451,10 @@
       "points": [
         {
           "models": "5",
-          "cost": "150"
+          "cost": "165"
         },
         {
-          "models": "11",
+          "models": "10",
           "cost": "330"
         }
       ],
@@ -2296,7 +2500,11 @@
           "profiles": [
             {
               "name": "Combi-weapon",
-              "keywords": ["anti-infantry 4+", "devastating wounds", "rapid fire 1"],
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
               "range": "24\"",
               "attacks": "1",
               "skill": "3+",
@@ -2417,9 +2625,21 @@
           ]
         }
       ],
-      "keywords": ["Infantry", "Grenades", "Imperium", "Tacticus", "Primaris Sword Brethren"],
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Primaris Sword Brethren"
+      ],
       "factions": ["Adeptus Astartes", "Black Templars"],
-      "ledBy": ["Castellan", "Chaplain Grimaldus", "High Marshal Helbrecht", "Marshal", "The Emperor’s Champion"]
+      "leadBy": [
+        "Castellan",
+        "Chaplain Grimaldus",
+        "High Marshal Helbrecht",
+        "Marshal",
+        "The Emperor’s Champion"
+      ]
     },
     {
       "id": "dff24b85-9eb0-5376-b4c7-d270dba31a35",
@@ -2514,8 +2734,26 @@
           ]
         }
       ],
-      "keywords": ["Infantry", "Character", "Epic Hero", "Grenades", "Imperium", "Tacticus", "The Emperor’s Champion"],
-      "factions": ["Adeptus Astartes", "Black Templars"]
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "The Emperor’s Champion"
+      ],
+      "factions": ["Adeptus Astartes", "Black Templars"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     }
   ],
   "colours": {

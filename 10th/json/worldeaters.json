@@ -4,6 +4,92 @@
   "name": "World Eaters",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "GORY MASSACRE",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Berzerker Warband",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Those who witness the massacres\ninflicted by the World Eaters flee to avoid\nbeing the next victims.",
+      "when": "Fight phase.",
+      "target": "One World Eaters unit from\nyour army that made a Charge move this\nturn and destroyed one or more enemy\nunits this phase.",
+      "effect": "In your opponent’s next\nCommand phase, each enemy unit within\n6\" of your unit must take a Battle-shock\ntest. If the unit taking that test is Below\nHalf-strength, subtract 1 from that test.\nEnemy units affected by this Stratagem\ndo not need to take any other Battle-shock\ntests in the same phase.",
+      "restrictions": "",
+      "id": "5cbd7812-cc6b-56de-82a8-ccfa186213c5"
+    },
+    {
+      "name": "FOR THE SKULL THRONE!",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Berzerker Warband",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Khorne rewards those who test their might\nagainst the strongest foes, blessing the\ngreatest warriors with his favour.",
+      "when": "Fight phase.",
+      "target": "One World Eaters unit from\nyour army that has not been selected to\nfight this phase.",
+      "effect": "Until the end of the phase,\neach time a model in your unit makes a\nmelee attack that targets a Character,\nMonster or Vehicle unit, add 1 to the\nWound roll. ",
+      "restrictions": "",
+      "id": "b66ff035-4fab-51df-8e09-691d9ad395bf"
+    },
+    {
+      "name": "FOR THE BLOOD GOD!",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Berzerker Warband",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "When blood spills, the blessings of the\nBlood God are bountiful.",
+      "when": "Fight phase, just after a World\nEaters unit from your army destroys an\nenemy unit.",
+      "target": "That World Eaters unit.",
+      "effect": "Make a Blessings of Khorne\nroll. You can use the results of this roll\nto activate one Blessing of Khorne.\nThat Blessing of Khorne does not count\ntowards your maximum number of\nactivated Blessings of Khorne, but all\nother rules for Blessings of Khorne apply.",
+      "restrictions": "",
+      "id": "0d7703d6-acf9-5340-b5b6-16f337be378f"
+    },
+    {
+      "name": "KHORNE CARES NOT…",
+      "cost": 2,
+      "type": "Strategic Ploy",
+      "detachment": "Berzerker Warband",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Khorne cares not from whence the blood\nflows, so long as it flows, and mere flesh\nwounds will not stay the wrath of the\nWorld Eaters.",
+      "when": "Fight phase, just after an enemy\nunit has selected its targets.",
+      "target": "One World Eaters unit from\nyour army that was selected as the\ntarget of one or more of that enemy\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, subtract\n1 from the Damage characteristic of\nthat attack.",
+      "restrictions": "",
+      "id": "f35d3cfc-c349-501f-9b88-ff6ff7577621"
+    },
+    {
+      "name": "BLOOD OFFERING",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Berzerker Warband",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "The blood of Khorne’s devoted warriors\nis still blood, and when the battleground\nruns red, it is still a worthy addition to the\nBlood God’s domain.",
+      "when": "Any phase.",
+      "target": "One World Eaters unit from\nyour army that was just destroyed\nwhile it was within range of an objective\nmarker you controlled. You can use this\nStratagem on that unit even though it was\njust destroyed.",
+      "effect": "That objective marker remains\nunder your control, even if you have\nno models within range of it, until your\nopponent controls it at the start or end of\nany turn. ",
+      "restrictions": "",
+      "id": "53afdde4-1bee-5c80-8a0f-bd0250bc8339"
+    },
+    {
+      "name": "APOPLECTIC FRENZY",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Berzerker Warband",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "Those who fight for Khorne are driven\nto even greater depths of rage, surging\ntowards the foe in a barely controlled tide.",
+      "when": "Your Movement phase.",
+      "target": "One World Eaters unit from\nyour army that has not been selected to\nmove this phase.",
+      "effect": "Until the end of the phase, if your\nunit Advances, do not make an Advance\nroll for it. Instead, until the end of the\nphase, add 6\" to the Move characteristic\nof models in your unit.",
+      "restrictions": "",
+      "id": "c438753b-cc73-5793-92ff-a36cefd8a643"
+    }
+  ],
   "enhancements": [
     {
       "name": "Battle-lust",
@@ -252,7 +338,7 @@
       ],
       "keywords": ["Infantry", "Chaos", "Khorne", "Daemon", "Eightbound"],
       "factions": ["World Eaters"],
-      "ledBy": ["Lord Invocatus", "World Eaters Lord On Juggernaut"]
+      "leadBy": ["Lord Invocatus", "World Eaters Lord On Juggernaut"]
     },
     {
       "id": "d9e28d2d-c9cf-57ee-8343-7dc622678ab4",
@@ -377,7 +463,7 @@
         "Exalted Eightbound"
       ],
       "factions": ["World Eaters"],
-      "ledBy": ["Lord Invocatus", "World Eaters Lord On Juggernaut"]
+      "leadBy": ["Lord Invocatus", "World Eaters Lord On Juggernaut"]
     },
     {
       "id": "d03e0726-20ac-5498-99ac-6732e375a337",
@@ -615,7 +701,11 @@
         "Khorne",
         "Khârn the Betrayer"
       ],
-      "factions": ["World Eaters"]
+      "factions": ["World Eaters"],
+      "leads": {
+        "units": ["Khorne Berzerkers"],
+        "extra": ""
+      }
     },
     {
       "id": "c7cdcaef-03ab-5051-ac97-17286d4bcb34",
@@ -757,7 +847,7 @@
         "Berzerkers"
       ],
       "factions": ["World Eaters"],
-      "ledBy": [
+      "leadBy": [
         "Khârn The Betrayer",
         "Lord Invocatus",
         "World Eaters Lord On Juggernaut",
@@ -779,11 +869,11 @@
       "points": [
         {
           "models": "1",
-          "cost": "420"
+          "cost": "480"
         },
         {
           "models": "1",
-          "cost": "420"
+          "cost": "525"
         }
       ],
       "abilities": {
@@ -1033,7 +1123,11 @@
         "Khorne",
         "Lord Invocatus"
       ],
-      "factions": ["World Eaters"]
+      "factions": ["World Eaters"],
+      "leads": {
+        "units": ["Eightbound", "Exalted Eightbound", "Khorne Berzerkers"],
+        "extra": ""
+      }
     },
     {
       "id": "81be3c7a-4460-500f-ad9f-ac91d21f2fb2",
@@ -2252,7 +2346,11 @@
         "Khorne",
         "Lord on Juggernaut"
       ],
-      "factions": ["World Eaters"]
+      "factions": ["World Eaters"],
+      "leads": {
+        "units": ["Eightbound", "Exalted Eightbound", "Khorne Berzerkers"],
+        "extra": ""
+      }
     },
     {
       "id": "4589dbe5-a6fc-5a57-b3e1-1cfc93921ecf",
@@ -2344,7 +2442,11 @@
         "Khorne",
         "Master of Executions"
       ],
-      "factions": ["World Eaters"]
+      "factions": ["World Eaters"],
+      "leads": {
+        "units": ["Khorne Berzerkers"],
+        "extra": ""
+      }
     },
     {
       "id": "a2477841-2f7f-500d-be28-1242ed236ec9",
