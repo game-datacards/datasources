@@ -4,6 +4,92 @@
   "name": "Dark Angels",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "UNFORGIVEN FURY",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Unforgiven Task Force",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "With focused aggression, the Dark Angels\nrelentlessly punish the foe.",
+      "when": "Your Shooting phase or the\nFight phase.",
+      "target": "One Adeptus Astartes unit from\nyour army that has not been selected to\nshoot or fight this phase.",
+      "effect": "Until the end of the phase,\nweapons equipped by models in your\nunit have the [LETHAL HITS] ability. In\naddition, if one or more Adeptus Astartes\nunits from your army are currently\nBattle-shocked, until the end of the phase,\neach time a model in your unit makes an\nattack, a successful unmodified Hit roll of\n5+ scores a Critical Hit.",
+      "restrictions": "",
+      "id": "1d7327f6-2275-5346-a94c-a1348ce764c1"
+    },
+    {
+      "name": "INTRACTABLE",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Unforgiven Task Force",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "Although stubborn warriors, even the\nresolute Dark Angels know that a fighting\nretreat can be the wisest course of action.",
+      "when": "Your Movement phase, just after\nan Adeptus Astartes unit from your army\nFalls Back.",
+      "target": "That Adeptus Astartes unit.",
+      "effect": "Until the end of the turn, that unit\nis eligible to shoot and declare a charge,\neven though it Fell Back this phase.",
+      "restrictions": "",
+      "id": "322ad98b-d336-52c6-8ccb-aafdcb67002d"
+    },
+    {
+      "name": "ARMOUR OF CONTEMPT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Unforgiven Task Force",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The belligerency and transhuman\nphysiologies of the Adeptus Astartes make\nthem unyielding foes.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, worsen\nthe Armour Penetration characteristic of\nthat attack by 1.",
+      "restrictions": "",
+      "id": "fb6abd3d-eef4-5e85-823a-4f49dd7e9140"
+    },
+    {
+      "name": "FIRE DISCIPLINE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Unforgiven Task Force",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "There is no escaping the Unforgiven’s\nwrath when they bring their disciplined\nfirepower to bear.",
+      "when": "Your Shooting phase.",
+      "target": "One Adeptus Astartes unit from\nyour army that has not been selected to\nshoot this phase.",
+      "effect": "Until the end of the phase, ranged\nweapons equipped by models in that\nunit have the [ASSAULT], [HEAVY] and\n[IGNORES COVER] abilities.",
+      "restrictions": "",
+      "id": "2486bbc8-23bd-52bc-bfbb-a3ac97915247"
+    },
+    {
+      "name": "GRIM RETRIBUTION",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Unforgiven Task Force",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "The Dark Angels are renowned for yielding\nnothing to the enemy, and fighting back\nwith unanswerable fury in the face of\nodds that would force even other Adeptus\nAstartes to reconsider their position.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has shot.",
+      "target": "One Adeptus Astartes unit from\nyour army that had one or more models\ndestroyed as a result of the attacking\nunit’s attacks.",
+      "effect": "Your unit can shoot as if it were\nyour Shooting phase, but it must target\nthe enemy unit that just attacked it, and\ncan only do so if that enemy unit is an\neligible target.",
+      "restrictions": "",
+      "id": "5e513202-a519-5887-a233-43b658aa37e6"
+    },
+    {
+      "name": "UNBREAKABLE LINES",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Unforgiven Task Force",
+      "turn": "opponents",
+      "phase": ["charge"],
+      "fluff": "Countless assaults have faltered against\nthe unbreakable ceramite wall that is the\nUnforgiven standing their ground.",
+      "when": "Your opponent’s Charge phase, just\nafter an enemy unit ends a Charge move.",
+      "target": "One Adeptus Astartes unit from\nyour army within Engagement Range of\nthat enemy unit.",
+      "effect": "Until the end of the turn, each\ntime an attack is allocated to a model in\nyour unit, subtract 1 from the Damage\ncharacteristic of that attack.",
+      "restrictions": "",
+      "id": "73bd906d-efc8-5ed4-aea9-9faa213141e9"
+    }
+  ],
   "enhancements": [
     {
       "name": "Shroud of Heroes",
@@ -145,7 +231,16 @@
         "Chaplain",
         "Asmodai"
       ],
-      "factions": ["Adeptus Astartes", "Dark Angels"]
+      "factions": ["Adeptus Astartes", "Dark Angels"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "dba448cc-ea5e-5fd9-bd91-c795467fd1d2",
@@ -249,7 +344,18 @@
         "Chapter Master",
         "Azrael"
       ],
-      "factions": ["Adeptus Astartes", "Dark Angels"]
+      "factions": ["Adeptus Astartes", "Dark Angels"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "b0e28fbd-1d1d-5c84-acc7-ee729e62fe99",
@@ -347,7 +453,18 @@
         "Captain",
         "Belial"
       ],
-      "factions": ["Adeptus Astartes", "Dark Angels"]
+      "factions": ["Adeptus Astartes", "Dark Angels"],
+      "leads": {
+        "units": [
+          "Deathwing Command Squad",
+          "Deathwing Knights",
+          "Deathwing Squad",
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "0a16e1a6-afee-5421-8445-d0eccde8d7d2",
@@ -613,7 +730,7 @@
         "Deathwing Command Squad"
       ],
       "factions": ["Adeptus Astartes", "Dark Angels"],
-      "ledBy": ["Belial", "Deathwing Strikemaster"]
+      "leadBy": ["Belial", "Deathwing Strikemaster"]
     },
     {
       "id": "0a59cf75-fb0a-540f-9206-4ff05900b6a4",
@@ -709,7 +826,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Terminator", "Deathwing Knights"],
       "factions": ["Adeptus Astartes", "Dark Angels"],
-      "ledBy": ["Belial"]
+      "leadBy": ["Belial"]
     },
     {
       "id": "07279e32-bea5-56f0-83d5-031c5a19458e",
@@ -879,7 +996,17 @@
         "Lieutenant",
         "Deathwing Strikemaster"
       ],
-      "factions": ["Adeptus Astartes", "Dark Angels"]
+      "factions": ["Adeptus Astartes", "Dark Angels"],
+      "leads": {
+        "units": [
+          "Deathwing Command Squad",
+          "Deathwing Squad",
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "76f2cda0-0d76-57a6-9b61-7db0598b1683",
@@ -1246,7 +1373,16 @@
         "Imperium",
         "Ezekiel"
       ],
-      "factions": ["Adeptus Astartes", "Dark Angels"]
+      "factions": ["Adeptus Astartes", "Dark Angels"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "7e3ea0b9-3d47-53aa-9bb5-757c44eb1ec1",
@@ -1341,7 +1477,17 @@
         "Captain",
         "Lazarus"
       ],
-      "factions": ["Adeptus Astartes", "Dark Angels"]
+      "factions": ["Adeptus Astartes", "Dark Angels"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "1cecd901-d66e-5d61-a0eb-6540650e63f6",
@@ -1760,7 +1906,7 @@
         "Ravenwing Black Knights"
       ],
       "factions": ["Adeptus Astartes", "Dark Angels"],
-      "ledBy": ["Sammael"]
+      "leadBy": ["Sammael"]
     },
     {
       "id": "65697143-7593-5759-a841-ef1aaddef7f6",
@@ -1934,7 +2080,7 @@
         "Ravenwing Command Squad"
       ],
       "factions": ["Adeptus Astartes", "Dark Angels"],
-      "ledBy": ["Sammael"]
+      "leadBy": ["Sammael"]
     },
     {
       "id": "eab64694-a982-55df-80a6-73d5036f7d8f",
@@ -2494,7 +2640,16 @@
         "Captain",
         "Sammael"
       ],
-      "factions": ["Adeptus Astartes", "Dark Angels"]
+      "factions": ["Adeptus Astartes", "Dark Angels"],
+      "leads": {
+        "units": [
+          "Bike Squad",
+          "Outrider Squad",
+          "Ravenwing Black Knights",
+          "Ravenwing Command Squad"
+        ],
+        "extra": ""
+      }
     }
   ],
   "colours": {

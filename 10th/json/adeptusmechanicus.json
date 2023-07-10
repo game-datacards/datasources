@@ -4,6 +4,92 @@
   "name": "Adeptus Mechanicus",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "BALEFUL HALO",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Rad-Cohort",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "A haze of deadly radiation hangs around\nthe warriors of a Rad-Cohort, every\nexhalation they make adding to the\nisotopic fog, sapping the strength and\nstamina of those who are not inured to\nits effects.",
+      "when": "Fight phase, just after an enemy\nunit has selected its targets.",
+      "target": "One Adeptus Mechanicus unit\nfrom your army (excluding Vehicle units)\nthat was selected as the target of one or\nmore of that enemy unit’s attacks.",
+      "effect": "Until the end of the turn, each\ntime an attack is made that targets your\nunit, subtract 1 from the Wound roll.",
+      "restrictions": "",
+      "id": "0bd5a05e-76c0-5f90-ae3a-b203ca8f022d"
+    },
+    {
+      "name": "EXTINCTION ORDER",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Rad-Cohort",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "As Tech-Priests order the purge of an area\nof the battlefield, rad-bombardments are\nredoubled in the hopes of turning it into\na wasteland.",
+      "when": "Your Command phase.",
+      "target": "One Tech-Priest model from\nyour army and one objective marker\nwithin 24\" of that model.",
+      "effect": "Roll one D6 for each enemy unit\nwithin range of that objective marker. On a\n4+, that unit suffers 1 mortal wound and it\nmust take a Battle-shock test.",
+      "restrictions": "",
+      "id": "41cf9bad-476c-54ac-a9bf-0dd56ddde70d"
+    },
+    {
+      "name": "LETHAL DOSAGE",
+      "cost": 2,
+      "type": "Wargear",
+      "detachment": "Rad-Cohort",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "Sanctified with the Tri-fold Litany, the\nmost blessed power cells, fuel canisters\nand solid slugs have spent a decade\nin the oldest and most irradiated forge\ntemple to certify their lethality.",
+      "when": "Your Shooting phase.",
+      "target": "One Adeptus Mechanicus\nunit from your army that has not been\nselected to shoot this phase.",
+      "effect": "Until the end of the phase,\neach time a model in your unit makes a\nranged attack that targets an enemy unit\n(excluding Vehicle units), add 1 to the\nWound roll.",
+      "restrictions": "",
+      "id": "d8616627-c676-5113-82ea-e2a56fa6b8eb"
+    },
+    {
+      "name": "AGGRESSOR IMPERATIVE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Rad-Cohort",
+      "turn": "your",
+      "phase": ["charge"],
+      "fluff": "The Skitarii feel the press of an invisible\nhand upon their minds as the Machine\nGod drives them forward. Servos are\npushed to their structural limits as fibre\nbundles fill with the boundless energy of\nthe Motive Force and propel the faithful on\nan unstoppable crusade.",
+      "when": "Your Charge phase.",
+      "target": "One Skitarii unit from your army\nthat Advanced this turn.",
+      "effect": "Until the end of the turn, your unit\nis eligible to declare a charge even though\nit Advanced this turn.",
+      "restrictions": "You can only use this\nStratagem if the Conqueror Imperative is\nactive for your army.",
+      "id": "cff7fbfb-17fe-5ed8-b8be-e1e1c4b1b077"
+    },
+    {
+      "name": "VENGEFUL FALLOUT",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Rad-Cohort",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "The sentence for those who dare strike\nat the Tech-Priests' holy creations has\nbeen carefully prepared in advance and\nit can be unleashed with an anger born of\nfanatical faith.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has resolved\nits attacks.",
+      "target": "One Adeptus Mechanicus unit\nfrom your army that was selected as\nthe target of one or more of that enemy\nunit’s attacks.",
+      "effect": "Your unit can shoot as if it were\nyour Shooting phase, but it must target\nonly that enemy unit when doing so, and\nit can only do so if that enemy unit is an\neligible target. After your unit has finished\nmaking these attacks, it is not eligible to\nshoot again this turn.",
+      "restrictions": "",
+      "id": "27444ce2-e55b-5254-8e2f-3846460ef5a3"
+    },
+    {
+      "name": "BULWARK IMPERATIVE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Rad-Cohort",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "The warrior wisdom of experienced\nReductors is force-loaded into the Skitarii’s\nminds. Each pulse of data bestows a\nsensation of sacred invulnerability upon\nthe Tech-Priests’ soldiers.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has selected\nits targets.",
+      "target": "One Skitarii unit from your army\nthat was selected as the target of one or\nmore of that enemy unit’s attacks.",
+      "effect": "Until the end of the turn, models\nin your unit have a 4+ invulnerable save.\nRESTRICTIONS: You can only use this\nStratagem if the Protector Imperative is\nactive for your army.",
+      "restrictions": "",
+      "id": "88641d0c-30cc-5a6a-8e6e-69f408e701b2"
+    }
+  ],
   "enhancements": [
     {
       "name": "Archived Purge Protocols",
@@ -601,7 +687,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Electro-Priests", "Corpuscarii"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
         "Tech-priest Manipulus",
@@ -694,7 +780,11 @@
         "Tech-Priest",
         "Cybernetica Datasmith"
       ],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": ["Kastelan Robots"],
+        "extra": "You must attach this model to a Kastelan Robots unit, even if one or more other Cybernetica Datasmith models have already been attached to it. In such cases, if that Bodyguard unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths. If you cannot attach this model to a Kastelan Robots unit, this model cannot be deployed and counts as having been destroyed during the first battle round."
+      }
     },
     {
       "id": "f6c2e253-82e2-54bf-9125-5e195516b349",
@@ -766,7 +856,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Electro-Priests", "Fulgurite"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
         "Tech-priest Manipulus",
@@ -1052,7 +1142,7 @@
       ],
       "keywords": ["Vehicle", "Walker", "Imperium", "Kastelan Robots"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": ["Cybernetica Datasmith"]
+      "leadBy": ["Cybernetica Datasmith"]
     },
     {
       "id": "8277da97-bfc9-5597-99dc-cbed85744e0e",
@@ -1170,7 +1260,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Kataphron", "Breachers"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
         "Tech-priest Manipulus",
@@ -1317,7 +1407,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Kataphron", "Destroyers"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
         "Tech-priest Manipulus",
@@ -1769,6 +1859,264 @@
       "factions": ["Adeptus Mechanicus"]
     },
     {
+      "id": "0b42829a-8889-5b94-8e48-1e668926ef1f",
+      "name": "Secutarii Hoplites",
+      "faction_id": "AdM",
+      "leader": "",
+      "composition": ["1 Hoplite Alpha", "4-9 Secutarii Hoplites"],
+      "loadout": "Every model is equipped with: arc lance.",
+      "wargear": [
+        "The Hoplite Alpha’s arc lance can be replaced with 1 archeotech pistol.",
+        "The Hoplite Alpha can be equipped with 1 Alpha close combat weapon.",
+        "1 Secutarii Hoplite can be equipped with one of the following: ◦ 1 enhanced data-tether ◦ 1 omnispex"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [
+          {
+            "name": "Enhanced data-tether",
+            "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP"
+          },
+          {
+            "name": "Omnispex",
+            "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+          }
+        ],
+        "core": [],
+        "faction": ["Doctrina Imperatives"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Titan Guard",
+            "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase. When doing so, if there are one or more friendly Adeptus Titanicus units on the battlefield, you can re-roll the subsequent charge roll."
+          }
+        ],
+        "special": [
+          {
+            "name": "SECUTARII",
+            "description": "If a model from your army with the Leader ability can be attached to a Skitarii Vanguard unit, it can be attached to this unit instead."
+          }
+        ],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "3",
+          "sv": "5+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "name": "Secutarii Hoplites"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Arc lance",
+              "keywords": ["anti-vehicle 4+", "devastating wounds"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Archeotech pistol",
+              "keywords": ["devastating wounds", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Alpha close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Arc lance",
+              "keywords": ["anti-vehicle 4+", "devastating wounds", "lance"],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Imperium", "Skitarii", "Secutarii Hoplites"],
+      "factions": ["Adeptus Mechanicus"]
+    },
+    {
+      "id": "62a16a50-4f96-5197-a731-2d2b2057d4bf",
+      "name": "Secutarii Peltasts",
+      "faction_id": "AdM",
+      "leader": "",
+      "composition": ["1 Peltast Alpha", "4-9 Secutarii Peltasts"],
+      "loadout": "Every model is equipped with: galvanic caster; close combat weapon.",
+      "wargear": [
+        "The Peltast Alpha’s arc lance can be replaced with 1 archeotech pistol.",
+        "The Peltast Alpha can be equipped with 1 Alpha close combat weapon.",
+        "1 Secutarii Peltast can be equipped with one of the following: ◦ 1 enhanced data-tether ◦ 1 omnispex"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [
+          {
+            "name": "Enhanced data-tether",
+            "description": "Each time you select the bearer’s unit as the target of a Stratagem, roll one D6: on a 5+, you gain 1CP"
+          },
+          {
+            "name": "Omnispex",
+            "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability."
+          }
+        ],
+        "core": [],
+        "faction": ["Doctrina Imperatives"],
+        "primarch": [],
+        "invul": {
+          "value": "6+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Blind Barrage",
+            "description": "In your Shooting phase, after this unit has shot, select one enemy Infantry unit hit by one or more of those attacks. Until the start of your next turn, while this unit is on the battlefield, that enemy unit is blinded. While a unit is blinded, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+          }
+        ],
+        "special": [
+          {
+            "name": "SECUTARII",
+            "description": "If a model from your army with the Leader ability can be attached to a Skitarii Vanguard unit, it can be attached to this unit instead."
+          }
+        ],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "3",
+          "sv": "5+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "name": "Secutarii Peltasts"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Archeotech pistol",
+              "keywords": ["devastating wounds", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Galvanic caster – flechette",
+              "keywords": ["assault"],
+              "range": "18\"",
+              "attacks": "5",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            },
+            {
+              "name": "Galvanic caster – hammershot",
+              "keywords": ["heavy"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Alpha close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Imperium", "Skitarii", "Secutarii Peltasts"],
+      "factions": ["Adeptus Mechanicus"]
+    },
+    {
       "id": "70269b85-1b31-543f-8c14-697547dafe48",
       "name": "Serberys Raiders",
       "faction_id": "AdM",
@@ -2180,7 +2528,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Servitors"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": ["Tech-priest Enginseer"]
+      "leadBy": ["Tech-priest Enginseer"]
     },
     {
       "id": "3b98c029-9ae1-54d3-a3c4-f008382cca2b",
@@ -2499,7 +2847,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Imperium", "Skitarii", "Marshal"],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": ["Skitarii Rangers", "Skitarii Vanguard"],
+        "extra": ""
+      }
     },
     {
       "id": "dce7d828-db1b-5c95-9190-0fe0b05960bc",
@@ -2682,7 +3034,7 @@
       ],
       "keywords": ["Infantry", "Battleline", "Imperium", "Skitarii", "Rangers"],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Skitarii Marshal",
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
@@ -2877,7 +3229,7 @@
         "Vanguard"
       ],
       "factions": ["Adeptus Mechanicus"],
-      "ledBy": [
+      "leadBy": [
         "Skitarii Marshal",
         "Tech-priest Dominus",
         "Tech-priest Enginseer",
@@ -3384,7 +3736,18 @@
         "Tech-Priest",
         "Dominus"
       ],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": [
+          "Corpuscarii Electro-Priests",
+          "Fulgurite Electro-Priests",
+          "Kataphron Breachers",
+          "Kataphron Destroyers",
+          "Skitarii Rangers",
+          "Skitarii Vanguard"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "8d5f2317-c4d1-5591-8a54-7f153f91e212",
@@ -3494,7 +3857,19 @@
         "Tech-Priest",
         "Enginseer"
       ],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": [
+          "Corpuscarii Electro-Priests",
+          "Fulgurite Electro-Priests",
+          "Kataphron Breachers",
+          "Kataphron Destroyers",
+          "Servitors",
+          "Skitarii Rangers",
+          "Skitarii Vanguard"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "7fc12fcd-9030-53ac-9a4c-bc5b861368f3",
@@ -3602,7 +3977,18 @@
         "Tech-Priest",
         "Manipulus"
       ],
-      "factions": ["Adeptus Mechanicus"]
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": [
+          "Corpuscarii Electro-Priests",
+          "Fulgurite Electro-Priests",
+          "Kataphron Breachers",
+          "Kataphron Destroyers",
+          "Skitarii Rangers",
+          "Skitarii Vanguard"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "0f22e6a2-5162-5a89-847d-54d8b9a931f1",
@@ -3693,6 +4079,145 @@
         "Imperium",
         "Tech-Priest",
         "Technoarcheologist"
+      ],
+      "factions": ["Adeptus Mechanicus"],
+      "leads": {
+        "units": [
+          "Corpuscarii Electro-Priests",
+          "Fulgurite Electro-Priests",
+          "Kataphron Breachers",
+          "Kataphron Destroyers",
+          "Skitarii Rangers",
+          "Skitarii Vanguard"
+        ],
+        "extra": ""
+      }
+    },
+    {
+      "id": "6917fb74-6102-5353-a204-babd803a7b27",
+      "name": "Terrax-pattern Termite",
+      "faction_id": "AdM",
+      "leader": "",
+      "composition": ["1 Terrax-pattern Termite"],
+      "loadout": "This model is equipped with: Terrax melta cutter; 2 combi-bolters; Termite drill.",
+      "wargear": [
+        "This model’s 2 combi-bolters can be replaced with one of the following ◦ 2 heavy flamers ◦ 2 twin volkite chargers"
+      ],
+      "transport": "This model has a transport capacity of 12 Adeptus Mechanicus Infantry models. It cannot transport Jump Pack or Kataphron models.",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3", "Deep Strike"],
+        "faction": ["Doctrina Imperatives"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Termite Assault",
+            "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "8\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "14",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Terrax-pattern Termite"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Terrax melta cutter",
+              "keywords": ["melta 2"],
+              "range": "12\"",
+              "attacks": "5",
+              "skill": "4+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin volkite charger",
+              "keywords": ["devastating wounds", "twin-linked"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Termite drill",
+              "keywords": ["anti-vehicle 3+"],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "14",
+              "ap": "-2",
+              "damage": "D3+3"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Imperium",
+        "Transport",
+        "Dedicated Transport",
+        "Terrax-pattern Termite"
       ],
       "factions": ["Adeptus Mechanicus"]
     }

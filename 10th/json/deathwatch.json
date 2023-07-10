@@ -4,6 +4,92 @@
   "name": "Death Watch",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "ARMOUR OF CONTEMPT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Black Spear Task Force",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The belligerency and transhuman\nphysiologies of the Adeptus Astartes make\nthem unyielding foes.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, worsen\nthe Armour Penetration characteristic of\nthat attack by 1.",
+      "restrictions": "",
+      "id": "fb6abd3d-eef4-5e85-823a-4f49dd7e9140"
+    },
+    {
+      "name": "TELEPORTARIUM",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Black Spear Task Force",
+      "turn": "opponents",
+      "phase": ["fight"],
+      "fluff": "\nSite-to-site battlefield teleportation is a\nrare capability indeed, used only by the\nDeathwatch in extreme situations.",
+      "when": "End of your opponent’s\nFight phase.",
+      "target": "Up to two Kill Team units\nfrom your army, or one other Adeptus\nAstartes Infantry unit from your army.",
+      "effect": "Remove those units from the\nbattlefield. In the Reinforcements step of\nyour next Movement phase, set each of\nthose units up anywhere on the battlefield\nthat is more than 9\" horizontally away\nfrom all enemy models.",
+      "restrictions": "You cannot select any\nunits that are within Engagement Range of\none or more enemy units.",
+      "id": "aaac23ee-bcc0-55e7-8466-89e17334fa0f"
+    },
+    {
+      "name": "ADAPTIVE TACTICS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Black Spear Task Force",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "Only a truly versatile approach to warfare\nallows the tactical genius of the Deathwatch\nto best the myriad xenos foes they face.",
+      "when": "Your Command phase.",
+      "target": "Up to two Kill Team units\nfrom your army, or one other Adeptus\nAstartes unit your army.",
+      "effect": "For each unit targeted, select the\nFuror Tactics, Malleus Tactics or Purgatus\nTactics. Until the start of your next\nCommand phase, that Mission Tactic is\nactive for that unit instead of any Mission\nTactic that is active for your army.",
+      "restrictions": "",
+      "id": "b8f94350-f9a9-5159-bbb9-01b688b330ac"
+    },
+    {
+      "name": "HELLFIRE ROUNDS",
+      "cost": 1,
+      "type": "Wargear",
+      "detachment": "Black Spear Task Force",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "Hellfire rounds douse their targets in\nvoracious acids that are utterly lethal to\norganic life.",
+      "when": "Your Shooting phase.",
+      "target": "Up to two Kill Team units from\nyour army that have not been selected to\nshoot this phase, or one other Adeptus\nAstartes unit from your army (excluding\nVehicles) that has not been selected to\nshoot this phase.",
+      "effect": "Until the end of the phase, ranged\nweapons (excluding Devastating Wounds\nweapons) equipped by models in your\nunit have the [ANTI-INFANTRY 2+] and\n[ANTI-MONSTER 5+] abilities.\nRESTRICTIONS: You cannot select any\nunits that have already been targeted with\neither the Kraken Rounds or Dragonfire\nRounds Stratagems this phase.",
+      "restrictions": "",
+      "id": "ef86115e-1a7d-58ff-a9cd-71cdf4c5394c"
+    },
+    {
+      "name": "KRAKEN ROUNDS",
+      "cost": 1,
+      "type": "Wargear",
+      "detachment": "Black Spear Task Force",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "Kraken rounds utilise adamantine cores\nand improved propellants to penetrate the\nthickest hide.",
+      "when": "Your Shooting phase.",
+      "target": "Up to two Kill Team units from\nyour army that have not been selected to\nshoot this phase, or one other Adeptus\nAstartes unit from your army (excluding\nVehicles) that has not been selected to\nshoot this phase.",
+      "effect": "Until the end of the phase,\nimprove the Armour Penetration\ncharacteristic of ranged weapons\nequipped by models in your unit by 1 and\nimprove the range characteristic of those\nweapons by 6\".",
+      "restrictions": "You cannot select any\nunits that have already been targeted with\neither the Dragonfire Rounds or Hellfire\nRounds Stratagems this phase.",
+      "id": "5b5a771f-d931-516f-a029-e120534c50ec"
+    },
+    {
+      "name": "DRAGONFIRE ROUNDS",
+      "cost": 1,
+      "type": "Wargear",
+      "detachment": "Black Spear Task Force",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "Dragonfire rounds are designed to explode\njust before contact, saturating foes in cover\nwith searing gas and flames.",
+      "when": "Your Shooting phase.",
+      "target": "Up to two Kill Team units from\nyour army that have not been selected to\nshoot this phase, or one other Adeptus\nAstartes unit from your army (excluding\nVehicles) that has not been selected to\nshoot this phase.",
+      "effect": "Until the end of the phase,\nranged weapons equipped by models\nin your unit have the [ASSAULT] and\n[IGNORES COVER] abilities.",
+      "restrictions": "You cannot select any\nunits that have already been targeted\nwith either the Kraken Rounds or Hellfire\nRounds Stratagems this phase.",
+      "id": "87b0c1e3-580a-50cf-9248-447300c9c9b9"
+    }
+  ],
   "enhancements": [
     {
       "name": "Thief of Secrets",
@@ -850,7 +936,7 @@
         "Deathwatch Veterans"
       ],
       "factions": ["Adeptus Astartes", "Deathwatch"],
-      "ledBy": ["Watch Captain Artemis", "Watch Master"]
+      "leadBy": ["Watch Captain Artemis", "Watch Master"]
     },
     {
       "id": "6d6d7954-6b4c-5b5e-ab5f-b972bf64503e",
@@ -1949,7 +2035,7 @@
         "Proteus Kill Team"
       ],
       "factions": ["Adeptus Astartes", "Deathwatch"],
-      "ledBy": ["Watch Captain Artemis", "Watch Master"]
+      "leadBy": ["Watch Captain Artemis", "Watch Master"]
     },
     {
       "id": "55e4e25e-f3a5-5d16-919f-b82aa3e7a00f",
@@ -2448,7 +2534,11 @@
         "Captain",
         "Watch Captain Artemis"
       ],
-      "factions": ["Adeptus Astartes", "Deathwatch"]
+      "factions": ["Adeptus Astartes", "Deathwatch"],
+      "leads": {
+        "units": ["Deathwatch Veterans", "Proteus Kill Team"],
+        "extra": ""
+      }
     },
     {
       "id": "10af0717-f94a-5ae6-90f3-427da01cbe73",
@@ -2541,7 +2631,11 @@
         "Captain",
         "Watch Master"
       ],
-      "factions": ["Adeptus Astartes", "Deathwatch"]
+      "factions": ["Adeptus Astartes", "Deathwatch"],
+      "leads": {
+        "units": ["Deathwatch Veterans", "Proteus Kill Team"],
+        "extra": ""
+      }
     }
   ],
   "colours": {

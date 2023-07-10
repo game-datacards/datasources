@@ -4,6 +4,92 @@
   "name": "Death Guard",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "FERRIC BLIGHT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Plague Company",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The spreading rust of the Ferric Blight can\nreduce armour of all kinds to nothing.",
+      "when": "Your Shooting phase or the\nFight phase.",
+      "target": "One Death Guard unit from your\narmy that has not been selected to shoot\nor fight this phase.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit makes an\nattack, improve the Armour Penetration\ncharacteristic of that attack by 1. If the\ntarget of that attack is within Contagion\nRange of an Infected objective marker\nyou control and a Critical Wound is scored\nfor that attack, improve the Armour\nPenetration characteristic of that attack\nby 2 instead.",
+      "restrictions": "",
+      "id": "131085e7-990c-528f-8158-5f190613d796"
+    },
+    {
+      "name": "SANGUOUS FLUX",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Plague Company",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Bleeding sores erupt all over enemies\nafflicted by the Sanguous Flux, the wounds\nnever clotting or healing.",
+      "when": "Fight phase.",
+      "target": "One Death Guard unit from your\narmy that has not been selected to fight\nthis phase.",
+      "effect": "Until the end of the phase,\nweapons equipped by models in your unit\nhave the [SUSTAINED HITS 1] ability. While\nyour unit is within range of an Infected\nobjective marker you control, those\nweapons have the [SUSTAINED HITS 2]\nability instead.",
+      "restrictions": "",
+      "id": "60594f75-c75c-5b0c-8cac-275b8eed1f89"
+    },
+    {
+      "name": "DISGUSTINGLY RESILIENT",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Plague Company",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Those favoured by Nurgle are inured to\npain, their rotting bodies shrugging off all\nbut the most traumatic damage with ease.\nWHEN: Fight phase, just after an enemy\nunit has selected its targets.",
+      "when": "Fight phase, just after an enemy\nunit has selected its targets.",
+      "target": "One Death Guard unit from your\narmy that was selected as the target of\none or more of that enemy unit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack is allocated to a model in\nyour unit, subtract 1 from the Damage\ncharacteristic of that attack.",
+      "restrictions": "",
+      "id": "9b6b8c5d-0e40-5bb3-a4e6-0bbd62da38cb"
+    },
+    {
+      "name": "GIFTS OF DECAY",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Plague Company",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "Nurgle is a generous god, and through\nworship and devotion his followers can\ngain mighty rewards as they spread\nsickness in his name.",
+      "when": "Your Command phase.",
+      "target": "One Death Guard model from\nyour army.",
+      "effect": "Your model regains up to D3 lost\nwounds. If your model’s unit is within\nContagion Range of an Infected objective\nmarker you control, your model regains\nup to 3 lost wounds instead.",
+      "restrictions": "",
+      "id": "ba755d5f-790e-5421-a32c-3d24f3cd12cb"
+    },
+    {
+      "name": "BOILBLIGHT",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Plague Company",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "The strange lumps that form on victims\nof Boilblight – also known as Nurgle’s\nFruit, Lumpen Splatter or the Crawling\nPustulence – are easy to spot at a\ndistance for the Death Guard.",
+      "when": "Your Shooting phase.",
+      "target": "One Death Guard unit from\nyour army, and one enemy unit within\nContagion Range of that unit.",
+      "effect": "Until the end of the phase, each\ntime a weapon equipped by a Death\nGuard model from your army targets that\nenemy unit, that weapon has the [HEAVY]\nand [IGNORES COVER] abilities.",
+      "restrictions": "",
+      "id": "a42a1e5a-a92e-5b91-bed9-789afff2f7c8"
+    },
+    {
+      "name": "CLOUD OF FLIES",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Plague Company",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "With a thrumming roar, a thick cloud of\ndaemon flies whirls around the Death Guard\nand obscures them from the enemy’s sight.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has selected\nits targets.",
+      "target": "One Death Guard unit from your\narmy that was selected as the target of\none or more of that enemy unit’s attacks.",
+      "effect": "Until the end of the phase, your\nunit has the Stealth ability.",
+      "restrictions": "",
+      "id": "526c2b7b-5ba3-558e-a8d5-3b1aa4c8e699"
+    }
+  ],
   "enhancements": [
     {
       "name": "Living Plague",
@@ -140,7 +226,11 @@
         "Grenades",
         "Biologus Putrifier"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Plague Marines"],
+        "extra": "You can attach this model to a Plague Marines unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "03151889-d649-524b-a300-a012a530cb1e",
@@ -309,7 +399,7 @@
         "Blightlord Terminators"
       ],
       "factions": ["Death Guard"],
-      "ledBy": [
+      "leadBy": [
         "Death Guard Chaos Lord In Terminator Armour",
         "Death Guard Sorcerer In Terminator Armour",
         "Lord Of Contagion",
@@ -510,7 +600,11 @@
         "Grenades",
         "Chaos Lord"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Plague Marines"],
+        "extra": ""
+      }
     },
     {
       "id": "680c41ca-3123-5d64-be0e-c99612794441",
@@ -667,7 +761,11 @@
         "Terminator",
         "Chaos Lord"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Blightlord Terminators", "Deathshroud Terminators"],
+        "extra": ""
+      }
     },
     {
       "id": "22bd8e91-e3b7-53aa-954e-4e719196d091",
@@ -1626,7 +1724,11 @@
         "Grenades",
         "Death Guard Icon Bearer"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Plague Marines"],
+        "extra": "You can attach this model to a Plague Marines unit, even if one other Leader unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "27360100-1b19-5afe-9f81-b72eb46a5284",
@@ -2417,7 +2519,11 @@
         "Terminator",
         "Sorcerer"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Blightlord Terminators", "Deathshroud Terminators"],
+        "extra": ""
+      }
     },
     {
       "id": "eb5e8c1b-7044-5a1c-9fa7-6acc0917b4c8",
@@ -2527,7 +2633,7 @@
         "Deathshroud Terminators"
       ],
       "factions": ["Death Guard"],
-      "ledBy": [
+      "leadBy": [
         "Death Guard Chaos Lord In Terminator Armour",
         "Death Guard Sorcerer In Terminator Armour",
         "Lord Of Contagion",
@@ -2741,7 +2847,11 @@
         "Grenades",
         "Foul Blightspawn"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Plague Marines"],
+        "extra": "You can attach this model to a Plague Marines unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "b21749fa-3cad-5c12-922b-1924b0e628bf",
@@ -2830,7 +2940,11 @@
         "Grenades",
         "Lord of Contagion"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Blightlord Terminators", "Deathshroud Terminators"],
+        "extra": ""
+      }
     },
     {
       "id": "720ed0f6-a035-582e-80ae-2caa1397496a",
@@ -2928,7 +3042,11 @@
         "Terminator",
         "Lord of Virulence"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Blightlord Terminators", "Deathshroud Terminators"],
+        "extra": ""
+      }
     },
     {
       "id": "bcf0fc13-638a-51d7-b0b6-630b22f34cba",
@@ -3045,7 +3163,11 @@
         "Psyker",
         "Malignant Plaguecaster"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Plague Marines"],
+        "extra": ""
+      }
     },
     {
       "id": "f8f8d778-fea0-5af6-be79-9d3c09870662",
@@ -3507,7 +3629,11 @@
         "Nurgle",
         "Noxious Blightbringer"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Plague Marines"],
+        "extra": "You can attach this model to a Plague Marines unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same Leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "27c961bb-dde0-57b3-abca-1e9823dfa9c9",
@@ -3530,6 +3656,10 @@
         {
           "models": "5",
           "cost": "100"
+        },
+        {
+          "models": "7",
+          "cost": "140"
         },
         {
           "models": "10",
@@ -3755,7 +3885,7 @@
         "Plague Marines"
       ],
       "factions": ["Death Guard"],
-      "ledBy": [
+      "leadBy": [
         "Biologus Putrifier",
         "Death Guard Chaos Lord",
         "Death Guard Icon Bearer",
@@ -3856,7 +3986,11 @@
         "Nurgle",
         "Plague Surgeon"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Plague Marines"],
+        "extra": "You can attach this model to a Plague Marines unit, even if one other Leader unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "191a9eb3-9820-5145-b378-2fc699702fce",
@@ -4075,7 +4209,7 @@
       ],
       "keywords": ["Infantry", "Chaos", "Nurgle", "Poxwalkers"],
       "factions": ["Death Guard"],
-      "ledBy": ["Typhus"]
+      "leadBy": ["Typhus"]
     },
     {
       "id": "e364784e-08a1-55cc-bf39-18df5f3efca2",
@@ -4171,7 +4305,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Chaos", "Nurgle", "Tallyman"],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": ["Plague Marines"],
+        "extra": "You can attach this model to a Plague Marines unit, even if one other Leader unit has already been attached to it (you cannot attach more than one of the same leader to the same unit). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "0108df02-9869-5b94-9596-80f0fe42b689",
@@ -4261,7 +4399,15 @@
         "Terminator",
         "Typhus"
       ],
-      "factions": ["Death Guard"]
+      "factions": ["Death Guard"],
+      "leads": {
+        "units": [
+          "Blightlord Terminators",
+          "Deathshroud Terminators",
+          "Poxwalkers"
+        ],
+        "extra": ""
+      }
     }
   ],
   "colours": {

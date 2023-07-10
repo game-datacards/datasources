@@ -4,6 +4,92 @@
   "name": "Genestealer Cults",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "UNQUESTIONING LOYALTY",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Ascension Day",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "Broodkin are so fanatically loyal that they\ndo not hesitate to sacrifice themselves to\nprotect their leaders.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Genestealer Cults\nCharacter unit from your army that was\nselected as the target of one or more of\nthat enemy unit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime a Character model in your unit\nwould lose a wound, select one friendly\nGenestealer Cults unit within 3\" of it\n(excluding Vehicle units). Your Character\nmodel does not lost that wound and\nthat selected unit suffers one mortal\nwound instead.",
+      "restrictions": "",
+      "id": "99e99640-c567-5652-906e-9c5be922b911"
+    },
+    {
+      "name": "COORDINATED TRAP",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Ascension Day",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "Flowing like a dark tide down hidden\ntunnels, along rubble-choked gulleys or\nthrough sagging and rusted vents, the\nfaithful utterly encircle their enemies.",
+      "when": "The start of your Shooting phase or\nthe start of the Fight phase.",
+      "target": "Two Genestealer Cults units\nfrom your army that have not been\nselected to shoot or fight this phase, and\none enemy unit.",
+      "effect": "Until the end of the phase, each\ntime a model in either of your units makes\nan attack, it can only target that enemy\nunit (and only if it is an eligible target\nfor that attack), and when resolving that\nattack, add 1 to the Wound roll.",
+      "restrictions": "",
+      "id": "df8ecd87-b459-5ae4-8b9e-a224ce8bd22f"
+    },
+    {
+      "name": "TUNNEL CRAWLERS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Ascension Day",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "Squirming, crawling and scrabbling\nthrough confined spaces is second nature\nto many broodkin, and is a skill they\nuse to assail seemingly impregnable\nenemy positions.",
+      "when": "Your Movement phase.",
+      "target": "One Genestealer Cults unit\nfrom your army that is arriving using the\nDeep Strike ability this phase.",
+      "effect": "Your unit can be set up anywhere\non the battlefield that is more than 3\"\nhorizontally away from all enemy models.",
+      "restrictions": "A unit targeted by this\nStratagem is not eligible to declare a\ncharge in the same turn.",
+      "id": "7aef6df0-4d37-5447-aa94-ef2b10634695"
+    },
+    {
+      "name": "A PERFECT AMBUSH",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Ascension Day",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "These Cultists have tracked their enemies\ntirelessly, as predatory beasts stalk their\nprey. Only when their position is perfect do\nthey strike, engulfing their victims in a hail\nof unexpected firepower.",
+      "when": "Your Shooting phase.",
+      "target": "One Genestealer Cults unit\nfrom your army that arrived from Reserves\nthis turn and has not been selected to\nshoot this phase.",
+      "effect": "Until the end of the phase,\nimprove the Ballistic Skill and Armour\nPenetration characteristics of ranged\nweapons equipped by models in your\nunit by 1.",
+      "restrictions": "",
+      "id": "55c30ce2-feae-57b7-8d71-c2e1646dfc63"
+    },
+    {
+      "name": "ONE WITH THE DARKNESS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Ascension Day",
+      "turn": "opponents",
+      "phase": ["shooting"],
+      "fluff": "In dark nooks and crevices the true\nbelievers of the cult whisper and skulk, all\nbut invisible to those who approach.",
+      "when": "Your opponent’s Shooting phase,\njust after an enemy unit has selected\nits targets.",
+      "target": "One Genestealer Cults\nInfantry unit from your army that was\nselected as the target of one or more of\nthat enemy unit’s attacks.",
+      "effect": "Until the end of the phase, your\nunit has the Stealth ability and can only\nbe selected as the target of a ranged\nattack if the attacking model is within 12\"",
+      "restrictions": "",
+      "id": "2baa46ac-fda1-579b-ad96-9f07f20cc5b8"
+    },
+    {
+      "name": "RETURN TO THE SHADOWS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Ascension Day",
+      "turn": "opponents",
+      "phase": ["endOfTurn"],
+      "fluff": "Ever cunning and duplicitous, broods of\nthe faithful often vanish back into tunnels\nand vents after their initial strike, ready to\nregroup and attack again elsewhere.",
+      "when": "End of your opponent’s turn.",
+      "target": "Up to two Genestealer Cults\nBattleline units from your army, or one\nother Genestealer Cults Infantry unit\nfrom your army.",
+      "effect": "Remove the targeted units\nfrom the battlefield and place them into\nStrategic Reserves.",
+      "restrictions": "The targeted units must\nhave the Deep Strike ability and cannot be\nwithin Engagement Range of any enemy\nunits when targeted.",
+      "id": "7fc42b72-fe85-55d0-b08e-432cb88402d6"
+    }
+  ],
   "enhancements": [
     {
       "name": "Prowling Agitant",
@@ -135,7 +221,7 @@
       ],
       "keywords": ["Infantry", "Great Devourer", "Aberrants"],
       "factions": ["Genestealer Cults"],
-      "ledBy": ["Abominant", "Biophagus"]
+      "leadBy": ["Abominant", "Biophagus"]
     },
     {
       "id": "7513b7ed-5c02-570f-b1a3-974cd2526952",
@@ -206,7 +292,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Great Devourer", "Abominant"],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": ["Aberrants"],
+        "extra": ""
+      }
     },
     {
       "id": "5d8d96bd-da91-5ee6-aad3-e9eea1a4c84e",
@@ -509,7 +599,7 @@
         "Acolyte Hybrids"
       ],
       "factions": ["Genestealer Cults"],
-      "ledBy": [
+      "leadBy": [
         "Acolyte Iconward",
         "Biophagus",
         "Clamavus",
@@ -609,7 +699,11 @@
         "Great Devourer",
         "Acolyte Iconward"
       ],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": ["Acolyte Hybrids", "Hybrid Metamorphs", "Neophyte Hybrids"],
+        "extra": ""
+      }
     },
     {
       "id": "8402f9e4-eda8-559e-96fb-6a64a44110a0",
@@ -796,7 +890,7 @@
       ],
       "keywords": ["Mounted", "Grenades", "Great Devourer", "Atalan Jackals"],
       "factions": ["Genestealer Cults"],
-      "ledBy": ["Jackal Alphus"]
+      "leadBy": ["Jackal Alphus"]
     },
     {
       "id": "cfdb4aa9-ff45-5a9e-8a4e-ea6f50128ad3",
@@ -901,7 +995,16 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Great Devourer", "Biophagus"],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": [
+          "Aberrants",
+          "Acolyte Hybrids",
+          "Hybrid Metamorphs",
+          "Neophyte Hybrids"
+        ],
+        "extra": "You can attach this model to a Genestealer Cults Battleline unit, even if a Primus, Magus or Acolyte Iconward model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "ea424452-a5a5-5a1c-a78d-54162f5267f4",
@@ -987,7 +1090,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Great Devourer", "Clamavus"],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": ["Acolyte Hybrids", "Hybrid Metamorphs", "Neophyte Hybrids"],
+        "extra": "You can attach this model to a Genestealer Cults Battleline unit, even if a Primus, Magus or Acolyte Iconward model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "0e213523-9fb4-5f6f-9fa7-3c06a2d101a3",
@@ -1386,7 +1493,7 @@
         "Hybrid Metamorphs"
       ],
       "factions": ["Genestealer Cults"],
-      "ledBy": [
+      "leadBy": [
         "Acolyte Iconward",
         "Biophagus",
         "Clamavus",
@@ -1500,7 +1607,11 @@
         "Great Devourer",
         "Jackal Alphus"
       ],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": ["Atalan Jackals"],
+        "extra": ""
+      }
     },
     {
       "id": "dfedd2b9-1c09-5540-b1eb-4db139e1a860",
@@ -1662,7 +1773,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Great Devourer", "Locus"],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": ["Acolyte Hybrids", "Hybrid Metamorphs", "Neophyte Hybrids"],
+        "extra": "You can attach this model to a Genestealer Cults Battleline unit, even if a Primus, Magus or Acolyte Iconward model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "ab65d861-6ce0-53d3-acc2-695be18ba436",
@@ -1758,7 +1873,11 @@
         "Great Devourer",
         "Magus"
       ],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": ["Acolyte Hybrids", "Hybrid Metamorphs", "Neophyte Hybrids"],
+        "extra": ""
+      }
     },
     {
       "id": "ec6bdc77-1eec-501e-be1a-1e4105102db9",
@@ -2011,7 +2130,7 @@
         "Neophyte Hybrids"
       ],
       "factions": ["Genestealer Cults"],
-      "ledBy": [
+      "leadBy": [
         "Acolyte Iconward",
         "Biophagus",
         "Clamavus",
@@ -2105,7 +2224,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Great Devourer", "Nexos"],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": ["Acolyte Hybrids", "Hybrid Metamorphs", "Neophyte Hybrids"],
+        "extra": "You can attach this model to a Genestealer Cults Battleline unit, even if a Primus, Magus or Acolyte Iconward model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "c39cb3e9-b054-5588-ab06-e2b08ec6506e",
@@ -2192,7 +2315,11 @@
         "Epic Hero",
         "Patriarch"
       ],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": ["Purestrain Genestealers"],
+        "extra": ""
+      }
     },
     {
       "id": "6bc7aa70-cfae-5340-ad63-c7e925499136",
@@ -2292,7 +2419,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Great Devourer", "Primus"],
-      "factions": ["Genestealer Cults"]
+      "factions": ["Genestealer Cults"],
+      "leads": {
+        "units": ["Acolyte Hybrids", "Hybrid Metamorphs", "Neophyte Hybrids"],
+        "extra": ""
+      }
     },
     {
       "id": "a070396e-3f03-567d-984c-8f65dc57e5ea",
@@ -2364,7 +2495,7 @@
       ],
       "keywords": ["Infantry", "Great Devourer", "Purestrain Genestealers"],
       "factions": ["Genestealer Cults"],
-      "ledBy": ["Patriarch"]
+      "leadBy": ["Patriarch"]
     },
     {
       "id": "0ad632db-93d0-5fd1-82ad-37461921747e",
