@@ -4,6 +4,92 @@
   "name": "Space Marines",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "ONLY IN DEATH DOES DUTY END",
+      "cost": 2,
+      "type": "Epic Deed",
+      "detachment": "Gladius Task Force",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Imminent death does not prevent a Space\nMarine from enacting his final justice\nupon the enemies of the Imperium.",
+      "when": "Fight phase, just after an enemy\nunit has selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit is destroyed, if\nthat model has not fought this phase, do\nnot remove it from play. The destroyed\nmodel can fight after the attacking\nmodel’s unit has finished making its\nattacks, and is then removed from play.",
+      "restrictions": "",
+      "id": "27ec1914-0206-5e29-ae17-07aa7c7f3e5a"
+    },
+    {
+      "name": "HONOUR THE CHAPTER",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Gladius Task Force",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Every Chapter has forged its own tales of\nheroism, and none of its battle-brothers\nwould see that noble record besmirched.",
+      "when": "Fight phase.",
+      "target": "One Adeptus Astartes unit from\nyour army.",
+      "effect": "Until the end of the phase, melee\nweapons equipped by models in your unit\nhave the [LANCE] ability. If your unit is\nunder the effects of the Assault Doctrine,\nuntil the end of the phase, improve the\nArmour Penetration characteristic of such\nweapons by 1 as well.",
+      "restrictions": "",
+      "id": "80e67b56-8933-5f50-8e22-b4cbd87c3d0e"
+    },
+    {
+      "name": "ARMOUR OF CONTEMPT",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Gladius Task Force",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The belligerency of the Adeptus Astartes,\ncombined with their transhuman\nphysiology, makes them unyielding foes\nto face.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Adeptus Astartes unit\nfrom your army that was selected as the\ntarget of one or more of the attacking\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack targets your unit, worsen\nthe Armour Penetration characteristic of\nthat attack by 1.",
+      "restrictions": "",
+      "id": "fb6abd3d-eef4-5e85-823a-4f49dd7e9140"
+    },
+    {
+      "name": "ADAPTIVE STRATEGY",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Gladius Task Force",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "The tenets of the Codex Astartes allow for\nunorthodox use of combat tactics and\nthe employment of divergent strategic\ndoctrines if doing so will lead to victory.",
+      "when": "Your Command phase.",
+      "target": "One Adeptus Astartes unit from\nyour army.",
+      "effect": "Select the Devastator Doctrine,\nTactical Doctrine or Assault Doctrine. Until\nthe start of your next Command phase,\nthat Combat Doctrine is active for that unit\ninstead of any other Combat Doctrine that\nis active for your army, even if you have\nalready selected that doctrine this battle.",
+      "restrictions": "",
+      "id": "7b3fd863-0149-5153-b1ef-0d978b5a4f97"
+    },
+    {
+      "name": "STORM OF FIRE",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Gladius Task Force",
+      "turn": "your",
+      "phase": ["shooting"],
+      "fluff": "There is no escaping the wrath of the\nSpace Marines, and they use their\nweapons to bring swift death to their foes\nwherever they may hide, expertly placing\ntheir shots to wreak maximum damage.",
+      "when": "Your Shooting phase.",
+      "target": "One Adeptus Astartes unit from\nyour army.",
+      "effect": "Until the end of the phase, ranged\nweapons equipped by models in your\nunit have the [IGNORES COVER] ability.\nIf your unit is under the effects of the\nDevastator Doctrine, until the end of the\nphase, improve the Armour Penetration\ncharacteristic of such weapons by 1\nas well.",
+      "restrictions": "",
+      "id": "b9da2b03-8e18-51e3-b87f-d8e175b92702"
+    },
+    {
+      "name": "SQUAD TACTICS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Gladius Task Force",
+      "turn": "opponents",
+      "phase": ["movement"],
+      "fluff": "Space Marines know precisely when\nto give ground in order to leave their\nenemies floundering, before surging back\ninto the fight and driving them from the\nfield in disarray.",
+      "when": "Your opponent’s Movement phase,\njust after an enemy unit ends a Normal,\nAdvance or Fall Back move.",
+      "target": "One Adeptus Astartes Infantry\nor Adeptus Astartes Mounted unit from\nyour army that is within 9\" of the enemy\nunit that just ended that move.",
+      "effect": "Your unit can make a Normal\nmove of up to D6\", or a Normal move of up\nto 6\" instead if it is under the effects of the\nTactical Doctrine.",
+      "restrictions": "You cannot select a unit\nthat is within Engagement Range of one or\nmore enemy units.",
+      "id": "c7d67585-0aff-533b-a4f5-9d31589dee99"
+    }
+  ],
   "enhancements": [
     {
       "name": "ADEPT OF THE CODEX",
@@ -72,252 +158,40 @@
         }
       },
       "stats": [],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "name": "Bolt pistol",
-              "keywords": ["pistol"],
-              "range": "12\"",
-              "attacks": "1",
-              "skill": "3+",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1"
-            }
-          ]
+      "rangedWeapons": [],
+      "meleeWeapons": [],
+      "keywords": [],
+      "factions": [""]
+    },
+    {
+      "id": "50e68b1f-7f7a-5d6d-951c-c3baea4ff704",
+      "name": "Adeptus Astartes Legends Armoury",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": [],
+      "loadout": "",
+      "wargear": [],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": [],
+        "faction": [],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
         },
-        {
-          "profiles": [
-            {
-              "name": "Boltgun",
-              "keywords": [],
-              "range": "24\"",
-              "attacks": "2",
-              "skill": "3+",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Combi-weapon",
-              "keywords": [
-                "anti-infantry 4+",
-                "devastating wounds",
-                "rapid fire 1"
-              ],
-              "range": "24\"",
-              "attacks": "1",
-              "skill": "4+*",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Grav-cannon",
-              "keywords": ["anti-vehicle 2+", "heavy"],
-              "range": "24\"",
-              "attacks": "3",
-              "skill": "4+",
-              "strength": "6",
-              "ap": "-1",
-              "damage": "3"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Grav-pistol",
-              "keywords": ["anti-vehicle 2+", "pistol"],
-              "range": "12\"",
-              "attacks": "1",
-              "skill": "3+*",
-              "strength": "4",
-              "ap": "-1",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Hand flamer",
-              "keywords": ["ignores cover", "pistol", "torrent"],
-              "range": "12\"",
-              "attacks": "D6",
-              "skill": "N/A",
-              "strength": "3",
-              "ap": "0",
-              "damage": "1"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Heavy bolter",
-              "keywords": ["heavy", "sustained hits 1"],
-              "range": "36\"",
-              "attacks": "3",
-              "skill": "4+",
-              "strength": "5",
-              "ap": "-1",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Heavy flamer",
-              "keywords": ["ignores cover", "torrent"],
-              "range": "12\"",
-              "attacks": "D6",
-              "skill": "N/A",
-              "strength": "5",
-              "ap": "-1",
-              "damage": "1"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Inferno pistol",
-              "keywords": ["melta 2", "pistol"],
-              "range": "6\"",
-              "attacks": "1",
-              "skill": "3+*",
-              "strength": "8",
-              "ap": "-4",
-              "damage": "D3"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Lascannon",
-              "keywords": ["heavy"],
-              "range": "48\"",
-              "attacks": "1",
-              "skill": "4+",
-              "strength": "12",
-              "ap": "-3",
-              "damage": "D6+1"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Multi-melta",
-              "keywords": ["heavy", "melta 2"],
-              "range": "18\"",
-              "attacks": "2",
-              "skill": "4+",
-              "strength": "9",
-              "ap": "-4",
-              "damage": "D6"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Missile launcher – frag",
-              "keywords": ["blast", "heavy"],
-              "range": "48\"",
-              "attacks": "D6",
-              "skill": "4+",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1"
-            },
-            {
-              "name": "Missile launcher – krak",
-              "keywords": ["heavy"],
-              "range": "48\"",
-              "attacks": "1",
-              "skill": "4+",
-              "strength": "9",
-              "ap": "-2",
-              "damage": "D6"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Plasma cannon – standard",
-              "keywords": ["blast", "heavy"],
-              "range": "36\"",
-              "attacks": "D3",
-              "skill": "4+",
-              "strength": "7",
-              "ap": "-2",
-              "damage": "1"
-            },
-            {
-              "name": "Plasma cannon – supercharge",
-              "keywords": ["blast", "hazardous", "heavy"],
-              "range": "36\"",
-              "attacks": "D3",
-              "skill": "4+",
-              "strength": "8",
-              "ap": "-3",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Plasma pistol – standard",
-              "keywords": ["pistol"],
-              "range": "12\"",
-              "attacks": "1",
-              "skill": "3+*",
-              "strength": "7",
-              "ap": "-2",
-              "damage": "1"
-            },
-            {
-              "name": "Plasma pistol – supercharge",
-              "keywords": ["hazardous", "pistol"],
-              "range": "12\"",
-              "attacks": "1",
-              "skill": "3+*",
-              "strength": "8",
-              "ap": "-3",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Storm bolter",
-              "keywords": ["rapid fire 2"],
-              "range": "24\"",
-              "attacks": "2",
-              "skill": "3+*",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1"
-            }
-          ]
+        "other": [],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
         }
-      ],
+      },
+      "stats": [],
+      "rangedWeapons": [],
       "meleeWeapons": [],
       "keywords": [],
       "factions": [""]
@@ -413,7 +287,16 @@
         "Captain",
         "Adrax Agatone"
       ],
-      "factions": ["Adeptus Astartes", "Salamanders"]
+      "factions": ["Adeptus Astartes", "Salamanders"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "c9e75539-37ab-5990-a16a-952209ccad7a",
@@ -530,7 +413,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Gravis", "Aggressor Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Apothecary Biologis",
         "Captain In Gravis Armour",
         "Iron Father Feirros",
@@ -706,7 +589,15 @@
         "Terminator",
         "Ancient"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Squad",
+          "Terminator Assault Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "7af3435c-e3c2-5096-a4e8-45b5066d0e46",
@@ -798,7 +689,15 @@
         "Gravis",
         "Apothecary Biologis"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "f17f9afa-b67f-54db-94eb-4e3b3cb3eee9",
@@ -978,7 +877,7 @@
         "Assault Intercessor Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Adrax Agatone",
         "Chief Librarian Tigurius",
         "Judiciar",
@@ -1237,7 +1136,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Assault Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain",
         "Captain Sicarius",
         "Chaplain",
@@ -1499,7 +1398,7 @@
         "Assault Squad with Jump Packs"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain With Jump Pack",
         "Chaplain With Jump Pack",
         "Kayvaan Shrike",
@@ -1646,7 +1545,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Astartes Servitors"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Primaris Techmarine", "Techmarine"]
+      "leadBy": ["Primaris Techmarine", "Techmarine"]
     },
     {
       "id": "743808c1-22b5-56a7-8ab2-1782a3ab6995",
@@ -2349,7 +2248,7 @@
       ],
       "keywords": ["Mounted", "Grenades", "Imperium", "Bike Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain On Bike", "Chaplain On Bike"]
+      "leadBy": ["Captain On Bike", "Chaplain On Bike"]
     },
     {
       "id": "01dd9844-2d3e-5c90-ad47-5da21d4dd9ff",
@@ -2442,7 +2341,11 @@
         "Tacticus",
         "Bladeguard Ancient"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Bladeguard Veteran Squad"],
+        "extra": "You can attach this model to the above unit even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "3a13a631-0ca2-5801-91bf-3ed7b2a524ab",
@@ -2578,7 +2481,7 @@
         "Bladeguard Veteran Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Bladeguard Ancient",
         "Judiciar",
         "Marneus Calgar",
@@ -2988,7 +2891,16 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Grenades", "Imperium", "Captain"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "6be6254a-af8a-51f6-a317-0405f91e6963",
@@ -3153,7 +3065,15 @@
         "Gravis",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "3bcd32e4-b4fe-5f5e-8bf4-dba4da3a48b6",
@@ -3260,7 +3180,18 @@
         "Phobos",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Eliminator Squad",
+          "Incursor Squad",
+          "Infiltrator Squad",
+          "Reiver Squad",
+          "Scout Squad",
+          "Scout Sniper Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "a61cd885-4d38-5de2-bcd7-d74522a8c9f8",
@@ -3440,7 +3371,15 @@
         "Terminator",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "b59a6260-99a9-5bbf-9cdd-6df93aea97e6",
@@ -3699,7 +3638,11 @@
         }
       ],
       "keywords": ["Mounted", "Character", "Grenades", "Imperium", "Captain"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Bike Squad", "Outrider Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "2ce922b0-d248-5152-bbc2-856ef8e49186",
@@ -3792,7 +3735,17 @@
         "Captain",
         "Sicarius"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Sternguard Veteran Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "dfaa283d-f1f4-55f4-b674-3715eda043c2",
@@ -4045,7 +3998,14 @@
         "Imperium",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Vanguard Veteran Squad with Jump Packs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "5689c57d-bec3-54f4-92dc-d5cca77534f0",
@@ -4328,6 +4288,157 @@
       "factions": ["Adeptus Astartes"]
     },
     {
+      "id": "9029c7ff-3684-55ed-aec0-85117b42fdd1",
+      "name": "Cerberus",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Cerberus"],
+      "loadout": "This model is equipped with: Cerberus neutron pulse array; armoured tracks.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 2 heavy bolters ◦ 2 lascannons",
+        "This model can be equipped with one of the following: ◦ 1 heavy bolter ◦ 1 heavy flamer ◦ 1 multi-melta ◦ 1 storm bolter"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Atomantic Arc-reactor",
+            "description": "Each time this unit shoots its Cerberus neutron pulse array in your Shooting phase, provided it Remained Stationary this turn, that weapon has the [LETHAL HITS] ability."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-6 WOUNDS REMAINING",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "18",
+          "ld": "6+",
+          "oc": "6",
+          "name": "Cerberus"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Cerberus neutron pulse array",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "16",
+              "ap": "-4",
+              "damage": "D6+3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["torrent", "ignores cover"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Multi-melta",
+              "keywords": ["melta 2"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Imperium", "Smoke", "Cerberus"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
       "id": "617d09bb-af62-5df9-9454-263132cbd00b",
       "name": "Chaplain",
       "faction_id": "SM",
@@ -4539,7 +4650,16 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Grenades", "Imperium", "Chaplain"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "35a9d1d2-73bd-5f29-bf88-afd1782bad21",
@@ -4636,7 +4756,18 @@
         "Imperium",
         "Chaplain Cassius"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Sternguard Veteran Squad",
+          "Tactical Squad",
+          "Tyrannic War Veterans",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "30fe2cd6-9c34-59f5-910e-3f5fcbab2413",
@@ -4748,7 +4879,15 @@
         "Terminator",
         "Chaplain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "68e51be1-da54-5873-a47e-242434d86e04",
@@ -4848,7 +4987,11 @@
         }
       ],
       "keywords": ["Mounted", "Character", "Grenades", "Imperium", "Chaplain"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Bike Squad", "Outrider Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "d6954fe8-4a09-5f1e-b9cf-29de7e511081",
@@ -5069,7 +5212,14 @@
         "Imperium",
         "Chaplain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Vanguard Veteran Squad with Jump Packs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "aad0f52c-e204-5ddd-a9db-84b0a4707b2e",
@@ -5186,7 +5336,15 @@
         "Imperium",
         "Chief Librarian Tigurius"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "59dea85f-cc3f-5001-b591-3de575734304",
@@ -5457,7 +5615,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Command Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain",
         "Captain Sicarius",
         "Chaplain",
@@ -5657,7 +5815,285 @@
         "Captain",
         "Darnath Lysander"
       ],
-      "factions": ["Adeptus Astartes", "Imperial Fists"]
+      "factions": ["Adeptus Astartes", "Imperial Fists"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": ""
+      }
+    },
+    {
+      "id": "bbb9e4b2-c941-5284-9346-7c9df9630227",
+      "name": "Deathstorm Drop Pod",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Deathstorm Drop Pod"],
+      "loadout": "This model is equipped with: deathstorm cannon array.",
+      "wargear": [
+        "This model’s deathstorm cannon array can be replaced with 1 deathstorm missile array"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 1", "Deep Strike"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Deathstorm Assault",
+            "description": "This model must start the battle in Reserves, but it is not counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "-",
+          "t": "7",
+          "sv": "3+",
+          "w": "8",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Deathstorm Drop Pod"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Deathstorm cannon array",
+              "keywords": ["sustained hits 2"],
+              "range": "18\"",
+              "attacks": "12",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Deathstorm missile array",
+              "keywords": ["blast"],
+              "range": "18\"",
+              "attacks": "2D6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [],
+      "keywords": ["Vehicle", "Imperium", "Deathstorm Drop Pod"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "61b58d68-4938-5de2-aae5-feb231364cbe",
+      "name": "Deredeo Dreadnought",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Deredeo Dreadnought"],
+      "loadout": "This model is equipped with: anvilus autocannon battery; twin heavy bolter; armoured feet.",
+      "wargear": [
+        "This model’s anvilus autocannon battery can be replaced with one of the following ◦ 1 arachnus heavy lascannon battery ◦ 1 hellfire plasma carronade ◦ 1 volkite falconet battery",
+        "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer.",
+        "This model can be equipped with one of the following: ◦ 1 aiolos missile launcher ◦ 1 boreas air defence missiles"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Deredeo Strike",
+            "description": "Each time this model makes a ranged attack that targets a unit that is not Below Half-strength, you can re-roll the Hit roll."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "9",
+          "sv": "2+",
+          "w": "12",
+          "ld": "6+",
+          "oc": "3",
+          "name": "Deredeo Dreadnought"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Aiolos missile launcher",
+              "keywords": ["blast"],
+              "range": "48\"",
+              "attacks": "D6+3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Anvilus autocannon battery",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Arachnus heavy lascannon battery",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Boreas air defence missiles",
+              "keywords": ["anti-fly 2+"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hellfire plasma cannonade – standard",
+              "keywords": [],
+              "range": "36\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "2"
+            },
+            {
+              "name": "Hellfire plasma cannonade – supercharge",
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy bolter",
+              "keywords": ["sustained hits 1", "twin-linked"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy flamer",
+              "keywords": ["ignores cover", "torrent", "twin-linked"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Volkite falconet battery",
+              "keywords": ["devastating wounds"],
+              "range": "30\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured feet",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Smoke",
+        "Dreadnought",
+        "Deredeo Dreadnought"
+      ],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "89a5bc47-72bc-50c4-a6c0-7952a6d8fb41",
@@ -5674,11 +6110,11 @@
       "points": [
         {
           "models": "5",
-          "cost": "120"
+          "cost": "170"
         },
         {
           "models": "10",
-          "cost": "240"
+          "cost": "340"
         }
       ],
       "abilities": {
@@ -5809,7 +6245,11 @@
         "Desolation Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Primaris Ancient", "Primaris Apothecary", "Primaris Librarian"]
+      "leadBy": [
+        "Primaris Ancient",
+        "Primaris Apothecary",
+        "Primaris Librarian"
+      ]
     },
     {
       "id": "f715322f-e40b-5c04-bbee-e34a13203a6b",
@@ -6273,6 +6713,54 @@
       "factions": ["Adeptus Astartes"]
     },
     {
+      "id": "bc810342-8103-5337-86e1-1188c6775684",
+      "name": "Dreadnought Drop Pod",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Dreadnought Drop Pod"],
+      "loadout": "This model is equipped with: nothing.",
+      "wargear": ["None"],
+      "transport": "This model has a transport capacity of 1 Dreadnought model.",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 1", "Deep Strike"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Drop Pod Assault",
+            "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model must immediately disembark after it has been set up on the battlefield, and they must be set up more than 9\" away from all enemy models. After this model has been set up on the battlefield, no units can embark within it."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "-",
+          "t": "7",
+          "sv": "3+",
+          "w": "8",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Dreadnought Drop Pod"
+        }
+      ],
+      "rangedWeapons": [],
+      "meleeWeapons": [],
+      "keywords": ["Vehicle", "Imperium", "Transport", "Dreadnought Drop Pod"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
       "id": "799e25f4-a120-560f-bcec-719ea05533ac",
       "name": "Drop Pod",
       "faction_id": "SM",
@@ -6491,7 +6979,7 @@
         "Eliminator Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain In Phobos Armour", "Librarian In Phobos Armour"]
+      "leadBy": ["Captain In Phobos Armour", "Librarian In Phobos Armour"]
     },
     {
       "id": "b3a4b88e-2164-580c-8fb1-a5c6e4e8e62a",
@@ -6614,13 +7102,568 @@
         "Eradicator Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Apothecary Biologis",
         "Captain In Gravis Armour",
         "Iron Father Feirros",
         "Marneus Calgar",
         "Tor Garadon"
       ]
+    },
+    {
+      "id": "0e48dd64-b344-5be3-af7f-9d75c14f38ac",
+      "name": "Falchion",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Falchion"],
+      "loadout": "This model is equipped with: 2 quad lascannons; twin heavy bolter; twin Falchion volcano cannon; armoured tracks.",
+      "wargear": [
+        "This model’s 2 quad lascannons can be replaced with 2 laser destroyers.",
+        "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer",
+        "This model can be equipped with one of the following: ◦ 1 heavy bolter ◦ 1 heavy flamer ◦ 1 multi-melta ◦ 1 storm bolter"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6+2"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Titan-killer",
+            "description": "Each time this model makes a ranged attack with its twin Falchion volcano cannon that targets a Monster or Vehicle unit, that attack has the [DEVASTATING WOUNDS] ability."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-8 WOUNDS REMAINING",
+          "description": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "9\"",
+          "t": "13",
+          "sv": "2+",
+          "w": "24",
+          "ld": "6+",
+          "oc": "8",
+          "name": "Falchion"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Laser destroyer",
+              "keywords": ["heavy"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-4",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Multi-melta",
+              "keywords": ["melta 2"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Quad lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin Falchion volcano cannon",
+              "keywords": ["blast", "twin-linked"],
+              "range": "120\"",
+              "attacks": "D3+1",
+              "skill": "3+",
+              "strength": "24",
+              "ap": "-5",
+              "damage": "12"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy bolter",
+              "keywords": ["sustained hits 1", "twin-linked"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy flamer",
+              "keywords": ["ignores cover", "torrent", "twin-linked"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Titanic", "Imperium", "Smoke", "Falchion"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "b2754db4-1cfe-50e7-a7f1-a79f3dcebbc0",
+      "name": "Fellblade",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Fellblade"],
+      "loadout": "This model is equipped with: demolisher cannon; Fellblade accelerator cannon; 2 quad lascannons; twin heavy bolter; armoured tracks.",
+      "wargear": [
+        "This model’s 2 quad lascannons can be replaced with 2 laser destroyers.",
+        "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer",
+        "This model can be equipped with one of the following: ◦ 1 heavy bolter ◦ 1 heavy flamer ◦ 1 multi-melta ◦ 1 storm bolter"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6+2"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Rolling Fortress",
+            "description": "Each time a ranged attack is allocated to a model from your army, if that model is not fully visible to every model in the attacking unit because of this Fellblade model, that model has the Benefit of Cover against that attack."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-8 WOUNDS REMAINING",
+          "description": "While this model has 1-8 wounds remaining, subtract 4 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "9\"",
+          "t": "13",
+          "sv": "2+",
+          "w": "24",
+          "ld": "6+",
+          "oc": "8",
+          "name": "Fellblade"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Demolisher cannon",
+              "keywords": ["blast"],
+              "range": "24\"",
+              "attacks": "D6+3",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Fellblade accelerator cannon – AP shells",
+              "keywords": [],
+              "range": "72\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "6"
+            },
+            {
+              "name": "Fellblade accelerator cannon – HE shells",
+              "keywords": ["blast"],
+              "range": "72\"",
+              "attacks": "2D6",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Laser destroyer",
+              "keywords": ["heavy"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-4",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Multi-melta",
+              "keywords": ["melta 2"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Quad lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy bolter",
+              "keywords": ["sustained hits 1", "twin-linked"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy flamer",
+              "keywords": ["ignores cover", "torrent", "twin-linked"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Titanic", "Imperium", "Smoke", "Fellblade"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "271e1ac7-0fbe-59a8-978f-86801fb3b764",
+      "name": "Fire Raptor Gunship",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Fire Raptor Gunship"],
+      "loadout": "This model is equipped with: twin avenger bolt cannon; 2 twin autocannons; 2 twin hellstrike launchers; armoured hull",
+      "wargear": [
+        "This model’s 2 twin hellstrike missile launchers can be replaced with 2 twin lascannons",
+        "This model’s 2 twin autocannons can be replaced with 2 quad heavy bolters."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6", "Hover"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Strafing Run",
+            "description": "Each time this model makes a ranged attack that targets a unit that cannot Fly, add 1 to the Hit roll."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-6 WOUNDS REMAINING",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "20+\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "18",
+          "ld": "6+",
+          "oc": "0",
+          "name": "Fire Raptor Gunship"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Twin autocannon",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin avenger bolt cannon",
+              "keywords": ["twin-linked"],
+              "range": "36\"",
+              "attacks": "10",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy bolter",
+              "keywords": ["twin-linked", "sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin hellstrike launcher",
+              "keywords": ["anti-fly 2+", "twin-linked"],
+              "range": "72\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "10",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin lascannon",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured hull",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Imperium",
+        "Fire Raptor Gunship"
+      ],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "ee860940-24a0-5e4d-9e45-7cf2a3d2c096",
@@ -7367,7 +8410,7 @@
         "Heavy Intercessor Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Apothecary Biologis",
         "Captain In Gravis Armour",
         "Iron Father Feirros",
@@ -7516,7 +8559,7 @@
         "Hellblaster Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Primaris Ancient",
         "Primaris Apothecary",
         "Primaris Captain",
@@ -8050,7 +9093,7 @@
         "Incursor Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain In Phobos Armour",
         "Librarian In Phobos Armour",
         "Lieutenant In Phobos Armour"
@@ -8161,7 +9204,7 @@
         "Infernus Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Adrax Agatone",
         "Judiciar",
         "Marneus Calgar",
@@ -8293,7 +9336,7 @@
         "Infiltrator Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain In Phobos Armour",
         "Librarian In Phobos Armour",
         "Lieutenant In Phobos Armour"
@@ -8527,7 +9570,7 @@
         "Intercessor Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Adrax Agatone",
         "Chief Librarian Tigurius",
         "Judiciar",
@@ -8943,7 +9986,15 @@
         "Gravis",
         "Iron Father Feirros"
       ],
-      "factions": ["Adeptus Astartes", "Iron Hands"]
+      "factions": ["Adeptus Astartes", "Iron Hands"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "62e97a7c-c4ae-54b9-9d0c-7cf1115ac7c6",
@@ -9131,6 +10182,154 @@
       "factions": ["Adeptus Astartes"]
     },
     {
+      "id": "f47e8f9b-d20f-5a5c-8f49-476400c3d0b6",
+      "name": "Javelin Attack Speeder",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Javelin Attack Speeder"],
+      "loadout": "This model is equipped with: heavy bolter; Javelin missile launcher; close combat weapon.",
+      "wargear": [
+        "This model’s javelin missile launcher can be replaced with 2 lascannons",
+        "This model’s heavy bolter can be replaced with 1 multi-melta.",
+        "This model can be equipped with up to 2 hunter-killer missiles."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 1", "Deep Strike"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Fire and Redeploy",
+            "description": "In your Shooting phase, each time this model has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to D6\". If it does, until the end of the turn, this model is not eligible to declare a charge."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "14\"",
+          "t": "8",
+          "sv": "3+",
+          "w": "9",
+          "ld": "6+",
+          "oc": "3",
+          "name": "Javelin Attack Speeder"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Javelin missile launcher – frag",
+              "keywords": ["blast"],
+              "range": "36\"",
+              "attacks": "3D6",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            },
+            {
+              "name": "Javelin missile launcher – krak",
+              "keywords": [],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-2",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Multi-melta",
+              "keywords": ["melta 2"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Fly", "Imperium", "Javelin Attack Speeder"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
       "id": "975b42e0-7b09-5ece-9dfe-a5da3838b3cf",
       "name": "Judiciar",
       "faction_id": "SM",
@@ -9214,7 +10413,17 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Imperium", "Tacticus", "Judiciar"],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "54abfd41-d81e-5238-be09-db481da796ac",
@@ -9309,7 +10518,14 @@
         "Chapter Master",
         "Kayvaan Shrike"
       ],
-      "factions": ["Adeptus Astartes", "Raven Guard"]
+      "factions": ["Adeptus Astartes", "Raven Guard"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Vanguard Veteran Squad with Jump Packs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "990cf04d-3c9b-5891-8513-cc95e7a5ac0f",
@@ -9402,7 +10618,221 @@
         "Captain",
         "Kor’sarro Khan"
       ],
-      "factions": ["Adeptus Astartes", "White Scars"]
+      "factions": ["Adeptus Astartes", "White Scars"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
+    },
+    {
+      "id": "fb266079-14a4-5edf-9b65-07822f29f342",
+      "name": "Kratos",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Kratos"],
+      "loadout": "This model is equipped with: autocannon; Kratos battle cannon; 4 heavy bolters; armoured tracks.",
+      "wargear": [
+        "This model’s Kratos battle cannon can be replaced with one of the following: ◦ 1 melta blast-gun ◦ 1 volkite cardanelle",
+        "2 of this model’s heavy bolters can be replaced with one of the following:  ◦ 2 autocannons  ◦ 2 lascannons* ◦ 2 volkite calivers",
+        "2 of this model’s heavy bolters can be replaced with one of the following: ◦ 2 heavy flamers* ◦ 2 lascannons* ◦ 2 volkite culverins *  The profile for this weapon can be found on the Adeptus Astarte",
+        "This model can be equipped with one of the following: ◦ 1 combi-weapon* ◦ 1 havoc launcher ◦ 1 heavy bolter* ◦ 1 heavy flamer* ◦ 1 multi-melta*  ◦ 1 twin boltgun",
+        "This model can be equipped with 1 hunter killer missile      s Legends Armoury card."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Line-breaker",
+            "description": "When making ranged attacks, this model can target enemy units within Engagement Range of it with Blast weapons (provided no other friendly units are also within Engagement Range of that enemy unit). In addition, when making ranged attacks, this model does not suffer the penalty to its Hit rolls for being within Engagement Range of one or more enemy units."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-6 WOUNDS REMAINING",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "18",
+          "ld": "6+",
+          "oc": "6",
+          "name": "Kratos"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Autocannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Havoc launcher",
+              "keywords": ["blast"],
+              "range": "48\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Kratos battle cannon – AP",
+              "keywords": ["heavy"],
+              "range": "36\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "18",
+              "ap": "-4",
+              "damage": "D6+3"
+            },
+            {
+              "name": "Kratos battle cannon – HE",
+              "keywords": ["blast"],
+              "range": "36\"",
+              "attacks": "D6+3",
+              "skill": "3+",
+              "strength": "10",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Melta blast-gun",
+              "keywords": ["melta 2"],
+              "range": "24\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin boltgun",
+              "keywords": ["twin-linked"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Volkite caliver",
+              "keywords": ["devastating wounds"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Volkite cardanelle",
+              "keywords": ["devastating wounds"],
+              "range": "36\"",
+              "attacks": "9",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "0",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Volkite culverin",
+              "keywords": ["devastating wounds"],
+              "range": "36\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Imperium", "Smoke", "Kratos"],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "d63b5215-7378-55b6-b363-5d768a81474d",
@@ -9544,6 +10974,154 @@
         }
       ],
       "keywords": ["Vehicle", "Smoke", "Transport", "Imperium", "Land Raider"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "2179cff6-13dc-5707-8fe8-b6ab6fa8b678",
+      "name": "Land Raider Achilles",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Land Raider Achilles"],
+      "loadout": "This model is equipped with: quad launcher; 2 twin volkite culverins; armoured tracks.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 1 heavy bolter* ◦ 1 multi-melta* ◦ 1 twin heavy bolter* ◦ 1 twin heavy flamer*",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter. * The profile for this weapon can be found on the Adeptus Astartes Legends Armoury car"
+      ],
+      "transport": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models.",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Assault Ramp",
+            "description": "Each time a unit disembarks from this Transport after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "16",
+          "ld": "6+",
+          "oc": "5",
+          "name": "Land Raider Achilles"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Quad launcher – shatter shells",
+              "keywords": [],
+              "range": "24\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-2",
+              "damage": "3"
+            },
+            {
+              "name": "Quad launcher – thunderfire shells",
+              "keywords": ["blast", "indirect"]
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin multi-melta",
+              "keywords": ["melta 2", "twin-linked"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin volkite culverin",
+              "keywords": ["devastating wounds", "twin-linked"],
+              "range": "36\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Smoke",
+        "Imperium",
+        "Land Raider Achilles"
+      ],
       "factions": ["Adeptus Astartes"]
     },
     {
@@ -9692,6 +11270,184 @@
         "Transport",
         "Imperium",
         "Land Raider Crusader"
+      ],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "f30e96f5-f2c0-534c-a2b0-85b89417fabb",
+      "name": "Land Raider Proteus",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Land Raider Proteus"],
+      "loadout": "This model is equipped with: 2 twin lascannons; armoured tracks.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 1 heavy bolter ◦ 1 multi-melta ◦ 1 twin heavy bolter ◦ 1 twin heavy flamer",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter.",
+        "This model can be equipped with 1 explorator augury web."
+      ],
+      "transport": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models.",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [
+          {
+            "name": "Explorator Augury Web",
+            "description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" of this bearer, but the bearer must halve its Transport Capacity."
+          }
+        ],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Assault Ramp",
+            "description": "Each time a unit disembarks from this Transport after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "16",
+          "ld": "6+",
+          "oc": "5",
+          "name": "Land Raider Proteus"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Multi-melta",
+              "keywords": ["melta 2"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy bolter",
+              "keywords": ["twin-linked", "sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy flamer",
+              "keywords": ["ignores cover", "torrent", "twin-linked"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin lascannon",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Smoke",
+        "Imperium",
+        "Land Raider Proteus"
       ],
       "factions": ["Adeptus Astartes"]
     },
@@ -10295,6 +12051,207 @@
       "factions": ["Adeptus Astartes"]
     },
     {
+      "id": "d5b2ad30-9f3e-5ee6-b113-b72418567e7b",
+      "name": "Leviathan Dreadnought",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Leviathan Dreadnought"],
+      "loadout": "This model is equipped with: 2 heavy flamers; 2 grav-flux bombards; armoured feet.",
+      "wargear": [
+        "Each of this model’s grav-flux bombards can be replaced with one of the following ◦ 1 cyclonic melta lance ◦ 1 storm cannon ◦ 1 meltagun and 1 Leviathan siege claw ◦ 1 meltagun and 1 Leviathan siege drill",
+        "This model’s 2 heavy flamers can be replaced with 2 twin volkite calivers.",
+        "This model can be equipped with 3 hunter-killer missiles."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Duty Eternal",
+            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "8\"",
+          "t": "10",
+          "sv": "2+",
+          "w": "12",
+          "ld": "6+",
+          "oc": "4",
+          "name": "Leviathan Dreadnought"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Cyclonic melta lance",
+              "keywords": ["melta 2"],
+              "range": "18\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Grav-flux bombard",
+              "keywords": ["anti-vehicle 2+", "blast"],
+              "range": "24\"",
+              "attacks": "2D3",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Meltagun",
+              "keywords": ["melta 2"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm cannon",
+              "keywords": ["twin-linked"],
+              "range": "36\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin volkite caliver",
+              "keywords": ["devastating wounds", "twin-linked"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured feet",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Leviathan siege claw",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-2",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Leviathan siege drill",
+              "keywords": ["anti-vehicle 3+"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-2",
+              "damage": "3"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Smoke",
+        "Dreadnought",
+        "Leviathan Dreadnought"
+      ],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
       "id": "7d6fbc0a-42a0-59f2-8fc2-579ab8e03f20",
       "name": "Librarian",
       "faction_id": "SM",
@@ -10523,7 +12480,16 @@
         "Imperium",
         "Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "d2c541f2-7cc0-578b-b51e-46c647773ebe",
@@ -10641,7 +12607,16 @@
         "Phobos",
         "Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Eliminator Squad",
+          "Incursor Squad",
+          "Infiltrator Squad",
+          "Reiver Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "2253b01e-9a65-551b-b690-50a460cedced",
@@ -10778,7 +12753,15 @@
         "Terminator",
         "Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Relic Terminator Squad",
+          "Terminator Assault Squad",
+          "Terminator Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "7c3e0867-fcf7-5e57-8b7d-1f6fa74b9754",
@@ -11011,7 +12994,14 @@
         "Imperium",
         "Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad with Jump Packs",
+          "Vanguard Veteran Squad with Jump Packs"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "206eeab4-32a1-57f3-99bf-d1d8e96cef39",
@@ -11276,7 +13266,16 @@
         "Imperium",
         "Lieutenant"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "0141d981-5ebf-54d1-bbf8-20e83757a8e1",
@@ -11383,7 +13382,11 @@
         "Phobos",
         "Lieutenant"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Incursor Squad", "Infiltrator Squad", "Reiver Squad"],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "823f24d9-9549-557f-844a-564d44db7951",
@@ -11477,7 +13480,11 @@
         "Phobos",
         "Lieutenant in Reiver Armour"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Reiver Squad"],
+        "extra": "You can attach this model to the above unit even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "fff1718a-d5f7-56d5-82a0-7188d027a3f1",
@@ -11708,7 +13715,119 @@
         "Chapter Master",
         "Marneus Calgar"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
+    },
+    {
+      "id": "f6f5a67a-668d-5297-93be-f6e25339db81",
+      "name": "Mastodon",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Mastodon"],
+      "loadout": "This model is equipped with: 2 heavy flamers; 2 lascannons; siege melta array; skyreaper battery; armoured tracks.",
+      "wargear": ["None"],
+      "transport": "This model has a transport capacity of 45 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models. This model can also transport up to 2 Dreadnought or Helbrute models (these models take up the space of a number of models equal to their Wounds characteristic e.g. A Dreadnought with a Wounds characteristic of 8 would take up the space of 8 models).",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 2D6"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Inviolable Transport",
+            "description": "Once per battle round, when an attack is allocated to this model, you can change the Damage characteristic of that attack to 0."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-10 WOUNDS REMAINING",
+          "description": "While this model has 1-10 wounds remaining, subtract 6 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "9\"",
+          "t": "14",
+          "sv": "2+",
+          "w": "30",
+          "ld": "6+",
+          "oc": "12",
+          "name": "Mastodon"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Siege melta array",
+              "keywords": ["melta 2"],
+              "range": "24\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Skyreaper battery",
+              "keywords": ["anti-air 2+"],
+              "range": "48\"",
+              "attacks": "8",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Imperium",
+        "Transport",
+        "Smoke",
+        "Mastodon"
+      ],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "7a701c86-8b99-5ef2-94a7-15e3cb64e34a",
@@ -11866,7 +13985,7 @@
       ],
       "keywords": ["Mounted", "Grenades", "Imperium", "Outrider Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain On Bike", "Chaplain On Bike"]
+      "leadBy": ["Captain On Bike", "Chaplain On Bike"]
     },
     {
       "id": "a5466eb5-f937-5880-bdb0-43b0ce3cbce6",
@@ -11965,7 +14084,15 @@
         "Chapter Master",
         "Pedro Kantor"
       ],
-      "factions": ["Adeptus Astartes", "Imperial Fists"]
+      "factions": ["Adeptus Astartes", "Imperial Fists"],
+      "leads": {
+        "units": [
+          "Command Squad",
+          "Sternguard Veteran Squad",
+          "Tactical Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "ae8823f4-1e44-58db-a791-de6260571359",
@@ -12372,7 +14499,18 @@
         "Tacticus",
         "Primaris Ancient"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad",
+          "Desolation Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "2162d470-0f65-5dbd-8ce1-8daab106ecfd",
@@ -12479,7 +14617,18 @@
         "Tacticus",
         "Primaris Apothecary"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Desolation Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "16f27cd6-dea9-5e95-89be-c86367865115",
@@ -12661,7 +14810,18 @@
         "Primaris",
         "Captain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": "This model cannot be attached to a Bladeguard Veteran Squad unless it is equipped with a relic shield, and cannot be attached to a Hellblaster Squad unless it is equipped with a plasma pistol."
+      }
     },
     {
       "id": "2bc45778-d185-5f3d-85e8-22dcb6c9e0d7",
@@ -12754,7 +14914,18 @@
         "Tacticus",
         "Primaris Chaplain"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "d8a18490-faa0-56d6-a47a-e3a439e805b4",
@@ -12847,7 +15018,17 @@
         "Tacticus",
         "Primaris Company Champion"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "c8191307-5675-5725-a8d5-2f8435370f9d",
@@ -12965,7 +15146,18 @@
         "Tacticus",
         "Primaris Librarian"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Desolation Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "f0933f21-2018-5243-b5b8-3f1b46be1b90",
@@ -13162,7 +15354,18 @@
         "Tacticus",
         "Primaris Lieutenant"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Bladeguard Veteran Squad",
+          "Hellblaster Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "id": "040aad89-8de4-5c5d-aea9-132cbfa465d3",
@@ -13287,6 +15490,148 @@
         "Tacticus",
         "Primaris Techmarine"
       ],
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Astartes Servitors",
+          "Intercessor Squad"
+        ],
+        "extra": ""
+      }
+    },
+    {
+      "id": "b819689d-1c44-5333-ad67-c257d3aaed9b",
+      "name": "Rapier Carrier",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Rapier Carrier"],
+      "loadout": "This model is equipped with: boltgun; quad heavy bolter; close combat weapon.",
+      "wargear": [
+        "This model’s quad heavy bolter can be replaced with one of the following ◦ 1 graviton cannon ◦ 1 laser destroyer ◦ 1 quad launcher"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": [],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Powerful Volley",
+            "description": "Each time this model shoots in your Shooting phase, provided it Remained Stationary this turn, all [HEAVY] weapons equipped by models in this unit have the [LETHAL HITS] ability."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "3\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "6",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Rapier Carrier"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Boltgun",
+              "keywords": [],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Graviton cannon",
+              "keywords": ["anti-vehicle 2+", "blast", "heavy"],
+              "range": "36\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Laser destroyer",
+              "keywords": ["heavy"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-4",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Quad heavy bolter",
+              "keywords": []
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Quad launcher – shatter shells",
+              "keywords": ["heavy"],
+              "range": "24\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-2",
+              "damage": "3"
+            },
+            {
+              "name": "Quad launcher – thunderfire shells",
+              "keywords": []
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Artillery", "Vehicle", "Imperium", "Rapier Carrier"],
       "factions": ["Adeptus Astartes"]
     },
     {
@@ -13757,12 +16102,236 @@
         "Reiver Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain In Phobos Armour",
         "Librarian In Phobos Armour",
         "Lieutenant In Phobos Armour",
         "Lieutenant In Reiver Armour"
       ]
+    },
+    {
+      "id": "119b6577-919b-57ac-9261-aef6534c947c",
+      "name": "Relic Contemptor Dreadnought",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Relic Contemptor Dreadnought"],
+      "loadout": "This model is equipped with: 2 heavy plasma cannons; armoured feet.",
+      "wargear": [
+        "Each of this model’s heavy plasma cannons can be replaced with one of the following: ◦ 1 conversion beam cannon ◦ 1 kheres-pattern assault cannon ◦ 1 multi-melta* ◦ 1 twin autocannon* ◦ 1 twin heavy bolter* ◦ 1 twin lascannon* ◦ 1 twin volkite culverin ◦ 1 Dreadnought chainfist and 1 combi-bolter ◦ 1 Dreadnought combat weapon and 1 combi-bolter",
+        "Each of this model’s combi-bolters can be replaced with one of the following: ◦ 1 graviton blaster ◦ 1 heavy flamer* ◦ 1 Contemptor plasma blaster",
+        "This model can be equipped with 1 cyclone missile launcher. * The profile for this weapon can be found on the Adeptus Astartes Legends Armoury card"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 1"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Even In Death I Serve",
+            "description": "The first time this model is destroyed, remove it from play without resolving its Deadly Demise ability. Then, at the end of the phase, roll one D6: on a 2+, set this model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with D6 wounds remaining."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "9",
+          "sv": "2+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "3",
+          "name": "Relic Contemptor Dreadnought"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Conversion beam cannon",
+              "keywords": ["conversion", "sustained hits d3"],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "",
+              "keywords": ["conversion"],
+              "range": "t",
+              "attacks": "more",
+              "skill": "than",
+              "strength": "12\"",
+              "ap": "from",
+              "damage": "the"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "unmodified successful Hit roll of 4+ scores a Critical Hit.",
+              "keywords": [],
+              "range": "36\"",
+              "attacks": "2D6",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Graviton blaster",
+              "keywords": ["anti-vehicle 2+"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Kheres-pattern assault cannon",
+              "keywords": ["devastating wounds"],
+              "range": "24\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Plasma blaster – standard",
+              "keywords": [],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "name": "Plasma blaster – supercharge",
+              "keywords": ["hazardous"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin volkite culverin",
+              "keywords": ["devastating wounds", "twin-linked"],
+              "range": "36\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured feet",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Dreadnought chainfist",
+              "keywords": ["anti-vehicle 3+"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-2",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Dreadnought combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-2",
+              "damage": "3"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Dreadnought",
+        "Relic Contemptor Dreadnought"
+      ],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "acb98ef8-9f18-5c4e-846a-9d915ed4a8d9",
@@ -13974,7 +16543,7 @@
         "Relic Terminator Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Ancient In Terminator Armour",
         "Captain In Terminator Armour",
         "Chaplain In Terminator Armour",
@@ -14960,7 +17529,7 @@
         "Scout Sniper Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain In Phobos Armour", "Sergeant Telion"]
+      "leadBy": ["Captain In Phobos Armour", "Sergeant Telion"]
     },
     {
       "id": "5c07fa81-89e6-54aa-acbc-3e4499579637",
@@ -15187,7 +17756,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Smoke", "Imperium", "Scout Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": ["Captain In Phobos Armour", "Sergeant Telion"]
+      "leadBy": ["Captain In Phobos Armour", "Sergeant Telion"]
     },
     {
       "id": "50d536da-a4fc-5e03-a1ea-149d966905b3",
@@ -15390,7 +17959,977 @@
         "Imperium",
         "Sergeant Telion"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": ["Scout Squad", "Scout Sniper Squad"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "fda894e4-3c1f-5195-81a7-70fe4089c29c",
+      "name": "Sicaran Arcus",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Sicaran Arcus"],
+      "loadout": "This model is equipped with: Arcus multi-launcher; heavy bolter, armoured tracks.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 2 heavy bolters ◦ 2 lascannons",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Specialised Weapon System",
+            "description": "Each time this model makes an attack that targets the enemy unit you selected for the Oath of Moment ability that attack has the [IGNORES COVER] ability and can ignore the penalty to their Hit rolls when making attacks with Indirect Fire weapons against targets that are not visible to them."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "11",
+          "sv": "2+",
+          "w": "14",
+          "ld": "6+",
+          "oc": "4",
+          "name": "Sicaran Arcus"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Arcus multi-launcher",
+              "keywords": ["indirect fire"],
+              "range": "48\"",
+              "attacks": "2D6",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Imperium", "Smoke", "Sicaran Arcus"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "a20c547d-a5e9-5875-9043-dc3d3809a973",
+      "name": "Sicaran Battle Tank",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Sicaran Battle Tank"],
+      "loadout": "This model is equipped with: heavy bolter; Herakles-pattern autocannon; armoured tracks.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 2 heavy bolters ◦ 2 lascannons",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Armoured Spearhead",
+            "description": "Each time this model makes an attack that targets an enemy unit, re-roll a Hit roll of 1 and, if that unit is within range of an objective marker you do not control, you can re-roll the Hit roll instead."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "11",
+          "sv": "2+",
+          "w": "14",
+          "ld": "6+",
+          "oc": "4",
+          "name": "Sicaran Battle Tank"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Herakles-pattern autocannon",
+              "keywords": ["rapid fire 2"],
+              "range": "48\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Imperium", "Smoke", "Sicaran Battle Tank"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "8228cd7b-d7e5-5456-8b92-fd978215ed64",
+      "name": "Sicaran Omega",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Sicaran Omega"],
+      "loadout": "This model is equipped with: heavy bolter; omega plasma array; armoured tracks.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 2 heavy bolters ◦ 2 lascannons",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Overwhelming Short-range Firepower",
+            "description": "Each time this model makes an attack that targets the closest eligible enemy unit, re-roll a Hit roll of 1 and re-roll a Wound roll or 1."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "11",
+          "sv": "2+",
+          "w": "14",
+          "ld": "6+",
+          "oc": "4",
+          "name": "Sicaran Omega"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Omega plasma array – standard",
+              "keywords": [],
+              "range": "36\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-3",
+              "damage": "2"
+            },
+            {
+              "name": "Omega plasma array – supercharge",
+              "keywords": ["hazardous"],
+              "range": "36\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "10",
+              "ap": "-3",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Imperium", "Smoke", "Sicaran Omega"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "2309e0ee-5fc1-5445-b437-8acae7b551e2",
+      "name": "Sicaran Punisher",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Sicaran Punisher"],
+      "loadout": "This model is equipped with: heavy bolter; Punisher rotary cannon; armoured tracks.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 2 heavy bolters ◦ 2 lascannons",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Rotating Death",
+            "description": "This model’s Punisher rotary cannon has the [SUSTAINED HITS 1] ability when targeting Infantry units."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "11",
+          "sv": "2+",
+          "w": "14",
+          "ld": "6+",
+          "oc": "4",
+          "name": "Sicaran Punisher"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Punisher rotary cannon",
+              "keywords": ["devastating wounds"],
+              "range": "36\"",
+              "attacks": "18",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Imperium", "Smoke", "Sicaran Punisher"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "f608d735-aede-5d33-924c-a4b971026ee9",
+      "name": "Sicaran Venator",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Sicaran Venator"],
+      "loadout": "This model is equipped with: heavy bolter; Venator neutron laser; armoured tracks.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 2 heavy bolters ◦ 2 lascannons",
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Ferocious Assault",
+            "description": "Each time this model makes a ranged attack that targets the closest eligible Monster or Vehicle unit, add 1 to the Hit roll."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "11",
+          "sv": "2+",
+          "w": "14",
+          "ld": "6+",
+          "oc": "4",
+          "name": "Sicaran Venator"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Venator neutron laser",
+              "keywords": ["heavy"],
+              "range": "48\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "16",
+              "ap": "-4",
+              "damage": "D3+3"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Imperium", "Smoke", "Sicaran Venator"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "80f8577c-b182-540b-8332-c01b1d7b3ad3",
+      "name": "Sokar-pattern Stormbird",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Sokar-pattern Stormbird"],
+      "loadout": "This model is equipped with: hellstrike missile battery; 3 twin heavy bolters; 4 twin lascannons; armoured hull.",
+      "wargear": ["None"],
+      "transport": "This model has a transport capacity of 55 Adeptus Astartes Infantry or Adeptus Astartes Mounted models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Mounted, Centurion or Obliterator model takes up the space of 3 models. This model can also transport up to 1 Rhino model (this model – and any models embarked within it – take up the space of 25 models).",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 2D6", "Hover"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": "* Against ranged attacks only"
+        },
+        "other": [
+          {
+            "name": "Aerial Assault",
+            "description": "Each time a unit with the Deep Strike ability disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-13 WOUNDS REMAINING",
+          "description": "While this model has 1-13 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "20+\"",
+          "t": "13",
+          "sv": "2+",
+          "w": "40",
+          "ld": "6+",
+          "oc": "0",
+          "name": "Sokar-pattern Stormbird"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Hellstrike missile battery",
+              "keywords": ["anti-fly 3+"],
+              "range": "48\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "10",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy bolter",
+              "keywords": ["sustained hits 1", "twin-linked"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin lascannon",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured hull",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "9",
+              "skill": "4+",
+              "strength": "9",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Titanic",
+        "Fly",
+        "Aircraft",
+        "Transport",
+        "Imperium",
+        "Sokar-pattern Stormbird"
+      ],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "fbff4d6c-c8ca-59e5-8319-627f5c20c20a",
+      "name": "Spartan",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Spartan"],
+      "loadout": "This model is equipped with: 2 quad lascannons; twin heavy bolter; armoured tracks.",
+      "wargear": [
+        "This model’s 2 quad lascannons can be replaced with 2 laser destroyers.",
+        "This model’s twin heavy bolter can be replaced with 1 twin heavy flamer",
+        "This model can be equipped with one of the following: ◦ 1 heavy bolter ◦ 1 heavy flamer ◦ 1 multi-melta ◦ 1 storm bolter"
+      ],
+      "transport": "This model has a transport capacity of 28 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models.",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Fire Support",
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-6 WOUNDS REMAINING",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "18",
+          "ld": "6+",
+          "oc": "6",
+          "name": "Spartan"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["torrent", "ignores cover"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Laser destroyer",
+              "keywords": ["heavy"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-4",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Multi-melta",
+              "keywords": ["melta 2"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Quad lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Imperium", "Transport", "Smoke", "Spartan"],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "fd140c7e-4195-5892-b169-4d2426bc64ad",
@@ -15653,7 +19192,7 @@
         "Sternguard veteran Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Adrax Agatone",
         "Captain Sicarius",
         "Chaplain Cassius",
@@ -15671,6 +19210,174 @@
         "Primaris Lieutenant",
         "Uriel Ventris"
       ]
+    },
+    {
+      "id": "3414ae6f-d877-54c9-8b22-aeb55071d7ea",
+      "name": "Storm Eagle Gunship",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Storm Eagle Gunship"],
+      "loadout": "This model is equipped with: twin heavy bolter; 2 twin hellstrike launchers; vengeance launcher; armoured hull.",
+      "wargear": [
+        "This model’s twin heavy bolter can be replaced with one of the following: ◦ 1 twin multi-melta ◦ 1 typhoon missile launcher",
+        "This model’s 2 twin hellstrike missile launchers can be replaced with 2 twin lascannons"
+      ],
+      "transport": "This model has a transport capacity of 22 Adeptus Astartes Infantry models and 1 Dreadnought model. Each Jump Pack, Wulfen, Gravis, Terminator or Possessed model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models.",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6", "Hover"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Armoured Resilience",
+            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-6 WOUNDS REMAINING",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "20+\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "18",
+          "ld": "6+",
+          "oc": "0",
+          "name": "Storm Eagle Gunship"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy bolter",
+              "keywords": ["sustained hits 1", "twin-linked"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin hellstrike launcher",
+              "keywords": ["anti-fly 2+", "twin-linked"],
+              "range": "72\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "10",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin lascannon",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin multi-melta",
+              "keywords": ["melta 2", "twin-linked"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Typhoon missile launcher – frag",
+              "keywords": ["blast"],
+              "range": "48\"",
+              "attacks": "2D6",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            },
+            {
+              "name": "Typhoon missile launcher – krak",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-2",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Vengeance launcher",
+              "keywords": ["blast"],
+              "range": "48\"",
+              "attacks": "2D6",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured hull",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Transport",
+        "Imperium",
+        "Storm Eagle Gunship"
+      ],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "81c471c8-099f-5435-bfd9-44da6d7de4c1",
@@ -16886,7 +20593,7 @@
         "Tactical Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain",
         "Captain Sicarius",
         "Chaplain",
@@ -16897,6 +20604,105 @@
         "Techmarine",
         "Vulkan He’stan"
       ]
+    },
+    {
+      "id": "2168a99d-a164-5d92-8a97-fa7a5c673ad6",
+      "name": "Tarantula Sentry Battery",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Tarantula Sentry Battery"],
+      "loadout": "This model is equipped with: twin heavy bolter; armoured hull.",
+      "wargear": [
+        "This model’s twin heavy bolter replaced with 1 twin lascannon."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": [],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Sentinel Protocols",
+            "description": "Each time you select this unit for the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 4+ when resolving that Stratagem."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "-",
+          "t": "6",
+          "sv": "3+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "1",
+          "name": "Tarantula Sentry Battery"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Twin heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured hull",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "1",
+              "skill": "6+",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Artillery",
+        "Imperium",
+        "Tarantula Sentry Battery"
+      ],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "d2001ab7-9e30-5321-aba6-0f865ab4e987",
@@ -17160,7 +20966,11 @@
         "Imperium",
         "Techmarine"
       ],
-      "factions": ["Adeptus Astartes"]
+      "factions": ["Adeptus Astartes"],
+      "leads": {
+        "units": ["Astartes Servitors", "Tactical Squad"],
+        "extra": ""
+      }
     },
     {
       "id": "f995c048-454a-5054-82bf-d3eca07582d6",
@@ -17265,7 +21075,7 @@
         "Terminator Assault Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Ancient In Terminator Armour",
         "Captain In Terminator Armour",
         "Chaplain In Terminator Armour",
@@ -17445,13 +21255,141 @@
       ],
       "keywords": ["Infantry", "Imperium", "Terminator", "Terminator Squad"],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Ancient In Terminator Armour",
         "Captain In Terminator Armour",
         "Chaplain In Terminator Armour",
         "Darnath Lysander",
         "Librarian In Terminator Armour"
       ]
+    },
+    {
+      "id": "6917fb74-6102-5353-a204-babd803a7b27",
+      "name": "Terrax-pattern Termite",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Terrax-pattern Termite"],
+      "loadout": "This model is equipped with: Terrax melta cutter; 2 combi-bolters; Termite drill.",
+      "wargear": [
+        "This model’s 2 combi-bolters can be replaced with one of the following ◦ 2 heavy flamers ◦ 2 twin volkite chargers"
+      ],
+      "transport": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. It cannot transport Jump Pack, Wulfen, Phobos, Gravis, Centurion, Terminator, Obliterator, Possessed or Tacticus models (excluding Tacticus Character models that began the battle attached to a non-Tacticus unit).",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3", "Deep Strike"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Termite Assault",
+            "description": "This model must start the battle in Reserves, but neither it nor any units embarked within it are counted towards any limits placed on the maximum number of Reserves units you can start the battle with. This model can be set up in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. Any units embarked within this model can disembark after it has been set up on the battlefield, and if they do they must be set up more than 9\" away from all enemy models."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "8\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "14",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Terrax-pattern Termite"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["torrent", "ignores cover"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Terrax melta cutter",
+              "keywords": ["melta 2"],
+              "range": "12\"",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin volkite charger",
+              "keywords": ["devastating wounds", "twin-linked"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Termite drill",
+              "keywords": ["anti-vehicle 3+"],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "14",
+              "ap": "-2",
+              "damage": "D3+3"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Imperium",
+        "Transport",
+        "Dedicated Transport",
+        "Terrax-pattern Termite"
+      ],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "f1c2ad6f-a51e-5016-8928-28dc40b05961",
@@ -17841,7 +21779,166 @@
         "Captain",
         "Tor Garadon"
       ],
-      "factions": ["Adeptus Astartes", "Imperial Fists"]
+      "factions": ["Adeptus Astartes", "Imperial Fists"],
+      "leads": {
+        "units": [
+          "Aggressor Squad",
+          "Eradicator Squad",
+          "Heavy Intercessor Squad"
+        ],
+        "extra": ""
+      }
+    },
+    {
+      "id": "c67e8a3c-e0b0-5332-b9f4-d0eac9ce1aca",
+      "name": "Typhon",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Typhon"],
+      "loadout": "This model is equipped with: dreadhammer siege cannon; armoured tracks.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 2 heavy bolters ◦ 2 lascannons",
+        "This model can be equipped with one of the following: ◦ 1 heavy bolter ◦ 1 heavy flamer ◦ 1 multi-melta ◦ 1 storm bolter"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Sunderer of Fortresses",
+            "description": "Each time this model makes an attack that targets a Vehicle, improve the Strength and Damage characteristic of that attack by 1 (if that attack targets a Fortification unit, improve the Strength and Damage characteristics of that attack by 2 instead)."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-6 WOUNDS REMAINING",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "12",
+          "sv": "2+",
+          "w": "18",
+          "ld": "6+",
+          "oc": "6",
+          "name": "Typhon"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Dreadhammer siege cannon",
+              "keywords": ["blast"],
+              "range": "24\"",
+              "attacks": "D6+6",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["torrent", "ignores cover"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Multi-melta",
+              "keywords": ["melta 2"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Imperium", "Smoke", "Typhon"],
+      "factions": ["Adeptus Astartes"]
     },
     {
       "id": "f2c7620f-cfbb-5a3f-92e8-f25d72264657",
@@ -17938,7 +22035,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Tyrannic War Veterans"],
       "factions": ["Adeptus Astartes", "Ultramarines"],
-      "ledBy": ["Chaplain Cassius"]
+      "leadBy": ["Chaplain Cassius"]
     },
     {
       "id": "896d350b-6346-59b7-941d-7164cdb4cf36",
@@ -18045,7 +22142,15 @@
         "Captain",
         "Uriel Ventris"
       ],
-      "factions": ["Adeptus Astartes", "Ultramarines"]
+      "factions": ["Adeptus Astartes", "Ultramarines"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "d818ad4a-fd8b-5b29-8416-c0d0ad2d759b",
@@ -18210,7 +22315,7 @@
         "Vanguard Veteran Squad"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain",
         "Captain Sicarius",
         "Chaplain",
@@ -18387,7 +22492,7 @@
         "Vanguard Veteran Squad with Jump Packs"
       ],
       "factions": ["Adeptus Astartes"],
-      "ledBy": [
+      "leadBy": [
         "Captain With Jump Pack",
         "Chaplain With Jump Pack",
         "Kayvaan Shrike",
@@ -18508,6 +22613,127 @@
       "factions": ["Adeptus Astartes"]
     },
     {
+      "id": "c1634e24-6007-5b3e-bd0b-41e40cf19fe7",
+      "name": "Vindicator Laser Destroyer",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Vindicator Laser Destroyer"],
+      "loadout": "This model is equipped with: laser volley cannon; storm bolter; armoured tracks.",
+      "wargear": ["This model can be equipped with 1 hunter-killer missile."],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Annihilator",
+            "description": "Each time this model makes a ranged attack that targets a Monster or Vehicle unit, re-roll a Damage roll of 1."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "9\"",
+          "t": "11",
+          "sv": "2+",
+          "w": "11",
+          "ld": "6+",
+          "oc": "3",
+          "name": "Vindicator Laser Destroyer"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Laser volley cannon – overcharge fire",
+              "keywords": ["hazardous"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-4",
+              "damage": "D6+3"
+            },
+            {
+              "name": "Laser volley cannon – volley fire",
+              "keywords": [],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D3+3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Imperium",
+        "Vindicator Laser Destroyer"
+      ],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
       "id": "45d31fd3-800c-5f73-9e81-4124e484e1b1",
       "name": "Vulkan He’stan",
       "faction_id": "SM",
@@ -18613,7 +22839,16 @@
         "Captain",
         "Vulkan He’stan"
       ],
-      "factions": ["Adeptus Astartes", "Salamanders"]
+      "factions": ["Adeptus Astartes", "Salamanders"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Infernus Squad",
+          "Tactical Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "82cf4278-37e8-5c09-8c97-b795d77f3667",
@@ -18630,7 +22865,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "125"
+          "cost": "150"
         }
       ],
       "abilities": {
@@ -18726,6 +22961,213 @@
         }
       ],
       "keywords": ["Vehicle", "Smoke", "Imperium", "Whirlwind"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "37f14fb2-3d84-5e0e-9c71-1e32ff4266a5",
+      "name": "Whirlwind Scorpius",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Whirlwind Scorpius"],
+      "loadout": "This model is equipped with: Scorpius multi-launcher; armoured tracks.",
+      "wargear": [
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with 1 storm bolter."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Pinning Bombardment",
+            "description": "In your Shooting phase, after this model has shot, if one or more of those attacks made with its Scorpius multi-launcher scored a hit against an enemy Infantry unit, that unit must take a Battle-shock test."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "11",
+          "ld": "6+",
+          "oc": "3",
+          "name": "Whirlwind Scorpius"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Scorpius multi-launcher",
+              "keywords": ["blast", "indirect fire"],
+              "range": "48\"",
+              "attacks": "2D3+3",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Smoke", "Imperium", "Whirlwind Scorpius"],
+      "factions": ["Adeptus Astartes"]
+    },
+    {
+      "id": "395872ec-b024-5054-903d-f85348b74190",
+      "name": "Xiphon Interceptor",
+      "faction_id": "SM",
+      "leader": "",
+      "composition": ["1 Xiphon Interceptor"],
+      "loadout": "This model is equipped with: 2 twin lascannons; Xiphon missile battery; armoured hull.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Interceptor",
+            "description": "Each time this model makes a ranged attack that targets a unit that can Fly, add 1 to the Hit roll."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "20+\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "12",
+          "ld": "6+",
+          "oc": "0",
+          "name": "Xiphon Interceptor"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Twin lascannon",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Xiphon missile battery",
+              "keywords": ["anti-fly 2+"],
+              "range": "60\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Armoured hull",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Fly",
+        "Aircraft",
+        "Imperium",
+        "Xiphon Interceptor"
+      ],
       "factions": ["Adeptus Astartes"]
     }
   ],

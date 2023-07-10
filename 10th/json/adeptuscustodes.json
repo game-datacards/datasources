@@ -4,6 +4,92 @@
   "name": "Adeptus Custodes",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "SLAYERS OF NIGHTMARES",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Shield Host",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "In an age plagued by monstrous foes,\nwhen primordial horrors from the darkest\nvoid circle Humanity’s dying light, still the\nAdeptus Custodes stand strong.",
+      "when": "Fight phase.",
+      "target": "One Adeptus Custodes unit from\nyour army that has not been selected to\nfight this phase.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit makes an attack\nthat targets a Monster or Vehicle unit,\nadd 1 to the Wound roll.",
+      "restrictions": "",
+      "id": "f1b419ec-7a6e-5cbd-8e00-de2941f31612"
+    },
+    {
+      "name": "AVENGE THE FALLEN",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Shield Host",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "The loss of a single Talon of the Emperor\nis commemorated by the tolling of\nthe Bell of Lost Souls on Terra, and by\ntheir comrades’ bloody vengeance on\nthe battlefield.",
+      "when": "Start of the Fight phase.",
+      "target": "One Adeptus Custodes unit\nfrom your army that is below its Starting\nStrength and has not been selected to\nfight this phase.",
+      "effect": "Until the end of the phase, add\n1 to the Attacks characteristic of melee\nweapons equipped by models in that\nunit. If that unit is Below Half-strength,\nuntil the end of the phase, add 2 to the\nAttacks characteristic of those melee\nweapons instead.",
+      "restrictions": "",
+      "id": "3e82b320-5f15-55c4-96f0-f4e4bce98f2e"
+    },
+    {
+      "name": "UNWAVERING SENTINELS",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Shield Host",
+      "turn": "either",
+      "phase": ["any"],
+      "fluff": "Custodians will not be moved from\ntheir objective.",
+      "when": "Start of the Fight phase.",
+      "target": "One Adeptus Custodes unit\nfrom your army (excluding Anathema\nPsykana units) that is within range of an\nobjective marker.",
+      "effect": "Until the end of the phase, your\nunit has the Fights First ability.",
+      "restrictions": "",
+      "id": "57ccbcd9-9f5f-5d09-a813-f4c45c136d44"
+    },
+    {
+      "name": "ARCANE GENETIC ALCHEMY",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Shield Host",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "The Adeptus Custodes are individually\nengineered on a molecular level using\nsecrets of genetic alchemy that render\nthem virtual demigods in battle.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Adeptus Custodes Infantry\nunit from your army (excluding Anathema\nPsykana units) that was selected as\nthe target of one or more of that enemy\nunit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime an attack is allocated to a model in\nyour unit, subtract 1 from the Damage\ncharacteristic of that attack.",
+      "restrictions": "",
+      "id": "e84b8974-fc05-5c70-b73b-f7d9361b5d53"
+    },
+    {
+      "name": "VIGIL UNENDING",
+      "cost": 1,
+      "type": "Epic Deed",
+      "detachment": "Shield Host",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "The Custodes are determined that\nevery second of their lives will be spent\ncommitted to the Emperor, and they\ndo not yield while their duty remains\nunfilfilled, rising from the blood and ashes\nto continue their vigil.",
+      "when": "Your Command phase.",
+      "target": "One Adeptus Custodes Infantry\nunit from your army (excluding Anathema\nPsykana units).",
+      "effect": "One destroyed model (excluding\nCharacter models) is returned to your\nunit with its full wounds remaining.",
+      "restrictions": "You cannot target the\nsame unit with this Stratagem more than\nonce per battle.",
+      "id": "df9f916b-72fc-5751-9395-dad5b9514a8b"
+    },
+    {
+      "name": "SWORN GUARDIANS",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Shield Host",
+      "turn": "your",
+      "phase": ["movement"],
+      "fluff": "The Adeptus Custodes smash apart\ntheir foes without slowing, securing the\nEmperor’s realm with bloody efficiency\nand then advancing to new positions.",
+      "when": "Your Movement phase.",
+      "target": "One Adeptus Custodes unit from\nyour army (excluding Anathema Psykana\nunits) within range of an objective marker\nyou control.",
+      "effect": "That objective marker remains\nunder your control even if you have\nno models within range of it, until your\nopponent controls it at the start or end of\nany turn.",
+      "restrictions": "",
+      "id": "c2cd3965-656d-5277-8ee5-75decec87fbe"
+    }
+  ],
   "enhancements": [
     {
       "name": "UNSTOPPABLE DESTROYER",
@@ -233,7 +319,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Epic Hero", "Imperium", "Aleya"],
-      "factions": ["Adeptus Custodes"]
+      "factions": ["Adeptus Custodes"],
+      "leads": {
+        "units": ["Prosecutors", "Vigilators", "Witchseekers"],
+        "extra": ""
+      }
     },
     {
       "id": "1d52b4a3-4514-5a3e-adab-3594c2a60fa0",
@@ -396,7 +486,7 @@
       ],
       "keywords": ["Infantry", "Terminator", "Imperium", "Allarus Custodians"],
       "factions": ["Adeptus Custodes"],
-      "ledBy": ["Shield-captain In Allarus Terminator Armour"]
+      "leadBy": ["Shield-captain In Allarus Terminator Armour"]
     },
     {
       "id": "2e5ba22b-8a92-5e30-aa84-5610a5081445",
@@ -831,7 +921,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Imperium", "Blade Champion"],
-      "factions": ["Adeptus Custodes"]
+      "factions": ["Adeptus Custodes"],
+      "leads": {
+        "units": ["Custodian Guard", "Custodian Wardens"],
+        "extra": ""
+      }
     },
     {
       "id": "67a406c1-4870-58e0-a260-38b87888d4a1",
@@ -1416,7 +1510,7 @@
       ],
       "keywords": ["Infantry", "Battleline", "Imperium", "Custodian Guard"],
       "factions": ["Adeptus Custodes"],
-      "ledBy": [
+      "leadBy": [
         "Blade Champion",
         "Shield-captain",
         "Trajann Valoris",
@@ -1669,7 +1763,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Custodian Wardens"],
       "factions": ["Adeptus Custodes"],
-      "ledBy": [
+      "leadBy": [
         "Blade Champion",
         "Shield-captain",
         "Trajann Valoris",
@@ -1786,7 +1880,11 @@
         "Anathema Psykana",
         "Knight-Centura"
       ],
-      "factions": ["Adeptus Custodes"]
+      "factions": ["Adeptus Custodes"],
+      "leads": {
+        "units": ["Prosecutors", "Vigilators", "Witchseekers"],
+        "extra": ""
+      }
     },
     {
       "id": "335a4762-5e7e-5012-9ff2-9d53d3f8a66d",
@@ -2090,7 +2188,7 @@
         "Prosecutors"
       ],
       "factions": ["Adeptus Custodes"],
-      "ledBy": ["Aleya", "Knight-centura"]
+      "leadBy": ["Aleya", "Knight-centura"]
     },
     {
       "id": "6faae4f4-5ef4-5bba-9bd3-17a82eb610f9",
@@ -2330,7 +2428,11 @@
         }
       ],
       "keywords": ["Infantry", "Character", "Imperium", "Shield-Captain"],
-      "factions": ["Adeptus Custodes"]
+      "factions": ["Adeptus Custodes"],
+      "leads": {
+        "units": ["Custodian Guard", "Custodian Wardens"],
+        "extra": ""
+      }
     },
     {
       "id": "4bff1d84-eb9d-5f8f-80c2-4eef6bc38553",
@@ -2466,7 +2568,11 @@
         "Terminator",
         "Shield-Captain"
       ],
-      "factions": ["Adeptus Custodes"]
+      "factions": ["Adeptus Custodes"],
+      "leads": {
+        "units": ["Allarus Custodians"],
+        "extra": ""
+      }
     },
     {
       "id": "e803a504-7890-5595-8868-d52189fbe26e",
@@ -2575,7 +2681,11 @@
         "Dawneagle Jetbike",
         "Shield-Captain"
       ],
-      "factions": ["Adeptus Custodes"]
+      "factions": ["Adeptus Custodes"],
+      "leads": {
+        "units": ["Vertus Praetors"],
+        "extra": ""
+      }
     },
     {
       "id": "20c06da2-729f-52ce-8989-b2b98ea909b3",
@@ -2817,7 +2927,11 @@
         "Imperium",
         "Trajann Valoris"
       ],
-      "factions": ["Adeptus Custodes"]
+      "factions": ["Adeptus Custodes"],
+      "leads": {
+        "units": ["Custodian Guard", "Custodian Wardens"],
+        "extra": ""
+      }
     },
     {
       "id": "12edb3d1-de71-5dce-8515-c95f86fa9b05",
@@ -2910,7 +3024,11 @@
         "Shield-Captain",
         "Valerian"
       ],
-      "factions": ["Adeptus Custodes"]
+      "factions": ["Adeptus Custodes"],
+      "leads": {
+        "units": ["Custodian Guard", "Custodian Wardens"],
+        "extra": ""
+      }
     },
     {
       "id": "d9fb2942-b113-5191-8a92-f7b99cce3504",
@@ -3411,7 +3529,7 @@
       ],
       "keywords": ["Mounted", "Fly", "Imperium", "Vertus Praetors"],
       "factions": ["Adeptus Custodes"],
-      "ledBy": ["Shield-captain On Dawneagle Jetbike"]
+      "leadBy": ["Shield-captain On Dawneagle Jetbike"]
     },
     {
       "id": "a625fffb-42af-51c1-99a0-20a2f699b2fa",
@@ -3495,7 +3613,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Anathema Psykana", "Vigilators"],
       "factions": ["Adeptus Custodes"],
-      "ledBy": ["Aleya", "Knight-centura"]
+      "leadBy": ["Aleya", "Knight-centura"]
     },
     {
       "id": "9232d973-cdd6-519b-a8da-4c68e578ca7f",
@@ -3594,7 +3712,7 @@
       ],
       "keywords": ["Infantry", "Imperium", "Anathema Psykana", "Witchseekers"],
       "factions": ["Adeptus Custodes"],
-      "ledBy": ["Aleya", "Knight-centura"]
+      "leadBy": ["Aleya", "Knight-centura"]
     }
   ],
   "colours": {

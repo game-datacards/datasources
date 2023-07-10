@@ -4,6 +4,92 @@
   "name": "Tyranids",
   "is_subfaction": false,
   "parent_id": "",
+  "stratagems": [
+    {
+      "name": "RAPID REGENERATION",
+      "cost": 1,
+      "type": "Battle Tactic",
+      "detachment": "Invasion Fleet",
+      "turn": "either",
+      "phase": ["shooting", "fight"],
+      "fluff": "Prey stare in horror as chitinous\narmour regrows and flesh, muscle and\nsinew knots back together as though\nnever harmed.",
+      "when": "Your opponent’s Shooting phase or\nthe Fight phase, just after an enemy unit\nhas selected its targets.",
+      "target": "One Tyranids unit from your\narmy that was selected as the target of\none or more of the attacking unit’s attacks.",
+      "effect": "Until the end of the phase,\nmodels in your unit have the\nFeel No Pain 6+ ability. If your unit is\nwithin Synapse Range of your army, until\nthe end of the phase, models in your unit\nhave the Feel No Pain 5+ ability instead.",
+      "restrictions": "",
+      "id": "52030fdb-fcb6-5021-8e9c-04ce65765706"
+    },
+    {
+      "name": "DEATH FRENZY",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Invasion Fleet",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Tyranids care nothing for selfpreservation, lashing out even in death.",
+      "when": "Fight phase, just after an enemy\nunit has selected its targets.",
+      "target": "One Tyranids unit from your\narmy that was selected as the target of\none or more of the attacking unit’s attacks.",
+      "effect": "Until the end of the phase, each\ntime a model in your unit is destroyed, if\nthat model has not fought this phase, roll\none D6: on a 4+, do not remove it from\nplay. The destroyed model can fight after\nthe attacking model’s unit has finished\nmaking attacks, and is then removed\nfrom play",
+      "restrictions": "",
+      "id": "e46611c0-1303-5349-b41e-bc2b18d0edff"
+    },
+    {
+      "name": "ADRENAL SURGE",
+      "cost": 2,
+      "type": "Battle Tactic",
+      "detachment": "Invasion Fleet",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "These warrior organisms destroy all as\ntheir adrenaline surges.",
+      "when": "Fight phase.",
+      "target": "Up to two Tyranids units from\nyour army that are within Synapse Range\nof your army and are eligible to fight, or\none other Tyranids unit from your army\nthat is eligible to fight.",
+      "effect": "Until the end of the phase, each\ntime a model in one of those selected\nunits makes an attack, a successful\nunmodified Hit roll of 5+ scores a\nCritical Hit.",
+      "restrictions": "",
+      "id": "51b8689a-ea20-5be0-875f-8974789800c0"
+    },
+    {
+      "name": "OVERRUN",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Invasion Fleet",
+      "turn": "either",
+      "phase": ["fight"],
+      "fluff": "Tyranids are an unstoppable avalanche of\nflesh and chitin.",
+      "when": "Fight phase, just before a Tyranids\nunit from your army Consolidates.",
+      "target": "That Tyranids unit.",
+      "effect": "Until the end of the phase,\neach time a model in your unit makes a\nConsolidation move, it can move up to\n6\" instead of up to 3\", provided your unit\ncan end its Consolidation move in Unit\nCoherency and within Engagement Range\nof one or more enemy units. If your unit\nis within Synapse Range of your army\nand not within Engagement Range of\nany enemy units, instead of making that\nConsolidation move, it can instead make a\nNormal move of up to 6\".",
+      "restrictions": "",
+      "id": "5d5e1b8b-f056-5b6f-afa2-57ca936743a0"
+    },
+    {
+      "name": "SYNAPTIC INSIGHT",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Invasion Fleet",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "Guided by the instincts of leader-beasts,\na portion of the swarm can be tasked with\nfocusing its hunting instincts to destroy a\nparticular foe.",
+      "when": "Your Command phase.",
+      "target": "Up to two Tyranids units from\nyour army that are within Synapse Range\nof your army, or one other Tyranids unit\nfrom your army.",
+      "effect": "Select one Hyper-adaptation.\nUntil the end of the battle round, that\nhyper-adaptation is active for those\nselected units in addition to any other that\nmay be active for your army.",
+      "restrictions": "You cannot select the\nsame hyper-adaptation you selected at\nthe start of the first battle round.",
+      "id": "397c218b-9032-5213-b3c3-9e281ec33c4f"
+    },
+    {
+      "name": "ENDLESS SWARM",
+      "cost": 1,
+      "type": "Strategic Ploy",
+      "detachment": "Invasion Fleet",
+      "turn": "your",
+      "phase": ["command"],
+      "fluff": "As the battle rages, more organisms pour\nin to bolster the swarms.",
+      "when": "Your Command phase.",
+      "target": "Up to two Endless Multitude\nunits from your army that are within\nSynapse Range of your army, or one other\nEndless Multitude unit from your army.",
+      "effect": "Up to D3+3 destroyed models are\nreturned to each of the selected units.",
+      "restrictions": "",
+      "id": "1561bfb4-8994-5967-8da0-88b447d8511d"
+    }
+  ],
   "enhancements": [
     {
       "name": "Adaptive Biology",
@@ -215,15 +301,15 @@
       "points": [
         {
           "models": "1",
-          "cost": "40"
+          "cost": "65"
         },
         {
           "models": "2",
-          "cost": "80"
+          "cost": "130"
         },
         {
           "models": "3",
-          "cost": "120"
+          "cost": "195"
         }
       ],
       "abilities": {
@@ -373,7 +459,11 @@
         "Great Devourer",
         "Broodlord"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "leads": {
+        "units": ["Genestealers"],
+        "extra": ""
+      }
     },
     {
       "id": "28b62847-0a45-5cf7-a498-0ed2ab794f82",
@@ -577,7 +667,7 @@
       ],
       "keywords": ["Monster", "Great Devourer", "Carnifexes"],
       "factions": ["Tyranids"],
-      "ledBy": ["Old One Eye"]
+      "leadBy": ["Old One Eye"]
     },
     {
       "id": "624f081f-0912-5c5d-a443-b8b558de9a1f",
@@ -835,7 +925,7 @@
         "Gargoyles"
       ],
       "factions": ["Tyranids"],
-      "ledBy": ["Winged Tyranid Prime"]
+      "leadBy": ["Winged Tyranid Prime"]
     },
     {
       "id": "a2e7de56-15c2-56ab-ae84-c2ddb15cf630",
@@ -907,7 +997,7 @@
       ],
       "keywords": ["Infantry", "Great Devourer", "Genestealers"],
       "factions": ["Tyranids"],
-      "ledBy": ["Broodlord"]
+      "leadBy": ["Broodlord"]
     },
     {
       "id": "f1ca1132-af5d-5073-9411-2fa0a02d5c20",
@@ -923,7 +1013,7 @@
       "points": [
         {
           "models": "1",
-          "cost": "170"
+          "cost": "230"
         }
       ],
       "abilities": {
@@ -1682,7 +1772,11 @@
         "Synapse",
         "Hive Tyrant"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "leads": {
+        "units": ["Tyrant Guard"],
+        "extra": ""
+      }
     },
     {
       "id": "b6d511cb-c07b-5e74-9aaf-0d2e07b841b3",
@@ -2150,7 +2244,7 @@
         "Neurogaunts"
       ],
       "factions": ["Tyranids"],
-      "ledBy": ["Neurotyrant"]
+      "leadBy": ["Neurotyrant"]
     },
     {
       "id": "690228cc-b07b-5d25-9643-7b50d9db5d5d",
@@ -2248,7 +2342,11 @@
         "Synapse",
         "Neurotyrant"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "leads": {
+        "units": ["Neurogaunts", "Tyrant Guard"],
+        "extra": ""
+      }
     },
     {
       "id": "da6d41eb-57dc-5006-8015-d05579b5a4f6",
@@ -2335,7 +2433,11 @@
         "Great Devourer",
         "Old One Eye"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "leads": {
+        "units": ["Carnifexes"],
+        "extra": ""
+      }
     },
     {
       "id": "599b2db7-f531-5ac3-9e6e-ed8a7081c02d",
@@ -3424,7 +3526,11 @@
         "Synapse",
         "The Swarmlord"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "leads": {
+        "units": ["Tyrant Guard"],
+        "extra": ""
+      }
     },
     {
       "id": "d71c0768-ad7f-5d9e-9cb8-e849dbc083f2",
@@ -3668,7 +3774,7 @@
         "Tyranid Warriors with Melee Bio-weapons"
       ],
       "factions": ["Tyranids"],
-      "ledBy": ["Winged Tyranid Prime"]
+      "leadBy": ["Winged Tyranid Prime"]
     },
     {
       "id": "7cf26389-f7e6-5bb5-83db-4e93a8ade176",
@@ -3819,7 +3925,7 @@
         "Tyranid Warriors with Ranged Bio-weapons"
       ],
       "factions": ["Tyranids"],
-      "ledBy": ["Winged Tyranid Prime"]
+      "leadBy": ["Winged Tyranid Prime"]
     },
     {
       "id": "fd1b3b32-8417-51ca-876f-082d5eef9851",
@@ -4136,7 +4242,7 @@
       ],
       "keywords": ["Infantry", "Great Devourer", "Tyrant Guard"],
       "factions": ["Tyranids"],
-      "ledBy": ["Hive Tyrant", "Neurotyrant", "The Swarmlord"]
+      "leadBy": ["Hive Tyrant", "Neurotyrant", "The Swarmlord"]
     },
     {
       "id": "2e0c66ae-f16b-54cf-bb28-daf55aac09c5",
@@ -4494,7 +4600,15 @@
         "Synapse",
         "Winged Tyranid Prime"
       ],
-      "factions": ["Tyranids"]
+      "factions": ["Tyranids"],
+      "leads": {
+        "units": [
+          "Gargoyles",
+          "Tyranid Warriors with melee Bio-weapons",
+          "Tyranid Warriors with Ranged Bio-weapons"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "63bb6521-6679-5ee4-83b0-09f3131380f5",
