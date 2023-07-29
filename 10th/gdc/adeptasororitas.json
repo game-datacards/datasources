@@ -496,6 +496,71 @@
       "leadBy": ["Missionary", "Preacher"]
     },
     {
+      "id": "46bb4ea3-a545-5152-8b6b-4f0a972a85c0",
+      "name": "Battle Sanctum",
+      "source": "40k-10e",
+      "faction_id": "AS",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Battle Sanctum"],
+      "loadout": "This model is equipped with: nothing.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6"],
+        "faction": ["Acts of Faith"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Consecrated Ground",
+            "description": "When this Fortification is set up, all parts of it must be set up within 1\" of another part. Friendly Adepta Sororitas Infantry models can be set up or end any type of move on top of the floor sections of this Fortification. While an Adepta Sororitas unit from your army is within 1\" of this Fortification, that unit can perform up to two Acts of Faith per phase, instead of just one.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Holy Cover",
+            "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "-",
+          "t": "11",
+          "sv": "3+",
+          "w": "20",
+          "ld": "7+",
+          "oc": "0",
+          "name": "Battle Sanctum",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [],
+      "meleeWeapons": [],
+      "keywords": ["Imperium", "Fortification", "Towering", "Battle Sanctum"],
+      "factions": ["Adepta Sororitas"]
+    },
+    {
       "id": "d5bfff1a-8946-5275-8b37-0c5e14f353f9",
       "name": "Battle Sisters Squad",
       "source": "40k-10e",
@@ -2070,7 +2135,7 @@
             {
               "active": true,
               "name": "Boltgun",
-              "keywords": ["rapid fire 2", "assault"],
+              "keywords": ["assault", "rapid fire 1"],
               "range": "24\"",
               "attacks": "1",
               "skill": "3+",
@@ -3092,7 +3157,7 @@
         "other": [
           {
             "name": "Anguish of the Unredeemed",
-            "description": "Each time this unit makes a Charge move, until the end of the phase, melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
+            "description": "Each time this unit makes a Charge move, until the end of the turn, melee weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
             "showAbility": true,
             "showDescription": true
           }
@@ -4158,6 +4223,165 @@
         }
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Repentia Squad"],
+      "factions": ["Adepta Sororitas"]
+    },
+    {
+      "id": "73e3c366-0b9b-5070-a902-7194c4508f0a",
+      "name": "Repressor",
+      "source": "40k-10e",
+      "faction_id": "AS",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Repressor"],
+      "loadout": "This model is equipped with: Repressor twin heavy flamer; storm bolter; dozer ram.",
+      "wargear": [
+        "This model can be equipped with 1 hunter-killer missile.",
+        "This model can be equipped with one of the following: ◦ 1 heavy flamer ◦ 1 storm bolter"
+      ],
+      "transport": "This model has a transport capacity of 12 Adepta Sororitas Infantry models. It cannot transport Jump Pack models or the Triumph of Saint Katherine.",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3", "Firing Deck 6"],
+        "faction": [],
+        "primarch": [],
+        "invul": {
+          "value": "6+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Emergency Combat Embarkation",
+            "description": "Once per turn, in your opponent’s Charge phase, after an enemy unit has selected targets for its charge but before it makes a Charge move, you can select one Adepta Sororitas unit from your army that was selected as a target of that charge. Provided that unit is not within Engagement Range of any enemy units and every model in that unit is within 3\" of this Transport, it can embark within this Transport.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": true,
+          "showDescription": true,
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "12",
+          "ld": "7+",
+          "oc": "2",
+          "name": "Repressor",
+          "showDamagedMarker": true,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Heavy flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Repressor twin heavy flamer",
+              "keywords": ["ignores cover", "torrent", "twin-linked"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Dozer ram",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "7",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Transport",
+        "Dedicated Transport",
+        "Imperium",
+        "Repressor"
+      ],
       "factions": ["Adepta Sororitas"]
     },
     {
