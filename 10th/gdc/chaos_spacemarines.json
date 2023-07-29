@@ -410,7 +410,7 @@
       ],
       "keywords": ["Infantry", "Chaos", "Accursed Cultists"],
       "factions": ["Heretic Astartes"],
-      "leadBy": ["Dark Apostle", "Dark Commune"]
+      "leadBy": ["Dark Apostle", "Dark Commune", "Rogue Psyker"]
     },
     {
       "id": "c0db4193-98c8-558e-8f34-175fb03c0981",
@@ -821,6 +821,265 @@
         }
       ],
       "keywords": ["Mounted", "Grenades", "Chaos", "Chaos Bikers"],
+      "factions": ["Heretic Astartes"],
+      "leadBy": [
+        "Chaos Lord On Bike",
+        "Chaos Lord On Juggernaut",
+        "Chaos Lord On Steed Of Slaanesh",
+        "Sorcerer On Bike",
+        "Sorcerer On Steed Of Slaanesh"
+      ]
+    },
+    {
+      "id": "faabb539-df8f-56a5-9f1a-4df59003184d",
+      "name": "Chaos Deimos Predator",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Chaos Deimos Predator"],
+      "loadout": "This model is equipped with: plasma destroyer; armoured tracks.",
+      "wargear": [
+        "This model’s plasma destroyer can be replaced with one of the following: ◦ 1 conversion beam cannon ◦ 1 infernus cannon ◦ 1 magna-melta cannon",
+        "This model can be equipped with one of the following: ◦ 2 heavy bolters ◦ 2 heavy flamers ◦ 2 lascannons",
+        "This model can be equipped with 1 combi-bolter.",
+        "This model can be equipped with 1 hunter-killer missile."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Armoured Spearhead",
+            "description": "Each time this model makes an attack that targets an enemy unit, re-roll a Hit roll of 1 and, if that unit is within range of an objective marker you do not control, you can re-roll the Hit roll instead.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": true,
+          "showDescription": true,
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "10",
+          "sv": "3+",
+          "w": "11",
+          "ld": "6+",
+          "oc": "3",
+          "name": "Chaos Deimos Predator",
+          "showDamagedMarker": true,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Conversion beam cannon",
+              "keywords": ["conversion", "sustained hits d3"],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Conversion",
+              "description": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "3",
+              "attacks": "3+",
+              "skill": "5",
+              "strength": "-1",
+              "ap": "2"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Heavy flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Hunter-killer missile",
+              "keywords": ["one shot"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Infernus cannon",
+              "keywords": ["torrent", "ignores cover"],
+              "range": "12\"",
+              "attacks": "2D6",
+              "skill": "N/A",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Magna-melta cannon",
+              "keywords": ["melta 4"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma destroyer – standard",
+              "keywords": ["blast"],
+              "range": "36\"",
+              "attacks": "D3",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            },
+            {
+              "active": true,
+              "name": "Plasma destroyer – supercharge",
+              "keywords": ["blast", "hazardous"],
+              "range": "36\"",
+              "attacks": "D3",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-3",
+              "damage": "3"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Armoured tracks",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Smoke", "Chaos", "Deimos Predator"],
       "factions": ["Heretic Astartes"]
     },
     {
@@ -1189,7 +1448,7 @@
       "loadout": "This model is equipped with: combi-bolter; exalted weapon.",
       "wargear": [
         "This model’s combi-bolter can be replaced with 1 combi-weapon.",
-        "This model’s exalted weapon can be replaced with 1 chainfist.",
+        "This model’s exalted weapon can be replaced with one of the following: ◦ 1 chainfist ◦ 1 power fist",
         "This model’s combi-bolter and exalted weapon can be replaced with 1 paired accursed weapons."
       ],
       "transport": "",
@@ -1361,6 +1620,1263 @@
       "factions": ["Heretic Astartes"],
       "leads": {
         "units": ["Chaos Terminator Squad"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "36631384-bcf3-5217-87ca-418e1a4cccf9",
+      "name": "Chaos Lord On Bike",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following unit: ■ Chaos Bikers",
+      "composition": ["1 Chaos Lord on Bike"],
+      "loadout": "This model is equipped with: bolt pistol; combi-bolter; Astartes chainsword; close combat weapon.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol ◦ 1 combi-weapon ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s Astartes chainsword can be replaced with one of the following: ◦ 1 bolt pistol ◦ 1 plasma pistol ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s bolt pistol and Astartes chainsword can be replaced with 1 paired accursed weapons."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Lord of Chaos",
+            "description": "Once per battle round, one unit from your army with this ability can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Swift Assault",
+            "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "6",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Chaos Lord On Bike",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Accursed weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Paired accursed weapons",
+              "keywords": ["twin-linked"],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Chaos Lord on Bike"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chaos Bikers"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "db3c908a-dd5b-5b4c-b253-9f68546d10c6",
+      "name": "Chaos Lord On Disc Of Tzeentch",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Chosen ■ Legionaries ■ Rubric Marines",
+      "composition": ["1 Chaos Lord on Disc of Tzeentch"],
+      "loadout": "This model is equipped with: bolt pistol; Astartes chainsword; close combat weapon.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol ◦ 1 combi-bolter ◦ 1 combi-weapon ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s Astartes chainsword can be replaced with one of the following: ◦ 1 bolt pistol ◦ 1 plasma pistol ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s bolt pistol and Astartes chainsword can be replaced with 1 paired accursed weapons."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Lord of Chaos",
+            "description": "Once per battle round, one unit from your army with this ability can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Lord of Fate",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability against mortal wounds.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "4",
+          "sv": "3+",
+          "w": "6",
+          "ld": "6+",
+          "oc": "1",
+          "name": "Chaos Lord On Disc Of Tzeentch",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Accursed weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Paired accursed weapons",
+              "keywords": ["twin-linked"],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Tzeentch",
+        "Fly",
+        "Chaos Lord",
+        "Disc of Tzeentch"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries", "Rubric Marines"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "541f891e-a5ba-5e02-af12-174f0a3bd0e7",
+      "name": "Chaos Lord On Juggernaut",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Chaos Bikers ■ Khorne Berzerkers",
+      "composition": ["1 Chaos Lord on Juggernaut"],
+      "loadout": "This model is equipped with: bolt pistol; Astartes chainsword; bladed horn; close combat weapon.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol ◦ 1 combi-bolter ◦ 1 combi-weapon ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s Astartes chainsword can be replaced with one of the following: ◦ 1 bolt pistol ◦ 1 plasma pistol ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s bolt pistol and Astartes chainsword can be replaced with 1 paired accursed weapons."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Lord of Chaos",
+            "description": "Once per battle round, one unit from your army with this ability can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Bloody Stampede",
+            "description": "Each time this model’s unit ends a Charge move, select one enemy unit within Engagement Range of this model and roll one D6: on a 2-3, that enemy unit suffers 1 mortal wound; on a 4-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "7",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Chaos Lord On Juggernaut",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Accursed weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bladed horn",
+              "keywords": ["extra attacks", "lance"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Paired accursed weapons",
+              "keywords": ["twin-linked"],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Khorne",
+        "Chaos Lord",
+        "Juggernaut"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chaos Bikers", "Khorne Berzerkers"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "6eff422f-792d-5ef3-8f09-bd4dcfdb80e3",
+      "name": "Chaos Lord On Palanquin Of Nurgle",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Chosen ■ Legionaries ■ Plague Marines",
+      "composition": ["1 Chaos Lord on Palanquin of Nurgle"],
+      "loadout": "This model is equipped with: bolt pistol; Astartes chainsword; close combat weapon; Nurgling's claws and teeth.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol ◦ 1 combi-bolter ◦ 1 combi-weapon ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s Astartes chainsword can be replaced with one of the following: ◦ 1 bolt pistol ◦ 1 plasma pistol ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s bolt pistol and Astartes chainsword can be replaced with 1 paired accursed weapons."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Lord of Chaos",
+            "description": "Once per battle round, one unit from your army with this ability can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Revolting Regeneration",
+            "description": "At the start of your Command phase, this model regains up to D3 lost wounds.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "5\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "8",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Chaos Lord On Palanquin Of Nurgle",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Accursed weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Nurgling’s claws and teeth",
+              "keywords": ["extra attacks", "lethal hits"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "5+",
+              "strength": "2",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Paired accursed weapons",
+              "keywords": ["twin-linked"],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Nurgle",
+        "Chaos Lord",
+        "Palanquin of Nurgle"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries", "Plague Marines"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "672f6533-0ae2-5402-9932-4bbdbce826c2",
+      "name": "Chaos Lord On Steed Of Slaanesh",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following unit: ■ Chaos Bikers",
+      "composition": ["1 Chaos Lord on Steed of Slaanesh"],
+      "loadout": "This model is equipped with: bolt pistol; Astartes chainsword; close combat weapon; lashing tongue.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol ◦ 1 combi-bolter ◦ 1 combi-weapon ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s Astartes chainsword can be replaced with one of the following: ◦ 1 bolt pistol ◦ 1 plasma pistol ◦ 1 accursed weapon ◦ 1 power fist",
+        "This model’s bolt pistol and Astartes chainsword can be replaced with 1 paired accursed weapons."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Lord of Chaos",
+            "description": "Once per battle round, one unit from your army with this ability can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Cut Off Their Escape",
+            "description": "Each time an enemy unit (excluding Monsters and Vehicles) within Engagement Range of this model’s unit is selected to Fall Back, models in that enemy unit must take Desperate Escape tests as if their unit was Battle-shocked. When doing so, if that enemy unit is also Battle-shocked by other means, subtract 1 from each of those Desperate Escape tests.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "14\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "6",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Chaos Lord On Steed Of Slaanesh",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Accursed weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Lashing tongue",
+              "keywords": ["extra attacks", "lethal hits"],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Paired accursed weapons",
+              "keywords": ["twin-linked"],
+              "range": "Melee",
+              "attacks": "7",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Slaanesh",
+        "Chaos Lord",
+        "Steed of Slaanesh"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chaos Bikers"],
         "extra": ""
       }
     },
@@ -1704,7 +3220,7 @@
             {
               "active": true,
               "name": "Predator autocannon",
-              "keywords": [],
+              "keywords": ["rapid fire 2"],
               "range": "48\"",
               "attacks": "4",
               "skill": "3+",
@@ -1759,7 +3275,7 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": ["Deadly Demise D3"],
+        "core": ["Deadly Demise D3", "Firing Deck 2"],
         "faction": ["Dark Pacts"],
         "primarch": [],
         "invul": {
@@ -2514,7 +4030,7 @@
       "loadout": "Every model is equipped with: boltgun; bolt pistol; accursed weapon.",
       "wargear": [
         "For every 5 models in this unit, up to 2 models can each have their bolt pistol replaced with 1 plasma pistol.",
-        "For every 5 models in this unit, up to 2 models can each have their bolt pistol replaced with 1 combi-weapon.",
+        "For every 5 models in this unit, up to 2 models can each have their boltgun replaced with 1 combi-weapon.",
         "For every 5 models in this unit, 1 model’s boltgun and accursed weapon can be replaced with 1 paired accursed weapons.",
         "For every 5 models in this unit, 1 model equipped with a boltgun can have its accursed weapon replaced with 1 power fist. That model’s boltgun cannot be replaced.",
         "1 model can be equipped with 1 Chaos icon."
@@ -2715,6 +4231,8 @@
       "factions": ["Heretic Astartes"],
       "leadBy": [
         "Chaos Lord",
+        "Chaos Lord On Disc Of Tzeentch",
+        "Chaos Lord On Palanquin Of Nurgle",
         "Dark Apostle",
         "Exalted Champion",
         "Fabius Bile",
@@ -2722,6 +4240,8 @@
         "Master Of Executions",
         "Master Of Possession",
         "Sorcerer",
+        "Sorcerer On Disc Of Tzeentch",
+        "Sorcerer On Palanquin Of Nurgle",
         "Warpsmith"
       ]
     },
@@ -2946,7 +4466,7 @@
         "Cultist Mob"
       ],
       "factions": ["Heretic Astartes"],
-      "leadBy": ["Dark Apostle", "Dark Commune"]
+      "leadBy": ["Dark Apostle", "Dark Commune", "Rogue Psyker"]
     },
     {
       "id": "c9b83cec-f13d-5c5b-92fb-d374ee5696d7",
@@ -4595,6 +6115,127 @@
       "factions": ["Heretic Astartes"]
     },
     {
+      "id": "511e358e-25bb-527b-89be-927cd6ce5bc3",
+      "name": "Gellerpox Infected",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["4 Nightmare Hulks", "3 Gellerpox Mutants"],
+      "loadout": "Every Gellerpox Mutant is equipped with: brutal weapons. ne Nightmare Hulk is equipped with: belly-flamer; O hideous mutations. Every other Nightmare Hulk is equipped with: hideous mutations.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Feel No Pain 5+"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Fearsome (Aura)",
+            "description": "While an enemy unit is within 6\" of this unit, each time that enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "5\"",
+          "t": "5",
+          "sv": "6+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "name": "NIGHTMARE HULK",
+          "showDamagedMarker": false,
+          "showName": true,
+          "active": true
+        },
+        {
+          "m": "5\"",
+          "t": "5",
+          "sv": "6+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "name": "GELLERPOX MUTANTS",
+          "showDamagedMarker": false,
+          "showName": true,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Belly-flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Brutal weapons",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Hideous mutations",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Chaos", "Nurgle", "Gellerpox Infected"],
+      "factions": ["Heretic Astartes"]
+    },
+    {
       "id": "60b12bfe-4587-5f45-a641-51224a4c52f3",
       "name": "Greater Blight Drone",
       "source": "40k-10e",
@@ -5628,6 +7269,244 @@
         }
       ],
       "keywords": ["Vehicle", "Fly", "Aircraft", "Chaos", "Daemon", "Heldrake"],
+      "factions": ["Heretic Astartes"]
+    },
+    {
+      "id": "70c359fb-d604-5bed-b17b-cb28bc2e381d",
+      "name": "Hell Blade",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Hell Blade"],
+      "loadout": "This model is equipped with: 2 twin autocannons; armoured hull.",
+      "wargear": [
+        "This model’s 2 twin autocannons can be replaced with 2 twin lascannons."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Interceptor",
+            "description": "Each time this model makes a ranged attack that targets a unit that can Fly, add 1 to the Hit roll.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "20+\"",
+          "t": "8",
+          "sv": "3+",
+          "w": "10",
+          "ld": "6+",
+          "oc": "0",
+          "name": "Hell Blade",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Twin autocannon",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-3",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Twin lascannon",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Armoured hull",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Chaos", "Aircraft", "Fly", "Hell Blade"],
+      "factions": ["Heretic Astartes"]
+    },
+    {
+      "id": "18d0fb57-c8e1-58ee-9de5-d84b32bd92df",
+      "name": "Hell Talon",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Hell Talon"],
+      "loadout": "This model is equipped with: autocannon; twin lascannon; armoured hull.",
+      "wargear": [
+        "This model’s autocannon can be replaced with 1 havoc launcher."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Bomb Rack",
+            "description": "Each time this model ends a Normal move, you can select one enemy unit it moved across during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": true,
+          "showDescription": true,
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "20+\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "14",
+          "ld": "6+",
+          "oc": "0",
+          "name": "Hell Talon",
+          "showDamagedMarker": true,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Autocannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Havoc launcher",
+              "keywords": ["blast"],
+              "range": "48\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Twin lascannon",
+              "keywords": ["twin-linked"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Armoured hull",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Chaos", "Aircraft", "Fly", "Hell Talon"],
       "factions": ["Heretic Astartes"]
     },
     {
@@ -6694,7 +8573,7 @@
       "composition": ["1 Aspiring Champion", "4-9 Legionaries"],
       "loadout": "Every model is equipped with: bolt pistol; boltgun; close combat weapon.",
       "wargear": [
-        "The Aspiring Champion’s boltgun can be replaced with one of the following: ◦ 1 plasma pistol* ◦ 1 accursed weapon ◦ 1 Astartes chainsword ◦ 1 heavy melee weapon",
+        "The Aspiring Champion’s boltgun can be replaced with one of the following: ◦ 1 plasma pistol and 1 Astartes chainsword* ◦ 1 accursed weapon ◦ 1 Astartes chainsword ◦ 1 heavy melee weapon",
         "The Aspiring Champion’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol* ◦ 1 accursed weapon ◦ 1 Astartes chainsword ◦ 1 heavy melee weapon",
         "1 model can be equipped with 1 Chaos icon.",
         "Any number of Legionaries can each have their boltgun replaced with 1 Astartes chainsword.",
@@ -6837,7 +8716,7 @@
               "keywords": ["heavy"],
               "range": "48\"",
               "attacks": "2",
-              "skill": "3+",
+              "skill": "4+",
               "strength": "9",
               "ap": "-1",
               "damage": "3"
@@ -6981,6 +8860,8 @@
       "leadBy": [
         "Abaddon The Despoiler",
         "Chaos Lord",
+        "Chaos Lord On Disc Of Tzeentch",
+        "Chaos Lord On Palanquin Of Nurgle",
         "Dark Apostle",
         "Exalted Champion",
         "Fabius Bile",
@@ -6989,6 +8870,8 @@
         "Master Of Executions",
         "Master Of Possession",
         "Sorcerer",
+        "Sorcerer On Disc Of Tzeentch",
+        "Sorcerer On Palanquin Of Nurgle",
         "Warpsmith"
       ]
     },
@@ -7683,6 +9566,260 @@
       ],
       "keywords": ["Vehicle", "Walker", "Chaos", "Daemon", "Maulerfiend"],
       "factions": ["Heretic Astartes"]
+    },
+    {
+      "id": "d449e9ae-3bf2-5bd0-9f25-685ef5206b92",
+      "name": "Mutilators",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["3 Mutilators"],
+      "loadout": "Every model is equipped with: fleshmetal weapons.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deep Strike"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Death Frenzy",
+            "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [
+          {
+            "name": "CULT OF DESTRUCTION",
+            "description": "For the purposes of embarking within Transports, each Mutilator model counts as one Obliterator model.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "4\"",
+          "t": "7",
+          "sv": "2+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Mutilators",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Fleshmetal weapons – strike",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "2"
+            },
+            {
+              "active": true,
+              "name": "Fleshmetal weapons – sweep",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "8",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Chaos", "Daemon", "Mutilators"],
+      "factions": ["Heretic Astartes"]
+    },
+    {
+      "id": "2a06fbbf-2216-5056-a8e5-8c730a1d0954",
+      "name": "Mutoid Vermin",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["16 Mutoid Vermin"],
+      "loadout": "Every model is equipped with: diseased claws and fangs.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Feel No Pain 6+"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Mischief Makers (Aura)",
+            "description": "While an enemy unit (excluding Monsters and Vehicles) is within 6\" of this unit, each time a model in that unit makes a melee attack, subtract 1 from the Hit roll.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "8\"",
+          "t": "2",
+          "sv": "7+",
+          "w": "1",
+          "ld": "8+",
+          "oc": "0",
+          "name": "Mutoid Vermin",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Diseased claws and fangs",
+              "keywords": ["lethal hits"],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "2",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Swarm", "Chaos", "Nurgle", "Mutoid Vermin"],
+      "factions": ["Heretic Astartes"]
+    },
+    {
+      "id": "56fa9aab-ac8b-5e72-9250-b5c6e76683a2",
+      "name": "Negavolt Cultists",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["4 Negavolt Cultists"],
+      "loadout": "Every model is equipped with: electro-goads.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Feel No Pain 5+"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Voltagheist Field",
+            "description": "Each time this unit ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6 for each model in this unit: for each 4+, that enemy unit suffers 1 mortal wound.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [
+          {
+            "name": "SERVANTS OF THE ABYSS",
+            "description": "If a unit from your army with the Leader ability can be attached to a Cultist Mob, it can be attached to this unit instead.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "3",
+          "sv": "7+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "name": "Negavolt Cultists",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Electro-goads",
+              "keywords": ["sustained hits 2"],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Chaos", "Negavolt Cultists"],
+      "factions": ["Heretic Astartes"],
+      "leadBy": ["Rogue Psyker"]
     },
     {
       "id": "1207b676-a91c-5c14-9524-c646f2225d04",
@@ -8519,6 +10656,836 @@
       "leadBy": ["Haarken Worldclaimer"]
     },
     {
+      "id": "446165b7-1ea0-528c-86a2-120622f9dd99",
+      "name": "Renegade Enforcer",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following unit: ■ Traitor Guardsmen Squad ■ Renegade Heavy Weapons Squad",
+      "composition": ["1 Renegade Enforcer"],
+      "loadout": "This model is equipped with: Enforcer pistol; Enforcer melee weapon.",
+      "wargear": [
+        "This model’s Enforcer pistol can be replaced with one of the following: ◦ 1 autogun ◦ 1 lasgun ◦ 1 shotgun",
+        "This model’s Enforcer melee weapon can be replaced with one of the following: ◦ 1 power fist ◦ 1 power weapon"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "5+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Brutal Example",
+            "description": "While this model is leading a unit, you can target that unit with the Insane Bravery Stratagem for 0CP, and can do so even if another unit from your army has already been targeted with that Stratagem this phase. Each time you use this ability, one Bodyguard model in that unit is destroyed.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Enforcer",
+            "description": "This model's unit is eligible to declare a charge in a turn in which it Fell Back.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "3",
+          "sv": "5+",
+          "w": "3",
+          "ld": "6+",
+          "oc": "1",
+          "name": "Renegade Enforcer",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Autogun",
+              "keywords": ["rapid fire 1"],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Enforcer pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Lasgun",
+              "keywords": ["rapid fire 1"],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Shotgun",
+              "keywords": ["assault"],
+              "range": "12\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Enforcer melee weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Grenades",
+        "Character",
+        "Renegade Enforcer"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Traitor Guardsmen Squad", "Renegade Heavy Weapons Squad"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "e57e2cd2-bd45-52ec-ad0b-5389a8a718b5",
+      "name": "Renegade Heavy Weapons Squad",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["3 Renegade Heavy Weapons Teams"],
+      "loadout": "Every model is equipped with: renegade firearm; heavy stubber; close combat weapons.",
+      "wargear": [
+        "Any numbers of models’ heavy stubbers can each be replaced with one of the following: ◦ 1 autocannon ◦ 1 heavy bolter ◦ 1 lascannon ◦ 1 missile launcher ◦ 1 mortar"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": [],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Covering Fire",
+            "description": "Each time you target this unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [
+          {
+            "name": "HEAVY WEAPONS TEAM",
+            "description": "For the purposes of embarking within Transports, each Renegade Heavy Weapons Team model counts as two models.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "3",
+          "sv": "5+",
+          "w": "2",
+          "ld": "7+",
+          "oc": "2",
+          "name": "Renegade Heavy Weapons Squad",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Autocannon",
+              "keywords": ["heavy"],
+              "range": "48\"",
+              "attacks": "2",
+              "skill": "5+",
+              "strength": "9",
+              "ap": "-1",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Heavy bolter",
+              "keywords": ["heavy", "sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "5+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Heavy stubber",
+              "keywords": ["heavy", "rapid fire 3"],
+              "range": "36\"",
+              "attacks": "4",
+              "skill": "5+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Lascannon",
+              "keywords": ["heavy"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "5+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Missile launcher – frag",
+              "keywords": ["blast", "heavy"],
+              "range": "48\"",
+              "attacks": "D6",
+              "skill": "5+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Missile launcher – krak",
+              "keywords": ["heavy"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "5+",
+              "strength": "9",
+              "ap": "2",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Mortar",
+              "keywords": ["blast", "heavy", "indirect fire"],
+              "range": "48\"",
+              "attacks": "D6",
+              "skill": "5+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Renegade firearm",
+              "keywords": ["rapid fire 1"],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Close combat weapons",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Chaos",
+        "Grenades",
+        "Renegade Heavy Weapons Squad"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leadBy": ["Renegade Enforcer"]
+    },
+    {
+      "id": "ad3af7b4-7069-573f-983e-5a70f3e2d8e4",
+      "name": "Renegade Ogryn Beast Handler",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Ogryn Pack Master", "3 Chaos Mauler Hounds"],
+      "loadout": "T  he Ogryn Pack Master is equipped with: mauler goad and ripper claw. Every Chaos Mauler Hound is equipped with: befouled claws and fangs.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": [],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Beastmaster",
+            "description": "While this unit contains an Ogryn Pack Master model, you can re-roll Charge rolls made for this unit, and each time a Chaos Mauler Hound model in this unit makes an attack, re-roll a Hit roll of 1.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "6",
+          "sv": "5+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "name": "OGRYN PACK MASTER",
+          "showDamagedMarker": false,
+          "showName": true,
+          "active": true
+        },
+        {
+          "m": "6\"",
+          "t": "4",
+          "sv": "6+",
+          "w": "1",
+          "ld": "7+",
+          "oc": "1",
+          "name": "CHAOS MAULER HOUND",
+          "showDamagedMarker": false,
+          "showName": true,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Befouled claws and fangs",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Mauler goad and ripper claw",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Beasts", "Chaos", "Renegade Ogryn Beast Handler"],
+      "factions": ["Heretic Astartes"]
+    },
+    {
+      "id": "0c07ad96-507a-54c4-b317-1619a739d0cd",
+      "name": "Renegade Ogryn Brutes",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["3 Renegade Ogryn Brutes"],
+      "loadout": "Every model is equipped with: Ogryn weapon.",
+      "wargear": [
+        "One model’s Ogryn weapon can be replaced with 1 Ogryn power drill."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": [],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Ogryn Combat Stimms",
+            "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 4+, do not remove it from play; that destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [
+          {
+            "name": "OGRYNS",
+            "description": "For the purposes of embarking within Transports, each Renegade Ogryn Brute model counts as one Terminator model.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "6",
+          "sv": "5+",
+          "w": "3",
+          "ld": "7+",
+          "oc": "1",
+          "name": "Renegade Ogryn Brutes",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Ogryn power drill",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "10",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Ogryn weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Chaos", "Renegade Ogryn Brutes"],
+      "factions": ["Heretic Astartes"]
+    },
+    {
+      "id": "4f4bdbeb-d783-5133-825a-9b34510002f3",
+      "name": "Renegade Plague Ogryns",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["3 Renegade Plague Ogryns"],
+      "loadout": "Every model is equipped with: Ogryn plague claws.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Feel No Pain 6+"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Wall of Muscle",
+            "description": "Each time an attack is allocated to a model in this unit, subtract 1 from the Damage characteristic of that attack.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [
+          {
+            "name": "OGRYNS",
+            "description": "For the purposes of embarking within Transports, each Renegade Plague Ogryn model counts as one Terminator model.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "5\"",
+          "t": "7",
+          "sv": "5+",
+          "w": "3",
+          "ld": "7+",
+          "oc": "1",
+          "name": "Renegade Plague Ogryns",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Ogryn plague claws",
+              "keywords": ["lethal hits"],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Chaos", "Nurgle", "Renegade Plague Ogryns"],
+      "factions": ["Heretic Astartes"]
+    },
+    {
+      "id": "bd8700c4-2db5-590f-931a-5d6f1ba83b62",
+      "name": "Rogue Psyker",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Accursed Cultists ■ Cultist Mob ■ Negavolt Cultists",
+      "composition": ["1 Rogue Psyker"],
+      "loadout": "This model is equipped with: laspistol; Psychic Strike; Chaos stave.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Cursed Wardings (Psychic)",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 4+ ability against Psychic Attacks.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Psychic Barrier (Psychic)",
+            "description": "At the start of your opponent’s Shooting phase, you can roll one D6: on a 1, this Psyker’s unit suffers D3 mortal wounds; on a 2+, until the end of the phase, models in this Psyker’s unit have a 4+ invulnerable save.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "3",
+          "sv": "5+",
+          "w": "3",
+          "ld": "7+",
+          "oc": "1",
+          "name": "Rogue Psyker",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Laspistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Psychic Strike – focused witchfire",
+              "keywords": [
+                "blast",
+                "devastating wounds",
+                "hazardous",
+                "psychic"
+              ],
+              "range": "12\"",
+              "attacks": "D6+3",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "2"
+            },
+            {
+              "active": true,
+              "name": "Psychic Strike – witchfire",
+              "keywords": ["blast", "devastating wounds", "psychic"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Chaos stave",
+              "keywords": ["psychic"],
+              "range": "Melee",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Chaos", "Character", "Psyker", "Rogue Psyker"],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Accursed Cultists", "Cultist Mob", "Negavolt Cultists"],
+        "extra": ""
+      }
+    },
+    {
       "id": "7ae1d3cd-10ba-53c7-85bb-e6b388b02db6",
       "name": "Sorcerer",
       "source": "40k-10e",
@@ -8833,6 +11800,1044 @@
       }
     },
     {
+      "id": "29e8e63b-a0c7-5287-b1a0-0e729a8f6f0c",
+      "name": "Sorcerer On Bike",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following unit: ■ Chaos Bikers",
+      "composition": ["1 Sorcerer on Bike"],
+      "loadout": "This model is equipped with: bolt pistol; combi-bolter; Infernal Gaze; force weapon.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol ◦ 1 combi-bolter ◦ 1 combi-weapon ◦ 1 accursed weapon ◦ 1 Astartes chainsword ◦ 1 power fist"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Prescience (Psychic)",
+            "description": "While this model is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Unholy Power",
+            "description": "Each time this model's unit makes a Dark Pact, until the end of the phase, each time this model makes a Psychic Attack, add 1 to the Wound roll.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Sorcerer On Bike",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Infernal Gaze – focused witchfire",
+              "keywords": ["devastating wounds", "hazardous", "psychic"],
+              "range": "24\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "D3"
+            },
+            {
+              "active": true,
+              "name": "Infernal Gaze – witchfire",
+              "keywords": ["psychic"],
+              "range": "24\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Accursed weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Force weapon",
+              "keywords": ["psychic"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Psyker",
+        "Sorcerer on Bike"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chaos Bikers"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "2a2315fb-573f-5b44-a365-f442c3111a90",
+      "name": "Sorcerer On Disc Of Tzeentch",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Chosen ■ Legionaries ■ Rubric Marines",
+      "composition": ["1 Sorcerer on Disc of Tzeentch"],
+      "loadout": "This model is equipped with: bolt pistol; Infernal Gaze; force weapon.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol ◦ 1 combi-bolter ◦ 1 combi-weapon ◦ 1 accursed weapon ◦ 1 Astartes chainsword ◦ 1 power fist"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Flames of Change (Psychic)",
+            "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Altered Reality (Psychic)",
+            "description": "Once per battle round, after a Hit roll, a Wound roll or a saving throw is made for this model, you can change the result of that roll to a 6.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "4",
+          "sv": "3+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "1",
+          "name": "Sorcerer On Disc Of Tzeentch",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Infernal Gaze – focused witchfire",
+              "keywords": ["devastating wounds", "hazardous", "psychic"],
+              "range": "24\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "D3"
+            },
+            {
+              "active": true,
+              "name": "Infernal Gaze – witchfire",
+              "keywords": ["psychic"],
+              "range": "24\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Accursed weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Force weapon",
+              "keywords": ["psychic"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Psyker",
+        "Tzeentch",
+        "Fly",
+        "Sorcerer",
+        "Disc of Tzeentch"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries", "Rubric Marines"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "538eb02a-0e15-532a-a804-18e50f7423cb",
+      "name": "Sorcerer On Palanquin Of Nurgle",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Chosen ■ Legionaries ■ Plague Marines",
+      "composition": ["1 Sorcerer on Palanquin of Nurgle"],
+      "loadout": "This model is equipped with: bolt pistol; Infernal Gaze; force weapon; Nurgling's claws and teeth.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol ◦ 1 combi-bolter ◦ 1 combi-weapon ◦ 1 accursed weapon ◦ 1 Astartes chainsword ◦ 1 power fist"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Gift of Poxes (Psychic)",
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Feculent Despair (Aura, Psychic)",
+            "description": "While an enemy unit is within 6\" of this model, each time that unit takes a Battle-shock test, subtract 1 from that test.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "5\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "7",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Sorcerer On Palanquin Of Nurgle",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Infernal Gaze – focused witchfire",
+              "keywords": ["devastating wounds", "hazardous", "psychic"],
+              "range": "24\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "D3"
+            },
+            {
+              "active": true,
+              "name": "Infernal Gaze – witchfire",
+              "keywords": ["psychic"],
+              "range": "24\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Accursed weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Force weapon",
+              "keywords": ["psychic"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Nurgling’s claws and teeth",
+              "keywords": ["extra attacks", "lethal hits"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "5+",
+              "strength": "2",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Psyker",
+        "Nurgle",
+        "Sorcerer",
+        "Palanquin of Nurgle"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chosen", "Legionaries", "Plague Marines"],
+        "extra": ""
+      }
+    },
+    {
+      "id": "3eff79ed-3a30-5389-bc25-dcfb7137333e",
+      "name": "Sorcerer On Steed Of Slaanesh",
+      "source": "40k-10e",
+      "faction_id": "CSM",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following unit: ■ Chaos Bikers",
+      "composition": ["1 Sorcerer on Steed of Slaanesh"],
+      "loadout": "This model is equipped with: bolt pistol; Infernal Gaze; force weapon; lashing tongue.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 plasma pistol ◦ 1 combi-bolter ◦ 1 combi-weapon ◦ 1 accursed weapon ◦ 1 Astartes chainsword ◦ 1 power fist"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Dark Pacts"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Dark Favour (Psychic)",
+            "description": "While this model is leading a unit, models in that unit have a 4+ invulnerable save.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Infernal Speed",
+            "description": "While this model is leading a unit, change the Move characteristic of models in that unit to 14\".",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "14\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Sorcerer On Steed Of Slaanesh",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "2+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Infernal Gaze – focused witchfire",
+              "keywords": ["devastating wounds", "hazardous", "psychic"],
+              "range": "24\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-2",
+              "damage": "D3"
+            },
+            {
+              "active": true,
+              "name": "Infernal Gaze – witchfire",
+              "keywords": ["psychic"],
+              "range": "24\"",
+              "attacks": "D6",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Accursed weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Force weapon",
+              "keywords": ["psychic"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Lashing tongue",
+              "keywords": ["extra attacks", "lethal hits"],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Grenades",
+        "Chaos",
+        "Slaanesh",
+        "Sorcerer",
+        "Steed of Slaanesh"
+      ],
+      "factions": ["Heretic Astartes"],
+      "leads": {
+        "units": ["Chaos Bikers"],
+        "extra": ""
+      }
+    },
+    {
       "id": "56c7b2e3-0c94-5072-a260-5aa929ff98aa",
       "name": "Traitor Enforcer",
       "source": "40k-10e",
@@ -8978,7 +12983,7 @@
       "composition": ["1 Traitor Sergeant", "9 Traitor Guardsmen"],
       "loadout": "The Traitor Sergeant is equipped with: corrupted pistol; close combat weapon. Every Traitor Guardsman is equipped with: lasgun; close combat weapon.",
       "wargear": [
-        "Up to 3 Traitor Guardsmen can each have their lasgun replaced with one of the following: ◦ 1 Cultist grenade launcher ◦ 1 flamer ◦ 1 meltagun ◦ 1 plasma gun ◦ 1 Cultist sniper rifle",
+        "Up to 3 Traitor Guardsmen can each have their lasgun replaced with one of the following (to a maximum of 2 of each per unit): ◦ 1 Cultist grenade launcher ◦ 1 flamer ◦ 1 meltagun ◦ 1 plasma gun ◦ 1 Cultist sniper rifle",
         "The Traitor Sergeant’s close combat weapon can be replaced with one of the following: ◦ 1 chainsword ◦ 1 power weapon",
         "The Traitor Sergeant’s corrupted pistol can be replaced with 1 boltgun."
       ],
@@ -9235,7 +13240,7 @@
       ],
       "keywords": ["Infantry", "Grenades", "Chaos", "Traitor Guardsmen Squad"],
       "factions": ["Heretic Astartes"],
-      "leadBy": ["Traitor Enforcer"]
+      "leadBy": ["Renegade Enforcer", "Traitor Enforcer"]
     },
     {
       "id": "9bb81b71-c313-51bc-addf-437609998d97",

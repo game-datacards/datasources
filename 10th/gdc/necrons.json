@@ -2062,7 +2062,7 @@
           },
           {
             "name": "Systematic Vigour",
-            "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 3+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and it is then removed from play.",
+            "description": "Each time a Cryptothrall model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 3+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and it is then removed from play.",
             "showAbility": true,
             "showDescription": true
           }
@@ -2556,6 +2556,123 @@
         }
       ],
       "keywords": ["Infantry", "Flayed Ones"],
+      "factions": ["Necrons"]
+    },
+    {
+      "id": "8e449811-afda-56fc-920f-1c641d319680",
+      "name": "Gauss Pylon",
+      "source": "40k-10e",
+      "faction_id": "NEC",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Gauss Pylon"],
+      "loadout": "This model is equipped with: gauss annihilator; tesla arc.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D6+2"],
+        "faction": ["Reanimation Protocols"],
+        "primarch": [
+          {
+            "name": "FORTIFICATION",
+            "showAbility": true,
+            "abilities": [
+              {
+                "name": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army",
+                "description": " ■  That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. ■  Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+                "showAbility": true,
+                "showDescription": true
+              }
+            ]
+          }
+        ],
+        "invul": {
+          "value": "5+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Phase Shift Generator (Aura)",
+            "description": "While a friendly Necrons unit is within 3\" of this Fortification, models in that unit have a 5+ invulnerable save against ranged attacks.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Phase-shifted Cover",
+            "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": true,
+          "showDescription": true,
+          "range": "1-7 WOUNDS REMAINING",
+          "description": "While this model has 1-7 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "-",
+          "t": "12",
+          "sv": "3+",
+          "w": "22",
+          "ld": "7+",
+          "oc": "0",
+          "name": "Gauss Pylon",
+          "showDamagedMarker": true,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Gauss annihilator",
+              "keywords": ["anti-fly 2+", "lethal hits"],
+              "range": "120\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "16",
+              "ap": "-4",
+              "damage": "D6+6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Tesla arc",
+              "keywords": ["sustained hits 2"],
+              "range": "6\"",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [],
+      "keywords": [
+        "Fortification",
+        "Vehicle",
+        "Towering",
+        "Titanic",
+        "Gauss Pylon"
+      ],
       "factions": ["Necrons"]
     },
     {
@@ -4289,6 +4406,99 @@
       "factions": ["Necrons"]
     },
     {
+      "id": "66b3e287-a241-5f70-ab0d-8060b3804ea3",
+      "name": "Night Shroud",
+      "source": "40k-10e",
+      "faction_id": "NEC",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Night Shroud"],
+      "loadout": "This model is equipped with: twin tesla destructor; armoured bulk",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Reanimation Protocols"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Death Sphere Bombardment",
+            "description": "Each time this model ends a Normal move, you can select one enemy unit it moved over during that move and roll six D6: for each 3+, that unit suffers 1 mortal wound.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": true,
+          "showDescription": true,
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "20+\"",
+          "t": "9",
+          "sv": "3+",
+          "w": "14",
+          "ld": "7+",
+          "oc": "0",
+          "name": "Night Shroud",
+          "showDamagedMarker": true,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Twin tesla destructor",
+              "keywords": ["sustained hits 2", "twin-linked"],
+              "range": "36\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Armoured bulk",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Vehicle", "Aircraft", "Fly", "Night Shroud"],
+      "factions": ["Necrons"]
+    },
+    {
       "id": "e63764d8-2928-51f1-b48b-6399c027c282",
       "name": "Obelisk",
       "source": "40k-10e",
@@ -4320,13 +4530,7 @@
         "other": [
           {
             "name": "Gravitic Pulse",
-            "description": "At the start of your opponent’s Movement phase, you can select one enemy unit within 18\" of and visible to this model. Until the end of the phase, subtract 2\" from the Move characteristic of models in that unit and subtract 2 from Advance and Charge rolls made for that unit. In addition, if that unit can Fly, until the start of your next Movement phase, roll one D6 each time that unit ends any",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "name": "type of move",
-            "description": "on a 4+, that unit suffers D3 mortal wounds.",
+            "description": "At the start of your opponent’s Movement phase, you can select one enemy unit within 18\" of and visible to this model. Until the end of the turn, subtract 2\" from the Move characteristic of models in that unit and subtract 2 from Advance and Charge rolls made for that unit. In addition, if that unit can Fly, until the start of your next Movement phase, roll one D6 each time that unit ends any type of move: on a 4+, that unit suffers D3 mortal wounds.",
             "showAbility": true,
             "showDescription": true
           }
@@ -5082,6 +5286,135 @@
         "units": ["Immortals", "Necron Warriors"],
         "extra": ""
       }
+    },
+    {
+      "id": "8b7b8184-20b7-509b-8780-c5f95ae39681",
+      "name": "Sentry Pylon",
+      "source": "40k-10e",
+      "faction_id": "NEC",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Sentry Pylon"],
+      "loadout": "This model is equipped with: gauss exterminator.",
+      "wargear": [
+        "This model’s gauss exterminator can be replaced with one of the following: ◦ 1 focused death ray ◦ 1 heat cannon"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise D3"],
+        "faction": ["Reanimation Protocols"],
+        "primarch": [
+          {
+            "name": "FORTIFICATION",
+            "showAbility": true,
+            "abilities": [
+              {
+                "name": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army",
+                "description": " ■  That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. ■  Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+                "showAbility": true,
+                "showDescription": true
+              }
+            ]
+          }
+        ],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Teleportation Matrix",
+            "description": "Once per battle, at the end of your opponent’s turn, if this Fortification is not within Engagement Range of one or more enemy units, you can remove it from the battlefield. In the Reinforcements step of your next Movement phase, set it up anywhere on the battlefield that is more than 9\" horizontally away from all enemy models. If the battle ends and this Fortification is not on the battlefield, it is destroyed.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Phase-shifted Cover",
+            "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "-",
+          "t": "8",
+          "sv": "3+",
+          "w": "10",
+          "ld": "7+",
+          "oc": "0",
+          "name": "Sentry Pylon",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Focused death ray",
+              "keywords": ["sustained hits 2"],
+              "range": "36\"",
+              "attacks": "6",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Gauss exterminator",
+              "keywords": ["lethal hits"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Heat cannon",
+              "keywords": ["melta 4"],
+              "range": "36\"",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [],
+      "keywords": ["Fortification", "Vehicle", "Sentry Pylon"],
+      "factions": ["Necrons"]
     },
     {
       "id": "9e73708e-63b1-5a21-8c87-734ae7a9c16d",
@@ -5926,7 +6259,7 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": ["Deadly Demise D6+3"],
+        "core": ["Deadly Demise D6+3 (Szarekh model only)"],
         "faction": ["Reanimation Protocols"],
         "primarch": [
           {
@@ -6273,6 +6606,119 @@
       "factions": ["Necrons"]
     },
     {
+      "id": "35a2044e-1371-543c-983e-29f85e099745",
+      "name": "Tomb Citadel Walls",
+      "source": "40k-10e",
+      "faction_id": "NEC",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Tomb Citadel"],
+      "loadout": "This unit is equipped with: nothing.",
+      "wargear": [
+        "This unit can be equipped with one of the following: ◦ 1 gauss exterminator and 1 twin tesla destructor ◦ 2 gauss exterminators ◦ 2 twin tesla destructors"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deadly Demise 3D6"],
+        "faction": ["Reanimation Protocols"],
+        "primarch": [
+          {
+            "name": "FORTIFICATION",
+            "showAbility": true,
+            "abilities": [
+              {
+                "name": "While an enemy unit is only within Engagement Range of one or more Fortifications from your army",
+                "description": " ■  That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. ■  Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
+                "showAbility": true,
+                "showDescription": true
+              }
+            ]
+          }
+        ],
+        "invul": {
+          "value": "5+",
+          "info": "",
+          "showInvulnerableSave": true,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Ziggurat Dock",
+            "description": "One friendly Monolith, Obelisk, Tesseract Vault or Sentry Pylon model can start the battle on top of this Fortification’s ziggurat platform. While such a model is on this platform, that model's ranged weapons have the [HEAVY] ability. Any friendly model can be set up or end any type of move on the ramps or platform sections of this Fortification.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Phased Cover",
+            "description": "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": true,
+          "showDescription": true,
+          "range": "1-15 WOUNDS REMAINING",
+          "description": "While this model has 1-15 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        }
+      },
+      "stats": [
+        {
+          "m": "-",
+          "t": "13",
+          "sv": "2+",
+          "w": "50",
+          "ld": "7+",
+          "oc": "0",
+          "name": "Tomb Citadel Walls",
+          "showDamagedMarker": true,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Gauss exterminator",
+              "keywords": ["lethal hits"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Twin tesla destructor",
+              "keywords": ["sustained hits 2", "twin-linked"],
+              "range": "36\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "0",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [],
+      "keywords": ["Fortification", "Titanic", "Vehicle", "Tomb Citadel"],
+      "factions": ["Necrons"]
+    },
+    {
       "id": "b5df5f0e-d689-5cae-ac2b-7cf92a0b7bde",
       "name": "Transcendent C’tan",
       "source": "40k-10e",
@@ -6293,7 +6739,7 @@
       "abilities": {
         "wargear": [],
         "core": ["Deadly Demise D6", "Deep Strike"],
-        "faction": [],
+        "faction": ["Reanimation Protocols"],
         "primarch": [],
         "invul": {
           "value": "4+",
