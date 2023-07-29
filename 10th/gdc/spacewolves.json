@@ -763,7 +763,7 @@
       "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Fenrisian Wolves ■ Thunderwolf Cavalry",
       "composition": ["1 Canis Wolfborn – Epic Hero"],
-      "loadout": "This model is equipped with: crushing teeth and jaws; Wolf claws.",
+      "loadout": "This model is equipped with: bolt pistol; crushing teeth and jaws; Wolf claws.",
       "wargear": ["None"],
       "transport": "",
       "points": [
@@ -905,7 +905,7 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [],
+        "core": ["Leader"],
         "faction": ["Oath of Moment"],
         "primarch": [],
         "invul": {
@@ -1082,7 +1082,8 @@
       "wargear": [
         "Any number of models can each be equipped with 1 Astartes chainsword.",
         "The Grey Hunter Pack Leader’s close combat weapon can be replaced with one of the following: ◦ 1 power fist ◦ 1 power weapon",
-        "Up to 2 Grey Hunters can each have their boltgun replaced with one of the following: ◦ 1 flamer ◦ 1 grav-gun ◦ 1 meltagun ◦ 1 plasma gun"
+        "Up to 2 Grey Hunters can each have their boltgun replaced with one of the following: ◦ 1 flamer ◦ 1 grav-gun ◦ 1 meltagun ◦ 1 plasma gun",
+        "1 Grey Hunter’s bolt pistol can be replaced with 1 plasma pistol."
       ],
       "transport": "",
       "points": [
@@ -1768,6 +1769,198 @@
           "Grey Hunters",
           "Long Fangs"
         ],
+        "extra": ""
+      }
+    },
+    {
+      "id": "4a2c9852-e20a-5463-a43a-bca78aeb302a",
+      "name": "Iron Priest On Thunderwolf",
+      "source": "40k-10e",
+      "faction_id": "CHSW",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following unit: ■ Thunderwolf Cavalry",
+      "composition": ["1 Iron Priest on Thunderwolf"],
+      "loadout": "This model is equipped with: boltgun; crushing teeth and claws; Iron Priest hammer; servo-arm.",
+      "wargear": [
+        "This model’s boltgun can be replaced with one of the following: ◦ 1 bolt pistol ◦ 1 helfrost pistol"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": "",
+          "showInvulnerableSave": false,
+          "showInfo": false
+        },
+        "other": [
+          {
+            "name": "Iron Priest",
+            "description": "While this model is within 3\" of one or more friendly Adeptus Astartes Vehicle units, this model has the Lone Operative ability",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Blessing of the Omnissiah",
+            "description": "In your Command phase, you can select one friendly Adeptus Astartes Vehicle model within 3\" of this model. That model regains up to D3 lost wounds and, until the start of your next Command phase, each time that Vehicle model makes an attack, add 1 to the Hit roll. Each model can only be selected for this ability once per turn.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Vengeance of the Omnissiah",
+            "description": "If a friendly Adeptus Astartes Vehicle model is destroyed within 12\" of this model, until the end of the battle, this model’s Iron Priest hammer has an Attacks characteristic of 6.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "showDamagedAbility": false,
+          "showDescription": true,
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "10\"",
+          "t": "6",
+          "sv": "2+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Iron Priest On Thunderwolf",
+          "showDamagedMarker": false,
+          "showName": false,
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Boltgun",
+              "keywords": [],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Helfrost pistol – dispersed",
+              "keywords": ["pistol", "torrent"],
+              "range": "12\"",
+              "attacks": "D3",
+              "skill": "N/A",
+              "strength": "3",
+              "ap": "-1",
+              "damage": "1"
+            },
+            {
+              "active": true,
+              "name": "Helfrost pistol – focused",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "6",
+              "ap": "-3",
+              "damage": "3"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Crushing teeth and claws",
+              "keywords": ["extra attacks"],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Iron Priest hammer",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "name": "Servo arm",
+              "keywords": ["extra attacks"],
+              "range": "Melee",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "3"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Iron Priest"
+      ],
+      "factions": ["Adeptus Astartes", "Space Wolves"],
+      "leads": {
+        "units": ["Thunderwolf Cavalry"],
         "extra": ""
       }
     },
@@ -2475,7 +2668,7 @@
         }
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Long Fangs"],
-      "factions": ["Space Wolves"],
+      "factions": ["Adeptus Astartes", "Space Wolves"],
       "leadBy": [
         "Iron Priest",
         "Ulrik The Slayer",
@@ -3922,7 +4115,7 @@
               "keywords": ["torrent"],
               "range": "12\"",
               "attacks": "D6+6",
-              "skill": "3+",
+              "skill": "N/A",
               "strength": "8",
               "ap": "-1",
               "damage": "2"
@@ -4388,6 +4581,7 @@
       "leadBy": [
         "Canis Wolfborn",
         "Harald Deathwolf",
+        "Iron Priest On Thunderwolf",
         "Logan Grimnar On Stormrider",
         "Wolf Guard Battle Leader On Thunderwolf",
         "Wolf Lord On Thunderwolf"
@@ -6047,8 +6241,8 @@
       ],
       "loadout": "The Wolf Guard Terminator Pack Leader is equipped with: storm bolter; power weapon. Every Wolf Guard Terminator is equipped with: storm bolter; power fist.",
       "wargear": [
-        "Any number of models can each have their power fist and storm bolter or power weapon and storm bolter replaced with two of the following: ◦ 1 storm bolter* ◦ 1 combi-weapon* ◦ 1 chainfist ◦ 1 power fist ◦ 1 power weapon ◦ 1 thunder hammer ◦ 1 storm shield",
-        "For every 5 models in this unit, one Wolf Guard Terminator can replace its power fist and storm bolter with one of the following: ◦ 1 assault cannon ◦ 1 heavy flamer ◦ 1 storm bolter and 1 cyclone missile launcher",
+        "Any number of models can each have their power fist and storm bolter or power weapon and storm bolter replaced with two of the following: ◦ 1 storm bolter* ◦ 1 combi-weapon* ◦ 1 chainfist ◦ 1 power fist ◦ 1 power weapon ◦ 1 thunder hammer ◦ 1 storm shield*",
+        "For every 5 models in this unit, one Wolf Guard Terminator can replace its storm bolter with one of the following: ◦ 1 assault cannon ◦ 1 heavy flamer ◦ 1 storm bolter and 1 cyclone missile launcher (this model’s storm bolter cannot be replaced)",
         "Any number of models can each have their power fist and storm bolter or power weapon and storm bolter replaced with 1 twin lightning claws. * Each model cannot have duplicates of these pieces of wargear and cannot have both a storm bolter and a combi-weapon."
       ],
       "transport": "",
@@ -6658,7 +6852,7 @@
           "m": "6\"",
           "t": "4",
           "sv": "4+",
-          "w": "1",
+          "w": "2",
           "ld": "6+",
           "oc": "1",
           "name": "Wolf Scouts",
