@@ -2,8 +2,10 @@
   "id": "CHBA",
   "link": "https://game-datacards.eu",
   "name": "Blood Angels",
-  "is_subfaction": false,
-  "parent_id": "",
+  "is_subfaction": true,
+  "parent_id": "SM",
+  "parent_keyword": "Adeptus Astartes",
+  "allied_factions": ["AoI", "QI"],
   "stratagems": [
     {
       "name": "ANGEL'S SACRIFICE",
@@ -124,7 +126,9 @@
     {
       "id": "4c4b1340-4603-51d7-91a8-3b715d94241a",
       "name": "Astorath",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following unit: ■ Death Company Marines with Jump Packs",
       "composition": ["1 Astorath – Epic Hero"],
       "loadout": "This model is equipped with: bolt pistol; the Executioner’s Axe.",
@@ -224,7 +228,9 @@
     {
       "id": "9ce6d8b7-7943-518e-be4d-d89fd9f9a057",
       "name": "Baal Predator",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Baal Predator"],
       "loadout": "This model is equipped with: twin assault cannon; armoured tracks.",
@@ -243,7 +249,7 @@
       ],
       "abilities": {
         "wargear": [],
-        "core": [],
+        "core": ["Deadly Demise D3"],
         "faction": ["Oath of Moment"],
         "primarch": [],
         "invul": {
@@ -328,6 +334,12 @@
               "ap": "-3",
               "damage": "D6"
             }
+          ],
+          "abilities": [
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle."
+            }
           ]
         },
         {
@@ -381,7 +393,9 @@
     {
       "id": "938102da-0715-5260-bd09-cb8c5eb44b30",
       "name": "Brother Corbulo",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Assault Squad ■ Devastator Squad ■ Tactical Squad ■ Vanguard Veteran Squad",
       "composition": ["1 Brother Corbulo – Epic Hero"],
       "loadout": "This model is equipped with: bolt pistol; Heaven’s Teeth.",
@@ -484,8 +498,10 @@
     {
       "id": "3324eec6-662c-52c9-ba6e-b1cb445e411e",
       "name": "Captain Tycho",
+      "source": "40k-10e",
       "faction_id": "CHBA",
-      "leader": "",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Assault Squad ■ Command Squad ■ Tactical Squad ■ Vanguard Veteran Squad",
       "composition": ["1 Captain Tycho – Epic Hero"],
       "loadout": "This model is equipped with: Blood Song; bolt pistol; Dead Man’s Hand.",
       "wargear": ["None"],
@@ -592,12 +608,23 @@
         "Captain",
         "Tycho"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": [
+          "Assault Squad",
+          "Command Squad",
+          "Tactical Squad",
+          "Vanguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "id": "dc788dd1-8d00-5724-a0df-a5ab92a159c6",
       "name": "Chief Librarian Mephiston",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Intercessor Squad ■ Sternguard Veteran Squad",
       "composition": ["1 Chief Librarian Mephiston – Epic Hero"],
       "loadout": "This model is equipped with: plasma pistol; Fury of the Ancients; Vitarus.",
@@ -743,7 +770,9 @@
     {
       "id": "e5145978-72b9-5509-a15a-d1213bda57a0",
       "name": "Commander Dante",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Assault Squad with Jump Packs ■ Sanguinary Guard ■ Vanguard Veteran Squad with Jump Packs",
       "composition": ["1 Commander Dante – Epic Hero"],
       "loadout": "This model is equipped with: Perdition; the Axe Mortalis.",
@@ -848,7 +877,9 @@
     {
       "id": "3ee2094c-aa41-580b-bc63-43da2b51f238",
       "name": "Death Company Dreadnought",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Death Company Dreadnought"],
       "loadout": "This model is equipped with: meltagun; storm bolter; twin Furioso fists.",
@@ -985,6 +1016,7 @@
         "Walker",
         "Smoke",
         "Imperium",
+        "Dreadnought",
         "Death Company Dreadnought"
       ],
       "factions": ["Adeptus Astartes", "Blood Angels"]
@@ -992,7 +1024,9 @@
     {
       "id": "24e8b799-ddc4-547b-bb5a-f58d494021d6",
       "name": "Death Company Intercessors",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["5-10 Death Company Intercessors"],
       "loadout": "Every model is equipped with: bolt pistol; bolt rifle; close combat weapon.",
@@ -1244,7 +1278,9 @@
     {
       "id": "8b22cef6-4f2b-599c-8504-b457c3f430fc",
       "name": "Death Company Marines",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["5-10 Death Company Marines"],
       "loadout": "Every model is equipped with: boltgun; close combat weapon.",
@@ -1460,12 +1496,15 @@
         }
       ],
       "keywords": ["Infantry", "Grenades", "Imperium", "Death Company Marines"],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leadBy": ["Tycho The Lost"]
     },
     {
       "id": "e1536aff-8310-5ae5-965f-0316afc8023e",
       "name": "Death Company Marines With Jump Packs",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["5-10 Death Company Marines with Jump Packs"],
       "loadout": "Every model is equipped with: boltgun; close combat weapon.",
@@ -1694,7 +1733,9 @@
     {
       "id": "58f4f83e-cc8d-5ca8-8e9e-c254c3e665d9",
       "name": "Furioso Dreadnought",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Furioso Dreadnought"],
       "loadout": "This model is equipped with: heavy frag cannon; Furioso fist; storm bolter.",
@@ -1850,13 +1891,21 @@
           ]
         }
       ],
-      "keywords": ["Vehicle", "Walker", "Imperium", "Furioso Dreadnought"],
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Imperium",
+        "Dreadnought",
+        "Furioso Dreadnought"
+      ],
       "factions": ["Adeptus Astartes", "Blood Angels"]
     },
     {
       "id": "f159f71a-cd68-5bb6-9001-ba434f01e748",
       "name": "Gabriel Seth",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Assault Squad ■ Command Squad ■ Tactical Squad ■ Vanguard Veteran Squad",
       "composition": ["1 Gabriel Seth – Epic Hero"],
       "loadout": "This model is equipped with: bolt pistol; Blood Reaver.",
@@ -1964,7 +2013,9 @@
     {
       "id": "1e784468-8db7-572a-922f-87d8a0060dd2",
       "name": "Lemartes",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following unit: ■ Death Company Marines with Jump Packs",
       "composition": ["1 Lemartes – Epic Hero"],
       "loadout": "This model is equipped with: bolt pistol; the Blood Crozius.",
@@ -2064,7 +2115,9 @@
     {
       "id": "a5a75670-2c87-557a-a77d-cbc682a2f5e3",
       "name": "Librarian Dreadnought",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Librarian Dreadnought"],
       "loadout": "This model is equipped with: Blood Lance; storm bolter; Furioso fist, Furioso force halberd.",
@@ -2215,8 +2268,10 @@
       "keywords": [
         "Vehicle",
         "Walker",
+        "Smoke",
         "Psyker",
         "Imperium",
+        "Dreadnought",
         "Librarian Dreadnought"
       ],
       "factions": ["Adeptus Astartes", "Blood Angels"]
@@ -2224,7 +2279,9 @@
     {
       "id": "3ba1b185-c189-5eec-8440-679398e4b683",
       "name": "Sanguinary Guard",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["5-10 Sanguinary Guard"],
       "loadout": "Every model is equipped with: angelus boltgun; encarmine blade.",
@@ -2388,7 +2445,9 @@
     {
       "id": "d893b19a-cb3f-59e5-8a1f-bd75238d3ff8",
       "name": "Sanguinary Priest",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Assault Squad ■ Devastator Squad ■ Tactical Squad ■ Vanguard Veteran Squad You can attach this model to one of the above units, even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
       "composition": ["1 Sanguinary Priest"],
       "loadout": "This model is equipped with: bolt pistol; Astartes chainsword.",
@@ -2487,9 +2546,276 @@
       }
     },
     {
+      "id": "050048cb-afdc-5b8c-80eb-e8bddbf0d718",
+      "name": "Sanguinary Priest On Bike",
+      "source": "40k-10e",
+      "faction_id": "CHBA",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Bike Squad ■ Outrider Squad",
+      "composition": ["1 Sanguinary Priest on Bike"],
+      "loadout": "This model is equipped with: bolt pistol; twin boltgun; Astartes chainsword.",
+      "wargear": [
+        "This model’s bolt pistol can be replaced with one of the following: ◦ 1 boltgun ◦ 1 combi-weapon ◦ 1 grav-pistol ◦ 1 hand flamer ◦ 1 inferno pistol ◦ 1 plasma pistol ◦ 1 storm bolter",
+        "This model’s Astartes chainsword can be replaced with one of the following: ◦ 1 power fist ◦ 1 power weapon ◦ 1 thunder hammer"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Oath of Moment"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Sanguinary Priest",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability."
+          },
+          {
+            "name": "Blood Chalice",
+            "description": "While this model is leading a unit, improve the Armour Penetration characteristic of melee weapons equipped by models in that unit by 1."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "12\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "2",
+          "name": "Sanguinary Priest On Bike"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Bolt pistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Boltgun",
+              "keywords": [],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Grav-pistol",
+              "keywords": ["anti-vehicle 2+", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Hand flamer",
+              "keywords": ["ignores cover", "pistol", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Inferno pistol",
+              "keywords": ["melta 2", "pistol"],
+              "range": "6\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-4",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Twin boltgun",
+              "keywords": ["twin-linked"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Power fist",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Power weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Thunder hammer",
+              "keywords": ["devastating wounds"],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Sanguinary Priest"
+      ],
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": ["Bike Squad", "Outrider Squad"],
+        "extra": ""
+      }
+    },
+    {
       "id": "5c7d67d6-95de-5d69-8dac-ac0345c0d45d",
       "name": "Sanguinary Priest With Jump Pack",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Assault Squad with Jump Packs ■ Vanguard Veteran Squad with Jump packs You can attach this model to one of the above units, even if one Captain, Chapter Master or Lieutenant model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
       "composition": ["1 Sanguinary Priest"],
       "loadout": "This model is equipped with: bolt pistol; Astartes chainsword.",
@@ -2590,7 +2916,9 @@
     {
       "id": "ea9e7286-4775-5e55-b2e0-b1c2c7c63b12",
       "name": "The Sanguinor",
+      "source": "40k-10e",
       "faction_id": "CHBA",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 The Sanguinor – Epic Hero"],
       "loadout": "This model is equipped with: encarmine broadsword.",
@@ -2669,8 +2997,10 @@
     {
       "id": "3ef8a822-5a80-5c3e-b980-2a2f50355c85",
       "name": "Tycho The Lost",
+      "source": "40k-10e",
       "faction_id": "CHBA",
-      "leader": "",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following unit: ■ Death Company Marines",
       "composition": ["1 Tycho the Lost – Epic Hero"],
       "loadout": "This model is equipped with: Blood Song; bolt pistol; Dead Man’s Hand.",
       "wargear": ["None"],
@@ -2781,7 +3111,11 @@
         "Captain",
         "Tycho the Lost"
       ],
-      "factions": ["Adeptus Astartes", "Blood Angels"]
+      "factions": ["Adeptus Astartes", "Blood Angels"],
+      "leads": {
+        "units": ["Death Company Marines"],
+        "extra": ""
+      }
     }
   ],
   "colours": {

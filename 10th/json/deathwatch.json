@@ -2,8 +2,10 @@
   "id": "CHDW",
   "link": "https://game-datacards.eu",
   "name": "Death Watch",
-  "is_subfaction": false,
-  "parent_id": "",
+  "is_subfaction": true,
+  "parent_id": "SM",
+  "parent_keyword": "Adeptus Astartes",
+  "allied_factions": ["AoI", "QI"],
   "stratagems": [
     {
       "name": "ARMOUR OF CONTEMPT",
@@ -124,7 +126,9 @@
     {
       "id": "a6d0dca5-9c60-57c5-9977-cb5ce5b0ea78",
       "name": "Corvus Blackstar",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Corvus Blackstar"],
       "loadout": "This model is equipped with: 2 Blackstar rocket launchers; twin assault cannon; armoured hull.",
@@ -283,7 +287,9 @@
     {
       "id": "96138442-e791-5d7e-ab61-40f7f1dccb23",
       "name": "Deathwatch Armoury",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [],
       "loadout": "",
@@ -472,7 +478,9 @@
     {
       "id": "4f308a36-978b-5a6e-af9f-88b23662e882",
       "name": "Deathwatch Terminator Squad",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [
         "1 Deathwatch Terminator Sergeant",
@@ -715,7 +723,9 @@
     {
       "id": "c48b1394-4b28-5f92-95c4-b78096646206",
       "name": "Deathwatch Veterans",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Watch Sergeant", "4-9 Deathwatch Veterans"],
       "loadout": "Every model is equipped with: boltgun; Long Vigil melee weapon.",
@@ -941,7 +951,9 @@
     {
       "id": "6d6d7954-6b4c-5b5e-ab5f-b972bf64503e",
       "name": "Fortis Kill Team",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [
         "5-10 Kill Team Intercessors",
@@ -1115,20 +1127,6 @@
         {
           "profiles": [
             {
-              "name": "Storm bolter",
-              "keywords": ["rapid fire 2"],
-              "range": "24\"",
-              "attacks": "2",
-              "skill": "3+",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
               "name": "Twin bolt rifle",
               "keywords": ["twin-linked"],
               "range": "24\"",
@@ -1198,7 +1196,9 @@
     {
       "id": "dbdca121-6845-5c9d-9f5f-87bf34e025aa",
       "name": "Indomitor Kill Team",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [
         "5-10 Kill Team Heavy Intercessors",
@@ -1447,7 +1447,9 @@
     {
       "id": "cf4bb8fe-5a47-5f28-9a32-bd4896c708ac",
       "name": "Kill Team Cassius",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [
         "1 Chaplain Cassius – Epic Hero",
@@ -1618,8 +1620,8 @@
               "range": "12\"",
               "attacks": "D6",
               "skill": "N/A",
-              "strength": "2",
-              "ap": "0",
+              "strength": "5",
+              "ap": "-1",
               "damage": "1"
             }
           ]
@@ -1759,7 +1761,9 @@
     {
       "id": "3020380b-4b64-5445-8f1b-f2cdce3f76d5",
       "name": "Proteus Kill Team",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [
         "5-10 Kill Team Veterans",
@@ -1904,7 +1908,7 @@
               "name": "Twin boltgun",
               "keywords": ["twin-linked"],
               "range": "24\"",
-              "attacks": "1",
+              "attacks": "2",
               "skill": "3+",
               "strength": "4",
               "ap": "0",
@@ -2004,7 +2008,7 @@
               "name": "Terminator thunder hammer",
               "keywords": ["devastating wounds"],
               "range": "Melee",
-              "attacks": "4",
+              "attacks": "3",
               "skill": "3+",
               "strength": "8",
               "ap": "-2",
@@ -2040,7 +2044,9 @@
     {
       "id": "55e4e25e-f3a5-5d16-919f-b82aa3e7a00f",
       "name": "Spectrus Kill Team",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [
         "5-10 Kill Team Infiltrators",
@@ -2049,9 +2055,12 @@
         "0-4 Kill Team Infiltrators with occulus bolt carbines",
         "0-4 Kill Team Infiltrators with combat knives"
       ],
-      "loadout": "",
+      "loadout": "Every Kill Team Infiltrator is equipped with: bolt pistol; marksman bolt carbine; close combat weapon. Every Kill Team Infiltrator with bolt sniper rifle is equipped",
       "wargear": [
-        "One model equipped with a marksman bolt carbine can be equipped with one of the following: ◦ 1 helix gauntlet ◦ 1 Infiltrator comms array"
+        "One model equipped with a marksman bolt carbine can be equipped with one of the following: ◦ 1 helix gauntlet ◦ 1 Infiltrator comms array",
+        "One model can replace its bolt sniper rifle with 1 bolt carbine.",
+        "Any number of models can each replace their bolt sniper rifle with 1 las fusil.",
+        "Any number of models can each replace their combat knife with 1 bolt carbine and 1 close combat weapon."
       ],
       "transport": "",
       "points": [
@@ -2214,7 +2223,7 @@
               "name": "Special-issue bolt pistol",
               "keywords": ["pistol", "precision"],
               "range": "12\"",
-              "attacks": "3",
+              "attacks": "1",
               "skill": "3+",
               "strength": "4",
               "ap": "-1",
@@ -2281,7 +2290,9 @@
     {
       "id": "3da0ea31-b8fb-5753-8780-0630cb41cce8",
       "name": "Veteran Bike Squad",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Veteran Biker Sergeant", "2-5 Veteran Bikers"],
       "loadout": "Every model is equipped with: bolt pistol; close combat weapon; twin boltgun.",
@@ -2440,7 +2451,9 @@
     {
       "id": "8939a3d9-e5c9-5552-96e6-689e5885c77b",
       "name": "Watch Captain Artemis",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Deathwatch Veterans ■ Proteus Kill Team",
       "composition": ["1 Watch Captain Artemis"],
       "loadout": "This model is equipped with: Hellfire Extremis; master-crafted power weapon.",
@@ -2543,7 +2556,9 @@
     {
       "id": "10af0717-f94a-5ae6-90f3-427da01cbe73",
       "name": "Watch Master",
+      "source": "40k-10e",
       "faction_id": "CHDW",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Deathwatch Veterans ■ Proteus Kill Team",
       "composition": ["1 Watch Master"],
       "loadout": "This model is equipped with: vigil spear.",

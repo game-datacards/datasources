@@ -8,7 +8,9 @@
     {
       "id": "91aed3a7-1ae0-56b8-9c64-3265b497a0df",
       "name": "Callidus Assassin",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Callidus Assassin – Epic Hero"],
       "loadout": "This model is equipped with: neural shredder; phase sword and poison blades.",
@@ -105,7 +107,9 @@
     {
       "id": "c7e7c652-94cb-5c31-aaf9-487b39d8c5e2",
       "name": "Culexus Assassin",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Culexus Assassin – Epic Hero"],
       "loadout": "This model is equipped with: animus speculum; life-draining touch.",
@@ -136,12 +140,7 @@
             "description": "While an enemy unit is within 6\" of this model, worsen that unit’s Leadership characteristic by 1, or by 2 instead if that unit is a Psyker. In addition, once per battle, at the start of any Command phase, this model can use this ability. If it does, each enemy unit within 6\" of this model must take a Battle-shock test."
           }
         ],
-        "special": [
-          {
-            "name": "Psychic Assassin",
-            "description": "Each time you select a Psyker unit as the target for this weapon, until those attacks are resolved, change the Attacks characteristic of this weapon to 6."
-          }
-        ],
+        "special": [],
         "damaged": {
           "range": "",
           "description": ""
@@ -176,6 +175,12 @@
               "ap": "-2",
               "damage": "D3"
             }
+          ],
+          "abilities": [
+            {
+              "name": "Psychic Assassin",
+              "description": "Each time you select a Psyker unit as the target for this weapon, until those attacks are resolved, change the Attacks characteristic of this weapon to 6."
+            }
           ]
         }
       ],
@@ -206,9 +211,337 @@
       "factions": ["Agents of the Imperium"]
     },
     {
+      "id": "333de2f4-aa6c-55ed-8a35-2f659d8c0762",
+      "name": "Damned Legionnares",
+      "source": "40k-10e",
+      "faction_id": "AoI",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 Legionnaire Sergeant", "4-9 Legionnaires"],
+      "loadout": "Every model is equipped with: boltgun; close combat weapon.",
+      "wargear": [
+        "The Legionnaire Sergeant’s boltgun can be replaced with one of the following: ◦ 1 bolt pistol and 1 power weapon ◦ 1 plasma pistol and 1 power weapon ◦ 1 bolt pistol and 1 Astartes chainsword ◦ 1 plasma pistol and 1 Astartes chainsword",
+        "One Legionnaire’s boltgun can be replaced with one of the following: ◦ 1 Heavy flamer ◦ 1 Multi-melta",
+        "One Legionnaire’s boltgun can be replaced with one of the following: ◦ 1 Flamer ◦ 1 Meltagun ◦ 1 Plasma gun"
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Deep Strike"],
+        "faction": ["Assigned Agents"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Grim Spectres",
+            "description": "In your Shooting phase, after this unit has shot, select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle-shock test."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "5\"",
+          "t": "4",
+          "sv": "3+",
+          "w": "2",
+          "ld": "6+",
+          "oc": "1",
+          "name": "Damned Legionnares"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Bolt pistol",
+              "keywords": ["ignores cover", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Boltgun",
+              "keywords": ["ignores cover"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Meltagun",
+              "keywords": ["melta 2"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Multi-melta",
+              "keywords": ["heavy", "melta 2"],
+              "range": "18\"",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "9",
+              "ap": "-4",
+              "damage": "D6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Plasma gun – standard",
+              "keywords": ["rapid fire 1"],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "name": "Plasma gun – supercharge",
+              "keywords": ["hazardous", "rapid fire 1"],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Plasma pistol – standard",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "1"
+            },
+            {
+              "name": "Plasma pistol – supercharge",
+              "keywords": ["hazardous", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Astartes chainsword",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Power weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Imperium", "Grenades", "Damned Legionnaires"],
+      "factions": ["Agents of the Imperium"]
+    },
+    {
+      "id": "27f7984d-9903-50c0-b895-45c68e689a79",
+      "name": "Espern Locarno",
+      "source": "40k-10e",
+      "faction_id": "AoI",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Imperial Navy Breachers ■ Voidsmen-at-Arms",
+      "composition": ["1 Espern Locarno – Epic Hero"],
+      "loadout": "This model is equipped with: laspistol; force-orb cane.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Leader"],
+        "faction": ["Assigned Agent"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "The Third Eye (Psychic)",
+            "description": "At the start of your Shooting phase, select one enemy unit within 12\" of this model. That enemy unit must take a Battle-shock test."
+          },
+          {
+            "name": "Gaze into the Immaterium (Psychic)",
+            "description": "Enemy units that are set up on the battlefield as Reinforcements cannot be set up within 12\" horizontally of this model."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "3",
+          "sv": "5+",
+          "w": "3",
+          "ld": "7+",
+          "oc": "1",
+          "name": "Espern Locarno"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Laspistol",
+              "keywords": ["pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Force-orb cane",
+              "keywords": ["psychic"],
+              "range": "Melee",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "6",
+              "ap": "-1",
+              "damage": "D3"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Imperium",
+        "Character",
+        "Navis Imperialis",
+        "Epic Hero",
+        "Psyker",
+        "Espern Locarno"
+      ],
+      "factions": ["Agents of the Imperium"],
+      "leads": {
+        "units": ["Imperial Navy Breachers", "Voidsmen-at-Arms"],
+        "extra": ""
+      }
+    },
+    {
       "id": "82566d83-6c6d-51fa-8bd5-b64877fffebb",
       "name": "Eversor Assassin",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Eversor Assassin – Epic Hero"],
       "loadout": "This model is equipped with: executioner pistol; power sword and neuro gauntlet.",
@@ -301,7 +634,9 @@
     {
       "id": "5a9b9c02-d23d-5319-bd02-f29cdab04a6f",
       "name": "Exaction Squad",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [
         "1 Proctor-Exactant",
@@ -524,7 +859,9 @@
     {
       "id": "77016539-3dc1-5d1b-a9a4-8c4830429c71",
       "name": "Imperial Navy Breachers",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Navis Sergeant-at-Arms", "9 Navis Armsmen"],
       "loadout": "One Navis Armsman is equipped with: Navis las-volley; close combat weapon. One other Navis Armsman is equipped with: Navis heavy shotgun; close combat weapon; endurant shield. Every other model is equipped with: Navis shotgun; close combat weapon.",
@@ -623,6 +960,12 @@
               "strength": "12",
               "ap": "-2",
               "damage": "2"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle."
             }
           ]
         },
@@ -774,12 +1117,19 @@
         "Imperial Navy Breachers"
       ],
       "factions": ["Agents of the Imperium"],
-      "leadBy": ["Rogue Trader Entourage"]
+      "leadBy": [
+        "Espern Locarno",
+        "Janus Draik",
+        "Neyam Shai Murad",
+        "Rogue Trader Entourage"
+      ]
     },
     {
       "id": "97b523fd-b753-5103-b5e9-04aa7ee7f477",
       "name": "Inquisitor",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Imperium Battleline Infantry ■ Inquisitorial Henchmen",
       "composition": ["1 Inquisitor"],
       "loadout": "This model is equipped with: bolt pistol; Inquisitorial melee weapon; blessed wardings.",
@@ -934,7 +1284,9 @@
     {
       "id": "0a6dcec2-75d1-555e-9372-d49a60189f2e",
       "name": "Inquisitor Coteaz",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Imperium Battleline Infantry ■ Inquisitorial Henchmen",
       "composition": ["1 Inquisitor Coteaz – Epic Hero"],
       "loadout": "This model is equipped with: bolt pistol; Psychic Blast; Nemesis daemon hammer.",
@@ -1050,7 +1402,9 @@
     {
       "id": "f8ed00c8-b411-560a-9126-d8bad2200a16",
       "name": "Inquisitor Eisenhorn",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Imperium Battleline Infantry ■ Inquisitorial Henchmen",
       "composition": ["1 Inquisitor Eisenhorn – Epic Hero"],
       "loadout": "This model is equipped with: artificer bolt pistol; Mind Assault; runestaff and Barbarisater",
@@ -1172,7 +1526,9 @@
     {
       "id": "23ba73f2-1cfd-5bf9-9409-0adf6fbe3e45",
       "name": "Inquisitor Greyfax",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Imperium Battleline Infantry ■ Inquisitorial Henchmen",
       "composition": ["1 Inquisitor Greyfax – Epic Hero"],
       "loadout": "This model is equipped with: Castigation; condemnor stake; master-crafter power sword.",
@@ -1297,9 +1653,194 @@
       }
     },
     {
+      "id": "f38f60d4-5b9a-5118-a677-0faa04e6c43a",
+      "name": "Inquisitor In Terminator Armour",
+      "source": "40k-10e",
+      "faction_id": "AoI",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Imperium Battleline Infantry ■ Inquisitorial Henchmen",
+      "composition": ["1 Inquisitor in Terminator Armour"],
+      "loadout": "This model is equipped with: storm bolter; Inquisitorial melee weapon; blessed wardings.",
+      "wargear": [
+        "This model’s storm bolter can be replaced with 1 combi-weapon.",
+        "This model’s blessed wardings can be replaced with 1 psychic gifts and 1 psychic shock wave.",
+        "If this model is equipped with 1 psychic gifts, its Inquisitorial melee weapon can be replaced with 1 force weapon.",
+        "If this model is equipped with 1 psychic gifts, its storm bolter can be replaced with 1 psycannon."
+      ],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [
+          {
+            "name": "Blessed Wardings",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability against mortal wounds."
+          },
+          {
+            "name": "Psychic Gifts",
+            "description": "The bearer has the Psyker keyword."
+          }
+        ],
+        "core": ["Deep Strike", "Leader"],
+        "faction": ["Assigned Agents"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Authority of the Inquisition",
+            "description": "While this model is leading a unit, it can embark within any Transport that its Bodyguard unit can embark within."
+          },
+          {
+            "name": "Power of the Rosette",
+            "description": "Each time you target this model’s unit with a Stratagem, roll one D6: on a 3+, you gain 1CP."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "5\"",
+          "t": "4",
+          "sv": "2+",
+          "w": "5",
+          "ld": "6+",
+          "oc": "1",
+          "name": "Inquisitor In Terminator Armour"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Combi-weapon",
+              "keywords": [
+                "anti-infantry 4+",
+                "devastating wounds",
+                "rapid fire 1"
+              ],
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Psycannon",
+              "keywords": ["psychic"],
+              "range": "24\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Psychic shock wave",
+              "keywords": ["devastating wounds", "psychic", "torrent"],
+              "range": "18\"",
+              "attacks": "2D6",
+              "skill": "N/A",
+              "strength": "3",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Storm bolter",
+              "keywords": ["rapid fire 2"],
+              "range": "24\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Force weapon",
+              "keywords": ["psychic"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-2",
+              "damage": "D3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Inquisitorial melee weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "5",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Terminator",
+        "Imperium",
+        "Inquisitor"
+      ],
+      "factions": ["Agents of the Imperium"],
+      "leads": {
+        "units": ["Imperium Battleline Infantry", "Inquisitorial Henchmen"],
+        "extra": ""
+      }
+    },
+    {
       "id": "164eb5c0-341e-5ce8-a80b-4ea96b74521d",
       "name": "Inquisitor Karamazov",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Inquisitor Karamazov – Epic Hero"],
       "loadout": "This model is equipped with: master-crafted multi-melta; master-crafted power sword.",
@@ -1393,7 +1934,9 @@
     {
       "id": "6dc851be-1f06-524c-936d-5de230184396",
       "name": "Inquisitorial Henchmen",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [
         "4-10 Inquisitorial Acolytes",
@@ -1648,13 +2191,116 @@
         "Inquisitor Coteaz",
         "Inquisitor Eisenhorn",
         "Inquisitor Greyfax",
+        "Inquisitor In Terminator Armour",
         "Lord Inquisitor Kyria Draxus"
       ]
     },
     {
+      "id": "6e31d823-4245-5f4a-954f-3b3e7776bd12",
+      "name": "Janus Draik",
+      "source": "40k-10e",
+      "faction_id": "AoI",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Imperial Navy Breachers ■ Voidsmen-at-Arms",
+      "composition": ["1 Janus Draik – Epic Hero"],
+      "loadout": "This model is equipped with: heirloom pistol; monomolecular rapier.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Infiltrators", "Leader"],
+        "faction": ["Assigned Agent"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Backroom Deals",
+            "description": "While this model is leading a unit, models in that unit have the Infiltrators ability."
+          },
+          {
+            "name": "Warrant of Trade",
+            "description": "If your army includes one or more units with this ability, after players have deployed, select up to D3 Imperium Battleline units from your army and redeploy them. You can use this ability to place those selected units into Strategic Reserves, regardless of how many units are already in Strategic Reserves. If both players have abilities"
+          },
+          {
+            "name": "that redeploy units, roll off",
+            "description": "the winner chooses who redeploys units first."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "3",
+          "sv": "4+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "1",
+          "name": "Janus Draik"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Heirloom pistol",
+              "keywords": ["anti-infantry 4+", "pistol"],
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Monomolecular rapier",
+              "keywords": ["sustained hits 1"],
+              "range": "Melee",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "3",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Navis Imperialis",
+        "Character",
+        "Epic Hero",
+        "Janus Draik"
+      ],
+      "factions": ["Agents of the Imperium"],
+      "leads": {
+        "units": ["Imperial Navy Breachers", "Voidsmen-at-Arms"],
+        "extra": ""
+      }
+    },
+    {
       "id": "dbe01a5d-8877-5c07-9f77-7e79241694e4",
       "name": "Lord Inquisitor Kyria Draxus",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "This model can be attached to the following units: ■ Imperium Battleline Infantry ■ Inquisitorial Henchmen",
       "composition": ["1 Lord Inquisitor Kyria Draxus – Epic Hero"],
       "loadout": "This model is equipped with: Dirgesinger; Psychic Tempest; power fist.",
@@ -1769,9 +2415,111 @@
       }
     },
     {
+      "id": "9c5560f5-b9de-5ccd-a1be-2d02487526bc",
+      "name": "Neyam Shai Murad",
+      "source": "40k-10e",
+      "faction_id": "AoI",
+      "cardType": "DataCard",
+      "leader": "This model can be attached to the following units: ■ Imperial Navy Breachers ■ Voidsmen-at-Arms",
+      "composition": ["1 Neyam Shai Murad – Epic Hero"],
+      "loadout": "This model is equipped with: 2 negotiator pistols; close combat weapon.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Infiltrators", "Leader"],
+        "faction": ["Assigned Agent"],
+        "primarch": [],
+        "invul": {
+          "value": "4+",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Backroom Deals",
+            "description": "While this model is leading a unit, models in that unit have the Infiltrators ability."
+          },
+          {
+            "name": "Warrant of Trade",
+            "description": "If your army includes one or more units with this ability, after players have deployed, select up to D3 Imperium Battleline units from your army and redeploy them. You can use this ability to place those selected units into Strategic Reserves, regardless of how many units are already in Strategic Reserves. If both players have abilities"
+          },
+          {
+            "name": "that redeploy units, roll off",
+            "description": "the winner chooses who redeploys units first."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "6\"",
+          "t": "3",
+          "sv": "4+",
+          "w": "4",
+          "ld": "6+",
+          "oc": "1",
+          "name": "Neyam Shai Murad"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Negotiator pistol",
+              "keywords": ["precision"],
+              "range": "12\"",
+              "attacks": "2",
+              "skill": "3+",
+              "strength": "4",
+              "ap": "-2",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Close combat weapon",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "3",
+              "ap": "0",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Navis Imperialis",
+        "Character",
+        "Epic Hero",
+        "Neyam Shai Murad"
+      ],
+      "factions": ["Agents of the Imperium"],
+      "leads": {
+        "units": ["Imperial Navy Breachers", "Voidsmen-at-Arms"],
+        "extra": ""
+      }
+    },
+    {
       "id": "3782157e-f35b-531b-b70f-b0bbf33c1915",
       "name": "Rogue Trader Entourage",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "This unit can be attached to the following units: ■ Imperial Navy Breachers ■ Voidsmen-at-Arms",
       "composition": ["1 Rogue Trader", "3 Rogue Trader Specialists"],
       "loadout": "The Rogue Trader is equipped with: household pistol; monomolecular cane-rapier. One Rogue Trader Specialist is equipped with: dartmask; Death Cult power blade. One other Rogue Trader Specialist is equipped with: voltaic pistol; close combat weapon. One other Rogue Trader Specialist is equipped with: laspistol; close combat weapon; healing serum.",
@@ -1945,7 +2693,6 @@
         "Grenades",
         "Imperium",
         "Navis Imperialis",
-        "Retinue",
         "Rogue Trader Entourage",
         "ROGUE TRADER:",
         "Character"
@@ -1959,7 +2706,9 @@
     {
       "id": "bd0c66bf-5fa0-5c52-8ce4-88858b2d8c5f",
       "name": "Subductor Squad",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": [
         "1 Proctor-Subductor",
@@ -2070,9 +2819,95 @@
       "factions": ["Agents of the Imperium"]
     },
     {
+      "id": "43dbf208-64fc-5796-85e5-4c83fe982f6f",
+      "name": "Ur-025",
+      "source": "40k-10e",
+      "faction_id": "AoI",
+      "cardType": "DataCard",
+      "leader": "",
+      "composition": ["1 UR-025 – Epic Hero"],
+      "loadout": "This model is equipped with: Mk 1 assault weapon; power claw.",
+      "wargear": ["None"],
+      "transport": "",
+      "legends": "true",
+      "points": [],
+      "abilities": {
+        "wargear": [],
+        "core": ["Lone Operative"],
+        "faction": ["Assigned Agent"],
+        "primarch": [],
+        "invul": {
+          "value": "",
+          "info": ""
+        },
+        "other": [
+          {
+            "name": "Self Repair",
+            "description": "At the start of your Command phase, this model regains 1 lost wound."
+          },
+          {
+            "name": "Evade and Survive",
+            "description": "Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of this model, if this model is not within Engagement Range of one or more enemy units, it can make a Normal move."
+          }
+        ],
+        "special": [],
+        "damaged": {
+          "range": "",
+          "description": ""
+        }
+      },
+      "stats": [
+        {
+          "m": "5\"",
+          "t": "5",
+          "sv": "3+",
+          "w": "4",
+          "ld": "7+",
+          "oc": "1",
+          "name": "Ur-025"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Mk 1 assault weapon",
+              "keywords": [],
+              "range": "24\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        }
+      ],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": "Power claw",
+              "keywords": [],
+              "range": "Melee",
+              "attacks": "2",
+              "skill": "4+",
+              "strength": "8",
+              "ap": "-2",
+              "damage": "2"
+            }
+          ]
+        }
+      ],
+      "keywords": ["Infantry", "Imperium", "Character", "Epic Hero", "UR-025"],
+      "factions": ["Agents of the Imperium"]
+    },
+    {
       "id": "353ff980-8867-549a-bec2-bb1841817d7d",
       "name": "Vigilant Squad",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Proctor-Vigilant", "9 Vigilants", "0-1 Cyber-mastiff"],
       "loadout": "Every Proctor-Vigilant and Vigilant is equipped with: Arbites combat shotgun; Arbites shotpistol; close combat weapon. The Cyber-mastiff is equipped with: mechanical bite.",
@@ -2263,7 +3098,9 @@
     {
       "id": "6b4fbdf3-01ad-59ee-be4a-56c5b779b07c",
       "name": "Vindicare Assassin",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Vindicare Assassin – Epic Hero"],
       "loadout": "This model is equipped with: exitus pistol; exitus rifle; Vindicare combat knife.",
@@ -2380,7 +3217,9 @@
     {
       "id": "be68fcbd-8764-576e-8e7f-f1d5b8ed089b",
       "name": "Voidsmen-at-arms",
+      "source": "40k-10e",
       "faction_id": "AoI",
+      "cardType": "DataCard",
       "leader": "",
       "composition": ["1 Voidmaster", "4-8 Voidsmen", "0-1 Canid"],
       "loadout": "The Voidmaster is equipped with: artificer shotgun; laspistol; close combat weapon. For every 5 models in this unit, 1 Voidsman is equipped with: laspistol; Voidsman rotor cannon; close combat weapon. Every other Voidsman is equipped with: lasgun; laspistol; close combat weapon. The Canid is equipped with: vicious bite.",
@@ -2526,7 +3365,12 @@
         "Voidsmen-at-Arms"
       ],
       "factions": ["Agents of the Imperium"],
-      "leadBy": ["Rogue Trader Entourage"]
+      "leadBy": [
+        "Espern Locarno",
+        "Janus Draik",
+        "Neyam Shai Murad",
+        "Rogue Trader Entourage"
+      ]
     }
   ],
   "colours": {
