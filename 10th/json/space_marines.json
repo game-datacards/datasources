@@ -6734,7 +6734,7 @@
           "m": "12\"",
           "t": "5",
           "sv": "3+",
-          "w": "2",
+          "w": "3",
           "ld": "6+",
           "oc": "2",
           "name": "Company Veterans On Bikes"
@@ -7539,7 +7539,7 @@
             },
             {
               "name": "Hellfire plasma cannonade – supercharge",
-              "keywords": [],
+              "keywords": ["hazardous"],
               "range": "36\"",
               "attacks": "6",
               "skill": "3+",
@@ -9126,6 +9126,20 @@
         {
           "profiles": [
             {
+              "name": "Quad heavy bolter",
+              "keywords": ["twin-linked", "sustained hits 1"],
+              "range": "36\"",
+              "attacks": "6",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
               "name": "Twin autocannon",
               "keywords": ["twin-linked"],
               "range": "48\"",
@@ -9146,20 +9160,6 @@
               "attacks": "10",
               "skill": "3+",
               "strength": "6",
-              "ap": "-1",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Twin heavy bolter",
-              "keywords": ["twin-linked", "sustained hits 1"],
-              "range": "36\"",
-              "attacks": "3",
-              "skill": "3+",
-              "strength": "5",
               "ap": "-1",
               "damage": "2"
             }
@@ -12761,9 +12761,9 @@
       "composition": ["1 Land Raider Achilles"],
       "loadout": "This model is equipped with: quad launcher; 2 twin volkite culverins; armoured tracks.",
       "wargear": [
-        "This model can be equipped with one of the following: ◦ 1 heavy bolter* ◦ 1 multi-melta* ◦ 1 twin heavy bolter* ◦ 1 twin heavy flamer*",
+        "This model’s 2 twin volkite culverins can be replaced with 2 twin multi-melta",
         "This model can be equipped with 1 hunter-killer missile.",
-        "This model can be equipped with 1 storm bolter. * The profile for this weapon can be found on the Adeptus Astartes Legends Armoury car"
+        "This model can be equipped with 1 storm bolter."
       ],
       "transport": "This model has a transport capacity of 12 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models.",
       "legends": true,
@@ -12781,7 +12781,7 @@
         "other": [
           {
             "name": "Assault Ramp",
-            "description": "Each time a unit disembarks from this Transport after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+            "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
           }
         ],
         "special": [],
@@ -13561,7 +13561,7 @@
         "other": [
           {
             "name": "Assault Ramp",
-            "description": "Each time a unit disembarks from this Transport after it has made a Normal move, that unit is still eligible to declare a charge this turn."
+            "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
           }
         ],
         "special": [],
@@ -16382,7 +16382,10 @@
       "leader": "",
       "composition": ["1 Mastodon"],
       "loadout": "This model is equipped with: 2 heavy flamers; 2 lascannons; siege melta array; skyreaper battery; armoured tracks.",
-      "wargear": ["None"],
+      "wargear": [
+        "This model’s 2 heavy flamers can be replaced with one of the following ◦ 2 heavy bolters ◦ 2 lascannons ◦ 2 volite culverins",
+        "This model’s 2 lascannons can be replaced with on of the following: ◦ 2 heavy bolters ◦ 2 heavy flamers ◦ 2 volkite culverins"
+      ],
       "transport": "This model has a transport capacity of 45 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis, Possessed or Terminator model takes up the space of 2 models and each Centurion or Obliterator model takes up the space of 3 models. This model can also transport up to 2 Dreadnought or Helbrute models (these models take up the space of a number of models equal to their Wounds characteristic e.g. A Dreadnought with a Wounds characteristic of 8 would take up the space of 8 models).",
       "legends": true,
       "points": [],
@@ -16423,6 +16426,48 @@
         {
           "profiles": [
             {
+              "name": "Heavy bolter",
+              "keywords": ["sustained hits 1"],
+              "range": "36\"",
+              "attacks": "3",
+              "skill": "3+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Heavy flamer",
+              "keywords": ["ignores cover", "torrent"],
+              "range": "12\"",
+              "attacks": "D6",
+              "skill": "N/A",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Lascannon",
+              "keywords": [],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "12",
+              "ap": "-3",
+              "damage": "D6+1"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
               "name": "Siege melta array",
               "keywords": ["melta 2"],
               "range": "24\"",
@@ -16438,12 +16483,26 @@
           "profiles": [
             {
               "name": "Skyreaper battery",
-              "keywords": ["anti-air 2+"],
+              "keywords": ["anti-fly 4+"],
               "range": "48\"",
               "attacks": "8",
               "skill": "3+",
               "strength": "7",
               "ap": "-1",
+              "damage": "2"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": "Volkite culverin",
+              "keywords": ["devastating wounds"],
+              "range": "36\"",
+              "attacks": "4",
+              "skill": "3+",
+              "strength": "6",
+              "ap": "0",
               "damage": "2"
             }
           ]
@@ -19065,7 +19124,7 @@
       "loadout": "This model is equipped with: 2 heavy plasma cannons; armoured feet.",
       "wargear": [
         "Each of this model’s heavy plasma cannons can be replaced with one of the following: ◦ 1 conversion beam cannon ◦ 1 kheres-pattern assault cannon ◦ 1 multi-melta* ◦ 1 twin autocannon* ◦ 1 twin heavy bolter* ◦ 1 twin lascannon* ◦ 1 twin volkite culverin ◦ 1 Dreadnought chainfist and 1 combi-bolter ◦ 1 Dreadnought combat weapon and 1 combi-bolter",
-        "Each of this model’s combi-bolters can be replaced with one of the following: ◦ 1 graviton blaster ◦ 1 heavy flamer* ◦ 1 Contemptor plasma blaster",
+        "Each of this model’s combi-bolters can be replaced with one of the following: ◦ 1 graviton blaster ◦ 1 heavy flamer* ◦ 1 plasma blaster*",
         "This model can be equipped with 1 cyclone missile launcher. * The profile for this weapon can be found on the Adeptus Astartes Legends Armoury card"
       ],
       "transport": "",
@@ -19170,6 +19229,30 @@
         {
           "profiles": [
             {
+              "name": "Heavy plasma cannon – standard",
+              "keywords": ["blast"],
+              "range": "36\"",
+              "attacks": "D3",
+              "skill": "3+",
+              "strength": "7",
+              "ap": "-2",
+              "damage": "2"
+            },
+            {
+              "name": "Heavy plasma cannon – supercharge",
+              "keywords": ["blast", "hazardous"],
+              "range": "36\"",
+              "attacks": "D3",
+              "skill": "3+",
+              "strength": "8",
+              "ap": "-3",
+              "damage": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
               "name": "Kheres-pattern assault cannon",
               "keywords": ["devastating wounds"],
               "range": "24\"",
@@ -19178,30 +19261,6 @@
               "strength": "7",
               "ap": "-1",
               "damage": "1"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Plasma blaster – standard",
-              "keywords": [],
-              "range": "18\"",
-              "attacks": "2",
-              "skill": "3+",
-              "strength": "7",
-              "ap": "-2",
-              "damage": "1"
-            },
-            {
-              "name": "Plasma blaster – supercharge",
-              "keywords": ["hazardous"],
-              "range": "18\"",
-              "attacks": "2",
-              "skill": "3+",
-              "strength": "8",
-              "ap": "-3",
-              "damage": "2"
             }
           ]
         },
@@ -22128,8 +22187,8 @@
         },
         "other": [
           {
-            "name": "Fire Support",
-            "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll."
+            "name": "Assault Ramp",
+            "description": "Each time a unit disembarks from this model after it has made a Normal move, that unit is still eligible to declare a charge this turn."
           }
         ],
         "special": [],
@@ -24116,7 +24175,7 @@
           "profiles": [
             {
               "name": "Twin lascannon",
-              "keywords": [],
+              "keywords": ["twin-linked"],
               "range": "48\"",
               "attacks": "1",
               "skill": "4+",
@@ -25000,7 +25059,7 @@
         "This model can be equipped with 1 multi-melta.",
         "This model can be equipped with 1 storm bolter."
       ],
-      "transport": "",
+      "transport": "This model has a transport capacity of 8 Adeptus Astartes Infantry models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
       "legends": true,
       "points": [],
       "fluff": "",
@@ -25102,16 +25161,6 @@
         {
           "profiles": [
             {
-              "name": "Terminus lascannon – overload",
-              "keywords": ["hazardous", "twin-linked"],
-              "range": "48\"",
-              "attacks": "1",
-              "skill": "3+",
-              "strength": "14",
-              "ap": "-3",
-              "damage": "D6+3"
-            },
-            {
               "name": "Terminus lascannon – standard",
               "keywords": ["twin-linked"],
               "range": "48\"",
@@ -25120,6 +25169,16 @@
               "strength": "12",
               "ap": "-3",
               "damage": "D6+1"
+            },
+            {
+              "name": "Terminus lascannon – overload",
+              "keywords": ["hazardous", "twin-linked"],
+              "range": "48\"",
+              "attacks": "1",
+              "skill": "3+",
+              "strength": "14",
+              "ap": "-3",
+              "damage": "D6+3"
             }
           ]
         }
@@ -25591,7 +25650,7 @@
 
       "leader": "",
       "composition": ["1 Thunderhawk Transporter"],
-      "loadout": "",
+      "loadout": "This model is equipped with: hellstrike missile battery; 4 twin heavy bolters; armoured hull.",
       "wargear": ["None"],
       "transport": "This model has a transport capacity of 15 Adeptus Astartes Infantry or Adeptus Astartes Mounted models. Each Jump Pack, Wulfen, Gravis or Terminator model takes up the space of 2 models. Each Centurion model takes up the space of 3 models. Each Mounted model takes up the space of 4 models. This model can also transport up to 2 Adeptus Astartes Vehicle models (excluding Aircraft and Titanic models). Models embarked within Transport Vehicles that are themselves being transported by this model do not count towards the transport capacity of this model.",
       "legends": true,
