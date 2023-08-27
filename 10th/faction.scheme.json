@@ -1,0 +1,591 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "Ability": {
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "showAbility": {
+          "type": "boolean"
+        },
+        "showDescription": {
+          "type": "boolean"
+        }
+      },
+      "required": ["description", "name"],
+      "type": "object"
+    },
+    "Attacks": {
+      "enum": [
+        "1",
+        "10",
+        "12",
+        "14",
+        "15",
+        "16",
+        "18",
+        "2",
+        "20",
+        "2D3",
+        "2D3+3",
+        "2D6",
+        "2D6+2",
+        "2D6+3",
+        "2D6+6",
+        "3",
+        "30",
+        "32",
+        "3D3",
+        "3D6",
+        "4",
+        "4D6",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "D3",
+        "D3+1",
+        "D3+3",
+        "D3+6",
+        "D6",
+        "D6+1",
+        "D6+2",
+        "D6+3",
+        "D6+4",
+        "D6+6"
+      ],
+      "type": "string"
+    },
+    "Core": {
+      "enum": [
+        "Deadly Demise 1",
+        "Deadly Demise 2D6",
+        "Deadly Demise 3D6",
+        "Deadly Demise D3",
+        "Deadly Demise D6",
+        "Deadly Demise D6+2",
+        "Deadly Demise 2D6+6",
+        "Deadly Demise D6+3",
+        "Deadly Demise D6+3 (Szarekh model only)",
+        "Deadly Demise D6+6",
+        "Deep Strike",
+        "Feel No Pain 4+",
+        "Feel No Pain 5+",
+        "Feel No Pain 6+",
+        "Fights First",
+        "Firing Deck 10",
+        "Firing Deck 11",
+        "Firing Deck 12",
+        "Firing Deck 16",
+        "Firing Deck 2",
+        "Firing Deck 20",
+        "Firing Deck 21",
+        "Firing Deck 22",
+        "Firing Deck 24",
+        "Firing Deck 6",
+        "Hover",
+        "Infiltrators",
+        "Leader",
+        "Lone Operative",
+        "Scouts 6\"",
+        "Scouts 7\"",
+        "Scouts 8\"",
+        "Scouts 9\"",
+        "Stealth"
+      ],
+      "type": "string"
+    },
+    "Damage": {
+      "enum": [
+        "1",
+        "10",
+        "12",
+        "16",
+        "2",
+        "2D3",
+        "2D6",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "14",
+        "18",
+        "24",
+        "D3",
+        "D3+3",
+        "D6",
+        "D6+1",
+        "D6+2",
+        "D6+3",
+        "D6+4",
+        "D6+6",
+        "D6+8"
+      ],
+      "type": "string"
+    },
+    "Datasheet": {
+      "properties": {
+        "abilities": {
+          "properties": {
+            "core": {
+              "items": {
+                "$ref": "#/definitions/Core"
+              },
+              "type": "array"
+            },
+            "damaged": {
+              "properties": {
+                "description": {
+                  "type": "string"
+                },
+                "range": {
+                  "type": "string"
+                },
+                "showDamagedAbility": {
+                  "type": "boolean"
+                },
+                "showDescription": {
+                  "type": "boolean"
+                }
+              },
+              "required": ["description", "range", "showDamagedAbility", "showDescription"],
+              "type": "object"
+            },
+            "faction": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "invul": {
+              "properties": {
+                "info": {
+                  "type": "string"
+                },
+                "showInfo": {
+                  "type": "boolean"
+                },
+                "showInvulnerableSave": {
+                  "type": "boolean"
+                },
+                "value": {
+                  "$ref": "#/definitions/Invun"
+                }
+              },
+              "required": ["info", "showInfo", "showInvulnerableSave", "value"],
+              "type": "object"
+            },
+            "other": {
+              "items": {
+                "$ref": "#/definitions/Ability"
+              },
+              "type": "array"
+            },
+            "primarch": {
+              "items": {
+                "properties": {
+                  "abilities": {
+                    "items": {
+                      "$ref": "#/definitions/Ability"
+                    },
+                    "type": "array"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "showAbility": {
+                    "type": "boolean"
+                  }
+                },
+                "required": ["abilities", "name", "showAbility"],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "wargear": {
+              "anyOf": [
+                {
+                  "$ref": "#/definitions/Ability"
+                },
+                {
+                  "items": {
+                    "$ref": "#/definitions/Ability"
+                  },
+                  "type": "array"
+                }
+              ]
+            }
+          },
+          "required": ["core", "damaged", "faction", "invul", "other", "primarch", "wargear"],
+          "type": "object"
+        },
+        "cardType": {
+          "type": "string"
+        },
+        "composition": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "faction_id": {
+          "type": "string"
+        },
+        "factions": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "id": {
+          "type": "string"
+        },
+        "keywords": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "leader": {
+          "type": "string"
+        },
+        "leads": {
+          "properties": {
+            "extra": {
+              "type": "string"
+            },
+            "units": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            }
+          },
+          "required": ["extra", "units"],
+          "type": "object"
+        },
+        "leadBy": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "fluff": {
+          "type": "string"
+        },
+        "loadout": {
+          "type": "string"
+        },
+        "meleeWeapons": {
+          "items": {
+            "$ref": "#/definitions/Weapon"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "points": {
+          "items": {
+            "properties": {
+              "active": {
+                "type": "boolean"
+              },
+              "cost": {
+                "type": "string"
+              },
+              "models": {
+                "type": "string"
+              }
+            },
+            "required": ["cost", "models"],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "rangedWeapons": {
+          "items": {
+            "$ref": "#/definitions/Weapon"
+          },
+          "type": "array"
+        },
+        "source": {
+          "type": "string"
+        },
+        "stats": {
+          "items": {
+            "properties": {
+              "active": {
+                "type": "boolean"
+              },
+              "ld": {
+                "$ref": "#/definitions/Ld"
+              },
+              "m": {
+                "$ref": "#/definitions/Move"
+              },
+              "name": {
+                "type": "string"
+              },
+              "oc": {
+                "type": "string"
+              },
+              "showDamagedMarker": {
+                "type": "boolean"
+              },
+              "showName": {
+                "type": "boolean"
+              },
+              "sv": {
+                "$ref": "#/definitions/Saves"
+              },
+              "t": {
+                "type": "string"
+              },
+              "w": {
+                "type": "string"
+              }
+            },
+            "required": ["active", "ld", "m", "name", "oc", "showName", "sv", "t", "w"],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "transport": {
+          "type": "string"
+        },
+        "wargear": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "abilities",
+        "cardType",
+        "composition",
+        "faction_id",
+        "factions",
+        "id",
+        "keywords",
+        "leader",
+        "loadout",
+        "meleeWeapons",
+        "name",
+        "points",
+        "rangedWeapons",
+        "source",
+        "stats",
+        "transport",
+        "wargear"
+      ],
+      "type": "object"
+    },
+    "Invun": {
+      "enum": ["", "2+", "3+", "4+", "4+*", "5+", "5+*", "6+"],
+      "type": "string"
+    },
+    "Ld": {
+      "enum": ["4+", "5+", "6+", "7+", "8+"],
+      "type": "string"
+    },
+    "Move": {
+      "enum": ["-", "10\"", "11\"", "12\"", "14\"", "16\"", "20+\"", "3\"", "4\"", "5\"", "6\"", "7\"", "8\"", "9\""],
+      "type": "string"
+    },
+    "Profile": {
+      "properties": {
+        "ap": {
+          "type": "string"
+        },
+        "attacks": {
+          "$ref": "#/definitions/Attacks"
+        },
+        "damage": {
+          "$ref": "#/definitions/Damage"
+        },
+        "keywords": {
+          "items": {
+            "$ref": "#/definitions/WeaponKeywords"
+          },
+          "type": "array"
+        },
+        "name": {
+          "type": "string"
+        },
+        "range": {
+          "$ref": "#/definitions/Ranges"
+        },
+        "skill": {
+          "$ref": "#/definitions/Skill"
+        },
+        "strength": {
+          "type": "string"
+        }
+      },
+      "required": ["ap", "attacks", "damage", "keywords", "name", "range", "skill", "strength"],
+      "type": "object"
+    },
+    "Ranges": {
+      "enum": [
+        "10\"",
+        "100\"",
+        "12\"",
+        "120\"",
+        "18\"",
+        "20\"",
+        "24\"",
+        "240\"",
+        "200\"",
+        "480\"",
+        "3\"",
+        "30\"",
+        "36\"",
+        "4\"",
+        "48\"",
+        "6\"",
+        "60\"",
+        "72\"",
+        "9\"",
+        "280\"",
+        "96\"",
+        "Melee",
+        "N/A"
+      ],
+      "type": "string"
+    },
+    "Saves": {
+      "enum": ["2+", "3+", "4+", "5+", "6+", "7+", "8+"],
+      "type": "string"
+    },
+    "Skill": {
+      "enum": ["2+", "3+", "4+", "4+*", "5+", "6+", "N/A"],
+      "type": "string"
+    },
+    "Weapon": {
+      "properties": {
+        "active": {
+          "type": "boolean"
+        },
+        "profiles": {
+          "items": {
+            "$ref": "#/definitions/Profile"
+          },
+          "type": "array"
+        }
+      },
+      "required": ["active", "profiles"],
+      "type": "object"
+    },
+    "WeaponKeywords": {
+      "enum": [
+        "anti-air 2+",
+        "anti-chaos 2+",
+        "anti-character 2+",
+        "anti-character 4+",
+        "anti-daemon 2+",
+        "anti-fly 2+",
+        "anti-fly 3+",
+        "anti-fly 4+",
+        "anti-infantry 2+",
+        "anti-infantry 3+",
+        "anti-infantry 4+",
+        "anti-monster 2+",
+        "anti-monster 4+",
+        "anti-psyker 2+",
+        "anti-psyker 4+",
+        "anti-titanic 4+",
+        "anti-tyranids 4+",
+        "anti-vehicle 2+",
+        "anti-vehicle 3+",
+        "anti-vehicle 4+",
+        "anti-walker 2+",
+        "assault",
+        "blast",
+        "bubblechukka",
+        "conversion",
+        "dead choppy",
+        "defensive array*",
+        "devastating wounds",
+        "extra attacks",
+        "hazardous",
+        "heavy",
+        "hive defences",
+        "hooked",
+        "ignores cover",
+        "impaled",
+        "indirect fire",
+        "lance",
+        "lethal hits",
+        "linked fire",
+        "melta 2",
+        "melta 3",
+        "melta 4",
+        "melta 6",
+        "melta d3",
+        "one shot",
+        "pistol",
+        "plasma warhead",
+        "precision",
+        "psychic",
+        "psychic assassin",
+        "rapid fire 1",
+        "rapid fire 10",
+        "rapid fire 2",
+        "rapid fire 3",
+        "rapid fire 4",
+        "rapid fire 5",
+        "rapid fire 6",
+        "rapid fire 9",
+        "rapid fire d3",
+        "rapid fire d6",
+        "rapid fire d6+3",
+        "reverberating summons",
+        "snagged",
+        "sustained hits",
+        "sustained hits 1",
+        "sustained hits 2",
+        "sustained hits 3",
+        "sustained hits d3",
+        "torrent",
+        "twin-linked",
+        "c'tan power"
+      ],
+      "type": "string"
+    }
+  },
+  "properties": {
+    "datasheets": {
+      "items": {
+        "$ref": "#/definitions/Datasheet"
+      },
+      "type": "array"
+    },
+    "id": {
+      "type": "string"
+    },
+    "is_subfaction": {
+      "type": "boolean"
+    },
+    "link": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "parent_id": {
+      "type": "string"
+    }
+  },
+  "required": ["datasheets", "id", "is_subfaction", "link", "name", "parent_id"],
+  "type": "object"
+}
