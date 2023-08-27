@@ -128,6 +128,36 @@ const getUnitComposition = (lines) => {
     .filter((unit) => unit);
 };
 
+const getUnitFluff = (lines) => {
+  textLines = lines.slice(2);
+  let value = '';
+
+  for (const [_index, line] of textLines.entries()) {
+    let textLine = line;
+
+    if (
+      textLine.includes('WARGEAR OPTIONS') ||
+      textLine.includes('RANGED WEAPONS') ||
+      textLine.includes('UNIT OPTIONS')
+    ) {
+      break;
+    }
+
+    if(textLine.replaceAll(" ", "").includes("WARHAMMERLEGENDS")) {
+      continue;
+    }
+
+    if (textLine.length === 0) {
+      continue;
+    }
+    if (textLine.trim().length > 0) {
+      value = value + ' ' + textLine.trim();
+    }
+  }
+
+  return value.trim();
+};
+
 const getUnitLoadout = (lines) => {
   const keywords = [
     'TANK COMMANDER',
@@ -168,13 +198,25 @@ const getUnitLoadout = (lines) => {
     'SPEED FREEKS MOB',
     'COMPACT',
     'SECUTARII',
+    'LOYAL PROTECTOR',
+    'ARTILLERY TEAM',
+    'CULT OF DESTRUCTION',
+    'SERVANTS OF THE ABYSS',
+    'HEAVY WEAPONS TEAM',
+    'OGRYNS',
+    'DAEMONIC ALLEGIANCE',
+    "GRANDFATHER'S BLESSING",
+    'POSSESSED',
+    'SPEED FREEKS',
+    'BIG GUNZ',
+    'HONOUR GUARD OF MACRAGGE',
   ];
 
   let value = '';
   let startOfBlock = 0;
   let startOfEquipment = false;
   for (const [_index, line] of lines.slice(2).entries()) {
-    if (includesString(line, keywords)) {
+    if (startOfBlock > 0 && includesString(line, keywords)) {
       break;
     }
 
@@ -208,6 +250,7 @@ const getLeader = (lines) => {
   let value = '';
   let startOfBlock = 0;
   let startOfExtraBlock = 0;
+  lines = lines.slice(2);
   for (const [_index, line] of lines.entries()) {
     if (
       line.includes('FACTION KEYWORDS') ||
@@ -217,7 +260,6 @@ const getLeader = (lines) => {
       line.includes('TEMPESTOR PRIME') ||
       line.includes('EMPEROR’S CHILDREN') ||
       line.includes('MANIFESTATION OF DESTRUCTION') ||
-      line.includes('AHRIMAN') ||
       line.includes('MASTER OF MISCHIEF') ||
       line.includes('LOGAN GRIMNAR') ||
       line.includes('FLESH TEARERS') ||
@@ -228,7 +270,20 @@ const getLeader = (lines) => {
       line.includes('SPEED FREEKS MOB') ||
       line.includes('COMPACT') ||
       line.includes('SECUTARII') ||
-      line.includes('JETBIKE OUTRIDERS')
+      line.includes('JETBIKE OUTRIDERS') ||
+      line.includes('LOYAL PROTECTOR') ||
+      line.includes('ARTILLERY TEAM') ||
+      line.includes('CULT OF DESTRUCTION') ||
+      line.includes('SERVANTS OF THE ABYSS') ||
+      line.includes('HEAVY WEAPONS TEAM') ||
+      line.includes('OGRYNS') ||
+      line.includes('DAEMONIC ALLEGIANCE') ||
+      line.includes("GRANDFATHER'S BLESSING") ||
+      line.includes('POSSESSED') ||
+      line.includes('BIG GUNZ') ||
+      line.includes('SPEED FREEKS') ||
+      line.includes('HONOUR GUARD OF MACRAGGE') ||
+      line.includes('AHRIMAN')
     ) {
       break;
     }
@@ -317,6 +372,9 @@ const getTransport = (lines) => {
   for (const [_index, line] of lines.entries()) {
     if (line.includes('FACTION KEYWORDS')) {
       break;
+    }
+    if (line.includes('Thunderhawk Transporter') || line.includes('THUNDERHAWK TRANSPORTER')) {
+      continue;
     }
     if (startOfBlock > 0) {
       let textLine = line.substring(startOfBlock).trim();
@@ -528,6 +586,18 @@ const getSpecialAbilities = (lines) => {
     'SPEED FREEKS MOB',
     'COMPACT',
     'SECUTARII',
+    'LOYAL PROTECTOR',
+    'ARTILLERY TEAM',
+    'CULT OF DESTRUCTION',
+    'SERVANTS OF THE ABYSS',
+    'HEAVY WEAPONS TEAM',
+    'DAEMONIC ALLEGIANCE',
+    "GRANDFATHER'S BLESSING",
+    'POSSESSED',
+    'BIG GUNZ',
+    'SPEED FREEKS',
+    'HONOUR GUARD OF MACRAGGE',
+    'OGRYNS',
   ];
 
   let ability = { name: '', description: '' };
@@ -630,8 +700,104 @@ const getPrimarchAbilities = (lines, blockStart, startOfAbilities, file = '') =>
   return primarchAbilities;
 };
 
+const fixFactionKeywords = (unit) => {
+  unit.abilities.faction = unit.abilities.faction
+    .map((factionAbility) => {
+      switch (factionAbility) {
+        case 'Assigned Agent':
+          return 'Assigned Agents';
+          break;
+        case 'Dark Pact':
+          return 'Dark Pacts';
+          break;
+        case 'Leader':
+          unit.abilities.core.push('Leader');
+          return undefined;
+        default:
+          return factionAbility;
+          break;
+      }
+    })
+    .filter((val) => val);
+
+  return unit;
+};
+const getAlliedInfo = (factionId) => {
+  switch (factionId) {
+    case 'AdM':
+    case 'AS':
+    case 'AC':
+    case 'AM':
+    case 'GK':
+    case 'SM':
+      return {
+        is_subfaction: false,
+        parent_id: '',
+        allied_factions: ['AoI', 'QI'],
+      };
+      break;
+    case 'AoI':
+      return {
+        is_subfaction: false,
+        parent_id: '',
+        allied_factions: ['QI'],
+      };
+      break;
+    case 'QI':
+      return {
+        is_subfaction: false,
+        parent_id: '',
+        allied_factions: ['AoI'],
+      };
+      break;
+    case 'CHBT':
+    case 'CHBA':
+    case 'CHDA':
+    case 'CHDW':
+      return {
+        is_subfaction: true,
+        parent_id: 'SM',
+        parent_keyword: 'Adeptus Astartes',
+        allied_factions: ['AoI', 'QI'],
+      };
+      break;
+    case 'CSM':
+    case 'DG':
+    case 'TS':
+      return {
+        is_subfaction: false,
+        parent_id: '',
+        allied_factions: ['CD', 'QT'],
+      };
+      break;
+    case 'CD':
+      return {
+        is_subfaction: false,
+        parent_id: '',
+        allied_factions: ['QT'],
+      };
+      break;
+    case 'QT':
+      return {
+        is_subfaction: false,
+        parent_id: '',
+        allied_factions: ['CD'],
+      };
+      break;
+    default:
+      return {
+        is_subfaction: false,
+        parent_id: '',
+      };
+      break;
+  }
+};
+
 const checkForManualFixes = (unit) => {
   switch (unit.name) {
+    case 'Rubric Marines':
+      unit.abilities.factionDescription = '*Aspiring Sorcerer model only';
+      break;
     case 'Skathach Wraithknight':
       unit.abilities.wargear = {
         name: 'Scattershield',
@@ -1325,16 +1491,6 @@ const checkForManualFixes = (unit) => {
       unit.keywords = ['Fortification', 'Chaos', 'Daemon', 'Nurgle', 'Feculent Gnarlmaw'];
       break;
     case 'Great Unclean One':
-      unit.abilities.other = [
-        ...unit.abilities.other,
-        {
-          name: 'Reverberating Summons',
-          description:
-            'Each time a model is destroyed by this weapon, you can select one friendly Plaguebearers unit within 12" of the bearer and return 1 destroyed Plaguebearer model to that unit.',
-          showAbility: true,
-          showDescription: true,
-        },
-      ];
       unit.meleeWeapons = [
         {
           active: true,
@@ -1850,18 +2006,6 @@ const checkForManualFixes = (unit) => {
         },
       ];
       break;
-    case 'Deathstrike':
-      unit.abilities.other = [
-        ...unit.abilities.other,
-        {
-          name: 'Plasma Warhead',
-          description:
-            'The bearer can only shoot with this weapon in your Shooting phase, and only if it Remained Stationary this turn and you did not use its Deathstrike Missile ability to Designate Target or Adjust Target this phase. When the bearer shoots with this weapon, do not select a target. Instead, resolve this weapon’s attacks, rolling for each unit within 6" of the centre of its Deathstrike Target marker individually.',
-          showAbility: true,
-          showDescription: true,
-        },
-      ];
-      break;
     case 'Inquisitor Greyfax':
       unit.rangedWeapons = [
         {
@@ -1913,7 +2057,7 @@ const checkForManualFixes = (unit) => {
           active: true,
         },
         {
-          m: '6""',
+          m: '6"',
           t: '3',
           sv: '5+',
           w: '2',
@@ -1950,18 +2094,6 @@ const checkForManualFixes = (unit) => {
         {
           name: 'Invulnerable save: Makari 2+',
           description: '* You cannot re-roll invulnerable saving throws made for this model.',
-          showAbility: true,
-          showDescription: true,
-        },
-      ];
-      break;
-    case 'Culexus Assassin':
-      unit.abilities.special = [
-        ...unit.abilities.special,
-        {
-          name: 'Psychic Assassin',
-          description:
-            'Each time you select a Psyker unit as the target for this weapon, until those attacks are resolved, change the Attacks characteristic of this weapon to 6.',
           showAbility: true,
           showDescription: true,
         },
@@ -2837,4 +2969,7 @@ module.exports = {
   getPrimarchAbilities,
   getInvulValueFw,
   getInvulInfoFw,
+  getUnitFluff,
+  fixFactionKeywords,
+  getAlliedInfo,
 };

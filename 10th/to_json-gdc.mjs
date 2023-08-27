@@ -3,6 +3,8 @@ import fs from 'fs';
 import { v5 as uuidv5 } from 'uuid';
 import {
   checkForManualFixes,
+  fixFactionKeywords,
+  getAlliedInfo,
   getFactionName,
   getInvulInfo,
   getInvulInfoFw,
@@ -18,6 +20,7 @@ import {
   getStartOfWeaponsBlock,
   getTransport,
   getUnitComposition,
+  getUnitFluff,
   getUnitKeywords,
   getUnitLoadout,
   getWargear,
@@ -52,6 +55,93 @@ const PRIMARCH_ABILITIES_LIST = [
   'RELICS OF THE MATRIARCHS',
   'CANTICLES OF THE OMNISSIAH',
   'TRIARCH ABILITIES',
+  'FORTIFICATION',
+];
+
+const specialWeaponKeywords = [
+  {
+    name: 'Reverberating Summons',
+    description:
+      'Each time a model is destroyed by this weapon, you can select one friendly Plaguebearers unit within 12" of the bearer and return 1 destroyed Plaguebearer model to that unit.',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Dead Choppy',
+    description:
+      'The Attacks characteristic of this weapon is increased by 1 for each additional dread klaw this model is equipped with.',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Snagged',
+    description:
+      'Each time this weapon scores a hit against an enemy Monster or Vehicle unit, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer.',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Impaled',
+    description:
+      'Each time this weapon scores a hit against an enemy Monster or Vehicle unit, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Conversion',
+    description:
+      'Each time an attack made with this weapon targets a unit more than 12" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Hive Defences',
+    description:
+      'Each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within range of this weapon, if that enemy unit is an eligible target, the bearer can shoot with this weapon at that unit as if it were your Shooting phase (the bearer can do so up to four times per phase).',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'One Shot',
+    description: 'The bearer can only shoot with this weapon once per battle.',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Hooked',
+    description:
+      'Each time the bearer makes an attack with this weapon that targets a Monster or Vehicle unit, if a hit is scored, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer.',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Linked Fire',
+    description:
+      'When selecting targets for this weapon, you can measure range and determine visibility from another friendly Fire Prism model that is visible to the bearer.',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Psychic Assassin',
+    description:
+      'Each time you select a Psyker unit as the target for this weapon, until those attacks are resolved, change the Attacks characteristic of this weapon to 6.',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Plasma Warhead',
+    description:
+      'The bearer can only shoot with this weapon in your Shooting phase, and only if it  this model is selected to shoot, if it has not shot with its Remained Stationary this turn and you did not use its Deathstrike Missile ability to Designate Target',
+    showAbility: true,
+    showDescription: true,
+  },
+  {
+    name: 'Defensive Array',
+    description:
+      'Each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within range of this weapon, if that enemy unit is an eligible target, the bearer can shoot this weapon at that target as if it were your Shooting phase. The bearer can shoot up to four times in this way in your opponent’s Movement phase.',
+    showAbility: true,
+    showDescription: true,
+  }
 ];
 
 const pointsFile = readFile('points.val');
@@ -109,6 +199,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
     console.log(inputFolder);
     for (const [index, file] of files.entries()) {
       if (file.indexOf('.text') > -1) {
+        console.log(file);
         let res = readFile(inputFolder + file);
         res = res.replaceAll('', ' ');
         res = res.replaceAll('I  nfantry', 'Infantry');
@@ -124,6 +215,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
 
         let name = getName(splitText[0].toLowerCase());
         let legends = false;
+        let imperialArmour = file.indexOf('_fw') > -1;
         if (name.includes('Wa R Ha M M E R L E G E N D S')) {
           name = name.split('Wa R Ha M M E R L E G E N D S')[0].trim();
           legends = true;
@@ -301,6 +393,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
                 !line.includes('shrieker cannon:') &&
                 !line.includes('this turn:') &&
                 !line.includes('Leadership test:') &&
+                !line.includes('abilities:') &&
                 !line.includes('range of it:')
               ) {
                 abilities.push({
@@ -398,21 +491,37 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         //RANGED WEAPON BLOCK
         const rangedWeapons = [];
         let multiLineWeapon = 0;
+        let ctan = false;
         for (let index = startOfRanged.line + 1; index < startOfRanged.endLine; index++) {
           let line = splitText[index].substring(0, startOfAbilities.pos);
           if (line.trim().length > 0) {
             if (line.toLowerCase().includes('one shot:') || line.toLowerCase().includes('[one shot]:')) {
               continue;
             }
-             if (line.includes('Snagged:')) {
+            if (line.includes('FORTIFICATION')) {
+              break;
+            }
+            if (line.includes('C’TAN POWERS')) {
+              ctan = true;
+              continue;
+            }
+            if (line.includes('Snagged:')) {
               index = index + 2;
               continue;
             }
-             if (line.includes('[IMPALED]:')) {
+            if (line.includes('Hooked:')) {
+              index = index + 3;
+              continue;
+            }
+            if (line.includes('[IMPALED]:')) {
               index = index + 2;
               continue;
             }
-            if (line.includes('Conversion:') || line.toLowerCase().includes('[conversion:]')) {
+            if (
+              line.includes('Conversion:') ||
+              line.toLowerCase().includes('[conversion:]') ||
+              line.toLowerCase().includes('[conversion]:')
+            ) {
               index = index + 2;
               continue;
             }
@@ -541,6 +650,9 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
                 name = name.substring(0, name.indexOf('('));
               }
             }
+            if (ctan) {
+              keywords.push("c'tan power");
+            }
             if (name.indexOf('–') > -1) {
               if (
                 rangedWeapons.length > 0 &&
@@ -566,6 +678,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
                 }
               }
             }
+
             rangedWeapons.push({
               active: true,
               profiles: [
@@ -726,6 +839,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
           file
         );
 
+        let fluff = getUnitFluff(secondPageLines);
+
         let unitComposition = getUnitComposition(secondPageLines);
         let unitLeader = getLeader(secondPageLines);
         let unitWargear = getWargear(secondPageLines);
@@ -766,8 +881,10 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
           loadout: unitLoadout,
           wargear: unitWargear,
           transport: unitTransport,
-          legends: legends ? 'true' : undefined,
+          legends: legends ? true : undefined,
+          imperialArmour: imperialArmour ? true : undefined,
           points: unitPoints,
+          fluff: fluff,
           abilities: {
             wargear: wargearAbilities,
             core: coreKeywords,
@@ -796,6 +913,31 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         };
 
         newUnit = checkForManualFixes(newUnit);
+        newUnit = fixFactionKeywords(newUnit);
+
+        newUnit?.rangedWeapons?.forEach((wep) => {
+          let abilities = undefined;
+          wep?.profiles?.forEach((prof) => {
+            specialWeaponKeywords.forEach((val) => {
+              if (prof.keywords.some((keyword) => val.name.toLowerCase() === keyword.toLowerCase())) {
+                abilities = [val];
+              }
+            });
+          });
+          wep.abilities = abilities;
+        });
+        newUnit?.meleeWeapons?.forEach((wep) => {
+          let abilities = undefined;
+          wep?.profiles?.forEach((prof) => {
+            specialWeaponKeywords.forEach((val) => {
+              if (prof.keywords.some((keyword) => val.name.toLowerCase() === keyword.toLowerCase())) {
+                abilities = [val];
+              }
+            });
+          });
+          wep.abilities = abilities;
+        });
+
         units.push(newUnit);
       }
     }
@@ -883,12 +1025,13 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
       id: factionId,
       link: 'https://game-datacards.eu',
       name: factionName,
-      is_subfaction: false,
-      parent_id: '',
+      ...getAlliedInfo(factionId),
       stratagems: data[outputFile]?.map((val) => {
-        return { ...val, id: uuidv5(val.name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e') };
+        return { ...val, id: uuidv5(val.name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'), faction_id: factionId };
       }),
-      enhancements: enhancement?.enhancements,
+      enhancements: enhancement?.enhancements?.map((val) => {
+        return { ...val, id: uuidv5(val.name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'), faction_id: factionId };
+      }),
       datasheets: units,
       colours: {
         banner,
@@ -900,6 +1043,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
   });
 };
 
+convertTextToJson('./deathguard/', 'deathguard', 'DG', 'Death Guard', '#4d560e', '#2c290c', 3);
 convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', '#381a3a', '#411f41', 3);
 convertTextToJson('./spacemarines/', 'space_marines', 'SM', 'Space Marines', '#4b6262', '#092135', 3);
 convertTextToJson('./bloodangels/', 'bloodangels', 'CHBA', 'Blood Angels', '#72191c', '#631210', 3);
@@ -910,8 +1054,7 @@ convertTextToJson('./deathwatch/', 'deathwatch', 'CHDW', 'Death Watch', '#3d3e41
 convertTextToJson('./thousandsons/', 'thousandsons', 'TS', 'Thousand Sons', '#185862', '#0b3645', 3);
 convertTextToJson('./worldeaters/', 'worldeaters', 'WE', 'World Eaters', '#4d161a', '#611013', 3);
 convertTextToJson('./chaos_spacemarines/', 'chaos_spacemarines', 'CSM', 'Chaos Space Marines', '#222a2f', '#320b0d', 3);
-// convertTextToJson('./chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', '#393940', '#202224', 3);
-convertTextToJson('./deathguard/', 'deathguard', 'DG', 'Death Guard', '#4d560e', '#2c290c', 3);
+convertTextToJson('./chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', '#393940', '#202224', 3);
 convertTextToJson('./chaosknights/', 'chaosknights', 'QT', 'Chaos Knights', '#49584c', '#102824', 3);
 
 convertTextToJson('./astramilitarum/', 'astramilitarum', 'AM', 'Astra Militarum', '#324935', '#0a2118', 3);
