@@ -99,7 +99,7 @@ and they employ holo-emitters and psychic
 phantasms to fool enemy scouts.`,
   when: `End of your opponent’s
 Movement phase.`,
-  target: `One Aeldari unit from your army.`,
+  target: `One Aeldari Infantry unit from your army.`,
   effect: `Your unit can make a Normal
 move of up to 7". It cannot embark within
 a Transport at the end of this move.`,

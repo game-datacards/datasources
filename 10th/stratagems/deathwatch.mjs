@@ -87,16 +87,14 @@ shoot this phase, or one other Adeptus
 Astartes unit from your army (excluding
 Vehicles) that has not been selected to
 shoot this phase.`,
-  effect: `Until the end of the phase, ranged
-weapons (excluding Devastating Wounds
-weapons) equipped by models in your
-unit have the [ANTI-INFANTRY 2+] and
-[ANTI-MONSTER 5+] abilities.
-RESTRICTIONS: You cannot select any
-units that have already been targeted with
-either the Kraken Rounds or Dragonfire
-Rounds Stratagems this phase.`,
-  restrictions: ``
+  effect: `Until the end of the phase, bolt weapons*
+(excluding Devastating Wounds weapons) equipped 
+by models in your unit have the [ANTI-INFANTRY 2+] and 
+[ANTI-MONSTER 5+] abilities`,
+  restrictions: `You cannot select any
+  units that have already been targeted with
+  either the Kraken Rounds or Dragonfire
+  Rounds Stratagems this phase.`
 },{
   name: 'KRAKEN ROUNDS',
   cost: 1,
@@ -114,12 +112,10 @@ shoot this phase, or one other Adeptus
 Astartes unit from your army (excluding
 Vehicles) that has not been selected to
 shoot this phase.`,
-  effect: `Until the end of the phase,
-improve the Armour Penetration
-characteristic of ranged weapons
-equipped by models in your unit by 1 and
-improve the range characteristic of those
-weapons by 6".`,
+  effect: ` Until the end of the phase, improve the 
+Armour Penetration characteristic of bolt weapons* 
+equipped by models in your unit by 1 and improve the 
+range characteristic of those weapons by 6.`,
   restrictions: `You cannot select any
 units that have already been targeted with
 either the Dragonfire Rounds or Hellfire
@@ -141,10 +137,9 @@ shoot this phase, or one other Adeptus
 Astartes unit from your army (excluding
 Vehicles) that has not been selected to
 shoot this phase.`,
-  effect: `Until the end of the phase,
-ranged weapons equipped by models
-in your unit have the [ASSAULT] and
-[IGNORES COVER] abilities.`,
+  effect: `Until the end of the phase, bolt weapons* 
+  equipped by models in your unit have the [ASSAULT]
+  and [IGNORES COVER] abilities`,
   restrictions: `You cannot select any
 units that have already been targeted
 with either the Kraken Rounds or Hellfire

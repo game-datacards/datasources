@@ -75,7 +75,7 @@ a model in your unit makes an attack, add
 },{
   name: 'HALOED IN SOULFIRE',
   cost: 2,
-  type: TYPE['Battle Tactic'],
+  type: TYPE['Strategic Ploy'],
   detachment,
   turn: TURN.either,
   phase: [PHASE.any],

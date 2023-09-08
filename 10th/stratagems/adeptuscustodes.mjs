@@ -50,7 +50,7 @@ weapons instead.`,
 },{
   name: 'UNWAVERING SENTINELS',
   cost: 2,
-  type: TYPE['Battle Tactic'],
+  type: TYPE['Epic Deed'],
   detachment,
   turn: TURN.either,
   phase: [PHASE.any],
