@@ -62,7 +62,7 @@ ability (pg 26).`,
 	phase: [PHASE.command],
 	fluff: `Indifferent to their own survival, these warriors hold 
 their ground against seemingly impossible odds.`,
-	when: `Battle-shock step of your Command 
+  when: `Battle-shock step of your Command 
 phase, just before you take a Battle-shock test 
 for a unit from your army (pg 11).`,
 	target: `A unit from your army that must take a 
@@ -123,16 +123,12 @@ supernatural ritual, there are many means by which a
 commander may hasten their warriors’ onset.`,
 	when: `End of your opponent’s Movement phase.`,
 	target: `One unit from your army that is in Reserves.`,
-	effect: `If that enemy unit is visible to your unit, 
-your unit can shoot that enemy unit as if it were 
-your Shooting phase.`,
-	restrictions: `You cannot target a Titanic unit 
-with this Stratagem. Until the end of the phase, 
-each time a model in your unit makes a ranged 
-attack, an unmodified Hit roll of 6 is required 
-to score a hit, irrespective of the attacking 
-weapon’s Ballistic Skill or any modifiers. You can 
-only use this Stratagem once per turn.`
+	effect: `Your unit can arrive on the battlefield
+as if it were the Reinforcements step of your
+Movement phase.`,
+	restrictions: `You cannot use this Stratagem to
+enable a unit to arrive on the battlefield during a
+battle round it would not normally be able to do so in.`
 },{
 	name: 'FIRE OVERWATCH',
 	cost: 1,
@@ -148,14 +144,16 @@ Charge move.`,
 	target: `One unit from your army that is within 24" of
 that enemy unit and that would be eligible to shoot if
 it were your Shooting phase.`,
-	effect: `Your unit can shoot that enemy unit as if it
-were your Shooting phase.`,
-	restrictions: `Until the end of the phase, each
-time a model in your unit makes a ranged attack,
-an unmodified Hit roll of 6 is required to score a hit,
-irrespective of the attacking weapon’s Ballistic Skill
-or any modifiers. You can only use this Stratagem
-once per turn.`
+effect: `If that enemy unit is visible to your unit, 
+your unit can shoot that enemy unit as if it were 
+your Shooting phase.`,ö
+	restrictions: `You cannot target a Titanic unit 
+with this Stratagem. Until the end of the phase, 
+each time a model in your unit makes a ranged 
+attack, an unmodified Hit roll of 6 is required 
+to score a hit, irrespective of the attacking 
+weapon’s Ballistic Skill or any modifiers. You can 
+only use this Stratagem once per turn.`
 },{
 	name: 'GO TO GROUND',
 	cost: 1,
