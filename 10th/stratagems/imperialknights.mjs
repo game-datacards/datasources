@@ -49,7 +49,7 @@ invulnerable save against ranged attacks.`,
 },{
   name: 'THUNDERSTOMP',
   cost: 1,
-  type: TYPE['Battle Tactic'],
+  type: TYPE['Epic Deed'],
   detachment,
   turn: TURN.either,
   phase: [PHASE.fight],
@@ -94,7 +94,7 @@ characteristic of those weapons as well.`,
   restrictions: ``
 },{
   name: 'TROPHY CLAIM',
-  cost: 1,
+  cost: 2,
   type: TYPE['Epic Deed'],
   detachment,
   turn: TURN.either,
@@ -121,7 +121,7 @@ Stratagem again for the rest of the battle. `,
   restrictions: ``
 },{
   name: 'VALIANT LAST STAND',
-  cost: 1,
+  cost: 2,
   type: TYPE['Epic Deed'],
   detachment,
   turn: TURN.either,

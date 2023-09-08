@@ -144,7 +144,7 @@ const specialWeaponKeywords = [
   }
 ];
 
-const pointsFile = readFile('points.val');
+const pointsFile = readFile('points_for_extract1.2.val');
 const pointsLines = pointsFile.split(/\r?\n/);
 const enhancements = JSON.parse(readFile('enhancements.json'));
 
