@@ -146,7 +146,7 @@ that enemy unit and that would be eligible to shoot if
 it were your Shooting phase.`,
 effect: `If that enemy unit is visible to your unit, 
 your unit can shoot that enemy unit as if it were 
-your Shooting phase.`,ö
+your Shooting phase.`,
 	restrictions: `You cannot target a Titanic unit 
 with this Stratagem. Until the end of the phase, 
 each time a model in your unit makes a ranged 
