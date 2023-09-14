@@ -13,7 +13,7 @@ function extractPDF(name, max = 0, start = 6) {
         max = data.pages;
       }
       for (let index = start; index < max; index++) {
-        if (index % 2 === 0) {
+        if (index % 2 === 1) {
           const options = { from: index, to: index + 1 };
 
           pdfToText.pdfToText(`./${name}_index.pdf`, options, function (err, data) {
@@ -30,8 +30,8 @@ function extractPDF(name, max = 0, start = 6) {
     pdfToText.info(`./${name}_fw.pdf`, function (err, data) {
       if (err) throw err;
       max = data.pages;
-      for (let index = 2; index < max; index++) {
-        if (index % 2 === 0) {
+      for (let index = 0; index < max; index++) {
+        if (index % 2 === 1) {
           const options = { from: index, to: index + 1 };
 
           pdfToText.pdfToText(`./${name}_fw.pdf`, options, function (err, data) {
@@ -140,7 +140,7 @@ function extractPDF(name, max = 0, start = 6) {
 // extractPDF('astramilitarum');
 // extractPDF('imperialknights', 29);
 
-// extractPDF('tau');
+extractPDF('tau');
 // extractPDF('aeldari');
 // extractPDF('drukhari');
 // extractPDF('necrons');
@@ -148,4 +148,4 @@ function extractPDF(name, max = 0, start = 6) {
 // extractPDF('gsc');
 // extractPDF('orks');
 // extractPDF('votann');
-extractPDF('titan', 0, 2);
+// extractPDF('titan', 0, 2);
