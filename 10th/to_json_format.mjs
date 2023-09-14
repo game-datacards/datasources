@@ -1,10 +1,17 @@
 import fs from 'fs';
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+import data from './stratagems/index.mjs';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const readFile = (file) => {
   if (!file) {
     return;
   }
-  let res = fs.readFileSync(file, 'utf8');
+  let res = fs.readFileSync(path.resolve(__dirname, file), 'utf8');
 
   res = res.toString('utf8').replace(/^\uFEFF/, '');
 
@@ -38,7 +45,7 @@ function cleanForJson(name) {
   lines = lines.replaceAll('"active": true', '');
   lines = lines.replaceAll('"active": false', '');
 
-  fs.writeFileSync(`./json/${name}.json`, lines);
+  fs.writeFileSync(path.resolve(__dirname, `json/${name}.json`), lines);
 }
 
 cleanForJson('deathguard');
