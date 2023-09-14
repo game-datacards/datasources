@@ -144,9 +144,9 @@ const specialWeaponKeywords = [
   }
 ];
 
-const pointsFile = readFile('points_for_extract1.2.val');
+const pointsFile = readFile('./points/points_for_extract1.2.val');
 const pointsLines = pointsFile.split(/\r?\n/);
-const enhancements = JSON.parse(readFile('enhancements.json'));
+const enhancements = JSON.parse(readFile('./enhancements/enhancements.json'));
 
 function parse40kData(lines) {
   let currentFaction = null;
@@ -195,6 +195,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
   if (!inputFolder) {
     return;
   }
+  inputFolder = `./conversion/${inputFolder}`
   fs.readdir(inputFolder, function (err, files) {
     console.log(inputFolder);
     for (const [index, file] of files.entries()) {
@@ -1043,34 +1044,34 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
   });
 };
 
-convertTextToJson('./deathguard/', 'deathguard', 'DG', 'Death Guard', '#4d560e', '#2c290c', 3);
-convertTextToJson('./tyranids/', 'tyranids', 'TYR', 'Tyranids', '#381a3a', '#411f41', 3);
-convertTextToJson('./spacemarines/', 'space_marines', 'SM', 'Space Marines', '#4b6262', '#092135', 3);
-convertTextToJson('./bloodangels/', 'bloodangels', 'CHBA', 'Blood Angels', '#72191c', '#631210', 3);
-convertTextToJson('./darkangels/', 'darkangels', 'CHDA', 'Dark Angels', '#013a17', '#16291a', 3);
-convertTextToJson('./blacktemplar/', 'blacktemplar', 'CHBT', 'Black Templar', '#142637', '#202a2f', 3);
-convertTextToJson('./spacewolves/', 'spacewolves', 'CHSW', 'Space Wolves', '#435d63', '#283743', 3);
-convertTextToJson('./deathwatch/', 'deathwatch', 'CHDW', 'Death Watch', '#3d3e41', '#232425', 3);
-convertTextToJson('./thousandsons/', 'thousandsons', 'TS', 'Thousand Sons', '#185862', '#0b3645', 3);
-convertTextToJson('./worldeaters/', 'worldeaters', 'WE', 'World Eaters', '#4d161a', '#611013', 3);
-convertTextToJson('./chaos_spacemarines/', 'chaos_spacemarines', 'CSM', 'Chaos Space Marines', '#222a2f', '#320b0d', 3);
-convertTextToJson('./chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', '#393940', '#202224', 3);
-convertTextToJson('./chaosknights/', 'chaosknights', 'QT', 'Chaos Knights', '#49584c', '#102824', 3);
+convertTextToJson('/deathguard/', 'deathguard', 'DG', 'Death Guard', '#4d560e', '#2c290c', 3);
+convertTextToJson('/tyranids/', 'tyranids', 'TYR', 'Tyranids', '#381a3a', '#411f41', 3);
+convertTextToJson('/spacemarines/', 'space_marines', 'SM', 'Space Marines', '#4b6262', '#092135', 3);
+convertTextToJson('/bloodangels/', 'bloodangels', 'CHBA', 'Blood Angels', '#72191c', '#631210', 3);
+convertTextToJson('/darkangels/', 'darkangels', 'CHDA', 'Dark Angels', '#013a17', '#16291a', 3);
+convertTextToJson('/blacktemplar/', 'blacktemplar', 'CHBT', 'Black Templar', '#142637', '#202a2f', 3);
+convertTextToJson('/spacewolves/', 'spacewolves', 'CHSW', 'Space Wolves', '#435d63', '#283743', 3);
+convertTextToJson('/deathwatch/', 'deathwatch', 'CHDW', 'Death Watch', '#3d3e41', '#232425', 3);
+convertTextToJson('/thousandsons/', 'thousandsons', 'TS', 'Thousand Sons', '#185862', '#0b3645', 3);
+convertTextToJson('/worldeaters/', 'worldeaters', 'WE', 'World Eaters', '#4d161a', '#611013', 3);
+convertTextToJson('/chaos_spacemarines/', 'chaos_spacemarines', 'CSM', 'Chaos Space Marines', '#222a2f', '#320b0d', 3);
+convertTextToJson('/chaosdaemons/', 'chaosdaemons', 'CD', 'Chaos Daemons', '#393940', '#202224', 3);
+convertTextToJson('/chaosknights/', 'chaosknights', 'QT', 'Chaos Knights', '#49584c', '#102824', 3);
 
-convertTextToJson('./astramilitarum/', 'astramilitarum', 'AM', 'Astra Militarum', '#324935', '#0a2118', 3);
-convertTextToJson('./imperialknights/', 'imperialknights', 'QI', 'Imperial Knights', '#023e58', '#122d42', 3);
-convertTextToJson('./greyknights/', 'greyknights', 'GK', 'Grey Knights', '#4a5e67', '#325b68', 3);
-convertTextToJson('./adeptasororitas/', 'adeptasororitas', 'AS', 'Adepta Sororitas', '#570c0c', '#561113', 3);
-convertTextToJson('./adeptusmechanicus/', 'adeptusmechanicus', 'AdM', 'Adeptus Mechanicus', '#9f2628', '#5d1615', 3);
-convertTextToJson('./adeptuscustodes/', 'adeptuscustodes', 'AC', 'Adeptus Custodes', '#6d5035', '#6a0e19', 3);
-convertTextToJson('./agents/', 'agents', 'AoI', 'Agents of the Imperium', '#244b6a', '#1a3445', 3);
-convertTextToJson('./orks/', 'orks', 'ORK', 'Orks', '#465b18', '#283109', 3);
-convertTextToJson('./votann/', 'votann', 'LoV', 'Votann', '#3c4b3f', '#572d0a', 3);
-convertTextToJson('./tau/', 'tau', 'TAU', "T'au Empire", '#2e5a6a', '#175966', 3);
-convertTextToJson('./necrons/', 'necrons', 'NEC', 'Necrons', '#04532a', '#032b16', 3);
-convertTextToJson('./aeldari/', 'aeldari', 'AE', 'Aeldari', '#347379', '#0a353a', 3);
-convertTextToJson('./drukhari/', 'drukhari', 'DRU', 'Drukhari', '#0f454e', '#102929', 3);
+convertTextToJson('/astramilitarum/', 'astramilitarum', 'AM', 'Astra Militarum', '#324935', '#0a2118', 3);
+convertTextToJson('/imperialknights/', 'imperialknights', 'QI', 'Imperial Knights', '#023e58', '#122d42', 3);
+convertTextToJson('/greyknights/', 'greyknights', 'GK', 'Grey Knights', '#4a5e67', '#325b68', 3);
+convertTextToJson('/adeptasororitas/', 'adeptasororitas', 'AS', 'Adepta Sororitas', '#570c0c', '#561113', 3);
+convertTextToJson('/adeptusmechanicus/', 'adeptusmechanicus', 'AdM', 'Adeptus Mechanicus', '#9f2628', '#5d1615', 3);
+convertTextToJson('/adeptuscustodes/', 'adeptuscustodes', 'AC', 'Adeptus Custodes', '#6d5035', '#6a0e19', 3);
+convertTextToJson('/agents/', 'agents', 'AoI', 'Agents of the Imperium', '#244b6a', '#1a3445', 3);
+convertTextToJson('/orks/', 'orks', 'ORK', 'Orks', '#465b18', '#283109', 3);
+convertTextToJson('/votann/', 'votann', 'LoV', 'Votann', '#3c4b3f', '#572d0a', 3);
+convertTextToJson('/tau/', 'tau', 'TAU', "T'au Empire", '#2e5a6a', '#175966', 3);
+convertTextToJson('/necrons/', 'necrons', 'NEC', 'Necrons', '#04532a', '#032b16', 3);
+convertTextToJson('/aeldari/', 'aeldari', 'AE', 'Aeldari', '#347379', '#0a353a', 3);
+convertTextToJson('/drukhari/', 'drukhari', 'DRU', 'Drukhari', '#0f454e', '#102929', 3);
 
-convertTextToJson('./gsc/', 'gsc', 'GSC', 'Genestealer Cults', '#391625', '#291221', 3);
+convertTextToJson('/gsc/', 'gsc', 'GSC', 'Genestealer Cults', '#391625', '#291221', 3);
 
-convertTextToJson('./titan/', 'titan', 'AT', 'Adeptus Titanicus', '#4b6262', '#092135', 3);
+convertTextToJson('/titan/', 'titan', 'AT', 'Adeptus Titanicus', '#4b6262', '#092135', 3);
