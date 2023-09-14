@@ -28,13 +28,18 @@ import {
   includesString,
 } from './conversion.helpers.js';
 
+import path from 'path';
+import { fileURLToPath } from 'url';
 import data from './stratagems/index.mjs';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const readFile = (file) => {
   if (!file) {
     return;
   }
-  let res = fs.readFileSync(file, 'utf8');
+  let res = fs.readFileSync(path.resolve(__dirname, file), 'utf8');
 
   res = res.toString('utf8').replace(/^\uFEFF/, '');
 
@@ -141,7 +146,7 @@ const specialWeaponKeywords = [
       'Each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within range of this weapon, if that enemy unit is an eligible target, the bearer can shoot this weapon at that target as if it were your Shooting phase. The bearer can shoot up to four times in this way in your opponent’s Movement phase.',
     showAbility: true,
     showDescription: true,
-  }
+  },
 ];
 
 const pointsFile = readFile('./points/points_for_extract1.2.val');
@@ -191,17 +196,17 @@ const points = parse40kData(pointsLines);
 
 const convertTextToJson = (inputFolder, outputFile, factionId, factionName, header, banner, lineOfStats) => {
   const units = [];
-  console.log(inputFolder);
   if (!inputFolder) {
     return;
   }
-  inputFolder = `./conversion/${inputFolder}`
+
+  inputFolder = path.resolve(__dirname, `./conversion${inputFolder}`);
   fs.readdir(inputFolder, function (err, files) {
     console.log(inputFolder);
     for (const [index, file] of files.entries()) {
       if (file.indexOf('.text') > -1) {
         console.log(file);
-        let res = readFile(inputFolder + file);
+        let res = readFile(inputFolder + '/' + file);
         res = res.replaceAll('', ' ');
         res = res.replaceAll('I  nfantry', 'Infantry');
         res = res.replaceAll('V  ehicle', 'Vehicle');
@@ -1040,7 +1045,7 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
       },
     };
 
-    fs.writeFileSync(`./gdc/${outputFile}.json`, JSON.stringify(factions, null, 2));
+    fs.writeFileSync(path.resolve(__dirname, `gdc/${outputFile}.json`), JSON.stringify(factions, null, 2));
   });
 };
 

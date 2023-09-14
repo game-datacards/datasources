@@ -15,28 +15,26 @@ const readFile = (file) => {
   return res;
 };
 
-const schema = JSON.parse(readFile('./faction.scheme.json'));
+const schema = JSON.parse(readFile('./10th/validation/faction.scheme.json'));
 
 const validate = ajv.compile(schema);
 
-// const parse = ajv.compileParser(schema);
 function parseAndLog(json) {
   const data = validate(json);
   console.log('Startin validation of: ', json.name);
   if (!data) {
     console.log(validate.errors); // error message from the last parse call
-    fs.writeFileSync(`./errors/${json.name}-errors.json`, JSON.stringify(validate.errors));
+    fs.writeFileSync(`./validation/errors/${json.name}-errors.json`, JSON.stringify(validate.errors));
   } else {
     console.log('No errors');
-    if (fs.existsSync(`./errors/${json.name}-errors.json`)) {
-      fs.unlinkSync(`./errors/${json.name}-errors.json`);
+    if (fs.existsSync(`./validation/errors/${json.name}-errors.json`)) {
+      fs.unlinkSync(`./validation/errors/${json.name}-errors.json`);
     }
   }
 }
 
 function validateJson(name) {
-  let json = readFile(`./gdc/${name}.json`);
-  // console.log(JSON.parse(json));
+  let json = readFile(`./10th/gdc/${name}.json`);
   parseAndLog(JSON.parse(json));
 }
 
