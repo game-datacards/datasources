@@ -143,7 +143,7 @@ const getUnitFluff = (lines) => {
       break;
     }
 
-    if(textLine.replaceAll(" ", "").includes("WARHAMMERLEGENDS")) {
+    if (textLine.replaceAll(' ', '').includes('WARHAMMERLEGENDS')) {
       continue;
     }
 
@@ -797,6 +797,18 @@ const checkForManualFixes = (unit) => {
   switch (unit.name) {
     case 'Rubric Marines':
       unit.abilities.factionDescription = '*Aspiring Sorcerer model only';
+      break;
+    case 'C’tan Shard Of The Nightbringer':
+      unit.abilities.other = [
+        {
+          name: 'Drain Life',
+          description:
+            'At the end of the Fight phase, roll one D6 for each enemy unit within 6" of this model: on a 4+, that enemy unit suffers D3 mortal wounds.',
+          showAbility: true,
+          showDescription: true,
+        },
+        ...unit.abilities.other,
+      ];
       break;
     case 'Skathach Wraithknight':
       unit.abilities.wargear = {
