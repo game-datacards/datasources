@@ -1624,6 +1624,9 @@ const checkForManualFixes = (unit) => {
         'Fabius Bile',
       ];
       break;
+    case 'Dark Apostle':
+      unit.keywords = ['ALL MODELS:', ...unit.keywords, 'DARK APOSTLE ONLY:', 'Character', 'Dark Apostle'];
+      break;
     case 'Haarken Worldclaimer':
       unit.keywords = [
         'Infantry',
