@@ -61,6 +61,7 @@ const PRIMARCH_ABILITIES_LIST = [
   'CANTICLES OF THE OMNISSIAH',
   'TRIARCH ABILITIES',
   'FORTIFICATION',
+  'MIGHTY EDIFICE'
 ];
 
 const specialWeaponKeywords = [
@@ -1080,3 +1081,4 @@ convertTextToJson('/drukhari/', 'drukhari', 'DRU', 'Drukhari', '#0f454e', '#1029
 convertTextToJson('/gsc/', 'gsc', 'GSC', 'Genestealer Cults', '#391625', '#291221', 3);
 
 convertTextToJson('/titan/', 'titan', 'AT', 'Adeptus Titanicus', '#4b6262', '#092135', 3);
+convertTextToJson('/unaligned/', 'unaligned', 'UN', 'Unaligned', '#4b6262', '#092135', 3);

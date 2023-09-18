@@ -66,3 +66,4 @@ validateJson('aeldari');
 validateJson('drukhari');
 validateJson('gsc');
 validateJson('titan');
+validateJson('unaligned');
