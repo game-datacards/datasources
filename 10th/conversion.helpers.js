@@ -210,6 +210,7 @@ const getUnitLoadout = (lines) => {
     'SPEED FREEKS',
     'BIG GUNZ',
     'HONOUR GUARD OF MACRAGGE',
+    'HORRORS ARE PINK',
   ];
 
   let value = '';
@@ -598,15 +599,19 @@ const getSpecialAbilities = (lines) => {
     'SPEED FREEKS',
     'HONOUR GUARD OF MACRAGGE',
     'OGRYNS',
+    'HORRORS ARE PINK',
   ];
 
   let ability = { name: '', description: '' };
   let abilities = [];
   let startOfBlock = 0;
   let startOfAbility = false;
-  for (const [_index, line] of lines.entries()) {
+  for (const [index, line] of lines.entries()) {
     if (line.includes('FACTION KEYWORDS') || line.includes('* The profile for')) {
       break;
+    }
+    if(line.includes('ONCE THERE WAS ONE')) {
+      continue;
     }
     if (startOfBlock > 0) {
       if (includesString(line.substring(startOfBlock), specialAbilityKeywords)) {
@@ -620,6 +625,9 @@ const getSpecialAbilities = (lines) => {
         }
         startOfAbility = true;
         ability.name = line.substring(startOfBlock);
+        if(line.includes("HORRORS ARE PINK")) {
+          ability.name += lines[index + 1].substring(startOfBlock).trim();
+        }
         ability.description = '';
         continue;
       }
