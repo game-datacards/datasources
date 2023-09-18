@@ -210,6 +210,9 @@ const getUnitLoadout = (lines) => {
     'SPEED FREEKS',
     'BIG GUNZ',
     'HONOUR GUARD OF MACRAGGE',
+    'HORRORS ARE PINK',
+    'UNALIGNED FORCES',
+    'MIGHTY EDIFICE',
   ];
 
   let value = '';
@@ -281,6 +284,8 @@ const getLeader = (lines) => {
       line.includes("GRANDFATHER'S BLESSING") ||
       line.includes('POSSESSED') ||
       line.includes('BIG GUNZ') ||
+      line.includes('UNALIGNED FORCES') ||
+      line.includes('MIGHTY EDIFICE') ||
       line.includes('SPEED FREEKS') ||
       line.includes('HONOUR GUARD OF MACRAGGE') ||
       line.includes('AHRIMAN')
@@ -322,13 +327,17 @@ const getWargear = (lines) => {
   let secondColumnValue = '';
 
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('FACTION KEYWORDS') || line.includes('KEYWORDS –')) {
+    if (line.includes('FACTION KEYWORDS') || line.includes('KEYWORDS –') || line.includes('MIGHTY EDIFICE')) {
       break;
     }
     if (startOfBlock > 0) {
       let textLine = line.substring(startOfBlock, endOfBlock).trim();
 
-      if (textLine.includes('ATTACHED UNIT') || textLine.includes('DAEMONIC ALLEGIANCE')) {
+      if (
+        textLine.includes('ATTACHED UNIT') ||
+        textLine.includes('DAEMONIC ALLEGIANCE') ||
+        textLine.includes('TRANSPORT')
+      ) {
         break;
       }
       if (textLine.length === 0) {
@@ -368,17 +377,29 @@ const getWargear = (lines) => {
 const getTransport = (lines) => {
   let value = '';
   let startOfBlock = 0;
+  let endOfBlock = 0;
 
   for (const [_index, line] of lines.entries()) {
     if (line.includes('FACTION KEYWORDS')) {
       break;
     }
-    if (line.includes('Thunderhawk Transporter') || line.includes('THUNDERHAWK TRANSPORTER')) {
+    if (
+      line.includes('Thunderhawk Transporter') ||
+      line.includes('THUNDERHAWK TRANSPORTER') ||
+      line.includes('GORGON HEAVY TRANSPORT')
+    ) {
       continue;
     }
     if (startOfBlock > 0) {
-      let textLine = line.substring(startOfBlock).trim();
-
+      let textLine;
+      if (startOfBlock < endOfBlock) {
+        textLine = line.substring(startOfBlock, endOfBlock).trim();
+      } else {
+        textLine = line.substring(startOfBlock).trim();
+      }
+      if(textLine.includes("MIGHTY EDIFICE")) {
+        break;
+      }
       if (textLine.length === 0) {
         continue;
       }
@@ -386,6 +407,9 @@ const getTransport = (lines) => {
     }
     if (line.includes('TRANSPORT')) {
       startOfBlock = line.indexOf('TRANSPORT');
+    }
+    if (line.includes('UNIT COMPOSITION')) {
+      endOfBlock = line.indexOf('UNIT COMPOSITION');
     }
   }
 
@@ -598,17 +622,26 @@ const getSpecialAbilities = (lines) => {
     'SPEED FREEKS',
     'HONOUR GUARD OF MACRAGGE',
     'OGRYNS',
+    'HORRORS ARE PINK',
+    'UNALIGNED FORCES',
+    'MIGHTY EDIFICE',
   ];
 
   let ability = { name: '', description: '' };
   let abilities = [];
   let startOfBlock = 0;
   let startOfAbility = false;
-  for (const [_index, line] of lines.entries()) {
+  for (const [index, line] of lines.entries()) {
     if (line.includes('FACTION KEYWORDS') || line.includes('* The profile for')) {
       break;
     }
+    if (line.includes('ONCE THERE WAS ONE')) {
+      continue;
+    }
     if (startOfBlock > 0) {
+      if (line.substring(startOfBlock).includes('TRANSPORT')) {
+        break;
+      }
       if (includesString(line.substring(startOfBlock), specialAbilityKeywords)) {
         if (startOfAbility) {
           abilities.push({
@@ -620,6 +653,9 @@ const getSpecialAbilities = (lines) => {
         }
         startOfAbility = true;
         ability.name = line.substring(startOfBlock);
+        if (line.includes('HORRORS ARE PINK')) {
+          ability.name += lines[index + 1].substring(startOfBlock).trim();
+        }
         ability.description = '';
         continue;
       }
@@ -671,7 +707,7 @@ const getPrimarchAbilities = (lines, blockStart, startOfAbilities, file = '') =>
         if (line.trim().length === 0) {
           continue;
         }
-        if (line.includes(':')) {
+        if (line.includes(':') && !line.includes('Fortifications from your army:')) {
           primarchAbility.abilities.push({
             name: line.substring(0, line.indexOf(':')).trim(),
             description: line.substring(line.indexOf(':') + 1).trim(),
@@ -1615,6 +1651,9 @@ const checkForManualFixes = (unit) => {
         'Epic Hero',
         'Fabius Bile',
       ];
+      break;
+    case 'Dark Apostle':
+      unit.keywords = ['ALL MODELS:', ...unit.keywords, 'DARK APOSTLE ONLY:', 'Character', 'Dark Apostle'];
       break;
     case 'Haarken Worldclaimer':
       unit.keywords = [

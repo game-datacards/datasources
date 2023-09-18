@@ -140,7 +140,7 @@ function extractPDF(name, max = 0, start = 6) {
 // extractPDF('astramilitarum');
 // extractPDF('imperialknights', 29);
 
-extractPDF('tau');
+// extractPDF('tau');
 // extractPDF('aeldari');
 // extractPDF('drukhari');
 // extractPDF('necrons');
@@ -149,3 +149,4 @@ extractPDF('tau');
 // extractPDF('orks');
 // extractPDF('votann');
 // extractPDF('titan', 0, 2);
+extractPDF('unaligned', 0, 0);
