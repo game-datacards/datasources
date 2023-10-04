@@ -1,5 +1,7 @@
 import fs from 'fs';
 
+import { sortObj } from "jsonabc";
+
 import { v5 as uuidv5 } from 'uuid';
 import {
   checkForManualFixes,
@@ -945,6 +947,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
           wep.abilities = abilities;
         });
 
+        newUnit = sortObj(newUnit);
+
         units.push(newUnit);
       }
     }
@@ -1045,8 +1049,8 @@ const convertTextToJson = (inputFolder, outputFile, factionId, factionName, head
         header,
       },
     };
-
-    fs.writeFileSync(path.resolve(__dirname, `gdc/${outputFile}.json`), JSON.stringify(factions, null, 2));
+    
+    fs.writeFileSync(path.resolve(__dirname, `gdc/${outputFile}.json`), JSON.stringify(sortObj(factions), null, 2));
   });
 };
 
