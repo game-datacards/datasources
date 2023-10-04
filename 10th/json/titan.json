@@ -1,791 +1,799 @@
 {
-  "id": "AT",
-  "link": "https://game-datacards.eu",
-  "name": "Adeptus Titanicus",
-  "is_subfaction": false,
-  "parent_id": "",
+  "colours": {
+    "banner": "#092135",
+    "header": "#4b6262"
+  },
   "datasheets": [
     {
-      "id": "ce0d2309-7035-5974-8965-58466f8f5ff1",
-      "name": "Reaver Titan",
-      "source": "40k-10e",
-      "faction_id": "AT",
-
-      "leader": "",
-      "composition": ["1 Reaver Titan"],
-      "loadout": "This model is equipped with: Reaver apocalypse launcher; Reaver gatling blaster; Reaver laser blaster; Reaver feet.",
-      "wargear": [
-        "This model’s Reaver gatling blaster can be replaced with one of the following: ◦ 1 Reaver laser blaster ◦ 1 Reaver melta cannon ◦ 1 Reaver volcano cannon ◦ 1 Reaver power fist",
-        "This model’s Reaver laser blaster can be replaced with one of the following: ◦ 1 Reaver gatling blaster ◦ 1 Reaver melta cannon ◦ 1 Reaver volcano cannon"
-      ],
-      "transport": "",
-      "imperialArmour": true,
-      "points": [
-        {
-          "models": "1",
-          "cost": "2200"
-        }
-      ],
-      "fluff": "Reaver Titans are vast god-machines possessed of truly devastating firepower. From the apocalypse missile launcher mounted on their carapace to their arm-mounted laser blaster, Reavers are more than capable of wiping out ground troops, their void shields and thick adamantine hulls nullifying all but the most piercing enemy strikes.",
       "abilities": {
-        "wargear": [],
-        "core": ["Deadly Demise D6+6"],
+        "core": ["Deadly Demise 2D6"],
+        "damaged": {
+          "description": "While this model has 1-13 wounds remaining, subtract 8 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+          "range": "1-13 WOUNDS REMAINING"
+        },
         "faction": ["Super-heavy Walker"],
-        "primarch": [],
         "invul": {
-          "value": "5+",
-          "info": "* Against ranged attacks only"
+          "info": "* Against ranged attacks only",
+
+          "value": "5+"
         },
         "other": [
           {
-            "name": "Striding Colossus",
-            "description": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so."
+            "description": "Each time this model Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 8\" to the Move characteristic of this model.",
+            "name": "Flank Speed"
           },
           {
-            "name": "God-machine",
-            "description": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back."
+            "description": "Each time you target this model with a Stratagem, you must spend twice that Stratagem’s stated CP cost to do so.",
+            "name": "Striding Colossus"
           }
         ],
+        "primarch": [],
         "special": [],
-        "damaged": {
-          "range": "1-20 WOUNDS REMAINING",
-          "description": "While this model has 1-20 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
-        }
+        "wargear": []
       },
-      "stats": [
+
+      "composition": ["1 Warhound Titan"],
+      "faction_id": "AT",
+      "factions": ["Adeptus Titanicus"],
+      "fluff": "Warhounds are the eyes and ears of the Titan Legions, used to perform dangerous reconnaissance or raiding missions. Despite being the smallest Titan class, a single Warhound can easily turn the tide of battle when used to support ground forces, the sheer power of its weaponry and armour being more than most foes can overcome.",
+      "id": "14c695a9-93a2-5d2a-8c6f-768fa81cf1f3",
+      "imperialArmour": true,
+      "keywords": [
+        "Imperium",
+        "Titanic",
+        "Towering",
+        "Vehicle",
+        "Walker",
+        "Warhound Titan"
+      ],
+      "leader": "",
+      "loadout": "This model is equipped with: Warhound plasma blastgun; Warhound vulcan mega-bolter; Warhound feet.",
+      "meleeWeapons": [
         {
-          "m": "12\"",
-          "t": "14",
-          "sv": "2+",
-          "w": "60",
-          "ld": "6+",
-          "oc": "20",
-          "name": "Reaver Titan"
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "8",
+              "damage": "2",
+              "keywords": [],
+              "name": "Warhound feet",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "10"
+            }
+          ]
+        }
+      ],
+      "name": "Warhound Titan",
+      "points": [
+        {
+          "cost": "1100",
+          "models": "1"
         }
       ],
       "rangedWeapons": [
         {
           "profiles": [
             {
-              "name": "Reaver apocalypse launcher",
-              "keywords": ["blast", "indirect fire"],
-              "range": "200\"",
-              "attacks": "3D6",
-              "skill": "3+",
-              "strength": "7",
               "ap": "-1",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Reaver gatling blaster",
+              "attacks": "20",
+              "damage": "2",
               "keywords": ["sustained hits 1"],
-              "range": "72\"",
-              "attacks": "12",
-              "skill": "3+",
-              "strength": "8",
-              "ap": "-2",
-              "damage": "3"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Reaver laser blaster",
-              "keywords": ["blast"],
-              "range": "72\"",
-              "attacks": "8",
-              "skill": "3+",
-              "strength": "20",
-              "ap": "-3",
-              "damage": "D6+2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Reaver melta cannon",
-              "keywords": ["blast", "melta 4"],
+              "name": "Warhound vulcan mega-bolter",
               "range": "48\"",
-              "attacks": "D6+2",
               "skill": "3+",
-              "strength": "13",
-              "ap": "-4",
-              "damage": "6"
+              "strength": "6"
             }
           ]
         },
         {
           "profiles": [
             {
-              "name": "Reaver volcano cannon",
-              "keywords": ["blast", "heavy"],
-              "range": "120\"",
-              "attacks": "D3+1",
-              "skill": "3+",
-              "strength": "24",
-              "ap": "-5",
-              "damage": "14"
-            }
-          ]
-        }
-      ],
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "name": "Reaver feet",
-              "keywords": [],
-              "range": "Melee",
-              "attacks": "8",
-              "skill": "4+",
-              "strength": "12",
               "ap": "-2",
-              "damage": "4"
+              "attacks": "3D6",
+              "damage": "3",
+              "keywords": ["ignores cover", "torrent"],
+              "name": "Warhound inferno gun",
+              "range": "24\"",
+              "skill": "N/A",
+              "strength": "7"
             }
           ]
         },
         {
           "profiles": [
             {
-              "name": "Reaver power fist – strike",
-              "keywords": [],
-              "range": "Melee",
-              "attacks": "6",
-              "skill": "4+",
-              "strength": "20",
-              "ap": "-4",
-              "damage": "14"
+              "ap": "-3",
+              "attacks": "2D6+3",
+              "damage": "4",
+              "keywords": ["blast"],
+              "name": "Warhound plasma blastgun – standard",
+              "range": "72\"",
+              "skill": "3+",
+              "strength": "9"
             },
             {
-              "name": "Reaver power fist – sweep",
-              "keywords": [],
-              "range": "Melee",
-              "attacks": "12",
-              "skill": "4+",
-              "strength": "12",
               "ap": "-3",
-              "damage": "6"
+              "attacks": "2D6+3",
+              "damage": "5",
+              "keywords": ["blast", "hazardous"],
+              "name": "Warhound plasma blastgun – supercharge",
+              "range": "72\"",
+              "skill": "3+",
+              "strength": "10"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "D3+3",
+              "damage": "2D6",
+              "keywords": ["blast"],
+              "name": "Warhound turbo-laser destructor",
+              "range": "72\"",
+              "skill": "3+",
+              "strength": "20"
             }
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Walker",
-        "Titanic",
-        "Towering",
-        "Imperium",
-        "Reaver Titan"
-      ],
-      "factions": ["Adeptus Titanicus"]
-    },
-    {
-      "id": "3f573207-e437-525c-ac92-3c27ae59fcf7",
-      "name": "Warbringer Nemesis Titan",
       "source": "40k-10e",
-      "faction_id": "AT",
-
-      "leader": "",
-      "composition": ["1 Warbringer Nemesis Titan"],
-      "loadout": "This model is equipped with: 2 anvillus defence batteries; 3 ardex-defensor maulers; Nemesis quake cannon; Reaver gatling blaster; Reaver laser blaster; Nemesis feet.",
-      "wargear": [
-        "This model’s Nemesis quake cannon can be replaced with 1 Nemesis volcano cannon.",
-        "This model’s Reaver gatling blaster can be replaced with one of the following: ◦ 1 Reaver laser blaster ◦ 1 Reaver melta cannon ◦ 1 Reaver volcano cannon",
-        "This model’s Reaver laser blaster can be replaced with one of the following: ◦ 1 Reaver gatling blaster ◦ 1 Reaver melta cannon ◦ 1 Reaver volcano cannon"
-      ],
-      "transport": "",
-      "imperialArmour": true,
-      "points": [
-        {
-          "models": "1",
-          "cost": "2600"
-        }
-      ],
-      "fluff": "The Warbringer Nemesis Titan is an immense war engine designed to destroy enemy Titan-class targets at range. Acting as a dedicated fire support platform, the Nemesis’ reinforced frontal plating allows it to weather most return fire with ease, while its defence batteries grant it ample protection from aerial attacks.",
-      "abilities": {
-        "wargear": [],
-        "core": ["Deadly Demise D6+6"],
-        "faction": ["Super-heavy Walker"],
-        "primarch": [],
-        "invul": {
-          "value": "5+",
-          "info": "* Against ranged attacks only"
-        },
-        "other": [
-          {
-            "name": "Striding Colossus",
-            "description": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so."
-          },
-          {
-            "name": "Titanic Fire Support",
-            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly Imperium model makes an attack that targets that enemy unit, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1."
-          }
-        ],
-        "special": [],
-        "damaged": {
-          "range": "1-26 WOUNDS REMAINING",
-          "description": "While this model has 1-26 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
-        }
-      },
       "stats": [
         {
-          "m": "12\"",
-          "t": "14",
-          "sv": "2+",
-          "w": "80",
           "ld": "6+",
-          "oc": "20",
-          "name": "Warbringer Nemesis Titan"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "name": "Anvillus defence battery",
-              "keywords": ["anti-fly 4+"],
-              "range": "72\"",
-              "attacks": "8",
-              "skill": "3+",
-              "strength": "8",
-              "ap": "-1",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Ardex-defensor mauler",
-              "keywords": [],
-              "range": "36\"",
-              "attacks": "6",
-              "skill": "3+",
-              "strength": "6",
-              "ap": "-2",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Nemesis quake cannon",
-              "keywords": ["blast", "indirect fire"],
-              "range": "480\"",
-              "attacks": "D6+6",
-              "skill": "3+",
-              "strength": "16",
-              "ap": "-4",
-              "damage": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Nemesis volcano cannon",
-              "keywords": ["blast"],
-              "range": "120\"",
-              "attacks": "D3+3",
-              "skill": "3+",
-              "strength": "24",
-              "ap": "-5",
-              "damage": "14"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Reaver gatling blaster",
-              "keywords": ["sustained hits 1"],
-              "range": "72\"",
-              "attacks": "12",
-              "skill": "3+",
-              "strength": "8",
-              "ap": "-2",
-              "damage": "3"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Reaver laser blaster",
-              "keywords": ["blast"],
-              "range": "72\"",
-              "attacks": "8",
-              "skill": "3+",
-              "strength": "20",
-              "ap": "-3",
-              "damage": "D6+2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Reaver melta cannon",
-              "keywords": ["blast", "melta 4"],
-              "range": "48\"",
-              "attacks": "D6+2",
-              "skill": "3+",
-              "strength": "13",
-              "ap": "-4",
-              "damage": "6"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Reaver volcano cannon",
-              "keywords": ["blast", "heavy"],
-              "range": "120\"",
-              "attacks": "D3+1",
-              "skill": "3+",
-              "strength": "24",
-              "ap": "-5",
-              "damage": "14"
-            }
-          ]
-        }
-      ],
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "name": "Nemesis feet",
-              "keywords": [],
-              "range": "Melee",
-              "attacks": "6",
-              "skill": "4+",
-              "strength": "12",
-              "ap": "-2",
-              "damage": "4"
-            }
-          ]
-        }
-      ],
-      "keywords": [
-        "Vehicle",
-        "Walker",
-        "Titanic",
-        "Towering",
-        "Imperium",
-        "Warbringer Nemesis Titan"
-      ],
-      "factions": ["Adeptus Titanicus"]
-    },
-    {
-      "id": "14c695a9-93a2-5d2a-8c6f-768fa81cf1f3",
-      "name": "Warhound Titan",
-      "source": "40k-10e",
-      "faction_id": "AT",
+          "m": "14\"",
+          "name": "Warhound Titan",
+          "oc": "16",
 
-      "leader": "",
-      "composition": ["1 Warhound Titan"],
-      "loadout": "This model is equipped with: Warhound plasma blastgun; Warhound vulcan mega-bolter; Warhound feet.",
+          "sv": "2+",
+          "t": "13",
+          "w": "40"
+        }
+      ],
+      "transport": "",
       "wargear": [
         "This model’s Warhound plasma blastgun can be replaced with one of the following: ◦ 1 Warhound inferno gun ◦ 1 Warhound turbo-laser destructor ◦  1 Warhound vulcan mega-bolter",
         "This model’s Warhound vulcan mega-bolter can be replaced with one of the following: ◦ 1 Warhound inferno gun ◦ 1 Warhound plasma blastgun ◦ 1 Warhound turbo-laser destructor"
-      ],
-      "transport": "",
-      "imperialArmour": true,
-      "points": [
-        {
-          "models": "1",
-          "cost": "1100"
-        }
-      ],
-      "fluff": "Warhounds are the eyes and ears of the Titan Legions, used to perform dangerous reconnaissance or raiding missions. Despite being the smallest Titan class, a single Warhound can easily turn the tide of battle when used to support ground forces, the sheer power of its weaponry and armour being more than most foes can overcome.",
+      ]
+    },
+    {
       "abilities": {
-        "wargear": [],
-        "core": ["Deadly Demise 2D6"],
+        "core": ["Deadly Demise 2D6+6"],
+        "damaged": {
+          "description": "While this model has 1-33 wounds remaining, subtract 15 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+          "range": "1-33 WOUNDS REMAINING"
+        },
         "faction": ["Super-heavy Walker"],
-        "primarch": [],
         "invul": {
-          "value": "5+",
-          "info": "* Against ranged attacks only"
+          "info": "* Against ranged attacks only",
+
+          "value": "5+"
         },
         "other": [
           {
-            "name": "Striding Colossus",
-            "description": "Each time you target this model with a Stratagem, you must spend twice that Stratagem’s stated CP cost to do so."
+            "description": "Each time you target this model with a Stratagem, you must spend four times that Stratagem’s stated CP cost to do so.",
+            "name": "Striding Colossus"
           },
           {
-            "name": "Flank Speed",
-            "description": "Each time this model Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 8\" to the Move characteristic of this model."
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test.",
+            "name": "Wrath of the Omnissiah"
           }
         ],
+        "primarch": [],
         "special": [],
-        "damaged": {
-          "range": "1-13 WOUNDS REMAINING",
-          "description": "While this model has 1-13 wounds remaining, subtract 8 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
-        }
+        "wargear": []
       },
-      "stats": [
+
+      "composition": ["1 Warlord Titan"],
+      "faction_id": "AT",
+      "factions": ["Adeptus Titanicus"],
+      "fluff": "Warlord Titans are gargantuan embodiments of the Omnissiah’s wrath. With the destructive power of a small void warship and the resilience of a fortress, Warlords reign supreme over almost all adversaries, dispensing doom with every thundering weapons salvo and crushing any survivors beneath their earth-shattering stride.",
+      "id": "36df9ba7-d684-526e-a4a6-78a04115d575",
+      "imperialArmour": true,
+      "keywords": [
+        "Imperium",
+        "Titanic",
+        "Towering",
+        "Vehicle",
+        "Walker",
+        "Warlord Titan"
+      ],
+      "leader": "",
+      "loadout": "This model is equipped with: 2 apocalypse launchers; 2 ardex-defensor lascannons; 2 ardex-defensor maulers; macro gatling blaster; arioch power claw; Warlord feet.",
+      "meleeWeapons": [
         {
-          "m": "14\"",
-          "t": "13",
-          "sv": "2+",
-          "w": "40",
-          "ld": "6+",
-          "oc": "16",
-          "name": "Warhound Titan"
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "6",
+              "damage": "4",
+              "keywords": [],
+              "name": "Warlord feet",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "12",
+              "damage": "8",
+              "keywords": [],
+              "name": "Arioch power claw – sweep",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "12"
+            },
+            {
+              "ap": "-4",
+              "attacks": "6",
+              "damage": "24",
+              "keywords": [],
+              "name": "Arioch power claw – strike",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "20"
+            }
+          ]
+        }
+      ],
+      "name": "Warlord Titan",
+      "points": [
+        {
+          "cost": "3500",
+          "models": "1"
         }
       ],
       "rangedWeapons": [
         {
           "profiles": [
             {
-              "name": "Warhound inferno gun",
-              "keywords": ["ignores cover", "torrent"],
-              "range": "24\"",
-              "attacks": "3D6",
-              "skill": "N/A",
-              "strength": "7",
-              "ap": "-2",
-              "damage": "3"
+              "ap": "-1",
+              "attacks": "20",
+              "damage": "2",
+              "keywords": ["sustained hits 1"],
+              "name": "Arioch power claw",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "6"
             }
           ]
         },
         {
           "profiles": [
             {
-              "name": "Warhound plasma blastgun – standard",
-              "keywords": ["blast"],
-              "range": "72\"",
-              "attacks": "2D6+3",
+              "ap": "-2",
+              "attacks": "20",
+              "damage": "2",
+              "keywords": ["blast", "indirect fire"],
+              "name": "Apocalypse launcher",
+              "range": "200\"",
               "skill": "3+",
-              "strength": "9",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "30",
+              "damage": "3",
+              "keywords": ["sustained hits 1"],
+              "name": "Macro gatling blaster",
+              "range": "100\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "6",
+              "damage": "2",
+              "keywords": [],
+              "name": "Ardex-defensor mauler",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
               "ap": "-3",
-              "damage": "4"
+              "attacks": "1",
+              "damage": "D6+1",
+              "keywords": [],
+              "name": "Ardex-defensor lascannon",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "2D6+6",
+              "damage": "5",
+              "keywords": ["blast"],
+              "name": "Sunfury plasma annihilator – standard",
+              "range": "72\"",
+              "skill": "3+",
+              "strength": "10"
             },
             {
-              "name": "Warhound plasma blastgun – supercharge",
+              "ap": "-3",
+              "attacks": "2D6+6",
+              "damage": "8",
               "keywords": ["blast", "hazardous"],
+              "name": "Sunfury plasma annihilator – supercharge",
               "range": "72\"",
-              "attacks": "2D6+3",
               "skill": "3+",
-              "strength": "10",
-              "ap": "-3",
-              "damage": "5"
+              "strength": "12"
             }
           ]
         },
         {
           "profiles": [
             {
-              "name": "Warhound turbo-laser destructor",
+              "ap": "-4",
+              "attacks": "3D6",
+              "damage": "6",
+              "keywords": ["blast", "ignores cover"],
+              "name": "Mori quake cannon",
+              "range": "280\"",
+              "skill": "3+",
+              "strength": "16"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "6",
+              "damage": "D6+3",
               "keywords": ["blast"],
+              "name": "Laser blaster",
               "range": "72\"",
-              "attacks": "D3+3",
               "skill": "3+",
-              "strength": "20",
-              "ap": "-3",
-              "damage": "2D6"
+              "strength": "16"
             }
           ]
         },
         {
           "profiles": [
             {
-              "name": "Warhound vulcan mega-bolter",
-              "keywords": ["sustained hits 1"],
-              "range": "48\"",
-              "attacks": "20",
+              "ap": "-5",
+              "attacks": "D3+3",
+              "damage": "18",
+              "keywords": ["blast"],
+              "name": "Belicosa volcano cannon",
+              "range": "120\"",
               "skill": "3+",
-              "strength": "6",
-              "ap": "-1",
-              "damage": "2"
+              "strength": "32"
             }
           ]
         }
       ],
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "name": "Warhound feet",
-              "keywords": [],
-              "range": "Melee",
-              "attacks": "8",
-              "skill": "4+",
-              "strength": "10",
-              "ap": "-1",
-              "damage": "2"
-            }
-          ]
-        }
-      ],
-      "keywords": [
-        "Vehicle",
-        "Walker",
-        "Titanic",
-        "Towering",
-        "Imperium",
-        "Warhound Titan"
-      ],
-      "factions": ["Adeptus Titanicus"]
-    },
-    {
-      "id": "36df9ba7-d684-526e-a4a6-78a04115d575",
-      "name": "Warlord Titan",
       "source": "40k-10e",
-      "faction_id": "AT",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "10\"",
+          "name": "Warlord Titan",
+          "oc": "30",
 
-      "leader": "",
-      "composition": ["1 Warlord Titan"],
-      "loadout": "This model is equipped with: 2 apocalypse launchers; 2 ardex-defensor lascannons; 2 ardex-defensor maulers; macro gatling blaster; arioch power claw; Warlord feet.",
+          "sv": "2+",
+          "t": "16",
+          "w": "100"
+        }
+      ],
+      "transport": "",
       "wargear": [
         "This model’s 2 apocalypse launchers can be replaced with 2 laser blasters.",
         "This model’s arioch power claw can be replaced with one of the following: ◦ 1 belicosa volcano cannon ◦ 1 macro gatling blaster ◦ 1 mori quake cannon ◦ 1 sunfury plasma annihilator",
         "This model’s macro gatling blaster can be replaced with one of the following: ◦ 1 arioch power claw ◦ 1 belicosa volcano cannon ◦ 1 mori quake cannon ◦ 1 sunfury plasma annihilator"
-      ],
-      "transport": "",
-      "imperialArmour": true,
-      "points": [
-        {
-          "models": "1",
-          "cost": "3500"
-        }
-      ],
-      "fluff": "Warlord Titans are gargantuan embodiments of the Omnissiah’s wrath. With the destructive power of a small void warship and the resilience of a fortress, Warlords reign supreme over almost all adversaries, dispensing doom with every thundering weapons salvo and crushing any survivors beneath their earth-shattering stride.",
+      ]
+    },
+    {
       "abilities": {
-        "wargear": [],
-        "core": ["Deadly Demise 2D6+6"],
+        "core": ["Deadly Demise D6+6"],
+        "damaged": {
+          "description": "While this model has 1-20 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+          "range": "1-20 WOUNDS REMAINING"
+        },
         "faction": ["Super-heavy Walker"],
-        "primarch": [],
         "invul": {
-          "value": "5+",
-          "info": "* Against ranged attacks only"
+          "info": "* Against ranged attacks only",
+
+          "value": "5+"
         },
         "other": [
           {
-            "name": "Striding Colossus",
-            "description": "Each time you target this model with a Stratagem, you must spend four times that Stratagem’s stated CP cost to do so."
+            "description": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so.",
+            "name": "Striding Colossus"
           },
           {
-            "name": "Wrath of the Omnissiah",
-            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. That unit must take a Battle-shock test."
+            "description": "This model is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+            "name": "God-machine"
           }
         ],
+        "primarch": [],
         "special": [],
-        "damaged": {
-          "range": "1-33 WOUNDS REMAINING",
-          "description": "While this model has 1-33 wounds remaining, subtract 15 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll."
-        }
+        "wargear": []
       },
-      "stats": [
+
+      "composition": ["1 Reaver Titan"],
+      "faction_id": "AT",
+      "factions": ["Adeptus Titanicus"],
+      "fluff": "Reaver Titans are vast god-machines possessed of truly devastating firepower. From the apocalypse missile launcher mounted on their carapace to their arm-mounted laser blaster, Reavers are more than capable of wiping out ground troops, their void shields and thick adamantine hulls nullifying all but the most piercing enemy strikes.",
+      "id": "ce0d2309-7035-5974-8965-58466f8f5ff1",
+      "imperialArmour": true,
+      "keywords": [
+        "Imperium",
+        "Reaver Titan",
+        "Titanic",
+        "Towering",
+        "Vehicle",
+        "Walker"
+      ],
+      "leader": "",
+      "loadout": "This model is equipped with: Reaver apocalypse launcher; Reaver gatling blaster; Reaver laser blaster; Reaver feet.",
+      "meleeWeapons": [
         {
-          "m": "10\"",
-          "t": "16",
-          "sv": "2+",
-          "w": "100",
-          "ld": "6+",
-          "oc": "30",
-          "name": "Warlord Titan"
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "8",
+              "damage": "4",
+              "keywords": [],
+              "name": "Reaver feet",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "12",
+              "damage": "6",
+              "keywords": [],
+              "name": "Reaver power fist – sweep",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "12"
+            },
+            {
+              "ap": "-4",
+              "attacks": "6",
+              "damage": "14",
+              "keywords": [],
+              "name": "Reaver power fist – strike",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "20"
+            }
+          ]
+        }
+      ],
+      "name": "Reaver Titan",
+      "points": [
+        {
+          "cost": "2200",
+          "models": "1"
         }
       ],
       "rangedWeapons": [
         {
           "profiles": [
             {
-              "name": "Apocalypse launcher",
-              "keywords": ["blast", "indirect fire"],
-              "range": "200\"",
-              "attacks": "20",
-              "skill": "3+",
-              "strength": "8",
-              "ap": "-2",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Ardex-defensor lascannon",
-              "keywords": [],
-              "range": "48\"",
-              "attacks": "1",
-              "skill": "3+",
-              "strength": "12",
-              "ap": "-3",
-              "damage": "D6+1"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Ardex-defensor mauler",
-              "keywords": [],
-              "range": "36\"",
-              "attacks": "6",
-              "skill": "3+",
-              "strength": "6",
-              "ap": "-2",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Arioch power claw",
-              "keywords": ["sustained hits 1"],
-              "range": "48\"",
-              "attacks": "20",
-              "skill": "3+",
-              "strength": "6",
               "ap": "-1",
-              "damage": "2"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Belicosa volcano cannon",
-              "keywords": ["blast"],
-              "range": "120\"",
-              "attacks": "D3+3",
-              "skill": "3+",
-              "strength": "32",
-              "ap": "-5",
-              "damage": "18"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Laser blaster",
-              "keywords": ["blast"],
-              "range": "72\"",
-              "attacks": "6",
-              "skill": "3+",
-              "strength": "16",
-              "ap": "-4",
-              "damage": "D6+3"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Macro gatling blaster",
-              "keywords": ["sustained hits 1"],
-              "range": "100\"",
-              "attacks": "30",
-              "skill": "3+",
-              "strength": "9",
-              "ap": "-2",
-              "damage": "3"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": "Mori quake cannon",
-              "keywords": ["blast", "ignores cover"],
-              "range": "280\"",
               "attacks": "3D6",
+              "damage": "2",
+              "keywords": ["blast", "indirect fire"],
+              "name": "Reaver apocalypse launcher",
+              "range": "200\"",
               "skill": "3+",
-              "strength": "16",
-              "ap": "-4",
-              "damage": "6"
+              "strength": "7"
             }
           ]
         },
         {
           "profiles": [
             {
-              "name": "Sunfury plasma annihilator – standard",
-              "keywords": ["blast"],
+              "ap": "-2",
+              "attacks": "12",
+              "damage": "3",
+              "keywords": ["sustained hits 1"],
+              "name": "Reaver gatling blaster",
               "range": "72\"",
-              "attacks": "2D6+6",
               "skill": "3+",
-              "strength": "10",
-              "ap": "-3",
-              "damage": "5"
-            },
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
             {
-              "name": "Sunfury plasma annihilator – supercharge",
-              "keywords": ["blast", "hazardous"],
-              "range": "72\"",
-              "attacks": "2D6+6",
-              "skill": "3+",
-              "strength": "12",
               "ap": "-3",
-              "damage": "8"
+              "attacks": "8",
+              "damage": "D6+2",
+              "keywords": ["blast"],
+              "name": "Reaver laser blaster",
+              "range": "72\"",
+              "skill": "3+",
+              "strength": "20"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "D6+2",
+              "damage": "6",
+              "keywords": ["blast", "melta 4"],
+              "name": "Reaver melta cannon",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "13"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-5",
+              "attacks": "D3+1",
+              "damage": "14",
+              "keywords": ["blast", "heavy"],
+              "name": "Reaver volcano cannon",
+              "range": "120\"",
+              "skill": "3+",
+              "strength": "24"
             }
           ]
         }
       ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "12\"",
+          "name": "Reaver Titan",
+          "oc": "20",
+
+          "sv": "2+",
+          "t": "14",
+          "w": "60"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "This model’s Reaver gatling blaster can be replaced with one of the following: ◦ 1 Reaver laser blaster ◦ 1 Reaver melta cannon ◦ 1 Reaver volcano cannon ◦ 1 Reaver power fist",
+        "This model’s Reaver laser blaster can be replaced with one of the following: ◦ 1 Reaver gatling blaster ◦ 1 Reaver melta cannon ◦ 1 Reaver volcano cannon"
+      ]
+    },
+    {
+      "abilities": {
+        "core": ["Deadly Demise D6+6"],
+        "damaged": {
+          "description": "While this model has 1-26 wounds remaining, subtract 10 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
+          "range": "1-26 WOUNDS REMAINING"
+        },
+        "faction": ["Super-heavy Walker"],
+        "invul": {
+          "info": "* Against ranged attacks only",
+
+          "value": "5+"
+        },
+        "other": [
+          {
+            "description": "Each time you target this model with a Stratagem, you must spend three times that Stratagem’s stated CP cost to do so.",
+            "name": "Striding Colossus"
+          },
+          {
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly Imperium model makes an attack that targets that enemy unit, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.",
+            "name": "Titanic Fire Support"
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+
+      "composition": ["1 Warbringer Nemesis Titan"],
+      "faction_id": "AT",
+      "factions": ["Adeptus Titanicus"],
+      "fluff": "The Warbringer Nemesis Titan is an immense war engine designed to destroy enemy Titan-class targets at range. Acting as a dedicated fire support platform, the Nemesis’ reinforced frontal plating allows it to weather most return fire with ease, while its defence batteries grant it ample protection from aerial attacks.",
+      "id": "3f573207-e437-525c-ac92-3c27ae59fcf7",
+      "imperialArmour": true,
+      "keywords": [
+        "Imperium",
+        "Titanic",
+        "Towering",
+        "Vehicle",
+        "Walker",
+        "Warbringer Nemesis Titan"
+      ],
+      "leader": "",
+      "loadout": "This model is equipped with: 2 anvillus defence batteries; 3 ardex-defensor maulers; Nemesis quake cannon; Reaver gatling blaster; Reaver laser blaster; Nemesis feet.",
       "meleeWeapons": [
         {
           "profiles": [
             {
-              "name": "Arioch power claw – strike",
-              "keywords": [],
-              "range": "Melee",
+              "ap": "-2",
               "attacks": "6",
-              "skill": "4+",
-              "strength": "20",
-              "ap": "-4",
-              "damage": "24"
-            },
-            {
-              "name": "Arioch power claw – sweep",
+              "damage": "4",
               "keywords": [],
+              "name": "Nemesis feet",
               "range": "Melee",
-              "attacks": "12",
               "skill": "4+",
-              "strength": "12",
-              "ap": "-3",
-              "damage": "8"
+              "strength": "12"
+            }
+          ]
+        }
+      ],
+      "name": "Warbringer Nemesis Titan",
+      "points": [
+        {
+          "cost": "2600",
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "8",
+              "damage": "2",
+              "keywords": ["anti-fly 4+"],
+              "name": "Anvillus defence battery",
+              "range": "72\"",
+              "skill": "3+",
+              "strength": "8"
             }
           ]
         },
         {
           "profiles": [
             {
-              "name": "Warlord feet",
-              "keywords": [],
-              "range": "Melee",
-              "attacks": "6",
-              "skill": "4+",
-              "strength": "12",
               "ap": "-2",
-              "damage": "4"
+              "attacks": "12",
+              "damage": "3",
+              "keywords": ["sustained hits 1"],
+              "name": "Reaver gatling blaster",
+              "range": "72\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "6",
+              "damage": "2",
+              "keywords": [],
+              "name": "Ardex-defensor mauler",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "8",
+              "damage": "D6+2",
+              "keywords": ["blast"],
+              "name": "Reaver laser blaster",
+              "range": "72\"",
+              "skill": "3+",
+              "strength": "20"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "D6+2",
+              "damage": "6",
+              "keywords": ["blast", "melta 4"],
+              "name": "Reaver melta cannon",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "13"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "D6+6",
+              "damage": "4",
+              "keywords": ["blast", "indirect fire"],
+              "name": "Nemesis quake cannon",
+              "range": "480\"",
+              "skill": "3+",
+              "strength": "16"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-5",
+              "attacks": "D3+1",
+              "damage": "14",
+              "keywords": ["blast", "heavy"],
+              "name": "Reaver volcano cannon",
+              "range": "120\"",
+              "skill": "3+",
+              "strength": "24"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-5",
+              "attacks": "D3+3",
+              "damage": "14",
+              "keywords": ["blast"],
+              "name": "Nemesis volcano cannon",
+              "range": "120\"",
+              "skill": "3+",
+              "strength": "24"
             }
           ]
         }
       ],
-      "keywords": [
-        "Vehicle",
-        "Walker",
-        "Titanic",
-        "Towering",
-        "Imperium",
-        "Warlord Titan"
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "12\"",
+          "name": "Warbringer Nemesis Titan",
+          "oc": "20",
+
+          "sv": "2+",
+          "t": "14",
+          "w": "80"
+        }
       ],
-      "factions": ["Adeptus Titanicus"]
+      "transport": "",
+      "wargear": [
+        "This model’s Nemesis quake cannon can be replaced with 1 Nemesis volcano cannon.",
+        "This model’s Reaver gatling blaster can be replaced with one of the following: ◦ 1 Reaver laser blaster ◦ 1 Reaver melta cannon ◦ 1 Reaver volcano cannon",
+        "This model’s Reaver laser blaster can be replaced with one of the following: ◦ 1 Reaver gatling blaster ◦ 1 Reaver melta cannon ◦ 1 Reaver volcano cannon"
+      ]
     }
   ],
-  "colours": {
-    "banner": "#092135",
-    "header": "#4b6262"
-  }
+  "id": "AT",
+  "is_subfaction": false,
+  "link": "https://game-datacards.eu",
+  "name": "Adeptus Titanicus",
+  "parent_id": ""
 }
