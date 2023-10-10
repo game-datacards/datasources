@@ -3,7 +3,7 @@ const getKeywords = (lines, searchText) => {
     if (line.includes(searchText)) {
       return line
         .substring(line.indexOf(searchText) + searchText.length)
-        .split(',')
+        .split(",")
         .map((val) => val.trim())
         .filter((val) => val);
     }
@@ -12,36 +12,56 @@ const getKeywords = (lines, searchText) => {
 };
 const getInvulValueFw = (lines) => {
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('INVULNERABLE SAVE')) {
-      return line.substring(0, line.indexOf('INVULNERABLE SAVE')).trim();
+    if (line.includes("INVULNERABLE SAVE")) {
+      return line.substring(0, line.indexOf("INVULNERABLE SAVE")).trim();
     }
   }
-  return '';
+  return "";
 };
 const getInvulValue = (lines) => {
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('INVULNERABLE SAVE *')) {
-      return line.substring(line.indexOf('INVULNERABLE SAVE *') + 1 + 'INVULNERABLE SAVE *'.length).trim();
+    if (line.includes("INVULNERABLE SAVE *")) {
+      return line
+        .substring(
+          line.indexOf("INVULNERABLE SAVE *") +
+            1 +
+            "INVULNERABLE SAVE *".length,
+        )
+        .trim();
     }
-    if (line.includes('INVULNERABLE SAVE')) {
-      return line.substring(line.indexOf('INVULNERABLE SAVE') + 1 + 'INVULNERABLE SAVE'.length).trim();
+    if (line.includes("INVULNERABLE SAVE")) {
+      return line
+        .substring(
+          line.indexOf("INVULNERABLE SAVE") + 1 + "INVULNERABLE SAVE".length,
+        )
+        .trim();
     }
   }
-  return '';
+  return "";
 };
 const getInvulInfoFw = (lines) => {
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('INVULNERABLE SAVE *')) {
-      return line.substring(line.indexOf('INVULNERABLE SAVE *') + 1 + 'INVULNERABLE SAVE *'.length).trim();
+    if (line.includes("INVULNERABLE SAVE *")) {
+      return line
+        .substring(
+          line.indexOf("INVULNERABLE SAVE *") +
+            1 +
+            "INVULNERABLE SAVE *".length,
+        )
+        .trim();
     }
-    if (line.includes('INVULNERABLE SAVE')) {
-      return line.substring(line.indexOf('INVULNERABLE SAVE') + 1 + 'INVULNERABLE SAVE'.length).trim();
+    if (line.includes("INVULNERABLE SAVE")) {
+      return line
+        .substring(
+          line.indexOf("INVULNERABLE SAVE") + 1 + "INVULNERABLE SAVE".length,
+        )
+        .trim();
     }
   }
-  return '';
+  return "";
 };
 const getInvulInfo = (lines) => {
-  let invulInfo = '';
+  let invulInfo = "";
   let startOfInfo = 0;
   for (const [index, line] of lines.entries()) {
     if (startOfInfo > 0) {
@@ -50,17 +70,17 @@ const getInvulInfo = (lines) => {
       if (textLine.length === 0) {
         continue;
       }
-      if (textLine.includes('FACTION KEYWORDS')) {
+      if (textLine.includes("FACTION KEYWORDS")) {
         break;
       }
 
-      invulInfo = invulInfo + ' ' + textLine.trim();
+      invulInfo = invulInfo + " " + textLine.trim();
     }
-    if (line.includes('INVULNERABLE SAVE*')) {
-      startOfInfo = lines[index + 1].indexOf('*');
+    if (line.includes("INVULNERABLE SAVE*")) {
+      startOfInfo = lines[index + 1].indexOf("*");
     }
-    if (line.includes('INVULNERABLE SAVE *')) {
-      startOfInfo = lines[index + 1].indexOf('*');
+    if (line.includes("INVULNERABLE SAVE *")) {
+      startOfInfo = lines[index + 1].indexOf("*");
     }
   }
 
@@ -68,7 +88,7 @@ const getInvulInfo = (lines) => {
 };
 
 const getFactionName = (lines) => {
-  let factionName = '';
+  let factionName = "";
   let startOfFaction = 0;
   for (const [_index, line] of lines.entries()) {
     if (startOfFaction > 0) {
@@ -78,34 +98,36 @@ const getFactionName = (lines) => {
         continue;
       }
 
-      factionName = factionName + ' ' + factionLine.trim();
+      factionName = factionName + " " + factionLine.trim();
     }
-    if (line.includes('FACTION KEYWORDS:')) {
-      startOfFaction = line.indexOf('FACTION KEYWORDS:');
+    if (line.includes("FACTION KEYWORDS:")) {
+      startOfFaction = line.indexOf("FACTION KEYWORDS:");
     }
   }
 
   return factionName
     .trim()
-    .split(',')
+    .split(",")
     .map((faction) => faction.trim());
 };
 
 const getUnitComposition = (lines) => {
-  let value = '';
+  let value = "";
   let startOfBlock = 0;
   for (const [_index, line] of lines.entries()) {
     if (startOfBlock > 0) {
       let textLine = line.substring(startOfBlock).trim();
 
       if (
-        textLine.includes('LEADER') ||
-        textLine.includes('FACTION KEYWORDS') ||
-        textLine.includes('TRANSPORT') ||
-        textLine.includes('equipped with') ||
-        textLine.includes('The Master of Ordnance and Officer of the Fleet are both') ||
-        textLine.includes('Every Corsair Voidscarred') ||
-        textLine.includes('CASSIUS')
+        textLine.includes("LEADER") ||
+        textLine.includes("FACTION KEYWORDS") ||
+        textLine.includes("TRANSPORT") ||
+        textLine.includes("equipped with") ||
+        textLine.includes(
+          "The Master of Ordnance and Officer of the Fleet are both",
+        ) ||
+        textLine.includes("Every Corsair Voidscarred") ||
+        textLine.includes("CASSIUS")
       ) {
         break;
       }
@@ -114,36 +136,36 @@ const getUnitComposition = (lines) => {
         continue;
       }
       if (textLine.trim().length > 0) {
-        value = value + ' ' + textLine.trim();
+        value = value + " " + textLine.trim();
       }
     }
-    if (line.includes('UNIT COMPOSITION')) {
-      startOfBlock = line.indexOf('UNIT COMPOSITION');
+    if (line.includes("UNIT COMPOSITION")) {
+      startOfBlock = line.indexOf("UNIT COMPOSITION");
     }
   }
 
   return value
-    .split('■')
+    .split("■")
     .map((unit) => unit.trim())
     .filter((unit) => unit);
 };
 
 const getUnitFluff = (lines) => {
   textLines = lines.slice(2);
-  let value = '';
+  let value = "";
 
   for (const [_index, line] of textLines.entries()) {
     let textLine = line;
 
     if (
-      textLine.includes('WARGEAR OPTIONS') ||
-      textLine.includes('RANGED WEAPONS') ||
-      textLine.includes('UNIT OPTIONS')
+      textLine.includes("WARGEAR OPTIONS") ||
+      textLine.includes("RANGED WEAPONS") ||
+      textLine.includes("UNIT OPTIONS")
     ) {
       break;
     }
 
-    if (textLine.replaceAll(' ', '').includes('WARHAMMERLEGENDS')) {
+    if (textLine.replaceAll(" ", "").includes("WARHAMMERLEGENDS")) {
       continue;
     }
 
@@ -151,7 +173,7 @@ const getUnitFluff = (lines) => {
       continue;
     }
     if (textLine.trim().length > 0) {
-      value = value + ' ' + textLine.trim();
+      value = value + " " + textLine.trim();
     }
   }
 
@@ -160,62 +182,62 @@ const getUnitFluff = (lines) => {
 
 const getUnitLoadout = (lines) => {
   const keywords = [
-    'TANK COMMANDER',
-    'SUPREME COMMANDER',
-    'CRIMSON FISTS',
-    'SERVITOR RETINUE',
-    'HUNTER ORGANISM',
-    'LAST SURVIVOR',
-    'ATTACHED UNIT',
-    'TYCHO',
-    'DEATH COMPANY',
-    'FLESH TEARERS',
-    'LOGAN GRIMNAR',
-    'MASTER OF MISCHIEF',
-    'FORCE OF UNTAMED DESTRUCTION',
-    'WOLFKIN',
-    'LEADER',
-    'FACTION KEYWORDS',
-    'TRANSPORT',
-    'CASSIUS',
-    'AHRIMAN',
-    'EMPEROR’S CHILDREN',
-    'ATTACHÉS',
-    'LONER',
-    'This unit can have up to two Leader units attached',
-    'BODYGUARD',
-    'ENSLAVED STAR GOD',
-    'DEPLOYMENT',
-    'CRYPTEK RETINUE',
-    'TRIARCHAL MENHIRS',
-    'PATH OF DAMNATION',
-    'TROUPE MASTER',
-    'TEMPESTOR PRIME',
-    'JETBIKE OUTRIDERS',
-    'LIONS OF THE EMPEROR',
-    'CUSTODIAN GUARD',
-    'JUMP PACKS',
-    'SPEED FREEKS MOB',
-    'COMPACT',
-    'SECUTARII',
-    'LOYAL PROTECTOR',
-    'ARTILLERY TEAM',
-    'CULT OF DESTRUCTION',
-    'SERVANTS OF THE ABYSS',
-    'HEAVY WEAPONS TEAM',
-    'OGRYNS',
-    'DAEMONIC ALLEGIANCE',
+    "TANK COMMANDER",
+    "SUPREME COMMANDER",
+    "CRIMSON FISTS",
+    "SERVITOR RETINUE",
+    "HUNTER ORGANISM",
+    "LAST SURVIVOR",
+    "ATTACHED UNIT",
+    "TYCHO",
+    "DEATH COMPANY",
+    "FLESH TEARERS",
+    "LOGAN GRIMNAR",
+    "MASTER OF MISCHIEF",
+    "FORCE OF UNTAMED DESTRUCTION",
+    "WOLFKIN",
+    "LEADER",
+    "FACTION KEYWORDS",
+    "TRANSPORT",
+    "CASSIUS",
+    "AHRIMAN",
+    "EMPEROR’S CHILDREN",
+    "ATTACHÉS",
+    "LONER",
+    "This unit can have up to two Leader units attached",
+    "BODYGUARD",
+    "ENSLAVED STAR GOD",
+    "DEPLOYMENT",
+    "CRYPTEK RETINUE",
+    "TRIARCHAL MENHIRS",
+    "PATH OF DAMNATION",
+    "TROUPE MASTER",
+    "TEMPESTOR PRIME",
+    "JETBIKE OUTRIDERS",
+    "LIONS OF THE EMPEROR",
+    "CUSTODIAN GUARD",
+    "JUMP PACKS",
+    "SPEED FREEKS MOB",
+    "COMPACT",
+    "SECUTARII",
+    "LOYAL PROTECTOR",
+    "ARTILLERY TEAM",
+    "CULT OF DESTRUCTION",
+    "SERVANTS OF THE ABYSS",
+    "HEAVY WEAPONS TEAM",
+    "OGRYNS",
+    "DAEMONIC ALLEGIANCE",
     "GRANDFATHER'S BLESSING",
-    'POSSESSED',
-    'SPEED FREEKS',
-    'BIG GUNZ',
-    'HONOUR GUARD OF MACRAGGE',
-    'HORRORS ARE PINK',
-    'UNALIGNED FORCES',
-    'MIGHTY EDIFICE',
+    "POSSESSED",
+    "SPEED FREEKS",
+    "BIG GUNZ",
+    "HONOUR GUARD OF MACRAGGE",
+    "HORRORS ARE PINK",
+    "UNALIGNED FORCES",
+    "MIGHTY EDIFICE",
   ];
 
-  let value = '';
+  let value = "";
   let startOfBlock = 0;
   let startOfEquipment = false;
   for (const [_index, line] of lines.slice(2).entries()) {
@@ -224,9 +246,11 @@ const getUnitLoadout = (lines) => {
     }
 
     if (
-      line.substring(startOfBlock).includes('equipped with:') ||
-      line.substring(startOfBlock).includes('The Master of Ordnance and Officer of the Fleet are both') ||
-      line.substring(startOfBlock).includes('Every Corsair Voidscarred')
+      line.substring(startOfBlock).includes("equipped with:") ||
+      line
+        .substring(startOfBlock)
+        .includes("The Master of Ordnance and Officer of the Fleet are both") ||
+      line.substring(startOfBlock).includes("Every Corsair Voidscarred")
     ) {
       startOfEquipment = true;
     }
@@ -238,11 +262,11 @@ const getUnitLoadout = (lines) => {
         continue;
       }
       if (textLine.trim().length > 0) {
-        value = value + ' ' + textLine.trim();
+        value = value + " " + textLine.trim();
       }
     }
-    if (line.includes('UNIT COMPOSITION')) {
-      startOfBlock = line.indexOf('UNIT COMPOSITION') - 1;
+    if (line.includes("UNIT COMPOSITION")) {
+      startOfBlock = line.indexOf("UNIT COMPOSITION") - 1;
     }
   }
 
@@ -250,53 +274,56 @@ const getUnitLoadout = (lines) => {
 };
 
 const getLeader = (lines) => {
-  let value = '';
+  let value = "";
   let startOfBlock = 0;
   let startOfExtraBlock = 0;
   lines = lines.slice(2);
   for (const [_index, line] of lines.entries()) {
     if (
-      line.includes('FACTION KEYWORDS') ||
-      line.includes('TRANSPORT') ||
-      line.includes('SUPREME COMMANDER') ||
-      line.includes('TROUPE MASTER') ||
-      line.includes('TEMPESTOR PRIME') ||
-      line.includes('EMPEROR’S CHILDREN') ||
-      line.includes('MANIFESTATION OF DESTRUCTION') ||
-      line.includes('MASTER OF MISCHIEF') ||
-      line.includes('LOGAN GRIMNAR') ||
-      line.includes('FLESH TEARERS') ||
-      line.includes('TYCHO') ||
-      line.includes('CRIMSON FISTS') ||
-      line.includes('LIONS OF THE EMPEROR') ||
-      line.includes('JUMP PACKS') ||
-      line.includes('SPEED FREEKS MOB') ||
-      line.includes('COMPACT') ||
-      line.includes('SECUTARII') ||
-      line.includes('JETBIKE OUTRIDERS') ||
-      line.includes('LOYAL PROTECTOR') ||
-      line.includes('ARTILLERY TEAM') ||
-      line.includes('CULT OF DESTRUCTION') ||
-      line.includes('SERVANTS OF THE ABYSS') ||
-      line.includes('HEAVY WEAPONS TEAM') ||
-      line.includes('OGRYNS') ||
-      line.includes('DAEMONIC ALLEGIANCE') ||
+      line.includes("FACTION KEYWORDS") ||
+      line.includes("TRANSPORT") ||
+      line.includes("SUPREME COMMANDER") ||
+      line.includes("TROUPE MASTER") ||
+      line.includes("TEMPESTOR PRIME") ||
+      line.includes("EMPEROR’S CHILDREN") ||
+      line.includes("MANIFESTATION OF DESTRUCTION") ||
+      line.includes("MASTER OF MISCHIEF") ||
+      line.includes("LOGAN GRIMNAR") ||
+      line.includes("FLESH TEARERS") ||
+      line.includes("TYCHO") ||
+      line.includes("CRIMSON FISTS") ||
+      line.includes("LIONS OF THE EMPEROR") ||
+      line.includes("JUMP PACKS") ||
+      line.includes("SPEED FREEKS MOB") ||
+      line.includes("COMPACT") ||
+      line.includes("SECUTARII") ||
+      line.includes("JETBIKE OUTRIDERS") ||
+      line.includes("LOYAL PROTECTOR") ||
+      line.includes("ARTILLERY TEAM") ||
+      line.includes("CULT OF DESTRUCTION") ||
+      line.includes("SERVANTS OF THE ABYSS") ||
+      line.includes("HEAVY WEAPONS TEAM") ||
+      line.includes("OGRYNS") ||
+      line.includes("DAEMONIC ALLEGIANCE") ||
       line.includes("GRANDFATHER'S BLESSING") ||
-      line.includes('POSSESSED') ||
-      line.includes('BIG GUNZ') ||
-      line.includes('UNALIGNED FORCES') ||
-      line.includes('MIGHTY EDIFICE') ||
-      line.includes('SPEED FREEKS') ||
-      line.includes('HONOUR GUARD OF MACRAGGE') ||
-      line.includes('AHRIMAN')
+      line.includes("POSSESSED") ||
+      line.includes("BIG GUNZ") ||
+      line.includes("UNALIGNED FORCES") ||
+      line.includes("MIGHTY EDIFICE") ||
+      line.includes("SPEED FREEKS") ||
+      line.includes("HONOUR GUARD OF MACRAGGE") ||
+      line.includes("AHRIMAN")
     ) {
       break;
     }
-    if (startOfExtraBlock > 0 && line.includes('This unit can have up to two Leader')) {
-      startOfBlock = line.indexOf('This unit can have up to two Leader');
+    if (
+      startOfExtraBlock > 0 &&
+      line.includes("This unit can have up to two Leader")
+    ) {
+      startOfBlock = line.indexOf("This unit can have up to two Leader");
     }
-    if (line.includes('UNIT COMPOSITION')) {
-      startOfExtraBlock = line.indexOf('UNIT COMPOSITION') - 1;
+    if (line.includes("UNIT COMPOSITION")) {
+      startOfExtraBlock = line.indexOf("UNIT COMPOSITION") - 1;
     }
     if (startOfBlock > 0) {
       let textLine = line.substring(startOfBlock).trim();
@@ -306,12 +333,12 @@ const getLeader = (lines) => {
       }
 
       if (textLine.trim().length > 0) {
-        value = value + ' ' + textLine.trim();
+        value = value + " " + textLine.trim();
       }
     }
 
-    if (startOfExtraBlock > 0 && line.includes('LEADER')) {
-      startOfBlock = line.indexOf('LEADER');
+    if (startOfExtraBlock > 0 && line.includes("LEADER")) {
+      startOfBlock = line.indexOf("LEADER");
     }
   }
 
@@ -319,74 +346,89 @@ const getLeader = (lines) => {
 };
 
 const getWargear = (lines) => {
-  let value = '';
+  let value = "";
   let startOfBlock = 0;
   let endOfBlock = 0;
   let multiColumn = false;
   let columnStart = 0;
-  let secondColumnValue = '';
+  let secondColumnValue = "";
 
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('FACTION KEYWORDS') || line.includes('KEYWORDS –') || line.includes('MIGHTY EDIFICE')) {
+    if (
+      line.includes("FACTION KEYWORDS") ||
+      line.includes("KEYWORDS –") ||
+      line.includes("MIGHTY EDIFICE")
+    ) {
       break;
     }
     if (startOfBlock > 0) {
       let textLine = line.substring(startOfBlock, endOfBlock).trim();
 
       if (
-        textLine.includes('ATTACHED UNIT') ||
-        textLine.includes('DAEMONIC ALLEGIANCE') ||
-        textLine.includes('TRANSPORT')
+        textLine.includes("ATTACHED UNIT") ||
+        textLine.includes("DAEMONIC ALLEGIANCE") ||
+        textLine.includes("TRANSPORT")
       ) {
         break;
       }
       if (textLine.length === 0) {
         continue;
       }
-      let count = countSubstringOccurrences(textLine, '■');
+      let count = countSubstringOccurrences(textLine, "■");
       if (count > 1) {
         multiColumn = true;
-        columnStart = textLine.lastIndexOf('■');
+        columnStart = textLine.lastIndexOf("■");
       }
       if (multiColumn) {
-        value = value + ' ' + line.substring(startOfBlock, endOfBlock).substring(0, columnStart).trim();
+        value =
+          value +
+          " " +
+          line
+            .substring(startOfBlock, endOfBlock)
+            .substring(0, columnStart)
+            .trim();
         secondColumnValue =
-          secondColumnValue + ' ' + line.substring(startOfBlock, endOfBlock).substring(columnStart, endOfBlock).trim();
+          secondColumnValue +
+          " " +
+          line
+            .substring(startOfBlock, endOfBlock)
+            .substring(columnStart, endOfBlock)
+            .trim();
       } else {
-        value = value + ' ' + textLine;
+        value = value + " " + textLine;
       }
     }
-    if (line.includes('WARGEAR OPTIONS')) {
-      startOfBlock = line.indexOf('WARGEAR OPTIONS');
-      endOfBlock = line.indexOf('UNIT COMPOSITION') - startOfBlock;
+    if (line.includes("WARGEAR OPTIONS")) {
+      startOfBlock = line.indexOf("WARGEAR OPTIONS");
+      endOfBlock = line.indexOf("UNIT COMPOSITION") - startOfBlock;
       continue;
     }
-    if (line.includes('WARGEAR')) {
-      startOfBlock = line.indexOf('WARGEAR');
-      endOfBlock = line.indexOf('UNIT COMPOSITION') - startOfBlock;
+    if (line.includes("WARGEAR")) {
+      startOfBlock = line.indexOf("WARGEAR");
+      endOfBlock = line.indexOf("UNIT COMPOSITION") - startOfBlock;
     }
   }
 
   const fullGear = value.trim() + secondColumnValue.trim();
   return fullGear
-    .split('■')
+    .split("■")
     .map((gear) => gear.trim())
     .filter((gear) => gear);
 };
 
 const getTransport = (lines) => {
-  let value = '';
+  let value = "";
   let startOfBlock = 0;
   let endOfBlock = 0;
 
   for (const [_index, line] of lines.entries()) {
-    if (line.includes('FACTION KEYWORDS')) {
+    if (line.includes("FACTION KEYWORDS")) {
       break;
     }
     if (
-      line.includes('Thunderhawk Transporter') ||
-      line.includes('THUNDERHAWK TRANSPORTER') ||
-      line.includes('GORGON HEAVY TRANSPORT')
+      line.includes("Thunderhawk Transporter") ||
+      line.includes("THUNDERHAWK TRANSPORTER") ||
+      line.includes("GORGON HEAVY TRANSPORT")
     ) {
       continue;
     }
@@ -397,19 +439,19 @@ const getTransport = (lines) => {
       } else {
         textLine = line.substring(startOfBlock).trim();
       }
-      if(textLine.includes("MIGHTY EDIFICE")) {
+      if (textLine.includes("MIGHTY EDIFICE")) {
         break;
       }
       if (textLine.length === 0) {
         continue;
       }
-      value = value + ' ' + textLine;
+      value = value + " " + textLine;
     }
-    if (line.includes('TRANSPORT')) {
-      startOfBlock = line.indexOf('TRANSPORT');
+    if (line.includes("TRANSPORT")) {
+      startOfBlock = line.indexOf("TRANSPORT");
     }
-    if (line.includes('UNIT COMPOSITION')) {
-      endOfBlock = line.indexOf('UNIT COMPOSITION');
+    if (line.includes("UNIT COMPOSITION")) {
+      endOfBlock = line.indexOf("UNIT COMPOSITION");
     }
   }
 
@@ -437,7 +479,11 @@ const getStartOfBlockList = (lines, blockList) => {
 
 const getWeaponEndline = (lines) => {
   for (const [index, line] of lines.entries()) {
-    if (line.includes('KEYWORDS:') || line.includes('KEYWORDS –') || line.includes('Before selecting targets')) {
+    if (
+      line.includes("KEYWORDS:") ||
+      line.includes("KEYWORDS –") ||
+      line.includes("Before selecting targets")
+    ) {
       return index;
     }
   }
@@ -447,7 +493,11 @@ const getWeaponEndline = (lines) => {
 const getStartOfWeaponsBlock = (lines, block) => {
   for (const [index, line] of lines.entries()) {
     if (line.includes(block)) {
-      return { line: index, pos: line.indexOf('RANGE '), endLine: lines.length };
+      return {
+        line: index,
+        pos: line.indexOf("RANGE "),
+        endLine: lines.length,
+      };
     }
   }
   return { line: 0, pos: 0 };
@@ -466,183 +516,211 @@ const getUnitKeywords = (lines, startOfAbilities) => {
   for (const [index, l] of lines.entries()) {
     const line = l.substring(0, startOfAbilities.pos);
 
-    if (line.includes('KEYWORDS:')) {
-      let keyWordsLine = line.substring(line.indexOf('KEYWORDS:') + 'KEYWORDS:'.length).trim();
-      if (keyWordsLine.substring(keyWordsLine.length - 1) === ',') {
-        keyWordsLine =
-          keyWordsLine + lines[index + 1].substring(line.indexOf('KEYWORDS:') + 1, startOfAbilities.pos).trim();
-      }
-      return keyWordsLine.split(',').map((val) => val.trim().replace('\x07', ''));
-    }
-    if (line.includes('KEYWORDS – ALL MODELS:')) {
-      let keyWordsLine;
-      keyWordsLine = line.substring(line.indexOf('KEYWORDS – ALL MODELS:') + 'KEYWORDS – ALL MODELS:'.length).trim();
-
-      if (
-        keyWordsLine.substring(keyWordsLine.length - 1) === ',' ||
-        keyWordsLine.substring(keyWordsLine.length - 1) === '|' ||
-        keyWordsLine.substring(keyWordsLine.length - 1) === '–'
-      ) {
+    if (line.includes("KEYWORDS:")) {
+      let keyWordsLine = line
+        .substring(line.indexOf("KEYWORDS:") + "KEYWORDS:".length)
+        .trim();
+      if (keyWordsLine.substring(keyWordsLine.length - 1) === ",") {
         keyWordsLine =
           keyWordsLine +
-          lines[index + 1].substring(line.indexOf('KEYWORDS – ALL MODELS:'), startOfAbilities.pos).trim();
-
-        keyWordsLine = 'ALL MODELS: ' + keyWordsLine;
+          lines[index + 1]
+            .substring(line.indexOf("KEYWORDS:") + 1, startOfAbilities.pos)
+            .trim();
       }
-
-      if (keyWordsLine.includes('|')) {
-        const multiModelSplit = keyWordsLine.split('|').map((line) => {
-          const lines = line.split(':');
-          if (lines.length === 1) {
-            return lines;
-          }
-
-          return [lines[0] + ':', ...lines.slice(1)];
-        });
-        keyWordsLine = multiModelSplit.join(',');
-      }
-      if (keyWordsLine.includes('–')) {
-        const multiModelSplit = keyWordsLine.split('–').map((line) => {
-          const lines = line.split(':');
-          if (lines.length === 1) {
-            return lines;
-          }
-
-          return [lines[0] + ':', ...lines.slice(1)];
-        });
-        keyWordsLine = multiModelSplit.join(',');
-      }
-
-      return keyWordsLine.split(',').map((val) => val.trim().replace('\x07', ''));
+      return keyWordsLine
+        .split(",")
+        .map((val) => val.trim().replace("\x07", ""));
     }
-    if (line.includes('KEYWORDS –')) {
+    if (line.includes("KEYWORDS – ALL MODELS:")) {
       let keyWordsLine;
-      keyWordsLine = lines[index + 1]
+      keyWordsLine = line
         .substring(
-          lines[index + 1].indexOf('ALL MODELS:') + 'ALL MODELS:'.length,
-          startOfAbilities.pos - 'ALL MODELS:'.length
+          line.indexOf("KEYWORDS – ALL MODELS:") +
+            "KEYWORDS – ALL MODELS:".length,
         )
         .trim();
 
       if (
-        keyWordsLine.substring(keyWordsLine.length - 1) === ',' ||
-        keyWordsLine.substring(keyWordsLine.length - 1) === '|' ||
-        keyWordsLine.substring(keyWordsLine.length - 1) === '–'
+        keyWordsLine.substring(keyWordsLine.length - 1) === "," ||
+        keyWordsLine.substring(keyWordsLine.length - 1) === "|" ||
+        keyWordsLine.substring(keyWordsLine.length - 1) === "–"
       ) {
-        keyWordsLine = keyWordsLine + lines[index + 2].substring(0, startOfAbilities.pos).trim();
-        keyWordsLine = 'ALL MODELS: ' + keyWordsLine;
+        keyWordsLine =
+          keyWordsLine +
+          lines[index + 1]
+            .substring(
+              line.indexOf("KEYWORDS – ALL MODELS:"),
+              startOfAbilities.pos,
+            )
+            .trim();
+
+        keyWordsLine = "ALL MODELS: " + keyWordsLine;
       }
 
-      if (keyWordsLine.includes('|')) {
-        const multiModelSplit = keyWordsLine.split('|').map((tempLine) => {
-          const tempLines = tempLine.split(':');
+      if (keyWordsLine.includes("|")) {
+        const multiModelSplit = keyWordsLine.split("|").map((line) => {
+          const lines = line.split(":");
+          if (lines.length === 1) {
+            return lines;
+          }
+
+          return [lines[0] + ":", ...lines.slice(1)];
+        });
+        keyWordsLine = multiModelSplit.join(",");
+      }
+      if (keyWordsLine.includes("–")) {
+        const multiModelSplit = keyWordsLine.split("–").map((line) => {
+          const lines = line.split(":");
+          if (lines.length === 1) {
+            return lines;
+          }
+
+          return [lines[0] + ":", ...lines.slice(1)];
+        });
+        keyWordsLine = multiModelSplit.join(",");
+      }
+
+      return keyWordsLine
+        .split(",")
+        .map((val) => val.trim().replace("\x07", ""));
+    }
+    if (line.includes("KEYWORDS –")) {
+      let keyWordsLine;
+      keyWordsLine = lines[index + 1]
+        .substring(
+          lines[index + 1].indexOf("ALL MODELS:") + "ALL MODELS:".length,
+          startOfAbilities.pos - "ALL MODELS:".length,
+        )
+        .trim();
+
+      if (
+        keyWordsLine.substring(keyWordsLine.length - 1) === "," ||
+        keyWordsLine.substring(keyWordsLine.length - 1) === "|" ||
+        keyWordsLine.substring(keyWordsLine.length - 1) === "–"
+      ) {
+        keyWordsLine =
+          keyWordsLine +
+          lines[index + 2].substring(0, startOfAbilities.pos).trim();
+        keyWordsLine = "ALL MODELS: " + keyWordsLine;
+      }
+
+      if (keyWordsLine.includes("|")) {
+        const multiModelSplit = keyWordsLine.split("|").map((tempLine) => {
+          const tempLines = tempLine.split(":");
           if (tempLines.length === 1) {
             return tempLines;
           }
 
-          return [tempLines[0] + ':', ...tempLines.slice(1)];
+          return [tempLines[0] + ":", ...tempLines.slice(1)];
         });
-        keyWordsLine = multiModelSplit.join(',');
+        keyWordsLine = multiModelSplit.join(",");
       }
-      if (keyWordsLine.includes('–')) {
-        const multiModelSplit = keyWordsLine.split('–').map((tempLine) => {
-          const tempLines = tempLine.split(':');
+      if (keyWordsLine.includes("–")) {
+        const multiModelSplit = keyWordsLine.split("–").map((tempLine) => {
+          const tempLines = tempLine.split(":");
           if (tempLines.length === 1) {
             return tempLines;
           }
 
-          return [tempLines[0] + ':', ...tempLines.slice(1)];
+          return [tempLines[0] + ":", ...tempLines.slice(1)];
         });
-        keyWordsLine = multiModelSplit.join(',');
+        keyWordsLine = multiModelSplit.join(",");
       }
 
-      return keyWordsLine.split(',').map((val) => val.trim().replace('\x07', ''));
+      return keyWordsLine
+        .split(",")
+        .map((val) => val.trim().replace("\x07", ""));
     }
   }
   return [];
 };
 function countSubstringOccurrences(longString, substring) {
-  const regex = new RegExp(substring, 'g');
+  const regex = new RegExp(substring, "g");
   const matches = longString.match(regex);
   return matches ? matches.length : 0;
 }
 const getName = (name) => {
-  const nameArray = name.split(' ');
+  const nameArray = name.split(" ");
   for (var i = 0; i < nameArray.length; i++) {
     nameArray[i] = nameArray[i].charAt(0).toUpperCase() + nameArray[i].slice(1);
   }
-  return nameArray.join(' ');
+  return nameArray.join(" ");
 };
 const getSpecialAbilities = (lines) => {
   const specialAbilityKeywords = [
-    'TANK COMMANDER',
-    'SUPREME COMMANDER',
-    'CRIMSON FISTS',
-    'SERVITOR RETINUE',
-    'HUNTER ORGANISM',
-    'LAST SURVIVOR',
-    'ATTACHED UNIT',
-    'TYCHO',
-    'DEATH COMPANY',
-    'FLESH TEARERS',
-    'LOGAN GRIMNAR',
-    'MASTER OF MISCHIEF',
-    'FORCE OF UNTAMED DESTRUCTION',
-    'WOLFKIN',
-    'CASSIUS',
-    'AHRIMAN',
-    'EMPEROR’S CHILDREN',
-    'ATTACHÉS',
-    'LONER',
-    'BODYGUARD',
-    'ENSLAVED STAR GOD',
-    'DEPLOYMENT',
-    'CRYPTEK RETINUE',
-    'TRIARCHAL MENHIRS',
-    'PATH OF DAMNATION',
-    'TROUPE MASTER',
-    'ORDERS',
-    'TEMPESTOR PRIME',
-    'JETBIKE OUTRIDERS',
-    'LIONS OF THE EMPEROR',
-    'CUSTODIAN GUARD',
-    'JUMP PACKS',
-    'SPEED FREEKS MOB',
-    'COMPACT',
-    'SECUTARII',
-    'LOYAL PROTECTOR',
-    'ARTILLERY TEAM',
-    'CULT OF DESTRUCTION',
-    'SERVANTS OF THE ABYSS',
-    'HEAVY WEAPONS TEAM',
-    'DAEMONIC ALLEGIANCE',
+    "TANK COMMANDER",
+    "SUPREME COMMANDER",
+    "CRIMSON FISTS",
+    "SERVITOR RETINUE",
+    "HUNTER ORGANISM",
+    "LAST SURVIVOR",
+    "ATTACHED UNIT",
+    "TYCHO",
+    "DEATH COMPANY",
+    "FLESH TEARERS",
+    "LOGAN GRIMNAR",
+    "MASTER OF MISCHIEF",
+    "FORCE OF UNTAMED DESTRUCTION",
+    "WOLFKIN",
+    "CASSIUS",
+    "AHRIMAN",
+    "EMPEROR’S CHILDREN",
+    "ATTACHÉS",
+    "LONER",
+    "BODYGUARD",
+    "ENSLAVED STAR GOD",
+    "DEPLOYMENT",
+    "CRYPTEK RETINUE",
+    "TRIARCHAL MENHIRS",
+    "PATH OF DAMNATION",
+    "TROUPE MASTER",
+    "ORDERS",
+    "TEMPESTOR PRIME",
+    "JETBIKE OUTRIDERS",
+    "LIONS OF THE EMPEROR",
+    "CUSTODIAN GUARD",
+    "JUMP PACKS",
+    "SPEED FREEKS MOB",
+    "COMPACT",
+    "SECUTARII",
+    "LOYAL PROTECTOR",
+    "ARTILLERY TEAM",
+    "CULT OF DESTRUCTION",
+    "SERVANTS OF THE ABYSS",
+    "HEAVY WEAPONS TEAM",
+    "DAEMONIC ALLEGIANCE",
     "GRANDFATHER'S BLESSING",
-    'POSSESSED',
-    'BIG GUNZ',
-    'SPEED FREEKS',
-    'HONOUR GUARD OF MACRAGGE',
-    'OGRYNS',
-    'HORRORS ARE PINK',
-    'UNALIGNED FORCES',
-    'MIGHTY EDIFICE',
+    "POSSESSED",
+    "BIG GUNZ",
+    "SPEED FREEKS",
+    "HONOUR GUARD OF MACRAGGE",
+    "OGRYNS",
+    "HORRORS ARE PINK",
+    "UNALIGNED FORCES",
+    "MIGHTY EDIFICE",
   ];
 
-  let ability = { name: '', description: '' };
+  let ability = { name: "", description: "" };
   let abilities = [];
   let startOfBlock = 0;
   let startOfAbility = false;
   for (const [index, line] of lines.entries()) {
-    if (line.includes('FACTION KEYWORDS') || line.includes('* The profile for')) {
+    if (
+      line.includes("FACTION KEYWORDS") ||
+      line.includes("* The profile for")
+    ) {
       break;
     }
-    if (line.includes('ONCE THERE WAS ONE')) {
+    if (line.includes("ONCE THERE WAS ONE")) {
       continue;
     }
     if (startOfBlock > 0) {
-      if (line.substring(startOfBlock).includes('TRANSPORT')) {
+      if (line.substring(startOfBlock).includes("TRANSPORT")) {
         break;
       }
-      if (includesString(line.substring(startOfBlock), specialAbilityKeywords)) {
+      if (
+        includesString(line.substring(startOfBlock), specialAbilityKeywords)
+      ) {
         if (startOfAbility) {
           abilities.push({
             name: ability.name.trim(),
@@ -653,10 +731,10 @@ const getSpecialAbilities = (lines) => {
         }
         startOfAbility = true;
         ability.name = line.substring(startOfBlock);
-        if (line.includes('HORRORS ARE PINK')) {
+        if (line.includes("HORRORS ARE PINK")) {
           ability.name += lines[index + 1].substring(startOfBlock).trim();
         }
-        ability.description = '';
+        ability.description = "";
         continue;
       }
     }
@@ -667,11 +745,11 @@ const getSpecialAbilities = (lines) => {
         continue;
       }
       if (textLine.trim().length > 0) {
-        ability.description = ability.description + ' ' + textLine.trim();
+        ability.description = ability.description + " " + textLine.trim();
       }
     }
-    if (line.includes('UNIT COMPOSITION')) {
-      startOfBlock = line.indexOf('UNIT COMPOSITION') - 1;
+    if (line.includes("UNIT COMPOSITION")) {
+      startOfBlock = line.indexOf("UNIT COMPOSITION") - 1;
     }
   }
   if (startOfAbility) {
@@ -689,16 +767,26 @@ const getSpecialAbilities = (lines) => {
   return [];
 };
 
-const getPrimarchAbilities = (lines, blockStart, startOfAbilities, file = '') => {
+const getPrimarchAbilities = (
+  lines,
+  blockStart,
+  startOfAbilities,
+  file = "",
+) => {
   let primarchAbilities = [];
-  let primarchAbility = { name: '', showAbility: true, abilities: [] };
+  let primarchAbility = { name: "", showAbility: true, abilities: [] };
 
   if (blockStart.line > 0) {
     try {
-      primarchAbility.name = lines[blockStart.line].substring(blockStart.pos, startOfAbilities.pos).trim();
+      primarchAbility.name = lines[blockStart.line]
+        .substring(blockStart.pos, startOfAbilities.pos)
+        .trim();
 
       for (let index = blockStart.line + 1; index < lines.length; index++) {
-        if (lines[index].includes('KEYWORDS:') || lines[index].includes('Before selecting')) {
+        if (
+          lines[index].includes("KEYWORDS:") ||
+          lines[index].includes("Before selecting")
+        ) {
           break;
         }
 
@@ -707,10 +795,13 @@ const getPrimarchAbilities = (lines, blockStart, startOfAbilities, file = '') =>
         if (line.trim().length === 0) {
           continue;
         }
-        if (line.includes(':') && !line.includes('Fortifications from your army:')) {
+        if (
+          line.includes(":") &&
+          !line.includes("Fortifications from your army:")
+        ) {
           primarchAbility.abilities.push({
-            name: line.substring(0, line.indexOf(':')).trim(),
-            description: line.substring(line.indexOf(':') + 1).trim(),
+            name: line.substring(0, line.indexOf(":")).trim(),
+            description: line.substring(line.indexOf(":") + 1).trim(),
             showAbility: true,
             showDescription: true,
           });
@@ -718,19 +809,24 @@ const getPrimarchAbilities = (lines, blockStart, startOfAbilities, file = '') =>
           if (primarchAbility.abilities.length === 0) {
             primarchAbility.abilities.push({
               name: primarchAbility.name,
-              description: '',
+              description: "",
             });
           }
-          primarchAbility.abilities[primarchAbility.abilities.length - 1].description =
-            primarchAbility.abilities[primarchAbility.abilities.length - 1].description + ' ' + line.trim();
+          primarchAbility.abilities[
+            primarchAbility.abilities.length - 1
+          ].description =
+            primarchAbility.abilities[primarchAbility.abilities.length - 1]
+              .description +
+            " " +
+            line.trim();
         }
       }
     } catch (error) {
-      console.log('error', error);
+      console.log("error", error);
     }
   }
 
-  if (primarchAbility.name !== '') {
+  if (primarchAbility.name !== "") {
     primarchAbilities.push(primarchAbility);
   }
   return primarchAbilities;
@@ -740,14 +836,14 @@ const fixFactionKeywords = (unit) => {
   unit.abilities.faction = unit.abilities.faction
     .map((factionAbility) => {
       switch (factionAbility) {
-        case 'Assigned Agent':
-          return 'Assigned Agents';
+        case "Assigned Agent":
+          return "Assigned Agents";
           break;
-        case 'Dark Pact':
-          return 'Dark Pacts';
+        case "Dark Pact":
+          return "Dark Pacts";
           break;
-        case 'Leader':
-          unit.abilities.core.push('Leader');
+        case "Leader":
+          unit.abilities.core.push("Leader");
           return undefined;
         default:
           return factionAbility;
@@ -760,70 +856,70 @@ const fixFactionKeywords = (unit) => {
 };
 const getAlliedInfo = (factionId) => {
   switch (factionId) {
-    case 'AdM':
-    case 'AS':
-    case 'AC':
-    case 'AM':
-    case 'GK':
-    case 'SM':
+    case "AdM":
+    case "AS":
+    case "AC":
+    case "AM":
+    case "GK":
+    case "SM":
       return {
         is_subfaction: false,
-        parent_id: '',
-        allied_factions: ['AoI', 'QI'],
+        parent_id: "",
+        allied_factions: ["AoI", "QI"],
       };
       break;
-    case 'AoI':
+    case "AoI":
       return {
         is_subfaction: false,
-        parent_id: '',
-        allied_factions: ['QI'],
+        parent_id: "",
+        allied_factions: ["QI"],
       };
       break;
-    case 'QI':
+    case "QI":
       return {
         is_subfaction: false,
-        parent_id: '',
-        allied_factions: ['AoI'],
+        parent_id: "",
+        allied_factions: ["AoI"],
       };
       break;
-    case 'CHBT':
-    case 'CHBA':
-    case 'CHDA':
-    case 'CHDW':
+    case "CHBT":
+    case "CHBA":
+    case "CHDA":
+    case "CHDW":
       return {
         is_subfaction: true,
-        parent_id: 'SM',
-        parent_keyword: 'Adeptus Astartes',
-        allied_factions: ['AoI', 'QI'],
+        parent_id: "SM",
+        parent_keyword: "Adeptus Astartes",
+        allied_factions: ["AoI", "QI"],
       };
       break;
-    case 'CSM':
-    case 'DG':
-    case 'TS':
+    case "CSM":
+    case "DG":
+    case "TS":
       return {
         is_subfaction: false,
-        parent_id: '',
-        allied_factions: ['CD', 'QT'],
+        parent_id: "",
+        allied_factions: ["CD", "QT"],
       };
       break;
-    case 'CD':
+    case "CD":
       return {
         is_subfaction: false,
-        parent_id: '',
-        allied_factions: ['QT'],
+        parent_id: "",
+        allied_factions: ["QT"],
       };
       break;
-    case 'QT':
+    case "QT":
       return {
         is_subfaction: false,
-        parent_id: '',
-        allied_factions: ['CD'],
+        parent_id: "",
+        allied_factions: ["CD"],
       };
       break;
     default:
       return {
         is_subfaction: false,
-        parent_id: '',
+        parent_id: "",
       };
       break;
   }
@@ -831,13 +927,13 @@ const getAlliedInfo = (factionId) => {
 
 const checkForManualFixes = (unit) => {
   switch (unit.name) {
-    case 'Rubric Marines':
-      unit.abilities.factionDescription = '*Aspiring Sorcerer model only';
+    case "Rubric Marines":
+      unit.abilities.factionDescription = "*Aspiring Sorcerer model only";
       break;
-    case 'C’tan Shard Of The Nightbringer':
+    case "C’tan Shard Of The Nightbringer":
       unit.abilities.other = [
         {
-          name: 'Drain Life',
+          name: "Drain Life",
           description:
             'At the end of the Fight phase, roll one D6 for each enemy unit within 6" of this model: on a 4+, that enemy unit suffers D3 mortal wounds.',
           showAbility: true,
@@ -846,32 +942,38 @@ const checkForManualFixes = (unit) => {
         ...unit.abilities.other,
       ];
       break;
-    case 'Skathach Wraithknight':
+    case "Skathach Wraithknight":
       unit.abilities.wargear = {
-        name: 'Scattershield',
-        description: 'The bearer has a 4+ invulnerable save.',
+        name: "Scattershield",
+        description: "The bearer has a 4+ invulnerable save.",
         showAbility: true,
         showDescription: true,
       };
       break;
-    case 'Skull Altar':
-      unit.keywords = ['Fortification', 'Chaos', 'Daemon', 'Khorne', 'Skull Altar'];
+    case "Skull Altar":
+      unit.keywords = [
+        "Fortification",
+        "Chaos",
+        "Daemon",
+        "Khorne",
+        "Skull Altar",
+      ];
       break;
-    case 'Tiger Shark':
+    case "Tiger Shark":
       unit.rangedWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Burst cannon',
+              name: "Burst cannon",
               keywords: [],
               range: '18"',
-              attacks: '4',
-              skill: '4+',
-              strength: '5',
-              ap: '0',
-              damage: '1',
+              attacks: "4",
+              skill: "4+",
+              strength: "5",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -880,25 +982,25 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Ion cannon – standard',
-              keywords: ['blast'],
+              name: "Ion cannon – standard",
+              keywords: ["blast"],
               range: '60"',
-              attacks: 'D6+3',
-              skill: '4+',
-              strength: '7',
-              ap: '-1',
-              damage: '2',
+              attacks: "D6+3",
+              skill: "4+",
+              strength: "7",
+              ap: "-1",
+              damage: "2",
             },
             {
               active: true,
-              name: 'Ion cannon – overcharge',
-              keywords: ['blast', 'hazardous'],
+              name: "Ion cannon – overcharge",
+              keywords: ["blast", "hazardous"],
               range: '60"',
-              attacks: 'D6+3',
-              skill: '4+',
-              strength: '8',
-              ap: '-2',
-              damage: '3',
+              attacks: "D6+3",
+              skill: "4+",
+              strength: "8",
+              ap: "-2",
+              damage: "3",
             },
           ],
         },
@@ -907,14 +1009,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Missile pod',
+              name: "Missile pod",
               keywords: [],
               range: '30"',
-              attacks: '2',
-              skill: '4+',
-              strength: '7',
-              ap: '-1',
-              damage: '2',
+              attacks: "2",
+              skill: "4+",
+              strength: "7",
+              ap: "-1",
+              damage: "2",
             },
           ],
         },
@@ -923,14 +1025,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Seeker missile',
-              keywords: ['one shot'],
+              name: "Seeker missile",
+              keywords: ["one shot"],
               range: '48"',
-              attacks: '1',
-              skill: '4+',
-              strength: '14',
-              ap: '-3',
-              damage: 'D6+1',
+              attacks: "1",
+              skill: "4+",
+              strength: "14",
+              ap: "-3",
+              damage: "D6+1",
             },
           ],
         },
@@ -939,14 +1041,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Skyspear missile rack',
-              keywords: ['anti-fly 3+', 'blast'],
+              name: "Skyspear missile rack",
+              keywords: ["anti-fly 3+", "blast"],
               range: '72"',
-              attacks: 'D6+1',
-              skill: '4+',
-              strength: '6',
-              ap: '-1',
-              damage: '1',
+              attacks: "D6+1",
+              skill: "4+",
+              strength: "6",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -955,14 +1057,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Swiftstrike burst cannon',
+              name: "Swiftstrike burst cannon",
               keywords: [],
               range: '36"',
-              attacks: '16',
-              skill: '4+',
-              strength: '6',
-              ap: '-1',
-              damage: '1',
+              attacks: "16",
+              skill: "4+",
+              strength: "6",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -971,34 +1073,34 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Swiftstrike railgun',
-              keywords: ['devastating wounds'],
+              name: "Swiftstrike railgun",
+              keywords: ["devastating wounds"],
               range: '72"',
-              attacks: '1',
-              skill: '4+',
-              strength: '20',
-              ap: '-5',
-              damage: 'D6+6',
+              attacks: "1",
+              skill: "4+",
+              strength: "20",
+              ap: "-5",
+              damage: "D6+6",
             },
           ],
         },
       ];
       break;
-    case 'Manta':
+    case "Manta":
       unit.rangedWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Heavy rail cannon',
-              keywords: ['devastating wounds'],
+              name: "Heavy rail cannon",
+              keywords: ["devastating wounds"],
               range: '120"',
-              attacks: '1',
-              skill: '4+',
-              strength: '26',
-              ap: '-5',
-              damage: '12',
+              attacks: "1",
+              skill: "4+",
+              strength: "26",
+              ap: "-5",
+              damage: "12",
             },
           ],
         },
@@ -1007,25 +1109,25 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Ion cannon – standard',
-              keywords: ['blast'],
+              name: "Ion cannon – standard",
+              keywords: ["blast"],
               range: '60"',
-              attacks: 'D6+3',
-              skill: '4+',
-              strength: '7',
-              ap: '-1',
-              damage: '2',
+              attacks: "D6+3",
+              skill: "4+",
+              strength: "7",
+              ap: "-1",
+              damage: "2",
             },
             {
               active: true,
-              name: 'Ion cannon – overcharge',
-              keywords: ['blast', 'hazardous'],
+              name: "Ion cannon – overcharge",
+              keywords: ["blast", "hazardous"],
               range: '60"',
-              attacks: 'D6+3',
-              skill: '4+',
-              strength: '8',
-              ap: '-2',
-              damage: '3',
+              attacks: "D6+3",
+              skill: "4+",
+              strength: "8",
+              ap: "-2",
+              damage: "3",
             },
           ],
         },
@@ -1034,14 +1136,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Long-barrelled burst cannon array',
+              name: "Long-barrelled burst cannon array",
               keywords: [],
               range: '24"',
-              attacks: '32',
-              skill: '4+',
-              strength: '6',
-              ap: '-1',
-              damage: '1',
+              attacks: "32",
+              skill: "4+",
+              strength: "6",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -1050,14 +1152,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Missile pod',
+              name: "Missile pod",
               keywords: [],
               range: '30"',
-              attacks: '2',
-              skill: '4+',
-              strength: '7',
-              ap: '-1',
-              damage: '2',
+              attacks: "2",
+              skill: "4+",
+              strength: "7",
+              ap: "-1",
+              damage: "2",
             },
           ],
         },
@@ -1066,37 +1168,45 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Seeker missile',
-              keywords: ['one shot'],
+              name: "Seeker missile",
+              keywords: ["one shot"],
               range: '48"',
-              attacks: '1',
-              skill: '4+',
-              strength: '14',
-              ap: '-3',
-              damage: 'D6+1',
+              attacks: "1",
+              skill: "4+",
+              strength: "14",
+              ap: "-3",
+              damage: "D6+1",
             },
           ],
         },
       ];
       break;
-    case 'Aun’va':
-      unit.keywords = ['ALL MODELS:', 'Infantry', "AUN'VA:", 'Character', 'Epic Hero', 'Ethereal', "Aun'Va"];
+    case "Aun’va":
+      unit.keywords = [
+        "ALL MODELS:",
+        "Infantry",
+        "AUN'VA:",
+        "Character",
+        "Epic Hero",
+        "Ethereal",
+        "Aun'Va",
+      ];
       break;
-    case 'Space Wolves Venerable Dreadnought':
+    case "Space Wolves Venerable Dreadnought":
       unit.meleeWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Close combat weapon',
+              name: "Close combat weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '5',
-              skill: '3+',
-              strength: '6',
-              ap: '0',
-              damage: '1',
+              range: "Melee",
+              attacks: "5",
+              skill: "3+",
+              strength: "6",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1105,14 +1215,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Dreadnought combat weapon',
+              name: "Dreadnought combat weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '5',
-              skill: '3+',
-              strength: '12',
-              ap: '-2',
-              damage: '3',
+              range: "Melee",
+              attacks: "5",
+              skill: "3+",
+              strength: "12",
+              ap: "-2",
+              damage: "3",
             },
           ],
         },
@@ -1121,45 +1231,45 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Fenrisian great axe – strike',
+              name: "Fenrisian great axe – strike",
               keywords: [],
-              range: 'Melee',
-              attacks: '5',
-              skill: '3+',
-              strength: '10',
-              ap: '-2',
-              damage: 'D6+1',
+              range: "Melee",
+              attacks: "5",
+              skill: "3+",
+              strength: "10",
+              ap: "-2",
+              damage: "D6+1",
             },
             {
               active: true,
-              name: 'Fenrisian great axe – sweep',
+              name: "Fenrisian great axe – sweep",
               keywords: [],
-              range: 'Melee',
-              attacks: '10',
-              skill: '3+',
-              strength: '6',
-              ap: '-2',
-              damage: '1',
+              range: "Melee",
+              attacks: "10",
+              skill: "3+",
+              strength: "6",
+              ap: "-2",
+              damage: "1",
             },
           ],
         },
       ];
       break;
-    case 'Wolf Scouts':
+    case "Wolf Scouts":
       unit.meleeWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Astartes chainsword',
+              name: "Astartes chainsword",
               keywords: [],
-              range: 'Melee',
-              attacks: '4',
-              skill: '3+',
-              strength: '4',
-              ap: '-1',
-              damage: '1',
+              range: "Melee",
+              attacks: "4",
+              skill: "3+",
+              strength: "4",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -1168,14 +1278,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Close combat weapon',
+              name: "Close combat weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '2',
-              skill: '3+',
-              strength: '4',
-              ap: '0',
-              damage: '1',
+              range: "Melee",
+              attacks: "2",
+              skill: "3+",
+              strength: "4",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1184,14 +1294,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Combat knife',
+              name: "Combat knife",
               keywords: [],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '5',
-              ap: '0',
-              damage: '1',
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "5",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1200,14 +1310,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Power fist',
+              name: "Power fist",
               keywords: [],
-              range: 'Melee',
-              attacks: '2',
-              skill: '3+',
-              strength: '8',
-              ap: '-2',
-              damage: '2',
+              range: "Melee",
+              attacks: "2",
+              skill: "3+",
+              strength: "8",
+              ap: "-2",
+              damage: "2",
             },
           ],
         },
@@ -1216,14 +1326,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Power weapon',
+              name: "Power weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '5',
-              ap: '-2',
-              damage: '1',
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "5",
+              ap: "-2",
+              damage: "1",
             },
           ],
         },
@@ -1232,14 +1342,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Thunder hammer',
-              keywords: ['devastating wounds'],
-              range: 'Melee',
-              attacks: '2',
-              skill: '4+',
-              strength: '8',
-              ap: '-2',
-              damage: '2',
+              name: "Thunder hammer",
+              keywords: ["devastating wounds"],
+              range: "Melee",
+              attacks: "2",
+              skill: "4+",
+              strength: "8",
+              ap: "-2",
+              damage: "2",
             },
           ],
         },
@@ -1248,34 +1358,34 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Twin lightning claws',
-              keywords: ['twin-linked'],
-              range: 'Melee',
-              attacks: '4',
-              skill: '3+',
-              strength: '5',
-              ap: '-2',
-              damage: '1',
+              name: "Twin lightning claws",
+              keywords: ["twin-linked"],
+              range: "Melee",
+              attacks: "4",
+              skill: "3+",
+              strength: "5",
+              ap: "-2",
+              damage: "1",
             },
           ],
         },
       ];
       break;
-    case 'Long Fangs':
+    case "Long Fangs":
       unit.meleeWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Astartes chainsword',
+              name: "Astartes chainsword",
               keywords: [],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '4',
-              ap: '-1',
-              damage: '1',
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "4",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -1284,14 +1394,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Close combat weapon',
+              name: "Close combat weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '2',
-              skill: '3+',
-              strength: '4',
-              ap: '0',
-              damage: '1',
+              range: "Melee",
+              attacks: "2",
+              skill: "3+",
+              strength: "4",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1300,14 +1410,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Power fist',
+              name: "Power fist",
               keywords: [],
-              range: 'Melee',
-              attacks: '2',
-              skill: '3+',
-              strength: '8',
-              ap: '-2',
-              damage: '2',
+              range: "Melee",
+              attacks: "2",
+              skill: "3+",
+              strength: "8",
+              ap: "-2",
+              damage: "2",
             },
           ],
         },
@@ -1316,34 +1426,34 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Power weapon',
+              name: "Power weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '2',
-              skill: '3+',
-              strength: '5',
-              ap: '-2',
-              damage: '1',
+              range: "Melee",
+              attacks: "2",
+              skill: "3+",
+              strength: "5",
+              ap: "-2",
+              damage: "1",
             },
           ],
         },
       ];
       break;
-    case 'Hunta Rig':
+    case "Hunta Rig":
       unit.meleeWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Butcha boyz',
-              keywords: ['extra attacks', 'anti-monster 4+', 'anti-vehicle 4+'],
-              range: 'Melee',
-              attacks: '4',
-              skill: '3+',
-              strength: '5',
-              ap: '-1',
-              damage: '1',
+              name: "Butcha boyz",
+              keywords: ["extra attacks", "anti-monster 4+", "anti-vehicle 4+"],
+              range: "Melee",
+              attacks: "4",
+              skill: "3+",
+              strength: "5",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -1352,14 +1462,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Savage horns and hooves',
-              keywords: ['extra attacks', 'lance'],
-              range: 'Melee',
-              attacks: '4',
-              skill: '4+',
-              strength: '8',
-              ap: '-1',
-              damage: '3',
+              name: "Savage horns and hooves",
+              keywords: ["extra attacks", "lance"],
+              range: "Melee",
+              attacks: "4",
+              skill: "4+",
+              strength: "8",
+              ap: "-1",
+              damage: "3",
             },
           ],
         },
@@ -1368,54 +1478,54 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Saw blades',
+              name: "Saw blades",
               keywords: [],
-              range: 'Melee',
-              attacks: '6',
-              skill: '3+',
-              strength: '10',
-              ap: '-1',
-              damage: '2',
+              range: "Melee",
+              attacks: "6",
+              skill: "3+",
+              strength: "10",
+              ap: "-1",
+              damage: "2",
             },
           ],
         },
       ];
       break;
-    case 'Mek Gunz':
+    case "Mek Gunz":
       unit.meleeWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Grot crew',
+              name: "Grot crew",
               keywords: [],
-              range: 'Melee',
-              attacks: '6',
-              skill: '5+',
-              strength: '2',
-              ap: '0',
-              damage: '1',
+              range: "Melee",
+              attacks: "6",
+              skill: "5+",
+              strength: "2",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
       ];
       break;
-    case 'Razorwing Jetfighter':
+    case "Razorwing Jetfighter":
       unit.rangedWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Dark Lance',
+              name: "Dark Lance",
               keywords: [],
               range: '36"',
-              attacks: '1',
-              skill: '3+',
-              strength: '12',
-              ap: '-3',
-              damage: 'D6+2',
+              attacks: "1",
+              skill: "3+",
+              strength: "12",
+              ap: "-3",
+              damage: "D6+2",
             },
           ],
         },
@@ -1424,14 +1534,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Disintegrator',
+              name: "Disintegrator",
               keywords: [],
               range: '36"',
-              attacks: '3',
-              skill: '3+',
-              strength: '5',
-              ap: '-2',
-              damage: '2',
+              attacks: "3",
+              skill: "3+",
+              strength: "5",
+              ap: "-2",
+              damage: "2",
             },
           ],
         },
@@ -1440,36 +1550,36 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Razorwing missiles – monoscythe missiles',
-              keywords: ['blast'],
+              name: "Razorwing missiles – monoscythe missiles",
+              keywords: ["blast"],
               range: '48"',
-              attacks: 'D6',
-              skill: '3+',
-              strength: '6',
-              ap: '-1',
-              damage: '2',
+              attacks: "D6",
+              skill: "3+",
+              strength: "6",
+              ap: "-1",
+              damage: "2",
             },
             {
               active: true,
-              name: 'Razorwing missiles – nuerotoxin missiles',
-              keywords: ['anti-infantry 2+', 'blast'],
+              name: "Razorwing missiles – nuerotoxin missiles",
+              keywords: ["anti-infantry 2+", "blast"],
               range: '48"',
-              attacks: 'D6+3',
-              skill: '3+',
-              strength: '2',
-              ap: '0',
-              damage: '1',
+              attacks: "D6+3",
+              skill: "3+",
+              strength: "2",
+              ap: "0",
+              damage: "1",
             },
             {
               active: true,
-              name: 'Razorwing missiles – shatterfield missiles',
-              keywords: ['blast'],
+              name: "Razorwing missiles – shatterfield missiles",
+              keywords: ["blast"],
               range: '48"',
-              attacks: 'D6',
-              skill: '3+',
-              strength: '7',
-              ap: '-1',
-              damage: '1',
+              attacks: "D6",
+              skill: "3+",
+              strength: "7",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -1478,14 +1588,19 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Twin splinter rifle',
-              keywords: ['anti-infantry 3+', 'assault', 'rapid fire 1', 'twin-linked'],
+              name: "Twin splinter rifle",
+              keywords: [
+                "anti-infantry 3+",
+                "assault",
+                "rapid fire 1",
+                "twin-linked",
+              ],
               range: '24"',
-              attacks: '1',
-              skill: '3+',
-              strength: '2',
-              ap: '0',
-              damage: '1',
+              attacks: "1",
+              skill: "3+",
+              strength: "2",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1494,65 +1609,71 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Splinter cannon',
-              keywords: ['anti-infantry 3+', 'sustained hits 1'],
+              name: "Splinter cannon",
+              keywords: ["anti-infantry 3+", "sustained hits 1"],
               range: '36"',
-              attacks: '3',
-              skill: '3+',
-              strength: '3',
-              ap: '-1',
-              damage: '2',
+              attacks: "3",
+              skill: "3+",
+              strength: "3",
+              ap: "-1",
+              damage: "2",
             },
           ],
         },
       ];
       break;
-    case 'Incubi':
+    case "Incubi":
       unit.stats = [
         {
           m: '7"',
-          t: '3',
-          sv: '3+',
-          w: '1',
-          ld: '6+',
-          oc: '1',
-          name: 'Incubi',
+          t: "3",
+          sv: "3+",
+          w: "1",
+          ld: "6+",
+          oc: "1",
+          name: "Incubi",
           showDamagedMarker: false,
           showName: false,
           active: true,
         },
         {
           m: '7"',
-          t: '3',
-          sv: '3+',
-          w: '2',
-          ld: '6+',
-          oc: '1',
-          name: 'KLAIVEX',
+          t: "3",
+          sv: "3+",
+          w: "2",
+          ld: "6+",
+          oc: "1",
+          name: "KLAIVEX",
           showDamagedMarker: false,
           showName: true,
           active: true,
         },
       ];
       break;
-    case 'Feculent Gnarlmaw':
-      unit.keywords = ['Fortification', 'Chaos', 'Daemon', 'Nurgle', 'Feculent Gnarlmaw'];
+    case "Feculent Gnarlmaw":
+      unit.keywords = [
+        "Fortification",
+        "Chaos",
+        "Daemon",
+        "Nurgle",
+        "Feculent Gnarlmaw",
+      ];
       break;
-    case 'Great Unclean One':
+    case "Great Unclean One":
       unit.meleeWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Bileblade',
-              keywords: ['extra attacks', 'lethal hits'],
-              range: 'Melee',
-              attacks: '3',
-              skill: '2+',
-              strength: '6',
-              ap: '-2',
-              damage: '2',
+              name: "Bileblade",
+              keywords: ["extra attacks", "lethal hits"],
+              range: "Melee",
+              attacks: "3",
+              skill: "2+",
+              strength: "6",
+              ap: "-2",
+              damage: "2",
             },
           ],
         },
@@ -1561,25 +1682,25 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Bilesword – strike',
-              keywords: ['lethal hits'],
-              range: 'Melee',
-              attacks: '6',
-              skill: '2+',
-              strength: '8',
-              ap: '-2',
-              damage: 'D6',
+              name: "Bilesword – strike",
+              keywords: ["lethal hits"],
+              range: "Melee",
+              attacks: "6",
+              skill: "2+",
+              strength: "8",
+              ap: "-2",
+              damage: "D6",
             },
             {
               active: true,
-              name: 'Bilesword – sweep',
-              keywords: ['lethal hits'],
-              range: 'Melee',
-              attacks: '12',
-              skill: '2+',
-              strength: '6',
-              ap: '-1',
-              damage: '1',
+              name: "Bilesword – sweep",
+              keywords: ["lethal hits"],
+              range: "Melee",
+              attacks: "12",
+              skill: "2+",
+              strength: "6",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -1588,37 +1709,44 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Doomsday bell',
-              keywords: ['lethal hits', 'reverberating summons'],
-              range: 'Melee',
-              attacks: '6',
-              skill: '2+',
-              strength: '7',
-              ap: '-1',
-              damage: '2',
+              name: "Doomsday bell",
+              keywords: ["lethal hits", "reverberating summons"],
+              range: "Melee",
+              attacks: "6",
+              skill: "2+",
+              strength: "7",
+              ap: "-1",
+              damage: "2",
             },
           ],
         },
       ];
       break;
-    case 'Regimental Attachés':
-      unit.keywords = ['ALL MODELS:', 'Infantry', 'Imperium', 'Regimental Attachés', 'ASTROPATH:', 'Psyker'];
+    case "Regimental Attachés":
+      unit.keywords = [
+        "ALL MODELS:",
+        "Infantry",
+        "Imperium",
+        "Regimental Attachés",
+        "ASTROPATH:",
+        "Psyker",
+      ];
       break;
-    case 'Indomitor Kill Team':
+    case "Indomitor Kill Team":
       unit.meleeWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Close combat weapon',
+              name: "Close combat weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '4',
-              ap: '0',
-              damage: '1',
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "4",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1627,61 +1755,67 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Power fists',
-              keywords: ['twin-linked'],
-              range: 'Melee',
-              attacks: '3',
-              skill: '4+',
-              strength: '8',
-              ap: '-2',
-              damage: '2',
+              name: "Power fists",
+              keywords: ["twin-linked"],
+              range: "Melee",
+              attacks: "3",
+              skill: "4+",
+              strength: "8",
+              ap: "-2",
+              damage: "2",
             },
           ],
         },
       ];
       break;
-    case 'Fabius Bile':
+    case "Fabius Bile":
       unit.keywords = [
-        'ALL MODELS:',
-        'Infantry',
-        'Chaos',
-        'Chaos Undivided',
-        'FABIUS BILE ONLY:',
-        'Character',
-        'Epic Hero',
-        'Fabius Bile',
+        "ALL MODELS:",
+        "Infantry",
+        "Chaos",
+        "Chaos Undivided",
+        "FABIUS BILE ONLY:",
+        "Character",
+        "Epic Hero",
+        "Fabius Bile",
       ];
       break;
-    case 'Dark Apostle':
-      unit.keywords = ['ALL MODELS:', ...unit.keywords, 'DARK APOSTLE ONLY:', 'Character', 'Dark Apostle'];
-      break;
-    case 'Haarken Worldclaimer':
+    case "Dark Apostle":
       unit.keywords = [
-        'Infantry',
-        'Character',
-        'Epic Hero',
-        'Fly',
-        'Jump Pack',
-        'Chaos',
-        'Chaos Undivided',
-        'Haarken Worldclaimer',
+        "ALL MODELS:",
+        ...unit.keywords,
+        "DARK APOSTLE ONLY:",
+        "Character",
+        "Dark Apostle",
       ];
       break;
-    case 'Crusader Squad':
+    case "Haarken Worldclaimer":
+      unit.keywords = [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Fly",
+        "Jump Pack",
+        "Chaos",
+        "Chaos Undivided",
+        "Haarken Worldclaimer",
+      ];
+      break;
+    case "Crusader Squad":
       unit.meleeWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Astartes chainsword',
+              name: "Astartes chainsword",
               keywords: [],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '4',
-              ap: '-1',
-              damage: '1',
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "4",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -1690,14 +1824,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Combat knife',
+              name: "Combat knife",
               keywords: [],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '4',
-              ap: '0',
-              damage: '1',
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "4",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1706,14 +1840,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Close combat weapon',
+              name: "Close combat weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '2',
-              skill: '3+',
-              strength: '4',
-              ap: '0',
-              damage: '1',
+              range: "Melee",
+              attacks: "2",
+              skill: "3+",
+              strength: "4",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1722,14 +1856,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Power fist',
+              name: "Power fist",
               keywords: [],
-              range: 'Melee',
-              attacks: '2',
-              skill: '3+',
-              strength: '8',
-              ap: '-2',
-              damage: '2',
+              range: "Melee",
+              attacks: "2",
+              skill: "3+",
+              strength: "8",
+              ap: "-2",
+              damage: "2",
             },
           ],
         },
@@ -1738,14 +1872,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Power weapon',
+              name: "Power weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '5',
-              ap: '-2',
-              damage: '1',
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "5",
+              ap: "-2",
+              damage: "1",
             },
           ],
         },
@@ -1754,14 +1888,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Thunder hammer',
-              keywords: ['devastating wounds'],
-              range: 'Melee',
-              attacks: '2',
-              skill: '4+',
-              strength: '8',
-              ap: '-2',
-              damage: '2',
+              name: "Thunder hammer",
+              keywords: ["devastating wounds"],
+              range: "Melee",
+              attacks: "2",
+              skill: "4+",
+              strength: "8",
+              ap: "-2",
+              damage: "2",
             },
           ],
         },
@@ -1770,47 +1904,47 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Twin lightning claws',
-              keywords: ['twin-linked'],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '5',
-              ap: '-2',
-              damage: '1',
+              name: "Twin lightning claws",
+              keywords: ["twin-linked"],
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "5",
+              ap: "-2",
+              damage: "1",
             },
           ],
         },
       ];
       break;
-    case 'Gaunt’s Ghosts':
+    case "Gaunt’s Ghosts":
       unit.keywords = [
-        'ALL MODELS:',
-        'Infantry',
-        'Imperium',
-        'Grenades',
-        'Gaunt’s Ghosts',
-        'IBRAM GAUNT:',
-        'Character',
-        'Epic Hero',
-        'Officer',
+        "ALL MODELS:",
+        "Infantry",
+        "Imperium",
+        "Grenades",
+        "Gaunt’s Ghosts",
+        "IBRAM GAUNT:",
+        "Character",
+        "Epic Hero",
+        "Officer",
       ];
       break;
-    case 'Wyvern':
+    case "Wyvern":
       unit.rangedWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Heavy bolter',
-              keywords: ['sustained hits 1'],
+              name: "Heavy bolter",
+              keywords: ["sustained hits 1"],
               range: '36"',
-              attacks: '3',
-              skill: '4+',
-              strength: '5',
-              ap: '-1',
-              damage: '2',
+              attacks: "3",
+              skill: "4+",
+              strength: "5",
+              ap: "-1",
+              damage: "2",
             },
           ],
         },
@@ -1819,14 +1953,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Heavy flamer',
-              keywords: ['ignores cover', 'torrent'],
+              name: "Heavy flamer",
+              keywords: ["ignores cover", "torrent"],
               range: '12"',
-              attacks: 'D6',
-              skill: 'N/A',
-              strength: '5',
-              ap: '-1',
-              damage: '1',
+              attacks: "D6",
+              skill: "N/A",
+              strength: "5",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -1835,14 +1969,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Hunter-killer missile',
-              keywords: ['one shot'],
+              name: "Hunter-killer missile",
+              keywords: ["one shot"],
               range: '48"',
-              attacks: '1',
-              skill: '4+',
-              strength: '14',
-              ap: '-3',
-              damage: 'D6',
+              attacks: "1",
+              skill: "4+",
+              strength: "14",
+              ap: "-3",
+              damage: "D6",
             },
           ],
         },
@@ -1851,45 +1985,51 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Wyvern quad stormshard mortar',
-              keywords: ['blast', 'ignores cover', 'heavy', 'indirect fire', 'twin-linked'],
+              name: "Wyvern quad stormshard mortar",
+              keywords: [
+                "blast",
+                "ignores cover",
+                "heavy",
+                "indirect fire",
+                "twin-linked",
+              ],
               range: '48"',
-              attacks: '2D6',
-              skill: '4+',
-              strength: '5',
-              ap: '0',
-              damage: '1',
+              attacks: "2D6",
+              skill: "4+",
+              strength: "5",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
       ];
       break;
-    case 'Fire Prism':
+    case "Fire Prism":
       unit.rangedWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Prism cannon – dispersed pulse',
-              keywords: ['blast'],
+              name: "Prism cannon – dispersed pulse",
+              keywords: ["blast"],
               range: '60"',
-              attacks: '2D6',
-              skill: '3+',
-              strength: '6',
-              ap: '-1',
-              damage: '2',
+              attacks: "2D6",
+              skill: "3+",
+              strength: "6",
+              ap: "-1",
+              damage: "2",
             },
             {
               active: true,
-              name: 'Prism cannon – focused lances',
-              keywords: ['linked fire'],
+              name: "Prism cannon – focused lances",
+              keywords: ["linked fire"],
               range: '60"',
-              attacks: '2',
-              skill: '3+',
-              strength: '18',
-              ap: '-4',
-              damage: '6',
+              attacks: "2",
+              skill: "3+",
+              strength: "18",
+              ap: "-4",
+              damage: "6",
             },
           ],
         },
@@ -1898,14 +2038,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Shuriken cannon',
-              keywords: ['sustained hits 1'],
+              name: "Shuriken cannon",
+              keywords: ["sustained hits 1"],
               range: '24"',
-              attacks: '3',
-              skill: '3+',
-              strength: '6',
-              ap: '-1',
-              damage: '2',
+              attacks: "3",
+              skill: "3+",
+              strength: "6",
+              ap: "-1",
+              damage: "2",
             },
           ],
         },
@@ -1914,34 +2054,34 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Twin shuriken catapult',
-              keywords: ['assault', 'twin-linked'],
+              name: "Twin shuriken catapult",
+              keywords: ["assault", "twin-linked"],
               range: '18"',
-              attacks: '2',
-              skill: '3+',
-              strength: '4',
-              ap: '-1',
-              damage: '1',
+              attacks: "2",
+              skill: "3+",
+              strength: "4",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
       ];
       break;
-    case 'Canoness':
+    case "Canoness":
       unit.rangedWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Bolt pistol',
-              keywords: ['pistol'],
+              name: "Bolt pistol",
+              keywords: ["pistol"],
               range: '12"',
-              attacks: '1',
-              skill: '2+',
-              strength: '4',
-              ap: '0',
-              damage: '1',
+              attacks: "1",
+              skill: "2+",
+              strength: "4",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1950,14 +2090,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Brazier of holy fire',
-              keywords: ['ignores cover', 'one shot', 'torrent'],
+              name: "Brazier of holy fire",
+              keywords: ["ignores cover", "one shot", "torrent"],
               range: '12"',
-              attacks: 'D6',
-              skill: 'N/A',
-              strength: '6',
-              ap: '-1',
-              damage: '2',
+              attacks: "D6",
+              skill: "N/A",
+              strength: "6",
+              ap: "-1",
+              damage: "2",
             },
           ],
         },
@@ -1966,14 +2106,19 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Condemnor boltgun',
-              keywords: ['anti-psyker 2+', 'devastating wounds', 'precision', 'rapid fire 1'],
+              name: "Condemnor boltgun",
+              keywords: [
+                "anti-psyker 2+",
+                "devastating wounds",
+                "precision",
+                "rapid fire 1",
+              ],
               range: '24"',
-              attacks: '1',
-              skill: '2+',
-              strength: '4',
-              ap: '0',
-              damage: '1',
+              attacks: "1",
+              skill: "2+",
+              strength: "4",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
@@ -1982,14 +2127,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Inferno pistol',
-              keywords: ['melta 2', 'pistol'],
+              name: "Inferno pistol",
+              keywords: ["melta 2", "pistol"],
               range: '6"',
-              attacks: '1',
-              skill: '2+',
-              strength: '8',
-              ap: '-4',
-              damage: 'D3',
+              attacks: "1",
+              skill: "2+",
+              strength: "8",
+              ap: "-4",
+              damage: "D3",
             },
           ],
         },
@@ -1998,35 +2143,35 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Plasma pistol – standard',
-              keywords: ['pistol'],
+              name: "Plasma pistol – standard",
+              keywords: ["pistol"],
               range: '12"',
-              attacks: '1',
-              skill: '2+',
-              strength: '7',
-              ap: '-2',
-              damage: '1',
+              attacks: "1",
+              skill: "2+",
+              strength: "7",
+              ap: "-2",
+              damage: "1",
             },
             {
               active: true,
-              name: 'Plasma pistol – supercharge',
-              keywords: ['hazardous', 'pistol'],
+              name: "Plasma pistol – supercharge",
+              keywords: ["hazardous", "pistol"],
               range: '12"',
-              attacks: '1',
-              skill: '2+',
-              strength: '8',
-              ap: '-3',
-              damage: '2',
+              attacks: "1",
+              skill: "2+",
+              strength: "8",
+              ap: "-3",
+              damage: "2",
             },
           ],
         },
       ];
       break;
-    case 'Zodgrod Wortsnagga':
+    case "Zodgrod Wortsnagga":
       unit.abilities.other = [
         ...unit.abilities.other,
         {
-          name: 'Super Runts',
+          name: "Super Runts",
           description:
             'While this model is leading a unit: ■ Models in that unit have the Scouts 9" ability. ■ Each time a model in that unit makes an attack, add 1 to the Hit roll and add 1 to the Wound roll. ■ Each time an attack targets that unit, subtract 1 from the Wound roll.',
           showAbility: true,
@@ -2034,10 +2179,10 @@ const checkForManualFixes = (unit) => {
         },
       ];
       break;
-    case 'Shadow Spectres':
+    case "Shadow Spectres":
       unit.abilities.invul = {
-        value: '5+',
-        info: '',
+        value: "5+",
+        info: "",
         showInvulnerableSave: true,
         showInfo: false,
       };
@@ -2045,33 +2190,38 @@ const checkForManualFixes = (unit) => {
         ...unit.stats,
         {
           m: '12"',
-          t: '3',
-          sv: '5+',
-          w: '2',
-          ld: '6+',
-          oc: '1',
-          name: 'SHADOW SPECTRE EXARCH',
+          t: "3",
+          sv: "5+",
+          w: "2",
+          ld: "6+",
+          oc: "1",
+          name: "SHADOW SPECTRE EXARCH",
           showDamagedMarker: false,
           showName: true,
           active: true,
         },
       ];
       break;
-    case 'Inquisitor Greyfax':
+    case "Inquisitor Greyfax":
       unit.rangedWeapons = [
         {
           active: true,
           profiles: [
             {
               active: true,
-              name: 'Castigation',
-              keywords: ['anti-character 4+', 'devastating wounds', 'precision', 'psychic'],
+              name: "Castigation",
+              keywords: [
+                "anti-character 4+",
+                "devastating wounds",
+                "precision",
+                "psychic",
+              ],
               range: '18"',
-              attacks: '1',
-              skill: '3+',
-              strength: '8',
-              ap: '-2',
-              damage: '3',
+              attacks: "1",
+              skill: "3+",
+              strength: "8",
+              ap: "-2",
+              damage: "3",
             },
           ],
         },
@@ -2080,139 +2230,145 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Condemnor stake',
-              keywords: ['anti-psyker 2+', 'devastating wounds', 'precision', 'rapid fire 1'],
+              name: "Condemnor stake",
+              keywords: [
+                "anti-psyker 2+",
+                "devastating wounds",
+                "precision",
+                "rapid fire 1",
+              ],
               range: '24"',
-              attacks: '1',
-              skill: '3+',
-              strength: '4',
-              ap: '0',
-              damage: '1',
+              attacks: "1",
+              skill: "3+",
+              strength: "4",
+              ap: "0",
+              damage: "1",
             },
           ],
         },
       ];
       break;
-    case 'Platoon Command Squad':
+    case "Platoon Command Squad":
       unit.stats = [
         {
           m: '6"',
-          t: '3',
-          sv: '5+',
-          w: '3',
-          ld: '7+',
-          oc: '1',
-          name: 'PLATOON COMMANDER ',
+          t: "3",
+          sv: "5+",
+          w: "3",
+          ld: "7+",
+          oc: "1",
+          name: "PLATOON COMMANDER ",
           showDamagedMarker: false,
           showName: true,
           active: true,
         },
         {
           m: '6"',
-          t: '3',
-          sv: '5+',
-          w: '2',
-          ld: '7+',
-          oc: '2',
-          name: 'VETERAN HEAVY',
+          t: "3",
+          sv: "5+",
+          w: "2",
+          ld: "7+",
+          oc: "2",
+          name: "VETERAN HEAVY",
           showDamagedMarker: false,
           showName: true,
           active: true,
         },
         {
           m: '6"',
-          t: '3',
-          sv: '5+',
-          w: '1',
-          ld: '7+',
-          oc: '1',
-          name: 'VETERAN GUARDSMAN',
+          t: "3",
+          sv: "5+",
+          w: "1",
+          ld: "7+",
+          oc: "1",
+          name: "VETERAN GUARDSMAN",
           showDamagedMarker: false,
           showName: true,
           active: true,
         },
       ];
       break;
-    case 'Ghazghkull Thraka':
+    case "Ghazghkull Thraka":
       unit.abilities.invul = {
-        value: '4+',
-        info: '',
+        value: "4+",
+        info: "",
         showInvulnerableSave: true,
         showInfo: false,
       };
       unit.abilities.special = [
         ...unit.abilities.special,
         {
-          name: 'Invulnerable save: Makari 2+',
-          description: '* You cannot re-roll invulnerable saving throws made for this model.',
+          name: "Invulnerable save: Makari 2+",
+          description:
+            "* You cannot re-roll invulnerable saving throws made for this model.",
           showAbility: true,
           showDescription: true,
         },
       ];
       break;
-    case 'Adeptus Astartes Armoury':
+    case "Adeptus Astartes Armoury":
       unit.abilities.special = [
         {
-          name: 'WEAPON LISTS',
+          name: "WEAPON LISTS",
           description:
-            'Several Adeptus Astartes models have the option to be equipped with one or more weapons whose profiles are not listed on their datasheet. The profiles for these weapons are instead listed on this card.',
+            "Several Adeptus Astartes models have the option to be equipped with one or more weapons whose profiles are not listed on their datasheet. The profiles for these weapons are instead listed on this card.",
           showAbility: true,
           showDescription: true,
         },
       ];
       unit.abilities.other = [
         {
-          name: 'Special Weapons',
+          name: "Special Weapons",
           description:
-            '* If a Captain or Lieutenant model is equipped with this weapon, improve this weapon’s Ballistic Skill characteristic by 1.',
+            "* If a Captain or Lieutenant model is equipped with this weapon, improve this weapon’s Ballistic Skill characteristic by 1.",
           showAbility: true,
           showDescription: true,
         },
       ];
       break;
-    case 'Kill Team Cassius':
+    case "Kill Team Cassius":
       unit.stats = [
         {
           m: '6"',
-          t: '4',
-          sv: '3+',
-          w: '4',
-          ld: '5+',
-          oc: '2',
-          name: 'CHAPLAIN CASSIUS',
+          t: "4",
+          sv: "3+",
+          w: "4",
+          ld: "5+",
+          oc: "2",
+          name: "CHAPLAIN CASSIUS",
           active: true,
           showName: true,
         },
         {
           m: '5"',
-          t: '5',
-          sv: '2+',
-          w: '3',
-          ld: '6+',
-          oc: '2',
-          name: 'KILL TEAM TERMINATOR',
+          t: "5",
+          sv: "2+",
+          w: "3",
+          ld: "6+",
+          oc: "2",
+          name: "KILL TEAM TERMINATOR",
           active: true,
           showName: true,
         },
         {
           m: '6"',
-          t: '4',
-          sv: '3+',
-          w: '2',
-          ld: '6+',
-          oc: '2',
-          name: 'KILL TEAM VETERAN',
+          t: "4",
+          sv: "3+",
+          w: "2",
+          ld: "6+",
+          oc: "2",
+          name: "KILL TEAM VETERAN",
           active: true,
           showName: true,
         },
         {
           m: '12"',
-          t: '5',
-          sv: '3+',
-          w: '3',
-          ld: '6+',
-          oc: '2',
-          name: 'KILL TEAM BIKER',
+          t: "5",
+          sv: "3+",
+          w: "3",
+          ld: "6+",
+          oc: "2",
+          name: "KILL TEAM BIKER",
           active: true,
           showName: true,
         },
@@ -2223,14 +2379,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Artificer crozius',
+              name: "Artificer crozius",
               keywords: [],
-              range: 'Melee',
-              attacks: '5',
-              skill: '2+',
-              strength: '6',
-              ap: '-1',
-              damage: '2',
+              range: "Melee",
+              attacks: "5",
+              skill: "2+",
+              strength: "6",
+              ap: "-1",
+              damage: "2",
             },
           ],
         },
@@ -2239,14 +2395,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Close combat weapon',
+              name: "Close combat weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '5',
-              ap: '-2',
-              damage: '1',
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "5",
+              ap: "-2",
+              damage: "1",
             },
           ],
         },
@@ -2255,14 +2411,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Force weapon',
-              keywords: ['psychic'],
-              range: 'Melee',
-              attacks: '5',
-              skill: '2+',
-              strength: '5',
-              ap: '-3',
-              damage: 'D3',
+              name: "Force weapon",
+              keywords: ["psychic"],
+              range: "Melee",
+              attacks: "5",
+              skill: "2+",
+              strength: "5",
+              ap: "-3",
+              damage: "D3",
             },
           ],
         },
@@ -2271,14 +2427,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Long Vigil melee weapon',
+              name: "Long Vigil melee weapon",
               keywords: [],
-              range: 'Melee',
-              attacks: '4',
-              skill: '3+',
-              strength: '4',
-              ap: '-1',
-              damage: '1',
+              range: "Melee",
+              attacks: "4",
+              skill: "3+",
+              strength: "4",
+              ap: "-1",
+              damage: "1",
             },
           ],
         },
@@ -2287,14 +2443,14 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Power fist',
+              name: "Power fist",
               keywords: [],
-              range: 'Melee',
-              attacks: '3',
-              skill: '3+',
-              strength: '8',
-              ap: '-2',
-              damage: '2',
+              range: "Melee",
+              attacks: "3",
+              skill: "3+",
+              strength: "8",
+              ap: "-2",
+              damage: "2",
             },
           ],
         },
@@ -2303,141 +2459,142 @@ const checkForManualFixes = (unit) => {
           profiles: [
             {
               active: true,
-              name: 'Twin lightning claws',
-              keywords: ['twin-linked'],
-              range: 'Melee',
-              attacks: '4',
-              skill: '3+',
-              strength: '5',
-              ap: '-2',
-              damage: '1',
+              name: "Twin lightning claws",
+              keywords: ["twin-linked"],
+              range: "Melee",
+              attacks: "4",
+              skill: "3+",
+              strength: "5",
+              ap: "-2",
+              damage: "1",
             },
           ],
         },
       ];
       break;
-    case 'Brôkhyr Iron-master':
+    case "Brôkhyr Iron-master":
       unit.stats = [
         {
           m: '5"',
-          t: '5',
-          sv: '4+',
-          w: '4',
-          ld: '7+',
-          oc: '1',
-          name: 'BRÔKHYR IRON-MASTER',
+          t: "5",
+          sv: "4+",
+          w: "4",
+          ld: "7+",
+          oc: "1",
+          name: "BRÔKHYR IRON-MASTER",
           showDamagedMarker: false,
           showName: true,
           active: true,
         },
         {
           m: '5"',
-          t: '5',
-          sv: '4+',
-          w: '2',
-          ld: '7+',
-          oc: '1',
-          name: 'IRONKIN ASSISTANT',
+          t: "5",
+          sv: "4+",
+          w: "2",
+          ld: "7+",
+          oc: "1",
+          name: "IRONKIN ASSISTANT",
           showDamagedMarker: false,
           showName: true,
           active: true,
         },
         {
           m: '5"',
-          t: '5',
-          sv: '4+',
-          w: '1',
-          ld: '7+',
-          oc: '1',
-          name: 'E-COG',
+          t: "5",
+          sv: "4+",
+          w: "1",
+          ld: "7+",
+          oc: "1",
+          name: "E-COG",
           showDamagedMarker: false,
           showName: true,
           active: true,
         },
       ];
       break;
-    case 'Proteus Kill Team':
+    case "Proteus Kill Team":
       unit.stats = [
         {
           m: '6"',
-          t: '4',
-          sv: '3+',
-          w: '2',
-          ld: '6+',
-          oc: '1',
-          name: 'KILL TEAM VETERANS',
+          t: "4",
+          sv: "3+",
+          w: "2",
+          ld: "6+",
+          oc: "1",
+          name: "KILL TEAM VETERANS",
           active: true,
           showName: true,
         },
         {
           m: '12"',
-          t: '5',
-          sv: '3+',
-          w: '3',
-          ld: '6+',
-          oc: '2',
-          name: 'KILL TEAM BIKER',
+          t: "5",
+          sv: "3+",
+          w: "3",
+          ld: "6+",
+          oc: "2",
+          name: "KILL TEAM BIKER",
           active: true,
           showName: true,
         },
         {
           m: '5"',
-          t: '5',
-          sv: '2+',
-          w: '3',
-          ld: '6+',
-          oc: '1',
-          name: 'KILL TEAM TERMINATOR',
+          t: "5",
+          sv: "2+",
+          w: "3",
+          ld: "6+",
+          oc: "1",
+          name: "KILL TEAM TERMINATOR",
           active: true,
           showName: true,
         },
       ];
       break;
-    case 'Canis Rex':
+    case "Canis Rex":
       unit = {
         ...unit,
-        id: '0a2f0ee1-27c8-5342-b38e-e16b413456ef',
-        name: 'Canis Rex',
-        source: '40k-10e',
-        faction_id: 'QI',
-        cardType: 'DataCard',
-        leader: '',
-        composition: ['■ 1 Canis Rex – Epic Hero'],
-        loadout: 'Canis Rex is equipped with: Chainbreaker las-impulsor; Chainbreaker multi-laser; Freedom’s Hand.',
-        wargear: ['None'],
-        transport: '',
+        id: "0a2f0ee1-27c8-5342-b38e-e16b413456ef",
+        name: "Canis Rex",
+        source: "40k-10e",
+        faction_id: "QI",
+        cardType: "DataCard",
+        leader: "",
+        composition: ["■ 1 Canis Rex – Epic Hero"],
+        loadout:
+          "Canis Rex is equipped with: Chainbreaker las-impulsor; Chainbreaker multi-laser; Freedom’s Hand.",
+        wargear: ["None"],
+        transport: "",
         abilities: {
           wargear: [],
-          core: ['Deadly Demise D6'],
-          faction: ['Code Chivalric', 'Super-heavy Walker'],
+          core: ["Deadly Demise D6"],
+          faction: ["Code Chivalric", "Super-heavy Walker"],
           primarch: [],
           invul: {
-            value: '5+',
-            info: '* This model has a 5+ invulnerable save against ranged attacks.',
+            value: "5+",
+            info: "* This model has a 5+ invulnerable save against ranged attacks.",
             showInvulnerableSave: true,
             showInfo: true,
           },
           other: [
             {
-              name: 'Legendary Freeblade',
+              name: "Legendary Freeblade",
               description:
-                'Once per turn, you can target this model with a Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem in the same phase.',
+                "Once per turn, you can target this model with a Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem in the same phase.",
               showAbility: true,
               showDescription: true,
             },
             {
-              name: 'Chainbreaker',
+              name: "Chainbreaker",
               description:
-                'Each time this model makes an attack, an unmodifed successful Hit roll of 5+ scores a Critical Hit.',
+                "Each time this model makes an attack, an unmodifed successful Hit roll of 5+ scores a Critical Hit.",
               showAbility: true,
               showDescription: true,
             },
           ],
           special: [
             {
-              name: 'Sir Hekhtur',
+              name: "Sir Hekhtur",
               description:
-                'If Canis Rex is destroyed, flip this card and follow the instructions for using Sir Hekhtur.',
+                "If Canis Rex is destroyed, flip this card and follow the instructions for using Sir Hekhtur.",
               showAbility: true,
               showDescription: true,
             },
@@ -2445,20 +2602,20 @@ const checkForManualFixes = (unit) => {
           damaged: {
             showDamagedAbility: true,
             showDescription: true,
-            range: '1-7 WOUNDS REMAINING',
+            range: "1-7 WOUNDS REMAINING",
             description:
-              'While this model has 1-7 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.',
+              "While this model has 1-7 wounds remaining, subtract 5 from this model’s Objective Control characteristic and each time this model makes an attack, subtract 1 from the Hit roll.",
           },
         },
         stats: [
           {
             m: '10"',
-            t: '12',
-            sv: '3+',
-            w: '22',
-            ld: '5+',
-            oc: '10',
-            name: 'Canis Rex',
+            t: "12",
+            sv: "3+",
+            w: "22",
+            ld: "5+",
+            oc: "10",
+            name: "Canis Rex",
             showDamagedMarker: true,
             showName: false,
             active: true,
@@ -2470,25 +2627,25 @@ const checkForManualFixes = (unit) => {
             profiles: [
               {
                 active: true,
-                name: 'Chainbreaker las-impulsor – high intensity',
-                keywords: ['blast', 'sustained hits 1'],
+                name: "Chainbreaker las-impulsor – high intensity",
+                keywords: ["blast", "sustained hits 1"],
                 range: '24"',
-                attacks: 'D6',
-                skill: '2+',
-                strength: '14',
-                ap: '-3',
-                damage: '4',
+                attacks: "D6",
+                skill: "2+",
+                strength: "14",
+                ap: "-3",
+                damage: "4",
               },
               {
                 active: true,
-                name: 'Chainbreaker las-impulsor – low intensity',
-                keywords: ['blast', 'sustained hits 1'],
+                name: "Chainbreaker las-impulsor – low intensity",
+                keywords: ["blast", "sustained hits 1"],
                 range: '36"',
-                attacks: '2D6',
-                skill: '2+',
-                strength: '7',
-                ap: '-1',
-                damage: '2',
+                attacks: "2D6",
+                skill: "2+",
+                strength: "7",
+                ap: "-1",
+                damage: "2",
               },
             ],
           },
@@ -2497,14 +2654,14 @@ const checkForManualFixes = (unit) => {
             profiles: [
               {
                 active: true,
-                name: 'Chainbreaker multi-laser',
-                keywords: ['sustained hits 1'],
+                name: "Chainbreaker multi-laser",
+                keywords: ["sustained hits 1"],
                 range: '36"',
-                attacks: '4',
-                skill: '2+',
-                strength: '6',
-                ap: '0',
-                damage: '1',
+                attacks: "4",
+                skill: "2+",
+                strength: "6",
+                ap: "0",
+                damage: "1",
               },
             ],
           },
@@ -2515,71 +2672,72 @@ const checkForManualFixes = (unit) => {
             profiles: [
               {
                 active: true,
-                name: 'Freedom’s Hand – strike',
-                keywords: ['sustained hits 1'],
-                range: 'Melee',
-                attacks: '5',
-                skill: '2+',
-                strength: '20',
-                ap: '-3',
-                damage: '9',
+                name: "Freedom’s Hand – strike",
+                keywords: ["sustained hits 1"],
+                range: "Melee",
+                attacks: "5",
+                skill: "2+",
+                strength: "20",
+                ap: "-3",
+                damage: "9",
               },
               {
                 active: true,
-                name: 'Freedom’s Hand – sweep',
-                keywords: ['sustained hits 1'],
-                range: 'Melee',
-                attacks: '10',
-                skill: '2+',
-                strength: '10',
-                ap: '-2',
-                damage: '3',
+                name: "Freedom’s Hand – sweep",
+                keywords: ["sustained hits 1"],
+                range: "Melee",
+                attacks: "10",
+                skill: "2+",
+                strength: "10",
+                ap: "-2",
+                damage: "3",
               },
             ],
           },
         ],
         keywords: [
-          'Vehicle',
-          'Walker',
-          'Titanic',
-          'Towering',
-          'Questoris',
-          'Character',
-          'Epic Hero',
-          'Imperium',
-          'Canis Rex',
+          "Vehicle",
+          "Walker",
+          "Titanic",
+          "Towering",
+          "Questoris",
+          "Character",
+          "Epic Hero",
+          "Imperium",
+          "Canis Rex",
         ],
-        factions: ['Imperial Knights'],
+        factions: ["Imperial Knights"],
       };
       break;
-    case 'Sir Hekhtur':
+    case "Sir Hekhtur":
       unit = {
         ...unit,
-        id: '4b339d48-cecd-5bd7-a49c-b6c808e008d4',
-        name: 'Sir Hekhtur',
-        source: '40k-10e',
-        faction_id: 'QI',
-        cardType: 'DataCard',
-        leader: '',
-        composition: ['■ 1 Sir Hekhtur – Epic Hero  '],
-        loadout: 'Sir Hekhtur is equipped with: Hekhtur’s pistol; close combat weapon.',
+        id: "4b339d48-cecd-5bd7-a49c-b6c808e008d4",
+        name: "Sir Hekhtur",
+        source: "40k-10e",
+        faction_id: "QI",
+        cardType: "DataCard",
+        leader: "",
+        composition: ["■ 1 Sir Hekhtur – Epic Hero  "],
+        loadout:
+          "Sir Hekhtur is equipped with: Hekhtur’s pistol; close combat weapon.",
         wargear: [],
-        transport: '',
+        transport: "",
         abilities: {
           wargear: [],
-          core: ['Lone Operative'],
+          core: ["Lone Operative"],
           faction: [],
           primarch: [],
           invul: {
-            value: '',
-            info: '',
+            value: "",
+            info: "",
             showInvulnerableSave: false,
             showInfo: false,
           },
           other: [],
           special: [
             {
-              name: 'USING SIR HEKHTUR',
+              name: "USING SIR HEKHTUR",
               description:
                 'When your Canis Rex model is destroyed, Sir Hekhtur is treated as a model disembarking from a destroyed Transport – set him up within 3" of your Canis Rex model before it is removed. Sir Hekhtur then uses the profile, wargear, abilities and keywords shown on this side of the card, but cannot be  selected as the target of any of your Stratagems other than Core Stratagems. Your Canis Rex unit is not considered to be destroyed until Sir Hekhtur is also destroyed.',
               showAbility: true,
@@ -2589,19 +2747,19 @@ const checkForManualFixes = (unit) => {
           damaged: {
             showDamagedAbility: false,
             showDescription: true,
-            range: '',
-            description: '',
+            range: "",
+            description: "",
           },
         },
         stats: [
           {
             m: '6"',
-            t: '3',
-            sv: '4+',
-            w: '3',
-            ld: '5+',
-            oc: '1',
-            name: 'Sir Hekhtur',
+            t: "3",
+            sv: "4+",
+            w: "3",
+            ld: "5+",
+            oc: "1",
+            name: "Sir Hekhtur",
             showDamagedMarker: false,
             showName: true,
             active: true,
@@ -2613,14 +2771,14 @@ const checkForManualFixes = (unit) => {
             profiles: [
               {
                 active: true,
-                name: 'Hekhtur’s pistol',
-                keywords: ['pistol'],
+                name: "Hekhtur’s pistol",
+                keywords: ["pistol"],
                 range: '12"',
-                attacks: '1',
-                skill: '2+',
-                strength: '5',
-                ap: '-1',
-                damage: '2',
+                attacks: "1",
+                skill: "2+",
+                strength: "5",
+                ap: "-1",
+                damage: "2",
               },
             ],
           },
@@ -2631,81 +2789,88 @@ const checkForManualFixes = (unit) => {
             profiles: [
               {
                 active: true,
-                name: 'Close combat weapon',
+                name: "Close combat weapon",
                 keywords: [],
-                range: 'Melee',
-                attacks: '2',
-                skill: '2+',
-                strength: '3',
-                ap: '0',
-                damage: '1',
+                range: "Melee",
+                attacks: "2",
+                skill: "2+",
+                strength: "3",
+                ap: "0",
+                damage: "1",
               },
             ],
           },
         ],
-        keywords: ['Infantry', 'Character', 'Epic Hero', 'Imperium', 'Sir Hekhtur'],
-        factions: ['Imperial Knights'],
+        keywords: [
+          "Infantry",
+          "Character",
+          "Epic Hero",
+          "Imperium",
+          "Sir Hekhtur",
+        ],
+        factions: ["Imperial Knights"],
       };
       break;
-    case 'Triumph Of Saint Katherine':
+    case "Triumph Of Saint Katherine":
       unit = {
         ...unit,
-        id: 'f97d4991-a1f9-5474-9e27-ccfd37841c3c',
-        name: 'Triumph Of Saint Katherine',
-        source: '40k-10e',
-        faction_id: 'AS',
-        cardType: 'DataCard',
-        leader: 'This model can be attached to the following unit: ■ Battle Sisters Squad',
-        composition: ['1 Triumph of Saint Katherine – Epic Hero'],
-        loadout: 'This model is equipped with: bolt pistols; relic weapons.',
-        wargear: ['None'],
-        transport: '',
+        id: "f97d4991-a1f9-5474-9e27-ccfd37841c3c",
+        name: "Triumph Of Saint Katherine",
+        source: "40k-10e",
+        faction_id: "AS",
+        cardType: "DataCard",
+        leader:
+          "This model can be attached to the following unit: ■ Battle Sisters Squad",
+        composition: ["1 Triumph of Saint Katherine – Epic Hero"],
+        loadout: "This model is equipped with: bolt pistols; relic weapons.",
+        wargear: ["None"],
+        transport: "",
         abilities: {
           wargear: [],
-          core: ['Leader'],
-          faction: ['Acts of Faith'],
+          core: ["Leader"],
+          faction: ["Acts of Faith"],
           primarch: [
             {
-              name: 'RELICS OF THE MATRIARCHS',
+              name: "RELICS OF THE MATRIARCHS",
               showAbility: true,
               abilities: [
                 {
-                  name: 'The Fiery Heart (Aura)',
+                  name: "The Fiery Heart (Aura)",
                   description:
                     'While a friendly Adepta Sororitas unit is within 6" of this model, if that unit is destroyed, the Miracle dice you gain as a result is automatically a 6.',
                   showAbility: true,
                   showDescription: true,
                 },
                 {
-                  name: 'Censer of the Sacred Rose (Aura)',
+                  name: "Censer of the Sacred Rose (Aura)",
                   description:
                     'While a friendly Adepta Sororitas unit is within 6" of this model, improve that unit’s Leadership characteristic by 1.',
                   showAbility: true,
                   showDescription: true,
                 },
                 {
-                  name: 'Simulacrum of the Ebon Chalice (Aura)',
+                  name: "Simulacrum of the Ebon Chalice (Aura)",
                   description:
                     'While a friendly Adepta Sororitas unit is within 6" of this model, that unit can perform any number of Acts of Faith per phase, instead of only one.',
                   showAbility: true,
                   showDescription: true,
                 },
                 {
-                  name: 'Simulacrum of the Argent Shroud (Aura)',
+                  name: "Simulacrum of the Argent Shroud (Aura)",
                   description:
                     'While a friendly Adepta Sororitas unit is within 6" of this model, add 1 to the Attacks characteristic of Rapid Fire weapons equipped by models in that unit.',
                   showAbility: true,
                   showDescription: true,
                 },
                 {
-                  name: 'Icon of the Valorous Heart (Aura)',
+                  name: "Icon of the Valorous Heart (Aura)",
                   description:
                     'While a friendly Adepta Sororitas unit is within 6" of this model, that unit has the Feel No Pain 6+ ability.',
                   showAbility: true,
                   showDescription: true,
                 },
                 {
-                  name: 'Petals of the Bloody Rose (Aura)',
+                  name: "Petals of the Bloody Rose (Aura)",
                   description:
                     'While a friendly Adepta Sororitas unit is within 6" of this model, melee weapons equipped by models in that unit have the [LETHAL HITS] ability.',
                   showAbility: true,
@@ -2715,16 +2880,16 @@ const checkForManualFixes = (unit) => {
             },
           ],
           invul: {
-            value: '4+',
-            info: '',
+            value: "4+",
+            info: "",
             showInvulnerableSave: true,
             showInfo: false,
           },
           other: [
             {
-              name: 'Relics of the Matriarchs',
+              name: "Relics of the Matriarchs",
               description:
-                'At the start of the battle round, select up to two of the abilities in the Relics of the Matriarchs section (see left). Until the start of the next battle round, this model has those abilities.',
+                "At the start of the battle round, select up to two of the abilities in the Relics of the Matriarchs section (see left). Until the start of the next battle round, this model has those abilities.",
               showAbility: true,
               showDescription: true,
             },
@@ -2733,20 +2898,20 @@ const checkForManualFixes = (unit) => {
           damaged: {
             showDamagedAbility: true,
             showDescription: true,
-            range: '1-5 WOUNDS REMAINING',
+            range: "1-5 WOUNDS REMAINING",
             description:
-              'While this model has 1-5 wounds remaining, the Attacks characteristics of all of its weapons are halved, and you can only select one ability when using its Relics of the Matriarchs ability, instead of up to two.',
+              "While this model has 1-5 wounds remaining, the Attacks characteristics of all of its weapons are halved, and you can only select one ability when using its Relics of the Matriarchs ability, instead of up to two.",
           },
         },
         stats: [
           {
             m: '6"',
-            t: '3',
-            sv: '3+',
-            w: '18',
-            ld: '6+',
-            oc: '6',
-            name: 'Triumph Of Saint Katherine',
+            t: "3",
+            sv: "3+",
+            w: "18",
+            ld: "6+",
+            oc: "6",
+            name: "Triumph Of Saint Katherine",
             showDamagedMarker: true,
             showName: false,
             active: true,
@@ -2758,14 +2923,14 @@ const checkForManualFixes = (unit) => {
             profiles: [
               {
                 active: true,
-                name: 'Bolt pistols',
-                keywords: ['pistol'],
+                name: "Bolt pistols",
+                keywords: ["pistol"],
                 range: '12"',
-                attacks: '6',
-                skill: '2+',
-                strength: '4',
-                ap: '0',
-                damage: '1',
+                attacks: "6",
+                skill: "2+",
+                strength: "4",
+                ap: "0",
+                damage: "1",
               },
             ],
           },
@@ -2776,73 +2941,82 @@ const checkForManualFixes = (unit) => {
             profiles: [
               {
                 active: true,
-                name: 'Relic weapons',
+                name: "Relic weapons",
                 keywords: [],
-                range: 'Melee',
-                attacks: '18',
-                skill: '2+',
-                strength: '5',
-                ap: '-2',
-                damage: '1',
+                range: "Melee",
+                attacks: "18",
+                skill: "2+",
+                strength: "5",
+                ap: "-2",
+                damage: "1",
               },
             ],
           },
         ],
-        keywords: ['Infantry', 'Grenades', 'Character', 'Epic Hero', 'Imperium', 'Triumph of Saint Katherine'],
-        factions: ['Adepta Sororitas'],
+        keywords: [
+          "Infantry",
+          "Grenades",
+          "Character",
+          "Epic Hero",
+          "Imperium",
+          "Triumph of Saint Katherine",
+        ],
+        factions: ["Adepta Sororitas"],
       };
       break;
-    case 'Tidewall Shieldline':
+    case "Tidewall Shieldline":
       unit = {
         ...unit,
 
-        id: '461404f4-27f2-5e5d-a577-cc90fc70fbc8',
-        name: 'Tidewall Shieldline',
-        source: '40k-10e',
-        faction_id: 'TAU',
-        cardType: 'DataCard',
-        leader: '',
-        composition: ['1 Tidewall Shieldline'],
-        loadout: '',
-        wargear: ['This model can be equipped with 1 Tidewall defence platform.'],
+        id: "461404f4-27f2-5e5d-a577-cc90fc70fbc8",
+        name: "Tidewall Shieldline",
+        source: "40k-10e",
+        faction_id: "TAU",
+        cardType: "DataCard",
+        leader: "",
+        composition: ["1 Tidewall Shieldline"],
+        loadout: "",
+        wargear: [
+          "This model can be equipped with 1 Tidewall defence platform.",
+        ],
         transport:
-          'This model has a transport capacity of 11 T’au Empire Infantry models. It cannot transport Battlesuit, Kroot or Vespid Stingwings models. If this model is equipped with a Tidewall defence platform, it has a transport capacity of 22 T’au Infantry models instead.',
+          "This model has a transport capacity of 11 T’au Empire Infantry models. It cannot transport Battlesuit, Kroot or Vespid Stingwings models. If this model is equipped with a Tidewall defence platform, it has a transport capacity of 22 T’au Infantry models instead.",
         points: [
           {
-            models: '1',
-            cost: '85',
+            models: "1",
+            cost: "85",
           },
         ],
         abilities: {
           wargear: [],
-          core: ['Deadly Demise D3', 'Firing Deck 20'],
+          core: ["Deadly Demise D3", "Firing Deck 20"],
           faction: [],
           primarch: [],
           invul: {
-            value: '5+',
-            info: '',
+            value: "5+",
+            info: "",
             showInvulnerableSave: true,
             showInfo: false,
           },
           other: [
             {
-              name: 'Fortification',
+              name: "Fortification",
               description:
-                'While an enemy unit is only within Engagement Range of one or more Fortifications from your army: ■  That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. ■  Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.',
+                "While an enemy unit is only within Engagement Range of one or more Fortifications from your army: ■  That unit can still be selected as the target of ranged attacks, but each time such an attack is made, unless it is made with a Pistol, subtract 1 from the Hit roll. ■  Models in that unit do not need to take Desperate Escape tests due to Falling Back while Battle-shocked, except for those that will move over enemy models when doing so.",
               showAbility: true,
               showDescription: true,
             },
             {
-              name: 'Tidewall Cover',
+              name: "Tidewall Cover",
               description:
-                'Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.',
+                "Each time a ranged attack is allocated to a model, if that model is not fully visible to every model in the attacking unit because of this Fortification, that model has the Benefit of Cover against that attack.",
               showAbility: true,
               showDescription: true,
             },
             {
-              name: 'Tidewall Defence Platform',
+              name: "Tidewall Defence Platform",
               description:
-                'If equipped with a Tidewall defence platform, this Fortification has a Wounds characteristic of 15.',
+                "If equipped with a Tidewall defence platform, this Fortification has a Wounds characteristic of 15.",
               showAbility: true,
               showDescription: true,
             },
@@ -2851,19 +3025,19 @@ const checkForManualFixes = (unit) => {
           damaged: {
             showDamagedAbility: false,
             showDescription: true,
-            range: '',
-            description: '',
+            range: "",
+            description: "",
           },
         },
         stats: [
           {
             m: '4"',
-            t: '8',
-            sv: '3+',
-            w: '10',
-            ld: '7+',
-            oc: '0',
-            name: 'Tidewall Shieldline',
+            t: "8",
+            sv: "3+",
+            w: "10",
+            ld: "7+",
+            oc: "0",
+            name: "Tidewall Shieldline",
             showDamagedMarker: false,
             showName: false,
             active: true,
@@ -2871,22 +3045,28 @@ const checkForManualFixes = (unit) => {
         ],
         rangedWeapons: [],
         meleeWeapons: [],
-        keywords: ['Fortification', 'Vehicle', 'Transport', 'Fly', 'Tidewall Shieldline'],
-        factions: ['T’au Empire'],
+        keywords: [
+          "Fortification",
+          "Vehicle",
+          "Transport",
+          "Fly",
+          "Tidewall Shieldline",
+        ],
+        factions: ["T’au Empire"],
       };
       break;
-    case 'T’au Empire':
+    case "T’au Empire":
       unit = {
-        id: 'ac3cd97b-2c73-5422-baf6-34be01cfd3b8',
-        name: 'T’au Empire',
-        source: '40k-10e',
-        faction_id: 'TAU',
-        cardType: 'DataCard',
-        leader: '',
+        id: "ac3cd97b-2c73-5422-baf6-34be01cfd3b8",
+        name: "T’au Empire",
+        source: "40k-10e",
+        faction_id: "TAU",
+        cardType: "DataCard",
+        leader: "",
         composition: [],
-        loadout: '',
+        loadout: "",
         wargear: [],
-        transport: '',
+        transport: "",
         points: [],
         abilities: {
           wargear: [],
@@ -2894,33 +3074,33 @@ const checkForManualFixes = (unit) => {
           faction: [],
           primarch: [
             {
-              name: 'T’au Empire',
+              name: "T’au Empire",
               showAbility: true,
               abilities: [
                 {
-                  name: 'DRONES',
+                  name: "DRONES",
                   description:
-                    'If you have upgraded a model to have a drone, place a Drone token next to your model as a reminder. These do not count as models for any rules purposes.',
+                    "If you have upgraded a model to have a drone, place a Drone token next to your model as a reminder. These do not count as models for any rules purposes.",
                   showAbility: true,
                   showDescription: true,
                 },
                 {
-                  name: 'GUARDIAN DRONE',
+                  name: "GUARDIAN DRONE",
                   description:
-                    'Each time a model makes a ranged attack that  targets the bearer’s unit, subtract 1 from the  Wound roll.',
+                    "Each time a model makes a ranged attack that  targets the bearer’s unit, subtract 1 from the  Wound roll.",
                   showAbility: true,
                   showDescription: true,
                 },
                 {
-                  name: 'MARKER DRONE',
+                  name: "MARKER DRONE",
                   description:
-                    'The bearer’s unit has the Markerlight keyword  and can act as an Observer unit for another unit  even if it Advanced this turn.',
+                    "The bearer’s unit has the Markerlight keyword  and can act as an Observer unit for another unit  even if it Advanced this turn.",
                   showAbility: true,
                   showDescription: true,
                 },
                 {
-                  name: 'SHIELD DRONE',
-                  description: 'Add 1 to the bearer’s Wounds characteristic.',
+                  name: "SHIELD DRONE",
+                  description: "Add 1 to the bearer’s Wounds characteristic.",
                   showAbility: true,
                   showDescription: true,
                 },
@@ -2928,8 +3108,8 @@ const checkForManualFixes = (unit) => {
             },
           ],
           invul: {
-            value: '',
-            info: '',
+            value: "",
+            info: "",
             showInvulnerableSave: false,
             showInfo: false,
           },
@@ -2938,8 +3118,8 @@ const checkForManualFixes = (unit) => {
           damaged: {
             showDamagedAbility: false,
             showDescription: true,
-            range: '',
-            description: '',
+            range: "",
+            description: "",
           },
         },
         stats: [],
@@ -2949,14 +3129,14 @@ const checkForManualFixes = (unit) => {
             profiles: [
               {
                 active: true,
-                name: 'GUN DRONE - Twin pulse carbine',
-                keywords: ['assault', 'twin-linked'],
+                name: "GUN DRONE - Twin pulse carbine",
+                keywords: ["assault", "twin-linked"],
                 range: '20"',
-                attacks: '2',
-                skill: '5+',
-                strength: '5',
-                ap: '0',
-                damage: '1',
+                attacks: "2",
+                skill: "5+",
+                strength: "5",
+                ap: "0",
+                damage: "1",
               },
             ],
           },
@@ -2965,21 +3145,21 @@ const checkForManualFixes = (unit) => {
             profiles: [
               {
                 active: true,
-                name: 'MISSILE DRONE - Missile pod',
+                name: "MISSILE DRONE - Missile pod",
                 keywords: [],
                 range: '30"',
-                attacks: '2',
-                skill: '5+',
-                strength: '7',
-                ap: '-2',
-                damage: '2',
+                attacks: "2",
+                skill: "5+",
+                strength: "7",
+                ap: "-2",
+                damage: "2",
               },
             ],
           },
         ],
         meleeWeapons: [],
         keywords: [],
-        factions: [''],
+        factions: [""],
       };
       break;
     default:

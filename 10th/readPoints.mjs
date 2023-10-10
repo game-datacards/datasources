@@ -1,14 +1,14 @@
-import fs from 'fs';
+import fs from "fs";
 
 const readFile = (file) => {
   if (!file) {
     return;
   }
-  let res = fs.readFileSync(file, 'utf8');
+  let res = fs.readFileSync(file, "utf8");
   return res;
 };
 
-const pointsFile = readFile('points.txt');
+const pointsFile = readFile("points.txt");
 const pointsLines = pointsFile.split(/\r?\n/);
 
 function parse40kData(lines) {
@@ -22,7 +22,7 @@ function parse40kData(lines) {
       continue;
     }
 
-    if (line.includes('pts')) {
+    if (line.includes("pts")) {
       let match = line.match(/(\d+) models?.*?(\d+) pts/);
       let numModels, cost;
 
@@ -30,22 +30,27 @@ function parse40kData(lines) {
         [, numModels, cost] = match;
       } else {
         match = line.match(/(.*?)(\d+) pts/);
-        numModels = '1';
+        numModels = "1";
         [, currentUnit, cost] = match;
         currentUnit = currentUnit.trim();
       }
 
-      parsedData.push([currentFaction, currentUnit.toLowerCase(), numModels, cost]);
+      parsedData.push([
+        currentFaction,
+        currentUnit.toLowerCase(),
+        numModels,
+        cost,
+      ]);
     } else {
       if (currentFaction === null) {
         currentFaction = line;
-      } else if (i + 1 < lines.length && !lines[i + 1].includes('pts')) {
+      } else if (i + 1 < lines.length && !lines[i + 1].includes("pts")) {
         currentFaction = line;
       } else {
         currentUnit = line;
       }
     }
-    console.log('faction:', currentFaction);
+    console.log("faction:", currentFaction);
   }
 
   return parsedData;
