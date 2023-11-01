@@ -155,6 +155,7 @@ const specialWeaponKeywords = [
 const pointsFile = readFile("./points/points_for_extract1.2.val");
 const pointsLines = pointsFile.split(/\r?\n/);
 const enhancements = JSON.parse(readFile("./enhancements/enhancements.json"));
+const detachments = JSON.parse(readFile("./detachments/detachments.json"));
 
 function parse40kData(lines) {
   let currentFaction = null;
@@ -1199,6 +1200,7 @@ const convertTextToJson = (
       }
     }
     const enhancement = enhancements.find((eh) => eh.faction_id === factionId);
+    const detachment = detachments.find((dt) => dt.faction_id === factionId);
 
     // const stratagems = import(`./stratagems/${outputFile.toLowerCase().replaceAll(' ', '')}.mjs`);
 
@@ -1223,6 +1225,7 @@ const convertTextToJson = (
           faction_id: factionId,
         };
       }),
+      detachments: detachment.detachments,
       datasheets: units,
       colours: {
         banner,
