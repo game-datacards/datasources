@@ -1,13 +1,19 @@
-import { TURN, TYPE, PHASE } from "./CONSTANTS.mjs";
+import { TURN, TYPE, PHASE } from './CONSTANTS.mjs';
 
-const detachment = "Awakened Dynasty";
+const detachment = {
+  'Awakened Dynasty': 'Awakened Dynasty',
+  'Annihilation Legion': 'Annihilation Legion',
+  'Canoptek Court': 'Canoptek Court',
+  'Obeisance Phalanx': 'Obeisance Phalanx',
+  'Hypercrypt Legion': 'Hypercrypt Legion',
+};
 
 const template = [
   {
-    name: "PROTOCOL OF THE ETERNAL GUARDIAN",
+    name: 'PROTOCOL OF THE ETERNAL GUARDIAN',
     cost: 1,
-    type: TYPE["Epic Deed"],
-    detachment,
+    type: TYPE['Epic Deed'],
+    detachment: detachment['Awakened Dynasty'],
     turn: TURN.either,
     phase: [PHASE.any],
     fluff: `Necron rulers possess sophisticated
@@ -28,10 +34,10 @@ be targeted with this Stratagem once
 per battle.`,
   },
   {
-    name: "PROTOCOL OF THE HUNGRY VOID",
+    name: 'PROTOCOL OF THE HUNGRY VOID',
     cost: 1,
-    type: TYPE["Battle Tactic"],
-    detachment,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Awakened Dynasty'],
     turn: TURN.either,
     phase: [PHASE.fight],
     fluff: `The Necrons strike with data-augmented
@@ -52,10 +58,10 @@ equipped by models in your unit by 1.`,
     restrictions: ``,
   },
   {
-    name: "PROTOCOL OF THE CONQUERING TYRANT",
+    name: 'PROTOCOL OF THE CONQUERING TYRANT',
     cost: 1,
-    type: TYPE["Battle Tactic"],
-    detachment,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Awakened Dynasty'],
     turn: TURN.your,
     phase: [PHASE.shooting],
     fluff: `The legions employ the strategies of their
@@ -76,10 +82,10 @@ range instead.`,
     restrictions: ``,
   },
   {
-    name: "PROTOCOL OF THE UNDYING LEGIONS",
+    name: 'PROTOCOL OF THE UNDYING LEGIONS',
     cost: 1,
-    type: TYPE["Strategic Ploy"],
-    detachment,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Awakened Dynasty'],
     turn: TURN.either,
     phase: [PHASE.shooting, PHASE.fight],
     fluff: `At a hissing static signal, nanoscarabs
@@ -101,10 +107,10 @@ reanimates D3+1 wounds instead.`,
     restrictions: ``,
   },
   {
-    name: "PROTOCOL OF THE SUDDEN STORM",
+    name: 'PROTOCOL OF THE SUDDEN STORM',
     cost: 1,
-    type: TYPE["Strategic Ploy"],
-    detachment,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Awakened Dynasty'],
     turn: TURN.your,
     phase: [PHASE.movement],
     fluff: `Arcing energies leap from one Necron unit
@@ -122,10 +128,10 @@ Advance rolls made for your unit.`,
     restrictions: ``,
   },
   {
-    name: "PROTOCOL OF THE VENGEFUL STARS",
+    name: 'PROTOCOL OF THE VENGEFUL STARS',
     cost: 1,
-    type: TYPE["Strategic Ploy"],
-    detachment,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Awakened Dynasty'],
     turn: TURN.opponents,
     phase: [PHASE.shooting],
     fluff: `In response to enemy attack, criss-cross
