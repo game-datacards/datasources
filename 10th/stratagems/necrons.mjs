@@ -1,4 +1,4 @@
-import { TURN, TYPE, PHASE } from './CONSTANTS.mjs';
+import { PHASE, TURN, TYPE } from './CONSTANTS.mjs';
 
 const detachment = {
   'Awakened Dynasty': 'Awakened Dynasty',
@@ -16,22 +16,11 @@ const template = [
     detachment: detachment['Awakened Dynasty'],
     turn: TURN.either,
     phase: [PHASE.any],
-    fluff: `Necron rulers possess sophisticated
-self-repair systems that can reknit their
-corporeal forms so they can once more
-command their legions.`,
+    fluff: `Necron rulers possess enhanced self-repair systems.`,
     when: `Any phase.`,
-    target: `One Necrons Infantry
-Character model from your army that
-was just destroyed.`,
-    effect: `Set your model back up on the
-battlefield as close as possible to where
-it was destroyed and more than 1" away
-from all enemy models, with half of its
-starting number of wounds remaining.`,
-    restrictions: `Each model can only
-be targeted with this Stratagem once
-per battle.`,
+    target: `One NECRONS INFANTRY CHARACTER model from your army that was just destroyed. You can use this Stratagem on that model even though it was just destroyed.`,
+    effect: `At the end of the phase, set your model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with half of its starting number of wounds remaining.`,
+    restrictions: `Each model can only be targeted with this Stratagem once per battle.`,
   },
   {
     name: 'PROTOCOL OF THE HUNGRY VOID',
@@ -40,21 +29,10 @@ per battle.`,
     detachment: detachment['Awakened Dynasty'],
     turn: TURN.either,
     phase: [PHASE.fight],
-    fluff: `The Necrons strike with data-augmented
-accuracy, their murderous attacks as
-inescapable as the killing cold of space.`,
+    fluff: `Necrons strike with data-augmented accuracy.`,
     when: `Fight phase.`,
-    target: `One Necrons unit from your
-army that has not been selected to fight
-this phase.`,
-    effect: `Until the end of the phase, add
-1 to the Strength characteristic of melee
-weapons equipped by models in your
-unit. In addition, If a Necrons Character
-is leading your unit, until the end of the
-phase, improve the Armour Penetration
-characteristic of melee weapons
-equipped by models in your unit by 1.`,
+    target: `One NECRONS unit from your army that has not been selected to fight this phase.`,
+    effect: `Until the end of the phase, add 1 to the Strength characteristic of melee weapons equipped by models in your unit. In addition, If a NECRONS CHARACTER is leading your unit, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1. (this is not cumulative with any other modifiers that improve Armour Penetration].`,
     restrictions: ``,
   },
   {
@@ -64,21 +42,10 @@ equipped by models in your unit by 1.`,
     detachment: detachment['Awakened Dynasty'],
     turn: TURN.your,
     phase: [PHASE.shooting],
-    fluff: `The legions employ the strategies of their
-masters in perfect synchronicity, laying
-down hails of mechanically coordinated fire.`,
+    fluff: `The legions employ the strategies of their masters in perfect synchronicity, laying down hails of mechanically coordinated fire.`,
     when: `Your Shooting phase.`,
-    target: `One Necrons unit from your
-army that has not been selected to shoot
-this phase.`,
-    effect: `Until the end of the phase, each
-time a model in your unit makes an attack
-that targets a unit within half of the firing
-weapon’s range, you can re-roll the Wound
-roll. If a Necrons Character is leading
-your unit, until the end of the phase, this
-effect applies at the firing weapon’s full
-range instead.`,
+    target: `One NECRONS unit from your army that has not been selected to shoot this phase.`,
+    effect: `Until the end of the phase, each time a model in your unit makes an attack that targets a unit within half range, re-roll a Hit roll of 1. If a NECRONS CHARACTER is leading your unit, until the end of the phase, you can re-roll the Hit roll for that attack instead.`,
     restrictions: ``,
   },
   {
@@ -86,24 +53,12 @@ range instead.`,
     cost: 1,
     type: TYPE['Strategic Ploy'],
     detachment: detachment['Awakened Dynasty'],
-    turn: TURN.either,
+    turn: TURN.opponents,
     phase: [PHASE.shooting, PHASE.fight],
-    fluff: `At a hissing static signal, nanoscarabs
-are released in boiling black clouds
-that whirl about the legions and effect
-constant repairs.`,
-    when: `Your opponent’s Shooting phase or
-the Fight phase, just after an enemy unit
-has resolved its attacks.`,
-    target: `One Necrons unit from your
-army that had one or more of its models
-destroyed as a result of the attacking
-unit’s attacks.`,
-    effect: `Your unit activates its
-Reanimation Protocols and reanimates
-D3 wounds. When doing so, if a Necrons
-Character is leading your unit, your unit
-reanimates D3+1 wounds instead.`,
+    fluff: `Nanoscarabs are released in boiling black clouds that whirl about the legions and effect rapid repairs`,
+    when: `Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has resolved its attacks.`,
+    target: `One NECRONS unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.`,
+    effect: `Your unit activates its Reanimation Protocols and reanimates D3 wounds (or D3+1 wounds if a NECRONS CHARACTER is leading your unit].`,
     restrictions: ``,
   },
   {
@@ -113,47 +68,101 @@ reanimates D3+1 wounds instead.`,
     detachment: detachment['Awakened Dynasty'],
     turn: TURN.your,
     phase: [PHASE.movement],
-    fluff: `Arcing energies leap from one Necron unit
-to the next, lending speed to their limbs
-and causing their eye lenses to blaze.`,
+    fluff: `Arcing energies leap from one Necron to the next, lending them unnatural speed and surety`,
     when: `Your Movement phase.`,
-    target: `One Necrons unit from
-your army.`,
-    effect: `Until the end of the turn, ranged
-weapons equipped by models in your unit
-have the [ASSAULT] ability. In addition, if a
-Necrons Character is leading your unit,
-until the end of the phase, you can re-roll
-Advance rolls made for your unit.`,
+    target: `One NECRONS unit from your army.`,
+    effect: `Until the end of the turn, ranged weapons equipped by models in your unit have the [ASSAULT] ability. In addition, if a NECRONS CHARACTER is leading your unit, until the end of the phase, you can re-roll Advance rolls made for your unit.`,
     restrictions: ``,
   },
   {
     name: 'PROTOCOL OF THE VENGEFUL STARS',
-    cost: 1,
+    cost: 2,
     type: TYPE['Strategic Ploy'],
     detachment: detachment['Awakened Dynasty'],
     turn: TURN.opponents,
     phase: [PHASE.shooting],
-    fluff: `In response to enemy attack, criss-cross
-fire leaps from the Necron ranks, forming
-a blazing corona of deadly energy from
-which there can be no escape.`,
-    when: `Your opponent’s Shooting phase,
-just after an enemy unit has resolved
-its attacks.`,
-    target: `One Necrons unit from your
-army that had one or more of its models
-destroyed as a result of the attacking
-unit’s attacks.`,
-    effect: `Your unit can shoot as if it were
-your Shooting phase, but it must target
-the enemy unit that just attacked it, and
-can only do so if that enemy unit is an
-eligible target. In addition, if a Necrons
-Character is leading your unit, until
-the end of the phase, ranged weapons
-equipped by models in your unit have the
-[IGNORES COVER] ability. `,
+    fluff: `Criss-crossfire leaps from the Necron ranks, forming a blazing corona of deadly energy to punish those who dare threaten the indignant nobility's legions.`,
+    when: `Your opponent’s Shooting phase, just after an enemy unit destroys a NECRONS unit from your army.`,
+    target: `One NECRONS CHARACTER unit from your army that was within 6" of that NECRONS unit when it was destroyed.`,
+    effect: `After the attacking unit has resolved its attacks, your unit can shoot as if it were your Shooting phase, but it must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.`,
+    restrictions: ``,
+  },
+  {
+    name: 'MASKS OF DEATH',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Annihilation Legion'],
+    turn: TURN.opponents,
+    phase: [PHASE.shooting, PHASE.fight],
+    fluff: `Wreathed in tendrils of transdimensional shadow that intensify their deathly visages, these killing machines evoke such terror that steady aims tremble and blade arms are sapped of strength.`,
+    when: `Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.`,
+    target: `One DESTROYER CULT or FLAYED ONES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.`,
+    effect: `Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.`,
+    restrictions: ``,
+  },
+  {
+    name: 'THE SPOOR OF FRAILTY',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Annihilation Legion'],
+    turn: TURN.your,
+    phase: [PHASE.shooting, PHASE.fight],
+    fluff: `Where one foe falls, logic dictates all others must follow. Where blood is shed, ever must more flow.`,
+    when: `Your Shooting phase or the Fight phase.`,
+    target: `One DESTROYER CULT or FLAYED ONES unit from your army that has not been selected to shoot or fight this phase.`,
+    effect: `Until the end of the phase, each time a model from your unit makes an attack that targets a unit below Starting Strength, add 1 to the Hit roll. If the target is Below Half-strength, add 1 to the Wound roll as well.`,
+    restrictions: ``,
+  },
+  {
+    name: 'MURDEROUS REANIMATION',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Annihilation Legion'],
+    turn: TURN.either,
+    phase: [PHASE.fight],
+    fluff: `Through some quirk of their kind's shared insanity, a spark of gruesome satisfaction surges through them with every enemy life snuffed out, triggering quiescent power reserves that drive them onwards.`,
+    when: `Fight phase.`,
+    target: `One DESTROYER CULT or FLAYED ONES unit from your army that has just destroyed an enemy unit, or just caused an enemy unit that was not Below Half-strength to become Below Half-strength.`,
+    effect: `Your unit’s Reanimation Protocols activate.`,
+    restrictions: ``,
+  },
+  {
+    name: 'PITILESS HUNTERS',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Annihilation Legion'],
+    turn: TURN.either,
+    phase: [PHASE.fight],
+    fluff: `Driven into a state of hyperaggression, an Annihilation Legion's most eager hunters plunge into their prey's midst to maximise their butchery.`,
+    when: `Fight phase.`,
+    target: `One DESTROYER CULT or FLAYED ONES unit from your army that has not been selected to fight this phase.`,
+    effect: `Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6" instead of up to 3".`,
+    restrictions: ``,
+  },
+  {
+    name: 'BLOOD-FUELLED CRUELTY',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Annihilation Legion'],
+    turn: TURN.opponents,
+    phase: [PHASE.movement],
+    fluff: `Whatever strange afflictions eat away at the sanity of Destroyers and Flayed Ones, mercy is not one of them.`,
+    when: `Your opponent’s Movement phase, just after an enemy unit ends a Fall Back move.`,
+    target: `One DESTROYER CULT or FLAYED ONES unit from your army that started the phase within Engagement Range of that enemy unit.`,
+    effect: `Roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers 3 mortal wounds. Your unit can then make a Normal move, but must end that move as close as possible to that enemy unit.`,
+    restrictions: ``,
+  },
+  {
+    name: 'INSANITY’S IRE',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Annihilation Legion'],
+    turn: TURN.opponents,
+    phase: [PHASE.shooting],
+    fluff: `To strike down one horror is merely to draw the rest of the pack's insane and murderous focus.`,
+    when: `Your opponent’s Shooting phase, just after an enemy unit has shot.`,
+    target: `One DESTROYER CULT or FLAYED ONES unit from your army that had one or more of its models destroyed by the attacking unit’s attacks.`,
+    effect: `Your unit can make a Normal move, but must end that move as close as possible to that enemy unit.`,
     restrictions: ``,
   },
 ];
