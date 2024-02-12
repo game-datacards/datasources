@@ -16,12 +16,13 @@
     "xml2js": "^0.6.2"
   },
   "scripts": {
-    "10th": "yarn generate-10th && yarn prettier-10th && yarn prettier-10th-json && yarn validate",
+    "10th": "yarn generate-10th && yarn prettier-10th && yarn prettier-10th-json && yarn validate && yarn prettier-10th-errors",
     "generate-csv": "./40k/start.sh",
     "generate-10th": "node ./10th/to_gdc_format.mjs && node ./10th/to_json_format.mjs",
     "prettier-10th": "prettier --write ./10th/gdc/.",
+    "prettier-temp": "prettier --write ./10th/temp/.",
     "prettier-10th-json": "prettier --write ./10th/json/.",
-    "prettier-10th-errors": "prettier --write ./10th/errors/.",
+    "prettier-10th-errors": "prettier --write ./10th/validation/errors/.",
     "validate": "node ./10th/validate.mjs"
   },
   "devDependencies": {

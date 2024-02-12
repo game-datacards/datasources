@@ -44,9 +44,9 @@ them supernatural speed and ferocity.`,
     target: `One Legiones Daemonica unit
 from your army that is within your army’s
 Shadow of Chaos.`,
-    effect: `Until the end of the phase, your
-unit is eligible to declare a charge even if it
-Advanced this turn`,
+    effect: ` Until the end of the phase, 
+    your unit is eligible to declare a
+    charge in a turn in which it Advanced.’`,
     restrictions: ``,
   },
   {
