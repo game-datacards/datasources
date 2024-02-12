@@ -25,13 +25,13 @@ function parseAndLog(json) {
   if (!data) {
     console.log(validate.errors); // error message from the last parse call
     fs.writeFileSync(
-      `./validation/errors/${json.name}-errors.json`,
+      `./10th/validation/errors/${json.name.toLowerCase().replaceAll(' ', '-')}-errors.json`,
       JSON.stringify(validate.errors),
     );
   } else {
     console.log("No errors");
-    if (fs.existsSync(`./validation/errors/${json.name}-errors.json`)) {
-      fs.unlinkSync(`./validation/errors/${json.name}-errors.json`);
+    if (fs.existsSync(`./10th/validation/errors/${json.name}-errors.json`)) {
+      fs.unlinkSync(`./10th/validation/errors/${json.name}-errors.json`);
     }
   }
 }
