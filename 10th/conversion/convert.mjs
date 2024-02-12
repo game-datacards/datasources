@@ -130,36 +130,36 @@ function extractPDF(name, max = 0, start = 6) {
   }
 }
 
-extractPDF('deathwatch');
-extractPDF('deathguard');
-extractPDF('thousandsons');
-extractPDF('worldeaters');
-extractPDF('chaosdaemons', 0, 7);
-extractPDF('chaos_spacemarines');
-extractPDF('chaosknights');
-// extractPDF('spacemarines', 0, 218);
+// extractPDF('deathwatch');
+// extractPDF('deathguard');
+// extractPDF('thousandsons');
+// extractPDF('worldeaters');
+// extractPDF('chaosdaemons', 0, 7);
+// extractPDF('chaos_spacemarines');
+// extractPDF('chaosknights');
+// // extractPDF('spacemarines', 0, 218);
 
-extractPDF('bloodangels');
-extractPDF('darkangels');
-extractPDF('blacktemplar');
+// extractPDF('bloodangels');
+// extractPDF('darkangels');
+// extractPDF('blacktemplar');
 extractPDF('spacewolves');
 
-// // // extractPDF('titanlegions');
-extractPDF('greyknights');
-extractPDF('adeptasororitas');
-extractPDF('adeptusmechanicus');
-extractPDF('adeptuscustodes');
-extractPDF('agents', 0, 2);
-extractPDF('astramilitarum');
-extractPDF('imperialknights');
+// // // // extractPDF('titanlegions');
+// extractPDF('greyknights');
+// extractPDF('adeptasororitas');
+// extractPDF('adeptusmechanicus');
+// extractPDF('adeptuscustodes');
+// extractPDF('agents', 0, 2);
+// extractPDF('astramilitarum');
+// extractPDF('imperialknights');
 
-extractPDF('tau');
-extractPDF('aeldari');
-extractPDF('drukhari');
-// extractPDF('necrons');
-// extractPDF('tyranids');
-extractPDF('gsc');
-extractPDF('orks');
-extractPDF('votann');
-// extractPDF('titan', 0, 2);
-extractPDF('unaligned', 0, 0);
+// extractPDF('tau');
+// extractPDF('aeldari');
+// extractPDF('drukhari');
+// // extractPDF('necrons');
+// // extractPDF('tyranids');
+// extractPDF('gsc');
+// extractPDF('orks');
+// extractPDF('votann');
+// // extractPDF('titan', 0, 2);
+// extractPDF('unaligned', 0, 0);
