@@ -14,10 +14,10 @@ const readFile = (file) => {
   return res;
 };
 
-const newCodexFile = readFile("imports/imported_necrons.json");
+const newCodexFile = readFile("./10th/imports/imported_necrons.json");
 const newCodexUnits = sortObj(JSON.parse(newCodexFile));
 
-const oldCodexFile = readFile("gdc/necrons.json");
+const oldCodexFile = readFile("./10th/gdc/necrons.json");
 const oldCodexUnits = sortObj(JSON.parse(oldCodexFile));
 
 let foundUnits = [];
