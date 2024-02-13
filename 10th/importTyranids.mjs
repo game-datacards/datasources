@@ -14,10 +14,10 @@ const readFile = (file) => {
   return res;
 };
 
-const newTyranidsFile = readFile("imported_tyranids.json");
+const newTyranidsFile = readFile("./10th/imports/imported_tyranids.json");
 const newTyranids = sortObj(JSON.parse(newTyranidsFile));
 
-const oldTyranidsFile = readFile("gdc/tyranids.json");
+const oldTyranidsFile = readFile("./10th/gdc/tyranids.json");
 const oldTyranids = sortObj(JSON.parse(oldTyranidsFile));
 
 let foundUnits = [];
