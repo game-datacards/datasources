@@ -14,10 +14,10 @@ const readFile = (file) => {
   return res;
 };
 
-const newMarinesFile = readFile("imports/imported_spacemarines.json");
+const newMarinesFile = readFile("./10th/imports/imported_spacemarines.json");
 const newMarines = sortObj(JSON.parse(newMarinesFile));
 
-const oldMarinesFile = readFile("gdc/space_marines.json");
+const oldMarinesFile = readFile("./10th/gdc/space_marines.json");
 const oldMarines = sortObj(JSON.parse(oldMarinesFile));
 
 let foundUnits = [];
