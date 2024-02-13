@@ -16,14 +16,16 @@
     "xml2js": "^0.6.2"
   },
   "scripts": {
-    "10th": "yarn generate-10th && yarn prettier-10th && yarn prettier-10th-json && yarn validate && yarn prettier-10th-errors",
+    "10th": "yarn generate-10th && yarn import-codex && yarn update-points && node ./10th/to_json_format.mjs && yarn prettier-10th &&  yarn prettier-10th-json && yarn validate && yarn prettier-10th-errors",
     "generate-csv": "./40k/start.sh",
-    "generate-10th": "node ./10th/to_gdc_format.mjs && node ./10th/to_json_format.mjs",
+    "generate-10th": "node ./10th/to_gdc_format.mjs",
+    "import-codex": "node ./10th/importNecrons.mjs && node ./10th/importSpaceMarines.mjs  && node ./10th/importAdmech.mjs && node ./10th/importTyranids.mjs",
     "prettier-10th": "prettier --write ./10th/gdc/.",
     "prettier-temp": "prettier --write ./10th/temp/.",
     "prettier-10th-json": "prettier --write ./10th/json/.",
     "prettier-10th-errors": "prettier --write ./10th/validation/errors/.",
-    "validate": "node ./10th/validate.mjs"
+    "validate": "node ./10th/validate.mjs",
+    "update-points": "node ./10th/updatePoints.mjs"
   },
   "devDependencies": {
     "prettier": "^3.0.3"
