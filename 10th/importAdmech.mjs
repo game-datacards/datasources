@@ -17,9 +17,8 @@ const readFile = (file) => {
 const newCodexFile = readFile('./10th/imports/imported_admech.json');
 const newCodexUnits = sortObj(JSON.parse(newCodexFile));
 
-const oldCodexFile = readFile("./10th/gdc/adeptusmechanicus.json");
+const oldCodexFile = readFile('./10th/gdc/adeptusmechanicus.json');
 const oldCodexUnits = sortObj(JSON.parse(oldCodexFile));
-
 
 let foundUnits = [];
 let units = [];
@@ -47,9 +46,17 @@ newCodexUnits.category.cards.map((card, index) => {
 //   u.id = uuidv5(u.name, "142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e");
 //   console.log(u.name);
 // });
-
-oldCodexUnits.datasheets = units;
+const legendDatasheets = oldCodexUnits.datasheets.filter((unit) => {
+  if (unit.imperialArmour || unit.legends) {
+    return true;
+  }
+  return false;
+});
+oldCodexUnits.datasheets = [ ...units, ...legendDatasheets];
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-fs.writeFileSync(path.resolve(__dirname, `gdc/adeptusmechanicus.json`), JSON.stringify(sortObj(oldCodexUnits), null, 2));
+fs.writeFileSync(
+  path.resolve(__dirname, `gdc/adeptusmechanicus.json`),
+  JSON.stringify(sortObj(oldCodexUnits), null, 2)
+);
