@@ -45,6 +45,7 @@ for (var i = 0; i <= newTyranids.category.cards.length - 1; i++) {
 
 missingUnits.forEach((u) => {
   u.id = uuidv5(u.name, "142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e");
+  delete u.isCustom;
   console.log(u.name);
 });
 

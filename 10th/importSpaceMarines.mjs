@@ -44,7 +44,13 @@ newMarines.category.cards.map((card, index) => {
 //   console.log(u.name);
 // });
 
-oldMarines.datasheets = units;
+const legendDatasheets = oldMarines.datasheets.filter((unit) => {
+  if (unit.imperialArmour || unit.legends) {
+    return true;
+  }
+  return false;
+});
+oldMarines.datasheets = [ ...units, ...legendDatasheets];
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
