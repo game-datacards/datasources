@@ -943,12 +943,12 @@ const checkForManualFixes = (unit) => {
       ];
       break;
     case "Skathach Wraithknight":
-      unit.abilities.wargear = {
+      unit.abilities.wargear = [{
         name: "Scattershield",
         description: "The bearer has a 4+ invulnerable save.",
         showAbility: true,
         showDescription: true,
-      };
+      }];
       break;
     case "Skull Altar":
       unit.keywords = [
