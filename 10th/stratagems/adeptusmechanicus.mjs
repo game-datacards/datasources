@@ -1,151 +1,408 @@
-import { TURN, TYPE, PHASE } from "./CONSTANTS.mjs";
+import { PHASE, TURN, TYPE } from './CONSTANTS.mjs';
 
-const detachment = "Rad-Cohort";
+const detachment = {
+  'Rad-Cohort': 'Rad-Cohort',
+  'Skitarii Hunter Cohort': 'Skitarii Hunter Cohort',
+  'Data Psalm Conclave': 'Data Psalm Conclave',
+  'Explorator Maniple': 'Explorator Maniple',
+  'Cohort Cybernetica': 'Cohort Cybernetica',
+};
 
 const template = [
   {
-    name: "BALEFUL HALO",
-    cost: 1,
-    type: TYPE["Battle Tactic"],
-    detachment,
+    name: 'BALEFUL HALO',
+    cost: 2,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Rad-Cohort'],
     turn: TURN.either,
     phase: [PHASE.fight],
-    fluff: `A haze of deadly radiation hangs around
-the warriors of a Rad-Cohort, every
-exhalation they make adding to the
-isotopic fog, sapping the strength and
-stamina of those who are not inured to
-its effects.`,
-    when: `Fight phase, just after an enemy
-unit has selected its targets.`,
-    target: `One Adeptus Mechanicus unit
-from your army (excluding Vehicle units)
-that was selected as the target of one or
-more of that enemy unit’s attacks.`,
-    effect: `Until the end of the turn, each
-time an attack is made that targets your
-unit, subtract 1 from the Wound roll.`,
+    fluff: `By briefly unshielding the most corrosive or irradiated components of their being, the warriors of a Rad-Zone Corps can exhale on isotopic fog, sapping the strength of those not inured to its effects.`,
+    when: `Fight phase, just after an enemy unit has selected its targets.`,
+    target: `One ADEPTUS MECHANICUS unit from your army (excluding VEHICLE units) that was selected as the target of one or more of that enemy unit’s attacks. If that unit is BATTLELINE, you can also target one friendly SKITARII unit (excluding BATTLELINE units) within 6" of it.`,
+    effect: `Until the end of the turn, each time an attack is made that targets your unit, subtract 1 from the Wound roll.`,
     restrictions: ``,
   },
   {
-    name: "EXTINCTION ORDER",
+    name: 'EXTINCTION ORDER',
     cost: 1,
-    type: TYPE["Strategic Ploy"],
-    detachment,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Rad-Cohort'],
     turn: TURN.your,
     phase: [PHASE.command],
-    fluff: `As Tech-Priests order the purge of an area
-of the battlefield, rad-bombardments are
-redoubled in the hopes of turning it into
-a wasteland.`,
+    fluff: `As Tech-Priests order the purge of an area of the battlefield, rad-bombardments are redoubled in the hopes of turning it into a wasteland.`,
     when: `Your Command phase.`,
-    target: `One Tech-Priest model from
-your army and one objective marker
-within 24" of that model.`,
-    effect: `Roll one D6 for each enemy unit
-within range of that objective marker. On a
-4+, that unit suffers 1 mortal wound and it
-must take a Battle-shock test.`,
+    target: `One TECH-PRIEST model from your army and one objective marker within 24" of that model.`,
+    effect: `Roll one D6 for each enemy unit within range of that objective marker. On a 4+, that unit suffers 1 mortal wound and it must take a Battle-shock test.`,
     restrictions: ``,
   },
   {
-    name: "LETHAL DOSAGE",
+    name: 'LETHAL DOSAGE',
     cost: 2,
     type: TYPE.Wargear,
-    detachment,
+    detachment: detachment['Rad-Cohort'],
     turn: TURN.your,
     phase: [PHASE.shooting],
-    fluff: `Sanctified with the Tri-fold Litany, the
-most blessed power cells, fuel canisters
-and solid slugs have spent a decade
-in the oldest and most irradiated forge
-temple to certify their lethality.`,
+    fluff: `Tri-fold sanctified power cells, fue l canisters and solid slugs have spent a decade in the most irradiated forge temple to certify their lethality.`,
     when: `Your Shooting phase.`,
-    target: `One Adeptus Mechanicus
-unit from your army that has not been
-selected to shoot this phase.`,
-    effect: `Until the end of the phase,
-each time a model in your unit makes a
-ranged attack that targets an enemy unit
-(excluding Vehicle units), add 1 to the
-Wound roll.`,
+    target: `One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase.`,
+    effect: `Until the end of the phase, ranged weapons equipped by models in your unit have the [LETHAL HITS] ability.`,
     restrictions: ``,
   },
   {
-    name: "AGGRESSOR IMPERATIVE",
+    name: 'AGGRESSOR IMPERATIVE',
     cost: 1,
-    type: TYPE["Battle Tactic"],
-    detachment,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Rad-Cohort'],
+    turn: TURN.your,
+    phase: [PHASE.movement],
+    fluff: `The Skitarii feel the press of an invisible hand upon their minds as the Machine God drives them forward. Servos are pushed to their structural limits as fibre bundles fill with the boundless energy of the Motive Force and propel the faithful on an unstoppable crusade.`,
+    when: `Your Movement phase.`,
+    target: `One SKITARII unit from your army that has not been selected to move this phase. If that unit is BATTLELINE, you can also target one friendly SKITARII unit (excluding BATTLELINE units) within 6" of it.
+    `,
+    effect: `Until the end of the phase, each time one of those units Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6" to the Move characteristic of models in that unit.`,
+    restrictions: ``,
+  },
+  {
+    name: 'PRE-CALIBRATED PURGE SOLUTION',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Rad-Cohort'],
+    turn: TURN.your,
+    phase: [PHASE.shooting],
+    fluff: `Employing targeting data collated by a swarm of servo-skulls released over the enemy's battle lines, the Machine God’s faithful purge the foe stumbling amidst rad-scourged positions.`,
+    when: `Your Shooting phase.`,
+    target: `One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot this phase. If that unit is BATTLELINE, you can also target one friendly SKITARII unit (excluding BATTLELINE units) within 6" of it.
+    `,
+    effect: `Until the end of the phase, each time a model in one of those units makes a ranged attack, if the target of that attack is within your opponent’s deployment zone, you can re-roll the Hit roll.`,
+    restrictions: ``,
+  },
+  {
+    name: 'BULWARK IMPERATIVE',
+    cost: 2,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Rad-Cohort'],
+    turn: TURN.opponents,
+    phase: [PHASE.shooting],
+    fluff: `With a pulse of force-loaded wisdom, microactuators lock into bracing positions, reserve power cells are brought online and the Omnissiah's holy crusaders are bestowed with a sensation of sacred invulnerability.`,
+    when: `Your opponent’s Shooting phase, just after an enemy unit has selected its targets.`,
+    target: `One SKITARII unit from your army that was selected as the target of one or more of the attacking unit’s attacks. If that unit is BATTLELINE, you can also target one friendly SKITARII unit (excluding BATTLELINE units) within 6" of it.`,
+    effect: `Until the end of the phase, models in those units from your army have a 4+ invulnerable save.`,
+    restrictions: ``,
+  },
+  {
+    name: 'BIONIC ENDURANCE',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Skitarii Hunter Cohort'],
+    turn: TURN.either,
+    phase: [PHASE.shooting, PHASE.fight],
+    fluff: `Between their multi-layered bionics and their fanatical faith in the indomitability of these machine-blessings, the most augmented of Skitarii are nigh-impossible to lay low.`,
+    when: `Your opponent’s Shooting phase orthe Fight phase, just after an enemy unit has selected its targets.`,
+    target: `One SICARIAN, PTERAXII or SYDONIAN unit from your army that was selected as the target of one or more of the attacking unit’s attacks.
+    `,
+    effect: `Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.`,
+    restrictions: ``,
+  },
+  {
+    name: 'BBINHARIC OFFENCE',
+    cost: 2,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Skitarii Hunter Cohort'],
+    turn: TURN.either,
+    phase: [PHASE.shooting, PHASE.fight],
+    fluff: `Employing directed binharic entanglement to coordinate their motions, paired squads of Skitarii attack with eerie and lethal synchronicity.`,
+    when: `The start of your Shooting phase or the start of the Fight phase.`,
+    target: `Two SKITARII units from your army that have not been selected to shoot or fight this phase, and one enemy unit.`,
+    effect: `Until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in both of your units by 1.`,
+    restrictions: `Until the end of the phase, each time a model in either of your units makes an attack, it can only target that enemy unit (and only if it is an eligible target].`,
+  },
+  {
+    name: 'EXPEDITED PURGE PROTOCOL',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Skitarii Hunter Cohort'],
     turn: TURN.your,
     phase: [PHASE.charge],
-    fluff: `The Skitarii feel the press of an invisible
-hand upon their minds as the Machine
-God drives them forward. Servos are
-pushed to their structural limits as fibre
-bundles fill with the boundless energy of
-the Motive Force and propel the faithful on
-an unstoppable crusade.`,
+    fluff: `Employing directed binharic entanglement to coordinate their motions, paired squads of Skitarii attack with eerie and lethal synchronicity.`,
     when: `Your Charge phase.`,
-    target: `One Skitarii unit from your army
-that Advanced this turn.`,
-    effect: `Until the end of the turn, your unit
-is eligible to declare a charge even though
-it Advanced this turn.`,
-    restrictions: `You can only use this
-Stratagem if the Conqueror Imperative is
-active for your army.`,
-  },
-  {
-    name: "VENGEFUL FALLOUT",
-    cost: 1,
-    type: TYPE["Strategic Ploy"],
-    detachment,
-    turn: TURN.opponents,
-    phase: [PHASE.shooting],
-    fluff: `The sentence for those who dare strike
-at the Tech-Priests' holy creations has
-been carefully prepared in advance and
-it can be unleashed with an anger born of
-fanatical faith.`,
-    when: `Your opponent’s Shooting phase,
-just after an enemy unit has resolved
-its attacks.`,
-    target: `One Adeptus Mechanicus unit
-from your army that was selected as
-the target of one or more of that enemy
-unit’s attacks.`,
-    effect: `Your unit can shoot as if it were
-your Shooting phase, but it must target
-only that enemy unit when doing so, and
-it can only do so if that enemy unit is an
-eligible target. After your unit has finished
-making these attacks, it is not eligible to
-shoot again this turn.`,
+    target: `One SKITARII unit from your army.`,
+    effect: `Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.`,
     restrictions: ``,
   },
   {
-    name: "BULWARK IMPERATIVE",
+    name: ' ISOLATE AND DESTROY',
     cost: 1,
-    type: TYPE["Battle Tactic"],
-    detachment,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Skitarii Hunter Cohort'],
+    turn: TURN.either,
+    phase: [PHASE.shooting],
+    fluff: `The swiftest hunters seek to engage foes with the equations of war in their favour, isolating their quarry and dispatching it with ruthless efficiency.`,
+    when: `Your Shooting phase.`,
+    target: `One SICARIAN, PTERAXII, SYDONIAN,
+    IRONSTRIDER BALLISTARII Or SKITARII MOUNTED unit from your army that has not been selected to shoot this phase.`,
+    effect: `Until the end of the phase, each time a model in your unit makes an attack, if there are no other enemy units within 6" of the unit targeted by that attack, add 1 to the Wound roll.`,
+    restrictions: ``,
+  },
+  {
+    name: 'SHROUD PROTOCOLS',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Skitarii Hunter Cohort'],
     turn: TURN.opponents,
     phase: [PHASE.shooting],
-    fluff: `The warrior wisdom of experienced
-Reductors is force-loaded into the Skitarii’s
-minds. Each pulse of data bestows a
-sensation of sacred invulnerability upon
-the Tech-Priests’ soldiers.`,
-    when: `Your opponent’s Shooting phase,
-just after an enemy unit has selected
-its targets.`,
-    target: `One Skitarii unit from your army
-that was selected as the target of one or
-more of that enemy unit’s attacks.`,
-    effect: `Until the end of the turn, models
-in your unit have a 4+ invulnerable save.
-RESTRICTIONS: You can only use this
-Stratagem if the Protector Imperative is
-active for your army.`,
+    fluff: `When Skitarii Hunter Cohorts march to war, they do so beneath a shrouding squall of cyber-static and filament-heavy banks of sacred incense.`,
+    when: `Your opponent’s Shooting phase, just after an enemy unit has selected its targets.`,
+    target: `One SKITARII INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.`,
+    effect: `Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 12".`,
+    restrictions: ``,
+  },
+  {
+    name: 'PROGRAMMED WITHDRAWAL',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Skitarii Hunter Cohort'],
+    turn: TURN.opponents,
+    phase: [PHASE.fight],
+    fluff: `Taking direct control of their cybernetic soldiers’ manoeuvres, the cohort’s commander sees their withdrawal carried out with such precision that they can be pressed back into service from the most efficacious of attack vectors.`,
+    when: `End of your opponent’s Fight phase.`,
+    target: `Up to two SICARIAN units from your army, or one SKITARII INFANTRY or SKITARII MOUNTED unit from your army.`,
+    effect: `Remove those units from the battlefield and place them into Strategic Reserves.`,
+    restrictions: `Each unit targeted with this Stratagem must be more than 3" away from all enemy units.`,
+  },
+  {
+    name: 'INCANTATION OF THE IRON SOUL',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Data Psalm Conclave'],
+    turn: TURN.either,
+    phase: [PHASE.any],
+    fluff: `Raising their voices in binharic praise, the Machine God's disciples bolster their spirits - as well as those that inhabit their augmentations - with iron surety.`,
+    when: `Any phase, just after you allocate a mortal wound to a CULT MECHANICUS model from your army.`,
+    target: `That CULT MECHANICUS model’s unit.`,
+    effect: `Until the end of the phase, CULT MECHANICUS models in your unit have the Feel No Pain 4+ ability against mortal wounds.`,
+    restrictions: ``,
+  },
+  {
+    name: 'CHANT OF THE REMORSELESS FIST',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Data Psalm Conclave'],
+    turn: TURN.either,
+    phase: [PHASE.fight],
+    fluff: `In spitting out a staccato chant to the Motive Force, the faithful warriors of the Cult Mechanicus are filled with merciless surety as well as intent.`,
+    when: `Fight phase.`,
+    target: `One CULT MECHANICUS unit from your army that has not been selected to fight this phase.`,
+    effect: `Until the end of the phase, each time a CULT MECHANICUS model in your unit makes a melee attack, add 1 to the Wound roll.`,
+    restrictions: ``,
+  },
+  {
+    name: 'VERSE OF VENGEANCE',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Data Psalm Conclave'],
+    turn: TURN.either,
+    phase: [PHASE.fight],
+    fluff: `Rousing code in binharic duometer incites fury for the lost fragments of technological lore. In the grip of vengeance, the devoted extend their remaining functions for one last act of retribution.`,
+    when: `Fight phase, just after an enemy unit has selected its targets.`,
+    target: `One CULT MECHANICUS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.`,
+    effect: `Until the end of the phase, each time a CULT MECHANICUS model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.`,
+    restrictions: ``,
+  },
+  {
+    name: 'TRIBUTE OF EMPHATIC VENERATION',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Data Psalm Conclave'],
+    turn: TURN.your,
+    phase: [PHASE.movement],
+    fluff: `A cacophonous chorale pours from the emitters and augmented throats of the Cult Mechanicus’ faithful, venerating the Omnissiah in deafening and disconcerting frequencies of praise.`,
+    when: `Start of your Movement phase.`,
+    target: `One CULT MECHANICUS unit from your army and one enemy unit within 18" of it.`,
+    effect: `That enemy unit must take a Battle-shock test. If that test is failed, until the start of your next Command phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll.`,
+    restrictions: ``,
+  },
+  {
+    name: 'LITANY OF THE ELECTROMANCER',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Data Psalm Conclave'],
+    turn: TURN.your,
+    phase: [PHASE.shooting],
+    fluff: `Summoning the spark of the Machine God's divinity that burns within them, the Omnissiah’s faithful manifest blazing auras of energy that lay low the unbeliever.`,
+    when: `Your Shooting phase.`,
+    target: `One CULT MECHANICUS unit from your army.`,
+    effect: `Roll one D6 for each enemy unit within 6" of one or more CULT MECHANICUS models in your unit, adding 1 to the result if that model is an ELECTRO-PRIEST. On a 5+, that enemy unit suffers D3 mortal wounds.`,
+    restrictions: ``,
+  },
+  {
+    name: 'LUMINESCENT BLESSING',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Data Psalm Conclave'],
+    turn: TURN.opponents,
+    phase: [PHASE.shooting],
+    fluff: `As the cohorts of the Omnissiah recite their dazzling consecration, energy is redirected to infuse masterwork bionics and even the lambent glow of protective fields ignites in a halo of divine defence.`,
+    when: `Your opponent’s Shooting phase, just after an enemy unit has selected its targets.`,
+    target: `One CULT MECHANICUS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.`,
+    effect: `Until the end of the phase, CULT MECHANICUS models in your unit have a 4+ invulnerable save.`,
+    restrictions: ``,
+  },
+  {
+    name: 'CACHED ACQUISITION',
+    cost: 1,
+    type: TYPE['Epic Deed'],
+    detachment: detachment['Explorator Maniple'],
+    turn: TURN.either,
+    phase: [PHASE.any],
+    fluff: `Death is irrelevant compared to the hallowed duty of securing the Omnissiah's knowledge for future retrieval.`,
+    when: `Any phase.`,
+    target: `One ADEPTUS MECHANICUS unit from your army that was just destroyed while it was within range of an objective marker you controlled. You can use this Stratagem on that unit even though it was just destroyed.`,
+    effect: `That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.`,
+    restrictions: ``,
+  },
+  {
+    name: 'PRIORITY RECLAMATION',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Explorator Maniple'],
+    turn: TURN.either,
+    phase: [PHASE.fight],
+    fluff: `Retrieval of the most sacred and ancient fragments of technology is embedded in loops of alpha-logic.`,
+    when: `Fight phase, just before an ADEPTUS MECHANICUS unit from your army Consolidates.`,
+    target: `That ADEPTUS MECHANICUS unit.`,
+    effect: `Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6" instead of up to 3", provided your unit ends that Consolidation move within range of your Acquisition objective marker.`,
+    restrictions: `You cannot target a unit with this Stratagem if it is within 3" of one or more enemy units.`,
+  },
+  {
+    name: 'INFOSLAVE SKULL',
+    cost: 1,
+    type: TYPE.Wargear,
+    detachment: detachment['Explorator Maniple'],
+    turn: TURN.your,
+    phase: [PHASE.command],
+    fluff: `Mono-task infoslave skulls range ahead to assess potential sites that must be investigated.`,
+    when: `Your Command phase.`,
+    target: `One TECH-PRIEST model from your army and one objective marker within 24" of that model (excluding your Acquisition objective marker].`,
+    effect: `Until the start of your next Command phase, that objective marker is also considered to be one of your Acquisition objective markers for all rules purposes.`,
+    restrictions: ``,
+  },
+  {
+    name: 'AUTO-ORACULAR RETRIEVAL',
+    cost: 2,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Explorator Maniple'],
+    turn: TURN.your,
+    phase: [PHASE.shooting],
+    fluff: `With a surge of targeting data from the war engine as its hatches slam open, the warriors inside pour out with weapons already trained unerringly on the foe.`,
+    when: `Your Shooting phase.`,
+    target: `One ADEPTUS MECHANICUS unit from your army that disembarked from a TRANSPORT this turn.`,
+    effect: `Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit within range of your Acquisition objective marker, add 1 to the Wound roll.`,
+    restrictions: ``,
+  },
+  {
+    name: 'INCENSE EXHAUSTS',
+    cost: 1,
+    type: TYPE.Wargear,
+    detachment: detachment['Explorator Maniple'],
+    turn: TURN.opponents,
+    phase: [PHASE.shooting],
+    fluff: `The machine spirits of sanctified war engines can be entreated to release clouds of incense laced with radioactive particles, veiling the faithful from the foe.`,
+    when: `Your opponent’s Shooting phase, just after an enemy unit has selected its targets.`,
+    target: `One ADEPTUS MECHANICUS INFANTRY unit
+    from your army that was selected as the target of one or more of the attacking unit’s attacks, and one friendly ADEPTUS MECHANICUS SMOKE unit within 6" of it.`,
+    effect: `Until the end of the phase, both of those units have the Stealth ability and the Benefit of Cover.`,
+    restrictions: ``,
+  },
+  {
+    name: 'REACTIVE SAFEGUARD',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Explorator Maniple'],
+    turn: TURN.opponents,
+    phase: [PHASE.charge],
+    fluff: `Holy data must be hoarded at all costs, and thickly armoured war engines offer swift and secure vaults.`,
+    when: `Your opponent’s Charge phase, just after an enemy unit has declared a charge.`,
+    target: `One ADEPTUS MECHANICUS INFANTRY
+    unit from your army within range of your Acquisition objective marker that was selected as a target of that charge, and one friendly ADEPTUS MECHANICUS TRANSPORT.`,
+    effect: `Your unit can embark within that TRANSPORT.`,
+    restrictions: `Every model in your unit must be within 3" of that TRANSPORT and there must be sufficient transport capacity to embark the entire unit.`,
+  },
+  {
+    name: 'MOTIVE IMPERATIVE',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Cohort Cybernetica'],
+    turn: TURN.your,
+    phase: [PHASE.command],
+    fluff: `Intensifying the locomotive protocols of a war engine - while not dishonouring its machine spirit - is a millennia-proven method to hasten the foe’s demise.`,
+    when: `Your Command phase.`,
+    target: `One ADEPTUS MECHANICUS VEHICLE unit from your army.`,
+    effect: `Until the start of your next Command phase, add 3" to the Move characteristic of models in your unit and add 1 to Advance and Charge rolls made for it.`,
+    restrictions: ``,
+  },
+  {
+    name: 'AUTO-DIVINATORY TARGETING',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Cohort Cybernetica'],
+    turn: TURN.your,
+    phase: [PHASE.command],
+    fluff: `Encoded with the schemata of the enemy's fortified battle lines and auto-codified vectors of attack, the Cohort's war engines are perfectly aligned to deliver the Machine God's wrath.`,
+    when: `Your Command phase.`,
+    target: `One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army, and one objective marker.`,
+    effect: `Until the start of your next Command phase, ranged weapons equipped by models in your unit have a Ballistic Skill characteristic of 3+ and the [IGNORES COVER] ability, but they can only target units within range of the selected objective marker.`,
+    restrictions: ``,
+  },
+  {
+    name: 'MACHINE SPIRIT RESURGENT',
+    cost: 1,
+    type: TYPE['Epic Deed'],
+    detachment: detachment['Cohort Cybernetica'],
+    turn: TURN.your,
+    phase: [PHASE.command],
+    fluff: `To invigorate the failing machine spirit of a damaged vehicle is a sacred task, greatly aided by certain data-hymns transmitted in the correct sequence.`,
+    when: `Your Command phase.`,
+    target: `One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army that is below its Starting Strength.`,
+    effect: `Until the start of your next Command phase, each time a model in your unit makes an attack, you can re-roll the Hit roll. If your unit is Below Half-strength, you can re-roll the Wound roll as well.`,
+    restrictions: ``,
+  },
+  {
+    name: 'MACHINE SUPERIORITY',
+    cost: 1,
+    type: TYPE['Epic Deed'],
+    detachment: detachment['Cohort Cybernetica'],
+    turn: TURN.your,
+    phase: [PHASE.command],
+    fluff: `Let the unenlightened be cast down! Let all feel the fire of the Motive Force, and may the sacred engines crunch over their weak bones without impediment!`,
+    when: `Your Command phase.`,
+    target: `One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army.`,
+    effect: `Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back and you can ignore any or all modifiers to its characteristics and/or to any roll or test made for it (excluding modifiers to saving throws).`,
+    restrictions: ``,
+  },
+  {
+    name: 'TRANSCENDENT COGITATION',
+    cost: 1,
+    type: TYPE['Strategic Ploy'],
+    detachment: detachment['Cohort Cybernetica'],
+    turn: TURN.your,
+    phase: [PHASE.command],
+    fluff: `Enhanced static chants can briefly raise a war engine's machine spirits to exultant heights of cogitation and multi-tactical capacity.`,
+    when: `Your Command phase.`,
+    target: `One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army.`,
+    effect: `Until the start of your next Command phase, the Conqueror Imperative and Protector Imperative are both active for your unit.`,
+    restrictions: ``,
+  },
+  {
+    name: 'BENEVOLENCE OF THE OMNISSIAH',
+    cost: 1,
+    type: TYPE['Battle Tactic'],
+    detachment: detachment['Cohort Cybernetica'],
+    turn: TURN.your,
+    phase: [PHASE.command],
+    fluff: `A protective blessing chanted in pentakairic Novabyte moves machine spirits to defy the most esoteric of assaults.`,
+    when: `Your Command phase.`,
+    target: `One LEGIO CYBERNETICA or ADEPTUS MECHANICUS VEHICLE unit from your army.`,
+    effect: `Until the start of your next Command phase, models in your unit have the Feel No Pain 6+ ability, which is improved to Feel No Pain 5+ against mortal wounds.`,
     restrictions: ``,
   },
 ];
