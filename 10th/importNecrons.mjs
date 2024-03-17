@@ -47,13 +47,13 @@ newCodexUnits.category.cards.map((card, index) => {
 //   console.log(u.name);
 // });
 
-const legendDatasheets = oldCodexUnits.datasheets.filter((unit) => {
-  if (unit.imperialArmour || unit.legends) {
-    return true;
-  }
-  return false;
-});
-oldCodexUnits.datasheets = [ ...units, ...legendDatasheets];
+// const legendDatasheets = oldCodexUnits.datasheets.filter((unit) => {
+//   if (unit.imperialArmour || unit.legends) {
+//     return true;
+//   }
+//   return false;
+// });
+oldCodexUnits.datasheets = [ ...units ];
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
