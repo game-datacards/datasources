@@ -11,7 +11,7 @@ const template = [
     name: 'UNFORGIVEN FURY',
     cost: 1,
     type: TYPE['Battle Tactic'],
-    deatchment: DETACHMENT['Unforgiven Task Force'],
+    detachment: DETACHMENT['Unforgiven Task Force'],
     turn: TURN.either,
     phase: [PHASE.shooting, PHASE.fight],
     fluff: `With focused aggression, the Dark Angels
