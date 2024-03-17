@@ -14,22 +14,10 @@ const template = [
     detachment: DETACHMENT['Unforgiven Task Force'],
     turn: TURN.either,
     phase: [PHASE.shooting, PHASE.fight],
-    fluff: `With focused aggression, the Dark Angels
-relentlessly punish the foe.`,
-    when: `Your Shooting phase or the
-Fight phase.`,
-    target: `One Adeptus Astartes unit from
-your army that has not been selected to
-shoot or fight this phase.`,
-    effect: `Until the end of the phase,
-weapons equipped by models in your
-unit have the [LETHAL HITS] ability. In
-addition, if one or more Adeptus Astartes
-units from your army are currently
-Battle-shocked, until the end of the phase,
-each time a model in your unit makes an
-attack, a successful unmodified Hit roll of
-5+ scores a Critical Hit.`,
+    fluff: `With focused aggression, the Dark Angels relentlessly punish the foe.`,
+    when: `Your Shooting phase or the Fight phase.`,
+    target: `One ADEPTUS ASTARTES unit from your army that has not been selected to shoot or fight this phase.`,
+    effect: `Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability. In addition, if one or more ADEPTUS ASTARTES units from your army are currently Battle-shocked, until the end of the phase, each time a model in your unit makes an attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.`,
     restrictions: ``,
   },
   {
