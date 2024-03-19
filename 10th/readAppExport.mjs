@@ -136,9 +136,17 @@ function parseDataExport(fileName, factionName) {
     card.publication = newDataExport.publication.find((publication) => publication.id === card.publicationId);
 
     //Find all miniatures (stat lines)
-    const miniatures = newDataExport.miniature.filter(
-      (miniature) => miniature.datasheetId === card.id && miniature.statlineHidden === false
-    );
+    const miniatures = newDataExport.miniature
+      .filter((miniature) => miniature.datasheetId === card.id)
+      .map((miniature) => {
+        const foundMiniatureKeywords = newDataExport.miniature_keyword
+          .filter((kw) => kw.miniatureId === miniature.id)
+          .map((kw) => {
+            return newDataExport.keyword.find((keyword) => keyword.id === kw.keywordId).name;
+          });
+        // console.log(foundMiniatureKeywords);
+        return { ...miniature, keywords: foundMiniatureKeywords };
+      });
     miniatures.sort((a, b) => a.displayOrder - b.displayOrder);
 
     //Find all abilities connected to the datasheet
@@ -221,14 +229,37 @@ function parseDataExport(fileName, factionName) {
       });
 
     weapons = weapons.filter(
-      (value, index, self) => index === self.findIndex((t) => t.place === value.place && t.name === value.name)
+      (value, index, self) => index === self.findIndex((t) => t.attacks === value.attacks && t.name === value.name)
     );
-    console.log(weapons);
+
     //Find the damage ability
     let damageAbility = newDataExport.datasheet_damage.filter((ability) => ability.datasheetId === card.id);
 
     //Find the invul ability
     let invul = newDataExport.invulnerable_save.find((ability) => ability.datasheetId === card.id);
+
+    //Find the points
+    let points = newDataExport.unit_composition
+      .filter((ability) => ability.datasheetId === card.id)
+      .toSorted((a, b) => b.displayOrder - a.displayOrder)
+      .map((point) => {
+        const unitCompMini = newDataExport.unit_composition_miniature.filter(
+          (pointComp) => pointComp.unitCompositionId === point.id
+        );
+        return {
+          cost: point.points.toString(),
+          models: unitCompMini
+            .reduce((acc, curr) => {
+              return acc + curr.max;
+            }, 0)
+            .toString(),
+          active: true,
+        };
+      });
+
+    points = points.filter(
+      (value, index, self) => index === self.findIndex((t) => t.cost === value.cost && t.models === value.models)
+    );
 
     //And return the found datasheet
     return {
@@ -241,6 +272,7 @@ function parseDataExport(fileName, factionName) {
       wargearItems: [...wargearItems],
       invulAbility: invul,
       weapons,
+      points,
     };
   });
   allDataSheets = allDataSheets.filter((card) => card.publication.isCombatPatrol === false);
@@ -259,10 +291,24 @@ function parseDataExport(fileName, factionName) {
       const factionAbilities = foundUnit.datasheetAbilities
         .filter((ability) => ability.abilityType === 'faction')
         .map((ability) => {
-          if (ability.restriction !== null) {
-            return `${ability.name} ${ability.restriction}`;
+          let name = ability.name;
+          if (ability.isAura || ability.isBondsman || ability.isPsychic) {
+            const list = [];
+            if (ability.isAura) {
+              list.push('Aura');
+            }
+            if (ability.isBondsman) {
+              list.push('Bondsman');
+            }
+            if (ability.isPsychic) {
+              list.push('Psychic');
+            }
+            name = `${name} (${list.join(', ')})`;
           }
-          return ability.name;
+          if (ability.restriction !== null) {
+            name = `${name} ${ability.restriction}`;
+          }
+          return name;
         });
 
       oldParsedUnits.datasheets[index].abilities.faction = [...factionAbilities];
@@ -385,65 +431,81 @@ function parseDataExport(fileName, factionName) {
         });
       }
 
-      const statProfiles = foundUnit.miniatures.map((miniature) => {
-        return {
-          active: true,
-          ld: miniature.leadership,
-          m: miniature.movement,
-          name: foundUnit.miniatures.length > 1 ? miniature.name : foundUnit.name,
-          oc: miniature.objectiveControl,
-          showDamagedMarker: oldParsedUnits.datasheets[index].abilities?.damaged?.showDamagedAbility ? true : false,
-          showName: foundUnit.miniatures.length > 1,
-          sv: miniature.save,
-          t: miniature.toughness,
-          w: miniature.wounds,
-        };
-      });
+      let keywords = [];
+
+      const statProfiles = foundUnit.miniatures
+        .filter((miniature) => miniature.statlineHidden === false)
+        .map((miniature) => {
+          keywords.push(...miniature.keywords);
+
+          return {
+            active: true,
+            ld: miniature.leadership,
+            m: miniature.movement,
+            name: foundUnit.miniatures.length > 1 ? miniature.name : foundUnit.name,
+            oc: miniature.objectiveControl,
+            showDamagedMarker: oldParsedUnits.datasheets[index].abilities?.damaged?.showDamagedAbility ? true : false,
+            showName: foundUnit.miniatures.length > 1,
+            sv: miniature.save,
+            t: miniature.toughness,
+            w: miniature.wounds,
+          };
+        });
 
       const rangedWeapons = foundUnit.weapons
         .filter((weapon) => {
-          return weapon.profiles[0].type === 'ranged';
+          return weapon.profiles.some((p) => p.type === 'ranged');
         })
         .map((weapon) => {
           return {
             active: true,
-            profiles: weapon.profiles.map((profile) => {
-              return {
-                active: true,
-                ap: profile.armourPenetration,
-                attacks: profile.attacks,
-                damage: profile.damage,
-                keywords: [],
-                name: weapon.profiles.length > 1 ? weapon.name + ' – ' + profile.name : profile.name,
-                range: profile.range,
-                skill: profile.ballisticSkill,
-                strength: profile.strength,
-                keywords: profile.keywords,
-              };
-            }),
+            profiles: weapon.profiles
+              .filter((p) => p.type === 'ranged')
+              .map((profile) => {
+                return {
+                  active: true,
+                  ap: profile.armourPenetration,
+                  attacks: profile.attacks,
+                  damage: profile.damage,
+                  keywords: [],
+                  name:
+                    weapon.profiles.filter((p) => p.type === 'ranged').length > 1
+                      ? weapon.name + ' – ' + profile.name
+                      : profile.name,
+                  range: profile.range,
+                  skill: profile.ballisticSkill,
+                  strength: profile.strength,
+                  keywords: profile.keywords,
+                };
+              }),
           };
         });
       const meleeWeapons = foundUnit.weapons
         .filter((weapon) => {
-          return weapon.profiles[0].type === 'melee';
+          return weapon.profiles.some((p) => p.type === 'melee');
         })
         .map((weapon) => {
           return {
             active: true,
-            profiles: weapon.profiles.map((profile) => {
-              return {
-                active: true,
-                ap: profile.armourPenetration,
-                attacks: profile.attacks,
-                damage: profile.damage,
-                keywords: [],
-                name: weapon.profiles.length > 1 ? weapon.name + ' – ' + profile.name : profile.name,
-                range: profile.range,
-                skill: profile.weaponSkill,
-                strength: profile.strength,
-                keywords: profile.keywords,
-              };
-            }),
+            profiles: weapon.profiles
+              .filter((p) => p.type === 'melee')
+              .map((profile) => {
+                return {
+                  active: true,
+                  ap: profile.armourPenetration,
+                  attacks: profile.attacks,
+                  damage: profile.damage,
+                  keywords: [],
+                  name:
+                    weapon.profiles.filter((p) => p.type === 'melee').length > 1
+                      ? weapon.name + ' – ' + profile.name
+                      : profile.name,
+                  range: profile.range,
+                  skill: profile.weaponSkill,
+                  strength: profile.strength,
+                  keywords: profile.keywords,
+                };
+              }),
           };
         });
 
@@ -489,19 +551,137 @@ function parseDataExport(fileName, factionName) {
       oldParsedUnits.datasheets[index].loadout = foundUnit.unitComposition.split('\n\n')[1];
       oldParsedUnits.datasheets[index].fluff = foundUnit.lore;
 
+      // keywords = keywords.filter(
+      //   (value, index, self) => index === self.findIndex((t) => t.place === value.place && t.name === value.name)
+      // );
+      // if (keywords.length === 1) {
+      //   oldParsedUnits.datasheets[index].keywords = keywords[0].keywords;
+      // }
+      // if (keywords.length > 1) {
+      //   let allKeywords = {};
+      //   keywords.forEach((keywordMini) => {
+      //     keywordMini.keywords.forEach((keyword) => {
+      //       if (allKeywords[keyword] !== undefined) {
+      //         allKeywords[keyword] = allKeywords[keyword] + 1;
+      //       } else {
+      //         allKeywords[keyword] = 1;
+      //       }
+      //     });
+      //   });
+
+      //   keywords.forEach((keywordMini) => {
+      //     keywordMini.keywords.forEach((keyword) => {
+      //       if (allKeywords[keyword] !== undefined) {
+      //         allKeywords[keyword] = allKeywords[keyword] + 1;
+      //       } else {
+      //         allKeywords[keyword] = 1;
+      //       }
+      //     });
+      //   });
+
+      // }
+      oldParsedUnits.datasheets[index].keywords = [...new Set(keywords)];
+
+      oldParsedUnits.datasheets[index].points = foundUnit.points;
       //And set the name
       oldParsedUnits.datasheets[index].name = foundUnit.name;
+
+      oldParsedUnits.datasheets[index].leadBy = undefined;
+      oldParsedUnits.datasheets[index].leads = undefined;
     } else {
       // console.log('Not found unit', card.name);
     }
   });
+
+  for (let i = 0; i < foundUnits.length; i++) {
+    const unit = oldParsedUnits.datasheets.find((u) => u.name === foundUnits[i]);
+
+    if (unit.leader) {
+      // console.log(i, unit.name, unit.leader);
+      let assignedUnits = undefined;
+      let extraText = '';
+
+      if (unit.leader.includes('You can attach')) {
+        assignedUnits = unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You can attach'))
+          .split('■')
+          .filter((v) => v)
+          .map((v) => v.replaceAll('*', '').trim());
+        extraText = unit.leader.substring(unit.leader.indexOf('You can attach'));
+      } else if (unit.leader.includes('You must attach')) {
+        assignedUnits = unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You must attach'))
+          .split('■')
+          .filter((v) => v)
+          .map((v) => v.replaceAll('*', '').trim());
+        extraText = unit.leader.substring(unit.leader.indexOf('You must attach'));
+      } else if (unit.leader.includes('This model can be attached to a')) {
+        assignedUnits = unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model can be attached to a'))
+          .split('■')
+          .filter((v) => v)
+          .map((v) => v.replaceAll('*', '').trim());
+        extraText = unit.leader.substring(unit.leader.indexOf('This model can be attached to a'));
+      } else if (unit.leader.includes('This model cannot be attached to a')) {
+        assignedUnits = unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model cannot be attached to a'))
+          .split('■')
+          .filter((v) => v)
+          .map((v) => v.replaceAll('*', '').trim());
+        extraText = unit.leader.substring(unit.leader.indexOf('This model cannot be attached to a'));
+      } else if (unit.leader.includes('If this unit’s Bodyguard')) {
+        assignedUnits = unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('If this unit’s'))
+          .split('■')
+          .filter((v) => v)
+          .map((v) => v.replaceAll('*', '').trim());
+        extraText = unit.leader.substring(unit.leader.indexOf('If this unit’s'));
+        // } else if (unit.leader.includes('(see Drukhari)')) {
+        //   assignedUnits = unit.leader
+        //     .substring(unit.leader.indexOf('■'), unit.leader.indexOf('(see Drukhari)'))
+        //     .split('■')
+        //     .filter((v) => v)
+        //     .map((v) => v.replaceAll('*', '').trim());
+        //     extraText = unit.leader.substring(unit.leader.indexOf('(see Drukhari)'));
+      } else {
+        assignedUnits = unit.leader
+          .substring(unit.leader.indexOf('■'))
+          .split('■')
+          .filter((v) => v)
+          .map((v) => v.replaceAll('*', '').trim());
+      }
+      unit.leads = { units: assignedUnits, extra: extraText };
+      if (assignedUnits.length > 0) {
+        assignedUnits.forEach((atUnit) => {
+          const foundUnitIndex = oldParsedUnits.datasheets.findIndex(
+            (u) => u.name.toLowerCase().trim() === atUnit.toLowerCase().trim()
+          );
+          if (
+            foundUnitIndex >= 0 &&
+            oldParsedUnits.datasheets[foundUnitIndex].leadBy &&
+            oldParsedUnits.datasheets[foundUnitIndex].leadBy.length > 0
+          ) {
+            oldParsedUnits.datasheets[foundUnitIndex].leadBy.push(unit.name);
+          } else if (foundUnitIndex >= 0) {
+            oldParsedUnits.datasheets[foundUnitIndex].leadBy = [unit.name];
+          } else {
+            // console.log(unit.name, 'not found:', atUnit);
+          }
+        });
+      }
+    }
+  }
+
   let notFoundunits = oldParsedUnits.datasheets.filter((unit) => !foundUnits.includes(unit.name));
+
+  let notFoundunitsExport = allDataSheets.filter((unit) => !foundUnits.includes(unit.name));
 
   notFoundunits = notFoundunits.filter((unit) => unit.legends === false || unit.legends === undefined);
 
   const unitnames = notFoundunits.map((unit) => unit.name);
 
   console.log(`Not found units for ${factionName}:`, unitnames.join(', '));
+  console.log(`Not found export units for ${factionName}:`, notFoundunitsExport.map((unit) => unit.name).join(', '));
 
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
@@ -528,6 +708,7 @@ parseDataExport('./gdc/astramilitarum.json', 'Astra Militarum');
 parseDataExport('./gdc/imperialknights.json', 'Imperial Knights');
 parseDataExport('./gdc/greyknights.json', 'Grey Knights');
 parseDataExport('./gdc/adeptasororitas.json', 'Adepta Sororitas');
+
 parseDataExport('./gdc/adeptusmechanicus.json', 'Adeptus Mechanicus');
 parseDataExport('./gdc/adeptuscustodes.json', 'Adeptus Custodes');
 parseDataExport('./gdc/agents.json', 'Agents of the Imperium');
@@ -542,5 +723,12 @@ parseDataExport('./gdc/gsc.json', 'Genestealer Cults');
 
 parseDataExport('./gdc/titan.json', 'Adeptus Titanicus');
 
-// parseDataExport('./gdc/space_marines.json', 'Salamanders');
+parseDataExport('./gdc/space_marines.json', 'Salamanders');
+parseDataExport('./gdc/space_marines.json', 'Imperial Fists');
+parseDataExport('./gdc/space_marines.json', 'Iron Hands');
+parseDataExport('./gdc/space_marines.json', 'Ultramarines');
+parseDataExport('./gdc/space_marines.json', 'Blood Angels');
+parseDataExport('./gdc/space_marines.json', 'Raven Guard');
+parseDataExport('./gdc/space_marines.json', 'White Scars');
+
 // parseDataExport('./gdc/unaligned.json', 'Unaligned Forces');
