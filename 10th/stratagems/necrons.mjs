@@ -10,7 +10,7 @@ const detachment = {
 
 const template = [
   {
-    name: 'PROTOCOL OF THE ETERNAL GUARDIAN',
+    name: 'PROTOCOL OF THE ETERNAL REVENANT',
     cost: 1,
     type: TYPE['Epic Deed'],
     detachment: detachment['Awakened Dynasty'],

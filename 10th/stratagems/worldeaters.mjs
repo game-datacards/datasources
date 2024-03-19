@@ -72,7 +72,7 @@ other rules for Blessings of Khorne apply.`,
     restrictions: ``,
   },
   {
-    name: "KHORNE CARES NOT…",
+    name: "Khorne Cares Not...",
     cost: 2,
     type: TYPE["Strategic Ploy"],
     detachment,
