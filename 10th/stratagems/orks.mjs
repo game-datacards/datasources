@@ -122,7 +122,7 @@ Stratagems even if it is Battle-shocked.`,
     restrictions: ``,
   },
   {
-    name: "ERE WE GO",
+    name: "’Ere We Go",
     cost: 1,
     type: TYPE["Battle Tactic"],
     detachment,
