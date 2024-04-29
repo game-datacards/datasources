@@ -2687,12 +2687,12 @@
       "points": [
         {
           "active": true,
-          "cost": "195",
+          "cost": "185",
           "models": "5"
         },
         {
           "active": true,
-          "cost": "390",
+          "cost": "370",
           "models": "10"
         }
       ],
@@ -3519,12 +3519,12 @@
       "points": [
         {
           "active": true,
-          "cost": "170",
+          "cost": "150",
           "models": "10"
         },
         {
           "active": true,
-          "cost": "85",
+          "cost": "75",
           "models": "5"
         }
       ],
@@ -7634,38 +7634,42 @@
     {
       "cost": "10",
       "description": "Adeptus Astartes model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle-shock test.",
+      "detachment": "Champions of Russ",
       "excludes": [],
       "faction_id": "CHSW",
-      "id": "761bed3e-1e86-5004-9326-4811506aca93",
-      "keywords": ["Adeptus Astartes"],
-      "name": "THE PELT OF BALEWOLF"
+      "id": "e07b5bd3-15ff-5bac-8a52-5416b042033f",
+      "keywords": ["Space Wolves"],
+      "name": "The Pelt of the Balewolf"
     },
     {
       "cost": "15",
       "description": "Adeptus Astartes model only. The bearer’s melee weapons have the [PRECISION] ability, and the Strength and Armour Penetration characteristics of those weapons are improved by 1.",
+      "detachment": "Champions of Russ",
       "excludes": [],
       "faction_id": "CHSW",
-      "id": "7e1f41cd-6ccd-597e-96d5-33eb5663e5d2",
-      "keywords": ["Adeptus Astartes"],
-      "name": "FROST WEAPON"
+      "id": "0c4fd8bc-4b6a-5178-9663-97490275e1ef",
+      "keywords": ["Space Wolves"],
+      "name": "Frost Weapon"
     },
     {
       "cost": "20",
       "description": "Adeptus Astartes model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
+      "detachment": "Champions of Russ",
       "excludes": [],
       "faction_id": "CHSW",
-      "id": "d2deca90-9fc8-51a5-a0a6-b9b40b814bb5",
-      "keywords": ["Adeptus Astartes"],
-      "name": "WOLF TAIL TALISMAN"
+      "id": "84521f57-42ca-5662-b298-b32de8c3ed72",
+      "keywords": ["Space Wolves"],
+      "name": "Wolf Tail Talisman"
     },
     {
       "cost": "25",
       "description": "Adeptus Astartes model only. The bearer’s melee weapons have the [ANTI-MONSTER 4+] and [ANTI-VEHICLE 4+] abilities.",
+      "detachment": "Champions of Russ",
       "excludes": [],
       "faction_id": "CHSW",
-      "id": "3f7661f2-cfa5-5861-b2a7-6c59bca21740",
-      "keywords": ["Adeptus Astartes"],
-      "name": "BLACK DEATH"
+      "id": "fc2a1152-45df-57b5-ac3f-efe700fcb531",
+      "keywords": ["Space Wolves"],
+      "name": "Black Death"
     }
   ],
   "id": "CHSW",
@@ -7677,10 +7681,25 @@
     {
       "cost": 1,
       "detachment": "Champions of Russ",
+      "effect": "Select one Saga that has not yet been completed by your army. Until the end of the turn, models in your Character’s unit have the benefit of the selected Saga as if it had been completed by your army.",
+      "faction_id": "CHSW",
+      "fluff": "The greatest champions amongst the sons of Russ must take the fight to the enemy, leading by example to uphold the honour of their Chapter.",
+      "id": "36f7ea19-cd8e-55b3-ad56-a0561c395bf3",
+      "name": "Warrior Pride",
+      "phase": ["command"],
+      "restrictions": "",
+      "target": "One Adeptus Astartes Character model from your army.",
+      "turn": "your",
+      "type": "Epic Deed",
+      "when": "Your Command phase."
+    },
+    {
+      "cost": 1,
+      "detachment": "Champions of Russ",
       "effect": "Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6\" instead of up to 3\", provided your unit ends that Consolidation move in Unit Coherency and within Engagement Range of one or more enemy units. In addition, if the Saga of Majesty has been completed by your army, each enemy unit within 6\" of your unit when it ends that Consolidation move must take a Battle-shock test.",
       "faction_id": "CHSW",
       "fluff": "Having stalked their prey or run them to ground, all that remains is to go for the enemy’s weakest points, to rip them apart in a furious bloodletting. Onlookers are stricken with terror at the bloody spectacle, an instant before the sons of Russ pounce upon them.",
-      "id": "ec13b742-35c2-5d93-a971-cc7dddd48602",
+      "id": "49c70efe-f241-523a-8539-7b8f647467f7",
       "name": "Death Howl",
       "phase": ["fight"],
       "restrictions": "",
@@ -7692,25 +7711,10 @@
     {
       "cost": 1,
       "detachment": "Champions of Russ",
-      "effect": "Until the end of the phase, each time a model in your unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1 for each Judgement token that enemy unit has.",
+      "effect": "Until the end of the phase, each time an attack targets a model in your unit, worsen the Armour Penetration characteristic of that attack by 1.",
       "faction_id": "CHSW",
-      "fluff": "The warriors of the Leagues of Votann pride themselves on their martial skill and proficiency in combat, and when the Ancestors are watching their actions they can quickly overwhelm and pick apart their foes.",
-      "id": "77c2b080-17d2-5872-ac7d-544690c54f44",
-      "name": "Warrior Pride",
-      "phase": ["command"],
-      "restrictions": "",
-      "target": "One Leagues of Votann unit from your army, and one enemy unit that has one or more Judgement tokens and is within Engagement Range of that Leagues of Votann unit.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Fight phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "Champions of Russ",
-      "effect": "Until the end of the phase, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
-      "faction_id": "CHSW",
-      "fluff": "The belligerency of the Adeptus Astartes combined with their transhuman physiology makes them unyielding foes to face.",
-      "id": "fb6abd3d-eef4-5e85-823a-4f49dd7e9140",
+      "fluff": "The belligerency and transhuman physiologies of the Adeptus Astartes make them unyielding foes.",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
       "name": "Armour of Contempt",
       "phase": ["fight", "shooting"],
       "restrictions": "",
@@ -7725,7 +7729,7 @@
       "effect": "Until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1. If the Saga of the Beastslayer has been completed by your army, until the end of the phase, such weapons have the [LANCE] ability as well.",
       "faction_id": "CHSW",
       "fluff": "With the scent of blood in the air and the rushing joy of battle surging through every true warrior’s hearts, even the greatest quarry can be brought down.",
-      "id": "dbd216b4-0956-5b83-ba4f-12a010a5ffbe",
+      "id": "422a9faf-a302-554f-b50d-0ea5f2a5f735",
       "name": "Go for the Throat",
       "phase": ["fight"],
       "restrictions": "",
@@ -7740,7 +7744,7 @@
       "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds and Psychic Attacks. If the Saga of the Bear has been completed by your army, until the end of the phase, models in your unit have the Feel No Pain 4+ ability against mortal wounds and Psychic Attacks instead.",
       "faction_id": "CHSW",
       "fluff": "Imbued as they are with the cunning psychic might of the Rune Priests, shamanistic totems, tattoos and fetishes are a potent shield against baleful attacks and the foul sorcery of witches.",
-      "id": "013c6f3f-c2f7-563f-a1cd-f1426b6177a0",
+      "id": "3aa78c76-5a8f-5876-9302-ee1c3105acda",
       "name": "Runic Wards",
       "phase": ["fight", "shooting"],
       "restrictions": "",
@@ -7752,17 +7756,17 @@
     {
       "cost": 1,
       "detachment": "Champions of Russ",
-      "effect": "Until the end of the turn, your unit is eligible to declare a charge even though it Fell Back this phase.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot even though it Fell Back or Advanced this phase. If the Saga of the Warrior Born has been completed by your army, until the end of the turn, your unit is also eligible to declare a charge.",
       "faction_id": "CHSW",
-      "fluff": "Blood Angels are loathe to resort to the defensive strategies favoured by other Chapters, and a tactical withdrawal is but a prelude to re-entering the fray.",
-      "id": "1cadb73a-bbd0-5a5d-9d76-c36644ac74a5",
+      "fluff": "Once their blades and claws run red with the enemy’s blood, nothing will hold the savage sons of Russ back from new prey.",
+      "id": "07f47a6c-4f59-50c0-9272-5761449fc0f1",
       "name": "Relentless Assault",
       "phase": ["movement"],
       "restrictions": "",
       "target": "That Adeptus Astartes unit.",
       "turn": "your",
       "type": "Strategic Ploy",
-      "when": "Your Movement phase, just after an Adeptus Astartes unit from your army Falls Back."
+      "when": "Your Movement phase, just after an Adeptus Astartes unit from your army makes a Fall Back or Advance move."
     }
   ]
 }
