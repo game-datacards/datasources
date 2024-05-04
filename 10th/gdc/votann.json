@@ -6,7 +6,7 @@
   "datasheets": [
     {
       "abilities": {
-        "core": ["Deadly Demise 1", "Scouts 6\""],
+        "core": [],
         "damaged": {
           "description": "",
           "range": "",
@@ -23,25 +23,50 @@
         },
         "other": [
           {
-            "description": "Units can disembark from this Transport after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally in the remainder of the turn.",
-            "name": "Blistering Advance",
+            "name": "Luck Has. Need Keeps. Toil Earns",
+            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
             "showAbility": true,
             "showDescription": true
           }
         ],
         "primarch": [],
         "special": [],
-        "wargear": []
+        "wargear": [
+          {
+            "name": "Weavefield Crest",
+            "description": "The bearer has a 4+ invulnerable save.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Medipack",
+            "description": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Comms Array",
+            "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Pan Spectral Scanner",
+            "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ]
       },
       "cardType": "DataCard",
-      "composition": ["1 Sagitaur"],
-      "faction_id": "LoV",
+      "composition": ["1 Theyn", "9 Hearthkyn Warriors"],
       "factions": ["Leagues of Votann"],
-      "fluff": "Designed to survive the worst that hostile worlds and alien predators can throw at it, the Sagitaur is a rugged ATV ideally suited to scouting operations and swift, armoured offensives. Sagitaurs mount a remarkable amount of firepower for their size, and can even knock out enemy battle tanks.",
-      "id": "6d880dd3-d9e1-5a41-a2fd-5354f8c988c4",
-      "keywords": ["Dedicated Transport", "Sagitaur", "Transport", "Vehicle"],
+      "faction_id": "LoV",
+      "fluff": "Well-armoured, well-trained and equipped with an array of powerful weaponry, Hearthkyn Warriors form the backbone of most Oathbands. Led by their Theyns, they lay down hails of firepower, shrugging off the enemy’s return volleys before storming in to shatter their wavering foes for good.",
+      "id": "0fd9319f-37fc-5325-8bbe-3bc58f5834f2",
+      "keywords": ["Infantry", "Battleline", "Grenades", "Hearthkyn Warriors"],
       "leader": "",
-      "loadout": "This model is equipped with: HYLas beam cannon; twin bolt cannon; armoured wheels.",
+      "loadout": "Every model is equipped with: Autoch-pattern bolt pistol; Autoch-pattern bolter; close combat weapon.",
       "meleeWeapons": [
         {
           "active": true,
@@ -49,23 +74,39 @@
             {
               "active": true,
               "ap": "0",
-              "attacks": "3",
+              "attacks": "1",
               "damage": "1",
               "keywords": [],
-              "name": "Armoured wheels",
+              "name": "Close combat weapon",
               "range": "Melee",
               "skill": "4+",
-              "strength": "6"
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": [],
+              "name": "Kin melee weapon",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "5"
             }
           ]
         }
       ],
-      "name": "Sagitaur",
+      "name": "Hearthkyn Warriors",
       "points": [
         {
-          "active": true,
-          "cost": "115",
-          "models": "1"
+          "cost": "100",
+          "models": "10",
+          "active": true
         }
       ],
       "rangedWeapons": [
@@ -74,12 +115,92 @@
           "profiles": [
             {
               "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Autoch-pattern bolt pistol",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Autoch-pattern bolter",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [],
+              "name": "Ion blaster",
+              "range": "18\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Ion pistol",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Pistol"],
+              "name": "EtaCarn plasma pistol",
+              "range": "6\"",
+              "skill": "4+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
               "ap": "-1",
               "attacks": "3",
-              "damage": "2",
-              "keywords": ["Sustained Hits 1", "Twin-linked"],
-              "name": "Twin bolt cannon",
-              "range": "36\"",
+              "damage": "1",
+              "keywords": ["Rapid Fire 3", "Assault"],
+              "name": "HYLas auto rifle",
+              "range": "24\"",
               "skill": "4+",
               "strength": "6"
             }
@@ -92,12 +213,12 @@
               "active": true,
               "ap": "-1",
               "attacks": "6",
-              "damage": "2",
-              "keywords": [],
-              "name": "MATR autocannon",
+              "damage": "1",
+              "keywords": ["Sustained Hits 1", "Heavy"],
+              "name": "HYLas rotary cannon",
               "range": "24\"",
-              "skill": "4+",
-              "strength": "7"
+              "skill": "5+",
+              "strength": "6"
             }
           ]
         },
@@ -134,13 +255,13 @@
             {
               "active": true,
               "ap": "-3",
-              "attacks": "2",
-              "damage": "3",
-              "keywords": [],
-              "name": "Sagitaur missile launcher",
-              "range": "36\"",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Sustained Hits D3"],
+              "name": "EtaCarn plasma beamer",
+              "range": "18\"",
               "skill": "4+",
-              "strength": "12"
+              "strength": "8"
             }
           ]
         },
@@ -150,12 +271,12 @@
             {
               "active": true,
               "ap": "-3",
-              "attacks": "2",
-              "damage": "D6",
-              "keywords": ["Sustained Hits D3"],
-              "name": "HYLas beam cannon",
-              "range": "24\"",
-              "skill": "4+",
+              "attacks": "1",
+              "damage": "D3+3",
+              "keywords": ["Heavy", "Devastating Wounds"],
+              "name": "Magna-rail rifle",
+              "range": "18\"",
+              "skill": "5+",
               "strength": "12"
             }
           ]
@@ -166,247 +287,29 @@
         {
           "active": true,
           "ld": "7+",
-          "m": "12\"",
-          "name": "Sagitaur",
-          "oc": "3",
+          "m": "5\"",
+          "name": "Hearthkyn Warrior",
+          "oc": "2",
           "showDamagedMarker": false,
-          "showName": false,
-          "sv": "3+",
-          "t": "10",
-          "w": "9"
+          "showName": true,
+          "sv": "4+",
+          "t": "5",
+          "w": "1"
         }
       ],
-      "transport": "This model has a transport capacity of 6 Leagues of Votann Infantry models. It cannot transport Exo-armour or Exo-frame models.\n\nAt the start of the Declare Battle Formations step, you can select one Hearthkyn Warriors unit from your army and split it into two units, each containing 5 models (when splitting a unit in this way, make a note of which models form each of the two new units). One of these units must start the battle embarked within this Transport; the other can start the battle embarked within another Transport, or it can be deployed as a separate unit.",
+      "transport": "",
       "wargear": [
-        "This model’s HYLas beam cannon can be replaced with one of the following: ◦ 1 L7 missile launcher and 1 Sagitaur missile launcher ◦ 1 MATR autocannon"
-      ]
+        "The Theyn’s Autoch-pattern bolter or ion blaster can be replaced with 1 Kin melee weapon.",
+        "The Theyn’s Autoch-pattern bolt pistol can be replaced with one of the following: ◦ 1 ion pistol ◦ 1 EtaCarn plasma pistol",
+        "Up to 3 different Hearthkyn Warriors equipped with either an Autoch-pattern bolter or an ion blaster can each be equipped with one of the following (to a maximum of 1 of each per unit): ◦ 1 medipack** ◦ 1 comms array** ◦ 1 pan spectral scanner**  ** This model’s Autoch-pattern bolter or ion blaster cannot be replaced.",
+        "Up to 2 Hearthkyn Warriors can each have their Autoch-pattern bolter or ion blaster replaced with one of the following: ◦ 1 HYLas auto rifle* ◦ 1 HYLas rotary cannon* ◦ 1 L7 missile launcher* ◦ 1 EtaCarn plasma beamer* ◦ 1 magna-rail rifle* ◦ 1 Kin melee weapon  * You can only select each of these options once per unit.",
+        "All models in this unit can each have their Autoch-pattern bolter replaced with 1 ion blaster."
+      ],
+      "leadBy": ["Ûthar the Destined", "Brôkhyr Iron-master", "Grimnyr", "Kâhl"]
     },
     {
       "abilities": {
-        "core": ["Deadly Demise D6"],
-        "damaged": {
-          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "range": "1-5 WOUNDS REMAINING",
-          "showDamagedAbility": true,
-          "showDescription": true
-        },
-        "faction": ["Eye of the Ancestors"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
-            "name": "Fire Support",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": [
-          {
-            "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
-            "name": "Pan Spectral Scanner",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ]
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Hekaton Land Fortress"],
-      "faction_id": "LoV",
-      "factions": ["Leagues of Votann"],
-      "fluff": "The iconic battle tank and armoured transport of the Leagues of Votann, the Hekaton Land Fortress is as venerable and well-respected as it is powerful. With a fearsome arsenal of heavy weaponry and tremendously resilient armour – and with the ability to bear bands of Kin soldiery into battle – it is a versatile military asset.",
-      "id": "3b568802-2de2-5f29-8a5b-e2797105a2a2",
-      "keywords": ["Hekaton Land Fortress", "Transport", "Vehicle"],
-      "leader": "",
-      "loadout": "This model is equipped with: cyclic ion cannon; MATR autocannon; 2 twin bolt cannons; armoured wheels; pan spectral scanner.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "6",
-              "damage": "1",
-              "keywords": [],
-              "name": "Armoured wheels",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "name": "Hekaton Land Fortress",
-      "points": [
-        {
-          "active": true,
-          "cost": "225",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "abilities": [
-            {
-              "description": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.",
-              "name": "Conversion",
-              "showAbility": true,
-              "showDescription": true
-            }
-          ],
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "2",
-              "damage": "4",
-              "keywords": ["Conversion", "Sustained Hits D3"],
-              "name": "SP heavy conversion beamer",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "10"
-            }
-          ]
-        },
-        {
-          "abilities": [
-            {
-              "description": "The bearer can only shoot with this weapon once per battle.",
-              "name": "One Shot",
-              "showAbility": true,
-              "showDescription": true
-            }
-          ],
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "D6+3",
-              "damage": "2",
-              "keywords": ["Blast", "Indirect Fire", "One Shot"],
-              "name": "Hekaton warhead",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "7"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": ["Sustained Hits 1", "Twin-linked"],
-              "name": "Twin bolt cannon",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "6",
-              "damage": "2",
-              "keywords": [],
-              "name": "MATR autocannon",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "7"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Sustained Hits D3", "Twin-linked"],
-              "name": "Twin ion beamer",
-              "range": "18\"",
-              "skill": "4+",
-              "strength": "7"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "D6+3",
-              "damage": "2",
-              "keywords": ["Blast"],
-              "name": "Cyclic ion cannon",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-4",
-              "attacks": "1",
-              "damage": "D6+6",
-              "keywords": ["Devastating Wounds", "Heavy"],
-              "name": "Heavy magna-rail cannon",
-              "range": "30\"",
-              "skill": "4+",
-              "strength": "18"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "10\"",
-          "name": "Hekaton Land Fortress",
-          "oc": "5",
-          "showDamagedMarker": true,
-          "showName": false,
-          "sv": "2+",
-          "t": "12",
-          "w": "16"
-        }
-      ],
-      "transport": "This model has a transport capacity of 12 Leagues of Votann Infantry models. Each Exo-armour model takes up the space of 2 models and each Exo-frame model takes up the space of 3 models.",
-      "wargear": [
-        "This model can do one of the following: ◦ Replace 1 twin bolt cannon with 1 twin ion beamer ◦ Replace 2 twin bolt cannons with 2 twin ion beamers",
-        "This model’s cyclic ion cannon can be replaced with one of the following: ◦ 1 SP heavy conversion beamer ◦ 1 heavy magna-rail cannon",
-        "This model’s pan spectral scanner can be replaced with 1 Hekaton warhead."
-      ]
-    },
-    {
-      "abilities": {
-        "core": ["Feel No Pain 5+"],
+        "core": ["Leader"],
         "damaged": {
           "description": "",
           "range": "",
@@ -418,108 +321,73 @@
           "info": "",
           "showAtTop": true,
           "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
+          "showInvulnerableSave": true,
+          "value": "4+"
         },
         "other": [
           {
-            "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
-            "name": "Cyberstimms",
+            "name": "Ancestral Fortune",
+            "description": "Once per turn, you can change one Hit roll, or one Wound roll made for this model to a 6.",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "In your Shooting phase, after this unit has shot, select one enemy unit (excluding Monsters and Vehicles) that was hit by one or more of this unit’s mole grenade launchers this phase and roll one D6. On a 4+, until the end of your opponent’s next turn, that enemy unit is shaken. While a unit is shaken, subtract 2\" from its Move characteristic and subtract 2 from Advance and Charge rolls made for it.\n\nDesigner’s Note: While a unit is shaken, place a Mole Grenade token next to that unit as a reminder.",
-            "name": "Subterranean Explosives",
+            "name": "The Destined",
+            "description": "Each time an attack is allocated to this model, change the Damage characteristic of that attack to 1.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Grim Efficiency",
+            "description": "Once per battle round, in your Command phase, you can select one model from your army with this ability, then select one enemy unit that is visible to that model. That enemy unit gains 1 Judgement token.",
             "showAbility": true,
             "showDescription": true
           }
         ],
         "primarch": [],
         "special": [],
-        "wargear": []
+        "wargear": [
+          {
+            "name": "Rampart Crest",
+            "description": "While the bearer is leading a unit, models in that unit have a 5+ invulnerable save.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ]
       },
       "cardType": "DataCard",
-      "composition": ["5-10 Cthonian Beserks"],
-      "faction_id": "LoV",
+      "composition": ["1 Ûthar the Destined – Epic Hero"],
       "factions": ["Leagues of Votann"],
-      "fluff": "Cthonian Beserks are amongst the most heavily augmented and courageous Kin. Brandishing mining-tools-cum-weapons-of-war and unleashing explosives that tunnel through solid rock, the Beserks storm the enemy’s strongpoints and break them open like an asteroid filled with seams of precious ore.",
-      "id": "e01321d0-cdcf-5427-85a0-656d03e62368",
-      "keywords": ["Cthonian Beserks", "Infantry"],
-      "leader": "",
-      "loadout": "Every model is equipped with: heavy plasma axe.",
+      "faction_id": "LoV",
+      "fluff": "As the most accomplished hero of the Greater Thurian League, Kâhl Ûthar the Destined is marked for greatness. Few can assess the foe as swiftly or mercilessly as Ûthar and – once he has his enemies’ measure – he soon cuts them to pieces with the glowing Blade of the Ancestors.",
+      "id": "54ddadc7-eb28-55ad-973e-d49b90f23a2f",
+      "keywords": ["Infantry", "Character", "Epic Hero", "Ûthar the Destined"],
+      "leader": "This model can be attached to the following units: ■ Einhyr Hearthguard ■ Hearthkyn Warriors",
+      "loadout": "This model is equipped with: volkanite disintegrator; Blade of the Ancestors; rampart crest.",
       "meleeWeapons": [
         {
           "active": true,
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
-              "attacks": "4",
+              "ap": "-3",
+              "attacks": "5",
               "damage": "2",
-              "keywords": ["Twin-linked"],
-              "name": "Twin concussion gauntlet",
+              "keywords": ["Devastating Wounds"],
+              "name": "Blade of the Ancestors",
               "range": "Melee",
-              "skill": "4+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "6",
-              "damage": "1",
-              "keywords": [],
-              "name": "Heavy plasma axe – Sweep",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            },
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": [],
-              "name": "Heavy plasma axe – Strike",
-              "range": "Melee",
-              "skill": "3+",
+              "skill": "2+",
               "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "3",
-              "keywords": [],
-              "name": "Concussion maul",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "9"
             }
           ]
         }
       ],
-      "name": "Cthonian Beserks",
+      "name": "Ûthar the Destined",
       "points": [
         {
-          "active": true,
-          "cost": "100",
-          "models": "5"
-        },
-        {
-          "active": true,
-          "cost": "200",
-          "models": "10"
+          "cost": "80",
+          "models": "1",
+          "active": true
         }
       ],
       "rangedWeapons": [
@@ -528,13 +396,13 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
-              "attacks": "D6",
+              "ap": "0",
+              "attacks": "3",
               "damage": "1",
-              "keywords": ["Blast", "Indirect Fire"],
-              "name": "Mole grenade launcher",
-              "range": "24\"",
-              "skill": "4+",
+              "keywords": ["Devastating Wounds"],
+              "name": "Volkanite disintegrator",
+              "range": "18\"",
+              "skill": "2+",
               "strength": "5"
             }
           ]
@@ -546,21 +414,21 @@
           "active": true,
           "ld": "7+",
           "m": "5\"",
-          "name": "Cthonian Beserks",
+          "name": "Ûthar the Destined",
           "oc": "1",
           "showDamagedMarker": false,
           "showName": false,
-          "sv": "6+",
+          "sv": "3+",
           "t": "5",
-          "w": "2"
+          "w": "5"
         }
       ],
       "transport": "",
-      "wargear": [
-        "All models in this unit can each have their heavy plasma axe replaced with 1 concussion maul.",
-        "For every 5 models in this unit, 1 model that is not equipped with a mole grenade launcher can have its heavy plasma axe or concussion maul replaced with 1 twin concussion gauntlet.",
-        "For every 5 models in this unit, 1 model that is not equipped with a twin concussion gauntlet can be equipped with 1 mole grenade launcher. If a model is equipped with a mole grenade launcher, add 1 to its Wounds and Attacks characteristics.*  * Designer’s Note: If a Cthonian Beserk is equipped with a mole grenade launcher, it will be accompanied by an L-COG unit: both models should be placed on the same base and together they act as a single model for all rules purposes (albeit one with improved characteristics)."
-      ]
+      "wargear": ["None"],
+      "leads": {
+        "units": ["Einhyr Hearthguard", "Hearthkyn Warriors"],
+        "extra": ""
+      }
     },
     {
       "abilities": {
@@ -581,14 +449,14 @@
         },
         "other": [
           {
-            "description": "At the end of your Movement phase, this unit can repair one friendly Leagues of Votann Vehicle or Exo-frame model within 3\" of it. That model regains up to D3 lost wounds, or up to 3 lost wounds instead if this unit contains an Ironkyn Assistant. Each model can only be repaired once per turn.",
-            "name": "Brôkhyr’s Guild",
+            "name": "Multispectral Visor",
+            "description": "While this model is leading a unit, each time a model in that unit makes a ranged attack, add 1 to the Hit roll.",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "While this model is leading a unit, each time a model in that unit makes a ranged attack, add 1 to the Hit roll.",
-            "name": "Multispectral Visor",
+            "name": "Brôkhyr’s Guild",
+            "description": "At the end of your Movement phase, this unit can repair one friendly Leagues of Votann Vehicle or Exo-frame model within 3\" of it. That model regains up to D3 lost wounds, or up to 3 lost wounds instead if this unit contains an Ironkyn Assistant. Each model can only be repaired once per turn.",
             "showAbility": true,
             "showDescription": true
           }
@@ -599,21 +467,17 @@
       },
       "cardType": "DataCard",
       "composition": [
-        "* If this unit’s Iron-master is ever destroyed, this unit’s Ironkyn Assistant and all remaining E-COGs are also destroyed.",
         "1 Brôkhyr Iron-master",
         "1 Ironkin Assistant*",
-        "3 E-COGs*"
+        "3 E-COGs*",
+        "* If this unit’s Iron-master is ever destroyed, this unit’s Ironkyn Assistant and all remaining E-COGs are also destroyed."
       ],
-      "faction_id": "LoV",
       "factions": ["Leagues of Votann"],
+      "faction_id": "LoV",
       "fluff": "Iron-masters are the most accomplished Brôkhyrs of their Kindred. In battle, they take on the duty of maintaining damaged Kin war engines, often aided by Ironkin and COG repair crews. These veteran Brôkhyrs also bring their most powerful personal creations to war, taking satisfaction in unleashing them upon the foe.",
       "id": "8d066aa5-47e9-5d02-861b-bcd5abfe8b04",
-      "keywords": ["Brôkhyr Iron-Master", "Character", "Infantry"],
+      "keywords": ["Character", "Infantry", "Brôkhyr Iron-Master"],
       "leader": "This unit can be attached to the following units: ■ Hearthkyn Warriors ■ Brôkhyr Thunderkyn",
-      "leads": {
-        "extra": "",
-        "units": ["Brôkhyr Thunderkyn", "Hearthkyn Warriors"]
-      },
       "loadout": "The Iron-master is equipped with: graviton rifle; graviton hammer.",
       "meleeWeapons": [
         {
@@ -629,6 +493,22 @@
               "range": "Melee",
               "skill": "4+",
               "strength": "9"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "3"
             }
           ]
         },
@@ -654,22 +534,6 @@
             {
               "active": true,
               "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "3"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
               "attacks": "3",
               "damage": "1",
               "keywords": [],
@@ -684,9 +548,9 @@
       "name": "Brôkhyr Iron-master",
       "points": [
         {
-          "active": true,
           "cost": "65",
-          "models": "5"
+          "models": "5",
+          "active": true
         }
       ],
       "rangedWeapons": [
@@ -757,18 +621,6 @@
           "active": true,
           "ld": "7+",
           "m": "5\"",
-          "name": "E-COG",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "4+",
-          "t": "5",
-          "w": "1"
-        },
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "5\"",
           "name": "Ironkin Assistant",
           "oc": "1",
           "showDamagedMarker": false,
@@ -776,10 +628,586 @@
           "sv": "4+",
           "t": "5",
           "w": "2"
+        },
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "5\"",
+          "name": "E-COG",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "4+",
+          "t": "5",
+          "w": "1"
         }
       ],
       "transport": "",
-      "wargear": ["None"]
+      "wargear": ["None"],
+      "leads": {
+        "units": ["Hearthkyn Warriors", "Brôkhyr Thunderkyn"],
+        "extra": ""
+      }
+    },
+    {
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Eye of the Ancestors"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Oathband Bodyguard",
+            "description": "While a Character is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": [
+          {
+            "name": "Weavefield Crest",
+            "description": "The bearer has a 4+ invulnerable save.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Teleport Crest",
+            "description": "Models in the bearer’s unit have the Deep Strike ability.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ]
+      },
+      "cardType": "DataCard",
+      "composition": ["1 Hesyr", "4-9 Hearthguard"],
+      "factions": ["Leagues of Votann"],
+      "faction_id": "LoV",
+      "fluff": "Clad in formidable exo-armour and equipped with a fearsome array of weaponry, Einhyr Hearthguard are a force to be reckoned with. Whether forming bodyguards around their Oathband’s heroes or striking deep into the heart of enemy territory, they are unstoppable on the attack and immovable in defence.",
+      "id": "cfd5032a-2dc7-507a-a400-a0fc45d1e82a",
+      "keywords": ["Infantry", "Exo-Armour", "Einhyr Hearthguard"],
+      "leader": "",
+      "loadout": "Every model is equipped with: EtaCarn plasma gun; exo-armour grenade launcher; concussion gauntlet.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": [],
+              "name": "Concussion gauntlet",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Plasma blade gauntlet",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "3",
+              "keywords": [],
+              "name": "Concussion hammer",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "9"
+            }
+          ]
+        }
+      ],
+      "name": "Einhyr Hearthguard",
+      "points": [
+        {
+          "cost": "320",
+          "models": "10",
+          "active": true
+        },
+        {
+          "cost": "160",
+          "models": "5",
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": [],
+              "name": "EtaCarn plasma gun",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Blast"],
+              "name": "Exo-armour grenade launcher",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Devastating Wounds"],
+              "name": "Volkanite disintegrator",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "5\"",
+          "name": "Einhyr Hearthguard",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "2+",
+          "t": "6",
+          "w": "2"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "The Hesyr’s weavefield crest can be replaced with 1 teleport crest.",
+        "The Hesyr’s concussion gauntlet or plasma blade gauntlet can be replaced with 1 concussion hammer.",
+        "All models in this unit can each have their concussion gauntlet replaced with 1 plasma blade gauntlet.",
+        "All models in this unit can each have their EtaCarn plasma gun replaced with 1 volkanite disintegrator."
+      ],
+      "leadBy": ["Ûthar the Destined", "Einhyr Champion", "Kâhl"]
+    },
+    {
+      "abilities": {
+        "core": ["Deadly Demise D6"],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+          "showDamagedAbility": true,
+          "showDescription": true
+        },
+        "faction": ["Eye of the Ancestors"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Fire Support",
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit it scored one or more hits against this phase. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": [
+          {
+            "name": "Pan Spectral Scanner",
+            "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ]
+      },
+      "cardType": "DataCard",
+      "composition": ["1 Hekaton Land Fortress"],
+      "factions": ["Leagues of Votann"],
+      "faction_id": "LoV",
+      "fluff": "The iconic battle tank and armoured transport of the Leagues of Votann, the Hekaton Land Fortress is as venerable and well-respected as it is powerful. With a fearsome arsenal of heavy weaponry and tremendously resilient armour – and with the ability to bear bands of Kin soldiery into battle – it is a versatile military asset.",
+      "id": "3b568802-2de2-5f29-8a5b-e2797105a2a2",
+      "keywords": ["Vehicle", "Transport", "Hekaton Land Fortress"],
+      "leader": "",
+      "loadout": "This model is equipped with: cyclic ion cannon; MATR autocannon; 2 twin bolt cannons; armoured wheels; pan spectral scanner.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "6",
+              "damage": "1",
+              "keywords": [],
+              "name": "Armoured wheels",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "name": "Hekaton Land Fortress",
+      "points": [
+        {
+          "cost": "225",
+          "models": "1",
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "D6+3",
+              "damage": "2",
+              "keywords": ["Blast"],
+              "name": "Cyclic ion cannon",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "6",
+              "damage": "2",
+              "keywords": [],
+              "name": "MATR autocannon",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "7"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": ["Twin-linked", "Sustained Hits 1"],
+              "name": "Twin bolt cannon",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Twin-linked", "Sustained Hits D3"],
+              "name": "Twin ion beamer",
+              "range": "18\"",
+              "skill": "4+",
+              "strength": "7"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "4",
+              "keywords": ["Sustained Hits D3", "Conversion"],
+              "name": "SP heavy conversion beamer",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "10"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Conversion",
+              "description": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-4",
+              "attacks": "1",
+              "damage": "D6+6",
+              "keywords": ["Heavy", "Devastating Wounds"],
+              "name": "Heavy magna-rail cannon",
+              "range": "30\"",
+              "skill": "4+",
+              "strength": "18"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "D6+3",
+              "damage": "2",
+              "keywords": ["One Shot", "Indirect Fire", "Blast"],
+              "name": "Hekaton warhead",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "7"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "10\"",
+          "name": "Hekaton Land Fortress",
+          "oc": "5",
+          "showDamagedMarker": true,
+          "showName": false,
+          "sv": "2+",
+          "t": "12",
+          "w": "16"
+        }
+      ],
+      "transport": "This model has a transport capacity of 12 Leagues of Votann Infantry models. Each Exo-armour model takes up the space of 2 models and each Exo-frame model takes up the space of 3 models.",
+      "wargear": [
+        "This model’s pan spectral scanner can be replaced with 1 Hekaton warhead.",
+        "This model’s cyclic ion cannon can be replaced with one of the following: ◦ 1 SP heavy conversion beamer ◦ 1 heavy magna-rail cannon",
+        "This model can do one of the following: ◦ Replace 1 twin bolt cannon with 1 twin ion beamer ◦ Replace 2 twin bolt cannons with 2 twin ion beamers"
+      ]
+    },
+    {
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Eye of the Ancestors"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Oathband Covering Fire",
+            "description": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ when resolving that Stratagem.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["3-6 Brôkhyr Thunderkyn"],
+      "factions": ["Leagues of Votann"],
+      "faction_id": "LoV",
+      "fluff": "When a Brôkhyr hooks into a powerful exo-frame, they become Thunderkyn. Adapted from void-rigs used to maintain Kin spacecraft, these armoured exoskeletons exchange repair tools for massive heavy weapons, which the Brôkhyr use to lay down withering covering fire for the Oathbands and to pick off enemy armour.",
+      "id": "6c6112d4-601f-5bc8-b253-5d211b7900e3",
+      "keywords": ["Infantry", "Exo-Frame", "Brôkhyr Thunderkyn"],
+      "leader": "",
+      "loadout": "Every model is equipped with: bolt cannon; close combat weapon.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "name": "Brôkhyr Thunderkyn",
+      "points": [
+        {
+          "cost": "170",
+          "models": "6",
+          "active": true
+        },
+        {
+          "cost": "85",
+          "models": "3",
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": ["Sustained Hits 1"],
+              "name": "Bolt cannon",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "D6",
+              "damage": "2",
+              "keywords": ["Blast", "Anti-vehicle 2+"],
+              "name": "Graviton blast cannon",
+              "range": "18\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "1",
+              "damage": "3",
+              "keywords": ["Sustained Hits D3", "Conversion"],
+              "name": "SP conversion beamer",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "7"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Conversion",
+              "description": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "5\"",
+          "name": "Brôkhyr Thunderkyn",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "3+",
+          "t": "6",
+          "w": "3"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "All models in this unit can each have their bolt cannon replaced with 1 SP conversion beamer.",
+        "All models in this unit can each have their bolt cannon replaced with 1 graviton blast cannon."
+      ],
+      "leadBy": ["Brôkhyr Iron-master"]
     },
     {
       "abilities": {
@@ -800,14 +1228,14 @@
         },
         "other": [
           {
-            "description": "Each time this model ends a Charge move, you can select one enemy unit within Engagement Range of this unit and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
-            "name": "Mass Driver Accelerators",
+            "name": "Exemplar of the Einhyr",
+            "description": "While this model is leading a unit, you can re-roll Charge rolls made for that unit.",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "While this model is leading a unit, you can re-roll Charge rolls made for that unit.",
-            "name": "Exemplar of the Einhyr",
+            "name": "Mass Driver Accelerators",
+            "description": "Each time this model ends a Charge move, you can select one enemy unit within Engagement Range of this unit and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
             "showAbility": true,
             "showDescription": true
           }
@@ -816,14 +1244,14 @@
         "special": [],
         "wargear": [
           {
-            "description": "The bearer has a 4+ invulnerable save.",
             "name": "Weavefield Crest",
+            "description": "The bearer has a 4+ invulnerable save.",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "While the bearer is leading a unit, models in that unit have the Deep Strike ability.",
             "name": "Teleport Crest",
+            "description": "While the bearer is leading a unit, models in that unit have the Deep Strike ability.",
             "showAbility": true,
             "showDescription": true
           }
@@ -831,16 +1259,12 @@
       },
       "cardType": "DataCard",
       "composition": ["1 Einhyr Champion"],
-      "faction_id": "LoV",
       "factions": ["Leagues of Votann"],
+      "faction_id": "LoV",
       "fluff": "Einhyr Champions wear modified exo-armour fitted with mass drivers. Combined with their formidable close-quarters weaponry and bulky RAM shields, this wargear transforms them into living battering rams whose accelerated charge hits hard enough to smash clean through armoured fortress gates.",
       "id": "4ac8c768-6d3b-544b-93d6-ce5ef82a7286",
-      "keywords": ["Character", "Einhyr Champion", "Exo-Armour", "Infantry"],
+      "keywords": ["Infantry", "Character", "Exo-Armour", "Einhyr Champion"],
       "leader": "This model can be attached to the following unit: ■ Einhyr Hearthguard",
-      "leads": {
-        "extra": "",
-        "units": ["Einhyr Hearthguard"]
-      },
       "loadout": "This model is equipped with: Autoch-pattern combi-bolter; mass hammer; weavefield crest.",
       "meleeWeapons": [
         {
@@ -879,9 +1303,9 @@
       "name": "Einhyr Champion",
       "points": [
         {
-          "active": true,
           "cost": "60",
-          "models": "1"
+          "models": "1",
+          "active": true
         }
       ],
       "rangedWeapons": [
@@ -919,13 +1343,17 @@
       ],
       "transport": "",
       "wargear": [
-        "This model’s mass hammer can be replaced with 1 darkstar axe.",
-        "This model’s weavefield crest can be replaced with 1 teleport crest."
-      ]
+        "This model’s weavefield crest can be replaced with 1 teleport crest.",
+        "This model’s mass hammer can be replaced with 1 darkstar axe."
+      ],
+      "leads": {
+        "units": ["Einhyr Hearthguard"],
+        "extra": ""
+      }
     },
     {
       "abilities": {
-        "core": ["Leader"],
+        "core": ["Deadly Demise 1", "Scouts 6\""],
         "damaged": {
           "description": "",
           "range": "",
@@ -937,192 +1365,88 @@
           "info": "",
           "showAtTop": true,
           "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "4+"
+          "showInvulnerableSave": false,
+          "value": ""
         },
         "other": [
           {
-            "description": "Each time an attack is allocated to this model, change the Damage characteristic of that attack to 1.",
-            "name": "The Destined",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "Once per battle round, in your Command phase, you can select one model from your army with this ability, then select one enemy unit that is visible to that model. That enemy unit gains 1 Judgement token.",
-            "name": "Grim Efficiency",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "Once per turn, you can change one Hit roll, or one Wound roll made for this model to a 6.",
-            "name": "Ancestral Fortune",
+            "name": "Blistering Advance",
+            "description": "Units can disembark from this Transport after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally in the remainder of the turn.",
             "showAbility": true,
             "showDescription": true
           }
         ],
         "primarch": [],
         "special": [],
-        "wargear": [
-          {
-            "description": "While the bearer is leading a unit, models in that unit have a 5+ invulnerable save.",
-            "name": "Rampart Crest",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ]
+        "wargear": []
       },
       "cardType": "DataCard",
-      "composition": ["1 Ûthar the Destined – Epic Hero"],
-      "faction_id": "LoV",
+      "composition": ["1 Sagitaur"],
       "factions": ["Leagues of Votann"],
-      "fluff": "As the most accomplished hero of the Greater Thurian League, Kâhl Ûthar the Destined is marked for greatness. Few can assess the foe as swiftly or mercilessly as Ûthar and – once he has his enemies’ measure – he soon cuts them to pieces with the glowing Blade of the Ancestors.",
-      "id": "54ddadc7-eb28-55ad-973e-d49b90f23a2f",
-      "keywords": ["Character", "Epic Hero", "Infantry", "Ûthar the Destined"],
-      "leader": "This model can be attached to the following units: ■ Einhyr Hearthguard ■ Hearthkyn Warriors",
-      "leads": {
-        "extra": "",
-        "units": ["Einhyr Hearthguard", "Hearthkyn Warriors"]
-      },
-      "loadout": "This model is equipped with: volkanite disintegrator; Blade of the Ancestors; rampart crest.",
+      "faction_id": "LoV",
+      "fluff": "Designed to survive the worst that hostile worlds and alien predators can throw at it, the Sagitaur is a rugged ATV ideally suited to scouting operations and swift, armoured offensives. Sagitaurs mount a remarkable amount of firepower for their size, and can even knock out enemy battle tanks.",
+      "id": "6d880dd3-d9e1-5a41-a2fd-5354f8c988c4",
+      "keywords": ["Vehicle", "Transport", "Dedicated Transport", "Sagitaur"],
+      "leader": "",
+      "loadout": "This model is equipped with: HYLas beam cannon; twin bolt cannon; armoured wheels.",
       "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Armoured wheels",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        }
+      ],
+      "name": "Sagitaur",
+      "points": [
+        {
+          "cost": "115",
+          "models": "1",
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
         {
           "active": true,
           "profiles": [
             {
               "active": true,
               "ap": "-3",
-              "attacks": "5",
+              "attacks": "2",
+              "damage": "D6",
+              "keywords": ["Sustained Hits D3"],
+              "name": "HYLas beam cannon",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "3",
               "damage": "2",
-              "keywords": ["Devastating Wounds"],
-              "name": "Blade of the Ancestors",
-              "range": "Melee",
-              "skill": "2+",
+              "keywords": ["Twin-linked", "Sustained Hits 1"],
+              "name": "Twin bolt cannon",
+              "range": "36\"",
+              "skill": "4+",
               "strength": "6"
             }
           ]
-        }
-      ],
-      "name": "Ûthar the Destined",
-      "points": [
-        {
-          "active": true,
-          "cost": "80",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Devastating Wounds"],
-              "name": "Volkanite disintegrator",
-              "range": "18\"",
-              "skill": "2+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "5\"",
-          "name": "Ûthar the Destined",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "3+",
-          "t": "5",
-          "w": "5"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
-      "abilities": {
-        "core": ["Leader"],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Eye of the Ancestors"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "4+"
-        },
-        "other": [
-          {
-            "description": "Once per battle round, in your Command phase, you can select one model from your army with this ability, then select one enemy unit that is visible to that model. That enemy unit gains 1 Judgement token.",
-            "name": "Grim Efficiency",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
-            "name": "Kindred Hero",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": [
-          {
-            "description": "While this model is leading a unit, models in that unit have a 5+ invulnerable save.",
-            "name": "Rampart Crest",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "While this model is leading a unit, models in that unit have the Deep Strike ability.",
-            "name": "Teleport Crest",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ]
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Kâhl"],
-      "faction_id": "LoV",
-      "factions": ["Leagues of Votann"],
-      "fluff": "Most Oathbands are led by a Kâhl, whose strategic wisdom, determination and martial might are an inspiration to their warriors. Kâhls are often equipped with especially powerful weapons and potent field or teleportation technologies, the better to lead the fight from the front and bring down the deadliest foes.",
-      "id": "01690642-8d27-5bfc-a8f8-47cdc05539a3",
-      "keywords": ["Character", "Infantry", "Kâhl"],
-      "leader": "This model can be attached to the following units: ■ Einhyr Hearthguard ■ Hearthkyn Warriors",
-      "leads": {
-        "extra": "",
-        "units": ["Einhyr Hearthguard", "Hearthkyn Warriors"]
-      },
-      "loadout": "This model is equipped with: Autoch-pattern combi-bolter; forgewrought plasma axe; rampart crest.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "3",
-              "keywords": [],
-              "name": "Mass gauntlet",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
         },
         {
           "active": true,
@@ -1130,57 +1454,58 @@
             {
               "active": true,
               "ap": "-2",
-              "attacks": "4",
-              "damage": "2",
+              "attacks": "1",
+              "damage": "D6",
               "keywords": [],
-              "name": "Forgewrought plasma axe",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Kâhl",
-      "points": [
-        {
-          "active": true,
-          "cost": "70",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Devastating Wounds"],
-              "name": "Volkanite disintegrator",
-              "range": "18\"",
-              "skill": "2+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": [],
-              "name": "Autoch-pattern combi-bolter",
+              "name": "L7 missile launcher – Focused",
               "range": "24\"",
-              "skill": "2+",
+              "skill": "4+",
+              "strength": "9"
+            },
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Blast"],
+              "name": "L7 missile launcher – Blast",
+              "range": "24\"",
+              "skill": "4+",
               "strength": "4"
             }
           ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "2",
+              "damage": "3",
+              "keywords": [],
+              "name": "Sagitaur missile launcher",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "6",
+              "damage": "2",
+              "keywords": [],
+              "name": "MATR autocannon",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "7"
+            }
+          ]
         }
       ],
       "source": "40k-10e",
@@ -1188,21 +1513,19 @@
         {
           "active": true,
           "ld": "7+",
-          "m": "5\"",
-          "name": "Kâhl",
-          "oc": "1",
+          "m": "12\"",
+          "name": "Sagitaur",
+          "oc": "3",
           "showDamagedMarker": false,
           "showName": false,
           "sv": "3+",
-          "t": "5",
-          "w": "4"
+          "t": "10",
+          "w": "9"
         }
       ],
-      "transport": "",
+      "transport": "This model has a transport capacity of 6 Leagues of Votann Infantry models. It cannot transport Exo-armour or Exo-frame models.\n\nAt the start of the Declare Battle Formations step, you can select one Hearthkyn Warriors unit from your army and split it into two units, each containing 5 models (when splitting a unit in this way, make a note of which models form each of the two new units). One of these units must start the battle embarked within this Transport; the other can start the battle embarked within another Transport, or it can be deployed as a separate unit.",
       "wargear": [
-        "This model’s Autoch-pattern combi-bolter can be replaced with 1 volkanite disintegrator.",
-        "This model’s forgewrought plasma axe can be replaced with 1 mass gauntlet.",
-        "This model’s rampart crest can be replaced with 1 teleport crest."
+        "This model’s HYLas beam cannon can be replaced with one of the following: ◦ 1 L7 missile launcher and 1 Sagitaur missile launcher ◦ 1 MATR autocannon"
       ]
     },
     {
@@ -1224,14 +1547,14 @@
         },
         "other": [
           {
-            "description": "Once per battle, after this model’s unit fails a Battle-shock test, this model can use this ability. If it does, that unit is no longer Battle-shocked.",
-            "name": "Grimnyr’s Regard",
+            "name": "Fortify (Psychic)",
+            "description": "While this model is leading a unit, improve the Toughness characteristic of models in that unit by 1.",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "While this model is leading a unit, improve the Toughness characteristic of models in that unit by 1.",
-            "name": "Fortify (Psychic)",
+            "name": "Grimnyr’s Regard",
+            "description": "Once per battle, after this model’s unit fails a Battle-shock test, this model can use this ability. If it does, that unit is no longer Battle-shocked.",
             "showAbility": true,
             "showDescription": true
           }
@@ -1242,20 +1565,16 @@
       },
       "cardType": "DataCard",
       "composition": [
-        "* If this unit’s Grimnyr model is ever destroyed, all of this unit’s remaining CORV models are also destroyed.",
         "1 Grimnyr",
-        "2 CORVs*"
+        "2 CORVs*",
+        "* If this unit’s Grimnyr model is ever destroyed, all of this unit’s remaining CORV models are also destroyed."
       ],
-      "faction_id": "LoV",
       "factions": ["Leagues of Votann"],
+      "faction_id": "LoV",
       "fluff": "The Grimnyr – or Living Ancestors – are privy to the wisdom of the Votann, and as close as to priests as the secular Kin get. Equipped with barrier tech such as ward staves and energy-focusing CORVs, they are able to rouse the fury of the immaterium against their foes.",
       "id": "e2762237-0be3-570b-a1f2-f49c8e865a37",
-      "keywords": ["Character", "Grimnyr", "Infantry", "Psyker"],
+      "keywords": ["Character", "Psyker", "Infantry", "Grimnyr"],
       "leader": "This unit can be attached to the following unit: ■ Hearthkyn Warriors",
-      "leads": {
-        "extra": "",
-        "units": ["Hearthkyn Warriors"]
-      },
       "loadout": "The Grimnyr is equipped with: Ancestral Wrath; ancestral ward stave.",
       "meleeWeapons": [
         {
@@ -1294,9 +1613,9 @@
       "name": "Grimnyr",
       "points": [
         {
-          "active": true,
           "cost": "65",
-          "models": "3"
+          "models": "3",
+          "active": true
         }
       ],
       "rangedWeapons": [
@@ -1319,7 +1638,7 @@
               "ap": "-2",
               "attacks": "6",
               "damage": "D3",
-              "keywords": ["Hazardous", "Psychic"],
+              "keywords": ["Psychic", "Hazardous"],
               "name": "Ancestral Wrath – Focused witchfire",
               "range": "24\"",
               "skill": "2+",
@@ -1350,18 +1669,6 @@
           "active": true,
           "ld": "6+",
           "m": "5\"",
-          "name": "CORV",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "4+",
-          "t": "5",
-          "w": "1"
-        },
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "5\"",
           "name": "Grimnyr",
           "oc": "1",
           "showDamagedMarker": false,
@@ -1369,10 +1676,343 @@
           "sv": "4+",
           "t": "5",
           "w": "4"
+        },
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "5\"",
+          "name": "CORV",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "4+",
+          "t": "5",
+          "w": "1"
         }
       ],
       "transport": "",
-      "wargear": ["None"]
+      "wargear": ["None"],
+      "leads": {
+        "units": ["Hearthkyn Warriors"],
+        "extra": ""
+      }
+    },
+    {
+      "abilities": {
+        "core": ["Feel No Pain 5+"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Eye of the Ancestors"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Cyberstimms",
+            "description": "Each time a model in this unit is destroyed by a melee attack, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Subterranean Explosives",
+            "description": "In your Shooting phase, after this unit has shot, select one enemy unit (excluding Monsters and Vehicles) that was hit by one or more of this unit’s mole grenade launchers this phase and roll one D6. On a 4+, until the end of your opponent’s next turn, that enemy unit is shaken. While a unit is shaken, subtract 2\" from its Move characteristic and subtract 2 from Advance and Charge rolls made for it.\n\nDesigner’s Note: While a unit is shaken, place a Mole Grenade token next to that unit as a reminder.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["5-10 Cthonian Beserks"],
+      "factions": ["Leagues of Votann"],
+      "faction_id": "LoV",
+      "fluff": "Cthonian Beserks are amongst the most heavily augmented and courageous Kin. Brandishing mining-tools-cum-weapons-of-war and unleashing explosives that tunnel through solid rock, the Beserks storm the enemy’s strongpoints and break them open like an asteroid filled with seams of precious ore.",
+      "id": "e01321d0-cdcf-5427-85a0-656d03e62368",
+      "keywords": ["Infantry", "Cthonian Beserks"],
+      "leader": "",
+      "loadout": "Every model is equipped with: heavy plasma axe.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "6",
+              "damage": "1",
+              "keywords": [],
+              "name": "Heavy plasma axe – Sweep",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            },
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": [],
+              "name": "Heavy plasma axe – Strike",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "3",
+              "keywords": [],
+              "name": "Concussion maul",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": ["Twin-linked"],
+              "name": "Twin concussion gauntlet",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "9"
+            }
+          ]
+        }
+      ],
+      "name": "Cthonian Beserks",
+      "points": [
+        {
+          "cost": "200",
+          "models": "10",
+          "active": true
+        },
+        {
+          "cost": "100",
+          "models": "5",
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Indirect Fire", "Blast"],
+              "name": "Mole grenade launcher",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "5\"",
+          "name": "Cthonian Beserks",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "6+",
+          "t": "5",
+          "w": "2"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "For every 5 models in this unit, 1 model that is not equipped with a twin concussion gauntlet can be equipped with 1 mole grenade launcher. If a model is equipped with a mole grenade launcher, add 1 to its Wounds and Attacks characteristics.*  * Designer’s Note: If a Cthonian Beserk is equipped with a mole grenade launcher, it will be accompanied by an L-COG unit: both models should be placed on the same base and together they act as a single model for all rules purposes (albeit one with improved characteristics).",
+        "For every 5 models in this unit, 1 model that is not equipped with a mole grenade launcher can have its heavy plasma axe or concussion maul replaced with 1 twin concussion gauntlet.",
+        "All models in this unit can each have their heavy plasma axe replaced with 1 concussion maul."
+      ]
+    },
+    {
+      "abilities": {
+        "core": ["Leader"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Eye of the Ancestors"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "4+"
+        },
+        "other": [
+          {
+            "name": "Kindred Hero",
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Grim Efficiency",
+            "description": "Once per battle round, in your Command phase, you can select one model from your army with this ability, then select one enemy unit that is visible to that model. That enemy unit gains 1 Judgement token.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": [
+          {
+            "name": "Rampart Crest",
+            "description": "While this model is leading a unit, models in that unit have a 5+ invulnerable save.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Teleport Crest",
+            "description": "While this model is leading a unit, models in that unit have the Deep Strike ability.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ]
+      },
+      "cardType": "DataCard",
+      "composition": ["1 Kâhl"],
+      "factions": ["Leagues of Votann"],
+      "faction_id": "LoV",
+      "fluff": "Most Oathbands are led by a Kâhl, whose strategic wisdom, determination and martial might are an inspiration to their warriors. Kâhls are often equipped with especially powerful weapons and potent field or teleportation technologies, the better to lead the fight from the front and bring down the deadliest foes.",
+      "id": "01690642-8d27-5bfc-a8f8-47cdc05539a3",
+      "keywords": ["Infantry", "Character", "Kâhl"],
+      "leader": "This model can be attached to the following units: ■ Einhyr Hearthguard ■ Hearthkyn Warriors",
+      "loadout": "This model is equipped with: Autoch-pattern combi-bolter; forgewrought plasma axe; rampart crest.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": [],
+              "name": "Forgewrought plasma axe",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "3",
+              "keywords": [],
+              "name": "Mass gauntlet",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "name": "Kâhl",
+      "points": [
+        {
+          "cost": "70",
+          "models": "1",
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": [],
+              "name": "Autoch-pattern combi-bolter",
+              "range": "24\"",
+              "skill": "2+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Devastating Wounds"],
+              "name": "Volkanite disintegrator",
+              "range": "18\"",
+              "skill": "2+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "5\"",
+          "name": "Kâhl",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "3+",
+          "t": "5",
+          "w": "4"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "This model’s rampart crest can be replaced with 1 teleport crest.",
+        "This model’s forgewrought plasma axe can be replaced with 1 mass gauntlet.",
+        "This model’s Autoch-pattern combi-bolter can be replaced with 1 volkanite disintegrator."
+      ],
+      "leads": {
+        "units": ["Einhyr Hearthguard", "Hearthkyn Warriors"],
+        "extra": ""
+      }
     },
     {
       "abilities": {
@@ -1393,8 +2033,8 @@
         },
         "other": [
           {
-            "description": "At the end of your opponent’s turn, if this unit is within 6\" of any battlefield edge and is not within Engagement Range of any enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.",
             "name": "Outflanking Mag-Riders",
+            "description": "At the end of your opponent’s turn, if this unit is within 6\" of any battlefield edge and is not within Engagement Range of any enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.",
             "showAbility": true,
             "showDescription": true
           }
@@ -1403,20 +2043,20 @@
         "special": [],
         "wargear": [
           {
-            "description": "Each time a model in the bearer’s unit makes an attack that targets a unit that contains one or more models with the Stealth ability, add 1 to the Hit roll.",
-            "name": "Rollbar Searchlight",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "name": "Comms Array",
+            "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
             "name": "Pan Spectral Scanner",
+            "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Rollbar Searchlight",
+            "description": "Each time a model in the bearer’s unit makes an attack that targets a unit that contains one or more models with the Stealth ability, add 1 to the Hit roll.",
             "showAbility": true,
             "showDescription": true
           }
@@ -1424,11 +2064,11 @@
       },
       "cardType": "DataCard",
       "composition": ["3-6 Hernkyn Pioneers"],
-      "faction_id": "LoV",
       "factions": ["Leagues of Votann"],
+      "faction_id": "LoV",
       "fluff": "Hernkyn Pioneers skim across alien worlds and scout enemy positions, riding on their magna-coil bikes. Fast, resilient, and possessed of formidable firepower, these far-ranging bands of warriors often strike at the foe from unexpected quarters, or send back intelligence on enemy movements to their Oathband’s Kâhl.",
       "id": "2465cf66-bef0-5d7d-b921-01ce915dff2f",
-      "keywords": ["Fly", "Grenades", "Hernkyn Pioneers", "Mounted"],
+      "keywords": ["Mounted", "Grenades", "Fly", "Hernkyn Pioneers"],
       "leader": "",
       "loadout": "Every model is equipped with: bolt revolver; bolt shotgun; magna-coil autocannon; plasma knife.",
       "meleeWeapons": [
@@ -1452,17 +2092,49 @@
       "name": "Hernkyn Pioneers",
       "points": [
         {
-          "active": true,
           "cost": "180",
-          "models": "6"
+          "models": "6",
+          "active": true
         },
         {
-          "active": true,
           "cost": "90",
-          "models": "3"
+          "models": "3",
+          "active": true
         }
       ],
       "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Bolt revolver",
+              "range": "9\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Assault"],
+              "name": "Bolt shotgun",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
         {
           "active": true,
           "profiles": [
@@ -1510,38 +2182,6 @@
               "strength": "7"
             }
           ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Bolt revolver",
-              "range": "9\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": ["Assault"],
-              "name": "Bolt shotgun",
-              "range": "12\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
         }
       ],
       "source": "40k-10e",
@@ -1561,697 +2201,52 @@
       ],
       "transport": "",
       "wargear": [
-        "For every 3 models in this unit, 1 model can be equipped with one of the following (if a model is equipped with any of these weapons, add 1 to its Wounds characteristic): ◦ 1 HYLas rotary cannon ◦ 1 ion beamer",
-        "Up to 3 different models that are not equipped with either a HYLas rotary cannon or an ion beamer can each be equipped with 1 of the following (to a maximum of 1 of each per unit): ◦ 1 comms array* ◦ 1 pan spectral scanner* ◦ 1 rollbar searchlight*  * This model cannot be equipped with a HYLas rotary cannon or an ion beamer."
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Eye of the Ancestors"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
-            "name": "Luck Has. Need Keeps. Toil Earns",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": [
-          {
-            "description": "Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-            "name": "Comms Array",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "Models in the bearer’s unit have the Feel No Pain 6+ ability.",
-            "name": "Medipack",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
-            "name": "Pan Spectral Scanner",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "The bearer has a 4+ invulnerable save.",
-            "name": "Weavefield Crest",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ]
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Theyn", "9 Hearthkyn Warriors"],
-      "faction_id": "LoV",
-      "factions": ["Leagues of Votann"],
-      "fluff": "Well-armoured, well-trained and equipped with an array of powerful weaponry, Hearthkyn Warriors form the backbone of most Oathbands. Led by their Theyns, they lay down hails of firepower, shrugging off the enemy’s return volleys before storming in to shatter their wavering foes for good.",
-      "id": "0fd9319f-37fc-5325-8bbe-3bc58f5834f2",
-      "keywords": ["Battleline", "Grenades", "Hearthkyn Warriors", "Infantry"],
-      "leadBy": [
-        "Brôkhyr Iron-master",
-        "Grimnyr",
-        "Kâhl",
-        "Ûthar the Destined"
-      ],
-      "leader": "",
-      "loadout": "Every model is equipped with: Autoch-pattern bolt pistol; Autoch-pattern bolter; close combat weapon.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": [],
-              "name": "Kin melee weapon",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "name": "Hearthkyn Warriors",
-      "points": [
-        {
-          "active": true,
-          "cost": "100",
-          "models": "10"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Assault", "Rapid Fire 3"],
-              "name": "HYLas auto rifle",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "6",
-              "damage": "1",
-              "keywords": ["Heavy", "Sustained Hits 1"],
-              "name": "HYLas rotary cannon",
-              "range": "24\"",
-              "skill": "5+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Ion pistol",
-              "range": "12\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [],
-              "name": "Ion blaster",
-              "range": "18\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "D6",
-              "keywords": [],
-              "name": "L7 missile launcher – Focused",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "9"
-            },
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Blast"],
-              "name": "L7 missile launcher – Blast",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Pistol"],
-              "name": "EtaCarn plasma pistol",
-              "range": "6\"",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Sustained Hits D3"],
-              "name": "EtaCarn plasma beamer",
-              "range": "18\"",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "D3+3",
-              "keywords": ["Devastating Wounds", "Heavy"],
-              "name": "Magna-rail rifle",
-              "range": "18\"",
-              "skill": "5+",
-              "strength": "12"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Autoch-pattern bolt pistol",
-              "range": "12\"",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [],
-              "name": "Autoch-pattern bolter",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "5\"",
-          "name": "Hearthkyn Warrior",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "4+",
-          "t": "5",
-          "w": "1"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "All models in this unit can each have their Autoch-pattern bolter replaced with 1 ion blaster.",
-        "The Theyn’s Autoch-pattern bolt pistol can be replaced with one of the following: ◦ 1 ion pistol ◦ 1 EtaCarn plasma pistol",
-        "The Theyn’s Autoch-pattern bolter or ion blaster can be replaced with 1 Kin melee weapon.",
-        "Up to 2 Hearthkyn Warriors can each have their Autoch-pattern bolter or ion blaster replaced with one of the following: ◦ 1 HYLas auto rifle* ◦ 1 HYLas rotary cannon* ◦ 1 L7 missile launcher* ◦ 1 EtaCarn plasma beamer* ◦ 1 magna-rail rifle* ◦ 1 Kin melee weapon  * You can only select each of these options once per unit.",
-        "Up to 3 different Hearthkyn Warriors equipped with either an Autoch-pattern bolter or an ion blaster can each be equipped with one of the following (to a maximum of 1 of each per unit): ◦ 1 medipack** ◦ 1 comms array** ◦ 1 pan spectral scanner**  ** This model’s Autoch-pattern bolter or ion blaster cannot be replaced."
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Eye of the Ancestors"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "Each time you target this unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ when resolving that Stratagem.",
-            "name": "Oathband Covering Fire",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["3-6 Brôkhyr Thunderkyn"],
-      "faction_id": "LoV",
-      "factions": ["Leagues of Votann"],
-      "fluff": "When a Brôkhyr hooks into a powerful exo-frame, they become Thunderkyn. Adapted from void-rigs used to maintain Kin spacecraft, these armoured exoskeletons exchange repair tools for massive heavy weapons, which the Brôkhyr use to lay down withering covering fire for the Oathbands and to pick off enemy armour.",
-      "id": "6c6112d4-601f-5bc8-b253-5d211b7900e3",
-      "keywords": ["Brôkhyr Thunderkyn", "Exo-Frame", "Infantry"],
-      "leadBy": ["Brôkhyr Iron-master"],
-      "leader": "",
-      "loadout": "Every model is equipped with: bolt cannon; close combat weapon.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "name": "Brôkhyr Thunderkyn",
-      "points": [
-        {
-          "active": true,
-          "cost": "170",
-          "models": "6"
-        },
-        {
-          "active": true,
-          "cost": "85",
-          "models": "3"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "abilities": [
-            {
-              "description": "Each time an attack made with this weapon targets a unit more than 12\" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.",
-              "name": "Conversion",
-              "showAbility": true,
-              "showDescription": true
-            }
-          ],
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "1",
-              "damage": "3",
-              "keywords": ["Conversion", "Sustained Hits D3"],
-              "name": "SP conversion beamer",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "7"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": ["Sustained Hits 1"],
-              "name": "Bolt cannon",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "D6",
-              "damage": "2",
-              "keywords": ["Anti-vehicle 2+", "Blast"],
-              "name": "Graviton blast cannon",
-              "range": "18\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "5\"",
-          "name": "Brôkhyr Thunderkyn",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "3+",
-          "t": "6",
-          "w": "3"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "All models in this unit can each have their bolt cannon replaced with 1 SP conversion beamer.",
-        "All models in this unit can each have their bolt cannon replaced with 1 graviton blast cannon."
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Eye of the Ancestors"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "While a Character is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.",
-            "name": "Oathband Bodyguard",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": [
-          {
-            "description": "Models in the bearer’s unit have the Deep Strike ability.",
-            "name": "Teleport Crest",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "The bearer has a 4+ invulnerable save.",
-            "name": "Weavefield Crest",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ]
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Hesyr", "4-9 Hearthguard"],
-      "faction_id": "LoV",
-      "factions": ["Leagues of Votann"],
-      "fluff": "Clad in formidable exo-armour and equipped with a fearsome array of weaponry, Einhyr Hearthguard are a force to be reckoned with. Whether forming bodyguards around their Oathband’s heroes or striking deep into the heart of enemy territory, they are unstoppable on the attack and immovable in defence.",
-      "id": "cfd5032a-2dc7-507a-a400-a0fc45d1e82a",
-      "keywords": ["Einhyr Hearthguard", "Exo-Armour", "Infantry"],
-      "leadBy": ["Einhyr Champion", "Kâhl", "Ûthar the Destined"],
-      "leader": "",
-      "loadout": "Every model is equipped with: EtaCarn plasma gun; exo-armour grenade launcher; concussion gauntlet.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "3",
-              "keywords": [],
-              "name": "Concussion hammer",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": [],
-              "name": "Concussion gauntlet",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Plasma blade gauntlet",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "6"
-            }
-          ]
-        }
-      ],
-      "name": "Einhyr Hearthguard",
-      "points": [
-        {
-          "active": true,
-          "cost": "160",
-          "models": "5"
-        },
-        {
-          "active": true,
-          "cost": "320",
-          "models": "10"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": [],
-              "name": "EtaCarn plasma gun",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Devastating Wounds"],
-              "name": "Volkanite disintegrator",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Blast"],
-              "name": "Exo-armour grenade launcher",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "5\"",
-          "name": "Einhyr Hearthguard",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "2+",
-          "t": "6",
-          "w": "2"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "All models in this unit can each have their EtaCarn plasma gun replaced with 1 volkanite disintegrator.",
-        "All models in this unit can each have their concussion gauntlet replaced with 1 plasma blade gauntlet.",
-        "The Hesyr’s concussion gauntlet or plasma blade gauntlet can be replaced with 1 concussion hammer.",
-        "The Hesyr’s weavefield crest can be replaced with 1 teleport crest."
+        "Up to 3 different models that are not equipped with either a HYLas rotary cannon or an ion beamer can each be equipped with 1 of the following (to a maximum of 1 of each per unit): ◦ 1 comms array* ◦ 1 pan spectral scanner* ◦ 1 rollbar searchlight*  * This model cannot be equipped with a HYLas rotary cannon or an ion beamer.",
+        "For every 3 models in this unit, 1 model can be equipped with one of the following (if a model is equipped with any of these weapons, add 1 to its Wounds characteristic): ◦ 1 HYLas rotary cannon ◦ 1 ion beamer"
       ]
     }
   ],
   "detachments": ["Oathband"],
   "enhancements": [
     {
-      "cost": "15",
-      "description": "Leagues of Votann model only. Each time the bearer’s unit destroys an enemy unit, if that enemy unit has one or more Judgement tokens, you can select one other enemy unit that is visible to the bearer. That other unit gains one Judgement token.",
-      "detachment": "Oathband",
-      "excludes": [],
-      "faction_id": "LoV",
-      "id": "2576a089-105d-561b-b03a-c9a825260b89",
-      "keywords": ["Leagues of Votann"],
-      "name": "A Long List"
-    },
-    {
-      "cost": "20",
-      "description": "Leagues of Votann model only. In your Command phase, you can select one objective marker your opponent controls. Until the start of your next Command phase, while an enemy unit is within range of that objective marker, it counts as having one more Judgement token than it actually has (to a maximum of 2).",
-      "detachment": "Oathband",
-      "excludes": [],
-      "faction_id": "LoV",
+      "name": "Appraising Glare",
       "id": "b40c0f43-c499-5461-bdd5-657aec0a9174",
-      "keywords": ["Leagues of Votann"],
-      "name": "Appraising Glare"
-    },
-    {
       "cost": "20",
-      "description": "Leagues of Votann model only. You can re-roll Battle-shock tests taken for the bearer’s unit, and models in that unit can ignore any or all modifiers to their characteristics and/or to any rolls or tests made for them (excluding modifiers to saving throws).",
-      "detachment": "Oathband",
-      "excludes": [],
-      "faction_id": "LoV",
-      "id": "bb507e2d-b9f4-58cc-a85a-8f2218b664c7",
       "keywords": ["Leagues of Votann"],
-      "name": "Grim Demeanour"
+      "excludes": [],
+      "description": "Leagues of Votann model only. In your Command phase, you can select one objective marker your opponent controls. Until the start of your next Command phase, while an enemy unit is within range of that objective marker, it counts as having one more Judgement token than it actually has (to a maximum of 2).",
+      "faction_id": "LoV",
+      "detachment": "Oathband"
     },
     {
-      "cost": "25",
-      "description": "Leagues of Votann model only. The first time the bearer is destroyed, after placing a Judgement token next to the unit that destroyed it, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
-      "detachment": "Oathband",
-      "excludes": [],
-      "faction_id": "LoV",
-      "id": "76b8463e-e303-51c3-a07e-6876ed6877f6",
+      "name": "A Long List",
+      "id": "2576a089-105d-561b-b03a-c9a825260b89",
+      "cost": "15",
       "keywords": ["Leagues of Votann"],
-      "name": "Wayfarer’s Grace"
+      "excludes": [],
+      "description": "Leagues of Votann model only. Each time the bearer’s unit destroys an enemy unit, if that enemy unit has one or more Judgement tokens, you can select one other enemy unit that is visible to the bearer. That other unit gains one Judgement token.",
+      "faction_id": "LoV",
+      "detachment": "Oathband"
+    },
+    {
+      "name": "Grim Demeanour",
+      "id": "bb507e2d-b9f4-58cc-a85a-8f2218b664c7",
+      "cost": "20",
+      "keywords": ["Leagues of Votann"],
+      "excludes": [],
+      "description": "Leagues of Votann model only. You can re-roll Battle-shock tests taken for the bearer’s unit, and models in that unit can ignore any or all modifiers to their characteristics and/or to any rolls or tests made for them (excluding modifiers to saving throws).",
+      "faction_id": "LoV",
+      "detachment": "Oathband"
+    },
+    {
+      "name": "Wayfarer’s Grace",
+      "id": "76b8463e-e303-51c3-a07e-6876ed6877f6",
+      "cost": "25",
+      "keywords": ["Leagues of Votann"],
+      "excludes": [],
+      "description": "Leagues of Votann model only. The first time the bearer is destroyed, after placing a Judgement token next to the unit that destroyed it, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+      "faction_id": "LoV",
+      "detachment": "Oathband"
     }
   ],
   "id": "LoV",
@@ -2261,94 +2256,94 @@
   "parent_id": "",
   "stratagems": [
     {
+      "name": "Warrior Pride",
+      "id": "36f7ea19-cd8e-55b3-ad56-a0561c395bf3",
       "cost": 1,
-      "detachment": "Oathband",
-      "effect": "The attacking unit gains 1 Judgement token, or up to 2 Judgement tokens instead if that Leagues of Votann unit contained your Warlord when it was targeted by those attacks.",
-      "faction_id": "LoV",
-      "fluff": "To strike down Kin is to earn the immediate and murderous ire of all their warrior comrades.",
-      "id": "c85d0aa1-f332-5809-ab87-c79de5b0e75d",
-      "name": "Newfound Nemesis",
-      "phase": ["fight", "shooting"],
-      "restrictions": "",
-      "target": "One Leagues of Votann Infantry or Leagues of Votann Mounted unit from your army that was reduced to Below Half-strength as a result of the attacking unit’s attacks.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has resolved its attacks."
-    },
-    {
-      "cost": 1,
-      "detachment": "Oathband",
+      "turn": "either",
+      "target": "One Leagues of Votann unit from your army, and one enemy unit that has one or more Judgement tokens and is within Engagement Range of that Leagues of Votann unit.",
+      "when": "Fight phase.",
       "effect": "Until the end of the phase, each time a model in your unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1 for each Judgement token that enemy unit has.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
       "faction_id": "LoV",
       "fluff": "The warriors of the Leagues of Votann pride themselves on their martial skill and proficiency in combat, and when the Ancestors are watching their actions they can quickly overwhelm and pick apart their foes.",
-      "id": "36f7ea19-cd8e-55b3-ad56-a0561c395bf3",
-      "name": "Warrior Pride",
-      "phase": ["fight"],
-      "restrictions": "",
-      "target": "One Leagues of Votann unit from your army, and one enemy unit that has one or more Judgement tokens and is within Engagement Range of that Leagues of Votann unit.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Fight phase."
+      "detachment": "Oathband"
     },
     {
+      "name": "Ancestral Sentence",
+      "id": "7832e805-ed9a-5067-870d-99f239c16022",
       "cost": 1,
-      "detachment": "Oathband",
+      "turn": "your",
+      "target": "One Leagues of Votann unit from your army.",
+      "when": "Your Shooting phase.",
       "effect": "Until the end of the phase, each time a model in your unit makes a ranged attack, that attack has the [SUSTAINED HITS 1] ability, and each time a model in your unit makes a ranged attack that targets a unit that has one or more Judgement tokens, that attack has the [SUSTAINED HITS 2] ability instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
       "faction_id": "LoV",
       "fluff": "Some foes are so loathed that the Ancestors themselves are said to pass sentence upon them, marking them for death.",
-      "id": "7832e805-ed9a-5067-870d-99f239c16022",
-      "name": "Ancestral Sentence",
-      "phase": ["shooting"],
-      "restrictions": "",
-      "target": "One Leagues of Votann unit from your army.",
-      "turn": "your",
-      "type": "Battle Tactic",
-      "when": "Your Shooting phase."
+      "detachment": "Oathband"
     },
     {
-      "cost": 1,
-      "detachment": "Oathband",
-      "effect": "Until the end of the phase, each time an attack targets your Leagues of Votann unit, worsen the Armour Penteration characteristic of that attack by 1.",
-      "faction_id": "LoV",
-      "fluff": "Void armour comprises hardened, jointed segments hooked into the void suit beneath. It is fashioned from magnaferrite weave, and often reinforced with adamantine and enhanced with microfield generators.",
-      "id": "8fb206e7-9044-5490-9f71-f58cf8fad615",
-      "name": "Void Armour",
-      "phase": ["fight", "shooting"],
-      "restrictions": "",
-      "target": "One Leagues of Votann unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "opponents",
-      "type": "Wargear",
-      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    },
-    {
-      "cost": 1,
-      "detachment": "Oathband",
-      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge.",
-      "faction_id": "LoV",
-      "fluff": "Not for the Kin the sudden panic of the rout. Instead, they fall back steadily and by squads, laying down furious suppressing fire before launching fresh assaults.",
-      "id": "d3e00e76-7be9-5c24-ac2b-718f3de153d2",
-      "name": "Ordered Retreat",
-      "phase": ["movement"],
-      "restrictions": "",
-      "target": "That Leagues of Votann unit.",
-      "turn": "your",
-      "type": "Strategic Ploy",
-      "when": "Your Movement phase, just after a Leagues of Votann unit from your army Falls Back."
-    },
-    {
+      "name": "Reactive Reprisal",
+      "id": "ba0f78b6-5ebd-5d9f-8d77-d15fd5901470",
       "cost": 2,
-      "detachment": "Oathband",
+      "turn": "opponents",
+      "target": "One Leagues of Votann unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit that has one or more Judgement tokens has resolved its attacks.",
       "effect": "Your Leagues of Votann unit can shoot as if it were your Shooting phase, but it must target the enemy unit that just attacked it, and can only do so if that enemy unit is an eligible target.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
       "faction_id": "LoV",
       "fluff": "Once an enemy target has been marked out by the Eye of the Ancestors, the Kin focus their efforts upon its destruction, redoubling their fury should it attempt to engage.",
-      "id": "ba0f78b6-5ebd-5d9f-8d77-d15fd5901470",
-      "name": "Reactive Reprisal",
-      "phase": ["shooting"],
+      "detachment": "Oathband"
+    },
+    {
+      "name": "Ordered Retreat",
+      "id": "d3e00e76-7be9-5c24-ac2b-718f3de153d2",
+      "cost": 1,
+      "turn": "your",
+      "target": "That Leagues of Votann unit.",
+      "when": "Your Movement phase, just after a Leagues of Votann unit from your army Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge.",
       "restrictions": "",
-      "target": "One Leagues of Votann unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "LoV",
+      "fluff": "Not for the Kin the sudden panic of the rout. Instead, they fall back steadily and by squads, laying down furious suppressing fire before launching fresh assaults.",
+      "detachment": "Oathband"
+    },
+    {
+      "name": "Newfound Nemesis",
+      "id": "c85d0aa1-f332-5809-ab87-c79de5b0e75d",
+      "cost": 1,
       "turn": "opponents",
-      "type": "Battle Tactic",
-      "when": "Your opponent’s Shooting phase, just after an enemy unit that has one or more Judgement tokens has resolved its attacks."
+      "target": "One Leagues of Votann Infantry or Leagues of Votann Mounted unit from your army that was reduced to Below Half-strength as a result of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has resolved its attacks.",
+      "effect": "The attacking unit gains 1 Judgement token, or up to 2 Judgement tokens instead if that Leagues of Votann unit contained your Warlord when it was targeted by those attacks.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight", "shooting"],
+      "faction_id": "LoV",
+      "fluff": "To strike down Kin is to earn the immediate and murderous ire of all their warrior comrades.",
+      "detachment": "Oathband"
+    },
+    {
+      "name": "Void Armour",
+      "id": "8fb206e7-9044-5490-9f71-f58cf8fad615",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Leagues of Votann unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your Leagues of Votann unit, worsen the Armour Penteration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Wargear",
+      "phase": ["fight", "shooting"],
+      "faction_id": "LoV",
+      "fluff": "Void armour comprises hardened, jointed segments hooked into the void suit beneath. It is fashioned from magnaferrite weave, and often reinforced with adamantine and enhanced with microfield generators.",
+      "detachment": "Oathband"
     }
   ]
 }

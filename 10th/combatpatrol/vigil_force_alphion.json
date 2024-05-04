@@ -1,19 +1,59 @@
 {
+  "stratagems": [
+    {
+      "name": "Veteran Instincts",
+      "id": "697ece54-816c-598e-a224-6b698493d6da",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit has the Gravis keyword, models in your unit have the Feel No Pain 4+ ability instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "fluff": "Every Deathwatch battle-brother is a storied veteran who can boast highly developed survival instincts and a surfeit of grit and determination.",
+      "detachment": ""
+    },
+    {
+      "name": "Special-Issue Ammunition",
+      "id": "4df57518-b8db-597a-9994-7f61d069846b",
+      "cost": 1,
+      "turn": "your",
+      "target": "One Adeptus Astartes unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Select one of the following set of abilities. Until the end of the phase, ranged weapons equipped by models in your unit have that set of abilities:\n■ [ANTI-MONSTER 5+, ANTI-VEHICLE 5+, MELTA 2]\n■ [ASSAULT, IGNORES COVER, SUSTAINED HITS 2]",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "fluff": "From the mutagenic acids of hellfire rounds to armour-piercing kraken penetrator rounds or unstable but deadly vengeance rounds, the Deathwatch make use of a wide array of rare and specialised bolt shells to fight their alien prey.",
+      "detachment": ""
+    },
+    {
+      "name": "Deathwatch Teleportarium",
+      "id": "f89a1493-2e34-5520-a722-72f8ea8340f8",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Adeptus Astartes unit from your army that is not within Engagement Range of any enemy units.",
+      "when": "End of your opponent’s Fight phase.",
+      "effect": "Remove your unit from the battlefield. In the Reinforcements step of your next Movement phase set your unit up anywhere on the battlefield that is more than 3\" horizontally from all enemy models.",
+      "restrictions": "You can only use this Stratagem once and after being set up on the battlefield, until the end of the turn, your unit is not eligible to declare a charge.",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "fluff": "The Deathwatch employ rare and specialist technologies in their never-ending war against xenos invaders. Many of their warships incorporate heavily warded and unusually accurate teleportarium shrines to drop kill teams directly into the heart of the foe’s position.",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
-        "core": [
-          "Leader"
-        ],
+        "core": ["Leader"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Oath of Moment"
-        ],
+        "faction": ["Oath of Moment"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -23,8 +63,8 @@
         },
         "other": [
           {
-            "description": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
             "name": "Target Priority",
+            "description": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
             "showAbility": true,
             "showDescription": true
           }
@@ -34,22 +74,18 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Lieutenant Alphion (1 model)"
-      ],
-      "factions": [
-        "Deathwatch"
-      ],
+      "composition": ["Lieutenant Alphion (1 model)"],
+      "factions": ["Deathwatch"],
       "fluff": "In addition to being extremely able tacticians, Lieutenants of the Deathwatch are highly skilled warriors adept in ending xenos life in all its forms. Alphion bellows orders and coordinates his brothers’ fire even as he strides into the fight, hacking down the mightiest alien warriors with his crackling power sword.",
       "id": "2cfc8463-7417-575b-8344-273e8684dcbb",
+      "combatPatrol": true,
       "keywords": [
-        "Alphion",
+        "Infantry",
         "Character",
         "Imperium",
-        "Infantry",
+        "Tacticus",
         "Lieutenant",
-        "Tacticus"
+        "Alphion"
       ],
       "leader": "This model can be attached to the following unit: Intercessor Squad",
       "loadout": "■ This model is equipped with: bolt pistol; master-crafted power weapon.",
@@ -82,9 +118,7 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Bolt pistol",
               "range": "12\"",
               "skill": "2+",
@@ -109,24 +143,161 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Leader"
-        ],
+        "core": [],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Oath of Moment"
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [],
+        "primarch": [],
+        "special": [
+          {
+            "description": "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models. If you do so, each of those units must contain one model equipped with an Astartes grenade launcher.",
+            "name": "Patrol Squads",
+            "showAbility": true,
+            "showDescription": true
+          }
         ],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Intercessor Squad (10 models)"],
+      "factions": ["Deathwatch"],
+      "fluff": "Intercessor Squads are capable of laying down punishing fire while advancing or holding ground against the enemy. They have access to a range of bolt weaponry suited to varied battlefield assignments, from engaging enemies at long range to cleansing bunker complexes.",
+      "id": "ba5159e6-672b-5e6f-a7e1-dd03f49cb4b5",
+      "combatPatrol": true,
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Imperium",
+        "Tacticus",
+        "Intercessor Squad"
+      ],
+      "leader": "",
+      "loadout": "■ 1 Intercessor Sergeant is equipped with: bolt rifle; bolt pistol; close combat weapon.\n■ 7 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.\n■ 2 Intercessors are equipped with: Astartes grenade launcher; bolt rifle; bolt pistol; close combat weapon.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "name": "Intercessor Squad",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "D3",
+              "keywords": [],
+              "name": "Astartes grenade launcher – Krak",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "9"
+            },
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D3",
+              "damage": "1",
+              "keywords": ["Blast"],
+              "name": "Astartes grenade launcher – Frag",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Heavy", "Assault"],
+              "name": "Bolt rifle",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Bolt pistol",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "6\"",
+          "name": "Intercessor",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "3+",
+          "t": "4",
+          "w": "2"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Oath of Moment"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -136,8 +307,8 @@
         },
         "other": [
           {
-            "description": "While this model is leading a unit, in your Command phase, you can return 1 destroyed model (excluding Character models) to that unit.",
-            "name": "Narthecium",
+            "name": "Close-quarters Firepower",
+            "description": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.",
             "showAbility": true,
             "showDescription": true
           }
@@ -147,22 +318,112 @@
         "wargear": []
       },
       "cardType": "DataCard",
+      "composition": ["Aggressor Squad (3 models)"],
+      "factions": ["Deathwatch"],
+      "fluff": "Capable of spearheading devastating offensives or shattering the most determined enemy assaults, Aggressors are walking ceramite strong points. They excel at close-quarters combat and laying down torrents of devastating fire before crushing their foes beneath their energised fists.",
+      "id": "c9e75539-37ab-5990-a16a-952209ccad7a",
       "combatPatrol": true,
-      "composition": [
-        "Apothecary Krenn (1 model)"
+      "keywords": ["Infantry", "Imperium", "Gravis", "Aggressor Squad"],
+      "leader": "",
+      "loadout": "■ Every model is equipped with: flamestorm gauntlets; twin power fists.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": ["Twin-linked"],
+              "name": "Twin power fists",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "8"
+            }
+          ]
+        }
       ],
-      "factions": [
-        "Deathwatch"
+      "name": "Aggressor Squad",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6+1",
+              "damage": "1",
+              "keywords": ["Twin-linked", "Torrent", "Ignores Cover"],
+              "name": "Flamestorm gauntlets",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        }
       ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "5\"",
+          "name": "Aggressor Squad",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "3+",
+          "t": "6",
+          "w": "3"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Leader"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Narthecium",
+            "description": "While this model is leading a unit, in your Command phase, you can return 1 destroyed model (excluding Character models) to that unit.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Apothecary Krenn (1 model)"],
+      "factions": ["Deathwatch"],
       "fluff": "In addition to battlefield surgery, it is the Apothecary’s duty to recover the gene-seed of the fallen, and thus preserve the Chapter for later generations. For this task the Apothecary is equipped to bring peace to those too wounded to save, and efficiently extract their precious progenoid glands.",
       "id": "71b8bfcf-f521-5234-842e-3ff317cfbb66",
+      "combatPatrol": true,
       "keywords": [
-        "Apothecary",
+        "Infantry",
         "Character",
         "Imperium",
-        "Infantry",
-        "Krenn",
-        "Tacticus"
+        "Tacticus",
+        "Apothecary",
+        "Krenn"
       ],
       "leader": "This model can be attached to the following unit: Intercessor Squad",
       "loadout": "■ This model is equipped with: absolvor bolt pistol; reductor pistol; close combat weapon.",
@@ -195,9 +456,7 @@
               "ap": "-1",
               "attacks": "1",
               "damage": "2",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Absolvor bolt pistol",
               "range": "18\"",
               "skill": "3+",
@@ -213,9 +472,7 @@
               "ap": "-4",
               "attacks": "1",
               "damage": "2",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Reductor pistol",
               "range": "3\"",
               "skill": "3+",
@@ -240,357 +497,29 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "Oath of Moment"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [],
-        "primarch": [],
-        "special": [
-          {
-            "description": "At the start of the Declare Battle Formations step, before any units have been set up, this unit can be split into two units, each containing five models. If you do so, each of those units must contain one model equipped with an Astartes grenade launcher.",
-            "name": "Patrol Squads",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Intercessor Squad (10 models)"
-      ],
-      "factions": [
-        "Deathwatch"
-      ],
-      "fluff": "Intercessor Squads are capable of laying down punishing fire while advancing or holding ground against the enemy. They have access to a range of bolt weaponry suited to varied battlefield assignments, from engaging enemies at long range to cleansing bunker complexes.",
-      "id": "ba5159e6-672b-5e6f-a7e1-dd03f49cb4b5",
-      "keywords": [
-        "Battleline",
-        "Imperium",
-        "Infantry",
-        "Intercessor Squad",
-        "Tacticus"
-      ],
-      "leader": "",
-      "loadout": "■ 1 Intercessor Sergeant is equipped with: bolt rifle; bolt pistol; close combat weapon.\n■ 7 Intercessors are equipped with: bolt rifle; bolt pistol; close combat weapon.\n■ 2 Intercessors are equipped with: Astartes grenade launcher; bolt rifle; bolt pistol; close combat weapon.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "name": "Intercessor Squad",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [
-                "Assault",
-                "Heavy"
-              ],
-              "name": "Bolt rifle",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "D3",
-              "keywords": [],
-              "name": "Astartes grenade launcher – Krak",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "9"
-            },
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D3",
-              "damage": "1",
-              "keywords": [
-                "Blast"
-              ],
-              "name": "Astartes grenade launcher – Frag",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Bolt pistol",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "6\"",
-          "name": "Intercessor",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "3+",
-          "t": "4",
-          "w": "2"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "Oath of Moment"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "Each time a model in this unit makes a ranged attack that targets the closest eligible target, improve the Armour Penetration characteristic of that attack by 1.",
-            "name": "Close-quarters Firepower",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Aggressor Squad (3 models)"
-      ],
-      "factions": [
-        "Deathwatch"
-      ],
-      "fluff": "Capable of spearheading devastating offensives or shattering the most determined enemy assaults, Aggressors are walking ceramite strong points. They excel at close-quarters combat and laying down torrents of devastating fire before crushing their foes beneath their energised fists.",
-      "id": "c9e75539-37ab-5990-a16a-952209ccad7a",
-      "keywords": [
-        "Aggressor Squad",
-        "Gravis",
-        "Imperium",
-        "Infantry"
-      ],
-      "leader": "",
-      "loadout": "■ Every model is equipped with: flamestorm gauntlets; twin power fists.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": [
-                "Twin-linked"
-              ],
-              "name": "Twin power fists",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "name": "Aggressor Squad",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6+1",
-              "damage": "1",
-              "keywords": [
-                "Ignores Cover",
-                "Torrent",
-                "Twin-linked"
-              ],
-              "name": "Flamestorm gauntlets",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "5\"",
-          "name": "Aggressor Squad",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "3+",
-          "t": "6",
-          "w": "3"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "Add 1 to the Toughness characteristic of models in the bearer’s unit, and those models have a 4+ invulnerable save.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Aegis Vigilate",
       "id": "e73b586b-02a5-5efa-aa6d-369f016641ea",
-      "keywords": [
-        "Deathwatch"
-      ],
-      "name": "Aegis Vigilate"
+      "keywords": ["Deathwatch"],
+      "excludes": [],
+      "description": "Add 1 to the Toughness characteristic of models in the bearer’s unit, and those models have a 4+ invulnerable save.",
+      "detachment": ""
     },
     {
-      "description": "The bearer’s melee weapons have the [PRECISION] ability and each time the bearer makes a melee attack, add 1 to the Wound roll.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Aliens’ Bane",
       "id": "518b0e1c-c2af-5ea4-a38a-dcd3ba185137",
-      "keywords": [
-        "Deathwatch"
-      ],
-      "name": "Aliens’ Bane"
+      "keywords": ["Deathwatch"],
+      "excludes": [],
+      "description": "The bearer’s melee weapons have the [PRECISION] ability and each time the bearer makes a melee attack, add 1 to the Wound roll.",
+      "detachment": ""
     }
   ],
-  "id": "0036f1a2-98e2-5425-bd67-19a1a8cd78a7",
   "isCombatPatrol": true,
   "name": "Combat Patrol: Vigil Force Alphion",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Remove your unit from the battlefield. In the Reinforcements step of your next Movement phase set your unit up anywhere on the battlefield that is more than 3\" horizontally from all enemy models.",
-      "fluff": "The Deathwatch employ rare and specialist technologies in their never-ending war against xenos invaders. Many of their warships incorporate heavily warded and unusually accurate teleportarium shrines to drop kill teams directly into the heart of the foe’s position.",
-      "id": "f89a1493-2e34-5520-a722-72f8ea8340f8",
-      "name": "Deathwatch Teleportarium",
-      "phase": [
-        "fight"
-      ],
-      "restrictions": "You can only use this Stratagem once and after being set up on the battlefield, until the end of the turn, your unit is not eligible to declare a charge.",
-      "target": "One Adeptus Astartes unit from your army that is not within Engagement Range of any enemy units.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "End of your opponent’s Fight phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Select one of the following set of abilities. Until the end of the phase, ranged weapons equipped by models in your unit have that set of abilities:\n■ [ANTI-MONSTER 5+, ANTI-VEHICLE 5+, MELTA 2]\n■ [ASSAULT, IGNORES COVER, SUSTAINED HITS 2]",
-      "fluff": "From the mutagenic acids of hellfire rounds to armour-piercing kraken penetrator rounds or unstable but deadly vengeance rounds, the Deathwatch make use of a wide array of rare and specialised bolt shells to fight their alien prey.",
-      "id": "4df57518-b8db-597a-9994-7f61d069846b",
-      "name": "Special-Issue Ammunition",
-      "phase": [
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Adeptus Astartes unit from your army that has not been selected to shoot this phase.",
-      "turn": "your",
-      "type": "Battle Tactic",
-      "when": "Your Shooting phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability. If your unit has the Gravis keyword, models in your unit have the Feel No Pain 4+ ability instead.",
-      "fluff": "Every Deathwatch battle-brother is a storied veteran who can boast highly developed survival instincts and a surfeit of grit and determination.",
-      "id": "697ece54-816c-598e-a224-6b698493d6da",
-      "name": "Veteran Instincts",
-      "phase": [
-        "fight",
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    }
-  ]
+  "id": "0036f1a2-98e2-5425-bd67-19a1a8cd78a7"
 }

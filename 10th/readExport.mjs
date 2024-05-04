@@ -874,7 +874,7 @@ function parseDataExport(fileName, factionName) {
 
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
-  fs.writeFileSync(path.resolve(__dirname, fileName), JSON.stringify(sortObj(oldParsedUnits), null, 2));
+  fs.writeFileSync(path.resolve(__dirname, fileName), JSON.stringify(oldParsedUnits, null, 2));
 }
 
 parseDataExport('./gdc/darkangels.json', 'Dark Angels');

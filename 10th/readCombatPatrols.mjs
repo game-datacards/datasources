@@ -792,7 +792,7 @@ function readCombatPatrols() {
           .replaceAll('’', '')
           .toLowerCase()}.json`
       ),
-      JSON.stringify(sortObj(newCombatPatrol), null, 2)
+      JSON.stringify(newCombatPatrol, null, 2)
     );
   });
 }
