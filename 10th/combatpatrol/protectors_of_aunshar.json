@@ -1,48 +1,8 @@
 {
-  "stratagems": [
-    {
-      "name": "Defensive Fusillade",
-      "id": "456721c4-975d-5d99-a8c5-f381614b91c6",
-      "cost": 1,
-      "turn": "your",
-      "target": "One T’au Empire unit from your army that has not been selected to shoot this phase.",
-      "when": "Your Shooting phase.",
-      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [PISTOL] ability.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["shooting"],
-      "fluff": "Warriors of the Fire caste train to keep selecting targets and gunning them down even as the foe close to point-blank range. ",
-      "detachment": ""
-    },
-    {
-      "name": "Rapid Repositioning",
-      "id": "1ac62787-9c74-5070-9723-e7e70c2760d7",
-      "cost": 1,
-      "turn": "your",
-      "target": "One T’au Empire unit from your army that is not within Engagement Range of one or more enemy units.",
-      "when": "End of your Shooting phase.",
-      "effect": "Your unit can make a Normal move up to D6\". If your unit has the Battlesuit keyword, it can make a Normal move of up to 6\" instead.",
-      "restrictions": "Until the end of the turn, your unit is not eligible to declare a charge",
-      "type": "Strategic Ploy",
-      "phase": ["shooting"],
-      "fluff": "T’au military doctrine is highly mobile, placing little value on retaining territory compared to the preservation of T’au lives and the elimination of the enemy’s strength. ",
-      "detachment": ""
-    },
-    {
-      "name": "Laser-Marked Targets",
-      "id": "75568374-07e7-5c41-a8fd-d154e42ffa36",
-      "cost": 1,
-      "turn": "opponents",
-      "target": "One T’au Empire unit from your army that was selected as a target of that charge and is not within Engagement Range of one or more enemy units.",
-      "when": "Your opponent’s Charge phase, just after an enemy unit has declared a charge.",
-      "effect": "Your unit can shoot that enemy unit as if it were your Shooting phase. When doing so, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon’s Ballistic Skill or any modifiers. Until the end of the phase, subtract 2 from Charge rolls made for that enemy unit.",
-      "restrictions": "Your unit cannot shoot more than once this turn.",
-      "type": "Strategic Ploy",
-      "phase": ["charge"],
-      "fluff": "Painted with markerlights by well-hidden Pathfinders, the foe are perfectly triangulated ready to be cut down as they charge. ",
-      "detachment": ""
-    }
-  ],
+  "name": "Combat Patrol: Protectors of Aun’Shar",
+  "id": "05f2cbe8-2791-514f-8b04-9c2c7ca5ef1e",
+  "isCombatPatrol": true,
+  "detachments": ["Protectors of Aun’Shar"],
   "datasheets": [
     {
       "abilities": {
@@ -625,7 +585,50 @@
       "wargear": ["None"]
     }
   ],
-  "detachments": [],
+  "stratagems": [
+    {
+      "name": "Defensive Fusillade",
+      "id": "456721c4-975d-5d99-a8c5-f381614b91c6",
+      "cost": 1,
+      "turn": "your",
+      "target": "One T’au Empire unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [PISTOL] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "fluff": "Warriors of the Fire caste train to keep selecting targets and gunning them down even as the foe close to point-blank range. ",
+      "detachment": "Protectors of Aun’Shar"
+    },
+    {
+      "name": "Rapid Repositioning",
+      "id": "1ac62787-9c74-5070-9723-e7e70c2760d7",
+      "cost": 1,
+      "turn": "your",
+      "target": "One T’au Empire unit from your army that is not within Engagement Range of one or more enemy units.",
+      "when": "End of your Shooting phase.",
+      "effect": "Your unit can make a Normal move up to D6\". If your unit has the Battlesuit keyword, it can make a Normal move of up to 6\" instead.",
+      "restrictions": "Until the end of the turn, your unit is not eligible to declare a charge",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "fluff": "T’au military doctrine is highly mobile, placing little value on retaining territory compared to the preservation of T’au lives and the elimination of the enemy’s strength. ",
+      "detachment": "Protectors of Aun’Shar"
+    },
+    {
+      "name": "Laser-Marked Targets",
+      "id": "75568374-07e7-5c41-a8fd-d154e42ffa36",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One T’au Empire unit from your army that was selected as a target of that charge and is not within Engagement Range of one or more enemy units.",
+      "when": "Your opponent’s Charge phase, just after an enemy unit has declared a charge.",
+      "effect": "Your unit can shoot that enemy unit as if it were your Shooting phase. When doing so, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon’s Ballistic Skill or any modifiers. Until the end of the phase, subtract 2 from Charge rolls made for that enemy unit.",
+      "restrictions": "Your unit cannot shoot more than once this turn.",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "fluff": "Painted with markerlights by well-hidden Pathfinders, the foe are perfectly triangulated ready to be cut down as they charge. ",
+      "detachment": "Protectors of Aun’Shar"
+    }
+  ],
   "enhancements": [
     {
       "name": "DS13 Experimental Drone (Aura)",
@@ -633,7 +636,7 @@
       "keywords": ["T’au Empire"],
       "excludes": [],
       "description": "The bearer has the Lone Operative and Stealth abilities. While a friendly T’au Empire Infantry unit is within 6\" of the bearer, improve the Save characteristic of models in that unit by 1 and those models have the Feel No Pain 5+ ability.",
-      "detachment": ""
+      "detachment": "Protectors of Aun’Shar"
     },
     {
       "name": "DS15 Experimental Drone (Aura)",
@@ -641,11 +644,8 @@
       "keywords": ["T’au Empire"],
       "excludes": [],
       "description": "The bearer has the Lone Operative and Stealth abilities. While a friendly T’au Empire unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [LETHAL HITS] ability.",
-      "detachment": ""
+      "detachment": "Protectors of Aun’Shar"
     }
   ],
-  "isCombatPatrol": true,
-  "name": "Combat Patrol: Protectors of Aun’Shar",
-  "id": "05f2cbe8-2791-514f-8b04-9c2c7ca5ef1e",
-  "updated": "2024-05-04T10:03:10.255Z"
+  "updated": "2024-05-04T13:23:57.950Z"
 }
