@@ -54,6 +54,8 @@ function cleanForJson(name) {
   lines = lines.replaceAll('"active": false,', "");
   lines = lines.replaceAll('"active": true', "");
   lines = lines.replaceAll('"active": false', "");
+  lines = lines.replaceAll('"showAtTop": true,', "");
+  lines = lines.replaceAll('"showAtTop": false,', "");
 
   fs.writeFileSync(path.resolve(__dirname, `json/${name}.json`), lines);
 }
