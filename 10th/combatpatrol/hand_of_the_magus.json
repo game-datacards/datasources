@@ -1,154 +1,52 @@
 {
+  "stratagems": [
+    {
+      "name": "Lurking Killers",
+      "id": "f14c4294-0c4d-5a79-bfab-a39d5c4eefe1",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Genestealer Cults Infantry unit from your army (excluding Aberrant units) that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "fluff": "Combining guerrilla tactics and local knowledge with rudiments of alien instincts not their own, Genestealer Cultists display an almost supernatural ability to blend into cover. ",
+      "detachment": ""
+    },
+    {
+      "name": "Defend the Magus",
+      "id": "b0f6f01b-cfd5-5592-b8dc-08daf3941884",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Magus unit from your army and one enemy unit within Engagement Range of that Magus unit.",
+      "when": "Start of your Shooting phase or start of the Fight phase.",
+      "effect": "Until the end of the phase, each time a Genestealer Cults model from your army makes an attack that targets that enemy unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["fight", "shooting"],
+      "fluff": "The faithful will expend every effort to protect their Magus, for she is touched by the will of the Patriarch and is surely his living prophet.",
+      "detachment": ""
+    },
+    {
+      "name": "Return to the Shadows",
+      "id": "5b2a5617-7b82-51e7-809a-f90500b5c734",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Genestealer Cults Infantry unit from your army that is within 9\" of that enemy unit.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+      "effect": "Your unit can make a Normal move of up to D6\". If your unit has the Magus keyword, it can make a Normal move of up to 6\" instead. ",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "fluff": "Seeing the foe advancing heedlessly into their trap, the cultists fade into the gloom and move to encircle or outflank their prey. ",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
-        "core": [
-          "Deadly Demise D3",
-          "Firing Deck 6"
-        ],
-        "damaged": {
-          "description": "While this model has 1-3 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "range": "1-3 WOUNDS REMAINING",
-          "showDamagedAbility": true,
-          "showDescription": true
-        },
-        "faction": [],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Goliath Rockgrinder (1 model)"
-      ],
-      "factions": [
-        "Genestealer Cults"
-      ],
-      "fluff": "The drilldozer blade fitted to the Goliath Rockgrinder is intended for gouging tunnels deep into solid rock faces in search of mineral riches. However, it works just as well as both an ablative shield and a hideously bloody line-breaking weapon, mangling a crimson path through the luckless foe.",
-      "id": "0e213523-9fb4-5f6f-9fa7-3c06a2d101a3",
-      "keywords": [
-        "Goliath Rockgrinder",
-        "Great Devourer",
-        "Vehicle"
-      ],
-      "leader": "",
-      "loadout": "■ This model is equipped with: clearance incinerator; demolition charge cache; heavy stubber; drilldozer blade.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "6",
-              "damage": "2",
-              "keywords": [
-                "Sustained Hits 1"
-              ],
-              "name": "Drilldozer blade",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "10"
-            }
-          ]
-        }
-      ],
-      "name": "Goliath Rockgrinder",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "2D6",
-              "damage": "1",
-              "keywords": [
-                "Ignores Cover",
-                "Torrent"
-              ],
-              "name": "Clearance incinerator",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "D6+3",
-              "damage": "2",
-              "keywords": [
-                "Assault",
-                "Blast",
-                "Hazardous"
-              ],
-              "name": "Demolition charge cache",
-              "range": "6\"",
-              "skill": "5+",
-              "strength": "12"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 3"
-              ],
-              "name": "Heavy stubber",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "12\"",
-          "name": "Goliath Rockgrinder",
-          "oc": "3",
-          "showDamagedMarker": true,
-          "showName": false,
-          "sv": "3+",
-          "t": "10",
-          "w": "10"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [
-          "Deep Strike",
-          "Leader"
-        ],
+        "core": ["Deep Strike", "Leader"],
         "damaged": {
           "description": "",
           "range": "",
@@ -165,8 +63,8 @@
         },
         "other": [
           {
-            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability against Psychic Attacks.",
             "name": "Spiritual Leader",
+            "description": "While this model is leading a unit, models in that unit have the Feel No Pain 5+ ability against Psychic Attacks.",
             "showAbility": true,
             "showDescription": true
           }
@@ -176,21 +74,17 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Magus Veridielle (1 model)"
-      ],
-      "factions": [
-        "Genestealer Cults"
-      ],
+      "composition": ["Magus Veridielle (1 model)"],
+      "factions": ["Genestealer Cults"],
       "fluff": "Magus Veridielle is a powerful psyker, her formidable will enhanced by the gestalt powers of the Star Children – the ominous xenos gods the Genestealer Cults worship. She is able to manipulate the psionic energies of the Broodmind to shield her followers from harm, or else to strike down her foes with surges of xeno-tainted energies. ",
       "id": "8bbd8441-8a16-58f3-bcf0-da5f9870f395",
+      "combatPatrol": true,
       "keywords": [
-        "Character",
-        "Great Devourer",
         "Infantry",
-        "Magus",
+        "Character",
         "Psyker",
+        "Great Devourer",
+        "Magus",
         "Veridielle"
       ],
       "leader": "This model can be attached to the following units: Acolyte Hybrids, Neophyte Hybrids",
@@ -204,9 +98,7 @@
               "ap": "-1",
               "attacks": "3",
               "damage": "D3",
-              "keywords": [
-                "Psychic"
-              ],
+              "keywords": ["Psychic"],
               "name": "Magus stave",
               "range": "Melee",
               "skill": "3+",
@@ -226,9 +118,7 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Autopistol",
               "range": "12\"",
               "skill": "3+",
@@ -253,24 +143,18 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Deep Strike"
-        ],
+        "core": ["Deadly Demise D3", "Firing Deck 6"],
         "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
+          "range": "1-3 WOUNDS REMAINING",
+          "description": "While this model has 1-3 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+          "showDamagedAbility": true,
           "showDescription": true
         },
-        "faction": [
-          "Cult Ambush"
-        ],
+        "faction": [],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -284,19 +168,134 @@
         "wargear": []
       },
       "cardType": "DataCard",
+      "composition": ["Goliath Rockgrinder (1 model)"],
+      "factions": ["Genestealer Cults"],
+      "fluff": "The drilldozer blade fitted to the Goliath Rockgrinder is intended for gouging tunnels deep into solid rock faces in search of mineral riches. However, it works just as well as both an ablative shield and a hideously bloody line-breaking weapon, mangling a crimson path through the luckless foe.",
+      "id": "0e213523-9fb4-5f6f-9fa7-3c06a2d101a3",
       "combatPatrol": true,
-      "composition": [
-        "Neophyte Hybrids (10 models)"
+      "keywords": ["Vehicle", "Great Devourer", "Goliath Rockgrinder"],
+      "leader": "",
+      "loadout": "■ This model is equipped with: clearance incinerator; demolition charge cache; heavy stubber; drilldozer blade.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "6",
+              "damage": "2",
+              "keywords": ["Sustained Hits 1"],
+              "name": "Drilldozer blade",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "10"
+            }
+          ]
+        }
       ],
-      "factions": [
-        "Genestealer Cults"
+      "name": "Goliath Rockgrinder",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "2D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Clearance incinerator",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "D6+3",
+              "damage": "2",
+              "keywords": ["Hazardous", "Blast", "Assault"],
+              "name": "Demolition charge cache",
+              "range": "6\"",
+              "skill": "5+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Rapid Fire 3"],
+              "name": "Heavy stubber",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        }
       ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "12\"",
+          "name": "Goliath Rockgrinder",
+          "oc": "3",
+          "showDamagedMarker": true,
+          "showName": false,
+          "sv": "3+",
+          "t": "10",
+          "w": "10"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Deep Strike"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Cult Ambush"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Neophyte Hybrids (10 models)"],
+      "factions": ["Genestealer Cults"],
       "fluff": "Making up the bulk of their cult’s ranks, Neophyte Hybrids are the least alien in appearance of all the Patriarch’s brood. They are no less dangerous for this, however, and what they lack in weaponised bio-adaptations they make up for in numbers, massed firepower and zealous revolutionary fanaticism.",
       "id": "ec6bdc77-1eec-501e-be1a-1e4105102db9",
+      "combatPatrol": true,
       "keywords": [
+        "Infantry",
         "Battleline",
         "Great Devourer",
-        "Infantry",
         "Neophyte Hybrids"
       ],
       "leader": "",
@@ -343,31 +342,10 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
-              "attacks": "4",
-              "damage": "D3",
-              "keywords": [
-                "Heavy",
-                "Rapid Fire 2"
-              ],
-              "name": "Seismic cannon",
-              "range": "24\"",
-              "skill": "5+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Autopistol",
               "range": "12\"",
               "skill": "4+",
@@ -383,9 +361,7 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Leader pistol",
               "range": "12\"",
               "skill": "4+",
@@ -399,29 +375,9 @@
             {
               "active": true,
               "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
-              "name": "Hybrid firearm",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "3"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
               "attacks": "3",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 3"
-              ],
+              "keywords": ["Rapid Fire 3"],
               "name": "Heavy stubber",
               "range": "36\"",
               "skill": "4+",
@@ -434,17 +390,46 @@
           "profiles": [
             {
               "active": true,
+              "ap": "-1",
+              "attacks": "4",
+              "damage": "D3",
+              "keywords": ["Rapid Fire 2", "Heavy"],
+              "name": "Seismic cannon",
+              "range": "24\"",
+              "skill": "5+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
               "ap": "0",
               "attacks": "D6",
               "damage": "1",
-              "keywords": [
-                "Devastating Wounds",
-                "Torrent"
-              ],
+              "keywords": ["Torrent", "Devastating Wounds"],
               "name": "Webber",
               "range": "12\"",
               "skill": "N/A",
               "strength": "2"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Hybrid firearm",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "3"
             }
           ]
         }
@@ -465,24 +450,18 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Deep Strike"
-        ],
+        "core": ["Deep Strike"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Cult Ambush"
-        ],
+        "faction": ["Cult Ambush"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -492,8 +471,8 @@
         },
         "other": [
           {
-            "description": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack is an enemy unit within range of an objective marker, re-roll a Wound roll of 1 as well.",
             "name": "Vile Insurrectionists",
+            "description": "Each time a model in this unit makes an attack, re-roll a Hit roll of 1. If the target of that attack is an enemy unit within range of an objective marker, re-roll a Wound roll of 1 as well.",
             "showAbility": true,
             "showDescription": true
           }
@@ -503,20 +482,12 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Acolyte Hybrids (5 models)"
-      ],
-      "factions": [
-        "Genestealer Cults"
-      ],
+      "composition": ["Acolyte Hybrids (5 models)"],
+      "factions": ["Genestealer Cults"],
       "fluff": "Acolyte Hybrids are the offspring of the first hosts infected by the Genestealer Curse, and they are accordingly monstrous in body and mind. Possessed of hulking strength and the skill to manipulate complex mechanisms, they bear repurposed industrial tools and deadly close-quarters firearms into battle.",
       "id": "86ddd50f-f055-592b-807d-342f8b97960d",
-      "keywords": [
-        "Acolyte Hybrids",
-        "Great Devourer",
-        "Infantry"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Great Devourer", "Acolyte Hybrids"],
       "leader": "",
       "loadout": "■ 1 Acolyte Leader is equipped with: leader’s cult weapons; autopistol.\n■ 2 Acolyte Hybrids are equipped with: autopistol; cult claws and knife.\n■ 1 Acolyte Hybrid is equipped with: demolition charges; cult claws and knife.\n■ 1 Acolyte Hybrid is equipped with: heavy mining tool.",
       "meleeWeapons": [
@@ -525,14 +496,14 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
-              "attacks": "3",
+              "ap": "-2",
+              "attacks": "5",
               "damage": "1",
               "keywords": [],
-              "name": "Cult claws and knife",
+              "name": "Leader’s cult weapons",
               "range": "Melee",
               "skill": "3+",
-              "strength": "4"
+              "strength": "5"
             }
           ]
         },
@@ -557,14 +528,14 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-2",
-              "attacks": "5",
+              "ap": "-1",
+              "attacks": "3",
               "damage": "1",
               "keywords": [],
-              "name": "Leader’s cult weapons",
+              "name": "Cult claws and knife",
               "range": "Melee",
               "skill": "3+",
-              "strength": "5"
+              "strength": "4"
             }
           ]
         }
@@ -573,31 +544,18 @@
       "points": [],
       "rangedWeapons": [
         {
-          "abilities": [
-            {
-              "description": "The bearer can only shoot with this weapon once per battle.",
-              "name": "One Shot",
-              "showAbility": true,
-              "showDescription": true
-            }
-          ],
           "active": true,
           "profiles": [
             {
               "active": true,
-              "ap": "-2",
-              "attacks": "D6+3",
-              "damage": "2",
-              "keywords": [
-                "Assault",
-                "Blast",
-                "Hazardous",
-                "One Shot"
-              ],
-              "name": "Demolition charges",
-              "range": "6\"",
-              "skill": "5+",
-              "strength": "12"
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Autopistol",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "3"
             }
           ]
         },
@@ -606,16 +564,22 @@
           "profiles": [
             {
               "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Autopistol",
-              "range": "12\"",
-              "skill": "4+",
-              "strength": "3"
+              "ap": "-2",
+              "attacks": "D6+3",
+              "damage": "2",
+              "keywords": ["One Shot", "Hazardous", "Blast", "Assault"],
+              "name": "Demolition charges",
+              "range": "6\"",
+              "skill": "5+",
+              "strength": "12"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle.",
+              "showAbility": true,
+              "showDescription": true
             }
           ]
         }
@@ -636,9 +600,7 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -663,57 +625,15 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Aberrants (5 models)"
-      ],
-      "factions": [
-        "Genestealer Cults"
-      ],
+      "composition": ["Aberrants (5 models)"],
+      "factions": ["Genestealer Cults"],
       "fluff": "No one truly knows what causes Aberrants to spring up amidst the brood cycle, yet the uses of these lumpen gene-deviants are obvious. Possessed of immense strength and resilience coupled with simplistic loyalty to the cult, they are hurled into battle as line breakers or massed as hulking, expendable bodyguards.",
       "id": "f4c5f27a-5cb4-5868-a895-d8d6c1236708",
-      "keywords": [
-        "Aberrants",
-        "Great Devourer",
-        "Infantry"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Great Devourer", "Aberrants"],
       "leader": "",
       "loadout": "■ 1 Aberrant Hypermorph is equipped with: heavy improvised weapon; hypermorph tail.\n■ 4 Aberrants are equipped with: heavy power weapon.",
       "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "3",
-              "keywords": [],
-              "name": "Heavy power weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Extra Attacks"
-              ],
-              "name": "Hypermorph tail",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        },
         {
           "active": true,
           "profiles": [
@@ -727,6 +647,38 @@
               "range": "Melee",
               "skill": "3+",
               "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Extra Attacks"],
+              "name": "Hypermorph tail",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "3",
+              "keywords": [],
+              "name": "Heavy power weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "8"
             }
           ]
         }
@@ -750,86 +702,29 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "Melee weapons equipped by the bearer have the [ANTI-INFANTRY 5+] and [DEVASTATING WOUNDS] abilities.",
-      "detachment": "",
+      "name": "Psionic Shield",
+      "id": "08aa8f32-beb0-53bc-a8ae-864478c3751f",
+      "keywords": ["Magus"],
       "excludes": [],
-      "id": "c00badbc-59f2-5083-ad5e-46d1ff503ff8",
-      "keywords": [
-        "Magus"
-      ],
-      "name": "Resonance Stave"
+      "description": "While the bearer is leading a unit, each time a ranged attack is allocated to a model in that unit, add 1 to the saving throw made against that attack.",
+      "detachment": ""
     },
     {
-      "description": "While the bearer is leading a unit, each time a ranged attack is allocated to a model in that unit, add 1 to the saving throw made against that attack.",
-      "detachment": "",
+      "name": "Resonance Stave",
+      "id": "c00badbc-59f2-5083-ad5e-46d1ff503ff8",
+      "keywords": ["Magus"],
       "excludes": [],
-      "id": "08aa8f32-beb0-53bc-a8ae-864478c3751f",
-      "keywords": [
-        "Magus"
-      ],
-      "name": "Psionic Shield"
+      "description": "Melee weapons equipped by the bearer have the [ANTI-INFANTRY 5+] and [DEVASTATING WOUNDS] abilities.",
+      "detachment": ""
     }
   ],
-  "id": "3ddd89a1-46ae-5df9-afcf-90117fc9ba6b",
   "isCombatPatrol": true,
   "name": "Combat Patrol: Hand of the Magus",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, each time a Genestealer Cults model from your army makes an attack that targets that enemy unit, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
-      "fluff": "The faithful will expend every effort to protect their Magus, for she is touched by the will of the Patriarch and is surely his living prophet.",
-      "id": "b0f6f01b-cfd5-5592-b8dc-08daf3941884",
-      "name": "Defend the Magus",
-      "phase": [
-        "fight",
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Magus unit from your army and one enemy unit within Engagement Range of that Magus unit.",
-      "turn": "either",
-      "type": "Epic Deed",
-      "when": "Start of your Shooting phase or start of the Fight phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
-      "fluff": "Combining guerrilla tactics and local knowledge with rudiments of alien instincts not their own, Genestealer Cultists display an almost supernatural ability to blend into cover. ",
-      "id": "f14c4294-0c4d-5a79-bfab-a39d5c4eefe1",
-      "name": "Lurking Killers",
-      "phase": [
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Genestealer Cults Infantry unit from your army (excluding Aberrant units) that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "opponents",
-      "type": "Battle Tactic",
-      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Your unit can make a Normal move of up to D6\". If your unit has the Magus keyword, it can make a Normal move of up to 6\" instead. ",
-      "fluff": "Seeing the foe advancing heedlessly into their trap, the cultists fade into the gloom and move to encircle or outflank their prey. ",
-      "id": "5b2a5617-7b82-51e7-809a-f90500b5c734",
-      "name": "Return to the Shadows",
-      "phase": [
-        "movement"
-      ],
-      "restrictions": "",
-      "target": "One Genestealer Cults Infantry unit from your army that is within 9\" of that enemy unit.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move."
-    }
-  ]
+  "id": "3ddd89a1-46ae-5df9-afcf-90117fc9ba6b"
 }

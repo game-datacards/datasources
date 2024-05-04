@@ -1,19 +1,59 @@
 {
+  "stratagems": [
+    {
+      "name": "Reactive Field-shroud",
+      "id": "6c88b91f-c033-5271-842c-dd88d64d817e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Tech-Priest or Skitarii unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, models in your unit have a 4+ invulnerable save.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "fluff": "Triggered by autodetection of incoming enemy fire, single-burst shield capacitors raise a defensive power field around their bearers before burning out in showers of sparks. ",
+      "detachment": ""
+    },
+    {
+      "name": "Retribution Codes",
+      "id": "0fd9b4ad-d922-59d0-a15b-8f90d7958a8a",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Tech-Priest model from your army that was just destroyed by an attack made by an enemy model. You can use this Stratagem on that model even though it was just destroyed.",
+      "when": "Any phase.",
+      "effect": "Until the end of the battle, each time an Adeptus Mechanicus model from your army makes an attack that targets that enemy model’s unit, re-roll a Hit roll of 1.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["any"],
+      "fluff": "Vengeful subroutines within this Tech-Priest’s augmetic architecture ensure that, should they be slain, a purge code is beamed far and wide directing the faithful to hunt down their killer. ",
+      "detachment": ""
+    },
+    {
+      "name": "Retrogradial Targeting",
+      "id": "e32124b3-5d48-5dc0-9895-9c114fa548fd",
+      "cost": 2,
+      "turn": "your",
+      "target": "That Tech-Priest unit.",
+      "when": "Your Movement phase, just after a Tech-Priest unit from your army ends a Fall Back move.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "fluff": "Whether it be by literal ocular implants in the back of their heads, or through advanced cover-target subroutines, this unit is able to lay down deadly accurate volleys to suppress the foe even as they fall back from combat. ",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
-        "core": [
-          "Deadly Demise D3"
-        ],
+        "core": ["Deadly Demise D3"],
         "damaged": {
-          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
           "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
           "showDamagedAbility": true,
           "showDescription": true
         },
-        "faction": [
-          "Doctrina Imperatives"
-        ],
+        "faction": ["Doctrina Imperatives"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -27,21 +67,17 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Onager Dunecrawler (1 model)"
-      ],
-      "factions": [
-        "Adeptus Mechanicus"
-      ],
+      "composition": ["Onager Dunecrawler (1 model)"],
+      "factions": ["Adeptus Mechanicus"],
       "fluff": "The Onager Dunecrawler’s flexible armaments can blast apart squadrons of aircraft or atomise elite infantry in beams of blinding energy. They are versatile heavy weapons platforms, well-shielded and easily able to advance alongside Skitarii as their multiple limbs propel them over treacherous obstacles.",
       "id": "99cde65d-31e7-523a-9791-8fe0f1e1c965",
+      "combatPatrol": true,
       "keywords": [
-        "Imperium",
-        "Onager Dunecrawler",
-        "Skitarii",
         "Vehicle",
-        "Walker"
+        "Walker",
+        "Imperium",
+        "Skitarii",
+        "Onager Dunecrawler"
       ],
       "leader": "",
       "loadout": "■ This model is equipped with: Daedalus missile launcher; cognis heavy stubber; Icarus array; Dunecrawler legs; broad spectrum data-tether.",
@@ -71,31 +107,10 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
-              "attacks": "6",
-              "damage": "2",
-              "keywords": [
-                "Anti-fly 4+",
-                "Twin-linked"
-              ],
-              "name": "Icarus array",
-              "range": "48\"",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
               "ap": "-2",
               "attacks": "1",
               "damage": "D6+1",
-              "keywords": [
-                "Anti-fly 2+"
-              ],
+              "keywords": ["Anti-fly 2+"],
               "name": "Daedalus missile launcher",
               "range": "48\"",
               "skill": "4+",
@@ -111,14 +126,27 @@
               "ap": "0",
               "attacks": "3",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 3",
-                "Sustained Hits 1"
-              ],
+              "keywords": ["Sustained Hits 1", "Rapid Fire 3"],
               "name": "Cognis heavy stubber",
               "range": "36\"",
               "skill": "4+",
               "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "6",
+              "damage": "2",
+              "keywords": ["Twin-linked", "Anti-fly 4+"],
+              "name": "Icarus array",
+              "range": "48\"",
+              "skill": "4+",
+              "strength": "8"
             }
           ]
         }
@@ -139,15 +167,157 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Leader"
-        ],
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": [],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "6+"
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Kataphron Destroyers (3 models)"],
+      "factions": ["Adeptus Mechanicus"],
+      "fluff": "These biomechanical constructs operate as mobile heavy weapons platforms, bearing large esoteric cannons as well as close defence armaments. Their ballistic subroutines can be directed to operate independently of preprogrammed battle protocols, making them flexible tools of destruction.",
+      "id": "c1893b52-e426-59c4-aa4d-0a03e4b329ad",
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Imperium", "Kataphron", "Destroyers"],
+      "leader": "",
+      "loadout": "■ 1 Kataphron Destroyer is equipped with: heavy grav-cannon; phosphor blaster; close combat weapon.\n■ 2 Kataphron Destroyers are equipped with: Kataphron plasma culverin; cognis flamer; close combat weapon.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "name": "Kataphron Destroyers",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": ["Anti-vehicle 2+"],
+              "name": "Heavy grav-cannon",
+              "range": "30\"",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Rapid Fire 1", "Ignores Cover"],
+              "name": "Phosphor blaster",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": [],
+              "name": "Kataphron plasma culverin – Standard",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "7"
+            },
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": ["Hazardous"],
+              "name": "Kataphron plasma culverin – Supercharge",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Cognis flamer",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "5\"",
+          "name": "Kataphron Destroyers",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "3+",
+          "t": "6",
+          "w": "3"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Leader"],
         "damaged": {
           "description": "",
           "range": "",
@@ -164,14 +334,14 @@
         },
         "other": [
           {
-            "description": "In your Command phase, select one friendly Adeptus Mechanicus model within 3\" of this model. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per Command phase.",
-            "name": "Omnissiah’s Blessing",
+            "name": "Enginseer",
+            "description": "While this model is within 3\" of one or more friendly Adeptus Mechanicus Vehicle units, unless it is leading a unit, this model has the Lone Operative ability.",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "While this model is within 3\" of one or more friendly Adeptus Mechanicus Vehicle units, unless it is leading a unit, this model has the Lone Operative ability.",
-            "name": "Enginseer",
+            "name": "Omnissiah’s Blessing",
+            "description": "In your Command phase, select one friendly Adeptus Mechanicus model within 3\" of this model. That model regains up to D3 lost wounds. Each model can only be selected for this ability once per Command phase.",
             "showAbility": true,
             "showDescription": true
           }
@@ -181,21 +351,17 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Enginseer Verask (1 model)"
-      ],
-      "factions": [
-        "Adeptus Mechanicus"
-      ],
+      "composition": ["Enginseer Verask (1 model)"],
+      "factions": ["Adeptus Mechanicus"],
       "fluff": "Enginseers maintain many of the Imperium’s mechanisms, such as reactors, battle tanks and even starships. Enginseer Verask is respected amongst his fellow Tech-Priests both for his innate connection to the machine spirits of such Imperial war engines, and for his uncompromising brutality in battle. ",
       "id": "86148ac9-649b-5946-b1d8-4654060a824b",
+      "combatPatrol": true,
       "keywords": [
-        "Character",
-        "Enginseer",
-        "Imperium",
         "Infantry",
+        "Character",
         "Tech-Priest",
+        "Imperium",
+        "Enginseer",
         "Verask"
       ],
       "leader": "This model can be attached to the following unit: Skitarii Rangers",
@@ -207,12 +373,10 @@
             {
               "active": true,
               "ap": "-2",
-              "attacks": "1",
+              "attacks": "3",
               "damage": "2",
-              "keywords": [
-                "Extra Attacks"
-              ],
-              "name": "Servo-arm",
+              "keywords": [],
+              "name": "Omnissian axe",
               "range": "Melee",
               "skill": "4+",
               "strength": "6"
@@ -225,10 +389,10 @@
             {
               "active": true,
               "ap": "-2",
-              "attacks": "3",
+              "attacks": "1",
               "damage": "2",
-              "keywords": [],
-              "name": "Omnissian axe",
+              "keywords": ["Extra Attacks"],
+              "name": "Servo-arm",
               "range": "Melee",
               "skill": "4+",
               "strength": "6"
@@ -247,10 +411,7 @@
               "ap": "-1",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Devastating Wounds",
-                "Pistol"
-              ],
+              "keywords": ["Pistol", "Devastating Wounds"],
               "name": "Mechanicus pistol",
               "range": "12\"",
               "skill": "3+",
@@ -275,24 +436,18 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Scouts 6\""
-        ],
+        "core": ["Scouts 6\""],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Doctrina Imperatives"
-        ],
+        "faction": ["Doctrina Imperatives"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -306,22 +461,12 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Skitarii Rangers (10 models)"
-      ],
-      "factions": [
-        "Adeptus Mechanicus"
-      ],
+      "composition": ["Skitarii Rangers (10 models)"],
+      "factions": ["Adeptus Mechanicus"],
       "fluff": "Rangers relentlessly pursue their quarry over months or even years, tracking their prey unto death. They bear antique, long-barrelled galvanic rifles, whose energised ammunition transfers a coruscating charge when it hits, leaving the prey a smoking husk while the Rangers are already lining up their next target.",
       "id": "dce7d828-db1b-5c95-9190-0fe0b05960bc",
-      "keywords": [
-        "Battleline",
-        "Imperium",
-        "Infantry",
-        "Rangers",
-        "Skitarii"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Battleline", "Imperium", "Skitarii", "Rangers"],
       "leader": "",
       "loadout": "■ 1 Skitarii Ranger Alpha is equipped with: Mechanicus pistol; Alpha combat weapon.\n■ 6 Skitarii Rangers are equipped with: galvanic rifle; close combat weapon.\n■ 1 Skitarii Ranger is equipped with: galvanic rifle; close combat weapon; enhanced data-tether. \n■ 1 Skitarii Ranger is equipped with: arc rifle; close combat weapon.\n■ 1 Skitarii Ranger is equipped with: transuranic arquebus; close combat weapon.",
       "meleeWeapons": [
@@ -369,10 +514,7 @@
               "ap": "-1",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Devastating Wounds",
-                "Pistol"
-              ],
+              "keywords": ["Pistol", "Devastating Wounds"],
               "name": "Mechanicus pistol",
               "range": "12\"",
               "skill": "4+",
@@ -389,9 +531,9 @@
               "attacks": "1",
               "damage": "D3",
               "keywords": [
-                "Anti-vehicle 4+",
+                "Rapid Fire 1",
                 "Devastating Wounds",
-                "Rapid Fire 1"
+                "Anti-vehicle 4+"
               ],
               "name": "Arc rifle",
               "range": "30\"",
@@ -408,10 +550,7 @@
               "ap": "-2",
               "attacks": "1",
               "damage": "D3",
-              "keywords": [
-                "Heavy",
-                "Precision"
-              ],
+              "keywords": ["Precision", "Heavy"],
               "name": "Transuranic arquebus",
               "range": "36\"",
               "skill": "4+",
@@ -452,253 +591,29 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "6+"
-        },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Kataphron Destroyers (3 models)"
-      ],
-      "factions": [
-        "Adeptus Mechanicus"
-      ],
-      "fluff": "These biomechanical constructs operate as mobile heavy weapons platforms, bearing large esoteric cannons as well as close defence armaments. Their ballistic subroutines can be directed to operate independently of preprogrammed battle protocols, making them flexible tools of destruction.",
-      "id": "c1893b52-e426-59c4-aa4d-0a03e4b329ad",
-      "keywords": [
-        "Destroyers",
-        "Imperium",
-        "Infantry",
-        "Kataphron"
-      ],
-      "leader": "",
-      "loadout": "■ 1 Kataphron Destroyer is equipped with: heavy grav-cannon; phosphor blaster; close combat weapon.\n■ 2 Kataphron Destroyers are equipped with: Kataphron plasma culverin; cognis flamer; close combat weapon.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Kataphron Destroyers",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "4",
-              "damage": "2",
-              "keywords": [
-                "Anti-vehicle 2+"
-              ],
-              "name": "Heavy grav-cannon",
-              "range": "30\"",
-              "skill": "4+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": [],
-              "name": "Kataphron plasma culverin – Standard",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "7"
-            },
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "4",
-              "damage": "2",
-              "keywords": [
-                "Hazardous"
-              ],
-              "name": "Kataphron plasma culverin – Supercharge",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Ignores Cover",
-                "Rapid Fire 1"
-              ],
-              "name": "Phosphor blaster",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": [
-                "Ignores Cover",
-                "Torrent"
-              ],
-              "name": "Cognis flamer",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "5\"",
-          "name": "Kataphron Destroyers",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "3+",
-          "t": "6",
-          "w": "3"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "Each time the bearer’s unit is selected to shoot, you can re-roll one Hit roll and you can re-roll one Wound roll when resolving those attacks.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Omniballistic Data-tether",
       "id": "63fcdcc3-fe56-59f0-94ed-06df9da61186",
-      "keywords": [
-        "Adeptus Mechanicus"
-      ],
-      "name": "Omniballistic Data-tether"
+      "keywords": ["Adeptus Mechanicus"],
+      "excludes": [],
+      "description": "Each time the bearer’s unit is selected to shoot, you can re-roll one Hit roll and you can re-roll one Wound roll when resolving those attacks.",
+      "detachment": ""
     },
     {
-      "description": "Once per battle, when the bearer’s unit is selected to shoot, it can use this ability. If it does, until the end of the phase, ranged weapons equipped by models in the bearer’s unit have the [PRECISION] ability.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Imperative Surge-wafer",
       "id": "70967fed-d1cc-56d1-b34e-23e55272e744",
-      "keywords": [
-        "Adeptus Mechanicus"
-      ],
-      "name": "Imperative Surge-wafer"
+      "keywords": ["Adeptus Mechanicus"],
+      "excludes": [],
+      "description": "Once per battle, when the bearer’s unit is selected to shoot, it can use this ability. If it does, until the end of the phase, ranged weapons equipped by models in the bearer’s unit have the [PRECISION] ability.",
+      "detachment": ""
     }
   ],
-  "id": "6f5671e3-3401-5e81-823c-4d6febf592d2",
   "isCombatPatrol": true,
   "name": "Combat Patrol: Maniple Verask-Alpha",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the battle, each time an Adeptus Mechanicus model from your army makes an attack that targets that enemy model’s unit, re-roll a Hit roll of 1.",
-      "fluff": "Vengeful subroutines within this Tech-Priest’s augmetic architecture ensure that, should they be slain, a purge code is beamed far and wide directing the faithful to hunt down their killer. ",
-      "id": "0fd9b4ad-d922-59d0-a15b-8f90d7958a8a",
-      "name": "Retribution Codes",
-      "phase": [
-        "any"
-      ],
-      "restrictions": "",
-      "target": "One Tech-Priest model from your army that was just destroyed by an attack made by an enemy model. You can use this Stratagem on that model even though it was just destroyed.",
-      "turn": "either",
-      "type": "Strategic Ploy",
-      "when": "Any phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, models in your unit have a 4+ invulnerable save.",
-      "fluff": "Triggered by autodetection of incoming enemy fire, single-burst shield capacitors raise a defensive power field around their bearers before burning out in showers of sparks. ",
-      "id": "6c88b91f-c033-5271-842c-dd88d64d817e",
-      "name": "Reactive Field-shroud",
-      "phase": [
-        "fight",
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Tech-Priest or Skitarii unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    },
-    {
-      "cost": 2,
-      "detachment": "",
-      "effect": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back.",
-      "fluff": "Whether it be by literal ocular implants in the back of their heads, or through advanced cover-target subroutines, this unit is able to lay down deadly accurate volleys to suppress the foe even as they fall back from combat. ",
-      "id": "e32124b3-5d48-5dc0-9895-9c114fa548fd",
-      "name": "Retrogradial Targeting",
-      "phase": [
-        "movement"
-      ],
-      "restrictions": "",
-      "target": "That Tech-Priest unit.",
-      "turn": "your",
-      "type": "Strategic Ploy",
-      "when": "Your Movement phase, just after a Tech-Priest unit from your army ends a Fall Back move."
-    }
-  ]
+  "id": "6f5671e3-3401-5e81-823c-4d6febf592d2"
 }
