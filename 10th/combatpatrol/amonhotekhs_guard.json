@@ -6,80 +6,15 @@
   "detachments": ["Amonhotekh’s Guard"],
   "datasheets": [
     {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Reanimation Protocols"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": [],
-        "variant": "full",
-        "faction_id": "basic"
-      },
-      "cardType": "DataCard",
-      "composition": ["Canoptek Scarab Swarms (3 models)"],
-      "factions": ["Necrons"],
-      "fluff": "Canoptek Scarabs attack in skimming swarms. They descend upon the enemy with high-pitched chitters before breaking down infantry and tanks alike into raw energy with their feeder mandibles. Often attacking as the first wave of a Necron assault, these mechanical insectoids spread fear and destruction.",
-      "id": "44f4d714-cd8c-5925-a5aa-e201ca586e96",
+      "name": "Overlord Amonhotekh",
+      "id": "c4dc99d2-e489-587e-8df7-6bc956fce4f5",
       "combatPatrol": true,
-      "keywords": ["Swarm", "Fly", "Canoptek", "Scarab Swarms"],
-      "leader": "",
-      "loadout": "■ Every model is equipped with: feeder mandibles.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "6",
-              "damage": "1",
-              "keywords": ["Lethal Hits"],
-              "name": "Feeder mandibles",
-              "range": "Melee",
-              "skill": "5+",
-              "strength": "2"
-            }
-          ]
-        }
-      ],
-      "name": "Canoptek Scarab Swarms",
-      "points": [],
-      "rangedWeapons": [],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "8+",
-          "m": "10\"",
-          "name": "Canoptek Scarab Swarms",
-          "oc": "0",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "6+",
-          "t": "2",
-          "w": "4"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
+      "source": "40k-10e-cp",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
-        "core": [],
+        "core": ["Leader"],
         "damaged": {
           "description": "",
           "range": "",
@@ -91,72 +26,101 @@
           "info": "",
           "showAtTop": true,
           "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
+          "showInvulnerableSave": true,
+          "value": "4+"
         },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": [
+        "other": [
           {
-            "name": "Plasmacyte",
-            "description": "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability.",
+            "name": "Implacable Resilience",
+            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
             "showAbility": true,
             "showDescription": true
           }
         ],
-        "variant": "full",
-        "faction_id": "basic"
+        "primarch": [],
+        "special": [],
+        "wargear": []
       },
-      "cardType": "DataCard",
-      "composition": ["Skorpekh Destroyers (3 models)"],
+      "composition": ["Overlord Amonhotekh (1 model)"],
       "factions": ["Necrons"],
-      "fluff": "Skorpekh Destroyers favour overwhelming close-quarters violence to slaughter their victims. Though ungainly off the battlefield, in combat their tripod limbs allow them to pass through enemy lines in a madcap pirouette of slashing hyperphase blades, nigh on impossible to evade or parry.",
-      "id": "575dd16a-9a30-54d4-8c21-c7e3a5f2bce5",
-      "combatPatrol": true,
-      "keywords": ["Infantry", "Destroyer Cult", "Skorpekh Destroyers"],
-      "leader": "",
-      "loadout": "■ Every model is equipped with: Skorpekh hyperphase weapons.\n■ This unit is equipped with: 1 plasmacyte.",
+      "fluff": "Overlords lead the Necron dynasties in battle. Amonhotekh’s android mind is tremendously swift, his body implacably resilient and his weapons eldritch, ancient and lethal. Yet it is his indomitable will that is perhaps his most fearsome asset, for with this he drives entire armies to war.",
+      "keywords": ["Infantry", "Character", "Noble", "Overlord", "Amonhotekh"],
+      "leader": "This model can be attached to the following unit: Necron Warriors",
+      "loadout": "■ This model is equipped with: tachyon arrow; Overlord’s blade.",
       "meleeWeapons": [
         {
           "active": true,
           "profiles": [
             {
               "active": true,
-              "ap": "-2",
+              "ap": "-3",
               "attacks": "4",
               "damage": "2",
-              "keywords": [],
-              "name": "Skorpekh hyperphase weapons",
+              "keywords": ["Devastating Wounds"],
+              "name": "Overlord’s blade",
               "range": "Melee",
-              "skill": "3+",
-              "strength": "7"
+              "skill": "2+",
+              "strength": "8"
             }
           ]
         }
       ],
-      "name": "Skorpekh Destroyers",
       "points": [],
-      "rangedWeapons": [],
-      "source": "40k-10e",
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-5",
+              "attacks": "1",
+              "damage": "D6+2",
+              "keywords": ["One Shot"],
+              "name": "Tachyon arrow",
+              "range": "72\"",
+              "skill": "2+",
+              "strength": "16"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        }
+      ],
       "stats": [
         {
           "active": true,
-          "ld": "7+",
-          "m": "8\"",
-          "name": "Skorpekh Destroyers",
-          "oc": "2",
+          "ld": "4+",
+          "m": "5\"",
+          "name": "Overlord Amonhotekh",
+          "oc": "1",
           "showDamagedMarker": false,
           "showName": false,
-          "sv": "3+",
-          "t": "6",
-          "w": "3"
+          "sv": "2+",
+          "t": "5",
+          "w": "6"
         }
       ],
       "transport": "",
-      "wargear": ["None"]
+      "wargear": ["None"],
+      "leads": {
+        "units": ["Necron Warriors"],
+        "extra": ""
+      }
     },
     {
+      "name": "Necron Warriors",
+      "id": "9f2421d3-e597-59b4-ac78-560152a8440b",
+      "combatPatrol": true,
+      "source": "40k-10e-cp",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": [],
         "damaged": {
@@ -176,16 +140,11 @@
         "other": [],
         "primarch": [],
         "special": [],
-        "wargear": [],
-        "variant": "full",
-        "faction_id": "basic"
+        "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Necron Warriors (10 models)"],
       "factions": ["Necrons"],
       "fluff": "Necron Warriors attack in rank upon shambling rank. Individually little more than mindless automata, they are relentless and deadly when commanded en masse. The Warriors’ metallic bodies can self-repair from even the most hideous damage, while their unceasing volleys of fire butcher the foe with mechanical efficiency.",
-      "id": "82668436-e355-57ef-9312-3c5cafe0cff4",
-      "combatPatrol": true,
       "keywords": ["Infantry", "Battleline", "Necron Warriors"],
       "leader": "",
       "loadout": "■ 5 models are equipped with: gauss flayer; close combat weapon.\n■ 5 models are equipped with: gauss reaper; close combat weapon.",
@@ -207,7 +166,6 @@
           ]
         }
       ],
-      "name": "Necron Warriors",
       "points": [],
       "rangedWeapons": [
         {
@@ -243,7 +201,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -262,6 +219,164 @@
       "wargear": ["None"]
     },
     {
+      "name": "Skorpekh Destroyers",
+      "id": "d0596def-a296-55f4-a08c-71e83f5a9c5f",
+      "combatPatrol": true,
+      "source": "40k-10e-cp",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Reanimation Protocols"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": [
+          {
+            "name": "Plasmacyte",
+            "description": "Once per battle for each Plasmacyte this unit has, when this unit is selected to fight, you can use this ability. If you do, until the end of the phase, melee weapons equipped by models in this unit have the [DEVASTATING WOUNDS] ability.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ]
+      },
+      "composition": ["Skorpekh Destroyers (3 models)"],
+      "factions": ["Necrons"],
+      "fluff": "Skorpekh Destroyers favour overwhelming close-quarters violence to slaughter their victims. Though ungainly off the battlefield, in combat their tripod limbs allow them to pass through enemy lines in a madcap pirouette of slashing hyperphase blades, nigh on impossible to evade or parry.",
+      "keywords": ["Infantry", "Destroyer Cult", "Skorpekh Destroyers"],
+      "leader": "",
+      "loadout": "■ Every model is equipped with: Skorpekh hyperphase weapons.\n■ This unit is equipped with: 1 plasmacyte.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": [],
+              "name": "Skorpekh hyperphase weapons",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "7"
+            }
+          ]
+        }
+      ],
+      "points": [],
+      "rangedWeapons": [],
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "8\"",
+          "name": "Skorpekh Destroyers",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "3+",
+          "t": "6",
+          "w": "3"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "name": "Canoptek Scarab Swarms",
+      "id": "5830fca0-7833-547a-b9bc-aab4ba333a7d",
+      "combatPatrol": true,
+      "source": "40k-10e-cp",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Reanimation Protocols"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "composition": ["Canoptek Scarab Swarms (3 models)"],
+      "factions": ["Necrons"],
+      "fluff": "Canoptek Scarabs attack in skimming swarms. They descend upon the enemy with high-pitched chitters before breaking down infantry and tanks alike into raw energy with their feeder mandibles. Often attacking as the first wave of a Necron assault, these mechanical insectoids spread fear and destruction.",
+      "keywords": ["Swarm", "Fly", "Canoptek", "Scarab Swarms"],
+      "leader": "",
+      "loadout": "■ Every model is equipped with: feeder mandibles.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "6",
+              "damage": "1",
+              "keywords": ["Lethal Hits"],
+              "name": "Feeder mandibles",
+              "range": "Melee",
+              "skill": "5+",
+              "strength": "2"
+            }
+          ]
+        }
+      ],
+      "points": [],
+      "rangedWeapons": [],
+      "stats": [
+        {
+          "active": true,
+          "ld": "8+",
+          "m": "10\"",
+          "name": "Canoptek Scarab Swarms",
+          "oc": "0",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "6+",
+          "t": "2",
+          "w": "4"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "name": "Canoptek Doomstalker",
+      "id": "f3d817b6-dd1f-5026-96b2-73b3971bfb29",
+      "combatPatrol": true,
+      "source": "40k-10e-cp",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": ["Deadly Demise D3"],
         "damaged": {
@@ -281,16 +396,11 @@
         "other": [],
         "primarch": [],
         "special": [],
-        "wargear": [],
-        "variant": "full",
-        "faction_id": "basic"
+        "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Canoptek Doomstalker (1 model)"],
       "factions": ["Necrons"],
       "fluff": "Canoptek Doomstalkers stride with eerie grace. Whether prowling their masters’ armouries as tireless sentinels or providing mobile fire support to the Necron legions, the Doomstalkers annihilate all those who dare stand against them with searing salvoes from their doomsday blasters.",
-      "id": "7dfc54da-b57e-55f9-a991-8de1ccf802a0",
-      "combatPatrol": true,
       "keywords": ["Vehicle", "Walker", "Canoptek", "Doomstalker"],
       "leader": "",
       "loadout": "■ This model is equipped with: doomsday blaster; twin gauss flayer; Doomstalker limbs.",
@@ -312,7 +422,6 @@
           ]
         }
       ],
-      "name": "Canoptek Doomstalker",
       "points": [],
       "rangedWeapons": [
         {
@@ -348,7 +457,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -365,114 +473,6 @@
       ],
       "transport": "",
       "wargear": ["None"]
-    },
-    {
-      "abilities": {
-        "core": ["Leader"],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Reanimation Protocols"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "4+"
-        },
-        "other": [
-          {
-            "name": "Implacable Resilience",
-            "description": "Each time an attack is allocated to this model, subtract 1 from the Damage characteristic of that attack.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": [],
-        "variant": "full",
-        "faction_id": "basic"
-      },
-      "cardType": "DataCard",
-      "composition": ["Overlord Amonhotekh (1 model)"],
-      "factions": ["Necrons"],
-      "fluff": "Overlords lead the Necron dynasties in battle. Amonhotekh’s android mind is tremendously swift, his body implacably resilient and his weapons eldritch, ancient and lethal. Yet it is his indomitable will that is perhaps his most fearsome asset, for with this he drives entire armies to war.",
-      "id": "66fe4c7b-1ea1-521c-9f18-ec9f4da48e86",
-      "combatPatrol": true,
-      "keywords": ["Infantry", "Character", "Noble", "Overlord", "Amonhotekh"],
-      "leader": "This model can be attached to the following unit: Necron Warriors",
-      "loadout": "■ This model is equipped with: tachyon arrow; Overlord’s blade.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "4",
-              "damage": "2",
-              "keywords": ["Devastating Wounds"],
-              "name": "Overlord’s blade",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "name": "Overlord Amonhotekh",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-5",
-              "attacks": "1",
-              "damage": "D6+2",
-              "keywords": ["One Shot"],
-              "name": "Tachyon arrow",
-              "range": "72\"",
-              "skill": "2+",
-              "strength": "16"
-            }
-          ],
-          "abilities": [
-            {
-              "name": "One Shot",
-              "description": "The bearer can only shoot with this weapon once per battle.",
-              "showAbility": true,
-              "showDescription": true
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "4+",
-          "m": "5\"",
-          "name": "Overlord Amonhotekh",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "2+",
-          "t": "5",
-          "w": "6"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"],
-      "leads": {
-        "units": ["Necron Warriors"],
-        "extra": ""
-      }
     }
   ],
   "stratagems": [
@@ -542,5 +542,5 @@
       "faction_id": "basic"
     }
   ],
-  "updated": "2024-05-04T14:01:26.376Z"
+  "updated": "2024-05-04T14:35:11.650Z"
 }
