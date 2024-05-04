@@ -39,7 +39,7 @@
       "faction_id": "AC",
       "factions": ["Adeptus Custodes"],
       "fluff": "Like the Sentinel Guard of the ancient Legio Custodes, the Contemptor-Galatus is armed with a power blade and battle shield, albeit of a type greatly superior in size and potency. Coupled with the already resilient Contemptor chassis, this wargear enables the Galatus to stride through the inferno of battle with impunity, slaying elite infantry and crippling vehicles.",
-      "id": "134142f6-2a60-56ed-8dfd-21373c195102",
+      "id": "807361fc-19a7-5ef8-baf7-4c9c9367f2bf",
       "imperialArmour": true,
       "keywords": [
         "Contemptor-Galatus Dreadnought",
@@ -145,7 +145,7 @@
       "faction_id": "AC",
       "factions": ["Adeptus Custodes"],
       "fluff": "The Contemptor-Achillus adds still greater refinement to an already celebrated blueprint – the revered Contemptor Dreadnought – arming its occupant with a mighty dreadspear equally capable of searing through foes at range or vanquishing them with a single thrust of its glowing blade.",
-      "id": "f0073ee1-10b4-5ece-a72c-9e22f7eadab5",
+      "id": "3b049bfc-9a92-5d0a-825f-de4c6c6e1fa9",
       "imperialArmour": true,
       "keywords": [
         "Contemptor-Achillus Dreadnought",
@@ -418,6 +418,7 @@
         "faction": [],
         "invul": {
           "info": "",
+          "showAtTop": true,
           "showInfo": false,
           "showInvulnerableSave": false,
           "value": ""
@@ -430,7 +431,7 @@
             "showDescription": true
           },
           {
-            "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks.",
+            "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.",
             "name": "Daughters of the Abyss",
             "showAbility": true,
             "showDescription": true
@@ -1222,128 +1223,6 @@
           "info": "",
           "showAtTop": true,
           "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "5+"
-        },
-        "other": [
-          {
-            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
-            "name": "Fire Support",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Coronus Grav-carrier"],
-      "faction_id": "AC",
-      "factions": ["Adeptus Custodes"],
-      "fluff": "Coronus Grav-carriers are the primary tactical transports of the Adeptus Custodes. Their repulsor suspensor technology and flare shielding grants them the speed and survivability to engage or evade myriad threats at will, punishing targets with their potent turret weapons as they speed their elite passengers to the forefront of battle.",
-      "id": "f0b82110-5f91-5f45-9280-d686ae2823cd",
-      "imperialArmour": true,
-      "keywords": [
-        "Coronus Grav-carrier",
-        "Fly",
-        "Imperium",
-        "Transport",
-        "Vehicle"
-      ],
-      "leader": "",
-      "loadout": "This model is equipped with: twin arachnus blaze cannon; twin lastrum bolt cannon; armoured hull.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "6",
-              "damage": "1",
-              "keywords": [],
-              "name": "Armoured hull",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "name": "Coronus Grav-carrier",
-      "points": [
-        {
-          "active": true,
-          "cost": "200",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Sustained Hits 1"],
-              "name": "Twin lastrum bolt cannon",
-              "range": "36\"",
-              "skill": "2+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "8",
-              "damage": "1",
-              "keywords": ["Devastating Wounds", "Twin-linked"],
-              "name": "Twin arachnus blaze cannon",
-              "range": "24\"",
-              "skill": "2+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "12\"",
-          "name": "Coronus Grav-carrier",
-          "oc": "5",
-          "showDamagedMarker": true,
-          "showName": false,
-          "sv": "2+",
-          "t": "12",
-          "w": "16"
-        }
-      ],
-      "transport": "This model has a transport capacity of 8 Adeptus Custodes Infantry models.",
-      "wargear": ["None"]
-    },
-    {
-      "abilities": {
-        "core": ["Deadly Demise D6"],
-        "damaged": {
-          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "range": "1-5 WOUNDS REMAINING",
-          "showDamagedAbility": true,
-          "showDescription": true
-        },
-        "faction": ["Martial Ka’tah"],
-        "invul": {
-          "info": "",
-          "showInfo": false,
           "showInvulnerableSave": false,
           "value": ""
         },
@@ -1497,6 +1376,129 @@
     },
     {
       "abilities": {
+        "core": ["Deadly Demise D6"],
+        "damaged": {
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+          "range": "1-5 WOUNDS REMAINING",
+          "showDamagedAbility": true,
+          "showDescription": true
+        },
+        "faction": ["Martial Ka’tah"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "5+"
+        },
+        "other": [
+          {
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit that was hit by one or more of those attacks. Until the end of the phase, each time a friendly model that disembarked from this Transport this turn makes an attack that targets that enemy unit, you can re-roll the Wound roll.",
+            "name": "Fire Support",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["1 Coronus Grav-carrier"],
+      "faction_id": "AC",
+      "factions": ["Adeptus Custodes"],
+      "fluff": "Coronus Grav-carriers are the primary tactical transports of the Adeptus Custodes. Their repulsor suspensor technology and flare shielding grants them the speed and survivability to engage or evade myriad threats at will, punishing targets with their potent turret weapons as they speed their elite passengers to the forefront of battle.",
+      "id": "f0b82110-5f91-5f45-9280-d686ae2823cd",
+      "imperialArmour": true,
+      "keywords": [
+        "Coronus Grav-carrier",
+        "Fly",
+        "Imperium",
+        "Transport",
+        "Vehicle"
+      ],
+      "leader": "",
+      "loadout": "This model is equipped with: twin arachnus blaze cannon; twin lastrum bolt cannon; armoured hull.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "6",
+              "damage": "1",
+              "keywords": [],
+              "name": "Armoured hull",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "name": "Coronus Grav-carrier",
+      "points": [
+        {
+          "active": true,
+          "cost": "200",
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Sustained Hits 1"],
+              "name": "Twin lastrum bolt cannon",
+              "range": "36\"",
+              "skill": "2+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "8",
+              "damage": "1",
+              "keywords": ["Devastating Wounds", "Twin-linked"],
+              "name": "Twin arachnus blaze cannon",
+              "range": "24\"",
+              "skill": "2+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "12\"",
+          "name": "Coronus Grav-carrier",
+          "oc": "5",
+          "showDamagedMarker": true,
+          "showName": false,
+          "sv": "2+",
+          "t": "12",
+          "w": "16"
+        }
+      ],
+      "transport": "This model has a transport capacity of 8 Adeptus Custodes Infantry models.",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
         "core": ["Deep Strike", "Feel No Pain 5+", "Leader"],
         "damaged": {
           "description": "",
@@ -1514,13 +1516,13 @@
         },
         "other": [
           {
-            "description": "Once per battle, at the start of the Fight phase, you can select one of the following to take effect until the end of the phase: ■  This model’s Watcher’s Axe melee weapon has an Attacks characteristic of 12. ■  This model has a 2+ invulnerable save. ■ Models in this model’s unit have the Fights First ability.",
+            "description": "Once per battle, at the start of the Fight phase, you can select one of the following to take effect until the end of the phase:\n\n■ This model’s Watcher’s Axe melee weapon has an Attacks characteristic of 12.\n■ This model has a 2+ invulnerable save.",
             "name": "Moment Shackle",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "While this model is leading a unit, you can ignore any or all modifiers to the characteristics of models in that unit and/or to any roll or test made for models in that unit (excluding modifiers to saving throws).",
+            "description": "While this model is leading a unit, each time a model in this unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic skill or Weapon skill characteristics and/or all modifiers to the Hit roll.",
             "name": "Captain-General",
             "showAbility": true,
             "showDescription": true
@@ -1637,14 +1639,180 @@
         },
         "other": [
           {
-            "description": "At the start of the Fight phase, select one Ka’tah Stance. Until the end of the phase, that stance is active for this model’s unit in addition to the one that is active. Once per battle, at the start of the Fight phase, all stances are active for this model’s unit until the end of the phase.",
-            "name": "Master of the Stances",
+            "description": "Once per battle round, you can select one model from your army with this ability. You can target that model’s unit with a Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+            "name": "Strategic Mastery",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "Once per battle round, you can select one model from your army with this ability. That model’s unit can be targeted with a Stratagem for 0CP, even if that Stratagem has already targeted another unit from your army this phase.",
+            "description": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, each time an attack is allocated to this model, change the Damage characteristic of that attack to 1.",
+            "name": "Auramite and Adamantine",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["1 Shield-Captain in Allarus Terminator Armour"],
+      "faction_id": "AC",
+      "factions": ["Adeptus Custodes"],
+      "fluff": "A Shield-Captain is already one of the most formidable combatants and superlative strategists in the Imperium. When clad in a nigh-on impenetrable suit of auramite Terminator armour, they become more powerful still – a walking fortress of Imperial might able to shrug off even the most dolorous blows.",
+      "id": "6dc40aca-5350-5393-b026-5fb29533920f",
+      "keywords": [
+        "Character",
+        "Imperium",
+        "Infantry",
+        "Shield-Captain",
+        "Terminator"
+      ],
+      "leader": "This model can be attached to the following unit: ■ Allarus Custodians",
+      "leads": {
+        "extra": "",
+        "units": ["Allarus Custodians"]
+      },
+      "loadout": "This model is equipped with: balistus grenade launcher; guardian spear.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "6",
+              "damage": "3",
+              "keywords": [],
+              "name": "Castellan axe – Melee",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "7",
+              "damage": "2",
+              "keywords": [],
+              "name": "Guardian spear – Melee",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "7"
+            }
+          ]
+        }
+      ],
+      "name": "Shield-Captain in Allarus Terminator Armour",
+      "points": [
+        {
+          "active": true,
+          "cost": "140",
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Assault"],
+              "name": "Castellan axe – Ranged",
+              "range": "24\"",
+              "skill": "2+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Assault"],
+              "name": "Guardian spear – Ranged",
+              "range": "24\"",
+              "skill": "2+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Blast"],
+              "name": "Balistus grenade launcher",
+              "range": "18\"",
+              "skill": "2+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "5\"",
+          "name": "Shield-Captain in Allarus Terminator Armour",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "2+",
+          "t": "7",
+          "w": "7"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "This model’s guardian spear can be replaced with 1 castellan axe."
+      ]
+    },
+    {
+      "abilities": {
+        "core": ["Deep Strike", "Leader"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Martial Ka’tah"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "4+"
+        },
+        "other": [
+          {
+            "description": "Once per battle round, you can select one model from your army with this ability. You can target that model’s unit with a Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
             "name": "Strategic Mastery",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "description": "Once per battle, when this model’s unit is selected to fight, it can use this ability. If it does, until that fight is resolved, both Ka’tah Stances are active for that unit, instead of only one.",
+            "name": "Master of the Stances",
             "showAbility": true,
             "showDescription": true
           }
@@ -1665,7 +1833,7 @@
       "faction_id": "AC",
       "factions": ["Adeptus Custodes"],
       "fluff": "Shield‑Captains are among the greatest warriors in the Imperium. No matter which weapons they wield, they display absolute mastery of them. Their tactical and strategic abilities are superlative, and they read the ebb and flow of a war at a glance before directing their forces accordingly.",
-      "id": "7e5fe5ef-d517-5317-a4a3-532012b2ab27",
+      "id": "0371022a-b06a-508a-bd11-0c8b08fc8ab4",
       "keywords": ["Character", "Imperium", "Infantry", "Shield-Captain"],
       "leader": "This model can be attached to the following units: ■ Custodian Guard ■ Custodian Wardens",
       "leads": {
@@ -1852,180 +2020,14 @@
         },
         "other": [
           {
-            "description": "If this model is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
-            "name": "Defiant to the Last",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "Once per battle round, you can select one model from your army with this ability and target that model’s unit with a Stratagem for 0CP, even if that Stratagem has already been used on another unit from your army this phase.",
-            "name": "Strategic Mastery",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Shield-Captain in Allarus Terminator Armour"],
-      "faction_id": "AC",
-      "factions": ["Adeptus Custodes"],
-      "fluff": "A Shield-Captain is already one of the most formidable combatants and superlative strategists in the Imperium. When clad in a nigh-on impenetrable suit of auramite Terminator armour, they become more powerful still – a walking fortress of Imperial might able to shrug off even the most dolorous blows.",
-      "id": "4bff1d84-eb9d-5f8f-80c2-4eef6bc38553",
-      "keywords": [
-        "Character",
-        "Imperium",
-        "Infantry",
-        "Shield-Captain",
-        "Terminator"
-      ],
-      "leader": "This model can be attached to the following unit: ■ Allarus Custodians",
-      "leads": {
-        "extra": "",
-        "units": ["Allarus Custodians"]
-      },
-      "loadout": "This model is equipped with: balistus grenade launcher; guardian spear.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "6",
-              "damage": "3",
-              "keywords": [],
-              "name": "Castellan axe – Melee",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "7",
-              "damage": "2",
-              "keywords": [],
-              "name": "Guardian spear – Melee",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "7"
-            }
-          ]
-        }
-      ],
-      "name": "Shield-Captain in Allarus Terminator Armour",
-      "points": [
-        {
-          "active": true,
-          "cost": "140",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": ["Assault"],
-              "name": "Castellan axe – Ranged",
-              "range": "24\"",
-              "skill": "2+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": ["Assault"],
-              "name": "Guardian spear – Ranged",
-              "range": "24\"",
-              "skill": "2+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Blast"],
-              "name": "Balistus grenade launcher",
-              "range": "18\"",
-              "skill": "2+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "5\"",
-          "name": "Shield-Captain in Allarus Terminator Armour",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "2+",
-          "t": "7",
-          "w": "7"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "This model’s guardian spear can be replaced with 1 castellan axe."
-      ]
-    },
-    {
-      "abilities": {
-        "core": ["Deep Strike", "Leader"],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Martial Ka’tah"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "4+"
-        },
-        "other": [
-          {
             "description": "While this model is leading a unit, you can re-roll Advance and Charge rolls made for that unit. In addition, once per battle, this model’s unit is eligible to declare a charge in a turn in which it Advanced.",
             "name": "Martial Inspiration",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "You can target this model’s unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
-            "name": "Legacy of Combat",
+            "description": "While this model is leading a unit, you can re‑roll Charge rolls made for that unit.",
+            "name": "Swift Onslaught",
             "showAbility": true,
             "showDescription": true
           }
@@ -2309,7 +2311,7 @@
             "showDescription": true
           },
           {
-            "description": "Once per battle, at the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield. In the Reinforcements step of your next Movement phase, set it up anywhere on the battlefield that is more than 9\" horizontally away from all enemy models.",
+            "description": "Once per battle, at the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
             "name": "From Golden Light",
             "showAbility": true,
             "showDescription": true
@@ -2527,7 +2529,7 @@
       "faction_id": "AC",
       "factions": ["Adeptus Custodes"],
       "fluff": "The signature armaments of the Custodian Guard combine deadly power blades and integrated ranged weapons. While guardian spears are the most recognisable of these potent devices, for specialised tasks the bolt weapons they mount can be exchanged for the adrathic destructors of adrasite spears or the melta beams of pyrithite spears.",
-      "id": "550e4175-7149-5870-a7b3-58e842cfce32",
+      "id": "1f8acce4-6284-5da7-bdae-85ba7d424c25",
       "imperialArmour": true,
       "keywords": [
         "Custodian Guard with Adrasite and Pyrithite Spears",
@@ -2958,7 +2960,7 @@
             "showDescription": true
           },
           {
-            "description": "While a Character is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll.",
+            "description": "While a Character model is leading this unit, each time an attack targets this unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll.",
             "name": "Resolute Will",
             "showAbility": true,
             "showDescription": true
@@ -3261,7 +3263,7 @@
         },
         "other": [
           {
-            "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks.",
+            "description": "This model has the Feel No Pain 3+ ability against Psychic Attack and mortal wounds.",
             "name": "Daughter of the Abyss",
             "showAbility": true,
             "showDescription": true
@@ -3367,7 +3369,7 @@
         },
         "other": [
           {
-            "description": "Once per battle round, you can re-roll one Hit roll, one Wound roll or one saving throw made for this model. In addition, once per battle, after making a Hit roll, Wound roll or saving throw for this model, you can change the result of that roll to an unmodified 6.",
+            "description": "Once per battle, after making a Hit roll, Wound roll or saving throw for this model, you can change the result of that roll to an unmodified 6.",
             "name": "Hero of Lion’s Gate",
             "showAbility": true,
             "showDescription": true
@@ -3490,7 +3492,7 @@
             "showDescription": true
           },
           {
-            "description": "This model has the Feel No Pain 3+ ability against Psychic Attacks.",
+            "description": "This model has the Feel No Pain 3+ ability against Psychic Attack and mortal wounds.",
             "name": "Daughter of the Abyss",
             "showAbility": true,
             "showDescription": true
@@ -3511,7 +3513,7 @@
       "faction_id": "AC",
       "factions": ["Adeptus Custodes"],
       "fluff": "Knight‑Centuras are the leaders of Sisters of Silence cadres and the guardians of their traditions. They have earned the respect of their Sisters through their years of service, impeccable fighting skills, prowess and control as Nulls and encyclopaedic knowledge of how best to hunt the witch and the sorcerer.",
-      "id": "1502c79d-c7ba-5714-8de1-c24b51efefd8",
+      "id": "cd641b7e-b287-5d63-85ef-4e991dd25cfd",
       "keywords": [
         "Anathema Psykana",
         "Character",
@@ -3640,13 +3642,13 @@
         },
         "other": [
           {
-            "description": "Once per battle round, you can select one model from your army with this ability and target that model’s unit with a Stratagem for 0CP, even if that Stratagem has already been used on another unit from your army this phase.",
+            "description": "Once per battle round, you can select one model from your army with this ability. You can target that model’s unit with a Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
             "name": "Strategic Mastery",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "While this model is leading a unit, each time that unit Consolidates, each model in that unit can move up to 6\" instead of up to 3\". In addition, once per battle, at the end of the Fight phase, if this model’s unit is within Engagement Range of one or more enemy units, it can Fall Back as if it were your Movement phase or, if it is not within Engagement Range of one or more enemy units, it can make a Normal move as if it were your Movement phase.",
+            "description": "Once per battle, at the end of the Fight phase, if this model’s unit has fought this phase, if it is within Engagement Range of one or more enemy units, it can make a Fall Back move or, if it is not within Engagement Range of one or more enemy units, it can make a Normal move.",
             "name": "Sweeping Advance",
             "showAbility": true,
             "showDescription": true
@@ -3661,7 +3663,7 @@
       "faction_id": "AC",
       "factions": ["Adeptus Custodes"],
       "fluff": "All Shield‑Captains are decisive warriors who suffer no impediment to their mission, but those swiftest in thought and action soar into battle on Dawneagle jetbikes. They plunge into the heart of the enemy lines to reap a tally with their interceptor lances before arcing away on screaming grav‑engines to strike again elsewhere.",
-      "id": "e803a504-7890-5595-8868-d52189fbe26e",
+      "id": "e9125c0a-5c67-588b-bdb5-bb08e977f9b5",
       "keywords": [
         "Character",
         "Dawneagle Jetbike",
@@ -3768,6 +3770,7 @@
         "faction": [],
         "invul": {
           "info": "",
+          "showAtTop": true,
           "showInfo": false,
           "showInvulnerableSave": false,
           "value": ""
@@ -3780,7 +3783,7 @@
             "showDescription": true
           },
           {
-            "description": "Models in this unit have the Feel No Pain 3+ ability against Psychic Attacks.",
+            "description": "Models in this unit have the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.",
             "name": "Daughters of the Abyss",
             "showAbility": true,
             "showDescription": true
@@ -4172,6 +4175,7 @@
         "faction": [],
         "invul": {
           "info": "",
+          "showAtTop": true,
           "showInfo": false,
           "showInvulnerableSave": false,
           "value": ""
@@ -4184,7 +4188,7 @@
             "showDescription": true
           },
           {
-            "description": "Models in this unit have the Feel No Pain 3+ ability against Psychic Attacks.",
+            "description": "Models in this unit have the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.",
             "name": "Daughters of the Abyss",
             "showAbility": true,
             "showDescription": true
@@ -4276,6 +4280,7 @@
         "faction": [],
         "invul": {
           "info": "",
+          "showAtTop": true,
           "showInfo": false,
           "showInvulnerableSave": false,
           "value": ""
@@ -4288,7 +4293,7 @@
             "showDescription": true
           },
           {
-            "description": "Models in this unit have the Feel No Pain 3+ ability against Psychic Attacks.",
+            "description": "Models in this unit have the Feel No Pain 3+ ability against Psychic Attacks and mortal wounds.",
             "name": "Daughters of the Abyss",
             "showAbility": true,
             "showDescription": true
