@@ -871,6 +871,7 @@ function parseDataExport(fileName, factionName) {
 
   const legendsUnits = oldParsedUnits.datasheets.filter((sheet) => sheet.legends === true);
   oldParsedUnits.datasheets = [...foundUnits, ...legendsUnits];
+  oldParsedUnits.updated = new Date().toISOString();
 
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
