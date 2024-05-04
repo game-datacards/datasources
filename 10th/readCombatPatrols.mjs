@@ -781,6 +781,8 @@ function readCombatPatrols() {
       newCombatPatrol.datasheets.push(newUnit);
     });
 
+    newCombatPatrol.updated = new Date().toISOString();
+
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
     fs.writeFileSync(
