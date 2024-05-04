@@ -1,79 +1,127 @@
 {
+  "stratagems": [
+    {
+      "name": "Holy Cleansing",
+      "id": "912547c5-aa70-5c86-9ad0-611d95af5e15",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Adepta Sororitas Infantry unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "fluff": "The warriors of the Adepta Sororitas smite their foes with hate-fuelled zeal as their hymns of battle ring out.",
+      "detachment": ""
+    },
+    {
+      "name": "Martyr’s Death",
+      "id": "a553513c-7fec-5b1e-903c-de6e85ebaa50",
+      "cost": 2,
+      "turn": "either",
+      "target": "One Adepta Sororitas unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "fluff": "There can be no better end for a Sister of Battle than to die a glorious martyr in the cause of the God-Emperor, striking down their foes unto their last breath.",
+      "detachment": ""
+    },
+    {
+      "name": "Divine Protection",
+      "id": "047ae3f8-cf1c-58da-8bbd-9873b6a3b84f",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Adepta Sororitas unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, models in your unit have a 5+ invulnerable save, or a 4+ invulnerable save instead if your unit is a Battle Sisters Squad or a Seraphim Squad.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["fight", "shooting"],
+      "fluff": "The Battle Sisters stride through the fires of battle as though the blessings of the God-Emperor protect them.",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
-        "core": [
-          "Deadly Demise 1",
-          "Feel No Pain 5+"
-        ],
+        "core": [],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Acts of Faith"
-        ],
+        "faction": ["Acts of Faith"],
         "invul": {
           "info": "",
           "showAtTop": true,
           "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
+          "showInvulnerableSave": true,
+          "value": "6+"
         },
-        "other": [
+        "other": [],
+        "primarch": [],
+        "special": [
           {
-            "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
-            "name": "Endless Suffering",
+            "description": "Before the battle, at the start of the Declare Battle Formations step, this unit can be split into two units, each containing five models. If you do so, one of those units must contain the model equipped with the Ministorum flamer and the other unit must contain the model equipped with the artificer-crafted storm bolter.",
+            "name": "Patrol Squads",
             "showAbility": true,
             "showDescription": true
           }
         ],
-        "primarch": [],
-        "special": [],
         "wargear": []
       },
       "cardType": "DataCard",
+      "composition": ["Battle Sisters Squad (10 models)"],
+      "factions": ["Adepta Sororitas"],
+      "fluff": "Battle Sisters of the Orders Militant are skilled and devout warriors. Wherever they advance, the light of the Emperor spreads like a holy dawn. Miracles manifest in their presence that turn aside the enemy’s strikes, or consume foes in fires of retribution as the Sisters cut down heretics with thundering salvoes from their boltguns.",
+      "id": "d5bfff1a-8946-5275-8b37-0c5e14f353f9",
       "combatPatrol": true,
-      "composition": [
-        "Penitent Engine (1 model)"
-      ],
-      "factions": [
-        "Adepta Sororitas"
-      ],
-      "fluff": "The pilots of Penitent Engines are subjected to terrible agony, thanks to the torment amplifiers spliced into their synapses. They blaze a trail of destruction with their flamers before charging headlong into the foe, guilt and pain driving them on, heedless of danger. All they leave in their wake is utter carnage.",
-      "id": "37b5f7c0-cb74-5d52-971d-8dfb3fb2ac98",
       "keywords": [
+        "Infantry",
+        "Battleline",
         "Imperium",
-        "Penitent Engine",
-        "Vehicle",
-        "Walker"
+        "Battle Sisters Squad"
       ],
       "leader": "",
-      "loadout": "■ This model is equipped with: penitent flamers; twin penitent buzz-blades.",
+      "loadout": "■ 1 Sister Superior is equipped with: boltgun; bolt pistol; chainsword.\n■ 6 Battle Sisters are equipped with: boltgun; bolt pistol; close combat weapon.\n■ 1 Battle Sister is equipped with: boltgun; bolt pistol; close combat weapon; simulacrum Imperialis.\n■ 1 Battle Sister is equipped with: artificercrafted storm bolter; bolt pistol; close combat weapon.\n■ 1 Battle Sister is equipped with: ministorum flamer; bolt pistol; close combat weapon",
       "meleeWeapons": [
         {
           "active": true,
           "profiles": [
             {
               "active": true,
-              "ap": "-3",
-              "attacks": "4",
-              "damage": "2",
-              "keywords": [
-                "Sustained Hits 1",
-                "Twin-linked"
-              ],
-              "name": "Twin penitent buzz-blades",
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Chainsword",
               "range": "Melee",
               "skill": "4+",
-              "strength": "10"
+              "strength": "3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "3"
             }
           ]
         }
       ],
-      "name": "Penitent Engine",
+      "name": "Battle Sisters Squad",
       "points": [],
       "rangedWeapons": [
         {
@@ -82,15 +130,58 @@
             {
               "active": true,
               "ap": "0",
-              "attacks": "2D6",
+              "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Assault",
-                "Ignores Cover",
-                "Torrent",
-                "Twin-linked"
-              ],
-              "name": "Penitent flamers",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Boltgun",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Bolt pistol",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Rapid Fire 2"],
+              "name": "Artificer-crafted storm bolter",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Ministorum flamer",
               "range": "12\"",
               "skill": "N/A",
               "strength": "5"
@@ -103,36 +194,221 @@
         {
           "active": true,
           "ld": "7+",
-          "m": "8\"",
-          "name": "Penitent Engine",
+          "m": "6\"",
+          "name": "Battle Sister",
           "oc": "2",
           "showDamagedMarker": false,
-          "showName": false,
-          "sv": "4+",
-          "t": "6",
-          "w": "5"
+          "showName": true,
+          "sv": "3+",
+          "t": "3",
+          "w": "1"
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Deadly Demise D3",
-          "Firing Deck 2"
-        ],
+        "core": ["Feel No Pain 5+"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Acts of Faith"
+        "faction": ["Acts of Faith"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "6+"
+        },
+        "other": [
+          {
+            "name": "Overseer of Redemption",
+            "description": "While this unit contains a Repentia Superior, each time a model in this unit makes a melee attack, you can re-roll the Hit roll and, if this unit made a Charge move this turn, you can re-roll the Wound roll as well.",
+            "showAbility": true,
+            "showDescription": true
+          }
         ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Repentia Squad (5 models)"],
+      "factions": ["Adepta Sororitas"],
+      "fluff": "Sisters Repentia charge across the battlefield howling prayers, filled with the need for atonement for past misdeeds. Overseen by a stern taskmaster in the form of a Repentia Superior who is ever vigilant for sinfulness, Repentia now exist only to slaughter the enemies of the Emperor, and so rush forward without heed for their own safety. Each seeks to redeem herself with acts of selfless bravery and violent devotion.",
+      "id": "5293ce3b-95be-5140-9274-e92d7697236a",
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Imperium", "Repentia Squad"],
+      "leader": "",
+      "loadout": "■ 1 Repentia Superior is equipped with: bolt pistol; neural whips.\n■ 4 Sisters Repentia are equipped with: penitent eviscerator",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": ["Anti-infantry 4+"],
+              "name": "Neural whips",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": [],
+              "name": "Penitent eviscerator",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        }
+      ],
+      "name": "Repentia Squad",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Bolt pistol",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "7\"",
+          "name": "Repentia Superior",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "3+",
+          "t": "3",
+          "w": "1"
+        },
+        {
+          "active": true,
+          "ld": "8+",
+          "m": "7\"",
+          "name": "Sisters Repentia",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "7+",
+          "t": "3",
+          "w": "1"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Feel No Pain 4+"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Acts of Faith"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Arco-flagellants (3 models)"],
+      "factions": ["Adepta Sororitas"],
+      "fluff": "Arco-flagellants are fitted with cybernetic weaponry and subdermal stimulant pumps as punishment for past misdeeds. When battle commences, their bodies are energised by means of a trigger word and they are unleashed on the enemy. Any foe they reach they lash to pieces with cyber-implanted flails.",
+      "id": "88b82e4e-c012-50aa-976a-9b63482f25b2",
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Imperium", "Arco-Flagellants"],
+      "leader": "",
+      "loadout": "■ Every model is equipped with: arco-flails.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": ["Twin-linked", "Sustained Hits 1"],
+              "name": "Arco-flails",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "name": "Arco-flagellants",
+      "points": [],
+      "rangedWeapons": [],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "8+",
+          "m": "7\"",
+          "name": "Arco-flagellants",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "7+",
+          "t": "3",
+          "w": "2"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Deadly Demise D3", "Firing Deck 2"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Acts of Faith"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -146,22 +422,18 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Sororitas Rhino (1 model)"
-      ],
-      "factions": [
-        "Adepta Sororitas"
-      ],
+      "composition": ["Sororitas Rhino (1 model)"],
+      "factions": ["Adepta Sororitas"],
       "fluff": "Rhinos are the mainstay transport of the Adepta Sororitas, and before battle are blessed by Enginseers and Ministorum priests. They are durable, robust and easy to operate. Thanks to their indomitable machine spirits they rarely break down, and speed the warriors inside them across the battlefield wherever they are needed.",
       "id": "e6cd8570-ae18-5c8d-8b15-2e26a7393014",
+      "combatPatrol": true,
       "keywords": [
-        "Dedicated Transport",
-        "Imperium",
-        "Smoke",
-        "Sororitas Rhino",
+        "Vehicle",
         "Transport",
-        "Vehicle"
+        "Dedicated Transport",
+        "Smoke",
+        "Imperium",
+        "Sororitas Rhino"
       ],
       "leader": "",
       "loadout": "■ This model is equipped with: storm bolter; armoured tracks.",
@@ -194,9 +466,7 @@
               "ap": "0",
               "attacks": "2",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 2"
-              ],
+              "keywords": ["Rapid Fire 2"],
               "name": "Storm bolter",
               "range": "24\"",
               "skill": "3+",
@@ -221,35 +491,29 @@
         }
       ],
       "transport": "This model has a transport capacity of 12 Adepta Sororitas Infantry models. It cannot transport Jump Pack models.",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Deep Strike"
-        ],
+        "core": ["Leader"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Acts of Faith"
-        ],
+        "faction": ["Acts of Faith"],
         "invul": {
           "info": "",
           "showAtTop": true,
           "showInfo": false,
           "showInvulnerableSave": true,
-          "value": "5+"
+          "value": "4+"
         },
         "other": [
           {
-            "description": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge.",
-            "name": "Angelic Ascent",
+            "name": "Lead the Righteous",
+            "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
             "showAbility": true,
             "showDescription": true
           }
@@ -259,20 +523,220 @@
         "wargear": []
       },
       "cardType": "DataCard",
+      "composition": ["Canoness Ellyrine (1 model)"],
+      "factions": ["Adepta Sororitas"],
+      "fluff": "Martial and spiritual commanders of the Orders Militant, Canonesses are as much veteran warriors with decades of experience as they are shining examples of purity. Ellyrine serves as a beacon of the God-Emperor’s holy light upon the battlefield, smiting his foes and inspiring her followers with her oratory and rod of office.",
+      "id": "6e44d365-2f31-5ce7-9653-c7191087b5dc",
       "combatPatrol": true,
-      "composition": [
-        "Seraphim Squad (5 models)"
+      "keywords": ["Infantry", "Character", "Imperium", "Canoness", "Ellyrine"],
+      "leader": "This model can be attached to the following unit: Battle Sisters Squad",
+      "loadout": "■ This model is equipped with: plasma pistol; power weapon; rod of office.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": [],
+              "name": "Power weapon",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "4"
+            }
+          ]
+        }
       ],
-      "factions": [
-        "Adepta Sororitas"
+      "name": "Canoness Ellyrine",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Plasma pistol – Standard",
+              "range": "12\"",
+              "skill": "2+",
+              "strength": "7"
+            },
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Pistol", "Hazardous"],
+              "name": "Plasma pistol – Supercharge",
+              "range": "12\"",
+              "skill": "2+",
+              "strength": "8"
+            }
+          ]
+        }
       ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "6\"",
+          "name": "Canoness Ellyrine",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "3+",
+          "t": "3",
+          "w": "4"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Deadly Demise 1", "Feel No Pain 5+"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Acts of Faith"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Endless Suffering",
+            "description": "This unit is eligible to declare a charge in a turn in which it Advanced.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Penitent Engine (1 model)"],
+      "factions": ["Adepta Sororitas"],
+      "fluff": "The pilots of Penitent Engines are subjected to terrible agony, thanks to the torment amplifiers spliced into their synapses. They blaze a trail of destruction with their flamers before charging headlong into the foe, guilt and pain driving them on, heedless of danger. All they leave in their wake is utter carnage.",
+      "id": "37b5f7c0-cb74-5d52-971d-8dfb3fb2ac98",
+      "combatPatrol": true,
+      "keywords": ["Vehicle", "Walker", "Imperium", "Penitent Engine"],
+      "leader": "",
+      "loadout": "■ This model is equipped with: penitent flamers; twin penitent buzz-blades.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": ["Twin-linked", "Sustained Hits 1"],
+              "name": "Twin penitent buzz-blades",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "10"
+            }
+          ]
+        }
+      ],
+      "name": "Penitent Engine",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2D6",
+              "damage": "1",
+              "keywords": [
+                "Twin-linked",
+                "Torrent",
+                "Ignores Cover",
+                "Assault"
+              ],
+              "name": "Penitent flamers",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "8\"",
+          "name": "Penitent Engine",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "4+",
+          "t": "6",
+          "w": "5"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Deep Strike"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Acts of Faith"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "5+"
+        },
+        "other": [
+          {
+            "name": "Angelic Ascent",
+            "description": "In your Shooting phase, after this unit has shot, if it is not within Engagement Range of any enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, this unit is not eligible to declare a charge.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Seraphim Squad (5 models)"],
+      "factions": ["Adepta Sororitas"],
       "fluff": "The Seraphim fight in the Adepta Sororitas’ advanced guard. Only Battle Sisters with superlative dexterity are selected to join their ranks, firing with pinpoint accuracy while moving at great speeds. They must be able to land with incredible precision, cut down foes and retreat within a few heartbeats.",
       "id": "28054192-ed9e-5f9c-a5ee-10e5cbcd365d",
+      "combatPatrol": true,
       "keywords": [
-        "Fly",
-        "Imperium",
         "Infantry",
         "Jump Pack",
+        "Fly",
+        "Imperium",
         "Seraphim Squad"
       ],
       "leader": "",
@@ -322,9 +786,7 @@
               "ap": "-2",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Plasma pistol – Standard",
               "range": "12\"",
               "skill": "3+",
@@ -335,10 +797,7 @@
               "ap": "-3",
               "attacks": "1",
               "damage": "2",
-              "keywords": [
-                "Hazardous",
-                "Pistol"
-              ],
+              "keywords": ["Pistol", "Hazardous"],
               "name": "Plasma pistol – Supercharge",
               "range": "12\"",
               "skill": "3+",
@@ -354,9 +813,7 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Bolt pistol",
               "range": "12\"",
               "skill": "3+",
@@ -381,620 +838,29 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [
-          "Feel No Pain 4+"
-        ],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "Acts of Faith"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Arco-flagellants (3 models)"
-      ],
-      "factions": [
-        "Adepta Sororitas"
-      ],
-      "fluff": "Arco-flagellants are fitted with cybernetic weaponry and subdermal stimulant pumps as punishment for past misdeeds. When battle commences, their bodies are energised by means of a trigger word and they are unleashed on the enemy. Any foe they reach they lash to pieces with cyber-implanted flails.",
-      "id": "88b82e4e-c012-50aa-976a-9b63482f25b2",
-      "keywords": [
-        "Arco-Flagellants",
-        "Imperium",
-        "Infantry"
-      ],
-      "leader": "",
-      "loadout": "■ Every model is equipped with: arco-flails.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": [
-                "Sustained Hits 1",
-                "Twin-linked"
-              ],
-              "name": "Arco-flails",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Arco-flagellants",
-      "points": [],
-      "rangedWeapons": [],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "8+",
-          "m": "7\"",
-          "name": "Arco-flagellants",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "7+",
-          "t": "3",
-          "w": "2"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [
-          "Feel No Pain 5+"
-        ],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "Acts of Faith"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "6+"
-        },
-        "other": [
-          {
-            "description": "While this unit contains a Repentia Superior, each time a model in this unit makes a melee attack, you can re-roll the Hit roll and, if this unit made a Charge move this turn, you can re-roll the Wound roll as well.",
-            "name": "Overseer of Redemption",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Repentia Squad (5 models)"
-      ],
-      "factions": [
-        "Adepta Sororitas"
-      ],
-      "fluff": "Sisters Repentia charge across the battlefield howling prayers, filled with the need for atonement for past misdeeds. Overseen by a stern taskmaster in the form of a Repentia Superior who is ever vigilant for sinfulness, Repentia now exist only to slaughter the enemies of the Emperor, and so rush forward without heed for their own safety. Each seeks to redeem herself with acts of selfless bravery and violent devotion.",
-      "id": "5293ce3b-95be-5140-9274-e92d7697236a",
-      "keywords": [
-        "Imperium",
-        "Infantry",
-        "Repentia Squad"
-      ],
-      "leader": "",
-      "loadout": "■ 1 Repentia Superior is equipped with: bolt pistol; neural whips.\n■ 4 Sisters Repentia are equipped with: penitent eviscerator",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": [
-                "Anti-infantry 4+"
-              ],
-              "name": "Neural whips",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "3"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": [],
-              "name": "Penitent eviscerator",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "6"
-            }
-          ]
-        }
-      ],
-      "name": "Repentia Squad",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Bolt pistol",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "7\"",
-          "name": "Repentia Superior",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "3+",
-          "t": "3",
-          "w": "1"
-        },
-        {
-          "active": true,
-          "ld": "8+",
-          "m": "7\"",
-          "name": "Sisters Repentia",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "7+",
-          "t": "3",
-          "w": "1"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [
-          "Leader"
-        ],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "Acts of Faith"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "4+"
-        },
-        "other": [
-          {
-            "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll.",
-            "name": "Lead the Righteous",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Canoness Ellyrine (1 model)"
-      ],
-      "factions": [
-        "Adepta Sororitas"
-      ],
-      "fluff": "Martial and spiritual commanders of the Orders Militant, Canonesses are as much veteran warriors with decades of experience as they are shining examples of purity. Ellyrine serves as a beacon of the God-Emperor’s holy light upon the battlefield, smiting his foes and inspiring her followers with her oratory and rod of office.",
-      "id": "6e44d365-2f31-5ce7-9653-c7191087b5dc",
-      "keywords": [
-        "Canoness",
-        "Character",
-        "Ellyrine",
-        "Imperium",
-        "Infantry"
-      ],
-      "leader": "This model can be attached to the following unit: Battle Sisters Squad",
-      "loadout": "■ This model is equipped with: plasma pistol; power weapon; rod of office.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": [],
-              "name": "Power weapon",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "name": "Canoness Ellyrine",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Plasma pistol – Standard",
-              "range": "12\"",
-              "skill": "2+",
-              "strength": "7"
-            },
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": [
-                "Hazardous",
-                "Pistol"
-              ],
-              "name": "Plasma pistol – Supercharge",
-              "range": "12\"",
-              "skill": "2+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "6\"",
-          "name": "Canoness Ellyrine",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "3+",
-          "t": "3",
-          "w": "4"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "Acts of Faith"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "6+"
-        },
-        "other": [],
-        "primarch": [],
-        "special": [
-          {
-            "description": "Before the battle, at the start of the Declare Battle Formations step, this unit can be split into two units, each containing five models. If you do so, one of those units must contain the model equipped with the Ministorum flamer and the other unit must contain the model equipped with the artificer-crafted storm bolter.",
-            "name": "Patrol Squads",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Battle Sisters Squad (10 models)"
-      ],
-      "factions": [
-        "Adepta Sororitas"
-      ],
-      "fluff": "Battle Sisters of the Orders Militant are skilled and devout warriors. Wherever they advance, the light of the Emperor spreads like a holy dawn. Miracles manifest in their presence that turn aside the enemy’s strikes, or consume foes in fires of retribution as the Sisters cut down heretics with thundering salvoes from their boltguns.",
-      "id": "d5bfff1a-8946-5275-8b37-0c5e14f353f9",
-      "keywords": [
-        "Battle Sisters Squad",
-        "Battleline",
-        "Imperium",
-        "Infantry"
-      ],
-      "leader": "",
-      "loadout": "■ 1 Sister Superior is equipped with: boltgun; bolt pistol; chainsword.\n■ 6 Battle Sisters are equipped with: boltgun; bolt pistol; close combat weapon.\n■ 1 Battle Sister is equipped with: boltgun; bolt pistol; close combat weapon; simulacrum Imperialis.\n■ 1 Battle Sister is equipped with: artificercrafted storm bolter; bolt pistol; close combat weapon.\n■ 1 Battle Sister is equipped with: ministorum flamer; bolt pistol; close combat weapon",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "3"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Chainsword",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "3"
-            }
-          ]
-        }
-      ],
-      "name": "Battle Sisters Squad",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Bolt pistol",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
-              "name": "Boltgun",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": [
-                "Rapid Fire 2"
-              ],
-              "name": "Artificer-crafted storm bolter",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": [
-                "Ignores Cover",
-                "Torrent"
-              ],
-              "name": "Ministorum flamer",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "6\"",
-          "name": "Battle Sister",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "3+",
-          "t": "3",
-          "w": "1"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "In your Command phase, if the bearer is not Battle-shocked and is within range of an objective marker you control, you gain one Miracle dice. In addition, while the bearer is on the battlefield, each time you gain a Miracle dice, you can re-roll that Miracle dice.",
-      "detachment": "",
+      "name": "Armour of Faith",
+      "id": "5951608b-286b-5d03-9934-510c53ce3ea1",
+      "keywords": ["Adepta Sororitas"],
       "excludes": [],
-      "id": "315c032d-cdf0-5027-9b83-32cd24300f53",
-      "keywords": [
-        "Adepta Sororitas"
-      ],
-      "name": "Saintly Relic"
+      "description": "The bearer has the Feel No Pain 4+ ability. In addition, while the bearer is leading a unit, other models in that unit have the Feel No Pain 5+ ability.",
+      "detachment": ""
     },
     {
-      "description": "The bearer has the Feel No Pain 4+ ability. In addition, while the bearer is leading a unit, other models in that unit have the Feel No Pain 5+ ability.",
-      "detachment": "",
+      "name": "Saintly Relic",
+      "id": "315c032d-cdf0-5027-9b83-32cd24300f53",
+      "keywords": ["Adepta Sororitas"],
       "excludes": [],
-      "id": "5951608b-286b-5d03-9934-510c53ce3ea1",
-      "keywords": [
-        "Adepta Sororitas"
-      ],
-      "name": "Armour of Faith"
+      "description": "In your Command phase, if the bearer is not Battle-shocked and is within range of an objective marker you control, you gain one Miracle dice. In addition, while the bearer is on the battlefield, each time you gain a Miracle dice, you can re-roll that Miracle dice.",
+      "detachment": ""
     }
   ],
-  "id": "f34b9b06-98f7-5e50-ade1-faec06a688a2",
   "isCombatPatrol": true,
   "name": "Combat Patrol: The Penitent Host",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, models in your unit have a 5+ invulnerable save, or a 4+ invulnerable save instead if your unit is a Battle Sisters Squad or a Seraphim Squad.",
-      "fluff": "The Battle Sisters stride through the fires of battle as though the blessings of the God-Emperor protect them.",
-      "id": "047ae3f8-cf1c-58da-8bbd-9873b6a3b84f",
-      "name": "Divine Protection",
-      "phase": [
-        "fight",
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Adepta Sororitas unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "either",
-      "type": "Epic Deed",
-      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, weapons equipped by models in your unit have the [LETHAL HITS] ability.",
-      "fluff": "The warriors of the Adepta Sororitas smite their foes with hate-fuelled zeal as their hymns of battle ring out.",
-      "id": "912547c5-aa70-5c86-9ad0-611d95af5e15",
-      "name": "Holy Cleansing",
-      "phase": [
-        "fight",
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Adepta Sororitas Infantry unit from your army that has not been selected to shoot or fight this phase.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Your Shooting phase or the Fight phase."
-    },
-    {
-      "cost": 2,
-      "detachment": "",
-      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
-      "fluff": "There can be no better end for a Sister of Battle than to die a glorious martyr in the cause of the God-Emperor, striking down their foes unto their last breath.",
-      "id": "a553513c-7fec-5b1e-903c-de6e85ebaa50",
-      "name": "Martyr’s Death",
-      "phase": [
-        "fight"
-      ],
-      "restrictions": "",
-      "target": "One Adepta Sororitas unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Fight phase, just after an enemy unit has selected its targets."
-    }
-  ]
+  "id": "f34b9b06-98f7-5e50-ade1-faec06a688a2"
 }

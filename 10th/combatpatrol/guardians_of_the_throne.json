@@ -1,58 +1,87 @@
 {
+  "stratagems": [
+    {
+      "name": "Wrath of the Host",
+      "id": "e6779bba-e04b-5bfc-9215-b4a402f25f55",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Shield-Captain model from your army that was just destroyed by an attack made by an enemy model. You can use this Stratagem on that model even though it was just destroyed.",
+      "when": "Any phase",
+      "effect": "Until the end of the battle, ranged weapons equipped by Adeptus Custodes models from your army have the [SUSTAINED HITS 1] ability while targeting that enemy model’s unit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["any"],
+      "fluff": "The Adeptus Custodes are storied champions who know one another’s worth only too well. They are quick to avenge the deaths of the greatest amongst them.",
+      "detachment": ""
+    },
+    {
+      "name": "Tireless Pursuit",
+      "id": "92f6413e-3581-5b2c-820e-7d57e53aa303",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Adeptus Custodes Infantry unit from your army that was within Engagement Range of that enemy unit at the start of the phase.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Fall Back move.",
+      "effect": "If your unit is not within Engagement Range of one or more enemy models, it can make a Normal move.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "fluff": "The Adeptus Custodes drive their foes before them, relentlessly dogging their heels as they run their quarry to ground and destroy them utterly.",
+      "detachment": ""
+    },
+    {
+      "name": "Gilded Magnificence",
+      "id": "38111dd7-860b-5157-846b-5a53622f5425",
+      "cost": 2,
+      "turn": "your",
+      "target": "One Adeptus Custodes unit from your army.",
+      "when": "Your Command phase.",
+      "effect": "Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "fluff": "The sheer auramite-clad glory and physical menace of the Adeptus Custodes is more than enough to overwhelm a more numerous foe.",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
-        "core": [
-          "Deep Strike",
-          "Leader"
-        ],
+        "core": [],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "faction": [],
         "invul": {
           "info": "",
           "showAtTop": true,
           "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "4+"
+          "showInvulnerableSave": false,
+          "value": ""
         },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": [
+        "other": [
           {
-            "description": "Add 1 to the bearer’s Wounds characteristic.",
-            "name": "Praesidium Shield",
+            "name": "Deft Parry",
+            "description": "Each time a melee attack targets this unit, subtract 1 from the Hit roll.",
             "showAbility": true,
             "showDescription": true
           }
-        ]
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
       },
       "cardType": "DataCard",
+      "composition": ["Vigilators (5 models)"],
+      "factions": ["Adeptus Custodes"],
+      "fluff": "The surest way to bring an end to a witch’s malefic rampage is to strike their head from their body. Such is the doctrine of the Vigilators, who ghost across the battlefield before charging headlong into battle, their double-handed power blades singing a keening song of death.",
+      "id": "a625fffb-42af-51c1-99a0-20a2f699b2fa",
       "combatPatrol": true,
-      "composition": [
-        "Shield-Captain Tyvan (1 model)"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "fluff": "Shield-Captain Tyvan is a sublimely skilled warrior who wields his enormous sentinel blade as an extension of his own body. His loyalty to the Emperor is absolute and unquestioning, and his every thought and deed is focused on the singular duty of defending Terra – and by extension the Golden Throne – from danger.",
-      "id": "f42a729d-18be-5f7c-9be4-bda9ca9c406d",
-      "keywords": [
-        "Character",
-        "Imperium",
-        "Infantry",
-        "Shield-Captain",
-        "Tyvan"
-      ],
-      "leader": "This model can be attached to the following unit: Custodian Guard",
-      "loadout": "■ This model is equipped with: sentinel blade; praesidium shield.",
+      "keywords": ["Infantry", "Imperium", "Anathema Psykana", "Vigilators"],
+      "leader": "",
+      "loadout": "■ Every model is equipped with: executioner greatblade.",
       "meleeWeapons": [
         {
           "active": true,
@@ -60,74 +89,48 @@
             {
               "active": true,
               "ap": "-2",
-              "attacks": "7",
-              "damage": "1",
-              "keywords": [],
-              "name": "Sentinel blade",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "6"
-            }
-          ]
-        }
-      ],
-      "name": "Shield-Captain Tyvan",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
               "attacks": "2",
               "damage": "2",
-              "keywords": [
-                "Assault",
-                "Pistol"
-              ],
-              "name": "Sentinel blade",
-              "range": "12\"",
-              "skill": "2+",
-              "strength": "4"
+              "keywords": ["Devastating Wounds", "Anti-psyker 4+"],
+              "name": "Executioner greatblade",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
             }
           ]
         }
       ],
+      "name": "Vigilators",
+      "points": [],
+      "rangedWeapons": [],
       "source": "40k-10e",
       "stats": [
         {
           "active": true,
           "ld": "6+",
           "m": "6\"",
-          "name": "Shield-Captain Tyvan",
-          "oc": "2",
+          "name": "Vigilators",
+          "oc": "1",
           "showDamagedMarker": false,
           "showName": false,
-          "sv": "2+",
-          "t": "6",
-          "w": "6"
+          "sv": "3+",
+          "t": "3",
+          "w": "1"
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Deep Strike"
-        ],
+        "core": ["Deep Strike"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Martial Ka’tah"
-        ],
+        "faction": ["Martial Ka’tah"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -137,8 +140,8 @@
         },
         "other": [
           {
-            "description": "Each time a model in this unit makes an attack, re-roll a Wound roll of 1. While this unit is within range of an objective marker you control, you can re-roll the Wound roll instead.",
             "name": "Stand Vigil",
+            "description": "Each time a model in this unit makes an attack, re-roll a Wound roll of 1. While this unit is within range of an objective marker you control, you can re-roll the Wound roll instead.",
             "showAbility": true,
             "showDescription": true
           }
@@ -147,29 +150,20 @@
         "special": [],
         "wargear": [
           {
-            "description": "Add 1 to the bearer’s Wounds characteristic.",
             "name": "Praesidium Shield",
+            "description": "Add 1 to the bearer’s Wounds characteristic.",
             "showAbility": true,
             "showDescription": true
           }
         ]
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Custodian Guard (4 models)"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
+      "composition": ["Custodian Guard (4 models)"],
+      "factions": ["Adeptus Custodes"],
       "fluff": "These warriors form the backbone of the shield companies, and every one is a terrifying force of destruction equal to the strongest of the foe. Whether armed with guardian spear or sentinel blade, their shots are perfectly placed, and every cut, thrust and parry is a masterclass in bladesmanship.",
       "id": "923d8a4f-3a80-5328-bd04-8d3bcee4d6e2",
-      "keywords": [
-        "Battleline",
-        "Custodian Guard",
-        "Imperium",
-        "Infantry"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Battleline", "Imperium", "Custodian Guard"],
       "leader": "",
       "loadout": "■ 2 models are equipped with: guardian spear.\n■ 1 model is equipped with: misericordia, praesidium shield; vexilla.\n■ 1 model is equipped with: sentinel blade; praesidium shield.",
       "meleeWeapons": [
@@ -233,10 +227,7 @@
               "ap": "-1",
               "attacks": "2",
               "damage": "2",
-              "keywords": [
-                "Assault",
-                "Pistol"
-              ],
+              "keywords": ["Pistol", "Assault"],
               "name": "Sentinel blade",
               "range": "12\"",
               "skill": "2+",
@@ -252,9 +243,7 @@
               "ap": "-1",
               "attacks": "2",
               "damage": "2",
-              "keywords": [
-                "Assault"
-              ],
+              "keywords": ["Assault"],
               "name": "Guardian spear",
               "range": "24\"",
               "skill": "2+",
@@ -279,114 +268,7 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "Martial Ka’tah"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "4+"
-        },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Vertus Praetors (3 models)"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "fluff": "Veteran warriors who have seen battle on a hundred worlds, these Custodians know that the value of speed is in directing their might precisely where and when it is needed most. Master combatants and marksmen both, they can place piercing strikes and deadly salvoes with precision even when travelling at immense speeds.",
-      "id": "e3558fff-5623-5899-8bb0-e6a2aa3881cd",
-      "keywords": [
-        "Fly",
-        "Imperium",
-        "Mounted",
-        "Vertus Praetors"
-      ],
-      "leader": "",
-      "loadout": "■ Every model is equipped with: Vertus hurricane bolter; interceptor lance.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "5",
-              "damage": "2",
-              "keywords": [
-                "Lance"
-              ],
-              "name": "Interceptor lance",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "7"
-            }
-          ]
-        }
-      ],
-      "name": "Vertus Praetors",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 3",
-                "Twin-linked"
-              ],
-              "name": "Vertus hurricane bolter",
-              "range": "18\"",
-              "skill": "2+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "12\"",
-          "name": "Vertus Praetors",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "2+",
-          "t": "6",
-          "w": "4"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -407,99 +289,8 @@
         },
         "other": [
           {
-            "description": "Each time a melee attack targets this unit, subtract 1 from the Hit roll.",
-            "name": "Deft Parry",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Vigilators (5 models)"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
-      "fluff": "The surest way to bring an end to a witch’s malefic rampage is to strike their head from their body. Such is the doctrine of the Vigilators, who ghost across the battlefield before charging headlong into battle, their double-handed power blades singing a keening song of death.",
-      "id": "a625fffb-42af-51c1-99a0-20a2f699b2fa",
-      "keywords": [
-        "Anathema Psykana",
-        "Imperium",
-        "Infantry",
-        "Vigilators"
-      ],
-      "leader": "",
-      "loadout": "■ Every model is equipped with: executioner greatblade.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": [
-                "Anti-psyker 4+",
-                "Devastating Wounds"
-              ],
-              "name": "Executioner greatblade",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Vigilators",
-      "points": [],
-      "rangedWeapons": [],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "6\"",
-          "name": "Vigilators",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "3+",
-          "t": "3",
-          "w": "1"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "Each time a model in this unit makes a ranged attack that targets a Psyker unit, that attack has the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
             "name": "Purity of Execution",
+            "description": "Each time a model in this unit makes a ranged attack that targets a Psyker unit, that attack has the [PRECISION] and [DEVASTATING WOUNDS] abilities.",
             "showAbility": true,
             "showDescription": true
           }
@@ -509,20 +300,16 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Prosecutors (5 models)"
-      ],
-      "factions": [
-        "Adeptus Custodes"
-      ],
+      "composition": ["Prosecutors (5 models)"],
+      "factions": ["Adeptus Custodes"],
       "fluff": "Protected from the malevolence of witches by their rare antipsychic mutation, and shielded from the bullets and blades of the foe by their finely crafted power armour, Prosecutors advance unflinching into the heart of battle. Their boltguns thunder ceaselessly, each explosive shell ending another heretic life.",
       "id": "c88e2168-63a7-58d4-92f7-599f8240099a",
+      "combatPatrol": true,
       "keywords": [
-        "Anathema Psykana",
+        "Infantry",
         "Battleline",
         "Imperium",
-        "Infantry",
+        "Anathema Psykana",
         "Prosecutors"
       ],
       "leader": "",
@@ -556,9 +343,7 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
+              "keywords": ["Rapid Fire 1"],
               "name": "Boltgun",
               "range": "24\"",
               "skill": "3+",
@@ -583,85 +368,216 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Deep Strike", "Leader"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Martial Ka’tah"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "4+"
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": [
+          {
+            "name": "Praesidium Shield",
+            "description": "Add 1 to the bearer’s Wounds characteristic.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ]
+      },
+      "cardType": "DataCard",
+      "composition": ["Shield-Captain Tyvan (1 model)"],
+      "factions": ["Adeptus Custodes"],
+      "fluff": "Shield-Captain Tyvan is a sublimely skilled warrior who wields his enormous sentinel blade as an extension of his own body. His loyalty to the Emperor is absolute and unquestioning, and his every thought and deed is focused on the singular duty of defending Terra – and by extension the Golden Throne – from danger.",
+      "id": "f42a729d-18be-5f7c-9be4-bda9ca9c406d",
+      "combatPatrol": true,
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Imperium",
+        "Shield-Captain",
+        "Tyvan"
+      ],
+      "leader": "This model can be attached to the following unit: Custodian Guard",
+      "loadout": "■ This model is equipped with: sentinel blade; praesidium shield.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "7",
+              "damage": "1",
+              "keywords": [],
+              "name": "Sentinel blade",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "6"
+            }
+          ]
+        }
+      ],
+      "name": "Shield-Captain Tyvan",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Pistol", "Assault"],
+              "name": "Sentinel blade",
+              "range": "12\"",
+              "skill": "2+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "6\"",
+          "name": "Shield-Captain Tyvan",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "2+",
+          "t": "6",
+          "w": "6"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Martial Ka’tah"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "4+"
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Vertus Praetors (3 models)"],
+      "factions": ["Adeptus Custodes"],
+      "fluff": "Veteran warriors who have seen battle on a hundred worlds, these Custodians know that the value of speed is in directing their might precisely where and when it is needed most. Master combatants and marksmen both, they can place piercing strikes and deadly salvoes with precision even when travelling at immense speeds.",
+      "id": "e3558fff-5623-5899-8bb0-e6a2aa3881cd",
+      "combatPatrol": true,
+      "keywords": ["Mounted", "Fly", "Imperium", "Vertus Praetors"],
+      "leader": "",
+      "loadout": "■ Every model is equipped with: Vertus hurricane bolter; interceptor lance.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "5",
+              "damage": "2",
+              "keywords": ["Lance"],
+              "name": "Interceptor lance",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "7"
+            }
+          ]
+        }
+      ],
+      "name": "Vertus Praetors",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Twin-linked", "Rapid Fire 3"],
+              "name": "Vertus hurricane bolter",
+              "range": "18\"",
+              "skill": "2+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "12\"",
+          "name": "Vertus Praetors",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "2+",
+          "t": "6",
+          "w": "4"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "Each time the bearer makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.",
-      "detachment": "",
+      "name": "Auramite Thunderbolt",
+      "id": "4bac343f-4d1d-566d-9be3-0ea88b2e5e31",
+      "keywords": ["Adeptus Custodes"],
       "excludes": [],
-      "id": "ae3b04fe-22be-573d-b13d-23e67a6255da",
-      "keywords": [
-        "Adeptus Custodes"
-      ],
-      "name": "Blade of the Vaults"
+      "description": "You can re-roll Advance and Charge rolls made for the bearer’s unit.",
+      "detachment": ""
     },
     {
-      "description": "You can re-roll Advance and Charge rolls made for the bearer’s unit.",
-      "detachment": "",
+      "name": "Blade of the Vaults",
+      "id": "ae3b04fe-22be-573d-b13d-23e67a6255da",
+      "keywords": ["Adeptus Custodes"],
       "excludes": [],
-      "id": "4bac343f-4d1d-566d-9be3-0ea88b2e5e31",
-      "keywords": [
-        "Adeptus Custodes"
-      ],
-      "name": "Auramite Thunderbolt"
+      "description": "Each time the bearer makes an attack, on a Critical Wound, improve the Armour Penetration characteristic of that attack by 1.",
+      "detachment": ""
     }
   ],
-  "id": "8c57b9e8-2e9c-5f3a-8696-a6e3a34045df",
   "isCombatPatrol": true,
   "name": "Combat Patrol: Guardians of the Throne",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "If your unit is not within Engagement Range of one or more enemy models, it can make a Normal move.",
-      "fluff": "The Adeptus Custodes drive their foes before them, relentlessly dogging their heels as they run their quarry to ground and destroy them utterly.",
-      "id": "92f6413e-3581-5b2c-820e-7d57e53aa303",
-      "name": "Tireless Pursuit",
-      "phase": [
-        "movement"
-      ],
-      "restrictions": "",
-      "target": "One Adeptus Custodes Infantry unit from your army that was within Engagement Range of that enemy unit at the start of the phase.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Fall Back move."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the battle, ranged weapons equipped by Adeptus Custodes models from your army have the [SUSTAINED HITS 1] ability while targeting that enemy model’s unit.",
-      "fluff": "The Adeptus Custodes are storied champions who know one another’s worth only too well. They are quick to avenge the deaths of the greatest amongst them.",
-      "id": "e6779bba-e04b-5bfc-9215-b4a402f25f55",
-      "name": "Wrath of the Host",
-      "phase": [
-        "any"
-      ],
-      "restrictions": "",
-      "target": "One Shield-Captain model from your army that was just destroyed by an attack made by an enemy model. You can use this Stratagem on that model even though it was just destroyed.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Any phase"
-    },
-    {
-      "cost": 2,
-      "detachment": "",
-      "effect": "Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit.",
-      "fluff": "The sheer auramite-clad glory and physical menace of the Adeptus Custodes is more than enough to overwhelm a more numerous foe.",
-      "id": "38111dd7-860b-5157-846b-5a53622f5425",
-      "name": "Gilded Magnificence",
-      "phase": [
-        "command"
-      ],
-      "restrictions": "",
-      "target": "One Adeptus Custodes unit from your army.",
-      "turn": "your",
-      "type": "Strategic Ploy",
-      "when": "Your Command phase."
-    }
-  ]
+  "id": "8c57b9e8-2e9c-5f3a-8696-a6e3a34045df"
 }

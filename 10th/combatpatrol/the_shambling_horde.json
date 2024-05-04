@@ -1,20 +1,59 @@
 {
+  "stratagems": [
+    {
+      "name": "Corrosive Effluents",
+      "id": "42097d51-fe90-53a5-b1e9-1ac6015bb86b",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Death Guard unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "fluff": "The weapons of the Death Guard seep corrosive foulness and flesh-eating bacterial filth.",
+      "detachment": ""
+    },
+    {
+      "name": "Disgustingly Resilient",
+      "id": "b589b8ae-b432-5bee-b43b-96520f564a83",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Death Guard unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "fluff": "So bloated with diseased blubber are the Death Guard, so inured to pain and repugnantly mutated, that they can soak up truly shocking amounts of punishment without even the slightest hint of discomfort.",
+      "detachment": ""
+    },
+    {
+      "name": "Harbingers of Despair",
+      "id": "ce202aad-b7eb-5cda-ad98-7a8bc1b72796",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Death Guard unit from your army.",
+      "when": "Start of the Fight phase.",
+      "effect": "Each enemy unit within Engagement Range of your unit must take a Battle-shock test.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "fluff": "The mutated foulness and horrifyingly diseased aspect of Nurgle’s worshippers is an assault upon soul and senses both, and more than one foe has despaired at the mere sight of such harbingers of inevitable entropy.",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
-        "core": [
-          "Deadly Demise 1",
-          "Leader"
-        ],
+        "core": ["Deadly Demise 1", "Leader"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Nurgle’s Gift (Aura)"
-        ],
+        "faction": ["Nurgle’s Gift (Aura)"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -24,8 +63,8 @@
         },
         "other": [
           {
-            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability. In addition, each time a model in that unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6.",
             "name": "Foul Infusion",
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability. In addition, each time a model in that unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6.",
             "showAbility": true,
             "showDescription": true
           }
@@ -35,22 +74,18 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Folgoth Grelch (1 model)"
-      ],
-      "factions": [
-        "Death Guard"
-      ],
+      "composition": ["Folgoth Grelch (1 model)"],
+      "factions": ["Death Guard"],
       "fluff": "Biologus Putrifiers take obscene delight in developing myriad plagues to spread in battle. They carry all manner of blight grenades, bloated with the latest strains of blossoming contagions. With their injector pistols, Biologus Putrifiers implant killing maladies into the enemy before extracting samples of their ruined flesh.",
       "id": "39ab4a60-26c9-5457-ae40-5298aa0c7644",
+      "combatPatrol": true,
       "keywords": [
-        "Biologus Putrifier",
-        "Chaos",
-        "Character",
-        "Folgoth Grelch",
         "Infantry",
-        "Nurgle"
+        "Character",
+        "Chaos",
+        "Nurgle",
+        "Biologus Putrifier",
+        "Folgoth Grelch"
       ],
       "leader": "This model can be attached to the following unit: Plague Marines",
       "loadout": "■ This model is equipped with: hyper blight grenades; injector pistol; plague knives.",
@@ -63,9 +98,7 @@
               "ap": "0",
               "attacks": "4",
               "damage": "1",
-              "keywords": [
-                "Lethal Hits"
-              ],
+              "keywords": ["Lethal Hits"],
               "name": "Plague knives",
               "range": "Melee",
               "skill": "3+",
@@ -83,15 +116,13 @@
             {
               "active": true,
               "ap": "-1",
-              "attacks": "1",
-              "damage": "3",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Injector pistol",
-              "range": "3\"",
+              "attacks": "D6",
+              "damage": "2",
+              "keywords": ["Lethal Hits", "Blast", "Assault"],
+              "name": "Hyper blight grenades",
+              "range": "12\"",
               "skill": "3+",
-              "strength": "4"
+              "strength": "5"
             }
           ]
         },
@@ -101,17 +132,13 @@
             {
               "active": true,
               "ap": "-1",
-              "attacks": "D6",
-              "damage": "2",
-              "keywords": [
-                "Assault",
-                "Blast",
-                "Lethal Hits"
-              ],
-              "name": "Hyper blight grenades",
-              "range": "12\"",
+              "attacks": "1",
+              "damage": "3",
+              "keywords": ["Pistol"],
+              "name": "Injector pistol",
+              "range": "3\"",
               "skill": "3+",
-              "strength": "5"
+              "strength": "4"
             }
           ]
         }
@@ -132,25 +159,18 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Deep Strike",
-          "Leader"
-        ],
+        "core": ["Deep Strike", "Leader"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Nurgle’s Gift (Aura)"
-        ],
+        "faction": ["Nurgle’s Gift (Aura)"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -160,8 +180,8 @@
         },
         "other": [
           {
-            "description": "While this model is leading a unit, each time a melee attack targets that unit, subtract 1 from the Hit roll.",
             "name": "The Destroyer Hive",
+            "description": "While this model is leading a unit, each time a melee attack targets that unit, subtract 1 from the Hit roll.",
             "showAbility": true,
             "showDescription": true
           }
@@ -171,20 +191,16 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Typhus (1 model)"
-      ],
-      "factions": [
-        "Death Guard"
-      ],
+      "composition": ["Typhus (1 model)"],
+      "factions": ["Death Guard"],
       "fluff": "Host of the Destroyer Hive, for millennia Typhus has travelled the galaxy, spreading Nurgle’s Rot and killing billions. When he takes to the field, he slices apart countless foes with his filth-encrusted power scythe and unleashes the swarming horror of his Destroyer Hive to engulf them in murderous plague-flies.",
       "id": "0108df02-9869-5b94-9596-80f0fe42b689",
+      "combatPatrol": true,
       "keywords": [
-        "Chaos",
+        "Infantry",
         "Character",
         "Epic Hero",
-        "Infantry",
+        "Chaos",
         "Nurgle",
         "Psyker",
         "Terminator",
@@ -201,9 +217,7 @@
               "ap": "-1",
               "attacks": "10",
               "damage": "1",
-              "keywords": [
-                "Lethal Hits"
-              ],
+              "keywords": ["Lethal Hits"],
               "name": "Master-crafted manreaper – Sweep",
               "range": "Melee",
               "skill": "2+",
@@ -214,9 +228,7 @@
               "ap": "-2",
               "attacks": "5",
               "damage": "3",
-              "keywords": [
-                "Lethal Hits"
-              ],
+              "keywords": ["Lethal Hits"],
               "name": "Master-crafted manreaper – Strike",
               "range": "Melee",
               "skill": "2+",
@@ -244,24 +256,18 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Feel No Pain 5+"
-        ],
+        "core": ["Feel No Pain 5+"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Nurgle’s Gift (Aura)"
-        ],
+        "faction": ["Nurgle’s Gift (Aura)"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -271,8 +277,8 @@
         },
         "other": [
           {
-            "description": "Each time a model in this unit makes an attack that destroys an enemy model (excluding Monster and Vehicle models), you can return one destroyed Poxwalkers model to this unit.",
             "name": "Curse of the Walking Pox",
+            "description": "Each time a model in this unit makes an attack that destroys an enemy model (excluding Monster and Vehicle models), you can return one destroyed Poxwalkers model to this unit.",
             "showAbility": true,
             "showDescription": true
           }
@@ -282,21 +288,12 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Poxwalkers (10 models)"
-      ],
-      "factions": [
-        "Death Guard"
-      ],
+      "composition": ["Poxwalkers (10 models)"],
+      "factions": ["Death Guard"],
       "fluff": "Poxwalkers are victims of the Walking Pox, a cruel virulence that rots the infected to death while keeping them conscious. They are terror troops, their ceaseless groaning a vector by which they infect the living. In battle they drown their foes in a sea of decaying flesh, clawing hands and gnashing teeth.",
       "id": "1494009a-18dc-5ebb-9d53-263e2f975278",
-      "keywords": [
-        "Chaos",
-        "Infantry",
-        "Nurgle",
-        "Poxwalkers"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Chaos", "Nurgle", "Poxwalkers"],
       "leader": "",
       "loadout": "■ Every model is equipped with: improvised weapon.",
       "meleeWeapons": [
@@ -308,9 +305,7 @@
               "ap": "0",
               "attacks": "2",
               "damage": "1",
-              "keywords": [
-                "Lethal Hits"
-              ],
+              "keywords": ["Lethal Hits"],
               "name": "Improvised weapon",
               "range": "Melee",
               "skill": "5+",
@@ -338,9 +333,7 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -351,9 +344,7 @@
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Nurgle’s Gift (Aura)"
-        ],
+        "faction": ["Nurgle’s Gift (Aura)"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -363,8 +354,8 @@
         },
         "other": [
           {
-            "description": "While this unit is within range of an objective marker you control, each time you take a Battle-shock test for this unit, add 1 to that test.",
             "name": "Remorseless",
+            "description": "While this unit is within range of an objective marker you control, each time you take a Battle-shock test for this unit, add 1 to that test.",
             "showAbility": true,
             "showDescription": true
           }
@@ -374,20 +365,16 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Plague Marines (7 models)"
-      ],
-      "factions": [
-        "Death Guard"
-      ],
+      "composition": ["Plague Marines (7 models)"],
+      "factions": ["Death Guard"],
       "fluff": "The mainstay of Death Guard vectoriums, Plague Marines excel in short-ranged firefights and relentless assaults that grind the enemy down. They are tactically astute, deploying plague spewers to drown hordes of enemies in noxious slime, and blight launchers to release crippling ironblight into armoured vehicles.",
       "id": "27c961bb-dde0-57b3-abca-1e9823dfa9c9",
+      "combatPatrol": true,
       "keywords": [
-        "Battleline",
-        "Chaos",
         "Infantry",
+        "Chaos",
         "Nurgle",
+        "Battleline",
         "Plague Marines"
       ],
       "leader": "",
@@ -401,9 +388,7 @@
               "ap": "-2",
               "attacks": "3",
               "damage": "2",
-              "keywords": [
-                "Lethal Hits"
-              ],
+              "keywords": ["Lethal Hits"],
               "name": "Heavy plague weapon",
               "range": "Melee",
               "skill": "4+",
@@ -419,9 +404,7 @@
               "ap": "0",
               "attacks": "3",
               "damage": "1",
-              "keywords": [
-                "Lethal Hits"
-              ],
+              "keywords": ["Lethal Hits"],
               "name": "Plague knives",
               "range": "Melee",
               "skill": "3+",
@@ -438,16 +421,14 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
+              "ap": "0",
               "attacks": "2",
-              "damage": "2",
-              "keywords": [
-                "Lethal Hits"
-              ],
-              "name": "Blight launcher",
+              "damage": "1",
+              "keywords": ["Lethal Hits"],
+              "name": "Plague boltgun",
               "range": "24\"",
               "skill": "3+",
-              "strength": "6"
+              "strength": "4"
             }
           ]
         },
@@ -459,11 +440,7 @@
               "ap": "-1",
               "attacks": "D6",
               "damage": "1",
-              "keywords": [
-                "Anti-infantry 2+",
-                "Ignores Cover",
-                "Torrent"
-              ],
+              "keywords": ["Torrent", "Ignores Cover", "Anti-infantry 2+"],
               "name": "Plague spewer",
               "range": "12\"",
               "skill": "N/A",
@@ -476,16 +453,14 @@
           "profiles": [
             {
               "active": true,
-              "ap": "0",
+              "ap": "-1",
               "attacks": "2",
-              "damage": "1",
-              "keywords": [
-                "Lethal Hits"
-              ],
-              "name": "Plague boltgun",
+              "damage": "2",
+              "keywords": ["Lethal Hits"],
+              "name": "Blight launcher",
               "range": "24\"",
               "skill": "3+",
-              "strength": "4"
+              "strength": "6"
             }
           ]
         }
@@ -518,86 +493,29 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "In your Command phase, select one friendly Poxwalker unit within Contagion Range of the bearer. Return up to D6 destroyed Poxwalker models to that unit.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Walking Plague",
       "id": "113bd330-2524-518e-83a3-97882859c226",
-      "keywords": [
-        "Death Guard"
-      ],
-      "name": "Walking Plague"
+      "keywords": ["Death Guard"],
+      "excludes": [],
+      "description": "In your Command phase, select one friendly Poxwalker unit within Contagion Range of the bearer. Return up to D6 destroyed Poxwalker models to that unit.",
+      "detachment": ""
     },
     {
-      "description": "Models in the bearer’s unit have the Deep Strike ability.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Miasmic Arrival",
       "id": "a32b9a33-ca2e-50c0-b25b-c0f093994ab2",
-      "keywords": [
-        "Death Guard"
-      ],
-      "name": "Miasmic Arrival"
+      "keywords": ["Death Guard"],
+      "excludes": [],
+      "description": "Models in the bearer’s unit have the Deep Strike ability.",
+      "detachment": ""
     }
   ],
-  "id": "096e3b8e-afb8-56d6-a1a0-888aed87d777",
   "isCombatPatrol": true,
   "name": "Combat Patrol: The Shambling Horde",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Each enemy unit within Engagement Range of your unit must take a Battle-shock test.",
-      "fluff": "The mutated foulness and horrifyingly diseased aspect of Nurgle’s worshippers is an assault upon soul and senses both, and more than one foe has despaired at the mere sight of such harbingers of inevitable entropy.",
-      "id": "ce202aad-b7eb-5cda-ad98-7a8bc1b72796",
-      "name": "Harbingers of Despair",
-      "phase": [
-        "fight"
-      ],
-      "restrictions": "",
-      "target": "One Death Guard unit from your army.",
-      "turn": "either",
-      "type": "Strategic Ploy",
-      "when": "Start of the Fight phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, each time a model in your unit makes an attack, improve the Armour Penetration characteristic of that attack by 1.",
-      "fluff": "The weapons of the Death Guard seep corrosive foulness and flesh-eating bacterial filth.",
-      "id": "42097d51-fe90-53a5-b1e9-1ac6015bb86b",
-      "name": "Corrosive Effluents",
-      "phase": [
-        "fight",
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Death Guard unit from your army that has not been selected to shoot or fight this phase.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Your Shooting phase or the Fight phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, each time an attack is allocated to a model in your unit, subtract 1 from the Damage characteristic of that attack.",
-      "fluff": "So bloated with diseased blubber are the Death Guard, so inured to pain and repugnantly mutated, that they can soak up truly shocking amounts of punishment without even the slightest hint of discomfort.",
-      "id": "b589b8ae-b432-5bee-b43b-96520f564a83",
-      "name": "Disgustingly Resilient",
-      "phase": [
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Death Guard unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "opponents",
-      "type": "Battle Tactic",
-      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets."
-    }
-  ]
+  "id": "096e3b8e-afb8-56d6-a1a0-888aed87d777"
 }

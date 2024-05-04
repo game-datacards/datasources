@@ -7,10 +7,10 @@
   "datasheets": [
     {
       "abilities": {
-        "core": ["Deadly Demise D3", "Firing Deck 6"],
+        "core": ["Deadly Demise D3"],
         "damaged": {
-          "description": "",
-          "range": ""
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
         },
         "faction": ["Oath of Moment"],
         "invul": {
@@ -20,38 +20,23 @@
         },
         "other": [
           {
-            "description": "Units can disembark from this Transport after it has Advanced. Units that do so count as having made a Normal move, and cannot declare a charge that turn.",
-            "name": "Assault Vehicle"
+            "name": "Rotating Death",
+            "description": "This model’s twin heavy onslaught gatling cannon has the [SUSTAINED HITS 2] ability when targeting Infantry units."
           }
         ],
         "primarch": [],
         "special": [],
-        "wargear": [
-          {
-            "description": "The bearer has a 5+ invulnerable save.",
-            "name": "Shield dome"
-          },
-          {
-            "description": "While a friendly Adeptus Astartes unit is within 6\" of the bearer, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP.",
-            "name": "Orbital comms array (Aura)"
-          }
-        ]
+        "wargear": []
       },
 
-      "composition": ["1 Impulsor"],
-      "faction_id": "CHBT",
+      "composition": ["1 Gladiator Reaper"],
       "factions": ["Black Templars"],
-      "fluff": "Equipped with vectored thrusters that make it faster than any other gravitic tank in the Space Marines’ armouries, the Impulsor is a highly adaptable transport used by all Primaris Space Marines for rapid insertion and flanking manoeuvres. It is particularly favoured by Vanguard forces.",
-      "id": "2614b505-bdc4-5619-bb9c-9693b3dfdaf6",
-      "keywords": [
-        "Dedicated Transport",
-        "Imperium",
-        "Impulsor",
-        "Transport",
-        "Vehicle"
-      ],
+      "faction_id": "CHBT",
+      "fluff": "When the cannons of the Gladiator Reaper spin to full pitch, the droning makes the teeth of all nearby itch with the intensity of the vibrations. Within seconds, thousands of spent casings pour over the battle tank’s armoured hide as enemies are erased from existence by the storm of fire.",
+      "id": "ce555c3a-05d3-53f6-93d4-4d5f974bc800",
+      "keywords": ["Vehicle", "Smoke", "Imperium", "Gladiator Reaper"],
       "leader": "",
-      "loadout": "This model is equipped with: 2 storm bolters; armoured hull.",
+      "loadout": "This model is equipped with: 2 tempest bolters; twin heavy onslaught gatling cannon; armoured hull.",
       "meleeWeapons": [
         {
           "profiles": [
@@ -68,10 +53,10 @@
           ]
         }
       ],
-      "name": "Black Templars Impulsor",
+      "name": "Black Templars Gladiator Reaper",
       "points": [
         {
-          "cost": "90",
+          "cost": "160",
           "models": "1"
         }
       ],
@@ -79,59 +64,25 @@
         {
           "profiles": [
             {
+              "ap": "0",
+              "attacks": "12",
+              "damage": "1",
+              "keywords": ["Twin-linked", "Devastating Wounds"],
+              "name": "Twin heavy onslaught gatling cannon",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
               "ap": "-1",
-              "attacks": "D3",
-              "damage": "2",
-              "keywords": ["Anti-fly 2+"],
-              "name": "Bellicatus missile array – Icarus",
-              "range": "48\"",
-              "skill": "3+",
-              "strength": "8"
-            },
-            {
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "D6",
-              "keywords": [],
-              "name": "Bellicatus missile array – Krak",
-              "range": "48\"",
-              "skill": "3+",
-              "strength": "8"
-            },
-            {
-              "ap": "0",
-              "attacks": "D6",
+              "attacks": "4",
               "damage": "1",
-              "keywords": ["Blast"],
-              "name": "Bellicatus missile array – Frag",
-              "range": "48\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-4",
-              "attacks": "2",
-              "damage": "D6",
-              "keywords": ["Melta 2"],
-              "name": "Multi-melta",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": ["Rapid Fire 2"],
-              "name": "Storm bolter",
+              "keywords": ["Rapid Fire 4"],
+              "name": "Tempest bolter",
               "range": "24\"",
               "skill": "3+",
               "strength": "4"
@@ -155,12 +106,1063 @@
         {
           "profiles": [
             {
-              "ap": "0",
-              "attacks": "8",
+              "ap": "-4",
+              "attacks": "2",
+              "damage": "D6",
+              "keywords": ["Melta 2"],
+              "name": "Multi-melta",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "D3",
+              "damage": "2",
+              "keywords": ["Anti-fly 2+"],
+              "name": "Icarus rocket pod",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "10\"",
+          "name": "Black Templars Gladiator Reaper",
+          "oc": "3",
+
+          "sv": "3+",
+          "t": "10",
+          "w": "12"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "This model can be equipped with 1 Icarus rocket pod.",
+        "This model can be equipped with one of the following: ◦ 1 ironhail heavy stubber ◦ 1 multi-melta"
+      ]
+    },
+    {
+      "abilities": {
+        "core": ["Leader"],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": "4+"
+        },
+        "other": [
+          {
+            "name": "Crusade of Wrath",
+            "description": "While this model is leading a unit, add 1 to the Strength characteristic of melee weapons equipped by models in that unit and each time an attack is made with such a weapon, a successful unmodified Hit roll of 5+ scores a Critical Hit."
+          },
+          {
+            "name": "High Marshal",
+            "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model’s unit and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds."
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+
+      "composition": ["1 High Marshal Helbrecht – Epic Hero"],
+      "factions": ["Black Templars"],
+      "faction_id": "CHBT",
+      "fluff": "Helbrecht is the living embodiment of his Chapter’s warrior spirit. Wielding the Sword of the High Marshals, he storms into the fray, bellowing oaths of vengeance as he leads the unstoppable charge. His battle-brothers follow him without question, for they believe where High Marshal Helbrecht treads, so too walks the Emperor himself.",
+      "id": "42779506-fcd1-5145-a0ed-5df12d5b4096",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Chapter Master",
+        "High Marshal Helbrecht"
+      ],
+      "leader": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren",
+      "loadout": "This model is equipped with: Ferocity; Sword of the High Marshals.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "12",
               "damage": "1",
-              "keywords": ["Anti-fly 4+", "Sustained Hits 1"],
-              "name": "Ironhail skytalon array",
+              "keywords": [],
+              "name": "Sword of the High Marshals – One-handed",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "6"
+            },
+            {
+              "ap": "-3",
+              "attacks": "6",
+              "damage": "3",
+              "keywords": [],
+              "name": "Sword of the High Marshals – Two-handed",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "name": "High Marshal Helbrecht",
+      "points": [
+        {
+          "cost": "120",
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Devastating Wounds", "Anti-infantry 4+"],
+              "name": "Ferocity",
+              "range": "24\"",
+              "skill": "2+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "5+",
+          "m": "6\"",
+          "name": "High Marshal Helbrecht",
+          "oc": "2",
+
+          "sv": "2+",
+          "t": "4",
+          "w": "5"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren"
+        ],
+        "extra": ""
+      }
+    },
+    {
+      "abilities": {
+        "core": ["Deadly Demise D6"],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Executioner",
+            "description": "Each time this model makes an attack that targets a unit that is Below Half-strength, add 1 to the Hit roll."
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+
+      "composition": ["1 Repulsor Executioner"],
+      "factions": ["Black Templars"],
+      "faction_id": "CHBT",
+      "fluff": "Based on the Repulsor chassis, the Repulsor Executioner sacrifices some transport capacity to accommodate powerful turret weaponry. Even the largest battle tanks can be crippled by the beam of a heavy laser destroyer, while the incinerating blasts of a macro plasma incinerator can obliterate infantry formations.",
+      "id": "2d30c7c4-6bb8-5b1c-9fb1-e1012942d22b",
+      "keywords": [
+        "Vehicle",
+        "Smoke",
+        "Transport",
+        "Imperium",
+        "Repulsor Executioner"
+      ],
+      "leader": "",
+      "loadout": "This model is equipped with: heavy onslaught gatling cannon; macro plasma incinerator; Repulsor Executioner defensive array; twin heavy bolter; twin Icarus ironhail heavy stubber; armoured hull.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "6",
+              "damage": "1",
+              "keywords": [],
+              "name": "Armoured hull",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "name": "Black Templars Repulsor Executioner",
+      "points": [
+        {
+          "cost": "235",
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "12",
+              "damage": "1",
+              "keywords": ["Devastating Wounds"],
+              "name": "Heavy onslaught gatling cannon",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "D6+1",
+              "damage": "2",
+              "keywords": ["Blast"],
+              "name": "Macro plasma incinerator – Standard",
               "range": "36\"",
+              "skill": "3+",
+              "strength": "8"
+            },
+            {
+              "ap": "-4",
+              "attacks": "D6+1",
+              "damage": "3",
+              "keywords": ["Hazardous", "Blast"],
+              "name": "Macro plasma incinerator – Supercharge",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "10",
+              "damage": "1",
+              "keywords": [],
+              "name": "Repulsor Executioner defensive array",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": ["Twin-linked", "Sustained Hits 1"],
+              "name": "Twin heavy bolter",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Twin-linked", "Rapid Fire 3", "Anti-fly 4+"],
+              "name": "Twin Icarus ironhail heavy stubber",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "2",
+              "damage": "D6+4",
+              "keywords": ["Heavy"],
+              "name": "Heavy laser destroyer",
+              "range": "72\"",
+              "skill": "3+",
+              "strength": "16"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Rapid Fire 3"],
+              "name": "Ironhail heavy stubber",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "2",
+              "damage": "D6",
+              "keywords": ["Melta 2"],
+              "name": "Multi-melta",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "D3",
+              "damage": "2",
+              "keywords": ["Anti-fly 2+"],
+              "name": "Icarus rocket pod",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "10\"",
+          "name": "Black Templars Repulsor Executioner",
+          "oc": "5",
+
+          "sv": "3+",
+          "t": "12",
+          "w": "16"
+        }
+      ],
+      "transport": "This model has a transport capacity of 6 Adeptus Astartes Infantry models. Each Jump Pack, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+      "wargear": [
+        "This model can be equipped with 1 Icarus rocket pod.",
+        "This model can be equipped with one of the following: ◦ 1 ironhail heavy stubber ◦ 1 multi-melta",
+        "This model’s macro plasma incinerator can be replaced with 1 heavy laser destroyer."
+      ]
+    },
+    {
+      "abilities": {
+        "core": ["Leader"],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Tactical Precision",
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability."
+          },
+          {
+            "name": "Target Priority",
+            "description": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back."
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+
+      "composition": ["1 Castellan"],
+      "factions": ["Black Templars"],
+      "faction_id": "CHBT",
+      "fluff": "A Castellan leads each of a crusade’s Fighting Companies and acts as a conduit for their Marshal’s will. Charged with the physical and spiritual purity of active Chapter Keeps, they have honed a patient wisdom that they draw upon in battle, alongside their tactical precision and close-quarters ferocity.",
+      "id": "c754e3a4-fcdb-51bd-a458-8296733b3ea6",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Lieutenant",
+        "Castellan"
+      ],
+      "leader": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Infernus Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren ■ Sternguard Veteran Squad You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+      "loadout": "This model is equipped with: combi-weapon; master-crafted power weapon.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": [],
+              "name": "Master-crafted power weapon",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "5",
+              "damage": "1",
+              "keywords": [],
+              "name": "Astartes chainsword",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "name": "Castellan",
+      "points": [
+        {
+          "cost": "65",
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [
+                "Rapid Fire 1",
+                "Devastating Wounds",
+                "Anti-infantry 4+"
+              ],
+              "name": "Combi-weapon",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Heavy Bolt Pistol",
+              "range": "18\"",
+              "skill": "2+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "6\"",
+          "name": "Castellan",
+          "oc": "1",
+
+          "sv": "3+",
+          "t": "4",
+          "w": "4"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "This model’s master-crafted power weapon can be replaced with 1 Astartes chainsword.",
+        "This model’s combi-weapon can be replaced with 1 heavy bolt pistol."
+      ],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
+    },
+    {
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Vow-sworn Bladesmen",
+            "description": "At the start of the Fight phase, you can select one of the following effects to apply to melee weapons equipped by models in this unit until the end of the phase: \n\n■ Add 1 to the Attacks characteristic of those weapons. \n■ Add 1 to the Damage characteristic of those weapons."
+          }
+        ],
+        "primarch": [],
+        "special": [
+          {
+            "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
+            "name": "Attached Unit"
+          }
+        ],
+        "wargear": []
+      },
+
+      "composition": [
+        "1 Sword Brother Castellan",
+        "4-9 Primaris Sword Brothers"
+      ],
+      "factions": ["Black Templars"],
+      "faction_id": "CHBT",
+      "fluff": "Every Sword Brother has earned their place amongst the Marshal’s household through acts of unswerving faith and spectacular violence. On the battlefield they are a reaping whirlwind, unstoppable, uncompromising and armed with a lethal assortment of weapons that they turn upon the enemy in the Emperor’s name.",
+      "id": "3b3a03d0-07a9-5946-b97d-414f13fa9207",
+      "keywords": [
+        "Infantry",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Primaris Sword Brethren"
+      ],
+      "leader": "",
+      "loadout": "Every model is equipped with: heavy bolt pistol; Astartes chainsword.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "5",
+              "damage": "1",
+              "keywords": [],
+              "name": "Astartes chainsword",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": [],
+              "name": "Master-crafted power weapon",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": [],
+              "name": "Power weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": ["Devastating Wounds"],
+              "name": "Thunder hammer",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "5",
+              "damage": "1",
+              "keywords": ["Twin-linked"],
+              "name": "Twin lightning claws",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "name": "Primaris Sword Brethren",
+      "points": [
+        {
+          "cost": "300",
+          "models": "10"
+        },
+        {
+          "cost": "150",
+          "models": "5"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Heavy bolt pistol",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [
+                "Rapid Fire 1",
+                "Devastating Wounds",
+                "Anti-infantry 4+"
+              ],
+              "name": "Combi-weapon",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Plasma pistol – Standard",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "7"
+            },
+            {
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Pistol", "Hazardous"],
+              "name": "Plasma pistol – Supercharge",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Pistol", "Ignores Cover"],
+              "name": "Pyre pistol",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "6\"",
+          "name": "Primaris Sword Brother",
+          "oc": "1",
+
+          "sv": "3+",
+          "t": "4",
+          "w": "3"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "The Sword Brother Castellan’s heavy bolt pistol and Astartes chainsword can be replaced with one of the following: ◦ 1 combi-weapon and 1 Astartes chainsword. ◦ 1 combi-weapon and 1 master-crafted power weapon. ◦ 1 heavy bolt pistol and 1 master-crafted power weapon.",
+        "For every 5 models in this unit, 1 Primaris Sword Brother’s heavy bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws.",
+        "For every 5 models in this unit, up to 2 Primaris Sword Brothers can each have their heavy bolt pistol replaced with 1 pyre pistol.",
+        "For every 5 models in this unit, 1 Primaris Sword Brother’s heavy bolt pistol can be replaced with 1 plasma pistol.",
+        "For every 5 models in this unit, 1 Primaris Sword Brother’s Astartes chainsword can be replaced with 1 thunder hammer.",
+        "Any number of Primaris Sword Brothers can each have their Astartes chainsword replaced with 1 power weapon."
+      ],
+      "leadBy": [
+        "High Marshal Helbrecht",
+        "Castellan",
+        "Marshal",
+        "The Emperor’s Champion",
+        "Chaplain Grimaldus"
+      ]
+    },
+    {
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Righteous Zeal",
+            "description": "You can re-roll Advance and Charge rolls made for this unit."
+          }
+        ],
+        "primarch": [],
+        "special": [
+          {
+            "description": "If a Character from your army with the Leader ability can be attached to a Tactical Squad, it can be attached to this unit instead.",
+            "name": "Attached Unit"
+          }
+        ],
+        "wargear": []
+      },
+
+      "composition": ["1 Sword Brother", "4-9 Initiates", "0-10 Neophytes"],
+      "factions": ["Black Templars"],
+      "faction_id": "CHBT",
+      "fluff": "Mingling Initiates and their Neophyte charges, led by a battle-tempered Sword Brother, Crusader Squads combine maniacal zeal with the posthuman might of the Adeptus Astartes. Often equipped for the close-quarters fighting style favoured by the Black Templars, they carry their crusade into the heart of enemy lines.",
+      "id": "e7576cd7-d91f-5864-bc14-9b38345b9417",
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
+        "Imperium",
+        "Crusader Squad"
+      ],
+      "leader": "",
+      "loadout": "Every model is equipped with: boltgun; bolt pistol; close combat weapon.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Astartes chainsword",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Power weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Devastating Wounds"],
+              "name": "Thunder hammer",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Twin-linked"],
+              "name": "Twin lightning claws",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": [],
+              "name": "Power fist",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Combat knife",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "name": "Crusader Squad",
+      "points": [
+        {
+          "cost": "270",
+          "models": "20"
+        },
+        {
+          "cost": "135",
+          "models": "10"
+        },
+        {
+          "cost": "150",
+          "models": "10"
+        },
+        {
+          "cost": "85",
+          "models": "5"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Boltgun",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [],
+              "name": "Bolt Pistol",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Rapid Fire 2"],
+              "name": "Storm bolter",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [
+                "Rapid Fire 1",
+                "Devastating Wounds",
+                "Anti-infantry 4+"
+              ],
+              "name": "Combi-weapon",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Pistol", "Anti-vehicle 2+"],
+              "name": "Grav-pistol",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Pistol", "Ignores Cover"],
+              "name": "Hand flamer",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "3"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "1",
+              "damage": "D3",
+              "keywords": ["Pistol", "Melta 2"],
+              "name": "Inferno pistol",
+              "range": "6\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Plasma pistol – Standard",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "7"
+            },
+            {
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Pistol", "Hazardous"],
+              "name": "Plasma pistol – Supercharge",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Assault"],
+              "name": "Astartes shotgun",
+              "range": "18\"",
               "skill": "3+",
               "strength": "4"
             }
@@ -172,11 +1174,181 @@
               "ap": "0",
               "attacks": "D6",
               "damage": "1",
-              "keywords": ["Blast"],
-              "name": "Fragstorm grenade launcher",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Flamer",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Plasma gun – Standard",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "7"
+            },
+            {
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Rapid Fire 1", "Hazardous"],
+              "name": "Plasma gun – Supercharge",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "1",
+              "damage": "D6",
+              "keywords": ["Melta 2"],
+              "name": "Meltagun",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Anti-vehicle 2+"],
+              "name": "Grav-gun",
               "range": "18\"",
               "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": ["Sustained Hits 1", "Heavy"],
+              "name": "Heavy bolter",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Heavy flamer",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "3",
+              "keywords": ["Heavy", "Anti-vehicle 2+"],
+              "name": "Grav-cannon",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "D6+1",
+              "keywords": ["Heavy"],
+              "name": "Lascannon",
+              "range": "48\"",
+              "skill": "4+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "D6",
+              "keywords": ["Heavy"],
+              "name": "Missile launcher – Krak",
+              "range": "48\"",
+              "skill": "4+",
+              "strength": "9"
+            },
+            {
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Heavy", "Blast"],
+              "name": "Missile launcher – Frag",
+              "range": "48\"",
+              "skill": "4+",
               "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "2",
+              "damage": "D6",
+              "keywords": ["Melta 2", "Heavy"],
+              "name": "Multi-melta",
+              "range": "18\"",
+              "skill": "4+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "D3",
+              "damage": "1",
+              "keywords": ["Heavy", "Blast"],
+              "name": "Plasma cannon – Standard",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "7"
+            },
+            {
+              "ap": "-3",
+              "attacks": "D3",
+              "damage": "2",
+              "keywords": ["Heavy", "Hazardous", "Blast"],
+              "name": "Plasma cannon – Supercharge",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "8"
             }
           ]
         }
@@ -185,28 +1357,40 @@
       "stats": [
         {
           "ld": "6+",
-          "m": "12\"",
-          "name": "Black Templars Impulsor",
+          "m": "6\"",
+          "name": "Initiate",
           "oc": "2",
 
           "sv": "3+",
-          "t": "9",
-          "w": "11"
+          "t": "4",
+          "w": "2"
+        },
+        {
+          "ld": "6+",
+          "m": "6\"",
+          "name": "Neophyte",
+          "oc": "2",
+
+          "sv": "4+",
+          "t": "4",
+          "w": "2"
         }
       ],
-      "transport": "This model has a transport capacity of 6 Tacticus or Phobos Infantry models. It cannot transport Jump Pack models.",
+      "transport": "",
       "wargear": [
-        "This model can be equipped with one of the following: ◦ 1 bellicatus missile array ◦ 1 ironhail skytalon array ◦ 1 orbital comms array ◦ 1 shield dome",
-        "This model can be equipped with one of the following: ◦ 1 ironhail heavy stubber ◦ 1 multi-melta",
-        "This model’s 2 storm bolters can be replaced with 2 fragstorm grenade launchers."
+        "1 Initiate’s boltgun can be replaced with one of the following: ◦ 1 power weapon ◦ 1 power fist ◦ 1 heavy bolter ◦ 1 heavy flamer ◦ 1 grav-cannon ◦ 1 lascannon ◦ 1 missile launcher ◦ 1 multi-melta ◦ 1 plasma cannon",
+        "1 Initiate’s boltgun can be replaced with one of the following: ◦ 1 flamer ◦ 1 plasma gun ◦ 1 meltagun ◦ 1 grav-gun",
+        "Any number of Initiates can each have their boltgun replaced with 1 Astartes chainsword.",
+        "Any number of Neophytes can each have their boltgun replaced with one of the following: ◦ 1 Astartes shotgun ◦ 1 combat knife",
+        "The Sword Brother’s bolt pistol and boltgun can be replaced with 1 twin lightning claws or two different weapons from the following list:** ◦ 1 Astartes chainsword ◦ 1 bolt pistol ◦ 1 boltgun ◦ 1 combi-weapon ◦ 1 grav-pistol ◦ 1 hand flamer ◦ 1 inferno pistol ◦ 1 plasma pistol ◦ 1 power fist ◦ 1 power weapon ◦ 1 storm bolter ◦ 1 thunder hammer  ** This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
       ]
     },
     {
       "abilities": {
         "core": ["Deadly Demise D3"],
         "damaged": {
-          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "range": "1-4 WOUNDS REMAINING"
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
         },
         "faction": ["Oath of Moment"],
         "invul": {
@@ -216,8 +1400,8 @@
         },
         "other": [
           {
-            "description": "Each time this model is selected to shoot, you can re-roll one Hit roll, you can re-roll one Wound roll and you can re-roll one Damage roll when resolving its attacks.",
-            "name": "Aquilon Optics"
+            "name": "Aquilon Optics",
+            "description": "Each time this model is selected to shoot, you can re-roll one Hit roll, you can re-roll one Wound roll and you can re-roll one Damage roll when resolving its attacks."
           }
         ],
         "primarch": [],
@@ -226,11 +1410,11 @@
       },
 
       "composition": ["1 Gladiator Lancer"],
-      "faction_id": "CHBT",
       "factions": ["Black Templars"],
+      "faction_id": "CHBT",
       "fluff": "With pinpoint accuracy, the Gladiator Lancer picks off the heaviest enemy armour, laser destroyer punching smouldering holes in their hulls. Such is the range of its heavy cannon that it can eliminate threats to the Space Marines before they encounter them, storming past burning wrecks to claim their objectives.",
       "id": "122c2c04-7cc2-5e7e-803f-22ae2923e1d1",
-      "keywords": ["Gladiator Lancer", "Imperium", "Smoke", "Vehicle"],
+      "keywords": ["Vehicle", "Smoke", "Imperium", "Gladiator Lancer"],
       "leader": "",
       "loadout": "This model is equipped with: Lancer laser destroyer; 2 storm bolters; armoured hull.",
       "meleeWeapons": [
@@ -257,34 +1441,6 @@
         }
       ],
       "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "D3",
-              "damage": "2",
-              "keywords": ["Anti-fly 2+"],
-              "name": "Icarus rocket pod",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-4",
-              "attacks": "2",
-              "damage": "D6",
-              "keywords": ["Melta 2"],
-              "name": "Multi-melta",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        },
         {
           "profiles": [
             {
@@ -317,6 +1473,20 @@
           "profiles": [
             {
               "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Blast"],
+              "name": "Fragstorm grenade launcher",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
               "attacks": "3",
               "damage": "1",
               "keywords": ["Rapid Fire 3"],
@@ -330,14 +1500,28 @@
         {
           "profiles": [
             {
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Blast"],
-              "name": "Fragstorm grenade launcher",
+              "ap": "-4",
+              "attacks": "2",
+              "damage": "D6",
+              "keywords": ["Melta 2"],
+              "name": "Multi-melta",
               "range": "18\"",
               "skill": "3+",
-              "strength": "4"
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "D3",
+              "damage": "2",
+              "keywords": ["Anti-fly 2+"],
+              "name": "Icarus rocket pod",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "8"
             }
           ]
         }
@@ -364,21 +1548,25 @@
     },
     {
       "abilities": {
-        "core": ["Deadly Demise D3"],
+        "core": ["Leader"],
         "damaged": {
-          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "range": "1-4 WOUNDS REMAINING"
+          "description": "",
+          "range": ""
         },
         "faction": ["Oath of Moment"],
         "invul": {
           "info": "",
 
-          "value": ""
+          "value": "4+"
         },
         "other": [
           {
-            "description": "Each time this model makes an attack with its twin las-talon that targets the closest eligible Monster or Vehicle unit, add 1 to the Hit roll.",
-            "name": "Ferocious Assault"
+            "name": "Rites of Battle",
+            "description": "Once per battle round, one unit from your army with this ability can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase."
+          },
+          {
+            "name": "Finest Hour",
+            "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability."
           }
         ],
         "primarch": [],
@@ -386,34 +1574,42 @@
         "wargear": []
       },
 
-      "composition": ["1 Gladiator Valiant"],
-      "faction_id": "CHBT",
+      "composition": ["1 Marshal"],
       "factions": ["Black Templars"],
-      "fluff": "The Valiant lays down blistering volleys of fire as it escorts transports or supports infantry in ferocious fighting, crossing rushing watercourses, sucking marshlands and bubbling lava lakes with equal ease. Its twin las-talons spit death at the foe, making short work of enemy armour and cracking open fortified positions.",
-      "id": "91cab762-d65b-5cb5-815b-0d937f31eb2d",
-      "keywords": ["Gladiator Valiant", "Imperium", "Smoke", "Vehicle"],
-      "leader": "",
-      "loadout": "This model is equipped with: 2 multi-meltas; twin las-talon; armoured hull.",
+      "faction_id": "CHBT",
+      "fluff": "Each Black Templars crusade is led by a Marshal. Similar in rank to the Captains of other Chapters, Marshals are fearsome combatants and paragons of strategic acumen. Ensuring a crusade’s purity and success is a sacred duty, and Marshals fight with sanctified relic weapons while acting as beacons of pious fervour for their warriors.",
+      "id": "9892bec6-67ae-5ad3-b020-86a6f127fce7",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Grenades",
+        "Imperium",
+        "Tacticus",
+        "Captain",
+        "Marshal"
+      ],
+      "leader": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Infernus Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren ■ Sternguard Veteran Squad",
+      "loadout": "This model is equipped with: plasma pistol; master-crafted power weapon.",
       "meleeWeapons": [
         {
           "profiles": [
             {
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
+              "ap": "-2",
+              "attacks": "6",
+              "damage": "2",
               "keywords": [],
-              "name": "Armoured hull",
+              "name": "Master-crafted power weapon",
               "range": "Melee",
-              "skill": "4+",
-              "strength": "6"
+              "skill": "2+",
+              "strength": "5"
             }
           ]
         }
       ],
-      "name": "Black Templars Gladiator Valiant",
+      "name": "Marshal",
       "points": [
         {
-          "cost": "160",
+          "cost": "80",
           "models": "1"
         }
       ],
@@ -421,159 +1617,23 @@
         {
           "profiles": [
             {
-              "ap": "-1",
-              "attacks": "D3",
-              "damage": "2",
-              "keywords": ["Anti-fly 2+"],
-              "name": "Icarus rocket pod",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Plasma pistol – Standard",
+              "range": "12\"",
+              "skill": "2+",
+              "strength": "7"
+            },
             {
               "ap": "-3",
-              "attacks": "2",
-              "damage": "D6+1",
-              "keywords": ["Twin-linked"],
-              "name": "Twin las-talon",
-              "range": "36\"",
-              "skill": "3+",
-              "strength": "10"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-4",
-              "attacks": "2",
-              "damage": "D6",
-              "keywords": ["Melta 2"],
-              "name": "Multi-melta",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Rapid Fire 3"],
-              "name": "Ironhail heavy stubber",
-              "range": "36\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "ld": "6+",
-          "m": "10\"",
-          "name": "Black Templars Gladiator Valiant",
-          "oc": "3",
-
-          "sv": "3+",
-          "t": "10",
-          "w": "12"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "This model can be equipped with 1 Icarus rocket pod.",
-        "This model can be equipped with one of the following: ◦ 1 ironhail heavy stubber ◦ 1 multi-melta"
-      ]
-    },
-    {
-      "abilities": {
-        "core": ["Deadly Demise D3"],
-        "damaged": {
-          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "range": "1-4 WOUNDS REMAINING"
-        },
-        "faction": ["Oath of Moment"],
-        "invul": {
-          "info": "",
-
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "This model’s twin heavy onslaught gatling cannon has the [SUSTAINED HITS 2] ability when targeting Infantry units.",
-            "name": "Rotating Death"
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-
-      "composition": ["1 Gladiator Reaper"],
-      "faction_id": "CHBT",
-      "factions": ["Black Templars"],
-      "fluff": "When the cannons of the Gladiator Reaper spin to full pitch, the droning makes the teeth of all nearby itch with the intensity of the vibrations. Within seconds, thousands of spent casings pour over the battle tank’s armoured hide as enemies are erased from existence by the storm of fire.",
-      "id": "ce555c3a-05d3-53f6-93d4-4d5f974bc800",
-      "keywords": ["Gladiator Reaper", "Imperium", "Smoke", "Vehicle"],
-      "leader": "",
-      "loadout": "This model is equipped with: 2 tempest bolters; twin heavy onslaught gatling cannon; armoured hull.",
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Armoured hull",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "6"
-            }
-          ]
-        }
-      ],
-      "name": "Black Templars Gladiator Reaper",
-      "points": [
-        {
-          "cost": "160",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": ["Rapid Fire 4"],
-              "name": "Tempest bolter",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "D3",
+              "attacks": "1",
               "damage": "2",
-              "keywords": ["Anti-fly 2+"],
-              "name": "Icarus rocket pod",
-              "range": "24\"",
-              "skill": "3+",
+              "keywords": ["Pistol", "Hazardous"],
+              "name": "Plasma pistol – Supercharge",
+              "range": "12\"",
+              "skill": "2+",
               "strength": "8"
             }
           ]
@@ -581,40 +1641,16 @@
         {
           "profiles": [
             {
-              "ap": "-4",
-              "attacks": "2",
-              "damage": "D6",
-              "keywords": ["Melta 2"],
-              "name": "Multi-melta",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
               "ap": "0",
-              "attacks": "12",
+              "attacks": "1",
               "damage": "1",
-              "keywords": ["Devastating Wounds", "Twin-linked"],
-              "name": "Twin heavy onslaught gatling cannon",
+              "keywords": [
+                "Rapid Fire 1",
+                "Devastating Wounds",
+                "Anti-infantry 4+"
+              ],
+              "name": "Combi-weapon",
               "range": "24\"",
-              "skill": "3+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Rapid Fire 3"],
-              "name": "Ironhail heavy stubber",
-              "range": "36\"",
               "skill": "3+",
               "strength": "4"
             }
@@ -625,27 +1661,37 @@
       "stats": [
         {
           "ld": "6+",
-          "m": "10\"",
-          "name": "Black Templars Gladiator Reaper",
-          "oc": "3",
+          "m": "6\"",
+          "name": "Marshal",
+          "oc": "1",
 
           "sv": "3+",
-          "t": "10",
-          "w": "12"
+          "t": "4",
+          "w": "5"
         }
       ],
       "transport": "",
       "wargear": [
-        "This model can be equipped with 1 Icarus rocket pod.",
-        "This model can be equipped with one of the following: ◦ 1 ironhail heavy stubber ◦ 1 multi-melta"
-      ]
+        "This model’s plasma pistol can be replaced with one combi-weapon."
+      ],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "abilities": {
-        "core": ["Deadly Demise D6"],
+        "core": ["Scouts 6\""],
         "damaged": {
-          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "range": "1-5 WOUNDS REMAINING"
+          "description": "",
+          "range": ""
         },
         "faction": ["Oath of Moment"],
         "invul": {
@@ -655,62 +1701,49 @@
         },
         "other": [
           {
-            "description": "Each time this model makes an attack that targets a unit that is Below Half-strength, add 1 to the Hit roll.",
-            "name": "Executioner"
+            "name": "Righteous Zeal",
+            "description": "You can re-roll Advance and Charge rolls made for this unit."
           }
         ],
         "primarch": [],
-        "special": [],
+        "special": [
+          {
+            "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
+            "name": "Attached Unit"
+          }
+        ],
         "wargear": []
       },
 
-      "composition": ["1 Repulsor Executioner"],
-      "faction_id": "CHBT",
+      "composition": [
+        "1 Primaris Sword Brother",
+        "5-11 Primaris Initiates",
+        "4-8 Primaris Neophytes"
+      ],
       "factions": ["Black Templars"],
-      "fluff": "Based on the Repulsor chassis, the Repulsor Executioner sacrifices some transport capacity to accommodate powerful turret weaponry. Even the largest battle tanks can be crippled by the beam of a heavy laser destroyer, while the incinerating blasts of a macro plasma incinerator can obliterate infantry formations.",
-      "id": "2d30c7c4-6bb8-5b1c-9fb1-e1012942d22b",
+      "faction_id": "CHBT",
+      "fluff": "Infused with the posthuman might of the Primaris miracle, these Crusader Squads storm into battle with bolt rifles blazing and Astartes chainswords howling. Initiates aim jets of fire from their pyreblasters or swing crackling power fists into their foes, while hard-eyed Neophytes fight furiously to prove their martial worth.",
+      "id": "98766136-bd99-5bf9-85e2-cfa97cfc2030",
       "keywords": [
+        "Infantry",
+        "Battleline",
+        "Grenades",
         "Imperium",
-        "Repulsor Executioner",
-        "Smoke",
-        "Transport",
-        "Vehicle"
+        "Tacticus",
+        "Primaris Crusader Squad"
       ],
       "leader": "",
-      "loadout": "This model is equipped with: heavy onslaught gatling cannon; macro plasma incinerator; Repulsor Executioner defensive array; twin heavy bolter; twin Icarus ironhail heavy stubber; armoured hull.",
+      "loadout": "The Primaris Sword Brother is equipped with: heavy bolt pistol; power weapon.",
       "meleeWeapons": [
         {
           "profiles": [
             {
-              "ap": "0",
-              "attacks": "6",
+              "ap": "-2",
+              "attacks": "3",
               "damage": "1",
               "keywords": [],
-              "name": "Armoured hull",
+              "name": "Power weapon",
               "range": "Melee",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "name": "Black Templars Repulsor Executioner",
-      "points": [
-        {
-          "cost": "235",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": ["Sustained Hits 1", "Twin-linked"],
-              "name": "Twin heavy bolter",
-              "range": "36\"",
               "skill": "3+",
               "strength": "5"
             }
@@ -719,77 +1752,108 @@
         {
           "profiles": [
             {
-              "ap": "-1",
-              "attacks": "D3",
-              "damage": "2",
-              "keywords": ["Anti-fly 2+"],
-              "name": "Icarus rocket pod",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-3",
-              "attacks": "D6+1",
-              "damage": "2",
-              "keywords": ["Blast"],
-              "name": "Macro plasma incinerator – Standard",
-              "range": "36\"",
-              "skill": "3+",
-              "strength": "8"
-            },
-            {
-              "ap": "-4",
-              "attacks": "D6+1",
-              "damage": "3",
-              "keywords": ["Blast", "Hazardous"],
-              "name": "Macro plasma incinerator – Supercharge",
-              "range": "36\"",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-4",
-              "attacks": "2",
-              "damage": "D6",
-              "keywords": ["Melta 2"],
-              "name": "Multi-melta",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-4",
-              "attacks": "2",
-              "damage": "D6+4",
-              "keywords": ["Heavy"],
-              "name": "Heavy laser destroyer",
-              "range": "72\"",
-              "skill": "3+",
-              "strength": "16"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
               "ap": "0",
-              "attacks": "10",
+              "attacks": "3",
               "damage": "1",
               "keywords": [],
-              "name": "Repulsor Executioner defensive array",
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "5",
+              "damage": "1",
+              "keywords": [],
+              "name": "Astartes chainsword",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": [],
+              "name": "Power fist",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "name": "Primaris Crusader Squad",
+      "points": [
+        {
+          "cost": "280",
+          "models": "20"
+        },
+        {
+          "cost": "140",
+          "models": "10"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Heavy bolt pistol",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Pistol", "Ignores Cover"],
+              "name": "Pyre pistol",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Bolt pistol",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Heavy", "Assault"],
+              "name": "Bolt rifle",
               "range": "24\"",
               "skill": "3+",
               "strength": "4"
@@ -800,13 +1864,13 @@
           "profiles": [
             {
               "ap": "0",
-              "attacks": "12",
+              "attacks": "D6",
               "damage": "1",
-              "keywords": ["Devastating Wounds"],
-              "name": "Heavy onslaught gatling cannon",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "6"
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Pyreblaster",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "5"
             }
           ]
         },
@@ -814,25 +1878,11 @@
           "profiles": [
             {
               "ap": "0",
-              "attacks": "3",
+              "attacks": "2",
               "damage": "1",
-              "keywords": ["Anti-fly 4+", "Rapid Fire 3", "Twin-linked"],
-              "name": "Twin Icarus ironhail heavy stubber",
-              "range": "36\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Rapid Fire 3"],
-              "name": "Ironhail heavy stubber",
-              "range": "36\"",
+              "keywords": ["Assault"],
+              "name": "Neophyte firearm",
+              "range": "18\"",
               "skill": "3+",
               "strength": "4"
             }
@@ -843,28 +1893,46 @@
       "stats": [
         {
           "ld": "6+",
-          "m": "10\"",
-          "name": "Black Templars Repulsor Executioner",
-          "oc": "5",
+          "m": "6\"",
+          "name": "Primaris Initiate",
+          "oc": "2",
 
           "sv": "3+",
-          "t": "12",
-          "w": "16"
+          "t": "4",
+          "w": "2"
+        },
+        {
+          "ld": "6+",
+          "m": "6\"",
+          "name": "Primaris Neophyte",
+          "oc": "2",
+
+          "sv": "4+",
+          "t": "4",
+          "w": "2"
         }
       ],
-      "transport": "This model has a transport capacity of 6 Adeptus Astartes Infantry models. Each Jump Pack, Gravis or Terminator model takes up the space of 2 models and each Centurion model takes up the space of 3 models.",
+      "transport": "",
       "wargear": [
-        "This model can be equipped with 1 Icarus rocket pod.",
-        "This model can be equipped with one of the following: ◦ 1 ironhail heavy stubber ◦ 1 multi-melta",
-        "This model’s macro plasma incinerator can be replaced with 1 heavy laser destroyer."
+        "For every 10 models in this unit, up to 2 Primaris Initiates can each have their bolt rifle replaced with one of the following: ◦ 1 heavy bolt pistol and 1 power fist ◦ 1 pyreblaster",
+        "Any number of Primaris Initiates can each have their bolt rifle replaced with 1 heavy bolt pistol and 1 Astartes chainsword.",
+        "Any number of Primaris Neophytes can each have their bolt pistol and Astartes chainsword replaced with 1 Neophyte firearm and 1 close combat weapon.",
+        "The Primaris Sword Brother’s heavy bolt pistol can be replaced with 1 pyre pistol."
+      ],
+      "leadBy": [
+        "High Marshal Helbrecht",
+        "Castellan",
+        "Marshal",
+        "The Emperor’s Champion",
+        "Chaplain Grimaldus"
       ]
     },
     {
       "abilities": {
         "core": ["Deadly Demise D6"],
         "damaged": {
-          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "range": "1-5 WOUNDS REMAINING"
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
         },
         "faction": ["Oath of Moment"],
         "invul": {
@@ -874,8 +1942,8 @@
         },
         "other": [
           {
-            "description": "Once per turn, in your opponent’s Charge phase, after an enemy unit has selected targets for its charge but before it makes a Charge move, you can select one Adeptus Astartes unit from your army that was selected as a target of that charge. Provided that unit is not within Engagement Range of any enemy units and every model in that unit is within 3\" of this Transport, it can embark within this Transport. The charging unit can then select new targets for its charge.",
-            "name": "Emergency Combat Embarkation"
+            "name": "Emergency Combat Embarkation",
+            "description": "Once per turn, in your opponent’s Charge phase, after an enemy unit has selected targets for its charge but before it makes a Charge move, you can select one Adeptus Astartes unit from your army that was selected as a target of that charge. Provided that unit is not within Engagement Range of any enemy units and every model in that unit is within 3\" of this Transport, it can embark within this Transport. The charging unit can then select new targets for its charge."
           }
         ],
         "primarch": [],
@@ -884,11 +1952,11 @@
       },
 
       "composition": ["1 Repulsor"],
-      "faction_id": "CHBT",
       "factions": ["Black Templars"],
+      "faction_id": "CHBT",
       "fluff": "Clad in advanced armour plating and armed for any battlefield situation, the Repulsor not only transports its passengers safely, it also provides superb fire support. Dangerous terrain is little impediment to it, its ventral plates channelling gravitic energies that crush obstacles beneath the vehicle’s mass.",
       "id": "2e63eb7b-1573-524a-9fde-f08f44773d50",
-      "keywords": ["Imperium", "Repulsor", "Smoke", "Transport", "Vehicle"],
+      "keywords": ["Vehicle", "Smoke", "Transport", "Imperium", "Repulsor"],
       "leader": "",
       "loadout": "This model is equipped with: heavy onslaught gatling cannon; hunter-slayer missile; Repulsor defensive array; twin heavy bolter; armoured hull.",
       "meleeWeapons": [
@@ -916,23 +1984,50 @@
       ],
       "rangedWeapons": [
         {
-          "abilities": [
+          "profiles": [
             {
-              "description": "The bearer can only shoot with this weapon once per battle.",
-              "name": "One Shot"
+              "ap": "0",
+              "attacks": "12",
+              "damage": "1",
+              "keywords": ["Devastating Wounds"],
+              "name": "Heavy onslaught gatling cannon",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "6"
             }
-          ],
-
+          ]
+        },
+        {
           "profiles": [
             {
               "ap": "-3",
               "attacks": "1",
               "damage": "D6",
-              "keywords": ["Indirect Fire", "One Shot"],
+              "keywords": ["One Shot", "Indirect Fire"],
               "name": "Hunter-slayer missile",
               "range": "48\"",
               "skill": "2+",
               "strength": "14"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle."
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "18",
+              "damage": "1",
+              "keywords": [],
+              "name": "Repulsor defensive array",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
             }
           ]
         },
@@ -942,7 +2037,7 @@
               "ap": "-1",
               "attacks": "3",
               "damage": "2",
-              "keywords": ["Sustained Hits 1", "Twin-linked"],
+              "keywords": ["Twin-linked", "Sustained Hits 1"],
               "name": "Twin heavy bolter",
               "range": "36\"",
               "skill": "3+",
@@ -991,34 +2086,6 @@
               "strength": "9"
             }
           ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "12",
-              "damage": "1",
-              "keywords": ["Devastating Wounds"],
-              "name": "Heavy onslaught gatling cannon",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "18",
-              "damage": "1",
-              "keywords": [],
-              "name": "Repulsor defensive array",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
         }
       ],
       "source": "40k-10e",
@@ -1043,315 +2110,6 @@
     },
     {
       "abilities": {
-        "core": ["Feel No Pain 5+", "Leader"],
-        "damaged": {
-          "description": "",
-          "range": ""
-        },
-        "faction": ["Oath of Moment"],
-        "invul": {
-          "info": "",
-
-          "value": "4+"
-        },
-        "other": [
-          {
-            "description": "In your Command phase, if this unit contains one or more Cenobyte Servitor models, select one Relics of the Emperor Ascendant ability (see Relics of the Emperor Ascendant section). Until the start of your next Command phase, this unit’s Chaplain Grimaldus model has that ability.",
-            "name": "Relics of the Emperor Ascendant"
-          },
-          {
-            "description": "While Chaplain Grimaldus is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Hit roll.",
-            "name": "Litanies of the Devout"
-          }
-        ],
-        "primarch": [
-          {
-            "abilities": [
-              {
-                "description": "Improve the Armour Penetration characteristic of melee weapons equipped by models in this unit by 1.",
-                "name": "Sceptre of Anointing"
-              },
-              {
-                "description": "Models in this unit have the Feel No Pain 5+ ability.",
-                "name": "Remnant of the Fallen Temple"
-              },
-              {
-                "description": "This unit is eligible to declare a charge in a turn in which it Advanced or Fell Back.",
-                "name": "Banner of Fallen Crusaders"
-              }
-            ],
-            "name": "Relics of the Emperor Ascendant"
-          }
-        ],
-        "special": [],
-        "wargear": []
-      },
-
-      "composition": [
-        "1 Chaplain Grimaldus – Epic Hero",
-        "3 Cenobyte Servitors"
-      ],
-      "faction_id": "CHBT",
-      "factions": ["Black Templars"],
-      "fluff": "High Chaplain Grimaldus is a beacon of Imperial faith. His fortitude is such that many of his brothers believe him invincible. His will is singular, his zeal coldly furious, and his martial skill attested by the trail of broken foes laid at his heels. His Cenobyte Servitors lurch to war at his side, bearing with them holy relics of the faith.",
-      "id": "68bd0bd6-bbf1-5464-a004-0074c02e764a",
-      "keywords": [
-        "Chaplain Grimaldus",
-        "Character",
-        "Epic Hero",
-        "Grenades",
-        "Imperium",
-        "Infantry",
-        "Tacticus"
-      ],
-      "leader": "This unit can be attached to the following units: ■ Assault Intercessor Squad ■ Infernus Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren",
-      "leads": {
-        "extra": "",
-        "units": [
-          "Assault Intercessor Squad",
-          "Infernus Squad",
-          "Intercessor Squad",
-          "Primaris Crusader Squad",
-          "Primaris Sword Brethren"
-        ]
-      },
-      "loadout": "Chaplain Grimaldus is equipped with: plasma pistol; artificer crozius.\nEvery Cenobyte Servitor is equipped with: close combat weapon.",
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "5",
-              "damage": "2",
-              "keywords": [],
-              "name": "Artificer crozius",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "3"
-            }
-          ]
-        }
-      ],
-      "name": "Chaplain Grimaldus",
-      "points": [
-        {
-          "cost": "120",
-          "models": "4"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Plasma pistol – Standard",
-              "range": "12\"",
-              "skill": "2+",
-              "strength": "7"
-            },
-            {
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Hazardous", "Pistol"],
-              "name": "Plasma pistol – Supercharge",
-              "range": "12\"",
-              "skill": "2+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "ld": "5+",
-          "m": "6\"",
-          "name": "Chaplain Grimaldus",
-          "oc": "1",
-
-          "sv": "3+",
-          "t": "4",
-          "w": "4"
-        },
-        {
-          "ld": "8+",
-          "m": "6\"",
-          "name": "Cenobyte Servitor",
-          "oc": "1",
-
-          "sv": "3+",
-          "t": "4",
-          "w": "1"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
-      "abilities": {
-        "core": ["Leader"],
-        "damaged": {
-          "description": "",
-          "range": ""
-        },
-        "faction": ["Oath of Moment"],
-        "invul": {
-          "info": "",
-
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "This model’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-            "name": "Target Priority"
-          },
-          {
-            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
-            "name": "Tactical Precision"
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-
-      "composition": ["1 Castellan"],
-      "faction_id": "CHBT",
-      "factions": ["Black Templars"],
-      "fluff": "A Castellan leads each of a crusade’s Fighting Companies and acts as a conduit for their Marshal’s will. Charged with the physical and spiritual purity of active Chapter Keeps, they have honed a patient wisdom that they draw upon in battle, alongside their tactical precision and close-quarters ferocity.",
-      "id": "c754e3a4-fcdb-51bd-a458-8296733b3ea6",
-      "keywords": [
-        "Castellan",
-        "Character",
-        "Grenades",
-        "Imperium",
-        "Infantry",
-        "Lieutenant",
-        "Tacticus"
-      ],
-      "leader": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Infernus Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren ■ Sternguard Veteran Squad You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
-      "leads": {
-        "extra": "You can attach this model to one of the above units even if one Captain or Chapter Master model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
-        "units": [
-          "Assault Intercessor Squad",
-          "Infernus Squad",
-          "Intercessor Squad",
-          "Primaris Crusader Squad",
-          "Primaris Sword Brethren",
-          "Sternguard Veteran Squad"
-        ]
-      },
-      "loadout": "This model is equipped with: combi-weapon; master-crafted power weapon.",
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "5",
-              "damage": "1",
-              "keywords": [],
-              "name": "Astartes chainsword",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "4",
-              "damage": "2",
-              "keywords": [],
-              "name": "Master-crafted power weapon",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Castellan",
-      "points": [
-        {
-          "cost": "65",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Heavy Bolt Pistol",
-              "range": "18\"",
-              "skill": "2+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Anti-infantry 4+",
-                "Devastating Wounds",
-                "Rapid Fire 1"
-              ],
-              "name": "Combi-weapon",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "ld": "6+",
-          "m": "6\"",
-          "name": "Castellan",
-          "oc": "1",
-
-          "sv": "3+",
-          "t": "4",
-          "w": "4"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "This model’s combi-weapon can be replaced with 1 heavy bolt pistol.",
-        "This model’s master-crafted power weapon can be replaced with 1 Astartes chainsword."
-      ]
-    },
-    {
-      "abilities": {
         "core": ["Leader"],
         "damaged": {
           "description": "",
@@ -1365,131 +2123,12 @@
         },
         "other": [
           {
-            "description": "At the start of the Fight phase, select one enemy unit within Engagement Range of this model’s unit and roll one D6: on a 2-3, that enemy unit suffers D3 mortal wounds; on a 4-5, that enemy unit suffers 3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
-            "name": "High Marshal"
+            "name": "Skilful Parry",
+            "description": "Once per phase, when a melee attack is allocated to this model and the saving throw is failed, you can change the Damage characteristic of that attack to 0."
           },
           {
-            "description": "While this model is leading a unit, add 1 to the Strength characteristic of melee weapons equipped by models in that unit and each time an attack is made with such a weapon, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
-            "name": "Crusade of Wrath"
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-
-      "composition": ["1 High Marshal Helbrecht – Epic Hero"],
-      "faction_id": "CHBT",
-      "factions": ["Black Templars"],
-      "fluff": "Helbrecht is the living embodiment of his Chapter’s warrior spirit. Wielding the Sword of the High Marshals, he storms into the fray, bellowing oaths of vengeance as he leads the unstoppable charge. His battle-brothers follow him without question, for they believe where High Marshal Helbrecht treads, so too walks the Emperor himself.",
-      "id": "42779506-fcd1-5145-a0ed-5df12d5b4096",
-      "keywords": [
-        "Chapter Master",
-        "Character",
-        "Epic Hero",
-        "Grenades",
-        "High Marshal Helbrecht",
-        "Imperium",
-        "Infantry",
-        "Tacticus"
-      ],
-      "leader": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren",
-      "leads": {
-        "extra": "",
-        "units": [
-          "Assault Intercessor Squad",
-          "Intercessor Squad",
-          "Primaris Crusader Squad",
-          "Primaris Sword Brethren"
-        ]
-      },
-      "loadout": "This model is equipped with: Ferocity; Sword of the High Marshals.",
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-3",
-              "attacks": "12",
-              "damage": "1",
-              "keywords": [],
-              "name": "Sword of the High Marshals – One-handed",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "6"
-            },
-            {
-              "ap": "-3",
-              "attacks": "6",
-              "damage": "3",
-              "keywords": [],
-              "name": "Sword of the High Marshals – Two-handed",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "name": "High Marshal Helbrecht",
-      "points": [
-        {
-          "cost": "120",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": ["Anti-infantry 4+", "Devastating Wounds"],
-              "name": "Ferocity",
-              "range": "24\"",
-              "skill": "2+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "ld": "5+",
-          "m": "6\"",
-          "name": "High Marshal Helbrecht",
-          "oc": "2",
-
-          "sv": "2+",
-          "t": "4",
-          "w": "5"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
-      "abilities": {
-        "core": ["Leader"],
-        "damaged": {
-          "description": "",
-          "range": ""
-        },
-        "faction": ["Oath of Moment"],
-        "invul": {
-          "info": "",
-
-          "value": "4+"
-        },
-        "other": [
-          {
-            "description": "Each time this model makes a melee attack that targets a Character unit, add 1 to the Wound roll.",
-            "name": "Sigismund’s Heir"
-          },
-          {
-            "description": "Once per phase, when a melee attack is allocated to this model and the saving throw is failed, you can change the Damage characteristic of that attack to 0.",
-            "name": "Skilful Parry"
+            "name": "Sigismund’s Heir",
+            "description": "Each time this model makes a melee attack that targets a Character unit, add 1 to the Wound roll."
           }
         ],
         "primarch": [],
@@ -1498,30 +2137,20 @@
       },
 
       "composition": ["1 Emperor’s Champion – Epic Hero"],
-      "faction_id": "CHBT",
       "factions": ["Black Templars"],
+      "faction_id": "CHBT",
       "fluff": "A humble warrior touched by greatness, the Emperor’s Champion strides to battle wreathed in divine light. The furious blows of the enemy ring from his nigh-impenetrable Armour of Faith. In return, the Emperor’s Champion seeks out the leaders of the foe and, with sweeping blows from his Black Sword, strikes them down.",
       "id": "dff24b85-9eb0-5376-b4c7-d270dba31a35",
       "keywords": [
+        "Infantry",
         "Character",
         "Epic Hero",
         "Grenades",
         "Imperium",
-        "Infantry",
         "Tacticus",
         "The Emperor’s Champion"
       ],
       "leader": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren ■ Sternguard Veteran Squad",
-      "leads": {
-        "extra": "",
-        "units": [
-          "Assault Intercessor Squad",
-          "Intercessor Squad",
-          "Primaris Crusader Squad",
-          "Primaris Sword Brethren",
-          "Sternguard Veteran Squad"
-        ]
-      },
       "loadout": "This model is equipped with: bolt pistol; Black Sword.",
       "meleeWeapons": [
         {
@@ -1586,11 +2215,349 @@
         }
       ],
       "transport": "",
-      "wargear": ["None"]
+      "wargear": ["None"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren",
+          "Sternguard Veteran Squad"
+        ],
+        "extra": ""
+      }
     },
     {
       "abilities": {
-        "core": ["Leader"],
+        "core": ["Deadly Demise D3"],
+        "damaged": {
+          "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll."
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Ferocious Assault",
+            "description": "Each time this model makes an attack with its twin las-talon that targets the closest eligible Monster or Vehicle unit, add 1 to the Hit roll."
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+
+      "composition": ["1 Gladiator Valiant"],
+      "factions": ["Black Templars"],
+      "faction_id": "CHBT",
+      "fluff": "The Valiant lays down blistering volleys of fire as it escorts transports or supports infantry in ferocious fighting, crossing rushing watercourses, sucking marshlands and bubbling lava lakes with equal ease. Its twin las-talons spit death at the foe, making short work of enemy armour and cracking open fortified positions.",
+      "id": "91cab762-d65b-5cb5-815b-0d937f31eb2d",
+      "keywords": ["Vehicle", "Smoke", "Imperium", "Gladiator Valiant"],
+      "leader": "",
+      "loadout": "This model is equipped with: 2 multi-meltas; twin las-talon; armoured hull.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Armoured hull",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        }
+      ],
+      "name": "Black Templars Gladiator Valiant",
+      "points": [
+        {
+          "cost": "160",
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "2",
+              "damage": "D6+1",
+              "keywords": ["Twin-linked"],
+              "name": "Twin las-talon",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "10"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "2",
+              "damage": "D6",
+              "keywords": ["Melta 2"],
+              "name": "Multi-melta",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Rapid Fire 3"],
+              "name": "Ironhail heavy stubber",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "D3",
+              "damage": "2",
+              "keywords": ["Anti-fly 2+"],
+              "name": "Icarus rocket pod",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "10\"",
+          "name": "Black Templars Gladiator Valiant",
+          "oc": "3",
+
+          "sv": "3+",
+          "t": "10",
+          "w": "12"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "This model can be equipped with 1 Icarus rocket pod.",
+        "This model can be equipped with one of the following: ◦ 1 ironhail heavy stubber ◦ 1 multi-melta"
+      ]
+    },
+    {
+      "abilities": {
+        "core": ["Deadly Demise D3", "Firing Deck 6"],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Assault Vehicle",
+            "description": "Units can disembark from this Transport after it has Advanced. Units that do so count as having made a Normal move, and cannot declare a charge that turn."
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": [
+          {
+            "name": "Orbital comms array (Aura)",
+            "description": "While a friendly Adeptus Astartes unit is within 6\" of the bearer, each time you target that unit with a Stratagem, roll one D6: on a 5+, you gain 1CP."
+          },
+          {
+            "name": "Shield dome",
+            "description": "The bearer has a 5+ invulnerable save."
+          }
+        ]
+      },
+
+      "composition": ["1 Impulsor"],
+      "factions": ["Black Templars"],
+      "faction_id": "CHBT",
+      "fluff": "Equipped with vectored thrusters that make it faster than any other gravitic tank in the Space Marines’ armouries, the Impulsor is a highly adaptable transport used by all Primaris Space Marines for rapid insertion and flanking manoeuvres. It is particularly favoured by Vanguard forces.",
+      "id": "2614b505-bdc4-5619-bb9c-9693b3dfdaf6",
+      "keywords": [
+        "Vehicle",
+        "Transport",
+        "Dedicated Transport",
+        "Imperium",
+        "Impulsor"
+      ],
+      "leader": "",
+      "loadout": "This model is equipped with: 2 storm bolters; armoured hull.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Armoured hull",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        }
+      ],
+      "name": "Black Templars Impulsor",
+      "points": [
+        {
+          "cost": "90",
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Rapid Fire 2"],
+              "name": "Storm bolter",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Rapid Fire 3"],
+              "name": "Ironhail heavy stubber",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-4",
+              "attacks": "2",
+              "damage": "D6",
+              "keywords": ["Melta 2"],
+              "name": "Multi-melta",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Blast"],
+              "name": "Fragstorm grenade launcher",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "D3",
+              "damage": "2",
+              "keywords": ["Anti-fly 2+"],
+              "name": "Bellicatus missile array – Icarus",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "8"
+            },
+            {
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "D6",
+              "keywords": [],
+              "name": "Bellicatus missile array – Krak",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "8"
+            },
+            {
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Blast"],
+              "name": "Bellicatus missile array – Frag",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "8",
+              "damage": "1",
+              "keywords": ["Sustained Hits 1", "Anti-fly 4+"],
+              "name": "Ironhail skytalon array",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "12\"",
+          "name": "Black Templars Impulsor",
+          "oc": "2",
+
+          "sv": "3+",
+          "t": "9",
+          "w": "11"
+        }
+      ],
+      "transport": "This model has a transport capacity of 6 Tacticus or Phobos Infantry models. It cannot transport Jump Pack models.",
+      "wargear": [
+        "This model can be equipped with one of the following: ◦ 1 bellicatus missile array ◦ 1 ironhail skytalon array ◦ 1 orbital comms array ◦ 1 shield dome",
+        "This model’s 2 storm bolters can be replaced with 2 fragstorm grenade launchers.",
+        "This model can be equipped with one of the following: ◦ 1 ironhail heavy stubber ◦ 1 multi-melta"
+      ]
+    },
+    {
+      "abilities": {
+        "core": ["Feel No Pain 5+", "Leader"],
         "damaged": {
           "description": "",
           "range": ""
@@ -1603,818 +2570,67 @@
         },
         "other": [
           {
-            "description": "Once per battle round, one unit from your army with this ability can be targeted with a Stratagem for 0CP, even if another unit from your army has already been targeted with that Stratagem this phase.",
-            "name": "Rites of Battle"
+            "name": "Litanies of the Devout",
+            "description": "While Chaplain Grimaldus is leading a unit, each time a model in that unit makes a melee attack, you can re-roll the Hit roll."
           },
           {
-            "description": "Once per battle, at the start of the Fight phase, this model can use this ability. If it does, until the end of the phase, add 3 to the Attacks characteristic of melee weapons equipped by this model and those weapons have the [DEVASTATING WOUNDS] ability.",
-            "name": "Finest Hour"
+            "name": "Relics of the Emperor Ascendant",
+            "description": "In your Command phase, if this unit contains one or more Cenobyte Servitor models, select one Relics of the Emperor Ascendant ability (see Relics of the Emperor Ascendant section). Until the start of your next Command phase, this unit’s Chaplain Grimaldus model has that ability."
           }
         ],
-        "primarch": [],
+        "primarch": [
+          {
+            "name": "Relics of the Emperor Ascendant",
+            "abilities": [
+              {
+                "name": "Banner of Fallen Crusaders",
+                "description": "This unit is eligible to declare a charge in a turn in which it Advanced or Fell Back."
+              },
+              {
+                "name": "Remnant of the Fallen Temple",
+                "description": "Models in this unit have the Feel No Pain 5+ ability."
+              },
+              {
+                "name": "Sceptre of Anointing",
+                "description": "Improve the Armour Penetration characteristic of melee weapons equipped by models in this unit by 1."
+              }
+            ]
+          }
+        ],
         "special": [],
         "wargear": []
       },
 
-      "composition": ["1 Marshal"],
-      "faction_id": "CHBT",
+      "composition": [
+        "1 Chaplain Grimaldus – Epic Hero",
+        "3 Cenobyte Servitors"
+      ],
       "factions": ["Black Templars"],
-      "fluff": "Each Black Templars crusade is led by a Marshal. Similar in rank to the Captains of other Chapters, Marshals are fearsome combatants and paragons of strategic acumen. Ensuring a crusade’s purity and success is a sacred duty, and Marshals fight with sanctified relic weapons while acting as beacons of pious fervour for their warriors.",
-      "id": "9892bec6-67ae-5ad3-b020-86a6f127fce7",
+      "faction_id": "CHBT",
+      "fluff": "High Chaplain Grimaldus is a beacon of Imperial faith. His fortitude is such that many of his brothers believe him invincible. His will is singular, his zeal coldly furious, and his martial skill attested by the trail of broken foes laid at his heels. His Cenobyte Servitors lurch to war at his side, bearing with them holy relics of the faith.",
+      "id": "68bd0bd6-bbf1-5464-a004-0074c02e764a",
       "keywords": [
-        "Captain",
+        "Infantry",
+        "Imperium",
+        "Tacticus",
         "Character",
+        "Epic Hero",
         "Grenades",
-        "Imperium",
-        "Infantry",
-        "Marshal",
-        "Tacticus"
+        "Chaplain Grimaldus"
       ],
-      "leader": "This model can be attached to the following units: ■ Assault Intercessor Squad ■ Infernus Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren ■ Sternguard Veteran Squad",
-      "leads": {
-        "extra": "",
-        "units": [
-          "Assault Intercessor Squad",
-          "Infernus Squad",
-          "Intercessor Squad",
-          "Primaris Crusader Squad",
-          "Primaris Sword Brethren",
-          "Sternguard Veteran Squad"
-        ]
-      },
-      "loadout": "This model is equipped with: plasma pistol; master-crafted power weapon.",
+      "leader": "This unit can be attached to the following units: ■ Assault Intercessor Squad ■ Infernus Squad ■ Intercessor Squad ■ Primaris Crusader Squad ■ Primaris Sword Brethren",
+      "loadout": "Chaplain Grimaldus is equipped with: plasma pistol; artificer crozius.\nEvery Cenobyte Servitor is equipped with: close combat weapon.",
       "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "6",
-              "damage": "2",
-              "keywords": [],
-              "name": "Master-crafted power weapon",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Marshal",
-      "points": [
-        {
-          "cost": "80",
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Plasma pistol – Standard",
-              "range": "12\"",
-              "skill": "2+",
-              "strength": "7"
-            },
-            {
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Hazardous", "Pistol"],
-              "name": "Plasma pistol – Supercharge",
-              "range": "12\"",
-              "skill": "2+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Anti-infantry 4+",
-                "Devastating Wounds",
-                "Rapid Fire 1"
-              ],
-              "name": "Combi-weapon",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "ld": "6+",
-          "m": "6\"",
-          "name": "Marshal",
-          "oc": "1",
-
-          "sv": "3+",
-          "t": "4",
-          "w": "5"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "This model’s plasma pistol can be replaced with one combi-weapon."
-      ]
-    },
-    {
-      "abilities": {
-        "core": ["Scouts 6\""],
-        "damaged": {
-          "description": "",
-          "range": ""
-        },
-        "faction": ["Oath of Moment"],
-        "invul": {
-          "info": "",
-
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "You can re-roll Advance and Charge rolls made for this unit.",
-            "name": "Righteous Zeal"
-          }
-        ],
-        "primarch": [],
-        "special": [
-          {
-            "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
-            "name": "Attached Unit"
-          }
-        ],
-        "wargear": []
-      },
-
-      "composition": [
-        "1 Primaris Sword Brother",
-        "4-8 Primaris Neophytes",
-        "5-11 Primaris Initiates"
-      ],
-      "faction_id": "CHBT",
-      "factions": ["Black Templars"],
-      "fluff": "Infused with the posthuman might of the Primaris miracle, these Crusader Squads storm into battle with bolt rifles blazing and Astartes chainswords howling. Initiates aim jets of fire from their pyreblasters or swing crackling power fists into their foes, while hard-eyed Neophytes fight furiously to prove their martial worth.",
-      "id": "98766136-bd99-5bf9-85e2-cfa97cfc2030",
-      "keywords": [
-        "Battleline",
-        "Grenades",
-        "Imperium",
-        "Infantry",
-        "Primaris Crusader Squad",
-        "Tacticus"
-      ],
-      "leadBy": [
-        "Castellan",
-        "Chaplain Grimaldus",
-        "High Marshal Helbrecht",
-        "Marshal",
-        "The Emperor’s Champion"
-      ],
-      "leader": "",
-      "loadout": "The Primaris Sword Brother is equipped with: heavy bolt pistol; power weapon.",
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "5",
-              "damage": "1",
-              "keywords": [],
-              "name": "Astartes chainsword",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Power weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": [],
-              "name": "Power fist",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "name": "Primaris Crusader Squad",
-      "points": [
-        {
-          "cost": "140",
-          "models": "10"
-        },
-        {
-          "cost": "280",
-          "models": "20"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Heavy bolt pistol",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": ["Assault", "Heavy"],
-              "name": "Bolt rifle",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Bolt pistol",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": ["Assault"],
-              "name": "Neophyte firearm",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Ignores Cover", "Pistol", "Torrent"],
-              "name": "Pyre pistol",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Ignores Cover", "Torrent"],
-              "name": "Pyreblaster",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "ld": "6+",
-          "m": "6\"",
-          "name": "Primaris Initiate",
-          "oc": "2",
-
-          "sv": "3+",
-          "t": "4",
-          "w": "2"
-        },
-        {
-          "ld": "6+",
-          "m": "6\"",
-          "name": "Primaris Neophyte",
-          "oc": "2",
-
-          "sv": "4+",
-          "t": "4",
-          "w": "2"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "Any number of Primaris Initiates can each have their bolt rifle replaced with 1 heavy bolt pistol and 1 Astartes chainsword.",
-        "Any number of Primaris Neophytes can each have their bolt pistol and Astartes chainsword replaced with 1 Neophyte firearm and 1 close combat weapon.",
-        "For every 10 models in this unit, up to 2 Primaris Initiates can each have their bolt rifle replaced with one of the following: ◦ 1 heavy bolt pistol and 1 power fist ◦ 1 pyreblaster",
-        "The Primaris Sword Brother’s heavy bolt pistol can be replaced with 1 pyre pistol."
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": ""
-        },
-        "faction": ["Oath of Moment"],
-        "invul": {
-          "info": "",
-
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "At the start of the Fight phase, you can select one of the following effects to apply to melee weapons equipped by models in this unit until the end of the phase: \n\n■ Add 1 to the Attacks characteristic of those weapons. \n■ Add 1 to the Damage characteristic of those weapons.",
-            "name": "Vow-sworn Bladesmen"
-          }
-        ],
-        "primarch": [],
-        "special": [
-          {
-            "description": "If a Character from your army with the Leader ability can be attached to an Intercessor Squad, it can be attached to this unit instead.",
-            "name": "Attached Unit"
-          }
-        ],
-        "wargear": []
-      },
-
-      "composition": [
-        "1 Sword Brother Castellan",
-        "4-9 Primaris Sword Brothers"
-      ],
-      "faction_id": "CHBT",
-      "factions": ["Black Templars"],
-      "fluff": "Every Sword Brother has earned their place amongst the Marshal’s household through acts of unswerving faith and spectacular violence. On the battlefield they are a reaping whirlwind, unstoppable, uncompromising and armed with a lethal assortment of weapons that they turn upon the enemy in the Emperor’s name.",
-      "id": "3b3a03d0-07a9-5946-b97d-414f13fa9207",
-      "keywords": [
-        "Grenades",
-        "Imperium",
-        "Infantry",
-        "Primaris Sword Brethren",
-        "Tacticus"
-      ],
-      "leadBy": [
-        "Castellan",
-        "Chaplain Grimaldus",
-        "High Marshal Helbrecht",
-        "Marshal",
-        "The Emperor’s Champion"
-      ],
-      "leader": "",
-      "loadout": "Every model is equipped with: heavy bolt pistol; Astartes chainsword.",
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "5",
-              "damage": "1",
-              "keywords": [],
-              "name": "Astartes chainsword",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": ["Devastating Wounds"],
-              "name": "Thunder hammer",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": [],
-              "name": "Power weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "4",
-              "damage": "2",
-              "keywords": [],
-              "name": "Master-crafted power weapon",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "5"
-            }
-          ]
-        },
         {
           "profiles": [
             {
               "ap": "-2",
               "attacks": "5",
-              "damage": "1",
-              "keywords": ["Twin-linked"],
-              "name": "Twin lightning claws",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Primaris Sword Brethren",
-      "points": [
-        {
-          "cost": "150",
-          "models": "5"
-        },
-        {
-          "cost": "300",
-          "models": "10"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Heavy bolt pistol",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Plasma pistol – Standard",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "7"
-            },
-            {
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Hazardous", "Pistol"],
-              "name": "Plasma pistol – Supercharge",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Anti-infantry 4+",
-                "Devastating Wounds",
-                "Rapid Fire 1"
-              ],
-              "name": "Combi-weapon",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Ignores Cover", "Pistol", "Torrent"],
-              "name": "Pyre pistol",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "ld": "6+",
-          "m": "6\"",
-          "name": "Primaris Sword Brother",
-          "oc": "1",
-
-          "sv": "3+",
-          "t": "4",
-          "w": "3"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "Any number of Primaris Sword Brothers can each have their Astartes chainsword replaced with 1 power weapon.",
-        "For every 5 models in this unit, 1 Primaris Sword Brother’s Astartes chainsword can be replaced with 1 thunder hammer.",
-        "For every 5 models in this unit, 1 Primaris Sword Brother’s heavy bolt pistol and Astartes chainsword can be replaced with 1 twin lightning claws.",
-        "For every 5 models in this unit, 1 Primaris Sword Brother’s heavy bolt pistol can be replaced with 1 plasma pistol.",
-        "For every 5 models in this unit, up to 2 Primaris Sword Brothers can each have their heavy bolt pistol replaced with 1 pyre pistol.",
-        "The Sword Brother Castellan’s heavy bolt pistol and Astartes chainsword can be replaced with one of the following: ◦ 1 combi-weapon and 1 Astartes chainsword. ◦ 1 combi-weapon and 1 master-crafted power weapon. ◦ 1 heavy bolt pistol and 1 master-crafted power weapon."
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": ""
-        },
-        "faction": ["Oath of Moment"],
-        "invul": {
-          "info": "",
-
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "You can re-roll Advance and Charge rolls made for this unit.",
-            "name": "Righteous Zeal"
-          }
-        ],
-        "primarch": [],
-        "special": [
-          {
-            "description": "If a Character from your army with the Leader ability can be attached to a Tactical Squad, it can be attached to this unit instead.",
-            "name": "Attached Unit"
-          }
-        ],
-        "wargear": []
-      },
-
-      "composition": ["0-10 Neophytes", "1 Sword Brother", "4-9 Initiates"],
-      "faction_id": "CHBT",
-      "factions": ["Black Templars"],
-      "fluff": "Mingling Initiates and their Neophyte charges, led by a battle-tempered Sword Brother, Crusader Squads combine maniacal zeal with the posthuman might of the Adeptus Astartes. Often equipped for the close-quarters fighting style favoured by the Black Templars, they carry their crusade into the heart of enemy lines.",
-      "id": "e7576cd7-d91f-5864-bc14-9b38345b9417",
-      "keywords": [
-        "Battleline",
-        "Crusader Squad",
-        "Grenades",
-        "Imperium",
-        "Infantry"
-      ],
-      "leader": "",
-      "loadout": "Every model is equipped with: boltgun; bolt pistol; close combat weapon.",
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Astartes chainsword",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": ["Devastating Wounds"],
-              "name": "Thunder hammer",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "2",
               "damage": "2",
               "keywords": [],
-              "name": "Power fist",
+              "name": "Artificer crozius",
               "range": "Melee",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Twin-linked"],
-              "name": "Twin lightning claws",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Power weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Combat knife",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "name": "Crusader Squad",
-      "points": [
-        {
-          "cost": "135",
-          "models": "10"
-        },
-        {
-          "cost": "150",
-          "models": "10"
-        },
-        {
-          "cost": "270",
-          "models": "20"
-        },
-        {
-          "cost": "85",
-          "models": "5"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Anti-vehicle 2+", "Pistol"],
-              "name": "Grav-pistol",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": ["Anti-vehicle 2+"],
-              "name": "Grav-gun",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": ["Heavy", "Sustained Hits 1"],
-              "name": "Heavy bolter",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "3",
-              "keywords": ["Anti-vehicle 2+", "Heavy"],
-              "name": "Grav-cannon",
-              "range": "24\"",
-              "skill": "4+",
+              "skill": "2+",
               "strength": "6"
             }
           ]
@@ -2422,17 +2638,26 @@
         {
           "profiles": [
             {
-              "ap": "-1",
-              "attacks": "D6",
+              "ap": "0",
+              "attacks": "1",
               "damage": "1",
-              "keywords": ["Ignores Cover", "Torrent"],
-              "name": "Heavy flamer",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "5"
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "3"
             }
           ]
-        },
+        }
+      ],
+      "name": "Chaplain Grimaldus",
+      "points": [
+        {
+          "cost": "120",
+          "models": "4"
+        }
+      ],
+      "rangedWeapons": [
         {
           "profiles": [
             {
@@ -2442,248 +2667,18 @@
               "keywords": ["Pistol"],
               "name": "Plasma pistol – Standard",
               "range": "12\"",
-              "skill": "3+",
+              "skill": "2+",
               "strength": "7"
             },
             {
               "ap": "-3",
               "attacks": "1",
               "damage": "2",
-              "keywords": ["Hazardous", "Pistol"],
+              "keywords": ["Pistol", "Hazardous"],
               "name": "Plasma pistol – Supercharge",
               "range": "12\"",
-              "skill": "3+",
+              "skill": "2+",
               "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Rapid Fire 1"],
-              "name": "Plasma gun – Standard",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "7"
-            },
-            {
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Hazardous", "Rapid Fire 1"],
-              "name": "Plasma gun – Supercharge",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "D6",
-              "keywords": ["Heavy"],
-              "name": "Missile launcher – Krak",
-              "range": "48\"",
-              "skill": "4+",
-              "strength": "9"
-            },
-            {
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Blast", "Heavy"],
-              "name": "Missile launcher – Frag",
-              "range": "48\"",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "D3",
-              "damage": "1",
-              "keywords": ["Blast", "Heavy"],
-              "name": "Plasma cannon – Standard",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "7"
-            },
-            {
-              "ap": "-3",
-              "attacks": "D3",
-              "damage": "2",
-              "keywords": ["Blast", "Hazardous", "Heavy"],
-              "name": "Plasma cannon – Supercharge",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "D6+1",
-              "keywords": ["Heavy"],
-              "name": "Lascannon",
-              "range": "48\"",
-              "skill": "4+",
-              "strength": "12"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-4",
-              "attacks": "1",
-              "damage": "D3",
-              "keywords": ["Melta 2", "Pistol"],
-              "name": "Inferno pistol",
-              "range": "6\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-4",
-              "attacks": "1",
-              "damage": "D6",
-              "keywords": ["Melta 2"],
-              "name": "Meltagun",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "-4",
-              "attacks": "2",
-              "damage": "D6",
-              "keywords": ["Heavy", "Melta 2"],
-              "name": "Multi-melta",
-              "range": "18\"",
-              "skill": "4+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Anti-infantry 4+",
-                "Devastating Wounds",
-                "Rapid Fire 1"
-              ],
-              "name": "Combi-weapon",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [],
-              "name": "Bolt Pistol",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": ["Assault"],
-              "name": "Astartes shotgun",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": ["Rapid Fire 2"],
-              "name": "Storm bolter",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [],
-              "name": "Boltgun",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Ignores Cover", "Pistol", "Torrent"],
-              "name": "Hand flamer",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "3"
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Ignores Cover", "Torrent"],
-              "name": "Flamer",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "4"
             }
           ]
         }
@@ -2691,77 +2686,81 @@
       "source": "40k-10e",
       "stats": [
         {
-          "ld": "6+",
+          "ld": "5+",
           "m": "6\"",
-          "name": "Initiate",
-          "oc": "2",
+          "name": "Chaplain Grimaldus",
+          "oc": "1",
 
           "sv": "3+",
           "t": "4",
-          "w": "2"
+          "w": "4"
         },
         {
-          "ld": "6+",
+          "ld": "8+",
           "m": "6\"",
-          "name": "Neophyte",
-          "oc": "2",
+          "name": "Cenobyte Servitor",
+          "oc": "1",
 
-          "sv": "4+",
+          "sv": "3+",
           "t": "4",
-          "w": "2"
+          "w": "1"
         }
       ],
       "transport": "",
-      "wargear": [
-        "1 Initiate’s boltgun can be replaced with one of the following: ◦ 1 flamer ◦ 1 plasma gun ◦ 1 meltagun ◦ 1 grav-gun",
-        "1 Initiate’s boltgun can be replaced with one of the following: ◦ 1 power weapon ◦ 1 power fist ◦ 1 heavy bolter ◦ 1 heavy flamer ◦ 1 grav-cannon ◦ 1 lascannon ◦ 1 missile launcher ◦ 1 multi-melta ◦ 1 plasma cannon",
-        "Any number of Initiates can each have their boltgun replaced with 1 Astartes chainsword.",
-        "Any number of Neophytes can each have their boltgun replaced with one of the following: ◦ 1 Astartes shotgun ◦ 1 combat knife",
-        "The Sword Brother’s bolt pistol and boltgun can be replaced with 1 twin lightning claws or two different weapons from the following list:** ◦ 1 Astartes chainsword ◦ 1 bolt pistol ◦ 1 boltgun ◦ 1 combi-weapon ◦ 1 grav-pistol ◦ 1 hand flamer ◦ 1 inferno pistol ◦ 1 plasma pistol ◦ 1 power fist ◦ 1 power weapon ◦ 1 storm bolter ◦ 1 thunder hammer  ** This model can only be equipped with two ranged weapons if one of them is a Pistol (and it can only have one Pistol)."
-      ]
+      "wargear": ["None"],
+      "leads": {
+        "units": [
+          "Assault Intercessor Squad",
+          "Infernus Squad",
+          "Intercessor Squad",
+          "Primaris Crusader Squad",
+          "Primaris Sword Brethren"
+        ],
+        "extra": ""
+      }
     }
   ],
   "detachments": ["Righteous Crusaders"],
   "enhancements": [
     {
-      "cost": "10",
-      "description": "Adeptus Astartes model only.\n\n■ The bearer’s ranged weapons have the [PRECISION], [ANTI-PSYKER 4+] and [DEVASTATING WOUNDS] abilities.\n■ If the Abhor the Witch, Destroy the Witch vow is active for your army, each time the bearer makes a ranged attack that targets a Psyker unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
-      "detachment": "Righteous Crusaders",
-      "excludes": [],
-      "faction_id": "CHBT",
-      "id": "4548c56f-3d6b-591f-a5f5-64acd2ce85fb",
-      "keywords": ["Black Templars"],
-      "name": "Witchseeker Bolts"
-    },
-    {
-      "cost": "15",
-      "description": "Adeptus Astartes model only. \n\n■ Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. \n■ If the Suffer Not the Unclean to Live vow is active for your army, add 1 to the Attacks characteristic of the bearer’s melee weapons as well. ",
-      "detachment": "Righteous Crusaders",
-      "excludes": [],
-      "faction_id": "CHBT",
+      "name": "Perdition’s Edge",
       "id": "1bc2b959-8f44-5b82-b577-9803bcf6b35d",
+      "cost": "15",
       "keywords": ["Black Templars"],
-      "name": "Perdition’s Edge"
+      "excludes": [],
+      "description": "Adeptus Astartes model only. \n\n■ Improve the Strength and Armour Penetration characteristics of the bearer’s melee weapons by 1. \n■ If the Suffer Not the Unclean to Live vow is active for your army, add 1 to the Attacks characteristic of the bearer’s melee weapons as well. ",
+      "faction_id": "CHBT",
+      "detachment": "Righteous Crusaders"
     },
     {
-      "cost": "20",
-      "description": "Adeptus Astartes model only.\n\n■ Improve the Attacks characteristic of the bearer’s melee weapons by 1.\n■ While the bearer is leading a unit, if the Accept Any Challenge, No Matter the Odds vow is active for your army, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
-      "detachment": "Righteous Crusaders",
+      "name": "Witchseeker Bolts",
+      "id": "4548c56f-3d6b-591f-a5f5-64acd2ce85fb",
+      "cost": "10",
+      "keywords": ["Black Templars"],
       "excludes": [],
+      "description": "Adeptus Astartes model only.\n\n■ The bearer’s ranged weapons have the [PRECISION], [ANTI-PSYKER 4+] and [DEVASTATING WOUNDS] abilities.\n■ If the Abhor the Witch, Destroy the Witch vow is active for your army, each time the bearer makes a ranged attack that targets a Psyker unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
       "faction_id": "CHBT",
+      "detachment": "Righteous Crusaders"
+    },
+    {
+      "name": "Sigismund’s Seal",
       "id": "8b040e5b-02ea-5f2e-ad01-8d8906e562ce",
+      "cost": "20",
       "keywords": ["Black Templars"],
-      "name": "Sigismund’s Seal"
+      "excludes": [],
+      "description": "Adeptus Astartes model only.\n\n■ Improve the Attacks characteristic of the bearer’s melee weapons by 1.\n■ While the bearer is leading a unit, if the Accept Any Challenge, No Matter the Odds vow is active for your army, each time a model in that unit makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.",
+      "faction_id": "CHBT",
+      "detachment": "Righteous Crusaders"
     },
     {
-      "cost": "35",
-      "description": "Adeptus Astartes model only.\n\n■ Each time an attack is allocated to the bearer, halve the Damage characteristic of that attack.\n■ While the bearer is leading a unit, if the Uphold the Honour of the Emperor vow is active for your army, models in that unit have the Feel No Pain 5+ ability.",
-      "detachment": "Righteous Crusaders",
-      "excludes": [],
-      "faction_id": "CHBT",
+      "name": "Tännhauser’s Bones",
       "id": "ea2cfcb6-196f-5daa-9f05-819fe69780c7",
+      "cost": "35",
       "keywords": ["Black Templars"],
-      "name": "Tännhauser’s Bones"
+      "excludes": [],
+      "description": "Adeptus Astartes model only.\n\n■ Each time an attack is allocated to the bearer, halve the Damage characteristic of that attack.\n■ While the bearer is leading a unit, if the Uphold the Honour of the Emperor vow is active for your army, models in that unit have the Feel No Pain 5+ ability.",
+      "faction_id": "CHBT",
+      "detachment": "Righteous Crusaders"
     }
   ],
   "id": "CHBT",
@@ -2772,94 +2771,94 @@
   "parent_keyword": "Adeptus Astartes",
   "stratagems": [
     {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
       "cost": 1,
-      "detachment": "Righteous Crusaders",
-      "effect": "Roll one D6, adding 1 to the result if the Accept Any Challenge, No Matter the Odds vow is active for your army. On a 4+, that enemy unit cannot Fall Back this phase and must Remain Stationary. Otherwise, that enemy unit can Fall Back this phase, but if it does, all models in that unit must take a Desperate Escape test.",
-      "faction_id": "CHBT",
-      "fluff": "Glowing blades and revving chainswords close off the foe’s every avenue of escape.",
-      "id": "136eeb2e-1cb6-50b3-a008-a0edc5f79bb6",
-      "name": "No Escape",
-      "phase": ["movement"],
-      "restrictions": "",
-      "target": "One Adeptus Astartes unit from your army that is within Engagement Range of that enemy unit.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Your opponent’s Movement phase, when an enemy unit (excluding Vehicles and Monsters) is selected to Fall Back."
-    },
-    {
-      "cost": 1,
-      "detachment": "Righteous Crusaders",
-      "effect": "Select one Templar Vow that is not active for your army. Until the start of your next Command phase, while that Character is leading a unit, models in that unit gain the benefits of that vow in addition to the vow selected to be active for your army at the start of the battle.",
-      "faction_id": "CHBT",
-      "fluff": "The magnetic force of this Black Templar’s oratory inspires his fellow warriors to swear great vows, even in the midst of the battle.",
-      "id": "1ae3c68d-97c3-59d9-9795-b255b477c18f",
-      "name": "Fervent Acclamation",
-      "phase": ["command"],
-      "restrictions": "",
-      "target": "One Adeptus Astartes Character unit from your army.",
-      "turn": "your",
-      "type": "Epic Deed",
-      "when": "Your Command phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "Righteous Crusaders",
-      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if the Uphold the Honour of the Emperor vow is active for your army. On a 4+, do not remove the destroyed model from play; it can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
-      "faction_id": "CHBT",
-      "fluff": "Every blow struck against a Black Templar is answered in kind. Even as they are laid low, their blades still lash out at the enemies of the divine Emperor.",
-      "id": "71b2a019-8d60-58da-83e1-ecdd94134a3e",
-      "name": "Vicious Riposte",
-      "phase": ["fight"],
-      "restrictions": "",
+      "turn": "either",
       "target": "One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "either",
-      "type": "Epic Deed",
-      "when": "Fight phase, just after an enemy unit has selected its targets."
-    },
-    {
-      "cost": 1,
-      "detachment": "Righteous Crusaders",
-      "effect": "Until the end of the phase, each time a model in your unit makes a melee attack, improve the Armour Penetration characteristic of that attack by 1. If the Suffer Not The Unclean to Live vow is active for your army, add 1 to the Strength characteristic of that attack as well.",
-      "faction_id": "CHBT",
-      "fluff": "The Black Templars channel their fervour into a hate-fuelled flurry of blows.",
-      "id": "9af5e1e7-e993-5f35-ab15-4a3efcbc3b30",
-      "name": "Crusader’s Wrath",
-      "phase": ["fight"],
-      "restrictions": "",
-      "target": "One Adeptus Astartes unit from your army that has not been selected to fight this phase.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Fight phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "Righteous Crusaders",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
       "effect": "Until the end of the phase, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
       "faction_id": "CHBT",
       "fluff": "The belligerency and transhuman physiologies of the Adeptus Astartes make them unyielding foes.",
-      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
-      "name": "Armour of Contempt",
-      "phase": ["fight", "shooting"],
-      "restrictions": "",
-      "target": "One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets."
+      "detachment": "Righteous Crusaders"
     },
     {
+      "name": "Crusader’s Wrath",
+      "id": "9af5e1e7-e993-5f35-ab15-4a3efcbc3b30",
       "cost": 1,
-      "detachment": "Righteous Crusaders",
+      "turn": "either",
+      "target": "One Adeptus Astartes unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a melee attack, improve the Armour Penetration characteristic of that attack by 1. If the Suffer Not The Unclean to Live vow is active for your army, add 1 to the Strength characteristic of that attack as well.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "CHBT",
+      "fluff": "The Black Templars channel their fervour into a hate-fuelled flurry of blows.",
+      "detachment": "Righteous Crusaders"
+    },
+    {
+      "name": "Vicious Riposte",
+      "id": "71b2a019-8d60-58da-83e1-ecdd94134a3e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Adeptus Astartes unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if the Uphold the Honour of the Emperor vow is active for your army. On a 4+, do not remove the destroyed model from play; it can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["fight"],
+      "faction_id": "CHBT",
+      "fluff": "Every blow struck against a Black Templar is answered in kind. Even as they are laid low, their blades still lash out at the enemies of the divine Emperor.",
+      "detachment": "Righteous Crusaders"
+    },
+    {
+      "name": "Fervent Acclamation",
+      "id": "1ae3c68d-97c3-59d9-9795-b255b477c18f",
+      "cost": 1,
+      "turn": "your",
+      "target": "One Adeptus Astartes Character unit from your army.",
+      "when": "Your Command phase.",
+      "effect": "Select one Templar Vow that is not active for your army. Until the start of your next Command phase, while that Character is leading a unit, models in that unit gain the benefits of that vow in addition to the vow selected to be active for your army at the start of the battle.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["command"],
+      "faction_id": "CHBT",
+      "fluff": "The magnetic force of this Black Templar’s oratory inspires his fellow warriors to swear great vows, even in the midst of the battle.",
+      "detachment": "Righteous Crusaders"
+    },
+    {
+      "name": "No Escape",
+      "id": "136eeb2e-1cb6-50b3-a008-a0edc5f79bb6",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Adeptus Astartes unit from your army that is within Engagement Range of that enemy unit.",
+      "when": "Your opponent’s Movement phase, when an enemy unit (excluding Vehicles and Monsters) is selected to Fall Back.",
+      "effect": "Roll one D6, adding 1 to the result if the Accept Any Challenge, No Matter the Odds vow is active for your army. On a 4+, that enemy unit cannot Fall Back this phase and must Remain Stationary. Otherwise, that enemy unit can Fall Back this phase, but if it does, all models in that unit must take a Desperate Escape test.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "CHBT",
+      "fluff": "Glowing blades and revving chainswords close off the foe’s every avenue of escape.",
+      "detachment": "Righteous Crusaders"
+    },
+    {
+      "name": "Devout Push",
+      "id": "b354885b-c24a-5549-96af-7aa8ed409716",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Adeptus Astartes unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
       "effect": "Your unit can make a Normal move of up to D6\", but it must end that move closer to the enemy unit that just shot. If the Abhor the Witch, Destroy the Witch vow is active for your army, your unit can make a Normal move of up to 6\" instead, but it must end that move either closer to the enemy unit that just shot, or closer to the closest enemy Psyker unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
       "faction_id": "CHBT",
       "fluff": "With a zealous cry, the Black Templars press forward towards victory.",
-      "id": "b354885b-c24a-5549-96af-7aa8ed409716",
-      "name": "Devout Push",
-      "phase": ["shooting"],
-      "restrictions": "",
-      "target": "One Adeptus Astartes unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot."
+      "detachment": "Righteous Crusaders"
     }
   ]
 }

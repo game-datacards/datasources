@@ -1,139 +1,59 @@
 {
+  "stratagems": [
+    {
+      "name": "Get Stuck In",
+      "id": "9697d75f-ecd0-5cb7-b6e6-cc64a2385a62",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Orks unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "fluff": "Orks hurl themselves into close-quarters combat with unalloyed eagerness bordering on delight.",
+      "detachment": ""
+    },
+    {
+      "name": "Brutal But Kunnin’",
+      "id": "4f02b2d6-abe5-5d7c-b48b-071811c2ccd4",
+      "cost": 1,
+      "turn": "your",
+      "target": "One Orks Infantry unit from your army.",
+      "when": "Your Charge phase.",
+      "effect": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "fluff": "Subtle, Orks are not, but their seemingly random outbursts of violence and healthy dose of feral cunning make them unpredictable – and thus even more dangerous – foes.",
+      "detachment": ""
+    },
+    {
+      "name": "Krump Da Gitz!",
+      "id": "896f75b4-ad60-5a3f-b015-8950683d412a",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Orks unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has finished making its attacks.",
+      "effect": "Your unit can make a Normal move of up to D6\", but must end that move as close as possible to that enemy unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "fluff": "While Orks delight in the deafening din and ferocious recoil of a good firefight, they take a dim view of the foe shooting them before they can get stuck into a proper hand-to-hand brawl. Such unsporting behaviour is likely to provoke a swift and violent response.",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
-        "core": [
-          "Deadly Demise 1"
-        ],
+        "core": ["Deep Strike"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Waaagh!"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "6+"
-        },
-        "other": [
-          {
-            "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.",
-            "name": "Piston-driven Brutality",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Deff Dread (1 model)"
-      ],
-      "factions": [
-        "Orks"
-      ],
-      "fluff": "Being wired into a Deff Dread affords strength, resilience and a terrifying array of vicious weaponry. Of course, the reality of being stuck in a metal box for life and drinking your meals through a straw soon gets old, but the pilots’ resulting unhinged ferocity only serves to make Deff Dreads all the more dangerous in battle.",
-      "id": "a7a7a663-bd7e-55fc-b41c-6402d2745af4",
-      "keywords": [
-        "Deff Dread",
-        "Vehicle",
-        "Walker"
-      ],
-      "leader": "",
-      "loadout": "■ This model is equipped with: rokkit launcha; 3 dread klaws.",
-      "meleeWeapons": [
-        {
-          "abilities": [
-            {
-              "description": "The Attacks characteristic of this weapon is increased by 1 for each additional dread klaw this model is equipped with.",
-              "name": "Dead Choppy",
-              "showAbility": true,
-              "showDescription": true
-            }
-          ],
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "4",
-              "damage": "3",
-              "keywords": [
-                "Dead Choppy"
-              ],
-              "name": "Dread klaw",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "10"
-            }
-          ]
-        }
-      ],
-      "name": "Deff Dread",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "D3",
-              "damage": "3",
-              "keywords": [
-                "Blast"
-              ],
-              "name": "Rokkit launcha",
-              "range": "24\"",
-              "skill": "5+",
-              "strength": "9"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "8\"",
-          "name": "Deff Dread",
-          "oc": "3",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "2+",
-          "t": "9",
-          "w": "8"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [
-          "Deep Strike"
-        ],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "Waaagh!"
-        ],
+        "faction": ["Waaagh!"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -147,20 +67,12 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Deffkoptas (3 models)"
-      ],
-      "factions": [
-        "Orks"
-      ],
+      "composition": ["Deffkoptas (3 models)"],
+      "factions": ["Orks"],
       "fluff": "Most Orks take a dim view of muckin’ about in the sky, and would much rather go to war with their feet firmly on the ground. Deffkopta pilots are the lunatic exception, hurtling ahead to spy out enemy forces for their warband to bring to battle, and to give those same enemies a good strafing run or three in the meantime.",
       "id": "99d257a5-ca17-5cdf-96a1-7473031a1259",
-      "keywords": [
-        "Deffkoptas",
-        "Fly",
-        "Vehicle"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Vehicle", "Fly", "Deffkoptas"],
       "leader": "",
       "loadout": "■ 1 model is equipped with: kustom mega-blasta; slugga; spinnin’ blades.\n■ 2 models are equipped with: kopta rokkits; slugga; spinnin’ blades.",
       "meleeWeapons": [
@@ -192,9 +104,7 @@
               "ap": "-2",
               "attacks": "3",
               "damage": "D6",
-              "keywords": [
-                "Hazardous"
-              ],
+              "keywords": ["Hazardous"],
               "name": "Kustom mega-blasta",
               "range": "24\"",
               "skill": "5+",
@@ -210,10 +120,7 @@
               "ap": "-2",
               "attacks": "D3",
               "damage": "3",
-              "keywords": [
-                "Blast",
-                "Twin-linked"
-              ],
+              "keywords": ["Twin-linked", "Blast"],
               "name": "Kopta rokkits",
               "range": "24\"",
               "skill": "5+",
@@ -229,9 +136,7 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Slugga",
               "range": "12\"",
               "skill": "5+",
@@ -256,9 +161,7 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -269,9 +172,7 @@
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Waaagh!"
-        ],
+        "faction": ["Waaagh!"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -285,40 +186,15 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Boyz (10 models)"
-      ],
-      "factions": [
-        "Orks"
-      ],
+      "composition": ["Boyz (10 models)"],
+      "factions": ["Orks"],
       "fluff": "Ork Boyz surge into battle in huge, unruly mobs dotted with crude special weapons and led by foul-tempered Boss Nobz. Most simply stampede towards the enemy lines, relying on their numbers and natural hardiness to carry the charge home, while others hitch a ride on Trukks and Battlewagons so as to get stuck in all the faster.",
       "id": "126f5eb6-5c28-57fb-a570-21a60a3d85f0",
-      "keywords": [
-        "Battleline",
-        "Boyz",
-        "Infantry",
-        "Mob"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Battleline", "Mob", "Boyz"],
       "leader": "",
       "loadout": "■ 1 Boss Nob is equipped with: slugga; big choppa.\n■ 5 Boyz are equipped with: slugga; choppa.\n■ 3 Boyz are equipped with: shoota; close combat weapon.\n■ 1 Boy is equipped with: big shoota; close combat weapon.",
       "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Choppa",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
         {
           "active": true,
           "profiles": [
@@ -350,141 +226,7 @@
               "strength": "4"
             }
           ]
-        }
-      ],
-      "name": "Boyz",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Slugga",
-              "range": "12\"",
-              "skill": "5+",
-              "strength": "4"
-            }
-          ]
         },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
-              "name": "Shoota",
-              "range": "18\"",
-              "skill": "5+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 2"
-              ],
-              "name": "Big shoota",
-              "range": "36\"",
-              "skill": "5+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "6\"",
-          "name": "Boss Nob",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "5+",
-          "t": "5",
-          "w": "2"
-        },
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "6\"",
-          "name": "Boy",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "5+",
-          "t": "5",
-          "w": "1"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "Waaagh!"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Boyz (10 models)"
-      ],
-      "factions": [
-        "Orks"
-      ],
-      "fluff": "Ork Boyz surge into battle in huge, unruly mobs dotted with crude special weapons and led by foul-tempered Boss Nobz. Most simply stampede towards the enemy lines, relying on their numbers and natural hardiness to carry the charge home, while others hitch a ride on Trukks and Battlewagons so as to get stuck in all the faster.",
-      "id": "126f5eb6-5c28-57fb-a570-21a60a3d85f0",
-      "keywords": [
-        "Battleline",
-        "Boyz",
-        "Infantry",
-        "Mob"
-      ],
-      "leader": "",
-      "loadout": "■ 1 Boss Nob is equipped with: slugga; power klaw.\n■ 5 Boyz are equipped with: slugga; choppa.\n■ 3 Boyz are equipped with: shoota; close combat weapon.\n■ 1 Boy is equipped with: rokkit launcha; close combat weapon.",
-      "meleeWeapons": [
         {
           "active": true,
           "profiles": [
@@ -500,38 +242,6 @@
               "strength": "4"
             }
           ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": [],
-              "name": "Power klaw",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
         }
       ],
       "name": "Boyz",
@@ -542,30 +252,10 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-2",
-              "attacks": "D3",
-              "damage": "3",
-              "keywords": [
-                "Blast"
-              ],
-              "name": "Rokkit launcha",
-              "range": "24\"",
-              "skill": "5+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Slugga",
               "range": "12\"",
               "skill": "5+",
@@ -579,11 +269,25 @@
             {
               "active": true,
               "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Rapid Fire 2"],
+              "name": "Big shoota",
+              "range": "36\"",
+              "skill": "5+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
               "attacks": "2",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
+              "keywords": ["Rapid Fire 1"],
               "name": "Shoota",
               "range": "18\"",
               "skill": "5+",
@@ -620,9 +324,109 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Deadly Demise 1"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Waaagh!"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "6+"
+        },
+        "other": [
+          {
+            "name": "Piston-driven Brutality",
+            "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Deff Dread (1 model)"],
+      "factions": ["Orks"],
+      "fluff": "Being wired into a Deff Dread affords strength, resilience and a terrifying array of vicious weaponry. Of course, the reality of being stuck in a metal box for life and drinking your meals through a straw soon gets old, but the pilots’ resulting unhinged ferocity only serves to make Deff Dreads all the more dangerous in battle.",
+      "id": "a7a7a663-bd7e-55fc-b41c-6402d2745af4",
+      "combatPatrol": true,
+      "keywords": ["Vehicle", "Walker", "Deff Dread"],
+      "leader": "",
+      "loadout": "■ This model is equipped with: rokkit launcha; 3 dread klaws.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "3",
+              "keywords": ["Dead Choppy"],
+              "name": "Dread klaw",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "10"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "Dead Choppy",
+              "description": "The Attacks characteristic of this weapon is increased by 1 for each additional dread klaw this model is equipped with.",
+              "showAbility": true,
+              "showDescription": true
+            }
+          ]
+        }
+      ],
+      "name": "Deff Dread",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "D3",
+              "damage": "3",
+              "keywords": ["Blast"],
+              "name": "Rokkit launcha",
+              "range": "24\"",
+              "skill": "5+",
+              "strength": "9"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "8\"",
+          "name": "Deff Dread",
+          "oc": "3",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "2+",
+          "t": "9",
+          "w": "8"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -633,9 +437,7 @@
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Waaagh!"
-        ],
+        "faction": ["Waaagh!"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -645,8 +447,8 @@
         },
         "other": [
           {
-            "description": "When you call a Waaagh!, until the start of the next battle round, this model has the Feel No Pain 4+ ability.",
             "name": "Dead ’ard",
+            "description": "When you call a Waaagh!, until the start of the next battle round, this model has the Feel No Pain 4+ ability.",
             "showAbility": true,
             "showDescription": true
           }
@@ -656,21 +458,12 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Warboss Gordrang (1 model)"
-      ],
-      "factions": [
-        "Orks"
-      ],
+      "composition": ["Warboss Gordrang (1 model)"],
+      "factions": ["Orks"],
       "fluff": "Any good Ork hunter knows the safest way to deal with a rampaging Warboss is to hit them with tank-busting artillery from as far away as possible. By donning a piston-driven suit of incredibly durable mega armour, Gordrang makes a mockery of such underhanded tactics, much to the terror of his foes.",
       "id": "72bfe22f-78ed-5a72-9bcd-a216fe1b79a0",
-      "keywords": [
-        "Character",
-        "Gordrang",
-        "Infantry",
-        "Warboss"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Character", "Warboss", "Gordrang"],
       "leader": "",
       "loadout": "■ This model is equipped with: big shoota; ’uge choppa.",
       "meleeWeapons": [
@@ -702,9 +495,7 @@
               "ap": "0",
               "attacks": "3",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 2"
-              ],
+              "keywords": ["Rapid Fire 2"],
               "name": "Big shoota",
               "range": "36\"",
               "skill": "4+",
@@ -729,85 +520,192 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Waaagh!"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Boyz (10 models)"],
+      "factions": ["Orks"],
+      "fluff": "Ork Boyz surge into battle in huge, unruly mobs dotted with crude special weapons and led by foul-tempered Boss Nobz. Most simply stampede towards the enemy lines, relying on their numbers and natural hardiness to carry the charge home, while others hitch a ride on Trukks and Battlewagons so as to get stuck in all the faster.",
+      "id": "126f5eb6-5c28-57fb-a570-21a60a3d85f0",
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Battleline", "Mob", "Boyz"],
+      "leader": "",
+      "loadout": "■ 1 Boss Nob is equipped with: slugga; power klaw.\n■ 5 Boyz are equipped with: slugga; choppa.\n■ 3 Boyz are equipped with: shoota; close combat weapon.\n■ 1 Boy is equipped with: rokkit launcha; close combat weapon.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": [],
+              "name": "Power klaw",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Choppa",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "name": "Boyz",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Slugga",
+              "range": "12\"",
+              "skill": "5+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "D3",
+              "damage": "3",
+              "keywords": ["Blast"],
+              "name": "Rokkit launcha",
+              "range": "24\"",
+              "skill": "5+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Shoota",
+              "range": "18\"",
+              "skill": "5+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "6\"",
+          "name": "Boss Nob",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "5+",
+          "t": "5",
+          "w": "2"
+        },
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "6\"",
+          "name": "Boy",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "5+",
+          "t": "5",
+          "w": "1"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "Each time a ranged attack is allocated to the bearer, halve the Damage characteristic of that attack.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Grizzled Skarboy",
       "id": "22e0e064-4da1-53a8-85b1-712d810a0fd8",
-      "keywords": [
-        "Orks"
-      ],
-      "name": "Grizzled Skarboy"
+      "keywords": ["Orks"],
+      "excludes": [],
+      "description": "Each time a ranged attack is allocated to the bearer, halve the Damage characteristic of that attack.",
+      "detachment": ""
     },
     {
-      "description": "In the Declare Battle Formations step, select one Boyz unit from your army. Until the end of the battle, the bearer and every model in that Boyz unit have the Deep Strike ability. When setting these units up on the battlefield using the Deep Strike ability, they must be set up in the same turn and within 3\" of each other.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Tellyporta",
       "id": "7705aa17-edb3-508a-be7e-bdcc60425dff",
-      "keywords": [
-        "Orks"
-      ],
-      "name": "Tellyporta"
+      "keywords": ["Orks"],
+      "excludes": [],
+      "description": "In the Declare Battle Formations step, select one Boyz unit from your army. Until the end of the battle, the bearer and every model in that Boyz unit have the Deep Strike ability. When setting these units up on the battlefield using the Deep Strike ability, they must be set up in the same turn and within 3\" of each other.",
+      "detachment": ""
     }
   ],
-  "id": "ce95fc89-2d77-5048-a660-7db237b88b2a",
   "isCombatPatrol": true,
   "name": "Combat Patrol: Gordrang’s Gitstompas",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, each time a model in your unit makes a Pile-in or Consolidation move, it can move up to 6\" instead of up to 3\".",
-      "fluff": "Orks hurl themselves into close-quarters combat with unalloyed eagerness bordering on delight.",
-      "id": "9697d75f-ecd0-5cb7-b6e6-cc64a2385a62",
-      "name": "Get Stuck In",
-      "phase": [
-        "fight"
-      ],
-      "restrictions": "",
-      "target": "One Orks unit from your army that has not been selected to fight this phase.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Fight phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Fell Back.",
-      "fluff": "Subtle, Orks are not, but their seemingly random outbursts of violence and healthy dose of feral cunning make them unpredictable – and thus even more dangerous – foes.",
-      "id": "4f02b2d6-abe5-5d7c-b48b-071811c2ccd4",
-      "name": "Brutal But Kunnin’",
-      "phase": [
-        "charge"
-      ],
-      "restrictions": "",
-      "target": "One Orks Infantry unit from your army.",
-      "turn": "your",
-      "type": "Strategic Ploy",
-      "when": "Your Charge phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Your unit can make a Normal move of up to D6\", but must end that move as close as possible to that enemy unit.",
-      "fluff": "While Orks delight in the deafening din and ferocious recoil of a good firefight, they take a dim view of the foe shooting them before they can get stuck into a proper hand-to-hand brawl. Such unsporting behaviour is likely to provoke a swift and violent response.",
-      "id": "896f75b4-ad60-5a3f-b015-8950683d412a",
-      "name": "Krump Da Gitz!",
-      "phase": [
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Orks unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Your opponent’s Shooting phase, just after an enemy unit has finished making its attacks."
-    }
-  ]
+  "id": "ce95fc89-2d77-5048-a660-7db237b88b2a"
 }

@@ -1,4 +1,48 @@
 {
+  "stratagems": [
+    {
+      "name": "Defensive Fusillade",
+      "id": "456721c4-975d-5d99-a8c5-f381614b91c6",
+      "cost": 1,
+      "turn": "your",
+      "target": "One T’au Empire unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [PISTOL] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "fluff": "Warriors of the Fire caste train to keep selecting targets and gunning them down even as the foe close to point-blank range. ",
+      "detachment": ""
+    },
+    {
+      "name": "Rapid Repositioning",
+      "id": "1ac62787-9c74-5070-9723-e7e70c2760d7",
+      "cost": 1,
+      "turn": "your",
+      "target": "One T’au Empire unit from your army that is not within Engagement Range of one or more enemy units.",
+      "when": "End of your Shooting phase.",
+      "effect": "Your unit can make a Normal move up to D6\". If your unit has the Battlesuit keyword, it can make a Normal move of up to 6\" instead.",
+      "restrictions": "Until the end of the turn, your unit is not eligible to declare a charge",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "fluff": "T’au military doctrine is highly mobile, placing little value on retaining territory compared to the preservation of T’au lives and the elimination of the enemy’s strength. ",
+      "detachment": ""
+    },
+    {
+      "name": "Laser-Marked Targets",
+      "id": "75568374-07e7-5c41-a8fd-d154e42ffa36",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One T’au Empire unit from your army that was selected as a target of that charge and is not within Engagement Range of one or more enemy units.",
+      "when": "Your opponent’s Charge phase, just after an enemy unit has declared a charge.",
+      "effect": "Your unit can shoot that enemy unit as if it were your Shooting phase. When doing so, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon’s Ballistic Skill or any modifiers. Until the end of the phase, subtract 2 from Charge rolls made for that enemy unit.",
+      "restrictions": "Your unit cannot shoot more than once this turn.",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "fluff": "Painted with markerlights by well-hidden Pathfinders, the foe are perfectly triangulated ready to be cut down as they charge. ",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
@@ -9,14 +53,12 @@
           "Stealth"
         ],
         "damaged": {
-          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
           "range": "1-4 WOUNDS REMAINING",
+          "description": "While this model has 1-4 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
           "showDamagedAbility": true,
           "showDescription": true
         },
-        "faction": [
-          "For the Greater Good"
-        ],
+        "faction": ["For the Greater Good"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -29,30 +71,20 @@
         "special": [],
         "wargear": [
           {
-            "description": "The bearer is eligible to shoot in a turn in which it Fell Back.",
             "name": "Battlesuit Support System",
+            "description": "The bearer is eligible to shoot in a turn in which it Fell Back.",
             "showAbility": true,
             "showDescription": true
           }
         ]
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Ghostkeel Battlesuit (1 model)"
-      ],
-      "factions": [
-        "T’au Empire"
-      ],
+      "composition": ["Ghostkeel Battlesuit (1 model)"],
+      "factions": ["T’au Empire"],
       "fluff": "Nothing so huge should be able to slip unnoticed across the battlefield, yet between its stealth field and its electrowarfare suite the Ghostkeel Battlesuit does just that. Once in position its pilot unleashes ferocious volleys of firepower, ambushing, overwhelming and scattering the terrified foe in a matter of moments.",
       "id": "bcccf73e-41ec-5d85-9dfb-bbc9e61ff93b",
-      "keywords": [
-        "Battlesuit",
-        "Fly",
-        "Ghostkeel",
-        "Vehicle",
-        "Walker"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Vehicle", "Walker", "Fly", "Battlesuit", "Ghostkeel"],
       "leader": "",
       "loadout": "■ This model is equipped with: cyclic ion raker; twin fusion blaster; Ghostkeel fists; battlesuit support system.",
       "meleeWeapons": [
@@ -95,9 +127,7 @@
               "ap": "-2",
               "attacks": "6",
               "damage": "3",
-              "keywords": [
-                "Hazardous"
-              ],
+              "keywords": ["Hazardous"],
               "name": "Cyclic ion raker – Overcharge",
               "range": "36\"",
               "skill": "4+",
@@ -113,10 +143,7 @@
               "ap": "-4",
               "attacks": "1",
               "damage": "D6",
-              "keywords": [
-                "Melta 2",
-                "Twin-linked"
-              ],
+              "keywords": ["Twin-linked", "Melta 2"],
               "name": "Twin fusion blaster",
               "range": "12\"",
               "skill": "4+",
@@ -141,25 +168,18 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Infiltrators",
-          "Stealth"
-        ],
+        "core": [],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "For the Greater Good"
-        ],
+        "faction": ["For the Greater Good"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -169,8 +189,261 @@
         },
         "other": [
           {
-            "description": "Each time this unit is an Observer unit, until the end of the phase, each time a ranged attack is made by a model in their Guided unit that targets their Spotted unit, re-roll a Wound roll of 1.",
-            "name": "Forward Observers",
+            "name": "Cover Fire",
+            "description": "While this unit is within range of an objective marker you control, each time you select it as the target of the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 4+ when resolving that Stratagem.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "DS8 Support Turret",
+            "description": "In your Movement phase, if this unit Remains Stationary, until the start of your next Movement phase, its Fire Warrior Shas’ui model is equipped with the support turret missile system weapon.\n\nDesigner’s Note: Place a DS8 Support Turret token next to this unit to remind you. This does not count as a model for any rules purposes.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Strike Team (10 models)"],
+      "factions": ["T’au Empire"],
+      "fluff": "Fire Warrior Strike Teams are the mainstay of many Hunter Cadres, unleashing storms of potent anti-personnel firepower that few foes can long endure. Tough, dependable, numerous and with access to a variety of specialised weaponry and drone support, these Fire Warriors will hold the line no matter what odds they face.",
+      "id": "0e5e4513-6837-503c-baf8-29aadc418df5",
+      "combatPatrol": true,
+      "keywords": [
+        "Infantry",
+        "Battleline",
+        "Markerlight",
+        "Fire Warrior",
+        "Strike Team"
+      ],
+      "leader": "",
+      "loadout": "■ 1 Fire Warrior Shas’ui is equipped with: pulse carbine; pulse pistol; close combat weapon; support turret missile system; marker drone.\n■ 5 Fire Warriors are equipped with: pulse pistol; pulse rifle; close combat weapon.\n■ 4 Fire Warriors are equipped with: pulse carbine; pulse pistol; close combat weapon.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "5+",
+              "strength": "3"
+            }
+          ]
+        }
+      ],
+      "name": "Strike Team",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Pulse carbine",
+              "range": "20\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Pulse pistol",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Twin-linked", "Indirect Fire"],
+              "name": "Support turret missile system",
+              "range": "30\"",
+              "skill": "5+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Pulse rifle",
+              "range": "30\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "6\"",
+          "name": "Fire Warrior",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "4+",
+          "t": "3",
+          "w": "1"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Leader"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["For the Greater Good"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Volley Fire",
+            "description": "While this model is leading a unit, add 1 to the Attacks characteristic of ranged weapons equipped by models in that unit.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["Shas’nel D’tano (1 model)"],
+      "factions": ["T’au Empire"],
+      "fluff": "Specialists in infantry-based battlefield tactics, Cadre Fireblades eschew the honour of a battlesuit in order to fight selflessly amongst the Fire caste’s rank and file. Their veteran wisdom is of great benefit to the warriors alongside whom they fight, optimising the ferocity and accuracy of their firepower.",
+      "id": "d9264923-5c95-56b8-9989-886c3ace146a",
+      "combatPatrol": true,
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Cadre Fireblade",
+        "Shas’nel D’tano"
+      ],
+      "leader": "This model can be attached to the following unit: Strike Team",
+      "loadout": "■ This model is equipped with: Fireblade pulse rifle; close combat weapon.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "3"
+            }
+          ]
+        }
+      ],
+      "name": "Shas’nel D’Tano",
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Fireblade pulse rifle",
+              "range": "30\"",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "6\"",
+          "name": "Shas’nel D’Tano",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "4+",
+          "t": "3",
+          "w": "3"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": [],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "5+"
+        },
+        "other": [
+          {
+            "name": "Coordinated Leadership",
+            "description": "In your Command phase, roll one D6: on a 4+, you gain 1CP",
             "showAbility": true,
             "showDescription": true
           }
@@ -179,29 +452,104 @@
         "special": [],
         "wargear": [
           {
-            "description": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn. ",
-            "name": "Marker Drone",
+            "name": "Hover Drone",
+            "description": "The bearer can Fly and has a Move characteristic of 10\".",
             "showAbility": true,
             "showDescription": true
           }
         ]
       },
       "cardType": "DataCard",
+      "composition": ["Aun’Shar (1 model)"],
+      "factions": ["T’au Empire"],
+      "fluff": "Like all Ethereals, Aun’Shar is serene and wise, a spiritual leader of the T’au who embodies the unity of the Greater Good. In times of war he is ever keen to take to the field in person, fighting with his energised honour stave, skimming above the battle aboard his hover drone and invoking the fundamental might of the T’au castes.",
+      "id": "4dc1f0cb-da8b-5d9b-b95e-067a492c0860",
       "combatPatrol": true,
-      "composition": [
-        "Stealth Battlesuits (3 models)"
+      "keywords": ["Infantry", "Character", "Fly", "Ethereal", "Aun’Shar"],
+      "leader": "",
+      "loadout": "■ This model is equipped with: honour stave; hover drone.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Honour stave",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        }
       ],
-      "factions": [
-        "T’au Empire"
+      "name": "Aun’Shar",
+      "points": [],
+      "rangedWeapons": [],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "6\"",
+          "name": "Aun’Shar",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "5+",
+          "t": "3",
+          "w": "3"
+        }
       ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Infiltrators", "Stealth"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["For the Greater Good"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Forward Observers",
+            "description": "Each time this unit is an Observer unit, until the end of the phase, each time a ranged attack is made by a model in their Guided unit that targets their Spotted unit, re-roll a Wound roll of 1.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": [
+          {
+            "name": "Marker Drone",
+            "description": "The bearer’s unit has the Markerlight keyword and can act as an Observer unit for another unit even if it Advanced this turn. ",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ]
+      },
+      "cardType": "DataCard",
+      "composition": ["Stealth Battlesuits (3 models)"],
+      "factions": ["T’au Empire"],
       "fluff": "A comparatively lightweight and specialist mark of battlesuit, the XV25 conceals its pilot behind fields of sensor-baffling stealth technology. Benefiting from jet-assisted speed and impressive firepower, these teams make excellent forward operatives.",
       "id": "e9255c83-49c4-59dd-a67d-8283e79a582d",
-      "keywords": [
-        "Battlesuit",
-        "Fly",
-        "Infantry",
-        "Stealth"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Fly", "Battlesuit", "Stealth"],
       "leader": "",
       "loadout": "■ 1 Stealth Shas’vre is equipped with: fusion blaster; battlesuit fists; battlesuit support system; marker drone.\n■ 2 Stealth Shas’ui are equipped with: burst cannon; battlesuit fists.",
       "meleeWeapons": [
@@ -233,9 +581,7 @@
               "ap": "-4",
               "attacks": "1",
               "damage": "D6",
-              "keywords": [
-                "Melta 2"
-              ],
+              "keywords": ["Melta 2"],
               "name": "Fusion blaster",
               "range": "12\"",
               "skill": "4+",
@@ -276,461 +622,29 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [
-          "Leader"
-        ],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "For the Greater Good"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "While this model is leading a unit, add 1 to the Attacks characteristic of ranged weapons equipped by models in that unit.",
-            "name": "Volley Fire",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Shas’nel D’tano (1 model)"
-      ],
-      "factions": [
-        "T’au Empire"
-      ],
-      "fluff": "Specialists in infantry-based battlefield tactics, Cadre Fireblades eschew the honour of a battlesuit in order to fight selflessly amongst the Fire caste’s rank and file. Their veteran wisdom is of great benefit to the warriors alongside whom they fight, optimising the ferocity and accuracy of their firepower.",
-      "id": "d9264923-5c95-56b8-9989-886c3ace146a",
-      "keywords": [
-        "Cadre Fireblade",
-        "Character",
-        "Infantry",
-        "Shas’nel D’tano"
-      ],
-      "leader": "This model can be attached to the following unit: Strike Team",
-      "loadout": "■ This model is equipped with: Fireblade pulse rifle; close combat weapon.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "3"
-            }
-          ]
-        }
-      ],
-      "name": "Shas’nel D’Tano",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
-              "name": "Fireblade pulse rifle",
-              "range": "30\"",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "6\"",
-          "name": "Shas’nel D’Tano",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "4+",
-          "t": "3",
-          "w": "3"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [
-          "For the Greater Good"
-        ],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "description": "In your Movement phase, if this unit Remains Stationary, until the start of your next Movement phase, its Fire Warrior Shas’ui model is equipped with the support turret missile system weapon.\n\nDesigner’s Note: Place a DS8 Support Turret token next to this unit to remind you. This does not count as a model for any rules purposes.",
-            "name": "DS8 Support Turret",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "description": "While this unit is within range of an objective marker you control, each time you select it as the target of the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 4+ when resolving that Stratagem.",
-            "name": "Cover Fire",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Strike Team (10 models)"
-      ],
-      "factions": [
-        "T’au Empire"
-      ],
-      "fluff": "Fire Warrior Strike Teams are the mainstay of many Hunter Cadres, unleashing storms of potent anti-personnel firepower that few foes can long endure. Tough, dependable, numerous and with access to a variety of specialised weaponry and drone support, these Fire Warriors will hold the line no matter what odds they face.",
-      "id": "0e5e4513-6837-503c-baf8-29aadc418df5",
-      "keywords": [
-        "Battleline",
-        "Fire Warrior",
-        "Infantry",
-        "Markerlight",
-        "Strike Team"
-      ],
-      "leader": "",
-      "loadout": "■ 1 Fire Warrior Shas’ui is equipped with: pulse carbine; pulse pistol; close combat weapon; support turret missile system; marker drone.\n■ 5 Fire Warriors are equipped with: pulse pistol; pulse rifle; close combat weapon.\n■ 4 Fire Warriors are equipped with: pulse carbine; pulse pistol; close combat weapon.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "5+",
-              "strength": "3"
-            }
-          ]
-        }
-      ],
-      "name": "Strike Team",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Pulse pistol",
-              "range": "12\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
-              "name": "Pulse rifle",
-              "range": "30\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [
-                "Indirect Fire",
-                "Twin-linked"
-              ],
-              "name": "Support turret missile system",
-              "range": "30\"",
-              "skill": "5+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [],
-              "name": "Pulse carbine",
-              "range": "20\"",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "6\"",
-          "name": "Fire Warrior",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "4+",
-          "t": "3",
-          "w": "1"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "5+"
-        },
-        "other": [
-          {
-            "description": "In your Command phase, roll one D6: on a 4+, you gain 1CP",
-            "name": "Coordinated Leadership",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": [
-          {
-            "description": "The bearer can Fly and has a Move characteristic of 10\".",
-            "name": "Hover Drone",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ]
-      },
-      "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Aun’Shar (1 model)"
-      ],
-      "factions": [
-        "T’au Empire"
-      ],
-      "fluff": "Like all Ethereals, Aun’Shar is serene and wise, a spiritual leader of the T’au who embodies the unity of the Greater Good. In times of war he is ever keen to take to the field in person, fighting with his energised honour stave, skimming above the battle aboard his hover drone and invoking the fundamental might of the T’au castes.",
-      "id": "4dc1f0cb-da8b-5d9b-b95e-067a492c0860",
-      "keywords": [
-        "Aun’Shar",
-        "Character",
-        "Ethereal",
-        "Fly",
-        "Infantry"
-      ],
-      "leader": "",
-      "loadout": "■ This model is equipped with: honour stave; hover drone.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [],
-              "name": "Honour stave",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Aun’Shar",
-      "points": [],
-      "rangedWeapons": [],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "6\"",
-          "name": "Aun’Shar",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "5+",
-          "t": "3",
-          "w": "3"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "The bearer has the Lone Operative and Stealth abilities. While a friendly T’au Empire Infantry unit is within 6\" of the bearer, improve the Save characteristic of models in that unit by 1 and those models have the Feel No Pain 5+ ability.",
-      "detachment": "",
-      "excludes": [],
+      "name": "DS13 Experimental Drone (Aura)",
       "id": "af88a6d9-7cfa-56ff-af7f-c6c445320386",
-      "keywords": [
-        "T’au Empire"
-      ],
-      "name": "DS13 Experimental Drone (Aura)"
+      "keywords": ["T’au Empire"],
+      "excludes": [],
+      "description": "The bearer has the Lone Operative and Stealth abilities. While a friendly T’au Empire Infantry unit is within 6\" of the bearer, improve the Save characteristic of models in that unit by 1 and those models have the Feel No Pain 5+ ability.",
+      "detachment": ""
     },
     {
-      "description": "The bearer has the Lone Operative and Stealth abilities. While a friendly T’au Empire unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [LETHAL HITS] ability.",
-      "detachment": "",
-      "excludes": [],
+      "name": "DS15 Experimental Drone (Aura)",
       "id": "ca35bc4b-7ff4-50c5-8591-9a1cd45d2a21",
-      "keywords": [
-        "T’au Empire"
-      ],
-      "name": "DS15 Experimental Drone (Aura)"
+      "keywords": ["T’au Empire"],
+      "excludes": [],
+      "description": "The bearer has the Lone Operative and Stealth abilities. While a friendly T’au Empire unit is within 6\" of the bearer, ranged weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+      "detachment": ""
     }
   ],
-  "id": "05f2cbe8-2791-514f-8b04-9c2c7ca5ef1e",
   "isCombatPatrol": true,
   "name": "Combat Patrol: Protectors of Aun’Shar",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [PISTOL] ability.",
-      "fluff": "Warriors of the Fire caste train to keep selecting targets and gunning them down even as the foe close to point-blank range. ",
-      "id": "456721c4-975d-5d99-a8c5-f381614b91c6",
-      "name": "Defensive Fusillade",
-      "phase": [
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One T’au Empire unit from your army that has not been selected to shoot this phase.",
-      "turn": "your",
-      "type": "Battle Tactic",
-      "when": "Your Shooting phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Your unit can make a Normal move up to D6\". If your unit has the Battlesuit keyword, it can make a Normal move of up to 6\" instead.",
-      "fluff": "T’au military doctrine is highly mobile, placing little value on retaining territory compared to the preservation of T’au lives and the elimination of the enemy’s strength. ",
-      "id": "1ac62787-9c74-5070-9723-e7e70c2760d7",
-      "name": "Rapid Repositioning",
-      "phase": [
-        "shooting"
-      ],
-      "restrictions": "Until the end of the turn, your unit is not eligible to declare a charge",
-      "target": "One T’au Empire unit from your army that is not within Engagement Range of one or more enemy units.",
-      "turn": "your",
-      "type": "Strategic Ploy",
-      "when": "End of your Shooting phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Your unit can shoot that enemy unit as if it were your Shooting phase. When doing so, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon’s Ballistic Skill or any modifiers. Until the end of the phase, subtract 2 from Charge rolls made for that enemy unit.",
-      "fluff": "Painted with markerlights by well-hidden Pathfinders, the foe are perfectly triangulated ready to be cut down as they charge. ",
-      "id": "75568374-07e7-5c41-a8fd-d154e42ffa36",
-      "name": "Laser-Marked Targets",
-      "phase": [
-        "charge"
-      ],
-      "restrictions": "Your unit cannot shoot more than once this turn.",
-      "target": "One T’au Empire unit from your army that was selected as a target of that charge and is not within Engagement Range of one or more enemy units.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Your opponent’s Charge phase, just after an enemy unit has declared a charge."
-    }
-  ]
+  "id": "05f2cbe8-2791-514f-8b04-9c2c7ca5ef1e"
 }

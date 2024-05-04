@@ -1,19 +1,59 @@
 {
+  "stratagems": [
+    {
+      "name": "Wreathed in Warpflame",
+      "id": "013a6824-6902-525a-83ab-f54b2b1910d9",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Thousand Sons unit from your army (excluding Tzaangors units) that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability and each time a model in your unit makes an attack that targets a Monster or Vehicle unit, an unmodified Hit roll of 5+ scores a Critical Hit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "fluff": "Chanted incantations summon leaping fires of vivid purple and blue that leap hungrily to engulf the foe. The larger and more imposing the victim, the more vigorously the flames consume them. ",
+      "detachment": ""
+    },
+    {
+      "name": "Mutant Cunning",
+      "id": "123a8034-5024-5e1b-afee-e27dd961130c",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Tzaangors unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Your unit can make a Normal move of up to D6\" and, until the end of the phase, each time a ranged attack targets your unit, models in your unit have the Benefit of Cover against that attack. ",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "fluff": "Infused with the power of Tzeentch, Tzaangor sense the approach of danger and – through cunning evasion, chameleonic feathers or minor cantrips – preserve themselves from harm. ",
+      "detachment": ""
+    },
+    {
+      "name": "Malign Entanglement",
+      "id": "08ad91b6-247b-55bd-9344-d0d50cd20c54",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Thousand Sons unit from your army that was selected as a target of that charge.",
+      "when": "Your opponent’s Charge phase, just after an enemy unit has declared a charge.",
+      "effect": "Until the end of the phase, subtract 2 from Charge rolls made for that enemy unit. ",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "fluff": "Sorcerous mists billow about the feet of the foe, coiling into tendrils that drag at their limbs and befuddle their thoughts.",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
-        "core": [
-          "Deep Strike"
-        ],
+        "core": ["Deep Strike"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Cabal of Sorcerers 1 Scarab Occult Sorcerer model only"
-        ],
+        "faction": ["Cabal of Sorcerers 1 Scarab Occult Sorcerer model only"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -23,8 +63,8 @@
         },
         "other": [
           {
-            "description": "While this unit contains one or more Psyker models, each time an attack is made against this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.",
             "name": "Implacable Guardians",
+            "description": "While this unit contains one or more Psyker models, each time an attack is made against this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic, subtract 1 from the Wound roll.",
             "showAbility": true,
             "showDescription": true
           }
@@ -34,21 +74,17 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Scarab Occult Terminators (5 models)"
-      ],
-      "factions": [
-        "Thousand Sons"
-      ],
+      "composition": ["Scarab Occult Terminators (5 models)"],
+      "factions": ["Thousand Sons"],
       "fluff": "The Scarab Occult fight with all the merciless skill they did when they were Magnus’ living bodyguards, often striking into the heart of the foe via sorcerous teleportation. Wielding vicious ritual blades based on the ancient Prosperine khopesh, they cleave through those victims not laid low by their salvoes of lethal firepower",
       "id": "b031d339-827f-524b-a5ee-7b0ffe55d27a",
+      "combatPatrol": true,
       "keywords": [
-        "Chaos",
         "Infantry",
-        "Scarab Occult Terminators",
         "Terminator",
-        "Tzeentch"
+        "Chaos",
+        "Tzeentch",
+        "Scarab Occult Terminators"
       ],
       "leader": "",
       "loadout": "■ 1 Scarab Occult Sorcerer is equipped with: Warpsmite; force weapon; Prosperine khopesh.\n■ 2 Scarab Occult Terminators are equipped with: inferno combi-bolter; Prosperine khopesh.\n■ 1 Scarab Occult Terminator is equipped with: soulreaper cannon; Prosperine khopesh.\n■ 1 Scarab Occult Terminator is equipped with: hellfyre missile rack; inferno combi-bolter; Prosperine khopesh.",
@@ -61,9 +97,7 @@
               "ap": "-1",
               "attacks": "4",
               "damage": "D3",
-              "keywords": [
-                "Psychic"
-              ],
+              "keywords": ["Psychic"],
               "name": "Force weapon",
               "range": "Melee",
               "skill": "3+",
@@ -96,14 +130,17 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
-              "attacks": "2",
+              "ap": "-3",
+              "attacks": "3",
               "damage": "1",
               "keywords": [
-                "Rapid Fire 2"
+                "Psychic",
+                "Pistol",
+                "Devastating Wounds",
+                "Anti-infantry 4+"
               ],
-              "name": "Inferno combi-bolter",
-              "range": "24\"",
+              "name": "Warpsmite",
+              "range": "18\"",
               "skill": "3+",
               "strength": "4"
             }
@@ -117,9 +154,7 @@
               "ap": "-1",
               "attacks": "6",
               "damage": "1",
-              "keywords": [
-                "Devastating Wounds"
-              ],
+              "keywords": ["Devastating Wounds"],
               "name": "Soulreaper cannon",
               "range": "24\"",
               "skill": "3+",
@@ -148,17 +183,12 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-3",
-              "attacks": "3",
+              "ap": "-1",
+              "attacks": "2",
               "damage": "1",
-              "keywords": [
-                "Anti-infantry 4+",
-                "Devastating Wounds",
-                "Pistol",
-                "Psychic"
-              ],
-              "name": "Warpsmite",
-              "range": "18\"",
+              "keywords": ["Rapid Fire 2"],
+              "name": "Inferno combi-bolter",
+              "range": "24\"",
               "skill": "3+",
               "strength": "4"
             }
@@ -181,9 +211,7 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -194,9 +222,7 @@
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Cabal of Sorcerers 2"
-        ],
+        "faction": ["Cabal of Sorcerers 2"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -206,8 +232,8 @@
         },
         "other": [
           {
-            "description": "Once per turn, you can change the result of one Hit roll, one Wound roll, one Damage roll or one saving throw made for this model to an unmodified 6.",
             "name": "Glimpse of Eternity (Psychic)",
+            "description": "Once per turn, you can change the result of one Hit roll, one Wound roll, one Damage roll or one saving throw made for this model to an unmodified 6.",
             "showAbility": true,
             "showDescription": true
           }
@@ -217,23 +243,19 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Ahrak the Time Weaver (1 model)"
-      ],
-      "factions": [
-        "Thousand Sons"
-      ],
+      "composition": ["Ahrak the Time Weaver (1 model)"],
+      "factions": ["Thousand Sons"],
       "fluff": "As an Infernal Master, Ahrak has forged pacts with daemonic entities, euphemistically called tutelaries. Upon the battlefield he can unleash the powers of these malign familiars to engulf his foes in swarms of momentarily corporeal terrors, to hear whispers of the future or to master the currents of the empyrean itself.",
       "id": "1e159663-0fca-5a44-90c9-5d537d322f6f",
+      "combatPatrol": true,
       "keywords": [
-        "Ahrak the Time Weaver",
-        "Chaos",
-        "Character",
         "Infantry",
-        "Infernal Master",
+        "Character",
         "Psyker",
-        "Tzeentch"
+        "Chaos",
+        "Tzeentch",
+        "Infernal Master",
+        "Ahrak the Time Weaver"
       ],
       "leader": "",
       "loadout": "■ This model is equipped with: inferno bolt pistol; Screamer Invocation; force weapon.",
@@ -246,9 +268,7 @@
               "ap": "-1",
               "attacks": "4",
               "damage": "D3",
-              "keywords": [
-                "Psychic"
-              ],
+              "keywords": ["Psychic"],
               "name": "Force weapon",
               "range": "Melee",
               "skill": "3+",
@@ -268,9 +288,7 @@
               "ap": "-1",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Inferno bolt pistol",
               "range": "12\"",
               "skill": "2+",
@@ -286,10 +304,7 @@
               "ap": "-2",
               "attacks": "2D3",
               "damage": "1",
-              "keywords": [
-                "Psychic",
-                "Torrent"
-              ],
+              "keywords": ["Torrent", "Psychic"],
               "name": "Screamer Invocation – Witchfire",
               "range": "18\"",
               "skill": "N/A",
@@ -300,11 +315,7 @@
               "ap": "-2",
               "attacks": "2D6",
               "damage": "1",
-              "keywords": [
-                "Hazardous",
-                "Psychic",
-                "Torrent"
-              ],
+              "keywords": ["Torrent", "Psychic", "Hazardous"],
               "name": "Screamer Invocation – Focused witchfire",
               "range": "18\"",
               "skill": "N/A",
@@ -329,9 +340,7 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -352,8 +361,8 @@
         },
         "other": [
           {
-            "description": "At the end of your Command phase, roll one D6 for each objective marker you control that has one or more units from your army with this ability within range of it: for each 4+, you gain 1 Cabal point.",
             "name": "Relic Hunters",
+            "description": "At the end of your Command phase, roll one D6 for each objective marker you control that has one or more units from your army with this ability within range of it: for each 4+, you gain 1 Cabal point.",
             "showAbility": true,
             "showDescription": true
           }
@@ -363,22 +372,12 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Tzaangors (10 models)"
-      ],
-      "factions": [
-        "Thousand Sons"
-      ],
+      "composition": ["Tzaangors (10 models)"],
+      "factions": ["Thousand Sons"],
       "fluff": "Brayhorn blasts and avian shrieks herald the onset of the Tzaangors. These mutated shock troops surge into battle wielding roaring chainswords with vicious skill. Return shots and blows are deflected by whirling skeins of dark sorcery, for these creatures belong to Tzeentch body and soul.",
       "id": "e6a01d5b-aafa-5195-9052-45eae4dadbbe",
-      "keywords": [
-        "Battleline",
-        "Chaos",
-        "Infantry",
-        "Tzaangors",
-        "Tzeentch"
-      ],
+      "combatPatrol": true,
+      "keywords": ["Infantry", "Battleline", "Chaos", "Tzeentch", "Tzaangors"],
       "leader": "",
       "loadout": "■ Every model is equipped with: autopistol; chainsword.",
       "meleeWeapons": [
@@ -410,9 +409,7 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Autopistol",
               "range": "12\"",
               "skill": "4+",
@@ -437,85 +434,29 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "The bearer has the Deep Strike and Lone Operative abilities. In addition, at the end of your Command phase, if the bearer is on the battlefield, you gain D3 Cabal points.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Temporal Sorceries",
       "id": "1f57217f-5224-547c-b506-7e01fa7bb02b",
-      "keywords": [
-        "Thousand Sons"
-      ],
-      "name": "Temporal Sorceries"
+      "keywords": ["Thousand Sons"],
+      "excludes": [],
+      "description": "The bearer has the Deep Strike and Lone Operative abilities. In addition, at the end of your Command phase, if the bearer is on the battlefield, you gain D3 Cabal points.",
+      "detachment": ""
     },
     {
-      "description": "The bearer has the Deep Strike and Lone Operative abilities. In addition, both of the bearer’s Screamer Invocation weapon profiles have the [PISTOL] ability. ",
-      "detachment": "",
-      "excludes": [],
+      "name": "Arch-Diabolist",
       "id": "64edb651-c2a3-5df4-80d8-1fcccf7cfb0e",
-      "keywords": [
-        "Thousand Sons"
-      ],
-      "name": "Arch-Diabolist"
+      "keywords": ["Thousand Sons"],
+      "excludes": [],
+      "description": "The bearer has the Deep Strike and Lone Operative abilities. In addition, both of the bearer’s Screamer Invocation weapon profiles have the [PISTOL] ability. ",
+      "detachment": ""
     }
   ],
-  "id": "ffd3a0be-7740-5369-8e70-410fcb7d61b2",
   "isCombatPatrol": true,
   "name": "Combat Patrol: The Coven Temporus",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability and each time a model in your unit makes an attack that targets a Monster or Vehicle unit, an unmodified Hit roll of 5+ scores a Critical Hit.",
-      "fluff": "Chanted incantations summon leaping fires of vivid purple and blue that leap hungrily to engulf the foe. The larger and more imposing the victim, the more vigorously the flames consume them. ",
-      "id": "013a6824-6902-525a-83ab-f54b2b1910d9",
-      "name": "Wreathed in Warpflame",
-      "phase": [
-        "fight"
-      ],
-      "restrictions": "",
-      "target": "One Thousand Sons unit from your army (excluding Tzaangors units) that has not been selected to fight this phase.",
-      "turn": "either",
-      "type": "Battle Tactic",
-      "when": "Fight phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, subtract 2 from Charge rolls made for that enemy unit. ",
-      "fluff": "Sorcerous mists billow about the feet of the foe, coiling into tendrils that drag at their limbs and befuddle their thoughts.",
-      "id": "08ad91b6-247b-55bd-9344-d0d50cd20c54",
-      "name": "Malign Entanglement",
-      "phase": [
-        "charge"
-      ],
-      "restrictions": "",
-      "target": "One Thousand Sons unit from your army that was selected as a target of that charge.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Your opponent’s Charge phase, just after an enemy unit has declared a charge."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Your unit can make a Normal move of up to D6\" and, until the end of the phase, each time a ranged attack targets your unit, models in your unit have the Benefit of Cover against that attack. ",
-      "fluff": "Infused with the power of Tzeentch, Tzaangor sense the approach of danger and – through cunning evasion, chameleonic feathers or minor cantrips – preserve themselves from harm. ",
-      "id": "123a8034-5024-5e1b-afee-e27dd961130c",
-      "name": "Mutant Cunning",
-      "phase": [
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "One Tzaangors unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets."
-    }
-  ]
+  "id": "ffd3a0be-7740-5369-8e70-410fcb7d61b2"
 }

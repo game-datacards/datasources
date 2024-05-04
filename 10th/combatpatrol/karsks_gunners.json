@@ -1,10 +1,52 @@
 {
+  "stratagems": [
+    {
+      "name": "Bring It Down",
+      "id": "90c5400c-e4e8-5669-93f0-815900b5ffe7",
+      "cost": 1,
+      "turn": "your",
+      "target": "Any number of Astra Militarum units from your army, and one enemy unit.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time a model in one of your selected units makes an attack that targets that enemy unit, you can re-roll the Hit roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "fluff": "Prioritising a vital enemy target, the Astra Militarum soldiery focus all their fury upon it.",
+      "detachment": ""
+    },
+    {
+      "name": "Send in the Next Wave",
+      "id": "482c346b-3d0d-579e-8de3-38ab7cc120da",
+      "cost": 1,
+      "turn": "your",
+      "target": "One destroyed Cadian Shock Troops unit from your army. You can use this Stratagem on that unit even though it is destroyed.",
+      "when": "Reinforcements step of your Movement phase.",
+      "effect": "Add a new unit to your army identical to your destroyed unit, at its original Starting Strength. Set that unit up anywhere on the battlefield wholly within 9\" of your battlefield edge and not within Engagement Range of one or more enemy units.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "fluff": "Amongst the greatest strengths of the Astra Militarum is its sheer numerical might. There are always more bodies to be hurled into the meat-grinder of battle.",
+      "detachment": ""
+    },
+    {
+      "name": "Artillery Strike",
+      "id": "71c48149-abe8-5fb4-a7e4-c60eb8b632ca",
+      "cost": 2,
+      "turn": "opponents",
+      "target": "One Officer model from your army.",
+      "when": "Start of your opponent’s Command phase.",
+      "effect": "Until the end of the turn, halve the Move characteristic of enemy models, halve Advance rolls made for enemy units, enemy units cannot declare a charge and each time an enemy model makes a ranged attack, subtract 1 from the Hit roll.",
+      "restrictions": "You can only use this Stratagem once per battle.",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "fluff": "Big guns behind the Imperial lines rain down a disruption bombardment upon the foe. As the ground shakes and debris fountains skywards, the enemy are thrown into disarray.",
+      "detachment": ""
+    }
+  ],
   "datasheets": [
     {
       "abilities": {
-        "core": [
-          "Deadly Demise 1"
-        ],
+        "core": ["Deadly Demise 1"],
         "damaged": {
           "description": "",
           "range": "",
@@ -21,8 +63,8 @@
         },
         "other": [
           {
-            "description": "Each time a model in this unit makes an attack that targets a Monster or Vehicle unit, you can re-roll the Wound roll.",
             "name": "Mobile Hunter-killers",
+            "description": "Each time a model in this unit makes an attack that targets a Monster or Vehicle unit, you can re-roll the Wound roll.",
             "showAbility": true,
             "showDescription": true
           }
@@ -32,23 +74,19 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Armoured Sentinel (1 model)"
-      ],
-      "factions": [
-        "Astra Militarum"
-      ],
+      "composition": ["Armoured Sentinel (1 model)"],
+      "factions": ["Astra Militarum"],
       "fluff": "Modified with extra protective panelling, Armoured Sentinels are superb front-line hunters, wielding their deadly heavy weapons across terrain too cramped for battle tanks to operate on. As mobile hunter-killers, they excel in destroying vehicles, fortified bunkers and xenos monstrosities.",
       "id": "64df5e42-350f-5c89-95cf-47b74770e3fb",
+      "combatPatrol": true,
       "keywords": [
-        "Armoured Sentinel",
+        "Vehicle",
+        "Walker",
         "Imperium",
         "Regiment",
-        "Smoke",
         "Squadron",
-        "Vehicle",
-        "Walker"
+        "Smoke",
+        "Armoured Sentinel"
       ],
       "leader": "",
       "loadout": "■ This model is equipped with: hunter-killer missile; plasma cannon; close combat weapon.",
@@ -74,14 +112,6 @@
       "points": [],
       "rangedWeapons": [
         {
-          "abilities": [
-            {
-              "description": "The bearer can only shoot with this weapon once per battle.",
-              "name": "One Shot",
-              "showAbility": true,
-              "showDescription": true
-            }
-          ],
           "active": true,
           "profiles": [
             {
@@ -89,13 +119,19 @@
               "ap": "-3",
               "attacks": "1",
               "damage": "D6",
-              "keywords": [
-                "One Shot"
-              ],
+              "keywords": ["One Shot"],
               "name": "Hunter-killer missile",
               "range": "48\"",
               "skill": "4+",
               "strength": "14"
+            }
+          ],
+          "abilities": [
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle.",
+              "showAbility": true,
+              "showDescription": true
             }
           ]
         },
@@ -107,9 +143,7 @@
               "ap": "-2",
               "attacks": "D3",
               "damage": "1",
-              "keywords": [
-                "Blast"
-              ],
+              "keywords": ["Blast"],
               "name": "Plasma cannon – Standard",
               "range": "36\"",
               "skill": "4+",
@@ -120,10 +154,7 @@
               "ap": "-3",
               "attacks": "D3",
               "damage": "2",
-              "keywords": [
-                "Blast",
-                "Hazardous"
-              ],
+              "keywords": ["Hazardous", "Blast"],
               "name": "Plasma cannon – Supercharge",
               "range": "36\"",
               "skill": "4+",
@@ -148,24 +179,18 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
-        "core": [
-          "Leader"
-        ],
+        "core": ["Leader"],
         "damaged": {
           "description": "",
           "range": "",
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": [
-          "Voice of Command"
-        ],
+        "faction": ["Voice of Command"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -185,37 +210,33 @@
         ],
         "wargear": [
           {
-            "description": "Add 1 to the Objective Control characteristic of models in the bearer’s unit.",
-            "name": "Regimental Standard",
+            "name": "Medi-pack",
+            "description": "The bearer’s unit has the Feel No Pain 6+ ability.",
             "showAbility": true,
             "showDescription": true
           },
           {
-            "description": "The bearer’s unit has the Feel No Pain 6+ ability.",
-            "name": "Medi-pack",
+            "name": "Regimental Standard",
+            "description": "Add 1 to the Objective Control characteristic of models in the bearer’s unit.",
             "showAbility": true,
             "showDescription": true
           }
         ]
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Command Squad Karsk (5 models)"
-      ],
-      "factions": [
-        "Astra Militarum"
-      ],
+      "composition": ["Command Squad Karsk (5 models)"],
+      "factions": ["Astra Militarum"],
       "fluff": "Major Karsk is every bit the unforgiving and grizzled Cadian commander of the propaganda vid-feeds. Though given at times to the odd flourish of grim gallows humour, he is typically stern and disciplined. A gifted strategist, he is accompanied by a cadre of specialist troopers who aid him in his command duties.",
       "id": "c9da16c7-34cc-525c-a310-a3ca18bf56f5",
+      "combatPatrol": true,
       "keywords": [
-        "Cadian",
-        "Character",
-        "Command Squad",
-        "Imperium",
         "Infantry",
-        "Karsk",
-        "Officer"
+        "Imperium",
+        "Cadian",
+        "Command Squad",
+        "Character",
+        "Officer",
+        "Karsk"
       ],
       "leader": "This unit can be attached to the following unit: Cadian Shock Troops",
       "loadout": "■ Karsk is equipped with: plasma pistol; power weapon.\n■ 1 Cadian Veteran Guardsman is equipped with: bolt pistol; power fist.\n■ 1 Cadian Veteran Guardsman is equipped with: lasgun; close combat weapon.\n■ 1 Cadian Veteran Guardsman is equipped with: lasgun; close combat weapon; medi-pack.\n■ 1 Cadian Veteran Guardsman is equipped with: lasgun; close combat weapon; regimental standard.",
@@ -280,9 +301,7 @@
               "ap": "-2",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Plasma pistol – Standard",
               "range": "12\"",
               "skill": "4+",
@@ -293,10 +312,7 @@
               "ap": "-3",
               "attacks": "1",
               "damage": "2",
-              "keywords": [
-                "Hazardous",
-                "Pistol"
-              ],
+              "keywords": ["Pistol", "Hazardous"],
               "name": "Plasma pistol – Supercharge",
               "range": "12\"",
               "skill": "4+",
@@ -312,9 +328,7 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
+              "keywords": ["Pistol"],
               "name": "Bolt pistol",
               "range": "12\"",
               "skill": "4+",
@@ -330,9 +344,7 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
+              "keywords": ["Rapid Fire 1"],
               "name": "Lasgun",
               "range": "24\"",
               "skill": "4+",
@@ -347,18 +359,6 @@
           "active": true,
           "ld": "7+",
           "m": "6\"",
-          "name": "Cadian Veteran Guardsman",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "5+",
-          "t": "3",
-          "w": "1"
-        },
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "6\"",
           "name": "Karsk",
           "oc": "1",
           "showDamagedMarker": false,
@@ -366,12 +366,22 @@
           "sv": "5+",
           "t": "3",
           "w": "3"
+        },
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "6\"",
+          "name": "Cadian Veteran Guardsman",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "5+",
+          "t": "3",
+          "w": "1"
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -396,23 +406,19 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Cadian Shock Troops (10 models)"
-      ],
-      "factions": [
-        "Astra Militarum"
-      ],
+      "composition": ["Cadian Shock Troops (10 models)"],
+      "factions": ["Astra Militarum"],
       "fluff": "Born soldiers, the Shock Troops of Cadia have trained their entire lives for military service with the Astra Militarum. Decades of rigorous firing drills have forged them into expert sharpshooters. Skilled in both dogged defence and storming assaults, Cadian Shock Troops are held by many as being the ideal soldiers.",
       "id": "f19c1e48-ee95-5516-9bd6-bf7be6f57024",
+      "combatPatrol": true,
       "keywords": [
-        "Battleline",
-        "Cadian Shock Troops",
-        "Cadian",
-        "Imperium",
         "Infantry",
+        "Battleline",
+        "Imperium",
+        "Regiment",
         "Platoon",
-        "Regiment"
+        "Cadian",
+        "Cadian Shock Troops"
       ],
       "leader": "",
       "loadout": "■ 1 Shock Trooper Sergeant is equipped with: drum-fed autogun; close combat weapon.\n■ 6 Shock Troopers are equipped with: lasgun; close combat weapon.\n■ 1 Shock Trooper is equipped with: lasgun; close combat weapon; vox caster.\n■ 1 Shock Trooper is equipped with: grenade launcher; close combat weapon.\n■ 1 Shock Trooper is equipped with: plasma gun; close combat weapon.",
@@ -442,30 +448,14 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-2",
-              "attacks": "1",
+              "ap": "0",
+              "attacks": "2",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
-              "name": "Plasma gun – Standard",
+              "keywords": [],
+              "name": "Drum-fed autogun",
               "range": "24\"",
               "skill": "4+",
-              "strength": "7"
-            },
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": [
-                "Hazardous",
-                "Rapid Fire 1"
-              ],
-              "name": "Plasma gun – Supercharge",
-              "range": "24\"",
-              "skill": "4+",
-              "strength": "8"
+              "strength": "3"
             }
           ]
         },
@@ -488,9 +478,7 @@
               "ap": "0",
               "attacks": "D3",
               "damage": "1",
-              "keywords": [
-                "Blast"
-              ],
+              "keywords": ["Blast"],
               "name": "Grenade launcher – Frag",
               "range": "24\"",
               "skill": "4+",
@@ -503,16 +491,25 @@
           "profiles": [
             {
               "active": true,
-              "ap": "0",
+              "ap": "-2",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
-              "name": "Lasgun",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Plasma gun – Standard",
               "range": "24\"",
               "skill": "4+",
-              "strength": "3"
+              "strength": "7"
+            },
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Rapid Fire 1", "Hazardous"],
+              "name": "Plasma gun – Supercharge",
+              "range": "24\"",
+              "skill": "4+",
+              "strength": "8"
             }
           ]
         },
@@ -522,10 +519,10 @@
             {
               "active": true,
               "ap": "0",
-              "attacks": "2",
+              "attacks": "1",
               "damage": "1",
-              "keywords": [],
-              "name": "Drum-fed autogun",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Lasgun",
               "range": "24\"",
               "skill": "4+",
               "strength": "3"
@@ -561,9 +558,7 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -588,43 +583,23 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Cadian Shock Troops (10 models)"
-      ],
-      "factions": [
-        "Astra Militarum"
-      ],
+      "composition": ["Cadian Shock Troops (10 models)"],
+      "factions": ["Astra Militarum"],
       "fluff": "Born soldiers, the Shock Troops of Cadia have trained their entire lives for military service with the Astra Militarum. Decades of rigorous firing drills have forged them into expert sharpshooters. Skilled in both dogged defence and storming assaults, Cadian Shock Troops are held by many as being the ideal soldiers.",
       "id": "f19c1e48-ee95-5516-9bd6-bf7be6f57024",
+      "combatPatrol": true,
       "keywords": [
-        "Battleline",
-        "Cadian Shock Troops",
-        "Cadian",
-        "Imperium",
         "Infantry",
+        "Battleline",
+        "Imperium",
+        "Regiment",
         "Platoon",
-        "Regiment"
+        "Cadian",
+        "Cadian Shock Troops"
       ],
       "leader": "",
       "loadout": "■ 1 Shock Trooper Sergeant is equipped with: laspistol; chainsword.\n■ 7 Shock Troopers are equipped with: lasgun; close combat weapon.\n■ 1 Shock Trooper is equipped with: flamer; close combat weapon.\n■ 1 Shock Trooper is equipped with: meltagun; close combat weapon.",
       "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "3"
-            }
-          ]
-        },
         {
           "active": true,
           "profiles": [
@@ -640,6 +615,22 @@
               "strength": "3"
             }
           ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "3"
+            }
+          ]
         }
       ],
       "name": "Cadian Shock Troops",
@@ -650,12 +641,42 @@
           "profiles": [
             {
               "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Laspistol",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Flamer",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
               "ap": "-4",
               "attacks": "1",
               "damage": "D6",
-              "keywords": [
-                "Melta 2"
-              ],
+              "keywords": ["Melta 2"],
               "name": "Meltagun",
               "range": "12\"",
               "skill": "4+",
@@ -671,50 +692,11 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Laspistol",
-              "range": "12\"",
-              "skill": "4+",
-              "strength": "3"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
+              "keywords": ["Rapid Fire 1"],
               "name": "Lasgun",
               "range": "24\"",
               "skill": "4+",
               "strength": "3"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": [
-                "Ignores Cover",
-                "Torrent"
-              ],
-              "name": "Flamer",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "4"
             }
           ]
         }
@@ -747,9 +729,7 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -770,8 +750,8 @@
         },
         "other": [
           {
-            "description": "While this unit is being affected by an Order, provided it Remained Stationary this turn, Heavy weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
             "name": "Rearm, Reload, Fire",
+            "description": "While this unit is being affected by an Order, provided it Remained Stationary this turn, Heavy weapons equipped by models in this unit have the [SUSTAINED HITS 1] ability.",
             "showAbility": true,
             "showDescription": true
           }
@@ -788,21 +768,17 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "combatPatrol": true,
-      "composition": [
-        "Field Ordnance Battery (2 models)"
-      ],
-      "factions": [
-        "Astra Militarum"
-      ],
+      "composition": ["Field Ordnance Battery (2 models)"],
+      "factions": ["Astra Militarum"],
       "fluff": "Amongst the largest man-portable weapons fielded by the Astra Militarum are those crewed by Ordnance Teams. From bombast field guns that fire heavy shells indirectly, to the multiple warheads of the malleus rocket launcher, such batteries are powerful assets.",
       "id": "7ef00ad5-7f46-53ec-8fc8-7eac89de1157",
+      "combatPatrol": true,
       "keywords": [
-        "Artillery",
-        "Field Ordnance Battery",
-        "Imperium",
         "Infantry",
-        "Regiment"
+        "Artillery",
+        "Imperium",
+        "Regiment",
+        "Field Ordnance Battery"
       ],
       "leader": "",
       "loadout": "■ 1 model is equipped with: bombast field gun; lasgun; laspistol; battery close combat weapons.\n■ 1 model is equipped with: malleus rocket launcher; lasgun; laspistol; battery close combat weapons.",
@@ -835,11 +811,7 @@
               "ap": "-1",
               "attacks": "D6",
               "damage": "2",
-              "keywords": [
-                "Blast",
-                "Heavy",
-                "Indirect Fire"
-              ],
+              "keywords": ["Indirect Fire", "Heavy", "Blast"],
               "name": "Bombast field gun",
               "range": "48\"",
               "skill": "5+",
@@ -855,10 +827,7 @@
               "ap": "-1",
               "attacks": "D6+6",
               "damage": "1",
-              "keywords": [
-                "Blast",
-                "Heavy"
-              ],
+              "keywords": ["Heavy", "Blast"],
               "name": "Malleus rocket launcher",
               "range": "48\"",
               "skill": "5+",
@@ -874,11 +843,9 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Pistol"
-              ],
-              "name": "Laspistol",
-              "range": "12\"",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Lasgun",
+              "range": "24\"",
               "skill": "4+",
               "strength": "3"
             }
@@ -892,11 +859,9 @@
               "ap": "0",
               "attacks": "1",
               "damage": "1",
-              "keywords": [
-                "Rapid Fire 1"
-              ],
-              "name": "Lasgun",
-              "range": "24\"",
+              "keywords": ["Pistol"],
+              "name": "Laspistol",
+              "range": "12\"",
               "skill": "4+",
               "strength": "3"
             }
@@ -919,85 +884,29 @@
         }
       ],
       "transport": "",
-      "wargear": [
-        "None"
-      ]
+      "wargear": ["None"]
     }
   ],
   "detachments": [],
   "enhancements": [
     {
-      "description": "In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition, each time the bearer issues an Order, it is issued to all friendly Astra Militarum units on the battlefield.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Command Laurels",
       "id": "417729ff-7351-5e0f-a186-774845b343be",
-      "keywords": [
-        "Astra Militarum"
-      ],
-      "name": "Command Laurels"
+      "keywords": ["Astra Militarum"],
+      "excludes": [],
+      "description": "In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition, each time the bearer issues an Order, it is issued to all friendly Astra Militarum units on the battlefield.",
+      "detachment": ""
     },
     {
-      "description": "In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition, while a friendly Artillery unit is within 6\" of the bearer’s unit:\n\n■ Each time you roll to determine the number of attacks a model in that Artillery unit makes with a weapon, you can re-roll the result.\n\n■ Models in that Artillery unit have the Lone Operative ability if they have not made any attacks yet this battle.",
-      "detachment": "",
-      "excludes": [],
+      "name": "Gunnery Officer (Aura)",
       "id": "4769b0e1-fcab-5071-aca3-b49dd6b333a8",
-      "keywords": [
-        "Astra Militarum"
-      ],
-      "name": "Gunnery Officer (Aura)"
+      "keywords": ["Astra Militarum"],
+      "excludes": [],
+      "description": "In your Command phase, if the bearer is on the battlefield, you gain 1CP. In addition, while a friendly Artillery unit is within 6\" of the bearer’s unit:\n\n■ Each time you roll to determine the number of attacks a model in that Artillery unit makes with a weapon, you can re-roll the result.\n\n■ Models in that Artillery unit have the Lone Operative ability if they have not made any attacks yet this battle.",
+      "detachment": ""
     }
   ],
-  "id": "5e9a3750-8a32-5df6-94c8-a2acb1b7dd92",
   "isCombatPatrol": true,
   "name": "Combat Patrol: Karsk’s Gunners",
-  "stratagems": [
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Add a new unit to your army identical to your destroyed unit, at its original Starting Strength. Set that unit up anywhere on the battlefield wholly within 9\" of your battlefield edge and not within Engagement Range of one or more enemy units.",
-      "fluff": "Amongst the greatest strengths of the Astra Militarum is its sheer numerical might. There are always more bodies to be hurled into the meat-grinder of battle.",
-      "id": "482c346b-3d0d-579e-8de3-38ab7cc120da",
-      "name": "Send in the Next Wave",
-      "phase": [
-        "movement"
-      ],
-      "restrictions": "",
-      "target": "One destroyed Cadian Shock Troops unit from your army. You can use this Stratagem on that unit even though it is destroyed.",
-      "turn": "your",
-      "type": "Strategic Ploy",
-      "when": "Reinforcements step of your Movement phase."
-    },
-    {
-      "cost": 1,
-      "detachment": "",
-      "effect": "Until the end of the phase, each time a model in one of your selected units makes an attack that targets that enemy unit, you can re-roll the Hit roll.",
-      "fluff": "Prioritising a vital enemy target, the Astra Militarum soldiery focus all their fury upon it.",
-      "id": "90c5400c-e4e8-5669-93f0-815900b5ffe7",
-      "name": "Bring It Down",
-      "phase": [
-        "shooting"
-      ],
-      "restrictions": "",
-      "target": "Any number of Astra Militarum units from your army, and one enemy unit.",
-      "turn": "your",
-      "type": "Battle Tactic",
-      "when": "Your Shooting phase."
-    },
-    {
-      "cost": 2,
-      "detachment": "",
-      "effect": "Until the end of the turn, halve the Move characteristic of enemy models, halve Advance rolls made for enemy units, enemy units cannot declare a charge and each time an enemy model makes a ranged attack, subtract 1 from the Hit roll.",
-      "fluff": "Big guns behind the Imperial lines rain down a disruption bombardment upon the foe. As the ground shakes and debris fountains skywards, the enemy are thrown into disarray.",
-      "id": "71c48149-abe8-5fb4-a7e4-c60eb8b632ca",
-      "name": "Artillery Strike",
-      "phase": [
-        "command"
-      ],
-      "restrictions": "You can only use this Stratagem once per battle.",
-      "target": "One Officer model from your army.",
-      "turn": "opponents",
-      "type": "Strategic Ploy",
-      "when": "Start of your opponent’s Command phase."
-    }
-  ]
+  "id": "5e9a3750-8a32-5df6-94c8-a2acb1b7dd92"
 }
