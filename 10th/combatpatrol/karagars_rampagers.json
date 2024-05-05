@@ -1,50 +1,141 @@
 {
-  "stratagems": [
-    {
-      "name": "Rage Unchecked",
-      "id": "ec3e398b-e6e2-5dc3-bfd7-f5be69bdc772",
-      "cost": 1,
-      "turn": "either",
-      "target": "One Berzerkers unit from your army that is Below Half-strength and has not been selected to shoot or fight this phase.",
-      "when": "Your Shooting phase or the Fight phase.",
-      "effect": "Until the end of the phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["fight", "shooting"],
-      "fluff": "Those who strike at the World Eaters but fail to kill them outright only serve to further enrage the survivors and, by their bloody hand, ensure their own destruction.",
-      "detachment": ""
-    },
-    {
-      "name": "Overwhelming Onslaught",
-      "id": "45b1e338-9c9f-55bf-b756-7a44adaf7e02",
-      "cost": 1,
-      "turn": "your",
-      "target": "That World Eaters unit.",
-      "when": "Your Charge phase, just after a World Eaters unit from your army ends a Charge move.",
-      "effect": "Select one enemy unit within Engagement Range of your unit. That enemy unit must take a Battle-shock test and when doing so, subtract 1 from the result.",
-      "restrictions": "",
-      "type": "Epic Deed",
-      "phase": ["charge"],
-      "fluff": "The sheer terrifying ferocity of World Eaters on the charge is enough to hurl even the most resolute foes into disarray or paralyse them with unreasoning fear. ",
-      "detachment": ""
-    },
-    {
-      "name": "Unstoppable Fury",
-      "id": "6274c69e-b96e-5869-b501-0991dcaa5032",
-      "cost": 1,
-      "turn": "either",
-      "target": "That World Eaters unit.",
-      "when": "Fight phase, just before a World Eaters unit from your army Consolidates.",
-      "effect": "Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6\" instead of up to 3\", provided your unit ends that Consolidation move within Engagement Range of one or more enemy units.",
-      "restrictions": "",
-      "type": "Strategic Ploy",
-      "phase": ["fight"],
-      "fluff": "As the Butchers’ Nails thunder in their brains, the World Eaters rampage ever deeper into the enemy lines and smash aside every impediment.",
-      "detachment": ""
-    }
-  ],
+  "name": "Combat Patrol: Karagar’s Rampagers",
+  "id": "6765aad6-633a-5d79-b760-afdabd482e72",
+  "isCombatPatrol": true,
+  "faction_id": "basic",
+  "detachments": ["Karagar’s Rampagers"],
   "datasheets": [
     {
+      "name": "Karagar the Blooded",
+      "id": "32ed946c-28c6-56ae-9a51-ce863fa6226f",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Blessings of Khorne"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "4+"
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "composition": ["Karagar the Blooded (1 model)"],
+      "factions": ["World Eaters"],
+      "fluff": "So blood-drenched a path has Karagar carved between the stars that he has earned in reward a daemonic steed known as a Juggernaut. Part brass-shod war engine, part sentient battering ram, this monster bears Karagar into battle and crushes his foes beneath its trampling hooves.",
+      "keywords": [
+        "Mounted",
+        "Character",
+        "Chaos",
+        "Khorne",
+        "Lord on Juggernaut",
+        "Karagar the Blooded"
+      ],
+      "leader": "",
+      "loadout": "■ This model is equipped with: plasma pistol; exalted chainblade; Juggernaut’s bladed horn.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "7",
+              "damage": "2",
+              "keywords": [],
+              "name": "Exalted chainblade",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": ["Lance", "Extra Attacks"],
+              "name": "Juggernaut’s bladed horn",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "6"
+            }
+          ]
+        }
+      ],
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Plasma pistol – Standard",
+              "range": "12\"",
+              "skill": "2+",
+              "strength": "7"
+            },
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Pistol", "Hazardous"],
+              "name": "Plasma pistol – Supercharge",
+              "range": "12\"",
+              "skill": "2+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "10\"",
+          "name": "Karagar the Blooded",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "2+",
+          "t": "6",
+          "w": "7"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "name": "Khorne Berzerkers",
+      "id": "05f9023e-f1d1-5b30-8853-51def68801ad",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": [],
         "damaged": {
@@ -66,12 +157,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Khorne Berzerkers (10 models)"],
       "factions": ["World Eaters"],
       "fluff": "Berzerkers of Khorne relish their role as the Blood God’s sacred destroyers, and are fanatical in the extreme. The warp-fuelled anger of these psychopathic warriors drives them into an endless frenzy of action. Those who face them in battle disappear under a rain of heavy blows, each potent enough to shear limbs and shatter shields.",
-      "id": "c7cdcaef-03ab-5051-ac97-17286d4bcb34",
-      "combatPatrol": true,
       "keywords": ["Infantry", "Chaos", "Khorne", "Berzerkers"],
       "leader": "",
       "loadout": "■ 1 Khorne Berzerker Champion is equipped with: plasma pistol; Berzerker chainblade.\n■ 1 Khorne Berzerker is equipped with: plasma pistol; Berzerker chainblade.\n■ 1 Khorne Berzerker is equipped with: plasma pistol; Berzerker chainblade; icon of Khorne.\n■ 2 Khorne Berzerkers are equipped with: bolt pistol; Khornate eviscerator.\n■ 5 Khorne Berzerkers are equipped with: bolt pistol; Berzerker chainblade.",
@@ -109,7 +197,6 @@
           ]
         }
       ],
-      "name": "Khorne Berzerkers",
       "points": [],
       "rangedWeapons": [
         {
@@ -156,7 +243,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -175,6 +261,13 @@
       "wargear": ["None"]
     },
     {
+      "name": "Jakhals",
+      "id": "2dfde033-df36-5ca4-bddc-bb91e3861834",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": ["Feel No Pain 6+"],
         "damaged": {
@@ -196,12 +289,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Jakhals (10 models)"],
       "factions": ["World Eaters"],
       "fluff": "Jakhals are amongst the strongest and most bloodthirsty of all the mortal followers of the World Eaters, and seek to emulate their gore-crazed masters in every way they can. When sent into battle, they enter the fray with wild abandon, hacking and slashing with their chain weapons in the hope of earning the favour of their lords.",
-      "id": "d03e0726-20ac-5498-99ac-6732e375a337",
-      "combatPatrol": true,
       "keywords": ["Infantry", "Battleline", "Chaos", "Khorne", "Jakhals"],
       "leader": "",
       "loadout": "■ 1 Jakhal Pack Leader is equipped with: autopistol; Jakhal chainblades.\n■ 1 Dishonoured is equipped with: skullsmasher.\n■ 1 Jakhal is equipped with: autopistol; mauler chainblade.\n■ 1 Jakhal is equipped with: autopistol; Jakhal chainblades; icon of Khorne.\n■ 6 Jakhals are equipped with: autopistol; Jakhal chainblades.",
@@ -255,7 +345,6 @@
           ]
         }
       ],
-      "name": "Jakhals",
       "points": [],
       "rangedWeapons": [
         {
@@ -275,7 +364,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -292,130 +380,55 @@
       ],
       "transport": "",
       "wargear": ["None"]
-    },
-    {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Blessings of Khorne"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "4+"
-        },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["Karagar the Blooded (1 model)"],
-      "factions": ["World Eaters"],
-      "fluff": "So blood-drenched a path has Karagar carved between the stars that he has earned in reward a daemonic steed known as a Juggernaut. Part brass-shod war engine, part sentient battering ram, this monster bears Karagar into battle and crushes his foes beneath its trampling hooves.",
-      "id": "569ab5e7-e3f8-5ceb-a0ce-58e6610c1dc6",
-      "combatPatrol": true,
-      "keywords": [
-        "Mounted",
-        "Character",
-        "Chaos",
-        "Khorne",
-        "Lord on Juggernaut",
-        "Karagar the Blooded"
-      ],
-      "leader": "",
-      "loadout": "■ This model is equipped with: plasma pistol; exalted chainblade; Juggernaut’s bladed horn.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "7",
-              "damage": "2",
-              "keywords": [],
-              "name": "Exalted chainblade",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "4",
-              "damage": "2",
-              "keywords": ["Lance", "Extra Attacks"],
-              "name": "Juggernaut’s bladed horn",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "6"
-            }
-          ]
-        }
-      ],
-      "name": "Karagar the Blooded",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Plasma pistol – Standard",
-              "range": "12\"",
-              "skill": "2+",
-              "strength": "7"
-            },
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Pistol", "Hazardous"],
-              "name": "Plasma pistol – Supercharge",
-              "range": "12\"",
-              "skill": "2+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "10\"",
-          "name": "Karagar the Blooded",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "2+",
-          "t": "6",
-          "w": "7"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
     }
   ],
-  "detachments": [],
+  "stratagems": [
+    {
+      "name": "Rage Unchecked",
+      "id": "ec3e398b-e6e2-5dc3-bfd7-f5be69bdc772",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Berzerkers unit from your army that is Below Half-strength and has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "fluff": "Those who strike at the World Eaters but fail to kill them outright only serve to further enrage the survivors and, by their bloody hand, ensure their own destruction.",
+      "detachment": "Karagar’s Rampagers",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Overwhelming Onslaught",
+      "id": "45b1e338-9c9f-55bf-b756-7a44adaf7e02",
+      "cost": 1,
+      "turn": "your",
+      "target": "That World Eaters unit.",
+      "when": "Your Charge phase, just after a World Eaters unit from your army ends a Charge move.",
+      "effect": "Select one enemy unit within Engagement Range of your unit. That enemy unit must take a Battle-shock test and when doing so, subtract 1 from the result.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["charge"],
+      "fluff": "The sheer terrifying ferocity of World Eaters on the charge is enough to hurl even the most resolute foes into disarray or paralyse them with unreasoning fear. ",
+      "detachment": "Karagar’s Rampagers",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Unstoppable Fury",
+      "id": "6274c69e-b96e-5869-b501-0991dcaa5032",
+      "cost": 1,
+      "turn": "either",
+      "target": "That World Eaters unit.",
+      "when": "Fight phase, just before a World Eaters unit from your army Consolidates.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a Consolidation move, it can move up to 6\" instead of up to 3\", provided your unit ends that Consolidation move within Engagement Range of one or more enemy units.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "fluff": "As the Butchers’ Nails thunder in their brains, the World Eaters rampage ever deeper into the enemy lines and smash aside every impediment.",
+      "detachment": "Karagar’s Rampagers",
+      "faction_id": "basic"
+    }
+  ],
   "enhancements": [
     {
       "name": "Skulls for Khorne",
@@ -423,7 +436,8 @@
       "keywords": ["World Eaters"],
       "excludes": [],
       "description": "Each time the bearer destroys an enemy unit with a melee attack, roll one D6: on a 2+, you gain 1CP.",
-      "detachment": ""
+      "detachment": "Karagar’s Rampagers",
+      "faction_id": "basic"
     },
     {
       "name": "Arch-slaughterer",
@@ -431,11 +445,9 @@
       "keywords": ["World Eaters"],
       "excludes": [],
       "description": "Melee weapons equipped by the bearer have the [PRECISION] ability.",
-      "detachment": ""
+      "detachment": "Karagar’s Rampagers",
+      "faction_id": "basic"
     }
   ],
-  "isCombatPatrol": true,
-  "name": "Combat Patrol: Karagar’s Rampagers",
-  "id": "6765aad6-633a-5d79-b760-afdabd482e72",
-  "updated": "2024-05-04T10:03:10.240Z"
+  "updated": "2024-05-04T14:38:48.977Z"
 }

@@ -1,50 +1,18 @@
 {
-  "stratagems": [
-    {
-      "name": "Blood-Maddened Banishment",
-      "id": "3896d780-3a57-5dae-a99e-38e35dc817c3",
-      "cost": 1,
-      "turn": "either",
-      "target": "One Bloodletters unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "when": "Fight phase, just after an enemy unit has selected its targets.",
-      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["fight"],
-      "fluff": "Even as they are hurled back into the warp these daemons stab and hack, seeking to drag more mortal souls screaming into damnation alongside them.",
-      "detachment": ""
-    },
-    {
-      "name": "Manifest Hate",
-      "id": "0261b7fc-456f-5671-9bee-e5a3180e69cf",
-      "cost": 1,
-      "turn": "opponents",
-      "target": "One Legiones Daemonica unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
-      "effect": "Until the end of the phase, models in your unit have a 4+ invulnerable save.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["shooting"],
-      "fluff": "So elemental is the hatred these daemons hold for their foes that it can overcome physical wounds, reknitting their ravaged corporeal manifestations in blazes of crimson light.",
-      "detachment": ""
-    },
-    {
-      "name": "Empyric Predators",
-      "id": "cf38e212-26c0-5e96-9e54-6e87f7e8c2c4",
-      "cost": 1,
-      "turn": "opponents",
-      "target": "One Flesh Hounds unit from your army that is within 6\" of that enemy unit and has not been targeted with the Fire Overwatch Stratagem this phase.",
-      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
-      "effect": "Your unit can make a Normal move of up to 6\".",
-      "restrictions": "Until the end of the phase, your unit cannot be targeted with the Fire Overwatch Stratagem.",
-      "type": "Strategic Ploy",
-      "phase": ["movement"],
-      "fluff": "These Flesh Hounds flicker in and out of realspace, their warped howls echoing from all sides as they encircle their prey, their sulphur-wreathed forms confounding the enemy’s aim until it is far too late…",
-      "detachment": ""
-    }
-  ],
+  "name": "Combat Patrol: Butchers of Hyporia",
+  "id": "7ff00815-6dd8-5427-b2b7-ef70f3edeb3b",
+  "isCombatPatrol": true,
+  "faction_id": "basic",
+  "detachments": ["Butchers of Hyporia"],
   "datasheets": [
     {
+      "name": "Kh’har’ret the Butcher",
+      "id": "770112c1-0754-5fef-ba5e-5050727db36f",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": ["Deep Strike", "Leader"],
         "damaged": {
@@ -73,12 +41,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Kh’har’ret the Butcher (1 model)"],
       "factions": ["Legiones Daemonica"],
       "fluff": "Risen victorious from the horrors of the Skullpit, Bloodmasters lead Khorne’s Bloodletter hosts in battle. Kh’har’ret the Butcher is such an entity, a malevolent distillation of murderous rage and slaughter given monstrous corporeal form and unleashed to lead the daemons of Khorne to war.",
-      "id": "99ec02fa-740a-59bb-8f55-7b8c7d478e8c",
-      "combatPatrol": true,
       "keywords": [
         "Infantry",
         "Character",
@@ -108,10 +73,8 @@
           ]
         }
       ],
-      "name": "Kh’har’ret the Butcher",
       "points": [],
       "rangedWeapons": [],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -127,9 +90,20 @@
         }
       ],
       "transport": "",
-      "wargear": ["None"]
+      "wargear": ["None"],
+      "leads": {
+        "units": ["Bloodletters"],
+        "extra": ""
+      }
     },
     {
+      "name": "Bloodletters",
+      "id": "6f08e096-d7a4-52f2-9f86-4544f43cd7a8",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": ["Deep Strike"],
         "damaged": {
@@ -151,12 +125,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Bloodletters (10 models)"],
       "factions": ["Legiones Daemonica"],
       "fluff": "Bloodletters are hate and violence made manifest. Attacking in berserk packs or in martial, marching ranks, they hack apart their victims with monstrous hellblades. These weapons glow red-hot with the fury of their wielders, and even the slightest wound they inflict can see the victim bled dry in seconds.",
-      "id": "25ab9e93-fc0c-52b2-b6a7-5ca993d15f1b",
-      "combatPatrol": true,
       "keywords": [
         "Infantry",
         "Battleline",
@@ -185,10 +156,8 @@
           ]
         }
       ],
-      "name": "Bloodletters",
       "points": [],
       "rangedWeapons": [],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -207,106 +176,13 @@
       "wargear": ["None"]
     },
     {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["The Shadow of Chaos"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "5+"
-        },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": [
-          {
-            "name": "Collar of Khorne",
-            "description": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks.",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "name": "Collar of Khorne",
-            "description": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ]
-      },
-      "cardType": "DataCard",
-      "composition": ["Flesh Hounds (5 models)"],
-      "factions": ["Legiones Daemonica"],
-      "fluff": "These hunting hounds of Khorne track the terror spoor of their prey across interstellar gulfs. The brass collars about their necks ward away even the most potent sorceries of their desperate prey, before the slavering Flesh Hounds launch themselves onto their victims swinging vicious",
-      "id": "60704431-7e62-56a6-beba-9c10ad2a1171",
+      "name": "Bloodcrushers",
+      "id": "9ca35bcb-6580-5ef0-a934-be1110901714",
       "combatPatrol": true,
-      "keywords": ["Beast", "Chaos", "Daemon", "Khorne", "Flesh Hounds"],
-      "leader": "",
-      "loadout": "■ 1 Gore Hound is equipped with: burning roar; gore-drenched fangs; collar of Khorne.\n■ 4 Flesh Hounds are equipped with: gore-drenched fangs; collar of Khorne.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Gore-drenched fangs",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Flesh Hounds",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Torrent", "Ignores Cover"],
-              "name": "Burning Roar",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
       "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "12\"",
-          "name": "Flesh Hounds",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "7+",
-          "t": "4",
-          "w": "2"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": [],
         "damaged": {
@@ -328,12 +204,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Bloodcrushers (3 models)"],
       "factions": ["Legiones Daemonica"],
       "fluff": "Unholy fusions of daemon and machine, Juggernauts of Khorne are unstoppable beasts whose blood is fire and whose every step is thunder. When ridden into battle by Bloodletters, they act as shock cavalry, bearing down on their victims like battering rams. The destruction when their charge hits home is hideous to behold.",
-      "id": "d42abf8d-e119-5791-90a7-70a1183240c7",
-      "combatPatrol": true,
       "keywords": ["Mounted", "Chaos", "Daemon", "Khorne", "Bloodcrushers"],
       "leader": "",
       "loadout": "■ 1 model is equipped with: hellblade; Juggernaut’s bladed horn.\n■ 1 model is equipped with: hellblade; Juggernaut’s bladed horn; daemonic icon.\n■ 1 model is equipped with: hellblade; Juggernaut’s bladed horn; instrument of Chaos.",
@@ -371,10 +244,8 @@
           ]
         }
       ],
-      "name": "Bloodcrushers",
       "points": [],
       "rangedWeapons": [],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -391,9 +262,157 @@
       ],
       "transport": "",
       "wargear": ["None"]
+    },
+    {
+      "name": "Flesh Hounds",
+      "id": "003b9abe-831a-5879-ac12-0114bc60bc05",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["The Shadow of Chaos"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "5+"
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": [
+          {
+            "name": "Collar of Khorne",
+            "description": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Collar of Khorne",
+            "description": "The bearer has the Feel No Pain 3+ ability against Psychic Attacks.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ]
+      },
+      "composition": ["Flesh Hounds (5 models)"],
+      "factions": ["Legiones Daemonica"],
+      "fluff": "These hunting hounds of Khorne track the terror spoor of their prey across interstellar gulfs. The brass collars about their necks ward away even the most potent sorceries of their desperate prey, before the slavering Flesh Hounds launch themselves onto their victims swinging vicious",
+      "keywords": ["Beast", "Chaos", "Daemon", "Khorne", "Flesh Hounds"],
+      "leader": "",
+      "loadout": "■ 1 Gore Hound is equipped with: burning roar; gore-drenched fangs; collar of Khorne.\n■ 4 Flesh Hounds are equipped with: gore-drenched fangs; collar of Khorne.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Gore-drenched fangs",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Burning Roar",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "12\"",
+          "name": "Flesh Hounds",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "7+",
+          "t": "4",
+          "w": "2"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
     }
   ],
-  "detachments": [],
+  "stratagems": [
+    {
+      "name": "Blood-Maddened Banishment",
+      "id": "3896d780-3a57-5dae-a99e-38e35dc817c3",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Bloodletters unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "fluff": "Even as they are hurled back into the warp these daemons stab and hack, seeking to drag more mortal souls screaming into damnation alongside them.",
+      "detachment": "Butchers of Hyporia",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Manifest Hate",
+      "id": "0261b7fc-456f-5671-9bee-e5a3180e69cf",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Legiones Daemonica unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, models in your unit have a 4+ invulnerable save.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "fluff": "So elemental is the hatred these daemons hold for their foes that it can overcome physical wounds, reknitting their ravaged corporeal manifestations in blazes of crimson light.",
+      "detachment": "Butchers of Hyporia",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Empyric Predators",
+      "id": "cf38e212-26c0-5e96-9e54-6e87f7e8c2c4",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One Flesh Hounds unit from your army that is within 6\" of that enemy unit and has not been targeted with the Fire Overwatch Stratagem this phase.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+      "effect": "Your unit can make a Normal move of up to 6\".",
+      "restrictions": "Until the end of the phase, your unit cannot be targeted with the Fire Overwatch Stratagem.",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "fluff": "These Flesh Hounds flicker in and out of realspace, their warped howls echoing from all sides as they encircle their prey, their sulphur-wreathed forms confounding the enemy’s aim until it is far too late…",
+      "detachment": "Butchers of Hyporia",
+      "faction_id": "basic"
+    }
+  ],
   "enhancements": [
     {
       "name": "Incarnated Rage",
@@ -401,7 +420,8 @@
       "keywords": ["Legiones Daemonica"],
       "excludes": [],
       "description": "While the bearer is leading a unit, melee weapons equipped by models in that unit have the [LETHAL HITS] ability.",
-      "detachment": ""
+      "detachment": "Butchers of Hyporia",
+      "faction_id": "basic"
     },
     {
       "name": "Warp Locus (Aura)",
@@ -409,11 +429,9 @@
       "keywords": ["Legiones Daemonica"],
       "excludes": [],
       "description": "The area of the battlefield within 3\" of the bearer is considered to be within your army’s Shadow of Chaos.",
-      "detachment": ""
+      "detachment": "Butchers of Hyporia",
+      "faction_id": "basic"
     }
   ],
-  "isCombatPatrol": true,
-  "name": "Combat Patrol: Butchers of Hyporia",
-  "id": "7ff00815-6dd8-5427-b2b7-ef70f3edeb3b",
-  "updated": "2024-05-04T10:03:10.226Z"
+  "updated": "2024-05-04T14:38:48.959Z"
 }
