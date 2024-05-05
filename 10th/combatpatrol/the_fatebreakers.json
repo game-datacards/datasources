@@ -1,292 +1,18 @@
 {
-  "stratagems": [
-    {
-      "name": "Whip-fast Reactions",
-      "id": "55f16d94-bb9f-500b-a461-a559ceedcbf3",
-      "cost": 1,
-      "turn": "either",
-      "target": "One Aeldari Infantry or Aeldari Mounted unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
-      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["fight", "shooting"],
-      "fluff": "So fast are the reactions of the Aeldari that they can dodge the bullets, blasts and blades of their enemies with insulting ease.",
-      "detachment": ""
-    },
-    {
-      "name": "Storm of Shots",
-      "id": "9462b6ac-618a-59e1-9633-83b8543d26b4",
-      "cost": 1,
-      "turn": "your",
-      "target": "Up to two Aeldari Mounted units from your army, or one Aeldari Infantry unit from your army.",
-      "when": "Your Shooting phase.",
-      "effect": "Until the end of the phase, each time a model in one of those units makes an attack, add 1 to the Hit roll.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["shooting"],
-      "fluff": "With eerie synchronicity, the Aeldari focus their fire into a punishing hail that suddenly and completely eradicates its luckless target.",
-      "detachment": ""
-    },
-    {
-      "name": "Zephyr-swift",
-      "id": "f4912f96-3882-5142-959f-fdd8d676d4a2",
-      "cost": 1,
-      "turn": "your",
-      "target": "Up to two Aeldari Mounted units from your army that are not within Engagement Range of one or more enemy units, or one Aeldari Infantry unit from your army that is not within Engagement Range of one or more enemy units.",
-      "when": "End of your Shooting phase.",
-      "effect": "Each of those units can make a Normal move of up to 6\".",
-      "restrictions": "Until the end of the turn, those units are not eligible to declare a charge.",
-      "type": "Strategic Ploy",
-      "phase": ["shooting"],
-      "fluff": "Trying to fight the Aeldari is like doing battle with smoke and air. Moving with incredible swiftness and agility, they have struck and faded again before their enemies even register their presence.",
-      "detachment": ""
-    }
-  ],
+  "name": "Combat Patrol: The Fatebreakers",
+  "id": "7cb81c05-3342-5d13-91e2-191333d17d64",
+  "isCombatPatrol": true,
+  "faction_id": "basic",
+  "detachments": ["The Fatebreakers"],
   "datasheets": [
     {
-      "abilities": {
-        "core": [],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Strands of Fate"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "name": "Defenders of Fate",
-            "description": "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6 and add it to your Fate dice pool displaying the result you just rolled.",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "name": "Crewed Platform",
-            "description": "When the last Guardian Defender model in this unit is destroyed, any remaining Heavy Weapon Platform models in this unit are also destroyed.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["Guardian Defenders (11 models)"],
-      "factions": ["Aeldari"],
-      "fluff": "Guardian Defenders are versatile support troops capable of unleashing withering hails of fire from their shuriken catapults. They also man anti-grav Heavy Weapon Platforms that can be fitted with a variety of powerful guns with which to sunder enemy armour or mow down swathes of infantry.",
-      "id": "dff35a09-3399-56d0-8c16-3801f800357d",
+      "name": "Farseer Iraneth",
+      "id": "6118ed36-8dc8-50a4-867d-9583cd845798",
       "combatPatrol": true,
-      "keywords": ["Infantry", "Battleline", "Guardians", "Guardian Defenders"],
-      "leader": "",
-      "loadout": "■ 10 Guardian Defenders are equipped with: shuriken catapult; close combat weapon.\n■ 1 Heavy Weapon Platform is equipped with: starcannon; close combat weapon.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "3"
-            }
-          ]
-        }
-      ],
-      "name": "Guardian Defenders",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": ["Assault"],
-              "name": "Shuriken catapult",
-              "range": "18\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": [],
-              "name": "Starcannon",
-              "range": "36\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
       "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "7\"",
-          "name": "Guardian Defender",
-          "oc": "2",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "4+",
-          "t": "3",
-          "w": "1"
-        },
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "7\"",
-          "name": "Heavy Weapon Platform",
-          "oc": "0",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "4+",
-          "t": "3",
-          "w": "2"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
-      "abilities": {
-        "core": ["Deadly Demise 1"],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
+      "variant": "full",
+      "faction_id": "basic",
       "cardType": "DataCard",
-      "composition": ["Wraithlord (1 model)"],
-      "factions": ["Aeldari"],
-      "fluff": "Wraithlords are lithe, towering wraithbone constructs powered by the spirit of a fallen Aeldari hero. These mighty ghost warriors can wield a swathe of armaments, ranging from energised fists and sentient scimitars to elegant weapons capable of destroying battle tanks or infantry squads at a distance.",
-      "id": "97d00630-43f0-5063-9c3b-a23f407385bf",
-      "combatPatrol": true,
-      "keywords": ["Monster", "Walker", "Wraith Construct", "Wraithlord"],
-      "leader": "",
-      "loadout": "■ This model is equipped with: bright lance; 2 shuriken catapults; ghostglaive.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "8",
-              "damage": "2",
-              "keywords": [],
-              "name": "Ghostglaive – Sweep",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "7"
-            },
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "4",
-              "damage": "D6+1",
-              "keywords": [],
-              "name": "Ghostglaive – Strike",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "10"
-            }
-          ]
-        }
-      ],
-      "name": "Wraithlord",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "D6+2",
-              "keywords": [],
-              "name": "Bright lance",
-              "range": "36\"",
-              "skill": "4+",
-              "strength": "12"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": ["Assault"],
-              "name": "Shuriken catapult",
-              "range": "18\"",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "8\"",
-          "name": "Wraithlord",
-          "oc": "3",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "2+",
-          "t": "11",
-          "w": "10"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
       "abilities": {
         "core": ["Leader"],
         "damaged": {
@@ -315,12 +41,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Farseer Iraneth (1 model)"],
       "factions": ["Aeldari"],
       "fluff": "Iraneth’s followers look to her for leadership in battle. Her psychic abilities allow her to uncover the enemy’s intentions and calculate the effects of their attacks. Her mind is her greatest weapon, for with a thought she can summon terrifying storms of coruscating eldritch energy or manipulate the causality of fate itself.",
-      "id": "5f5df7ff-d0e9-5f3d-8406-798fb6586935",
-      "combatPatrol": true,
       "keywords": ["Character", "Infantry", "Psyker", "Farseer", "Iraneth"],
       "leader": "This model can be attached to the following unit: Guardian Defenders",
       "loadout": "■ This model is equipped with: Eldritch Storm; shuriken pistol; singing spear.",
@@ -342,7 +65,6 @@
           ]
         }
       ],
-      "name": "Farseer Iraneth",
       "points": [],
       "rangedWeapons": [
         {
@@ -394,7 +116,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -410,9 +131,150 @@
         }
       ],
       "transport": "",
+      "wargear": ["None"],
+      "leads": {
+        "units": ["Guardian Defenders"],
+        "extra": ""
+      }
+    },
+    {
+      "name": "Guardian Defenders",
+      "id": "ec7b599c-83d0-5da9-8e85-da9557bcbc51",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
+      "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Strands of Fate"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Defenders of Fate",
+            "description": "At the end of your Command phase, for each objective marker you control that has one or more units from your army with this ability within range of it, roll one D6 and add it to your Fate dice pool displaying the result you just rolled.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Crewed Platform",
+            "description": "When the last Guardian Defender model in this unit is destroyed, any remaining Heavy Weapon Platform models in this unit are also destroyed.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "composition": ["Guardian Defenders (11 models)"],
+      "factions": ["Aeldari"],
+      "fluff": "Guardian Defenders are versatile support troops capable of unleashing withering hails of fire from their shuriken catapults. They also man anti-grav Heavy Weapon Platforms that can be fitted with a variety of powerful guns with which to sunder enemy armour or mow down swathes of infantry.",
+      "keywords": ["Infantry", "Battleline", "Guardians", "Guardian Defenders"],
+      "leader": "",
+      "loadout": "■ 10 Guardian Defenders are equipped with: shuriken catapult; close combat weapon.\n■ 1 Heavy Weapon Platform is equipped with: starcannon; close combat weapon.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "3"
+            }
+          ]
+        }
+      ],
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Assault"],
+              "name": "Shuriken catapult",
+              "range": "18\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": [],
+              "name": "Starcannon",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "7\"",
+          "name": "Guardian Defender",
+          "oc": "2",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "4+",
+          "t": "3",
+          "w": "1"
+        },
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "7\"",
+          "name": "Heavy Weapon Platform",
+          "oc": "0",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "4+",
+          "t": "3",
+          "w": "2"
+        }
+      ],
+      "transport": "",
       "wargear": ["None"]
     },
     {
+      "name": "Windriders",
+      "id": "e854d097-279e-58a2-9d83-4490c43e9825",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": [],
         "damaged": {
@@ -448,12 +310,9 @@
         ],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Windriders (6 models)"],
       "factions": ["Aeldari"],
       "fluff": "The jetbikes ridden by the Windriders can cross leagues in the space of a few heartbeats, and to master such incredible machines takes great skill. Windriders are expected to do this and more, for in battle they must be able to shred what resistance they encounter with devastating bursts of fire from their jetbikes’ attached weapons.",
-      "id": "e92afdeb-bee6-5c0a-bfc5-453ab2f9baa8",
-      "combatPatrol": true,
       "keywords": ["Mounted", "Fly", "Windriders"],
       "leader": "",
       "loadout": "■ 4 Windriders are equipped with: twin shuriken catapult; close combat weapon.\n■ 2 Windriders are equipped with: scatter laser; close combat weapon.",
@@ -475,7 +334,6 @@
           ]
         }
       ],
-      "name": "Windriders",
       "points": [],
       "rangedWeapons": [
         {
@@ -511,7 +369,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -528,9 +385,171 @@
       ],
       "transport": "",
       "wargear": ["None"]
+    },
+    {
+      "name": "Wraithlord",
+      "id": "ac5d435c-5feb-5207-9613-8bdb546361a2",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
+      "abilities": {
+        "core": ["Deadly Demise 1"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": [],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "composition": ["Wraithlord (1 model)"],
+      "factions": ["Aeldari"],
+      "fluff": "Wraithlords are lithe, towering wraithbone constructs powered by the spirit of a fallen Aeldari hero. These mighty ghost warriors can wield a swathe of armaments, ranging from energised fists and sentient scimitars to elegant weapons capable of destroying battle tanks or infantry squads at a distance.",
+      "keywords": ["Monster", "Walker", "Wraith Construct", "Wraithlord"],
+      "leader": "",
+      "loadout": "■ This model is equipped with: bright lance; 2 shuriken catapults; ghostglaive.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "8",
+              "damage": "2",
+              "keywords": [],
+              "name": "Ghostglaive – Sweep",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "7"
+            },
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "4",
+              "damage": "D6+1",
+              "keywords": [],
+              "name": "Ghostglaive – Strike",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "10"
+            }
+          ]
+        }
+      ],
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "D6+2",
+              "keywords": [],
+              "name": "Bright lance",
+              "range": "36\"",
+              "skill": "4+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Assault"],
+              "name": "Shuriken catapult",
+              "range": "18\"",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "8\"",
+          "name": "Wraithlord",
+          "oc": "3",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "2+",
+          "t": "11",
+          "w": "10"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
     }
   ],
-  "detachments": [],
+  "stratagems": [
+    {
+      "name": "Whip-fast Reactions",
+      "id": "55f16d94-bb9f-500b-a461-a559ceedcbf3",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Aeldari Infantry or Aeldari Mounted unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "fluff": "So fast are the reactions of the Aeldari that they can dodge the bullets, blasts and blades of their enemies with insulting ease.",
+      "detachment": "The Fatebreakers",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Storm of Shots",
+      "id": "9462b6ac-618a-59e1-9633-83b8543d26b4",
+      "cost": 1,
+      "turn": "your",
+      "target": "Up to two Aeldari Mounted units from your army, or one Aeldari Infantry unit from your army.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time a model in one of those units makes an attack, add 1 to the Hit roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "fluff": "With eerie synchronicity, the Aeldari focus their fire into a punishing hail that suddenly and completely eradicates its luckless target.",
+      "detachment": "The Fatebreakers",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Zephyr-swift",
+      "id": "f4912f96-3882-5142-959f-fdd8d676d4a2",
+      "cost": 1,
+      "turn": "your",
+      "target": "Up to two Aeldari Mounted units from your army that are not within Engagement Range of one or more enemy units, or one Aeldari Infantry unit from your army that is not within Engagement Range of one or more enemy units.",
+      "when": "End of your Shooting phase.",
+      "effect": "Each of those units can make a Normal move of up to 6\".",
+      "restrictions": "Until the end of the turn, those units are not eligible to declare a charge.",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "fluff": "Trying to fight the Aeldari is like doing battle with smoke and air. Moving with incredible swiftness and agility, they have struck and faded again before their enemies even register their presence.",
+      "detachment": "The Fatebreakers",
+      "faction_id": "basic"
+    }
+  ],
   "enhancements": [
     {
       "name": "Foresight (Psychic)",
@@ -538,7 +557,8 @@
       "keywords": ["Aeldari"],
       "excludes": [],
       "description": "Once per turn, you can target the bearer’s unit with the Fire Overwatch Stratagem for 0CP. If the bearer’s unit is within range of an objective marker you control, hits are scored on unmodified Hit rolls of 4+ while resolving that Stratagem. Otherwise, hits are scored on unmodified Hit rolls of 5+ while resolving that Stratagem.",
-      "detachment": ""
+      "detachment": "The Fatebreakers",
+      "faction_id": "basic"
     },
     {
       "name": "Eldritch Might (Psychic)",
@@ -546,11 +566,9 @@
       "keywords": ["Aeldari"],
       "excludes": [],
       "description": "Each time the bearer makes a Psychic attack, re-roll a Hit roll of 1, re-roll a Wound roll of 1 and re-roll a Damage roll of 1.",
-      "detachment": ""
+      "detachment": "The Fatebreakers",
+      "faction_id": "basic"
     }
   ],
-  "isCombatPatrol": true,
-  "name": "Combat Patrol: The Fatebreakers",
-  "id": "7cb81c05-3342-5d13-91e2-191333d17d64",
-  "updated": "2024-05-04T10:03:10.274Z"
+  "updated": "2024-05-04T14:38:49.021Z"
 }
