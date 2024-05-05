@@ -1,50 +1,126 @@
 {
-  "stratagems": [
-    {
-      "name": "An Evaluation of Mettle",
-      "id": "fa50e5f1-a454-5aa4-a176-a35dda6a645b",
-      "cost": 1,
-      "turn": "either",
-      "target": "One Adeptus Mechanicus unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
-      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["fight", "shooting"],
-      "fluff": "The hardiness of even basic mechanical augmentations can be correlated to the faith of those who bear them. Or so the Tech-Priests proclaim to Skitarii under attack.",
-      "detachment": ""
-    },
-    {
-      "name": "Acceptable Risk Ration",
-      "id": "a6b2426e-40b5-5044-993f-76456e9367ad",
-      "cost": 1,
-      "turn": "your",
-      "target": "One Adeptus Mechanicus unit from your army that has not been selected to shoot this phase.",
-      "when": "Your Shooting phase.",
-      "effect": "Until the end of the phase, improve the Armour Penetration characteristic of ranged weapons equipped by models in your unit by 1 and those weapons have the [HAZARDOUS] ability.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["shooting"],
-      "fluff": "In an emotionless calculus of war, the Machine God’s warriors are tasked to unburden their weapons of fail-safes and overcharge limits. The risk to the weapons’ wielders is deemed insignificant when weighed against the potential for greater immediate carnage amongst the foe.",
-      "detachment": ""
-    },
-    {
-      "name": "Optimised Efficiency",
-      "id": "daed4243-9a37-55f5-b3bd-f385c1d350d4",
-      "cost": 1,
-      "turn": "your",
-      "target": "That Adeptus Mechanicus unit.",
-      "when": "Your Movement phase, just after an Adeptus Mechanicus unit from your army Falls Back.",
-      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
-      "restrictions": "",
-      "type": "Strategic Ploy",
-      "phase": ["movement"],
-      "fluff": "Heeding the holy word of the Omnissiah, his warriors optimise their own brain chemistry to grant them a machinelike focus on their sacred priorities.",
-      "detachment": ""
-    }
-  ],
+  "name": "Combat Patrol: Purge Corps Deltic-9",
+  "id": "825f680b-79d2-5e49-bbb2-ac7bd43dde4e",
+  "isCombatPatrol": true,
+  "faction_id": "basic",
+  "detachments": ["Purge Corps Deltic-9"],
   "datasheets": [
     {
+      "name": "Manipulus Skand",
+      "id": "a871a1c3-076d-5202-bac4-f493d3f90478",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
+      "abilities": {
+        "core": ["Leader"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": [],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "5+"
+        },
+        "other": [
+          {
+            "name": "Galvanic Field",
+            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "composition": [],
+      "factions": ["Adeptus Mechanicus"],
+      "fluff": "Amongst the augmentations of Manipulus Skand is a galvanic cell from which he channels powerful charges of the Motive Force. He can drain power sources dry and use the energy to overcharge the cells of his warriors’ armaments, all while he defends the works of the Omnissiah with blasts from his own arcane weapons.",
+      "keywords": [
+        "Imperium",
+        "Infantry",
+        "Character",
+        "Cult Mechanicus",
+        "Tech-Priest",
+        "Manipulus",
+        "Manipulus Skand"
+      ],
+      "leader": "This model can be attached to the following unit:  ■ Skitarii Vanguard",
+      "loadout": "■ This model is equipped with: transonic cannon; Omnissian staff.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "4",
+              "damage": "2",
+              "keywords": [],
+              "name": "Omnissian staf",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "6"
+            }
+          ]
+        }
+      ],
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "2",
+              "keywords": ["Torrent", "Devastating Wounds"],
+              "name": "Transonic cannon",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "6\"",
+          "name": "Manipulus Skand",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "2+",
+          "t": "4",
+          "w": "4"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"],
+      "leads": {
+        "units": ["Skitarii Vanguard"],
+        "extra": ""
+      }
+    },
+    {
+      "name": "Skitarii Vanguard",
+      "id": "a589d06d-b69f-5db8-ba6b-ff435e2a3fa3",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": [],
         "damaged": {
@@ -73,17 +149,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
-      "composition": [
-        "The Skitarii Vanguard Alpha model is equipped with: Mechanicus pistol; Alpha combat weapon.",
-        "1 Skitarii Vanguard model is equipped with: arc rifle; close combat weapon.",
-        "1 Skitarii Vanguard model is equipped with:plasma caliver; close combat weapon.",
-        "7 Skitarii Vanguard models are equipped with: radium carbine; close combat weapon."
-      ],
+      "composition": [],
       "factions": ["Adeptus Mechanicus"],
       "fluff": "The hyper-irradiated shot unleashed by the Skitarii Vanguard’s carbines ensure those that would otherwise survive the injury still sicken and die. Vanguard are infused with this radiation, emitting a debilitating aura they themselves are inured to. This hardens them to fight in the most toxic war zones to defend the Tech-Priests’ interests.",
-      "id": "545bfcca-d944-54d6-b612-1fbf1e59eee9",
-      "combatPatrol": true,
       "keywords": [
         "Infantry",
         "Battleline",
@@ -92,6 +160,7 @@
         "Vanguard"
       ],
       "leader": "",
+      "loadout": "■ The Skitarii Vanguard Alpha model is equipped with: Mechanicus pistol; Alpha combat weapon.\n■ 1 Skitarii Vanguard model is equipped with: arc rifle; close combat weapon.\n■ 1 Skitarii Vanguard model is equipped with:plasma caliver; close combat weapon.\n■ 7 Skitarii Vanguard models are equipped with: radium carbine; close combat weapon. ",
       "meleeWeapons": [
         {
           "active": true,
@@ -126,7 +195,6 @@
           ]
         }
       ],
-      "name": "Skitarii Vanguard",
       "points": [],
       "rangedWeapons": [
         {
@@ -209,7 +277,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -228,257 +295,13 @@
       "wargear": ["None"]
     },
     {
-      "abilities": {
-        "core": ["Leader"],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": [],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "5+"
-        },
-        "other": [
-          {
-            "name": "Galvanic Field",
-            "description": "While this model is leading a unit, weapons equipped by models in that unit have the [LETHAL HITS] ability.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": [
-        "This model is equipped with: transonic cannon; Omnissian staff."
-      ],
-      "factions": ["Adeptus Mechanicus"],
-      "fluff": "Amongst the augmentations of Manipulus Skand is a galvanic cell from which he channels powerful charges of the Motive Force. He can drain power sources dry and use the energy to overcharge the cells of his warriors’ armaments, all while he defends the works of the Omnissiah with blasts from his own arcane weapons.",
-      "id": "0209e5fb-78a8-569e-b3f7-61e0d0a9cd7a",
+      "name": "Serberys Sulphurhounds",
+      "id": "333f61af-c53a-58af-9196-81fd89847e69",
       "combatPatrol": true,
-      "keywords": [
-        "Imperium",
-        "Infantry",
-        "Character",
-        "Cult Mechanicus",
-        "Tech-Priest",
-        "Manipulus",
-        "Manipulus Skand"
-      ],
-      "leader": "This model can be attached to the following unit:  ■ Skitarii Vanguard",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "4",
-              "damage": "2",
-              "keywords": [],
-              "name": "Omnissian staf",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "6"
-            }
-          ]
-        }
-      ],
-      "name": "Manipulus Skand",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "2",
-              "keywords": ["Torrent", "Devastating Wounds"],
-              "name": "Transonic cannon",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
       "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "6\"",
-          "name": "Manipulus Skand",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "2+",
-          "t": "4",
-          "w": "4"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
-      "abilities": {
-        "core": ["Deep Strike"],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Doctrina Imperatives"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "5+"
-        },
-        "other": [
-          {
-            "name": "Searing Conflagration",
-            "description": "Each time a model in this unit makes an attack with a phosphor torch that targets an enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this unit is also within 6\" of one or more friendly Adeptus Mechanicus Battleline units, each time such an attack targets such a unit, you can re-roll the Wound roll instead.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
+      "variant": "full",
+      "faction_id": "basic",
       "cardType": "DataCard",
-      "composition": [
-        "The Pteraxii Sterylizor Alpha model is equipped with: flechette blaster; taser goad.",
-        "Every Pteraxii Sterylizor model is equipped with: phosphor torch; Pteraxii talons."
-      ],
-      "factions": ["Adeptus Mechanicus"],
-      "fluff": "Streylizors are eradicators of cybernetic parasite organisms within ships and manufactorums, and eagerly unleash the chemical fire of their phosphor torches upon the Machine God’s foes. They descend in flocks from the sky upon membranous wing-packs, their vicious talons primed, eager to see their enemies writhe in flames.",
-      "id": "c2cae0ff-1d6d-54ad-8f3f-f2b1b18f5450",
-      "combatPatrol": true,
-      "keywords": [
-        "Infantry",
-        "Fly",
-        "Jump Pack",
-        "Imperium",
-        "Skitarii",
-        "Pteraxii",
-        "Sterylizors"
-      ],
-      "leader": "",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": ["Sustained Hits 2"],
-              "name": "Taser goad",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "6"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "2",
-              "damage": "1",
-              "keywords": [],
-              "name": "Pteraxii talons",
-              "range": "Melee",
-              "skill": "4+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "name": "Pteraxii Sterylizors",
-      "points": [],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "5",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Flechette blaster",
-              "range": "12\"",
-              "skill": "4+",
-              "strength": "3"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Torrent", "Ignores Cover"],
-              "name": "Phosphor torch",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "3"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "12\"",
-          "name": "Pteraxii Sterylizor Alpha",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "4+",
-          "t": "4",
-          "w": "2"
-        },
-        {
-          "active": true,
-          "ld": "7+",
-          "m": "12\"",
-          "name": "Pteraxii Sterylizor",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "4+",
-          "t": "4",
-          "w": "2"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
       "abilities": {
         "core": [],
         "damaged": {
@@ -507,18 +330,12 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
-      "composition": [
-        "The Serberys Sulphurhound Alpha model is equipped with: Mechanicus pistol; sulphur breath; cavalry arc maul; clawed limbs.",
-        "1 Serberys Sulphurhound model is equipped with: phosphor blast carbine; phosphor pistol; sulphur breath; clawed limbs.",
-        "1 Serberys Sulphurhound model is equipped with: 2 phosphor pistols; sulphur breath; clawed limbs."
-      ],
+      "composition": [],
       "factions": ["Adeptus Mechanicus"],
       "fluff": "Sulphurhound cavalry squadrons are aggressive shock troops and line-breakers. The loping, mechanical beasts breathe gouts of incinerating phosphor and disembowel the foe with slashing claws, while the elite Skitarii riders unload incandescent pistol fire as they smash through defence lines, before circling back for survivors.",
-      "id": "766d924f-db7c-5ccf-866d-5ed47c6bdfbe",
-      "combatPatrol": true,
       "keywords": ["Mounted", "Imperium", "Skitarii", "Serberys Sulphurhounds"],
       "leader": "",
+      "loadout": "■ The Serberys Sulphurhound Alpha model is equipped with: Mechanicus pistol; sulphur breath; cavalry arc maul; clawed limbs.\n■ 1 Serberys Sulphurhound model is equipped with: phosphor blast carbine; phosphor pistol; sulphur breath; clawed limbs.\n■ 1 Serberys Sulphurhound model is equipped with: 2 phosphor pistols; sulphur breath; clawed limbs.",
       "meleeWeapons": [
         {
           "active": true,
@@ -557,7 +374,6 @@
           ]
         }
       ],
-      "name": "Serberys Sulphurhounds",
       "points": [],
       "rangedWeapons": [
         {
@@ -625,7 +441,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -654,9 +469,203 @@
       ],
       "transport": "",
       "wargear": ["None"]
+    },
+    {
+      "name": "Pteraxii Sterylizors",
+      "id": "b677a98d-0d50-5933-abb1-fcab24820879",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
+      "abilities": {
+        "core": ["Deep Strike"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Doctrina Imperatives"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "5+"
+        },
+        "other": [
+          {
+            "name": "Searing Conflagration",
+            "description": "Each time a model in this unit makes an attack with a phosphor torch that targets an enemy unit within range of an objective marker, re-roll a Wound roll of 1. If this unit is also within 6\" of one or more friendly Adeptus Mechanicus Battleline units, each time such an attack targets such a unit, you can re-roll the Wound roll instead.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "composition": [],
+      "factions": ["Adeptus Mechanicus"],
+      "fluff": "Streylizors are eradicators of cybernetic parasite organisms within ships and manufactorums, and eagerly unleash the chemical fire of their phosphor torches upon the Machine God’s foes. They descend in flocks from the sky upon membranous wing-packs, their vicious talons primed, eager to see their enemies writhe in flames.",
+      "keywords": [
+        "Infantry",
+        "Fly",
+        "Jump Pack",
+        "Imperium",
+        "Skitarii",
+        "Pteraxii",
+        "Sterylizors"
+      ],
+      "leader": "",
+      "loadout": "■ The Pteraxii Sterylizor Alpha model is equipped with: flechette blaster; taser goad.\n■ Every Pteraxii Sterylizor model is equipped with: phosphor torch; Pteraxii talons.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": ["Sustained Hits 2"],
+              "name": "Taser goad",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Pteraxii talons",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "points": [],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "5",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Flechette blaster",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Phosphor torch",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "3"
+            }
+          ]
+        }
+      ],
+      "stats": [
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "12\"",
+          "name": "Pteraxii Sterylizor Alpha",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "4+",
+          "t": "4",
+          "w": "2"
+        },
+        {
+          "active": true,
+          "ld": "7+",
+          "m": "12\"",
+          "name": "Pteraxii Sterylizor",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "4+",
+          "t": "4",
+          "w": "2"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
     }
   ],
-  "detachments": [],
+  "stratagems": [
+    {
+      "name": "An Evaluation of Mettle",
+      "id": "fa50e5f1-a454-5aa4-a176-a35dda6a645b",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Adeptus Mechanicus unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "fluff": "The hardiness of even basic mechanical augmentations can be correlated to the faith of those who bear them. Or so the Tech-Priests proclaim to Skitarii under attack.",
+      "detachment": "Purge Corps Deltic-9",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Acceptable Risk Ration",
+      "id": "a6b2426e-40b5-5044-993f-76456e9367ad",
+      "cost": 1,
+      "turn": "your",
+      "target": "One Adeptus Mechanicus unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, improve the Armour Penetration characteristic of ranged weapons equipped by models in your unit by 1 and those weapons have the [HAZARDOUS] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "fluff": "In an emotionless calculus of war, the Machine God’s warriors are tasked to unburden their weapons of fail-safes and overcharge limits. The risk to the weapons’ wielders is deemed insignificant when weighed against the potential for greater immediate carnage amongst the foe.",
+      "detachment": "Purge Corps Deltic-9",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Optimised Efficiency",
+      "id": "daed4243-9a37-55f5-b3bd-f385c1d350d4",
+      "cost": 1,
+      "turn": "your",
+      "target": "That Adeptus Mechanicus unit.",
+      "when": "Your Movement phase, just after an Adeptus Mechanicus unit from your army Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "fluff": "Heeding the holy word of the Omnissiah, his warriors optimise their own brain chemistry to grant them a machinelike focus on their sacred priorities.",
+      "detachment": "Purge Corps Deltic-9",
+      "faction_id": "basic"
+    }
+  ],
   "enhancements": [
     {
       "name": "Aspergilla of Tarentum",
@@ -664,7 +673,8 @@
       "keywords": ["Adeptus Mechanicus"],
       "excludes": [],
       "description": "Each time an attack targets the bearer’s unit, subtract 1 from the Wound roll.",
-      "detachment": ""
+      "detachment": "Purge Corps Deltic-9",
+      "faction_id": "basic"
     },
     {
       "name": "Overcharged Electropositors",
@@ -672,11 +682,9 @@
       "keywords": ["Adeptus Mechanicus"],
       "excludes": [],
       "description": "Add 6\" to the Range characteristic of ranged weapons equipped by models in the bearer’s unit, and those weapons have the [IGNORES COVER] ability.",
-      "detachment": ""
+      "detachment": "Purge Corps Deltic-9",
+      "faction_id": "basic"
     }
   ],
-  "isCombatPatrol": true,
-  "name": "Combat Patrol: Purge Corps Deltic-9",
-  "id": "825f680b-79d2-5e49-bbb2-ac7bd43dde4e",
-  "updated": "2024-05-04T10:03:10.258Z"
+  "updated": "2024-05-05T15:41:54.021Z"
 }

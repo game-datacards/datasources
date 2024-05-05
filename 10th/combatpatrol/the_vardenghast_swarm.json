@@ -1,50 +1,18 @@
 {
-  "stratagems": [
-    {
-      "name": "Hyper-reactive",
-      "id": "0dd978d4-d2b6-50cf-a45d-5e415b038552",
-      "cost": 1,
-      "turn": "either",
-      "target": "One Tyranids Infantry unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
-      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["fight", "shooting"],
-      "fluff": "Inhumanly swift reaction times and tensile muscle-spasms allow the warrior organisms to weave and dodge around their foes’ attacks.",
-      "detachment": ""
-    },
-    {
-      "name": "Voracious Assault",
-      "id": "12208ea0-04ba-5eb4-a397-e09261d6105e",
-      "cost": 1,
-      "turn": "either",
-      "target": "One Tyranids unit from your army that has not been selected to shoot or fight this phase.",
-      "when": "Your Shooting phase or the Fight phase.",
-      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets the closest eligible target, you can re-roll the Hit roll.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["fight", "shooting"],
-      "fluff": "Whether by rending their prey apart at close quarters or slaying them with hails of carnivorous or acidic projectiles at range, the Tyranids’ every attack serves to render their victims down into just more biomass to feed the swarm.",
-      "detachment": ""
-    },
-    {
-      "name": "Teeming Broods",
-      "id": "c1138bca-e056-5679-b52f-89d8ec01a160",
-      "cost": 1,
-      "turn": "your",
-      "target": "One Termagants unit from your army. You can use this Stratagem on that unit even if it is destroyed.",
-      "when": "The Reinforcements step of your Movement phase.",
-      "effect": "If your unit is not destroyed, return up to D6 destroyed models to it. Otherwise, add a new unit to your army identical to your destroyed unit, in Strategic Reserves, containing 2D6 models.",
-      "restrictions": "",
-      "type": "Strategic Ploy",
-      "phase": ["movement"],
-      "fluff": "Numerous, expendable and seemingly without number, fresh waves of Termagants flow into battle by the minute. ",
-      "detachment": ""
-    }
-  ],
+  "name": "Combat Patrol: The Vardenghast Swarm",
+  "id": "24294eb3-bba6-533d-85b7-327191cf00ec",
+  "isCombatPatrol": true,
+  "faction_id": "basic",
+  "detachments": ["The Vardenghast Swarm"],
   "datasheets": [
     {
+      "name": "Terror of Vardenghast",
+      "id": "d21502b8-d409-55e8-a9e9-ffa3230b6c49",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": ["Deep Strike"],
         "damaged": {
@@ -73,12 +41,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Terror of Vardenghast (1 model)"],
       "factions": ["Tyranids"],
       "fluff": "As a Tyranid Prime, the Terror of Vardenghast possesses all the physical and synaptic might of an alpha war-beast while also boasting the frightening speed and manoeuvrability imparted by its huge leathery wings. Swooping down into the midst of the foe, it rends and tears until naught remains but corpses and fleeing prey. ",
-      "id": "9a4a25e8-f03c-5fba-89ca-d9f60e1488f8",
-      "combatPatrol": true,
       "keywords": [
         "Infantry",
         "Character",
@@ -109,10 +74,8 @@
           ]
         }
       ],
-      "name": "Terror of Vardenghast",
       "points": [],
       "rangedWeapons": [],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -131,6 +94,13 @@
       "wargear": ["None"]
     },
     {
+      "name": "Psychophage",
+      "id": "7b32b8f0-3c4e-5ba4-9606-61f78afa096d",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": ["Deadly Demise 1", "Feel No Pain 5+"],
         "damaged": {
@@ -159,12 +129,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Psychophage (1 model)"],
       "factions": ["Tyranids"],
       "fluff": "These monsters stampede into battle with frightening speed. They devour any prey organism in their paths, but especially favour those victims with psychic abilities. How they metabolise such esoteric powers is unclear, but doing so allows them to project surges of psychocorrosive ash that deflagrate their victims’ minds and souls.",
-      "id": "d5a50301-0327-56f8-8e31-1741c01c7b28",
-      "combatPatrol": true,
       "keywords": ["Monster", "Great Devourer", "Harvester", "Psychophage"],
       "leader": "",
       "loadout": "■ This model is equipped with: psychoclastic torrent; talons and betentacled maw",
@@ -186,7 +153,6 @@
           ]
         }
       ],
-      "name": "Psychophage",
       "points": [],
       "rangedWeapons": [
         {
@@ -206,7 +172,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -225,88 +190,13 @@
       "wargear": ["None"]
     },
     {
-      "abilities": {
-        "core": ["Fights First", "Infiltrators", "Stealth"],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Synapse"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "6+"
-        },
-        "other": [
-          {
-            "name": "Pouncing Leap",
-            "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["Von Ryan’s Leapers (3 models)"],
-      "factions": ["Tyranids"],
-      "fluff": "Stealthy hunters and expert ambushers, Von Ryan’s Leapers are swift, agile and especially lethal when fighting in dense terrain. Akin to living mines, they lie in wait at the optimum locations to cause as much damage as possible. When they sense the perfect time to strike, they burst forth to butcher all around in a murderous frenzy.",
-      "id": "e072d88d-2084-536a-97bc-206e99ae6d3c",
+      "name": "Termagants",
+      "id": "1f055a14-1a0a-5eaa-b242-4d2931b9e772",
       "combatPatrol": true,
-      "keywords": [
-        "Infantry",
-        "Great Devourer",
-        "Vanguard Invader",
-        "Von Ryan’s Leapers"
-      ],
-      "leader": "",
-      "loadout": "■ Every model is equipped with: Leaper’s talons.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "6",
-              "damage": "1",
-              "keywords": [],
-              "name": "Leaper’s talons",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Von Ryan’s Leapers",
-      "points": [],
-      "rangedWeapons": [],
       "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "8+",
-          "m": "10\"",
-          "name": "Von Ryan’s Leapers",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": false,
-          "sv": "4+",
-          "t": "5",
-          "w": "3"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": [],
         "damaged": {
@@ -342,12 +232,9 @@
         ],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Termagants (20 models)"],
       "factions": ["Tyranids"],
       "fluff": "Scuttling predators that attack in huge swarms, Termagants were originally spawned to roam the tight arterial passages of hive ships and hunt intruders. They harry their prey with a hail of firepower, seeking always to outflank and envelop their victims as they erode their numbers.",
-      "id": "00fb3f2f-b6be-50ac-935d-eed391fe6ac1",
-      "combatPatrol": true,
       "keywords": [
         "Infantry",
         "Battleline",
@@ -375,7 +262,6 @@
           ]
         }
       ],
-      "name": "Termagants",
       "points": [],
       "rangedWeapons": [
         {
@@ -395,7 +281,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -414,6 +299,13 @@
       "wargear": ["None"]
     },
     {
+      "name": "Barbgaunts",
+      "id": "cf7731b6-b486-5f3f-a2ad-28fa60992cab",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
       "abilities": {
         "core": [],
         "damaged": {
@@ -442,12 +334,9 @@
         "special": [],
         "wargear": []
       },
-      "cardType": "DataCard",
       "composition": ["Barbgaunts (5 models)"],
       "factions": ["Tyranids"],
       "fluff": "Barbgaunts are little more than living weapons, their bodies and barblaunchers slaved to the will of a pulsating ganglio-parasite that piggybacks them into battle. There, they unleash volleys of chitinous barbs that detonate with the fury of violent muscle-spasms and transfix nearby victims with hails of jagged projectiles.",
-      "id": "f9800d2a-a62c-5ad0-9374-39169c572515",
-      "combatPatrol": true,
       "keywords": ["Infantry", "Great Devourer", "Barbgaunts"],
       "leader": "",
       "loadout": "■ Every model is equipped with: barblauncher; chitinous claws and teeth.",
@@ -469,7 +358,6 @@
           ]
         }
       ],
-      "name": "Barbgaunts",
       "points": [],
       "rangedWeapons": [
         {
@@ -489,7 +377,6 @@
           ]
         }
       ],
-      "source": "40k-10e",
       "stats": [
         {
           "active": true,
@@ -506,9 +393,139 @@
       ],
       "transport": "",
       "wargear": ["None"]
+    },
+    {
+      "name": "Von Ryan’s Leapers",
+      "id": "4d9a9748-a962-5dbd-901f-f1a54e3513d6",
+      "combatPatrol": true,
+      "source": "40k-10e",
+      "variant": "full",
+      "faction_id": "basic",
+      "cardType": "DataCard",
+      "abilities": {
+        "core": ["Fights First", "Infiltrators", "Stealth"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Synapse"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "6+"
+        },
+        "other": [
+          {
+            "name": "Pouncing Leap",
+            "description": "You can target this unit with the Heroic Intervention Stratagem for 0CP, and can do so even if you have already used that Stratagem on a different unit this phase.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "composition": ["Von Ryan’s Leapers (3 models)"],
+      "factions": ["Tyranids"],
+      "fluff": "Stealthy hunters and expert ambushers, Von Ryan’s Leapers are swift, agile and especially lethal when fighting in dense terrain. Akin to living mines, they lie in wait at the optimum locations to cause as much damage as possible. When they sense the perfect time to strike, they burst forth to butcher all around in a murderous frenzy.",
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Vanguard Invader",
+        "Von Ryan’s Leapers"
+      ],
+      "leader": "",
+      "loadout": "■ Every model is equipped with: Leaper’s talons.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "6",
+              "damage": "1",
+              "keywords": [],
+              "name": "Leaper’s talons",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "points": [],
+      "rangedWeapons": [],
+      "stats": [
+        {
+          "active": true,
+          "ld": "8+",
+          "m": "10\"",
+          "name": "Von Ryan’s Leapers",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": false,
+          "sv": "4+",
+          "t": "5",
+          "w": "3"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
     }
   ],
-  "detachments": [],
+  "stratagems": [
+    {
+      "name": "Hyper-reactive",
+      "id": "0dd978d4-d2b6-50cf-a45d-5e415b038552",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Tyranids Infantry unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "fluff": "Inhumanly swift reaction times and tensile muscle-spasms allow the warrior organisms to weave and dodge around their foes’ attacks.",
+      "detachment": "The Vardenghast Swarm",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Voracious Assault",
+      "id": "12208ea0-04ba-5eb4-a397-e09261d6105e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Tyranids unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets the closest eligible target, you can re-roll the Hit roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "fluff": "Whether by rending their prey apart at close quarters or slaying them with hails of carnivorous or acidic projectiles at range, the Tyranids’ every attack serves to render their victims down into just more biomass to feed the swarm.",
+      "detachment": "The Vardenghast Swarm",
+      "faction_id": "basic"
+    },
+    {
+      "name": "Teeming Broods",
+      "id": "c1138bca-e056-5679-b52f-89d8ec01a160",
+      "cost": 1,
+      "turn": "your",
+      "target": "One Termagants unit from your army. You can use this Stratagem on that unit even if it is destroyed.",
+      "when": "The Reinforcements step of your Movement phase.",
+      "effect": "If your unit is not destroyed, return up to D6 destroyed models to it. Otherwise, add a new unit to your army identical to your destroyed unit, in Strategic Reserves, containing 2D6 models.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "fluff": "Numerous, expendable and seemingly without number, fresh waves of Termagants flow into battle by the minute. ",
+      "detachment": "The Vardenghast Swarm",
+      "faction_id": "basic"
+    }
+  ],
   "enhancements": [
     {
       "name": "Psychostatic Veil",
@@ -516,7 +533,8 @@
       "keywords": ["Winged Tyranid Prime"],
       "excludes": [],
       "description": "The bearer has the Lone Operative ability and a 4+ invulnerable save. In addition, each time a melee attack targets the bearer, subtract 1 from the Hit roll.",
-      "detachment": ""
+      "detachment": "The Vardenghast Swarm",
+      "faction_id": "basic"
     },
     {
       "name": "Secretion Goad",
@@ -524,11 +542,9 @@
       "keywords": ["Winged Tyranid Prime"],
       "excludes": [],
       "description": "Once per turn, when a friendly Tyranids unit within 6\" of the bearer is selected to shoot or fight, the bearer can use this ability. If it does, until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in that friendly unit by 1.",
-      "detachment": ""
+      "detachment": "The Vardenghast Swarm",
+      "faction_id": "basic"
     }
   ],
-  "isCombatPatrol": true,
-  "name": "Combat Patrol: The Vardenghast Swarm",
-  "id": "24294eb3-bba6-533d-85b7-327191cf00ec",
-  "updated": "2024-05-04T10:03:10.282Z"
+  "updated": "2024-05-04T14:38:49.029Z"
 }
