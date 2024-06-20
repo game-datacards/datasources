@@ -39,7 +39,7 @@
       "faction_id": "TYR",
       "fluff": "Vast, burrowing worm-forms, Mawlocs hunt by sensing even the smallest vibrations on the surface above them. Once they have located prey, the Mawlocs surge upwards in an eruption of bedrock and soil, yawning maws swallowing everything above them before they plunge back under the surface again.",
       "id": "22c5eef9-80de-594a-be01-19174a72b2a9",
-      "keywords": ["Monster", "Great Devourer", "Mawloc"],
+      "keywords": ["Monster", "Great Devourer", "Vanguard Invader", "Mawloc"],
       "leader": "",
       "loadout": "This model is equipped with: distensible jaw; Mawloc scything talons.",
       "meleeWeapons": [
@@ -1097,7 +1097,12 @@
       "faction_id": "TYR",
       "fluff": "Serpentine bioforms capable of a terrifying turn of speed, Raveners are made doubly dangerous by their ability to tunnel swiftly through even solid bedrock. Often assaulting their prey from below, Raveners are especially vicious and predatory warrior organisms used as shock troops by the Hive Mind.",
       "id": "cc767c7b-3110-509f-814e-98d9c58d1964",
-      "keywords": ["Infantry", "Great Devourer", "Raveners"],
+      "keywords": [
+        "Infantry",
+        "Great Devourer",
+        "Vanguard Invader",
+        "Raveners"
+      ],
       "leader": "",
       "loadout": "Every model is equipped with: thoracic bio-weapon; Ravener claws and talons.",
       "meleeWeapons": [
@@ -1371,7 +1376,7 @@
               "name": "Bio-plasmic cannon",
               "range": "36\"",
               "skill": "3+",
-              "strength": "8"
+              "strength": "9"
             }
           ]
         }
@@ -1763,107 +1768,6 @@
     },
     {
       "abilities": {
-        "core": ["Deadly Demise D6"],
-        "damaged": {
-          "range": "1-6 WOUNDS REMAINING",
-          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "showDamagedAbility": true,
-          "showDescription": true
-        },
-        "faction": ["Synapse"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "name": "Overgrown Barbs",
-            "description": "In your Shooting phase, after this model has shot, select one enemy unit (excluding Titanic units) that was hit by one or more of those attacks. Until the start of your next turn, while this model is on the battlefield, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Barbed Hierodule"],
-      "factions": ["Tyranids"],
-      "faction_id": "TYR",
-      "fluff": "First recorded during the invasion of Hamman’s World, these looming monstrosities are protected by thick armour plates that allow them to shrug off all but the most devastating of attacks, while their bio-cannons are able to hold off the foe as they charge forward to finish the prey at close quarters.",
-      "id": "82098053-7629-50ba-ac7d-8b3df944f84f",
-      "imperialArmour": true,
-      "keywords": ["Monster", "Great Devourer", "Barbed Hierodule"],
-      "leader": "",
-      "loadout": "This model is equipped with: 2 bio-cannons; Hierodule scything talons.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "8",
-              "damage": "D3+3",
-              "keywords": [],
-              "name": "Hierodule scything talons",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "14"
-            }
-          ]
-        }
-      ],
-      "name": "Barbed Hierodule",
-      "points": [
-        {
-          "cost": "340",
-          "models": "1",
-          "active": true
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "D6+3",
-              "damage": "2",
-              "keywords": ["Blast"],
-              "name": "Bio-cannon",
-              "range": "48\"",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "8+",
-          "m": "8\"",
-          "name": "Barbed Hierodule",
-          "oc": "5",
-          "showDamagedMarker": true,
-          "showName": false,
-          "sv": "2+",
-          "t": "12",
-          "w": "18"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
-    },
-    {
-      "abilities": {
         "core": ["Deep Strike"],
         "damaged": {
           "description": "",
@@ -1921,7 +1825,7 @@
       "name": "Ripper Swarms",
       "points": [
         {
-          "cost": "60",
+          "cost": "50",
           "models": "3",
           "active": true
         },
@@ -1931,7 +1835,7 @@
           "active": true
         },
         {
-          "cost": "20",
+          "cost": "25",
           "models": "1",
           "active": true
         }
@@ -2033,17 +1937,17 @@
       "name": "Biovores",
       "points": [
         {
-          "cost": "225",
+          "cost": "150",
           "models": "3",
           "active": true
         },
         {
-          "cost": "150",
+          "cost": "100",
           "models": "2",
           "active": true
         },
         {
-          "cost": "75",
+          "cost": "50",
           "models": "1",
           "active": true
         }
@@ -2548,7 +2452,7 @@
               "active": true,
               "ap": "-4",
               "attacks": "2",
-              "damage": "2D6",
+              "damage": "D6+6",
               "keywords": ["Heavy"],
               "name": "Rupture cannon",
               "range": "48\"",
@@ -2629,6 +2533,7 @@
         "Infantry",
         "Great Devourer",
         "Vanguard Invader",
+        "Synapse",
         "Neurolictor"
       ],
       "leader": "",
@@ -2654,7 +2559,7 @@
       "name": "Neurolictor",
       "points": [
         {
-          "cost": "80",
+          "cost": "90",
           "models": "1",
           "active": true
         }
@@ -2911,7 +2816,8 @@
         }
       ],
       "transport": "",
-      "wargear": ["None"]
+      "wargear": ["None"],
+      "leadBy": ["Neurotyrant"]
     },
     {
       "abilities": {
@@ -2948,7 +2854,7 @@
       "faction_id": "TYR",
       "fluff": "Trygons are battle-tank-sized tunnelling machines. As they dig through the substrata of the prey world, they excavate huge tunnels for other Tyranid beasts to exploit. At the same time, the rasping of their chitinous plates builds up a powerful bio-electric charge that the Trygons can unleash as a weapon.",
       "id": "6c4e1665-c826-50e4-8db9-304ca1d6fb74",
-      "keywords": ["Monster", "Great Devourer", "Trygon"],
+      "keywords": ["Monster", "Great Devourer", "Vanguard Invader", "Trygon"],
       "leader": "",
       "loadout": "This model is equipped with: bio-electric pulse; Trygon scything talons.",
       "meleeWeapons": [
@@ -3022,7 +2928,7 @@
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": ["Synapse"],
+        "faction": ["Shadow in the Warp", "Synapse"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -3060,6 +2966,7 @@
         "Psyker",
         "Great Devourer",
         "Vanguard Invader",
+        "Synapse",
         "Broodlord"
       ],
       "leader": "This model can be attached to the following unit: ■ Genestealers",
@@ -3263,7 +3170,7 @@
           "showDamagedAbility": false,
           "showDescription": true
         },
-        "faction": ["Synapse"],
+        "faction": ["Shadow in the Warp", "Synapse"],
         "invul": {
           "info": "",
           "showAtTop": true,
@@ -3301,6 +3208,7 @@
         "Fly",
         "Great Devourer",
         "Vanguard Invader",
+        "Synapse",
         "Parasite of Mortrex"
       ],
       "leader": "",
@@ -3637,12 +3545,12 @@
       "name": "Mucolid Spores",
       "points": [
         {
-          "cost": "100",
+          "cost": "60",
           "models": "2",
           "active": true
         },
         {
-          "cost": "50",
+          "cost": "30",
           "models": "1",
           "active": true
         }
@@ -4126,7 +4034,7 @@
         "Synapse",
         "Neurotyrant"
       ],
-      "leader": "This model can be attached to the following units: ■ Neurogaunts ■ Tyrant Guard",
+      "leader": "This model can be attached to the following units: ■ Neurogaunts ■ Tyrant Guard ■ Zoanthropes",
       "loadout": "This model is equipped with: Psychic Scream; Neurotyrant claws and lashes.",
       "meleeWeapons": [
         {
@@ -4190,7 +4098,7 @@
       "transport": "",
       "wargear": ["None"],
       "leads": {
-        "units": ["Neurogaunts", "Tyrant Guard"],
+        "units": ["Neurogaunts", "Tyrant Guard", "Zoanthropes"],
         "extra": ""
       }
     },
@@ -4972,7 +4880,7 @@
       "name": "Tervigon",
       "points": [
         {
-          "cost": "190",
+          "cost": "175",
           "models": "1",
           "active": true
         }
@@ -5014,107 +4922,6 @@
       "wargear": [
         "This model’s massive scything talons can be replaced with 1 massive crushing claws."
       ]
-    },
-    {
-      "abilities": {
-        "core": ["Deadly Demise D6"],
-        "damaged": {
-          "range": "1-6 WOUNDS REMAINING",
-          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "showDamagedAbility": true,
-          "showDescription": true
-        },
-        "faction": ["Synapse"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "name": "Irresistible Force",
-            "description": "This model is eligible to declare a charge in a turn in which it Fell Back.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Scythed Hierodule"],
-      "factions": ["Tyranids"],
-      "faction_id": "TYR",
-      "fluff": "The Hive Mind trusts only in the power of flesh. The Hierodule is a clear embodiment of this principle, a living weapon of monstrous power whose scythed limbs can cut apart war machines with ease. Any that survive the power of its talons are subjected to torrents of mutagenic acid from the symbiote-beast that grows between its armoured plates.",
-      "id": "1c91f934-1556-543b-96e8-826242b407c6",
-      "imperialArmour": true,
-      "keywords": ["Monster", "Great Devourer", "Scythed Hierodule"],
-      "leader": "",
-      "loadout": "This model is equipped with: bio-acid spray; Hierodule scything talons.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "10",
-              "damage": "D3+3",
-              "keywords": [],
-              "name": "Melee",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "14"
-            }
-          ]
-        }
-      ],
-      "name": "Scythed Hierodule",
-      "points": [
-        {
-          "cost": "330",
-          "models": "1",
-          "active": true
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3D6",
-              "damage": "1",
-              "keywords": ["Torrent"],
-              "name": "Bio-acid spray",
-              "range": "18\"",
-              "skill": "N/A",
-              "strength": "6"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "8+",
-          "m": "12\"",
-          "name": "Scythed Hierodule",
-          "oc": "5",
-          "showDamagedMarker": true,
-          "showName": false,
-          "sv": "2+",
-          "t": "12",
-          "w": "18"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -5608,7 +5415,7 @@
           },
           {
             "name": "Onslaught (Aura, Psychic)",
-            "description": "While a friendly Tyranids unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] ability.",
+            "description": "While a friendly Tyranids unit is within 6\" of this model, ranged weapons equipped by models in that unit have the [ASSAULT] and [LETHAL HITS] abilities.",
             "showAbility": true,
             "showDescription": true
           }
@@ -6521,10 +6328,10 @@
     {
       "name": "Neuronode",
       "id": "75b4aa52-8263-51af-80a0-cd97ae7b89cf",
-      "cost": "30",
+      "cost": "20",
       "keywords": ["Tyranids"],
       "excludes": [],
-      "description": "Tyranids model only. After both players have deployed their armies and determined who has the first turn, you can select up to three Vanguard Invader units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "description": "Tyranids model only. After both players have deployed their armies, you can select up to three Vanguard Invader units from your army and redeploy all of those units. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
       "faction_id": "TYR",
       "detachment": "Vanguard Onslaught"
     },
@@ -6882,7 +6689,7 @@
       "turn": "your",
       "target": "One Tyranids Monster unit from your army that has not been selected to move this phase.",
       "when": "Your Movement phase.",
-      "effect": "Until the end of the phase, models in your unit can move through enemy models as if they were friendly models, and until the end of the phase any Desperate Escape tests those models must take are automatically passed.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a Normal, Advance or Fall Back move, it can move through models (excluding Titanic models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after its unit has moved, roll one D6: on a 1, your unit is Battle-shocked.",
       "restrictions": "",
       "type": "Strategic Ploy",
       "phase": ["movement"],
@@ -7116,5 +6923,5 @@
       "detachment": "Vanguard Onslaught"
     }
   ],
-  "updated": "2024-05-24T07:52:58.771Z"
+  "updated": "2024-06-20T11:14:26.128Z"
 }
