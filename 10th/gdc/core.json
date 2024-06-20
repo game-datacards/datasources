@@ -13,9 +13,9 @@
       "turn": "either",
       "phase": ["any"],
       "fluff": "A great commander can bend even the vagaries of fate and fortune to their will, the better to ensure victory",
-      "when": "Any phase, just after you make an Advance roll, a Charge roll, a Desperate Escape test or a Hazardous test for a unit from your army, or a Hit roll, a Wound roll, a Damage roll or a saving throw for a model in that unit, or a roll to determine the number of attacks made with a weapon equipped by a model in that unit.",
-      "target": "That unit from your army.",
-      "effect": "You re-roll that roll, test or saving throw.",
+      "when": "Any phase, just after you make an Advance roll, a Charge roll, a Desperate Escape test or a Hazardous test for a unit from your army, or a Hit roll, a Wound roll, a Damage roll or a saving throw for a model in that unit, or a roll to determine the number of attacks made with a weapon equipped by a model in that unit. If you are using fast dice rolling (pg 24), this Stratagem can still be used after rolling multiple rolls or saving throws at once.",
+      "target": "That unit or model from your army.",
+      "effect": "You re-roll that roll, test or saving throw. If you are using fast dice rolling, select one of those rolls or saving throws to re-roll.",
       "restrictions": "",
       "id": "a6ee2a41-08de-5074-a280-d462d39e3221"
     },
@@ -56,7 +56,7 @@
       "phase": ["command"],
       "fluff": "Indifferent to their own survival, these warriors hold \ntheir ground against seemingly impossible odds.",
       "when": "Battle-shock step of your Command phase, just before you take a Battle-shock test taken for a unit from your army.",
-      "target": "A unit from your army that must take a Battle-shock test.",
+      "target": "That unit from your army.",
       "effect": "Your unit automatically passes that Battle-shock test.",
       "restrictions": "You cannot use this Stratagem more than once per battle.",
       "id": "5b3e02bf-cad7-5fff-a5f1-4dfa8c760250"
@@ -70,8 +70,8 @@
       "phase": ["shooting"],
       "fluff": "Priming their hand-held projectiles, these warriors\ndraw back and hurl death into the enemy’s midst.",
       "when": "Your Shooting phase.",
-      "target": "One Grenades unit from your army that is not within Engagement Range of any enemy units and has not been selected to shoot this phase.",
-      "effect": "Select one enemy unit that is not within Engagement Range of any units from your army and is within 8\" of and visible to your Grenades unit. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
+      "target": "One Grenades unit from your army (excluding units that Advanced, Fell Back or have shot this turn) that is not within Engagement Range of one or more enemy units",
+      "effect": "Select one Grenades model in your unit and one enemy unit that is not within Engagement Range of one or more units from your army and is within 8\" of and visible to your Grenades model. Roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
       "restrictions": "",
       "id": "52dab932-b07b-506e-959d-27ee2e60bbd5"
     },
@@ -83,9 +83,9 @@
       "turn": "your",
       "phase": ["charge"],
       "fluff": "Ramming the foe with a speeding vehicle may be an\nunsubtle tactic, but it is a murderously effective one.",
-      "when": "Your Charge phase.",
-      "target": "One Vehicle unit from your army.",
-      "effect": "Until the end of the phase, after your unit ends a Charge move, select one enemy unit within Engagement Range of it, then select one melee weapon your unit is equipped with. Roll a number of D6 equal to that weapon’s Strength characteristic. If that Strength characteristic is greater than that enemy unit’s Toughness characteristic, roll two additional D6. For each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+      "when": " Your Charge phase, just after a Vehicle unit from your army ends a Charge move.",
+      "target": "That Vehicle unit",
+      "effect": "Select one enemy unit within Engagement Range of your unit, and select one Vehicle model in your unit that is within Engagement Range of that enemy unit. Roll a number of D6 equal to the Toughness characteristic of the selected Vehicle model. For each 5+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
       "restrictions": "",
       "id": "d25811f9-66de-5e35-8b1c-23884fea64da"
     },
@@ -113,7 +113,7 @@
       "fluff": "A hail of wildfire can drive back advancing foes.",
       "when": "Your opponent’s Movement or Charge phase, just after an enemy unit is set up or when an enemy unit starts or ends a Normal, Advance, Fall Back or Charge move. ",
       "target": "One unit from your army that is within 24\" of that enemy unit and that would be eligible to shoot if it were your Shooting phase.",
-      "effect": "If that enemy unit is visible to your unit, your unit can shoot that enemy unit as if it were your Shooting phase.",
+      "effect": ": If that enemy unit is visible to your unit, your unit can shoot that enemy unit as if it were your Shooting phase.",
       "restrictions": "You cannot target a Titanic unit with this Stratagem. Until the end of the phase, each time a model in your unit makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon’s Ballistic Skill or any modifiers. You can only use this Stratagem once per turn.",
       "id": "70cf80df-528e-5d6e-9e31-3881f5546b65"
     },
@@ -147,7 +147,7 @@
     },
     {
       "name": "Heroic Intervention",
-      "cost": 2,
+      "cost": 1,
       "type": "Strategic Ploy",
       "detachment": "core",
       "turn": "opponents",
