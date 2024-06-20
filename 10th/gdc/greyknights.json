@@ -148,7 +148,7 @@
           },
           {
             "name": "Vortex of Doom (Psychic)",
-            "description": "In your Shooting phase, you can select one enemy unit within 18\" of and visible to this Psyker and roll one D6: on a 1, this Psyker’s unit suffers D6 mortal wounds; on a 2-5, that enemy unit suffers 2D3 mortal wounds; on a 6, that enemy unit suffers 2D6 mortal wounds.",
+            "description": "In your Shooting phase, you can select one enemy unit within 18\" of and visible to this Psyker (excluding units with the Lone Operative ability that are not part of an Attached unit and are not within 12\" of this Psyker). If you do, roll one D6: on a 1, this Psyker’s unit suffers D6 mortal wounds; on a 2-5, that enemy unit suffers 2D3 mortal wounds; on a 6, that enemy unit suffers 2D6 mortal wounds.",
             "showAbility": true,
             "showDescription": true
           }
@@ -534,7 +534,7 @@
       "name": "Grey Knights Land Raider Redeemer",
       "points": [
         {
-          "cost": "260",
+          "cost": "285",
           "models": "1",
           "active": true
         }
@@ -1019,7 +1019,7 @@
       "name": "Grey Knights Stormraven Gunship",
       "points": [
         {
-          "cost": "265",
+          "cost": "280",
           "models": "1",
           "active": true
         }
@@ -2479,7 +2479,7 @@
       "name": "Castellan Crowe",
       "points": [
         {
-          "cost": "75",
+          "cost": "90",
           "models": "1",
           "active": true
         }
@@ -2566,7 +2566,7 @@
           },
           {
             "name": "Omnissiah’s Blessing",
-            "description": "In your Command phase, you can select one friendly Grey Knights Vehicle model within 3\" of this model. That Vehicle model regains up to D3 lost wounds.",
+            "description": "In your Command phase, you can select one friendly Grey Knights Vehicle model within 3\" of this model. That Vehicle model regains up to D3 lost wounds. Each model can only be selected for this ability once per turn.",
             "showAbility": true,
             "showDescription": true
           },
@@ -3030,7 +3030,7 @@
       "name": "Grand Master in Nemesis Dreadknight",
       "points": [
         {
-          "cost": "200",
+          "cost": "210",
           "models": "1",
           "active": true
         }
@@ -3348,7 +3348,7 @@
       "name": "Grey Knights Land Raider Crusader",
       "points": [
         {
-          "cost": "230",
+          "cost": "220",
           "models": "1",
           "active": true
         }
@@ -4940,7 +4940,7 @@
       "name": "Nemesis Dreadknight",
       "points": [
         {
-          "cost": "195",
+          "cost": "205",
           "models": "1",
           "active": true
         }
@@ -5771,6 +5771,21 @@
       "detachment": "Teleport Strike Force"
     },
     {
+      "name": "Haloed in Soulfire",
+      "id": "9b05e421-2fde-5f45-98ad-a2ac89876fbe",
+      "cost": 2,
+      "turn": "your",
+      "target": "One Grey Knights Psyker unit from your army that is arriving using the Deep Strike or Teleport Assault abilities this phase.",
+      "when": "Your Movement phase.",
+      "effect": "Until the start of your next Movement phase, your unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["movement"],
+      "faction_id": "GK",
+      "fluff": "The blazing glare of ancient technology and the shrouding coils of the immaterium often linger, obscuring the Grey Knights’ presence.",
+      "detachment": "Teleport Strike Force"
+    },
+    {
       "name": "Prognisticated Arrival",
       "id": "c93b512f-387f-59aa-bc1a-ce74914cc6c7",
       "cost": 1,
@@ -5801,21 +5816,6 @@
       "detachment": "Teleport Strike Force"
     },
     {
-      "name": "Haloed in Soulfire",
-      "id": "9b05e421-2fde-5f45-98ad-a2ac89876fbe",
-      "cost": 2,
-      "turn": "your",
-      "target": "One Grey Knights Psyker unit from your army that is arriving using the Deep Strike or Teleport Assault abilities this phase.",
-      "when": "Your Movement phase.",
-      "effect": "Until the start of your next Movement phase, your unit cannot be targeted by ranged attacks unless the attacking model is within 12\".",
-      "restrictions": "",
-      "type": "Strategic Ploy",
-      "phase": ["movement"],
-      "faction_id": "GK",
-      "fluff": "The blazing glare of ancient technology and the shrouding coils of the immaterium often linger, obscuring the Grey Knights’ presence.",
-      "detachment": "Teleport Strike Force"
-    },
-    {
       "name": "Truesilver Armour",
       "id": "3c4de8fc-c2cf-590c-9860-4791203df5be",
       "cost": 1,
@@ -5831,5 +5831,5 @@
       "detachment": "Teleport Strike Force"
     }
   ],
-  "updated": "2024-05-24T07:52:59.532Z"
+  "updated": "2024-06-20T11:14:27.100Z"
 }
