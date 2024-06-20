@@ -728,7 +728,7 @@
       "name": "Knight Paladin",
       "points": [
         {
-          "cost": "425",
+          "cost": "405",
           "models": "1",
           "active": true
         }
@@ -1799,7 +1799,7 @@
       "name": "Cerastus Knight Lancer",
       "points": [
         {
-          "cost": "465",
+          "cost": "430",
           "models": "1",
           "active": true
         }
@@ -3474,7 +3474,7 @@
       "name": "Questoris Knight Styrix",
       "points": [
         {
-          "cost": "460",
+          "cost": "430",
           "models": "1",
           "active": true
         }
@@ -3792,7 +3792,7 @@
       "name": "Cerastus Knight Atrapos",
       "points": [
         {
-          "cost": "440",
+          "cost": "425",
           "models": "1",
           "active": true
         }
@@ -3877,7 +3877,7 @@
     {
       "name": "Revered Knight (Aura)",
       "id": "cf981884-50b3-542f-ad14-b797685c82f9",
-      "cost": "20",
+      "cost": "15",
       "keywords": ["Imperial Knights"],
       "excludes": [],
       "description": "Imperial Knights model only. While a friendly Imperial Knights model is within 6\" of the bearer, improve that model’s Leadership characteristic by 1. If your army is Honoured, increase the range of this Aura ability to 12\".",
@@ -3887,7 +3887,7 @@
     {
       "name": "Mysterious Guardian",
       "id": "e71af31e-3d8b-5dc6-9bdb-5fd92dbaea3d",
-      "cost": "35",
+      "cost": "25",
       "keywords": ["Imperial Knights"],
       "excludes": [],
       "description": "Imperial Knights model only. The bearer has the Deep Strike ability. Once per battle, at the end of your opponent’s turn, if the bearer is not within Engagement Range of any enemy units, it can fade away. If it does, remove it from the battlefield then, in the Reinforcements step of your subsequent Movement phase, set it up anywhere on the battlefield that is more than 9\" horizontally away from all enemy models. If the battle ends and the bearer is not on the battlefield, it is destroyed.",
@@ -3932,6 +3932,21 @@
   "parent_id": "",
   "stratagems": [
     {
+      "name": "Thunderstomp",
+      "id": "608d1be7-65fc-53bd-bbc8-5430627226e2",
+      "cost": 1,
+      "turn": "either",
+      "target": "One Imperial Knights model from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, your model cannot target Monster or Vehicle units, but all melee weapons equipped by your model have the [DEVASTATING WOUNDS] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "QI",
+      "fluff": "The Noble brings their Knight suit’s full weight crashing down with the force of an industrial piledriver. Few can survive such a blow.",
+      "detachment": "Noble Lance"
+    },
+    {
       "name": "Squires’ Duty",
       "id": "f0fe447a-877b-500f-b314-b1def3cab0b4",
       "cost": 1,
@@ -3959,21 +3974,6 @@
       "phase": ["command"],
       "faction_id": "QI",
       "fluff": "When faced with their darkest hour, knightly Nobles rise to the challenge, for nothing shall deter them from fulfilling their duty.",
-      "detachment": "Noble Lance"
-    },
-    {
-      "name": "Thunderstomp",
-      "id": "608d1be7-65fc-53bd-bbc8-5430627226e2",
-      "cost": 1,
-      "turn": "either",
-      "target": "One Imperial Knights model from your army that has not been selected to fight this phase.",
-      "when": "Fight phase.",
-      "effect": "Until the end of the phase, your model cannot target Monster or Vehicle units, but all melee weapons equipped by your model have the [DEVASTATING WOUNDS] ability.",
-      "restrictions": "",
-      "type": "Epic Deed",
-      "phase": ["fight"],
-      "faction_id": "QI",
-      "fluff": "The Noble brings their Knight suit’s full weight crashing down with the force of an industrial piledriver. Few can survive such a blow.",
       "detachment": "Noble Lance"
     },
     {
@@ -4022,5 +4022,5 @@
       "detachment": "Noble Lance"
     }
   ],
-  "updated": "2024-05-24T07:52:59.504Z"
+  "updated": "2024-06-20T11:14:27.059Z"
 }
