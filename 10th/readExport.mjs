@@ -106,7 +106,7 @@ const specialWeaponKeywords = [
   },
 ];
 
-const newDataExportFile = readFile('./temp/data-export-373.json');
+const newDataExportFile = readFile('./temp/data-export-434.json');
 const newDataExport = sortObj(JSON.parse(newDataExportFile));
 
 function parseDataExport(fileName, factionName) {
@@ -211,13 +211,14 @@ function parseDataExport(fileName, factionName) {
       return group.enhancementId === enhancement.id;
     });
 
-    let foundKeywords = newDataExport.enhancement_required_keyword.filter((keyword) => {
-      return keyword.enhancementId === enhancement.id;
-    });
+    // let foundKeywords = newDataExport.enhancement_required_keyword.filter((keyword) => {
+    //   return keyword.enhancementId === enhancement.id;
+    // });
 
-    foundKeywords = foundKeywords.map((kw) => {
-      return kw.keywordId;
-    });
+    // foundKeywords = foundKeywords.map((kw) => {
+    //   return kw.keywordId;
+    // });
+    let foundKeywords = [];
 
     foundKeywordGroups.forEach((group) => {
       const foundKeywordGroupsKeyword = newDataExport.enhancement_required_keyword_group_keyword.filter(
@@ -226,7 +227,7 @@ function parseDataExport(fileName, factionName) {
         }
       );
 
-      foundKeywords = [...foundKeywords, ...foundKeywordGroupsKeyword.map((kw) => kw.keywordId)];
+      foundKeywords = [...foundKeywords,...foundKeywordGroupsKeyword.map((kw) => kw.keywordId)];
     });
 
     let excludedKeywords = newDataExport.enhancement_excluded_keyword.filter((keyword) => {
@@ -833,13 +834,6 @@ function parseDataExport(fileName, factionName) {
           .filter((v) => v)
           .map((v) => v.replaceAll('*', '').trim());
         extraText = unit.leader.substring(unit.leader.indexOf('If this unit’s'));
-        // } else if (unit.leader.includes('(see Drukhari)')) {
-        //   assignedUnits = unit.leader
-        //     .substring(unit.leader.indexOf('■'), unit.leader.indexOf('(see Drukhari)'))
-        //     .split('■')
-        //     .filter((v) => v)
-        //     .map((v) => v.replaceAll('*', '').trim());
-        //     extraText = unit.leader.substring(unit.leader.indexOf('(see Drukhari)'));
       } else {
         assignedUnits = unit.leader
           .substring(unit.leader.indexOf('■'))
@@ -910,6 +904,7 @@ parseDataExport('./gdc/aeldari.json', 'Aeldari');
 parseDataExport('./gdc/drukhari.json', 'Drukhari');
 
 parseDataExport('./gdc/gsc.json', 'Genestealer Cults');
+parseDataExport('./gdc/emperors_children.json', 'Emperor’s Children');
 
 parseDataExport('./gdc/titan.json', 'Adeptus Titanicus');
 
