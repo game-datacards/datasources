@@ -108,7 +108,7 @@ const specialWeaponKeywords = [
   },
 ];
 
-const newDataExportFile = readFile('./temp/data-export-373.json');
+const newDataExportFile = readFile('./temp/data-export-434.json');
 const newDataExport = sortObj(JSON.parse(newDataExportFile));
 
 function readCombatPatrols() {
@@ -120,14 +120,22 @@ function readCombatPatrols() {
 
   combatPatrols.map((combatPatrol) => {
     let newCombatPatrol = {
-      stratagems: [],
-      datasheets: [],
-      detachments: [],
-      enhancements: [],
-      isCombatPatrol: true,
       name: combatPatrol.name,
       id: uuidv5(combatPatrol.name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'),
+      isCombatPatrol: true,
+      faction_id: 'basic',
+      detachments: [],
+      datasheets: [],
+      stratagems: [],
+      enhancements: [],
     };
+    const detachmentName = newCombatPatrol.name
+      .replaceAll('Combat Patrol: ', '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+
+    newCombatPatrol.detachments.push(detachmentName);
+
     const newFaction = newDataExport.faction_keyword.find((faction_keyword) => {
       return faction_keyword.id === combatPatrol.factionKeywordId;
     });
@@ -138,14 +146,6 @@ function readCombatPatrols() {
 
     let enhancements = newDataExport.enhancement.filter((enhancement) => {
       return enhancement.publicationId === combatPatrol?.id;
-    });
-
-    const detachments = newDataExport.detachment.filter((detachment) => {
-      return detachment.publicationId === combatPatrol?.id;
-    });
-
-    newCombatPatrol.detachments = detachments.map((detachment) => {
-      return detachment.name;
     });
 
     newCombatPatrol.stratagems = stratagems?.map(
@@ -199,10 +199,8 @@ function readCombatPatrols() {
           type: type,
           phase: phase,
           fluff: newStratagem.lore || '',
-          detachment:
-            detachments.find((detachment) => {
-              return detachment.id === newStratagem.detachmentId;
-            })?.name || '',
+          detachment: detachmentName,
+          faction_id: 'basic',
         };
       }
       // console.log('Not found old stratagem', oldStratagem.name);
@@ -214,14 +212,15 @@ function readCombatPatrols() {
         return group.enhancementId === enhancement.id;
       });
 
-      let foundKeywords = newDataExport.enhancement_required_keyword.filter((keyword) => {
-        return keyword.enhancementId === enhancement.id;
-      });
+      // let foundKeywords = newDataExport.enhancement_required_keyword.filter((keyword) => {
+      //   return keyword.enhancementId === enhancement.id;
+      // });
 
-      foundKeywords = foundKeywords.map((kw) => {
-        return kw.keywordId;
-      });
-
+      // foundKeywords = foundKeywords.map((kw) => {
+      //   return kw.keywordId;
+      // });
+      let foundKeywords = [];
+    
       foundKeywordGroups.forEach((group) => {
         const foundKeywordGroupsKeyword = newDataExport.enhancement_required_keyword_group_keyword.filter(
           (groupKeyword) => {
@@ -273,10 +272,8 @@ function readCombatPatrols() {
           keywords: newEnhancement.keywords,
           excludes: newEnhancement.excluded,
           description: newEnhancement.rules || '',
-          detachment:
-            detachments.find((detachment) => {
-              return detachment.id === newEnhancement.detachmentId;
-            })?.name || '',
+          detachment: detachmentName,
+          faction_id: 'basic',
         };
       }
       // console.log('Not found old stratagem', oldStratagem.name);
@@ -429,9 +426,17 @@ function readCombatPatrols() {
     });
 
     // allDataSheets = allDataSheets.filter((card) => card.publication.isCombatPatrol === false);
+    allDataSheets.sort((a, b) => a.displayOrder - b.displayOrder);
 
     allDataSheets.map((card, index) => {
       let newUnit = {
+        name: '',
+        id: uuidv5(card.name + index.toString(), '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'),
+        combatPatrol: true,
+        source: '40k-10e',
+        variant: 'full',
+        faction_id: 'basic',
+        cardType: 'DataCard',
         abilities: {
           core: [],
           damaged: {
@@ -453,20 +458,15 @@ function readCombatPatrols() {
           special: [],
           wargear: [],
         },
-        cardType: 'DataCard',
         composition: [],
         factions: [newFaction.name],
         fluff: '',
-        id: uuidv5(card.name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'),
-        combatPatrol: true,
         keywords: [],
         leader: '',
         loadout: '',
         meleeWeapons: [],
-        name: '',
         points: [],
         rangedWeapons: [],
-        source: '40k-10e',
         stats: [],
         transport: '',
         wargear: [],
@@ -727,6 +727,49 @@ function readCombatPatrols() {
           };
         });
 
+      if (newUnit.leader) {
+        // console.log(card.name, newUnit.leader);
+        let assignedUnits = undefined;
+        let extraText = '';
+
+        if (newUnit.leader.includes('This unit can be attached to the following unit:')) {
+          assignedUnits = newUnit.leader
+            .substring(
+              newUnit.leader.indexOf('This unit can be attached to the following unit:') +
+                'This unit can be attached to the following unit:'.length
+            )
+            .replaceAll('■', '')
+            .replaceAll('.', '')
+            .split(',')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+          console.log(assignedUnits);
+        } else if (newUnit.leader.includes('This model can be attached to the following unit:')) {
+          assignedUnits = newUnit.leader
+            .substring(
+              newUnit.leader.indexOf('This model can be attached to the following unit:') +
+                'This model can be attached to the following unit:'.length
+            )
+            .replaceAll('■', '')
+            .replaceAll('.', '')
+            .split(',')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+        } else if (newUnit.leader.includes('This model can be attached to the following units:')) {
+          assignedUnits = newUnit.leader
+            .substring(
+              newUnit.leader.indexOf('This model can be attached to the following units:') +
+                'This model can be attached to the following units:'.length
+            )
+            .replaceAll('■', '')
+            .replaceAll('.', '')
+            .split(',')
+            .filter((v) => v)
+            .map((v) => v.replaceAll('*', '').trim());
+        }
+        newUnit.leads = { units: assignedUnits, extra: '' };
+      }
+
       newUnit.stats = [...statProfiles];
       newUnit.rangedWeapons = [...rangedWeapons];
       newUnit.meleeWeapons = [...meleeWeapons];
@@ -754,19 +797,24 @@ function readCombatPatrols() {
         wep.abilities = abilities;
       });
 
-      newUnit.composition = card.unitComposition
-        .split('\n\n')[0]
-        .split('\n')
-        .map((unit) => {
-          return unit.replaceAll('■', '').trim();
-        });
+      if (card.unitComposition.charAt(0) !== '■') {
+        newUnit.composition = card.unitComposition
+          .split('\n\n')[0]
+          .split('\n')
+          .map((unit) => {
+            return unit.replaceAll('■', '').trim();
+          });
+
+        newUnit.loadout = card.unitComposition.split('\n\n')[1];
+      } else {
+        newUnit.loadout = card.unitComposition;
+      }
 
       newUnit.wargear =
         card.wargearOptions?.length > 0
           ? card.wargearOptions.map((gear) => gear.rulesText.replaceAll('■', '').replaceAll('\n', ' ').trim())
           : ['None'];
 
-      newUnit.loadout = card.unitComposition.split('\n\n')[1];
       newUnit.fluff = card.lore;
 
       newUnit.keywords = [...new Set(keywords)];
@@ -775,8 +823,7 @@ function readCombatPatrols() {
       //And set the name
       newUnit.name = card.name;
 
-      newUnit.leadBy = undefined;
-      newUnit.leads = undefined;
+      // newUnit.leads = undefined;
 
       newCombatPatrol.datasheets.push(newUnit);
     });
@@ -788,11 +835,7 @@ function readCombatPatrols() {
     fs.writeFileSync(
       path.resolve(
         __dirname,
-        `combatpatrol/${newCombatPatrol.name
-          .replaceAll('Combat Patrol: ', '')
-          .replaceAll(' ', '_')
-          .replaceAll('’', '')
-          .toLowerCase()}.json`
+        `combatpatrol/${detachmentName.replaceAll(' ', '_').replaceAll('’', '').toLowerCase()}.json`
       ),
       JSON.stringify(newCombatPatrol, null, 2)
     );
