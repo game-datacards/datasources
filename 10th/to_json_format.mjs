@@ -89,3 +89,4 @@ cleanForJson("drukhari");
 cleanForJson("gsc");
 cleanForJson("titan");
 cleanForJson("unaligned");
+cleanForJson("emperors_children");
