@@ -106,8 +106,26 @@ const specialWeaponKeywords = [
   },
 ];
 
-const newDataExportFile = readFile('./temp/data-export-434.json');
-const newDataExport = sortObj(JSON.parse(newDataExportFile));
+const newDataExportFile = readFile('./temp/data-export-525.json');
+const newDataExport = sortObj(JSON.parse(newDataExportFile).data);
+
+// Function to remove markdown from a string
+function removeMarkdown(str) {
+  if (!str) return str;
+  return str
+    .replace(/\[.*?\]\(.*?\)/g, '') // Remove links
+    .replace(/(\*\*|__)(.*?)\1/g, '$2') // Remove bold
+    .replace(/(\*|_)(.*?)\1/g, '$2') // Remove italic
+    .replace(/~~(.*?)~~/g, '$1') // Remove strikethrough
+    .replace(/`(.*?)`/g, '$1') // Remove inline code
+    .replace(/```(.*?)```/gs, '$1') // Remove code blocks
+    .replace(/#+\s?(.*?)\s*$/gm, '$1') // Remove headers
+    .replace(/>\s?(.*?)\s*$/gm, '$1') // Remove blockquotes
+    .replace(/^-{3,}\s*$/gm, '') // Remove horizontal rules
+    .replace(/^( *[-*+] +.*)$/gm, '$1') // Remove unordered list items
+    .replace(/^( *\d+\. +.*)$/gm, '$1') // Remove ordered list items
+    .trim(); // Trim whitespace
+}
 
 function parseDataExport(fileName, factionName) {
   const oldParsedUnitsFile = readFile(fileName);
@@ -123,7 +141,7 @@ function parseDataExport(fileName, factionName) {
   const newPublication = newDataExport.publication.find((publication) => {
     return (
       publication.factionKeywordId === newFaction.id &&
-      publication.isCombatPatrol === 0 &&
+      (publication.isCombatPatrol === 0 || publication.isCombatPatrol === false) &&
       !publication.name.includes('Imperial Armour')
     );
   });
@@ -135,7 +153,7 @@ function parseDataExport(fileName, factionName) {
   let enhancements = newDataExport.enhancement.filter((enhancement) => {
     return enhancement.publicationId === newPublication?.id;
   });
-
+  console.log(newPublication);
   const detachments = newDataExport.detachment.filter((detachment) => {
     return detachment.publicationId === newPublication?.id;
   });
@@ -188,14 +206,14 @@ function parseDataExport(fileName, factionName) {
         id: uuidv5(newStratagem.name, '142f2423-fe2c-4bd3-96b9-fb4ef1ceb92e'),
         cost: Number(newStratagem.cpCost),
         turn: turn,
-        target: newStratagem.targetRules || '',
-        when: newStratagem.whenRules || '',
-        effect: newStratagem.effectRules || '',
-        restrictions: newStratagem.restrictionRules || '',
+        target: removeMarkdown(newStratagem.targetRules) || '',
+        when: removeMarkdown(newStratagem.whenRules) || '',
+        effect: removeMarkdown(newStratagem.effectRules) || '',
+        restrictions: removeMarkdown(newStratagem.restrictionRules) || '',
         type: type,
         phase: phase,
         faction_id: oldParsedUnits.id,
-        fluff: newStratagem.lore || '',
+        fluff: removeMarkdown(newStratagem.lore) || '',
         detachment:
           detachments.find((detachment) => {
             return detachment.id === newStratagem.detachmentId;
@@ -227,7 +245,7 @@ function parseDataExport(fileName, factionName) {
         }
       );
 
-      foundKeywords = [...foundKeywords,...foundKeywordGroupsKeyword.map((kw) => kw.keywordId)];
+      foundKeywords = [...foundKeywords, ...foundKeywordGroupsKeyword.map((kw) => kw.keywordId)];
     });
 
     let excludedKeywords = newDataExport.enhancement_excluded_keyword.filter((keyword) => {
@@ -271,7 +289,7 @@ function parseDataExport(fileName, factionName) {
         cost: newEnhancement.basePointsCost.toString(),
         keywords: newEnhancement.keywords,
         excludes: newEnhancement.excluded,
-        description: newEnhancement.rules || '',
+        description: removeMarkdown(newEnhancement.rules) || '',
         faction_id: oldParsedUnits.id,
         detachment:
           detachments.find((detachment) => {
@@ -408,6 +426,10 @@ function parseDataExport(fileName, factionName) {
         );
         return {
           cost: point.points.toString(),
+          keyword:
+            point.referenceGroupingKeywordId !== null
+              ? newDataExport.keyword.find((kw) => kw.id === point.referenceGroupingKeywordId).name
+              : null,
           models: unitCompMini
             .reduce((acc, curr) => {
               return acc + curr.max;
@@ -418,7 +440,9 @@ function parseDataExport(fileName, factionName) {
       });
 
     points = points.filter(
-      (value, index, self) => index === self.findIndex((t) => t.cost === value.cost && t.models === value.models)
+      (value, index, self) =>
+        index ===
+        self.findIndex((t) => t.cost === value.cost && t.models === value.models && t.keyword === value.keyword)
     );
     //And return the found datasheet
     return {
@@ -537,7 +561,7 @@ function parseDataExport(fileName, factionName) {
           }
           name = `${name} (${list.join(', ')})`;
         }
-        return { name: name, description: ability.rules, showAbility: true, showDescription: true };
+        return { name: name, description: removeMarkdown(ability.rules), showAbility: true, showDescription: true };
       });
     newUnit.abilities.other = [...datasheetAbilities];
     //Other abilities
@@ -547,7 +571,7 @@ function parseDataExport(fileName, factionName) {
         let name = item.name;
         return {
           name: name,
-          description: item.ruleText.split('\n\n')[0],
+          description: removeMarkdown(item.ruleText.split('\n\n')[0]),
           showAbility: true,
           showDescription: true,
         };
@@ -561,7 +585,7 @@ function parseDataExport(fileName, factionName) {
           const abilities = ability.subAbilities.map((subAbility) => {
             return {
               name: subAbility.name,
-              description: subAbility.rules,
+              description: removeMarkdown(subAbility.rules),
               showAbility: true,
               showDescription: true,
             };
@@ -587,7 +611,7 @@ function parseDataExport(fileName, factionName) {
           .replaceAll('Damaged: ', '')
           .replaceAll('Damaged ', '')
           .toUpperCase(),
-        description: damageAbility[0].rules,
+        description: removeMarkdown(damageAbility[0].rules),
         showDamagedAbility: true,
         showDescription: true,
       };
@@ -596,7 +620,7 @@ function parseDataExport(fileName, factionName) {
     //invul ability
     if (card.invulAbility !== undefined) {
       newUnit.abilities.invul = {
-        info: card.invulAbility.rules ? card.invulAbility.rules : '',
+        info: card.invulAbility.rules ? removeMarkdown(card.invulAbility.rules) : '',
         showAtTop: true,
         showInfo: card.invulAbility.rules !== null,
         showInvulnerableSave: true,
@@ -608,14 +632,14 @@ function parseDataExport(fileName, factionName) {
     const leaderAbility = card.datasheetRules.find((ability) => ability.name === 'Leader');
 
     if (leaderAbility !== undefined && leaderAbility.rules !== undefined) {
-      newUnit.leader = leaderAbility.rules.replaceAll('\n\n', ' ').replaceAll('\n', ' ').trim();
+      newUnit.leader = removeMarkdown(leaderAbility.rules.replaceAll('\n\n', ' ').replaceAll('\n', ' ').trim());
     }
 
     //Check for transport rule
     const transportAbility = card.datasheetRules.find((ability) => ability.name === 'Transport');
 
     if (transportAbility !== undefined && transportAbility.rules !== undefined) {
-      newUnit.transport = transportAbility.rules.trim();
+      newUnit.transport = removeMarkdown(transportAbility.rules.trim());
     }
 
     //Check for other special rules
@@ -625,7 +649,7 @@ function parseDataExport(fileName, factionName) {
     if (specialAbilities !== undefined && specialAbilities.length > 0) {
       newUnit.abilities.special = specialAbilities.map((ability) => {
         return {
-          description: ability.rules.trim(),
+          description: removeMarkdown(ability.rules.trim()),
           name: ability.name,
           showAbility: true,
           showDescription: true,
@@ -764,8 +788,8 @@ function parseDataExport(fileName, factionName) {
       wep.abilities = abilities;
     });
 
-    newUnit.composition = card.unitComposition
-      .split('\n\n')[0]
+    newUnit.composition = removeMarkdown(card.unitComposition
+      .split('\n\n')[0])
       .split('\n')
       .map((unit) => {
         return unit.replaceAll('■', '').trim();
@@ -773,11 +797,11 @@ function parseDataExport(fileName, factionName) {
 
     newUnit.wargear =
       card.wargearOptions?.length > 0
-        ? card.wargearOptions.map((gear) => gear.rulesText.replaceAll('■', '').replaceAll('\n', ' ').trim())
+        ? card.wargearOptions.map((gear) => removeMarkdown(gear.rulesText.replaceAll('■', '').replaceAll('\n', ' ').trim()))
         : ['None'];
 
-    newUnit.loadout = card.unitComposition.split('\n\n')[1];
-    newUnit.fluff = card.lore;
+    newUnit.loadout = removeMarkdown(card.unitComposition.split('\n\n')[1]);
+    newUnit.fluff = removeMarkdown(card.lore);
 
     newUnit.keywords = [...new Set(keywords)];
 
@@ -800,43 +824,43 @@ function parseDataExport(fileName, factionName) {
       let extraText = '';
 
       if (unit.leader.includes('You can attach')) {
-        assignedUnits = unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You can attach'))
+        assignedUnits = removeMarkdown(unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You can attach')))
           .split('■')
           .filter((v) => v)
           .map((v) => v.replaceAll('*', '').trim());
         extraText = unit.leader.substring(unit.leader.indexOf('You can attach'));
       } else if (unit.leader.includes('You must attach')) {
-        assignedUnits = unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You must attach'))
+        assignedUnits = removeMarkdown(unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You must attach')))
           .split('■')
           .filter((v) => v)
           .map((v) => v.replaceAll('*', '').trim());
         extraText = unit.leader.substring(unit.leader.indexOf('You must attach'));
       } else if (unit.leader.includes('This model can be attached to a')) {
-        assignedUnits = unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model can be attached to a'))
+        assignedUnits = removeMarkdown(unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model can be attached to a')))
           .split('■')
           .filter((v) => v)
           .map((v) => v.replaceAll('*', '').trim());
         extraText = unit.leader.substring(unit.leader.indexOf('This model can be attached to a'));
       } else if (unit.leader.includes('This model cannot be attached to a')) {
-        assignedUnits = unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model cannot be attached to a'))
+        assignedUnits = removeMarkdown(unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model cannot be attached to a')))
           .split('■')
           .filter((v) => v)
           .map((v) => v.replaceAll('*', '').trim());
         extraText = unit.leader.substring(unit.leader.indexOf('This model cannot be attached to a'));
       } else if (unit.leader.includes('If this unit’s Bodyguard')) {
-        assignedUnits = unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('If this unit’s'))
+        assignedUnits = removeMarkdown(unit.leader
+          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('If this unit’s')))
           .split('■')
           .filter((v) => v)
           .map((v) => v.replaceAll('*', '').trim());
         extraText = unit.leader.substring(unit.leader.indexOf('If this unit’s'));
       } else {
-        assignedUnits = unit.leader
-          .substring(unit.leader.indexOf('■'))
+        assignedUnits = removeMarkdown(unit.leader
+          .substring(unit.leader.indexOf('■')))
           .split('■')
           .filter((v) => v)
           .map((v) => v.replaceAll('*', '').trim());
