@@ -443,6 +443,12 @@
       "name": "Callidus Assassin",
       "points": [
         {
+          "cost": "140",
+          "keyword": null,
+          "models": "1",
+          "active": true
+        },
+        {
           "cost": "100",
           "keyword": "Imperium",
           "models": "1",
@@ -2117,6 +2123,12 @@
       "name": "Eversor Assassin",
       "points": [
         {
+          "cost": "145",
+          "keyword": null,
+          "models": "1",
+          "active": true
+        },
+        {
           "cost": "120",
           "keyword": "Imperium",
           "models": "1",
@@ -2387,6 +2399,12 @@
       ],
       "name": "Vindicare Assassin",
       "points": [
+        {
+          "cost": "155",
+          "keyword": null,
+          "models": "1",
+          "active": true
+        },
         {
           "cost": "125",
           "keyword": "Imperium",
@@ -3150,6 +3168,12 @@
       ],
       "name": "Culexus Assassin",
       "points": [
+        {
+          "cost": "140",
+          "keyword": null,
+          "models": "1",
+          "active": true
+        },
         {
           "cost": "100",
           "keyword": "Imperium",
@@ -6074,6 +6098,7 @@
   ],
   "detachments": [
     "Ordo Hereticus, Purgation Force",
+    "Veiled Blade Elimination Force",
     "Imperialis Fleet",
     "Ordo Xenos, Alien Hunters",
     "Ordo Malleus, Daemon Hunters"
@@ -6277,6 +6302,21 @@
       "detachment": "Ordo Hereticus, Purgation Force"
     },
     {
+      "name": "Prime Target",
+      "id": "610fbdd7-994e-5639-a5f7-96775088172e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One AGENTS OF THE IMPERIUM unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER unit, re‑roll a Wound roll of 1. If that attack is made by an OFFICIO ASSASSINORUM model and it targets the enemy WARLORD, you can re‑roll the Wound roll instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "AoI",
+      "fluff": "A primary target has been revealed. All efforts must be made to ensure the kill.",
+      "detachment": "Veiled Blade Elimination Force"
+    },
+    {
       "name": "Armour of Contempt",
       "id": "1e21c885-2bf2-56a3-9088-17477f475788",
       "cost": 1,
@@ -6290,6 +6330,21 @@
       "faction_id": "AoI",
       "fluff": "The belligerence and transhuman physiologies of the Deathwatch make them unyielding foes.",
       "detachment": "Ordo Xenos, Alien Hunters"
+    },
+    {
+      "name": "Hyperstimms",
+      "id": "9d0d8bda-b81e-5cc9-87d6-ecbb2d86b3cd",
+      "cost": 2,
+      "turn": "either",
+      "target": "One AGENTS OF THE IMPERIUM CHARACTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, add 1 to the Toughness characteristic of models in your unit. In addition, if it is an EVERSOR ASSASSIN unit, until the end of the phase, it has the Feel No Pain 4+ ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "AoI",
+      "fluff": "Unenhanced mortal bodies are routinely – and unknowingly – dosed with experimental stimulant cocktails that serve to reinforce their resilience, at least in the short term.",
+      "detachment": "Veiled Blade Elimination Force"
     },
     {
       "name": "Masters of the Void",
@@ -6395,6 +6450,66 @@
       "faction_id": "AoI",
       "fluff": "These warriors defend the sanctity of the Emperor’s realm with unwavering determination, no matter the odds stacked against them.",
       "detachment": "Ordo Hereticus, Purgation Force"
+    },
+    {
+      "name": "Will-sapping Salvo",
+      "id": "2bb7e079-adb3-5496-b0ac-de5e63380c96",
+      "cost": 1,
+      "turn": "your",
+      "target": "One AGENTS OF THE IMPERIUM INFANTRY unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability. In addition, if it is a CULEXUS ASSASSIN unit, until the end of the phase, change the Damage characteristic of ranged weapons equipped by models in your unit to 3.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "AoI",
+      "fluff": "Aiming concentrated volleys of fire toward an exceptionally resilient foe, these agents erode the will of their target, increasing their vulnerability to the concentrated psychic onslaughts of the Culexus Assassin’s animus speculum.",
+      "detachment": "Veiled Blade Elimination Force"
+    },
+    {
+      "name": "Orbital Oversight",
+      "id": "3fbf9366-f4d7-5dc6-a892-165e050e516b",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One AGENTS OF THE IMPERIUM INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\", or, if your unit has the Lone Operative ability, if the attacking model is within 6\".",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "AoI",
+      "fluff": "Aided by orbiting assets, when the assault begins, voidships flood communication networks with jamming frequencies, fire screening bombardments and otherwise mask the agents’ approach.",
+      "detachment": "Veiled Blade Elimination Force"
+    },
+    {
+      "name": "Blind Grenades",
+      "id": "f754a701-eab8-5c5e-be94-cd5f42b65760",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One AGENTS OF THE IMPERIUM GRENADES or VINDICARE ASSASSIN unit from your army that was selected as one of the targets of that charge and is not within Engagement Range of one or more enemy units.",
+      "when": "Your opponent’s Charge phase, just after an enemy unit has declared a charge.",
+      "effect": "Until the end of the phase, subtract 1 from Charge rolls made for that enemy unit, or, if your unit is a VINDICARE ASSASSIN, subtract 2 from Charge rolls made for that enemy unit instead.&x20;",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "faction_id": "AoI",
+      "fluff": "These grenades release thick black smoke and broad‑spectrum electromagnetic chaff that disrupt vision and foul augury equipment upon detonating.",
+      "detachment": "Veiled Blade Elimination Force"
+    },
+    {
+      "name": "Ensnaring Trap",
+      "id": "1b0145c4-cf8c-5e8c-9827-d71842d71408",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One AGENTS OF THE IMPERIUM INFANTRY unit from your army that is within 6\" of one or more enemy units and would be eligible to declare a charge against one or more of those enemy units.",
+      "when": "End of your opponent’s Charge phase.",
+      "effect": "Your unit can declare a charge. When doing so, you must select one or more of those enemy units as the targets of that charge, and your unit does not receive a Charge bonus this turn. In addition, if it is a CALLIDUS ASSASSIN unit and it makes a Charge move as a result of this Stratagem, until the end of the turn, each time a model in your unit makes a melee attack, add 1 to the Wound roll",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "faction_id": "AoI",
+      "fluff": "The eyes of the Officio Assassinorum are everywhere. As the foe turns to flee, the noose tightens, agents already forewarned of enemy movements and moving swiftly to cut off all avenues of retreat.",
+      "detachment": "Veiled Blade Elimination Force"
     },
     {
       "name": "Adaptive Tactics",
@@ -6607,5 +6722,5 @@
       "detachment": "Ordo Malleus, Daemon Hunters"
     }
   ],
-  "updated": "2024-12-26T12:41:52.248Z"
+  "updated": "2025-01-20T10:01:28.990Z"
 }

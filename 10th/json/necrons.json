@@ -5982,7 +5982,8 @@
     "Awakened Dynasty",
     "Canoptek Court",
     "Annihilation Legion",
-    "Hypercrypt Legion"
+    "Hypercrypt Legion",
+    "Starshatter Arsenal"
   ],
   "enhancements": [
     {
@@ -6184,6 +6185,46 @@
       "description": "NECRONS model only. Models in the bearer’s unit have the Deep Strike ability.",
       "faction_id": "NEC",
       "detachment": "Hypercrypt Legion"
+    },
+    {
+      "name": "Dread Majesty (Aura)",
+      "id": "82041591-cb27-5faa-84dc-537ad474904f",
+      "cost": "30",
+      "keywords": ["Overlord", "Catacomb Command Barge"],
+      "excludes": [],
+      "description": "OVERLORD or CATACOMB COMMAND BARGE model only. While a friendly NECRONS unit (excluding TITANIC units) is within 6\" of the bearer, each time a model in that unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.",
+      "faction_id": "NEC",
+      "detachment": "Starshatter Arsenal"
+    },
+    {
+      "name": "Miniaturised Nebuloscope",
+      "id": "517f3e1c-370e-5fce-887c-758a14654ebf",
+      "cost": "15",
+      "keywords": ["Necrons"],
+      "excludes": [],
+      "description": "NECRONS model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+      "faction_id": "NEC",
+      "detachment": "Starshatter Arsenal"
+    },
+    {
+      "name": "Demanding Leader",
+      "id": "13a5bc3f-555a-53b3-85ba-3868affcd1f5",
+      "cost": "10",
+      "keywords": ["Necrons"],
+      "excludes": [],
+      "description": "NECRONS model only. In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back.",
+      "faction_id": "NEC",
+      "detachment": "Starshatter Arsenal"
+    },
+    {
+      "name": "Chrono-impedance Fields",
+      "id": "53c992ba-2e07-52c4-ad7e-9691d898644b",
+      "cost": "25",
+      "keywords": ["Necrons"],
+      "excludes": [],
+      "description": "NECRONS model only. In your Command phase, select one friendly NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) within 6\" of the bearer. Until the start of your next Command phase, each time an attack is allocated to a model in that unit, subtract 1 from the Damage characteristic of that attack.",
+      "faction_id": "NEC",
+      "detachment": "Starshatter Arsenal"
     }
   ],
   "id": "NEC",
@@ -6343,6 +6384,36 @@
       "detachment": "Awakened Dynasty"
     },
     {
+      "name": "Merciless Reclamation",
+      "id": "873bfa87-7c02-5d05-984a-80607b82e8a3",
+      "cost": 2,
+      "turn": "either",
+      "target": "One NECRONS unit (excluding TITANIC units) from your army that has not been selected to shoot or fight this phase.&x20;",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, if the target of that attack is within range of one or more objective markers, add 1 to the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "NEC",
+      "fluff": "The Necrons are driven to reclaim what is theirs, exterminating all who would impede such efforts without mercy.",
+      "detachment": "Starshatter Arsenal"
+    },
+    {
+      "name": "Unyielding Forms",
+      "id": "f3e29aa3-f1d2-5dcc-8070-03136747e707",
+      "cost": 2,
+      "turn": "either",
+      "target": "One NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) from your army that was selected as the target of one or more of the attacking unit’s attacks.&x20;",
+      "when": "&x20;Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.&#x20;",
+      "effect": "Until the end of the phase, each time an attack targets a model in your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of that unit, subtract 1 from the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "NEC",
+      "fluff": "Wrought from living metal and further protected by the arcane technologies of Crypteks, the forms of Necron vehicles and steeds are almost impervious to conventional weapons.",
+      "detachment": "Starshatter Arsenal"
+    },
+    {
       "name": "Cynosure of Eradication",
       "id": "33950914-a86a-5e28-b2ca-514d24f5e7bf",
       "cost": 2,
@@ -6401,6 +6472,66 @@
       "faction_id": "NEC",
       "fluff": "Necron rulers possess enhanced self-repair systems.",
       "detachment": "Awakened Dynasty"
+    },
+    {
+      "name": "Chronoshift",
+      "id": "80fcfaab-cebc-5eee-a66c-5538e85e15ff",
+      "cost": 1,
+      "turn": "your",
+      "target": "One NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) from your army that has not been selected to move this phase.",
+      "when": "Your Movement phase.",
+      "effect": "Until the end of the phase, if your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "NEC",
+      "fluff": "The time‑bending technologies in the nobility’s powerful vehicles allow them to traverse the battlefield in stuttering bursts of hypervelocity.",
+      "detachment": "Starshatter Arsenal"
+    },
+    {
+      "name": "Dimensional Tunnel",
+      "id": "4575532a-a33d-56c7-9958-acfba365cb30",
+      "cost": 1,
+      "turn": "your",
+      "target": "One NECRONS VEHICLE or NECRONS MOUNTED unit (excluding TITANIC units) from your army.",
+      "when": "Your Movement phase.",
+      "effect": "Until the end of the phase, models in your unit can move horizontally through models and terrain features.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "NEC",
+      "fluff": "Using phase‑shifting technology, Necron war engines can slip into alternate dimensions, leaving only ghostly traces as they move through solid matter.",
+      "detachment": "Starshatter Arsenal"
+    },
+    {
+      "name": "Endless Servitude",
+      "id": "2e883768-2f63-5ff1-8527-9e73340889aa",
+      "cost": 1,
+      "turn": "your",
+      "target": "One NECRONS unit (excluding TITANIC units) from your army that is within range of one or more objective markers you control.",
+      "when": "End of your Fight phase.",
+      "effect": "Your unit’s Reanimation Protocols activate.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "NEC",
+      "fluff": "Should the unclean thralls of lesser species threaten dynastic territories, the fallen Necron soldiery will rise to repel the interlopers.",
+      "detachment": "Starshatter Arsenal"
+    },
+    {
+      "name": "Reactive Reposition",
+      "id": "0dba7660-1a67-53b4-965a-3e16b287c136",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "&x20;One NECRONS unit from your army (excluding TITANIC units) that was the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "effect": "Your unit can make a Normal move of up to D6\".",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "NEC",
+      "fluff": "Subroutines buried deep within the neural networks of Necron soldiers and crews enable them to react instantaneously to targeting locks, repositioning themselves to evade incoming fire or close in upon the foe.",
+      "detachment": "Starshatter Arsenal"
     },
     {
       "name": "Insanity’s Ire",
@@ -6643,5 +6774,5 @@
       "detachment": "Hypercrypt Legion"
     }
   ],
-  "updated": "2024-12-26T12:41:52.473Z"
+  "updated": "2025-01-20T10:01:29.153Z"
 }

@@ -3417,7 +3417,7 @@
       "wargear": ["None"]
     }
   ],
-  "detachments": ["Noble Lance"],
+  "detachments": ["Questor Forgepact", "Noble Lance"],
   "enhancements": [
     {
       "name": "Revered Knight (Aura)",
@@ -3468,6 +3468,46 @@
       "description": "QUESTORIS model only. Each time an attack is allocated to the bearer, worsen the Armour Penetration characteristic of that attack by 1.",
       "faction_id": "QI",
       "detachment": "Noble Lance"
+    },
+    {
+      "name": "Omnissian Champion",
+      "id": "cff9e835-aed6-57f6-b065-1b3c6de5fff5",
+      "cost": "30",
+      "keywords": ["Imperial Knights"],
+      "excludes": [],
+      "description": "IMPERIAL KNIGHTS model only. Add 4 to the bearer’s Wounds characteristic.",
+      "faction_id": "QI",
+      "detachment": "Questor Forgepact"
+    },
+    {
+      "name": "Knight of the Opus Machina",
+      "id": "d29d2afb-0dbc-512b-9748-3bd6f51702ab",
+      "cost": "20",
+      "keywords": ["Imperial Knights"],
+      "excludes": [],
+      "description": "IMPERIAL KNIGHTS model only. Each time the bearer makes a ranged attack, if the bearer is within 6\" of one or more friendly ADEPTUS MECHANICUS units, re‑roll a Hit roll of 1.",
+      "faction_id": "QI",
+      "detachment": "Questor Forgepact"
+    },
+    {
+      "name": "Magos Questoris",
+      "id": "46269259-a3be-56e1-a17e-24a201c0dca7",
+      "cost": "35",
+      "keywords": ["Tech-Priest"],
+      "excludes": [],
+      "description": "TECH‑PRIEST model only. While the bearer is within 3\" of one or more friendly IMPERIAL KNIGHTS units, it has the Lone Operative ability. In your Command phase, select one friendly IMPERIAL KNIGHTS model within 3\" of the bearer. That model regains up to 2 lost wounds.",
+      "faction_id": "QI",
+      "detachment": "Questor Forgepact"
+    },
+    {
+      "name": "Vocifer Magnificat (Aura)",
+      "id": "250aab7a-4a69-5730-a512-5499072720a8",
+      "cost": "15",
+      "keywords": ["Imperial Knights"],
+      "excludes": [],
+      "description": "IMPERIAL KNIGHTS model only. While an enemy unit is within 6\" of the bearer, worsen the Leadership characteristic of models in that unit by 1. While a friendly ADEPTUS MECHANICUS unit is within 6\" of the bearer, improve the Leadership characteristic of models in that ADEPTUS MECHANICUS unit by 1.",
+      "faction_id": "QI",
+      "detachment": "Questor Forgepact"
     }
   ],
   "id": "QI",
@@ -3522,6 +3562,21 @@
       "detachment": "Noble Lance"
     },
     {
+      "name": "Bonded Imperative",
+      "id": "aecb7b89-1fa1-51db-8b8f-0f5be6434395",
+      "cost": 1,
+      "turn": "your",
+      "target": "That IMPERIAL KNIGHTS CHARACTER unit.",
+      "when": "Your Command phase, just before an IMPERIAL KNIGHTS CHARACTER unit from your army uses a Bondsman ability.",
+      "effect": "When selecting targets for that use of that Bondsman ability, you can select one friendly ADEPTUS MECHANICUS unit within 12\" of your unit in addition, or instead of selecting one ARMIGER model. Until the start of your next Command phase, every model in that ADEPTUS MECHANICUS unit is affected by that Bondsman ability.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["command"],
+      "faction_id": "QI",
+      "fluff": "Tapping into the noospheric battle‑sphere, this Noble pilot issues binharic commands directly into the minds of Adeptus Mechanicus allies.",
+      "detachment": "Questor Forgepact"
+    },
+    {
       "name": "Trophy Claim",
       "id": "bb70b6c0-cc0f-58a3-b943-60b0c179053d",
       "cost": 2,
@@ -3552,6 +3607,81 @@
       "detachment": "Noble Lance"
     },
     {
+      "name": "Machine Focus",
+      "id": "b3d0d602-7982-5704-8130-7e6f9d463b24",
+      "cost": 1,
+      "turn": "your",
+      "target": "One IMPERIAL KNIGHTS unit from your army.",
+      "when": "Your Command phase.",
+      "effect": "Until the start of your next turn, your unit can ignore any or all modifiers to the following: the Weapon Skill or Ballistic Skill characteristics of weapons equipped by its models; any Hit roll or Wound roll made for it.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "QI",
+      "fluff": "Soothing psalm programs inloaded by Tech‑Priests focus targeting arrays and enhance the responsiveness of the Noble pilot’s mighty Knight suit.",
+      "detachment": "Questor Forgepact"
+    },
+    {
+      "name": "Aggression Begets Aggression",
+      "id": "ff34463c-7951-5504-9b25-3eb1e2aab73f",
+      "cost": 1,
+      "turn": "your",
+      "target": "One IMPERIAL KNIGHTS unit from your army or one IMPERIAL KNIGHTS CHARACTER unit from your army and one friendly ADEPTUS MECHANICUS unit that is within 6\" of that unit.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your units have the [ASSAULT] ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "QI",
+      "fluff": "Driven by the wrathful whisperings of their Throne Mechanicum, the Noble pilot guides their Knight suit forward, weapons blazing with every step. Inspired by their titanic ally, the warriors of the Adeptus Mechanicus follow suit, pushing their cybernetic systems to the limit.",
+      "detachment": "Questor Forgepact"
+    },
+    {
+      "name": "Thronegheist Fury",
+      "id": "09c09a98-e4ea-5a41-9d80-f8f89354eb00",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One IMPERIAL KNIGHTS TITANIC unit from your army that is within 24\" of and visible to that enemy unit.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit is set up or ends a Normal, Advance, or Fall Back move.",
+      "effect": "Select one ranged weapon equipped by a model in your unit. That model can shoot at that enemy unit (and only if it is an eligible target). When doing so, that model can only make attacks with that weapon and each time it makes a ranged attack, an unmodified Hit roll of 6 is required to score a hit, irrespective of the attacking weapon’s Ballistic Skill or any modifiers.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "QI",
+      "fluff": "As augurs detect enemy movements, the pilot’s Throne Mechanicum comes alive with the whispered fury of their ancestors. Weapon systems flare instinctively to life, dispensing the hatred of long‑dead Nobles upon the unfortunate foe.",
+      "detachment": "Questor Forgepact"
+    },
+    {
+      "name": "Omnissiah’s Grace",
+      "id": "1bccfa67-f334-510a-80d3-fa2eeee17462",
+      "cost": 1,
+      "turn": "either",
+      "target": "That IMPERIAL KNIGHTS or ADEPTUS MECHANICUS unit.",
+      "when": "Any phase, just after a mortal wound is allocated to an IMPERIAL KNIGHTS or ADEPTUS MECHANICUS unit from your army.",
+      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["any"],
+      "faction_id": "QI",
+      "fluff": "So resolute is their faith that the Machine God’s worshippers brave storms of killing fire, trusting in the Omnissiah to shield them from harm.",
+      "detachment": "Questor Forgepact"
+    },
+    {
+      "name": "Vengeance of the Machine Cult",
+      "id": "95d38edb-f7a6-533b-8571-d6be84ba0650",
+      "cost": 1,
+      "turn": "either",
+      "target": "One IMPERIAL KNIGHTS unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.",
+      "when": "Any phase.",
+      "effect": "Until the end of the battle, the enemy unit that destroyed your unit is Marked. Each time an ADEPTUS MECHANICUS model from your army makes an attack that targets a Marked unit, that attack has the [LETHAL HITS] ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["any"],
+      "faction_id": "QI",
+      "fluff": "Those who dare to fell the Machine God’s creations find themselves subject to the vengeance of the Adeptus Mechanicus.",
+      "detachment": "Questor Forgepact"
+    },
+    {
       "name": "Rotate Ion Shields",
       "id": "e5d846c2-4069-5ec3-9d31-acfd2ab8ebf6",
       "cost": 1,
@@ -3567,5 +3697,5 @@
       "detachment": "Noble Lance"
     }
   ],
-  "updated": "2024-12-26T12:41:51.979Z"
+  "updated": "2025-01-20T10:01:28.823Z"
 }

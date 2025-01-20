@@ -917,7 +917,7 @@
         "wargear": []
       },
 
-      "composition": ["1 Regimental Enginseer"],
+      "composition": ["1 Tech-Priest Enginseer"],
       "factions": ["Astra Militarum"],
       "faction_id": "AM",
       "fluff": "Adepts of the Omnissiah, Enginseers are robed machine-mystics tasked with using arcane lore and cybernetic arrays to effect battlefield repairs upon damaged fighting machines. To them, every war engine is a priceless artefact of technology, whose spirit need only be roused once more to take revenge on the enemy.",
@@ -2555,7 +2555,7 @@
               "keywords": ["Twin-linked", "Torrent", "Ignores Cover"],
               "name": "Twin heavy flamer",
               "range": "12\"",
-              "skill": "4+",
+              "skill": "N/A",
               "strength": "6"
             }
           ]
@@ -7648,7 +7648,7 @@
         "wargear": []
       },
 
-      "composition": ["1 Regimental Preacher"],
+      "composition": ["1 Ministorum Priest"],
       "factions": ["Astra Militarum"],
       "faction_id": "AM",
       "fluff": "Serving amongst the Imperial Guard’s regiments to bolster the spiritual strength of its soldiers, Regimental Preachers are fiery zealots and fanatical orators. They do not shy away from combat, but wade amongst the foe, their voices raised in prayer to the God-Emperor and in furious castigation of the enemy.",
@@ -20311,7 +20311,7 @@
       "wargear": ["None"]
     }
   ],
-  "detachments": ["Combined Regiment"],
+  "detachments": ["Combined Regiment", "Bridgehead Strike"],
   "enhancements": [
     {
       "name": "Death Mask of Ollanius",
@@ -20352,6 +20352,46 @@
       "description": "OFFICER model only. In your Command phase, the bearer can issue one additional Order in each battle round.",
       "faction_id": "AM",
       "detachment": "Combined Regiment"
+    },
+    {
+      "name": "Bombast-class Vox-array",
+      "id": "c2d05008-ffb8-55cd-9309-6fda99566903",
+      "cost": "25",
+      "keywords": ["Militarum Tempestus", "Officer"],
+      "excludes": [],
+      "description": "MILITARUM TEMPESTUS OFFICER model only. Each time the bearer issues an Order, if the bearer’s unit contains one or more models equipped with a master vox, it can issue that Order to up to three different REGIMENT units, instead of only one.",
+      "faction_id": "AM",
+      "detachment": "Bridgehead Strike"
+    },
+    {
+      "name": "Priority-drop Beacon",
+      "id": "0d484210-ad1d-57cd-b521-ffa02a9b34b5",
+      "cost": "30",
+      "keywords": ["Militarum Tempestus", "Officer"],
+      "excludes": [],
+      "description": "MILITARUM TEMPESTUS OFFICER model only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+      "faction_id": "AM",
+      "detachment": "Bridgehead Strike"
+    },
+    {
+      "name": "Shroud Projector",
+      "id": "1a30dd5d-1cd8-500c-b59c-1434deb2bbc4",
+      "cost": "15",
+      "keywords": ["Militarum Tempestus", "Officer"],
+      "excludes": [],
+      "description": "MILITARUM TEMPESTUS OFFICER model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+      "faction_id": "AM",
+      "detachment": "Bridgehead Strike"
+    },
+    {
+      "name": "Advance Augury",
+      "id": "545391f1-60f6-53b5-aa8e-07b3eb5e74ad",
+      "cost": "15",
+      "keywords": ["Officer", "Infantry"],
+      "excludes": [],
+      "description": "INFANTRY OFFICER model only. After both players have deployed their armies, select up to three REGIMENT units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "faction_id": "AM",
+      "detachment": "Bridgehead Strike"
     }
   ],
   "id": "AM",
@@ -20360,6 +20400,36 @@
   "name": "Astra Militarum",
   "parent_id": "",
   "stratagems": [
+    {
+      "name": "Bellicosa Drop",
+      "id": "660f986a-c35a-5d06-81e5-7e3f64315175",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ASTRA MILITARUM INFANTRY unit from your army that is in Reserves and has the Deep Strike ability.",
+      "when": "The Reinforcements step of your Movement phase.",
+      "effect": "Until the end of the phase, when your unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.",
+      "restrictions": "Until the end of the turn, your unit is not eligible to declare a charge.",
+      "type": "Battle Tactic",
+      "phase": ["movement"],
+      "faction_id": "AM",
+      "fluff": "Bellicosa drop protocols require intensive additional training but enable elite Imperial soldiery to land virtually on top of the enemy’s positions.",
+      "detachment": "Bridgehead Strike"
+    },
+    {
+      "name": "Firing Hot",
+      "id": "0a4a57d8-8434-58bf-96ae-51001bec716f",
+      "cost": 1,
+      "turn": "your",
+      "target": "One MILITARUM TEMPESTUS or KASRKIN unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, improve the Strength and Armour Penetration characteristics of hot‑shot lascarbines, hot‑shot lasguns, hot‑shot laspistols, hot‑shot marksman rifles, hot‑shot volley guns and sentry hot‑shot volley guns equipped by models in your unit by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "AM",
+      "fluff": "At the risk of permanently burning out power packs, hot‑shot weaponry can be temporarily overcharged to provide additional punch at the crucial moment.",
+      "detachment": "Bridgehead Strike"
+    },
     {
       "name": "Fields of Fire",
       "id": "1f3fb8d4-b28d-5e47-997f-c0a462af7c5b",
@@ -20389,6 +20459,36 @@
       "faction_id": "AM",
       "fluff": "This officer is known for their strategic excellence, as are those they command. Honed over many years, their curt, well-established battle cant is wielded with consummate efficiency, reinforced by the inspirational example they themselves set.",
       "detachment": "Combined Regiment"
+    },
+    {
+      "name": "Aerial Extraction",
+      "id": "be83bbd3-526f-5975-a955-abc2cad941ae",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One VALKYRIE unit from your army that is not within Engagement Range of one or more enemy units, or one ASTRA MILITARUM unit from your army that has the Deep Strike ability and is not within Engagement Range of one or more enemy units.",
+      "when": "End of your opponent’s Fight phase.",
+      "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["fight"],
+      "faction_id": "AM",
+      "fluff": "Such swift manoeuvres are vital to retaining command of the developing tactical situation, whether gunships are peeling off to strike at the enemy from a fresh angle or infantry being extracted by dropcraft for rapid redeployment.",
+      "detachment": "Bridgehead Strike"
+    },
+    {
+      "name": "On My Position",
+      "id": "e8e20adb-2f46-5ad1-8270-994f851a8a12",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One REGIMENT INFANTRY unit from your army that is within Engagement Range of one or more enemy units.",
+      "when": "End of your opponent’s Fight phase.",
+      "effect": "Roll one D6 for each enemy unit within Engagement Range of your unit: on a 2+, that enemy unit suffers D6 mortal wounds. Then, your unit suffers 3D3 mortal wounds.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["fight"],
+      "faction_id": "AM",
+      "fluff": "Circling Aeronautica Imperialis strike fighters wait above to launch strafing runs should the attack falter. In extremis, these assets can be called down upon Imperial positions in danger of being overrun, affording soldiers the desperate dignity of taking their enemies with them into death.",
+      "detachment": "Bridgehead Strike"
     },
     {
       "name": "Suppression Fire",
@@ -20421,6 +20521,36 @@
       "detachment": "Combined Regiment"
     },
     {
+      "name": "Servo-Designators",
+      "id": "2df5d26c-3e2e-5bbe-8d75-dbbf02e0dc2f",
+      "cost": 1,
+      "turn": "your",
+      "target": "That ASTRA MILITARUM INFANTRY unit.",
+      "when": "Your Shooting phase, just after an ASTRA MILITARUM INFANTRY unit from your army has shot.",
+      "effect": "Select one enemy unit hit by one or more of those attacks that is visible to your unit. Until the end of the phase, that enemy unit cannot have the Benefit of Cover.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "AM",
+      "fluff": "Released in a swarm from a modified Valkyrie gunship, high‑altitude servo‑skulls analyse targeting data from the ongoing fight and then provide updated firing solutions to the troops on the ground.",
+      "detachment": "Bridgehead Strike"
+    },
+    {
+      "name": "Fire And Relocate",
+      "id": "fe854cee-d979-5e28-af14-607c9dccf56c",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ASTRA MILITARUM unit (excluding TITANIC units) from your army.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, your unit is eligible to shoot in a turn in which it Advanced.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "AM",
+      "fluff": "Once deployed, it is vital that the soldiers stay on the move and keep firing, avoiding becoming bogged down and maintaining the pressure on their reeling foes.",
+      "detachment": "Bridgehead Strike"
+    },
+    {
       "name": "Reinforcements!",
       "id": "35c96b8a-529f-534d-88a3-69d927cab27e",
       "cost": 2,
@@ -20451,5 +20581,5 @@
       "detachment": "Combined Regiment"
     }
   ],
-  "updated": "2024-12-26T12:41:51.945Z"
+  "updated": "2025-01-20T10:01:28.798Z"
 }
