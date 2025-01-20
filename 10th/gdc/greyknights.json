@@ -5727,7 +5727,7 @@
       ]
     }
   ],
-  "detachments": ["Teleport Strike Force"],
+  "detachments": ["Warpbane Task Force", "Teleport Strike Force"],
   "enhancements": [
     {
       "name": "First to the Fray",
@@ -5768,6 +5768,46 @@
       "description": "GREY KNIGHTS model only. Add 1 to Charge rolls made for the bearer’s unit.",
       "faction_id": "GK",
       "detachment": "Teleport Strike Force"
+    },
+    {
+      "name": "Mandulian Reliquary",
+      "id": "7c63fd53-e7a8-5862-bff9-f041c75ccd98",
+      "cost": "20",
+      "keywords": ["Grey Knights"],
+      "excludes": [],
+      "description": "GREY KNIGHTS model only. While the bearer’s unit is not Battle‑shocked, add 3 to the bearer’s Objective Control characteristic.",
+      "faction_id": "GK",
+      "detachment": "Warpbane Task Force"
+    },
+    {
+      "name": "Radiant Champion",
+      "id": "d8d5c4c2-7628-5096-bfe7-3f4e00a2b32b",
+      "cost": "15",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "GREY KNIGHTS INFANTRY model only. The bearer’s melee weapons have the [PRECISION] ability, and while the bearer is wholly within your army’s Hallowed Ground, each time a melee attack made by the bearer scores a wound, the target of that attack suffers 1 mortal wound in addition to any normal damage.",
+      "faction_id": "GK",
+      "detachment": "Warpbane Task Force"
+    },
+    {
+      "name": "Phial of the Abyss",
+      "id": "c89e096c-e12d-50d4-a727-d0ec00988bca",
+      "cost": "25",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "GREY KNIGHTS INFANTRY model only. Models in the bearer’s unit have the Stealth ability.",
+      "faction_id": "GK",
+      "detachment": "Warpbane Task Force"
+    },
+    {
+      "name": "Paragon of Sanctity",
+      "id": "771e05f2-f57c-5e6b-a870-0f206c5c39ff",
+      "cost": "10",
+      "keywords": ["Grey Knights"],
+      "excludes": [],
+      "description": "GREY KNIGHTS model only. Once per battle, at the start of any phase, the bearer can select one friendly GREY KNIGHTS unit within 18\" of and visible to it. If it does, until the end of the phase, that unit is within your army’s Hallowed Ground.",
+      "faction_id": "GK",
+      "detachment": "Warpbane Task Force"
     }
   ],
   "id": "GK",
@@ -5776,6 +5816,81 @@
   "name": "Grey Knights",
   "parent_id": "",
   "stratagems": [
+    {
+      "name": "Fires of Covenant",
+      "id": "01184f9e-5e9d-5299-95b6-f7d74666444a",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One GREY KNIGHTS INFANTRY unit from your army.",
+      "when": "Start of your opponent’s Movement phase.",
+      "effect": "Until the end of the phase, each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within 6\" of your unit, roll one D6, adding 2 to the result if your unit is wholly within your army’s Hallowed Ground: on a 4+,  that enemy unit suffers D3 mortal wounds.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["movement"],
+      "faction_id": "GK",
+      "fluff": "As the enemy moves close, these warriors draw upon their pledges of duty and the bonds of their brotherhood to unleash a fiery conflagration of arcane death.",
+      "detachment": "Warpbane Task Force"
+    },
+    {
+      "name": "Aegis Eternal",
+      "id": "71d153da-c6e8-5f6b-bbe3-ba028a820081",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One GREY KNIGHTS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, models in your unit that are wholly within your Hallowed Ground have a 4+ invulnerable save.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "GK",
+      "fluff": "Channelling their shared psychic potential, these warriors form a coruscating aurora that courses through the warding sigils of their armour, causing them to flare with protective power.",
+      "detachment": "Warpbane Task Force"
+    },
+    {
+      "name": "Repelling Sphere",
+      "id": "aae8b418-9272-54f7-b672-50fd8603e9a0",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One GREY KNIGHTS INFANTRY unit from your army.",
+      "when": "Start of your opponent’s Charge phase.",
+      "effect": "Until the end of the phase, each time an enemy unit declares a charge and your unit is one of the targets of that charge, subtract 1 from the Charge roll, or subtract 2 instead if your unit is wholly within your army’s Hallowed Ground.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["charge"],
+      "faction_id": "GK",
+      "fluff": "Chanting a chorus of warding spells, the Grey Knights project a shimmering field of empyric forces that repels their foes.",
+      "detachment": "Warpbane Task Force"
+    },
+    {
+      "name": "Sanctified Kill Zone",
+      "id": "25609e72-61e4-59ae-9829-e4e7b3c6f616",
+      "cost": 1,
+      "turn": "either",
+      "target": "One GREY KNIGHTS unit from your army that has not been selected to shoot or fight this phase and that is wholly within your army’s Hallowed Ground.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, re‑roll a Wound roll of 1, or, re‑roll the Wound roll instead if your unit is a PURIFIER SQUAD.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "GK",
+      "fluff": "As new ground is seized and consecrated, so are the Grey Knights lent greater ferocity and resolve.",
+      "detachment": "Warpbane Task Force"
+    },
+    {
+      "name": "Hallowed Beacon",
+      "id": "22a61fd6-2e40-583b-b6be-81391a497011",
+      "cost": 1,
+      "turn": "your",
+      "target": "One GREY KNIGHTS INFANTRY unit (excluding TERMINATOR units) that is arriving using the Deep Strike or Teleport Assault abilities this phase.",
+      "when": "Reinforcements step of your Movement phase.",
+      "effect": "Set up your unit wholly within your army’s Hallowed Ground and more than 6\" horizontally away from all enemy units.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["movement"],
+      "faction_id": "GK",
+      "fluff": "Newly sanctified ground serves as a luminescent beacon to guide warded battle‑brothers stepping through glowing empyric gateways.",
+      "detachment": "Warpbane Task Force"
+    },
     {
       "name": "Death From The Warp",
       "id": "238c31f9-9820-5847-8ba5-2cb62aa756b9",
@@ -5837,6 +5952,21 @@
       "detachment": "Teleport Strike Force"
     },
     {
+      "name": "Flames of Sanctity",
+      "id": "d0e5e0d1-c9ff-520e-aaf0-cbdbd28373de",
+      "cost": 1,
+      "turn": "either",
+      "target": "One PURIFIER SQUAD unit from your army that was eligible to fight this phase.",
+      "when": "End of the Fight phase.",
+      "effect": "Roll one D6 for each enemy unit within 6\" of your unit, adding 1 to the result if your unit includes CASTELLAN CROWE: on a 4+, that enemy unit suffers D3 mortal wounds.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "GK",
+      "fluff": "As the Purifiers battle, their pooled psychic might manifests in a corona of flame that is anathema to the unclean.",
+      "detachment": "Warpbane Task Force"
+    },
+    {
       "name": "Mists of Deimos",
       "id": "396e4af3-e846-5a6b-94ba-abe82b5503b6",
       "cost": 1,
@@ -5867,5 +5997,5 @@
       "detachment": "Teleport Strike Force"
     }
   ],
-  "updated": "2024-12-26T12:41:52.048Z"
+  "updated": "2025-01-20T10:01:28.852Z"
 }

@@ -3676,7 +3676,7 @@
       ]
     }
   ],
-  "detachments": ["Berzerker Warband"],
+  "detachments": ["Berzerker Warband", "Vessels of Wrath"],
   "enhancements": [
     {
       "name": "Favoured of Khorne",
@@ -3717,6 +3717,46 @@
       "description": "WORLD EATERS model only. Each time an attack is allocated to the bearer, halve the Damage characteristic of that attack.",
       "faction_id": "WE",
       "detachment": "Berzerker Warband"
+    },
+    {
+      "name": "Archslaughterer",
+      "id": "9dc498a4-7bcb-57d8-beef-2095bcd4d474",
+      "cost": "25",
+      "keywords": ["World Eaters"],
+      "excludes": [],
+      "description": "WORLD EATERS model only. Improve the Armour Penetration characteristic of melee weapons equipped by the bearer by 1. While the bearer is a VESSEL OF WRATH, improve the Damage characteristic of those weapons by 1 as well.",
+      "faction_id": "WE",
+      "detachment": "Vessels of Wrath"
+    },
+    {
+      "name": "Vox-Diabolus",
+      "id": "c4bd37c3-3441-579a-a9a6-b8df5bc4b48c",
+      "cost": "20",
+      "keywords": ["World Eaters"],
+      "excludes": [],
+      "description": "WORLD EATERS model only. Each time the bearer’s unit destroys an enemy unit with a melee attack, roll one D6, adding 1 to the result if the bearer is a VESSEL OF WRATH: on a 4+, you gain 1CP.",
+      "faction_id": "WE",
+      "detachment": "Vessels of Wrath"
+    },
+    {
+      "name": "Avenger’s Crown",
+      "id": "2435a721-b6ac-52c8-9fb6-d63bd2ff6b3a",
+      "cost": "15",
+      "keywords": ["World Eaters"],
+      "excludes": [],
+      "description": "WORLD EATERS model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 2+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+      "faction_id": "WE",
+      "detachment": "Vessels of Wrath"
+    },
+    {
+      "name": "Gateways to Glory",
+      "id": "1f2b1727-e09f-53f6-aace-8c0595c2e1c7",
+      "cost": "10",
+      "keywords": ["Daemon Prince", "Mounted"],
+      "excludes": [],
+      "description": "WORLD EATERS DAEMON PRINCE or WORLD EATERS MOUNTED model only. Each time the bearer makes a Normal, Advance or Charge move, it can move horizontally through models and terrain features. When doing so, it can move within Engagement Range of such models but cannot end a Normal or Advance move within Engagement Range of them.",
+      "faction_id": "WE",
+      "detachment": "Vessels of Wrath"
     }
   ],
   "id": "WE",
@@ -3771,6 +3811,51 @@
       "detachment": "Berzerker Warband"
     },
     {
+      "name": "Brazen Contempt",
+      "id": "7c48c0b8-b6c0-5c69-ac9d-45e4bdbe1ac4",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One WORLD EATERS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll, or, if it is a VESSEL OF WRATH unit, subtract 1 from the Wound roll instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "WE",
+      "fluff": "Empowered by flowing waves of hatred that they believe emanate from the Blood God himself, Khorne’s worshippers feel nothing but scorn at their enemies’ pitiful blows.",
+      "detachment": "Vessels of Wrath"
+    },
+    {
+      "name": "Aspire to Infamy",
+      "id": "62965d7b-057d-5cf3-ac7e-9f2ec04cfe9e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One KHORNE BERZERKERS or JAKHALS unit from your army that has not been selected to fight this phase and is within 8\" of one or more friendly WORLD EATERS CHARACTER models.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, improve the Strength and Armour Penetration characteristics of melee weapons equipped by non‑CHARACTER models in your unit by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "WE",
+      "fluff": "With proven champions of Khorne looking on, those of lesser renown hurl themselves into the fray with greater ferocity, eager to prove their prowess.",
+      "detachment": "Vessels of Wrath"
+    },
+    {
+      "name": "Overshadowed by None",
+      "id": "9f52d078-6286-5fbb-b30f-bcbcea40c365",
+      "cost": 1,
+      "turn": "either",
+      "target": "One WORLD EATERS INFANTRY, WORLD EATERS MOUNTED or WORLD EATERS DAEMON PRINCE unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a MONSTER or VEHICLE unit, you can re‑roll the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "WE",
+      "fluff": "The more towering and monstrous the adversary, the better a chance that its bloody end will win the approbation of Khorne.",
+      "detachment": "Vessels of Wrath"
+    },
+    {
       "name": "Blood Offering",
       "id": "67c96768-b5d3-5dbd-a76d-49431f4fdeeb",
       "cost": 1,
@@ -3801,6 +3886,51 @@
       "detachment": "Berzerker Warband"
     },
     {
+      "name": "Punish the Craven",
+      "id": "dbccc1ce-dc1d-5c3e-8987-e117e0bef4b7",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One WORLD EATERS INFANTRY or WORLD EATERS DAEMON PRINCE unit from your army within Engagement Range of that enemy unit.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit (excluding MONSTERS and VEHICLES) is selected to Fall Back.",
+      "effect": "When that enemy unit Falls Back, all models in that enemy unit must take a Desperate Escape test. When doing so, if your unit is a VESSEL OF WRATH unit, subtract 1 from each of those tests.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "WE",
+      "fluff": "The Blood God is said to detest cowards. Meting out punishment to such degenerates is a sure way to win his favour and gain his wrathful boons.",
+      "detachment": "Vessels of Wrath"
+    },
+    {
+      "name": "Meet Force With Force",
+      "id": "8e96fca3-d204-56f8-92bf-fbd76f0a9995",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One WORLD EATERS INFANTRY, WORLD EATERS MOUNTED or WORLD EATERS DAEMON PRINCE unit from your army that lost one or more wounds as a result of those attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "effect": "Your unit can make a Blood Surge move. To do so, roll one D6: models in your unit move a number of inches up to the result, but your unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of that enemy unit. If your unit is a KHORNE BERZERKERS or VESSEL OF WRATH unit, you can re‑roll the D6 to determine how far your unit can move.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "WE",
+      "fluff": "Desperate to prove themselves to the Blood God in this hour of infernal glory, these warriors are only goaded to more ferocious efforts by the enemy’s attempts to hold them at bay.",
+      "detachment": "Vessels of Wrath"
+    },
+    {
+      "name": "Gory Dedication",
+      "id": "fcf6c3e2-9e1b-546e-af1c-2b8ce6e94455",
+      "cost": 1,
+      "turn": "either",
+      "target": "That WORLD EATERS unit.",
+      "when": "Fight phase, just after a WORLD EATERS unit from your army has fought, if one or more enemy models were destroyed as a result of those attacks.",
+      "effect": "Select one objective marker you control that your unit is within range of. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "WE",
+      "fluff": "To the World Eaters, every battlefield is an altar upon which to offer up crimson sacrifices. Where the lifeblood of their victims falls, it anoints the ground as holy to Khorne’s murderous creed.",
+      "detachment": "Vessels of Wrath"
+    },
+    {
       "name": "Khorne Cares Not...",
       "id": "351ccbd5-f40f-539b-8258-da7218940576",
       "cost": 2,
@@ -3816,5 +3946,5 @@
       "detachment": "Berzerker Warband"
     }
   ],
-  "updated": "2024-12-26T12:41:51.586Z"
+  "updated": "2025-01-20T10:01:28.532Z"
 }
