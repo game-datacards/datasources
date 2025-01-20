@@ -2533,7 +2533,7 @@
           "description": "",
           "range": ""
         },
-        "faction": [],
+        "faction": ["For the Greater Good"],
         "invul": {
           "info": "",
 
@@ -7198,6 +7198,7 @@
     }
   ],
   "detachments": [
+    "Auxiliary Cadre",
     "Kroot Hunting Pack",
     "Kauyon",
     "Retaliation Cadre",
@@ -7363,6 +7364,46 @@
       "description": "KROOT FLESH SHAPER only. While the bearer is leading a unit, each time a model in that unit makes a melee attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
       "faction_id": "TAU",
       "detachment": "Kroot Hunting Pack"
+    },
+    {
+      "name": "Student of Kauyon",
+      "id": "07cd6b57-ebec-5449-b949-4a31a3370aa4",
+      "cost": "15",
+      "keywords": ["Shaper", "Kroot"],
+      "excludes": [],
+      "description": "KROOT SHAPER model only. In the Declare Battle Formations step, you can select up to three KROOT CARNIVORES or KROOT FARSTALKERS units from your army. Models in those units have the Deep Strike ability.",
+      "faction_id": "TAU",
+      "detachment": "Auxiliary Cadre"
+    },
+    {
+      "name": "Admired Leader",
+      "id": "c721bd3b-323e-5952-a989-77aa16cee3f8",
+      "cost": "20",
+      "keywords": ["T’au Empire"],
+      "excludes": ["Kroot"],
+      "description": "T’AU EMPIRE model (excluding KROOT models) only. In your Command phase, you can select one KROOT or VESPID STINGWINGS unit within 12\" of the bearer. If you do, until the start of your next Command phase, improve the Leadership characteristic of models in that unit by 1, and while such a unit is not Battle‑shocked, add 1 to the Objective Control characteristic of models in that unit.",
+      "faction_id": "TAU",
+      "detachment": "Auxiliary Cadre"
+    },
+    {
+      "name": "Fanatical Convert",
+      "id": "6bf3b5cd-01f4-567b-a442-daf96de47304",
+      "cost": "10",
+      "keywords": ["Kroot"],
+      "excludes": [],
+      "description": "KROOT model only. The bearer’s unit has the For the Greater Good ability (see Codex: T’au Empire).",
+      "faction_id": "TAU",
+      "detachment": "Auxiliary Cadre"
+    },
+    {
+      "name": "Transponder Lock Module",
+      "id": "d0a3a389-3b11-5948-8140-a1d856c6b485",
+      "cost": "25",
+      "keywords": ["Walker"],
+      "excludes": [],
+      "description": "T’AU EMPIRE WALKER model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. During your first Movement phase, when you set up the bearer’s unit, it must be set up within 12\" of one or more friendly KROOT or VESPID STINGWINGS units and not within 9\" horizontally of one or more enemy units.",
+      "faction_id": "TAU",
+      "detachment": "Auxiliary Cadre"
     }
   ],
   "id": "TAU",
@@ -7522,6 +7563,51 @@
       "detachment": "Kauyon"
     },
     {
+      "name": "Multisensory Scanning",
+      "id": "a8ed5245-29ab-50e3-91e1-bd54f43be06e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One T’AU EMPIRE unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, re‑roll a Wound roll of 1. If it is a KROOT or VESPID STINGWINGS unit, you can re‑roll the Wound roll instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "TAU",
+      "fluff": "Target analysis data from scanning drones is rapidly translated into inputs ideally tailored to a range of alien sensoria and then disseminated through the cadre.",
+      "detachment": "Auxiliary Cadre"
+    },
+    {
+      "name": "Alien Expertise",
+      "id": "e3926858-d2d2-5798-927a-ac4e2481812b",
+      "cost": 1,
+      "turn": "your",
+      "target": "One T’AU EMPIRE unit from your army.",
+      "when": "Your Movement phase.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Advanced. If it is a KROOT or VESPID STINGWINGS unit, until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced as well.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["movement"],
+      "faction_id": "TAU",
+      "fluff": "There is much that the alien auxiliaries of the T’au empire can teach the Fire caste, not least through practical and deadly battlefield demonstrations.",
+      "detachment": "Auxiliary Cadre"
+    },
+    {
+      "name": "Guided Fire",
+      "id": "27de1412-f0c0-596e-9774-2a861fa87062",
+      "cost": 1,
+      "turn": "your",
+      "target": "One T’AU EMPIRE unit from your army (excluding KROOT and VESPID STINGWINGS units) that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, add 1 to the Strength characteristic of ranged weapons equipped by models in your unit. If your unit is wholly within 9\" of one or more KROOT or VESPID STINGWINGS units from your army, add 2 to the Strength characteristic of ranged weapons equipped by models in your unit instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "TAU",
+      "fluff": "These Fire Warriors employ sensory data fed to them by supporting alien auxiliary units to maximise accuracy and place their shots against weak points they might not have perceived.",
+      "detachment": "Auxiliary Cadre"
+    },
+    {
       "name": "Join the Hunt",
       "id": "38d4940c-7eac-5e7d-b23d-2df3b436e65b",
       "cost": 2,
@@ -7625,6 +7711,51 @@
       "faction_id": "TAU",
       "fluff": "The Kroot are experts in camouflage and concealment, able to utilise cover in ways most foes would never consider and – to their great misfortune – do not anticipate.",
       "detachment": "Kroot Hunting Pack"
+    },
+    {
+      "name": "Experimental Modifications",
+      "id": "b46665c6-092a-5aef-9fb8-e501381330b2",
+      "cost": 1,
+      "turn": "either",
+      "target": "One KROOT or VESPID STINGWINGS unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, improve the Armour Penetration characteristic of weapons equipped by models in your unit by 1.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight", "shooting"],
+      "faction_id": "TAU",
+      "fluff": "These experimental Earth caste weapon upgrades can only activate for short bursts at a time, but the extra stopping power they provide is formidable.",
+      "detachment": "Auxiliary Cadre"
+    },
+    {
+      "name": "Interlocking Manouevres",
+      "id": "e660b5e9-6f05-5bc9-8458-7929e4cb9a62",
+      "cost": 1,
+      "turn": "either",
+      "target": "One T’AU EMPIRE unit from your army that was eligible to fight this phase.",
+      "when": "End of the Fight phase.",
+      "effect": "If your unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". Otherwise, your unit can make a Fall Back move. It cannot embark within a TRANSPORT at the end of this move if it disembarked from a TRANSPORT this turn.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "TAU",
+      "fluff": "Regular Fire caste forces operating as part of auxiliary cadres are well trained in swift repositioning and fighting retreats, the better to exploit the presence of or provide support for their alien comrades.",
+      "detachment": "Auxiliary Cadre"
+    },
+    {
+      "name": "Pheromone Waypoints",
+      "id": "a04bcd57-5672-5a2f-a6fd-3dc4bb43080e",
+      "cost": 1,
+      "turn": "your",
+      "target": "One KROOT or VESPID STINGWINGS unit from your army that has not been selected to move this phase.",
+      "when": "Your Movement phase.",
+      "effect": "Until the end of the phase, each time your unit Advances, do not make an Advance roll for it. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "TAU",
+      "fluff": "Air caste craft have dropped drones that emit pheromones into this region, their emissions invisible but blazing like beacons to the correct alien senses.",
+      "detachment": "Auxiliary Cadre"
     },
     {
       "name": "The Shortened Blade",
@@ -7732,5 +7863,5 @@
       "detachment": "Mont’ka"
     }
   ],
-  "updated": "2024-12-26T12:41:52.417Z"
+  "updated": "2025-01-20T10:01:29.115Z"
 }

@@ -9229,6 +9229,7 @@
   "detachments": [
     "Kult of Speed",
     "War Horde",
+    "Taktikal Brigade",
     "Bully Boyz",
     "Green Tide",
     "Da Big Hunt",
@@ -9474,6 +9475,50 @@
       "description": "INFANTRY WARBOSS model only. Each time the bearer makes an attack that targets a unit that is below its Starting Strength, re‑roll a Wound roll of 1. If that unit is Below Half‑strength, you can re‑roll the Wound roll instead.",
       "faction_id": "ORK",
       "detachment": "Bully Boyz"
+    },
+    {
+      "name": "Skwad Leader",
+      "id": "ebff3d52-419d-5ebf-a66e-dcfb3fe71156",
+      "cost": "15",
+      "keywords": ["Warboss"],
+      "excludes": [],
+      "description": "WARBOSS model only. During the Declare Battle Formations step, the bearer can be attached to a KOMMANDOS unit. While leading a KOMMANDOS unit, it has the Infiltrators and Stealth abilities.&x20;",
+      "faction_id": "ORK",
+      "detachment": "Taktikal Brigade"
+    },
+    {
+      "name": "Mek Kaptin",
+      "id": "2fbca2fc-1640-5a1e-af91-348dc4e9feb4",
+      "cost": "35",
+      "keywords": [
+        "Big Mek with Shokk Attack Gun",
+        "Big Mek",
+        "Big Mek in Mega Armour"
+      ],
+      "excludes": [],
+      "description": "BIG MEK, BIG MEK IN MEGA ARMOUR or BIG MEK WITH SHOKK ATTACK GUN model only. During the Declare Battle Formations step, the bearer can be attached to a FLASH GITZ unit. Each time a model in the bearer’s unit makes a ranged attack, you can re‑roll the Hit roll.",
+      "faction_id": "ORK",
+      "detachment": "Taktikal Brigade"
+    },
+    {
+      "name": "Mork’s Kunnin’",
+      "id": "c1b72e4f-c461-5b1f-9568-86b2b968355a",
+      "cost": "15",
+      "keywords": ["Orks"],
+      "excludes": [],
+      "description": "ORKS model only. After both players have deployed their armies, select up to three ORKS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "faction_id": "ORK",
+      "detachment": "Taktikal Brigade"
+    },
+    {
+      "name": "Gob Boomer",
+      "id": "c7370172-b9bf-5e2a-b68e-e95fd6fbb0ff",
+      "cost": "10",
+      "keywords": ["Mek", "Warboss"],
+      "excludes": [],
+      "description": "WARBOSS or MEK model only. Each time the bearer issues Taktiks, it can do so to a friendly ORKS INFANTRY or ORKS MOUNTED unit within 18\", instead of 6\".",
+      "faction_id": "ORK",
+      "detachment": "Taktikal Brigade"
     }
   ],
   "id": "ORK",
@@ -9753,6 +9798,36 @@
       "detachment": "Green Tide"
     },
     {
+      "name": "Fight Proppa",
+      "id": "e4c045c3-7835-5899-9616-cff8b2745038",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ORKS INFANTRY or ORKS MOUNTED unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability. Until the end of the phase, melee weapons equipped by models in your unit have the selected ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "ORK",
+      "fluff": "Some deviant Blood Axes go so far as to practise hand‑to‑hand combat, tailoring fighting styles to specific types of enemies.",
+      "detachment": "Taktikal Brigade"
+    },
+    {
+      "name": "Krunchin’ Descent",
+      "id": "775a368a-26c8-5607-9404-d51187a32a7e",
+      "cost": 1,
+      "turn": "your",
+      "target": "That STORMBOYZ unit.",
+      "when": "Your Charge phase, just after a STORMBOYZ unit from your army ends a Charge move.",
+      "effect": "Select one enemy unit within Engagement Range of your unit, then roll one D6 for each model in your unit that is within Engagement Range of that enemy unit: for each 4+, that enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["charge"],
+      "faction_id": "ORK",
+      "fluff": "With their rocket packs at full throttle, Stormboyz plummet to smash into their foes with bone‑crushing force.",
+      "detachment": "Taktikal Brigade"
+    },
+    {
       "name": "Careen!",
       "id": "9957f6c5-7afa-5c8e-983e-99108a3a9949",
       "cost": 1,
@@ -10021,7 +10096,67 @@
       "faction_id": "ORK",
       "fluff": "Keeping Orks at arm’s length and pummelling them with as much firepower as possible is often the safest tactic for their victims. Unfortunately, it can also draw their attention and give them the urge to re‑educate the gitz in the joys of up‑close savagery.",
       "detachment": "Green Tide"
+    },
+    {
+      "name": "Dat’s Ours",
+      "id": "4312b057-20c3-5a9c-a468-b2204aa5c169",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ORKS unit from your army that is within Engagement Range of one or more enemy units.",
+      "when": "Command phase.",
+      "effect": "Until the start of the next Command phase, add 1 to the Objective Control characteristic of models in your unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "ORK",
+      "fluff": "A few Orks, particularly those of the Blood Axe Clan, can resist their destructive urges long enough to prioritise the seizing of objectives.",
+      "detachment": "Taktikal Brigade"
+    },
+    {
+      "name": "Taktikal Retreat",
+      "id": "68905376-ae91-56e6-ad1a-55f89ee49853",
+      "cost": 1,
+      "turn": "your",
+      "target": "That ORKS unit.",
+      "when": "Your Movement phase, just after an ORKS unit from your army Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "ORK",
+      "fluff": "Blood Axes feel no shame in retreating from a fight, particularly if the boss wants someone else duffed up.",
+      "detachment": "Taktikal Brigade"
+    },
+    {
+      "name": "On To Da Next",
+      "id": "fcd0cb37-df46-556b-ae20-245a659a7748",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ORKS unit from your army that was within Engagement Range of that enemy unit at the start of the phase.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit Falls Back.",
+      "effect": "Your unit can make a Normal move of up to 6\".",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "ORK",
+      "fluff": "Seeing little value in pursuing fleeing foes, Blood Axe mobs turn their attention towards the next fight or press towards whatever cache of shiny gubbinz the boss desires.",
+      "detachment": "Taktikal Brigade"
+    },
+    {
+      "name": "Ded Sneaky",
+      "id": "bb34ca19-798d-5f44-b3b6-4dfed00ba4e0",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One KOMMANDOS or STORMBOYZ unit from your army that is not within Engagement Range of one or more enemy units.",
+      "when": "End of your opponent’s Fight phase.",
+      "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "ORK",
+      "fluff": "Utilising camouflage, cover or misdirection, these Orks slip away to prepare their next ambush, leaving their foes staring at thin air.",
+      "detachment": "Taktikal Brigade"
     }
   ],
-  "updated": "2024-12-26T12:41:52.316Z"
+  "updated": "2025-01-20T10:01:29.044Z"
 }

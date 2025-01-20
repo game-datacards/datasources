@@ -6528,7 +6528,7 @@
       ]
     }
   ],
-  "detachments": ["Champions of Russ"],
+  "detachments": ["Champions of Russ", "Champions of Fenris"],
   "enhancements": [
     {
       "name": "The Pelt of the Balewolf",
@@ -6569,6 +6569,46 @@
       "description": "ADEPTUS ASTARTES model only. The bearer’s melee weapons have the [PRECISION] ability, and the Strength and Armour Penetration characteristics of those weapons are improved by 1.",
       "faction_id": "CHSW",
       "detachment": "Champions of Russ"
+    },
+    {
+      "name": "Wolves’ Wisdom",
+      "id": "52176f96-bfda-5e90-b7d7-9ef3de0c4f10",
+      "cost": "30",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES INFANTRY model only. The bearer’s unit can declare a charge against one or more units within 6\" instead of within 3\" when using The Great Wolf Watches Detachment rule.",
+      "faction_id": "CHSW",
+      "detachment": "Champions of Fenris"
+    },
+    {
+      "name": "Foes’ Fate",
+      "id": "a0de36c9-0fe3-5051-9658-85017358368a",
+      "cost": "15",
+      "keywords": ["Terminator"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES TERMINATOR model only. Each time an enemy unit (excluding MONSTERS and VEHICLES) within Engagement Range of the bearer’s unit Falls Back, all models in that enemy unit must take Desperate Escape tests. When doing so, if that enemy unit is Battle‑shocked, subtract 1 from each of those tests.",
+      "faction_id": "CHSW",
+      "detachment": "Champions of Fenris"
+    },
+    {
+      "name": "Fangrune Pendant",
+      "id": "98c68af0-87f7-50fa-ac6d-b6496bd3778b",
+      "cost": "15",
+      "keywords": ["Terminator"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES TERMINATOR model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "faction_id": "CHSW",
+      "detachment": "Champions of Fenris"
+    },
+    {
+      "name": "Longstrider",
+      "id": "d3fc9968-b287-5229-b189-97aadb286031",
+      "cost": "20",
+      "keywords": ["Space Wolves"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. You can re‑roll Charge rolls made for the bearer’s unit.",
+      "faction_id": "CHSW",
+      "detachment": "Champions of Fenris"
     }
   ],
   "id": "CHSW",
@@ -6623,6 +6663,96 @@
       "detachment": "Champions of Russ"
     },
     {
+      "name": "Chilling Howl",
+      "id": "861ef968-ab74-58b7-b9f5-0c47d14c3767",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS ASTARTES TERMINATOR unit from your army.",
+      "when": "Your opponent’s Command phase.",
+      "effect": "Each enemy unit within 6\" of your unit must take a Battle‑shock test, subtracting 1 from that test if that unit is Below Half‑strength.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "CHSW",
+      "fluff": "Raising their feral voices as one, the elite champions of Fenris give voice to a predatory howl fit to freeze the marrow of the bravest warriors.",
+      "detachment": "Champions of Fenris"
+    },
+    {
+      "name": "Stalking Wolves",
+      "id": "3fe58537-b1b9-53e5-8983-5bac2f9e1a48",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS ASTARTES INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, models in your unit have the Stealth ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "CHSW",
+      "fluff": "These veteran warriors approach the foe like wolves on the hunt. They are ever‑poised to drop into cover or fade into the shadows to avoid their prey’s increasingly desperate attempts to drive them of.",
+      "detachment": "Champions of Fenris"
+    },
+    {
+      "name": "Onrushing Storm",
+      "id": "7ade8cd8-8a3e-5b0f-ae52-443137df0676",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS ASTARTES TERMINATOR SQUAD unit from your army that is not within Engagement Range of one or more enemy units.",
+      "when": "End of your opponent’s Fight phase.",
+      "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "CHSW",
+      "fluff": "A Fenrisian gunship skims low over the battlefield, touching down just long enough for these elite warriors to embark before it lifts off again. The enemy’s respite will not last long; it will return with its deadly cargo soon enough.",
+      "detachment": "Champions of Fenris"
+    },
+    {
+      "name": "Preytaker’s Eye",
+      "id": "8500be73-997f-5961-88f6-fb887f5da8eb",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Select either the [LETHAL HITS] or [SUSTAINED HITS 1] abilities. Until the end of the phase, weapons equipped by models in your unit have that ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CHSW",
+      "fluff": "Long and bloody experience has taught these warriors how best to identify the slightest weakness in their prey and exploit it to the fullest.",
+      "detachment": "Champions of Fenris"
+    },
+    {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CHSW",
+      "fluff": "The belligerence and transhuman physiologies of the Adeptus Astartes make them unyielding foes.",
+      "detachment": "Champions of Fenris"
+    },
+    {
+      "name": "Runes of Claiming",
+      "id": "4cb8302b-82dc-5084-97b1-df40e77e4c6b",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES WALKER unit from your army.",
+      "when": "End of your Command phase.",
+      "effect": "Select one objective marker you control that your unit is within range of. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "CHSW",
+      "fluff": "A few quick cuts with a diamond‑keen hunting knife or energised claw tip leave Fenrisian runes carved into bedrock, plasteel or flesh, marks of abjuration against the foe and secret messages between Space Wolves alike.",
+      "detachment": "Champions of Fenris"
+    },
+    {
       "name": "Death Howl",
       "id": "49c70efe-f241-523a-8539-7b8f647467f7",
       "cost": 1,
@@ -6668,5 +6798,5 @@
       "detachment": "Champions of Russ"
     }
   ],
-  "updated": "2024-12-26T12:41:51.454Z"
+  "updated": "2025-01-20T10:01:28.437Z"
 }

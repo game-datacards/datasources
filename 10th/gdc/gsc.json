@@ -3493,6 +3493,7 @@
   "detachments": [
     "Brood Brothers Auxilia",
     "Outlander Claw",
+    "Final Day",
     "Biosanctic Broodsurge",
     "Host of Ascension",
     "Xenocreed Congregation"
@@ -3697,6 +3698,46 @@
       "description": "GENESTEALER CULTS INFANTRY model only. Each time you target the bearer’s unit with the Fire Overwatch Stratagem, while resolving that Stratagem, hits are scored on unmodified Hit rolls of 5+.",
       "faction_id": "GSC",
       "detachment": "Brood Brothers Auxilia"
+    },
+    {
+      "name": "Synaptic Auger",
+      "id": "d3f26038-be15-58e2-aece-6cda803259aa",
+      "cost": "15",
+      "keywords": ["Genestealer Cults"],
+      "excludes": [],
+      "description": "TYRANIDS model only. Each time the bearer would regain one or more lost wounds from the Psionic Parasitism Detachment rule, it regains up to twice that number of lost wounds instead.",
+      "faction_id": "GSC",
+      "detachment": "Final Day"
+    },
+    {
+      "name": "Enraptured Damnation",
+      "id": "06c06c0f-9b02-5547-9793-12893854eab8",
+      "cost": "10",
+      "keywords": ["Genestealer Cults"],
+      "excludes": [],
+      "description": "GENESTEALER CULTS model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+      "faction_id": "GSC",
+      "detachment": "Final Day"
+    },
+    {
+      "name": "Vanguard Tyrant",
+      "id": "367bbec6-e10f-5881-ba4e-196f9657eb62",
+      "cost": "25",
+      "keywords": ["Winged Hive Tyrant"],
+      "excludes": [],
+      "description": "WINGED HIVE TYRANT model only. Improve the Strength and Armour Penetration characteristics of melee weapons equipped by the bearer by 1.",
+      "faction_id": "GSC",
+      "detachment": "Final Day"
+    },
+    {
+      "name": "Inhuman Integration",
+      "id": "84456dba-422a-52d2-b9ed-e3d4dbbf979f",
+      "cost": "20",
+      "keywords": ["Genestealer Cults"],
+      "excludes": [],
+      "description": "GENESTEALER CULTS model only. Weapons equipped by models in the bearer’s unit have the [SUSTAINED HITS 1] ability while targeting an enemy unit within 6\" of one or more friendly TYRANIDS units.",
+      "faction_id": "GSC",
+      "detachment": "Final Day"
     }
   ],
   "id": "GSC",
@@ -3809,6 +3850,51 @@
       "faction_id": "GSC",
       "fluff": "Serpent-fast, jinking and swerving with incredible skill, the cult’s light vehicles appear to slide through the oppressor’s gunfire.",
       "detachment": "Outlander Claw"
+    },
+    {
+      "name": "Hyperferocity",
+      "id": "7b720cd9-2f76-5941-bc82-f79e6ebf8f20",
+      "cost": 1,
+      "turn": "either",
+      "target": "One GENESTEALER CULTS unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit, re‑roll a Wound roll of 1. If one or more friendly TYRANIDS units are within 6\" of that enemy unit, you can re‑roll the Wound roll instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "GSC",
+      "fluff": "Goaded by the newly ascendant Hive Mind, the cultists fight with greater fury even as their muscles tear and organs rupture under the strain.",
+      "detachment": "Final Day"
+    },
+    {
+      "name": "Avenge the Star Children",
+      "id": "baa65a01-1aca-5014-b458-2f288ac976bd",
+      "cost": 1,
+      "turn": "either",
+      "target": "One TYRANIDS CHARACTER unit from your army that was destroyed by that enemy unit this phase. You can use this Stratagem on that unit even though it was just destroyed.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has shot or fought.",
+      "effect": "Until the end of the battle, each time a GENESTEALER CULTS model from your army makes an attack that targets that enemy unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "GSC",
+      "fluff": "Some amongst the cult still retain enough sentience and zeal to feel rage and a need for vengeance if they see the Star Children slain.",
+      "detachment": "Final Day"
+    },
+    {
+      "name": "Divine Imperative",
+      "id": "286ff808-ada2-5d2e-9869-85121d8345dc",
+      "cost": 1,
+      "turn": "your",
+      "target": "One GENESTEALER CULTS unit from your army that has not declared a charge this phase.",
+      "when": "Your Charge phase.",
+      "effect": "Select one enemy unit within Engagement Range of one or more TYRANIDS units from your army. Until the end of the phase, each time your GENESTEALER CULTS unit declares a charge, if that enemy unit is one of the targets of that charge, add 1 to Charge rolls made for your unit and you can re‑roll the Charge roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["charge"],
+      "faction_id": "GSC",
+      "fluff": "Cultists dash madly into the fighting without a care for their survival, drawn onward to aid the vanguard organisms by a will they cannot resist.",
+      "detachment": "Final Day"
     },
     {
       "name": "Frenzied Devotion",
@@ -4021,6 +4107,51 @@
       "detachment": "Outlander Claw"
     },
     {
+      "name": "Psi Surge",
+      "id": "71665aec-3491-5550-8109-39574dfe10c2",
+      "cost": 1,
+      "turn": "either",
+      "target": "One TYRANIDS unit from your army.",
+      "when": "Start of any phase.",
+      "effect": "Until the start of your next Command phase, increase the range of your unit’s Catalyst ability by 3.",
+      "restrictions": "Each time you use this Stratagem, until the end of your next Command phase, you cannot use this Stratagem again.",
+      "type": "Strategic Ploy",
+      "phase": ["any"],
+      "faction_id": "GSC",
+      "fluff": "As the Tyranid invasion gathers pace, the influence of the Hive Mind surges like waves rolling ever higher onto a desolate shore.",
+      "detachment": "Final Day"
+    },
+    {
+      "name": "Darting Attacks",
+      "id": "98b492cf-276c-51fb-a942-2d150405ab6c",
+      "cost": 1,
+      "turn": "your",
+      "target": "One TYRANIDS unit from your army.",
+      "when": "Your Shooting phase or your Charge phase.",
+      "effect": "Until the end of the phase, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge", "shooting"],
+      "faction_id": "GSC",
+      "fluff": "Like predatory sea beasts lunging from wheeling shoals of fish, the vanguard organisms strike and fade from amidst the cultist hordes repeatedly, picking apart their overwhelmed prey.",
+      "detachment": "Final Day"
+    },
+    {
+      "name": "Resistance Tunnels",
+      "id": "7f7fb8d2-7274-5c1b-a726-af9c50a1b61e",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One GENESTEALER CULTS or TYRANIDS unit from your army that is not within Engagement Range of one or more enemy units.",
+      "when": "End of your opponent’s Fight phase.",
+      "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "GSC",
+      "fluff": "Never again will the tunnel networks of the cult provide secret roads for hopeful and idealistic freedom fighters. Yet they can still serve one last time as a means by which the Tyranids and their surviving worshippers can vanish from the battlefield only to strike again elsewhere.",
+      "detachment": "Final Day"
+    },
+    {
       "name": "Tireless Fervour",
       "id": "26e86b90-5f8d-50d0-be71-fa5f0ce8f0bd",
       "cost": 1,
@@ -4156,5 +4287,5 @@
       "detachment": "Xenocreed Congregation"
     }
   ],
-  "updated": "2024-12-26T12:41:52.633Z"
+  "updated": "2025-01-20T10:01:29.267Z"
 }

@@ -2979,6 +2979,7 @@
   ],
   "detachments": [
     "The Angelic Host",
+    "Angelic Inheritors",
     "Liberator Assault Group",
     "The Lost Brethren"
   ],
@@ -3102,6 +3103,46 @@
       "description": "ADEPTUS ASTARTES JUMP PACK model only. Once per turn, when an enemy unit ends a Normal, Advance or Fall Back move within 9\" of the bearer, if this bearer’s unit is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\".",
       "faction_id": "CHBA",
       "detachment": "The Angelic Host"
+    },
+    {
+      "name": "Prescient Flash",
+      "id": "e52bf420-3cfe-5234-9edd-33be67989247",
+      "cost": "20",
+      "keywords": ["Blood Angels"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Models in the bearer’s unit have the Scouts 6\" ability.",
+      "faction_id": "CHBA",
+      "detachment": "Angelic Inheritors"
+    },
+    {
+      "name": "Troubling Visions",
+      "id": "be5b7f41-49cb-5d15-b5b5-10b46da662ba",
+      "cost": "15",
+      "keywords": ["Blood Angels"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Once per battle, in your Command phase, the bearer can use this Enhancement. When it does, until the start of your next Command phase, all Angelic Legacy abilities (see Legacy of the Angel Detachment Rule) are active for the bearer’s unit, instead of only two of them.",
+      "faction_id": "CHBA",
+      "detachment": "Angelic Inheritors"
+    },
+    {
+      "name": "Blazing Icon",
+      "id": "fe9ae358-083d-5bd9-a486-65853870fc80",
+      "cost": "20",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES INFANTRY model only. Enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
+      "faction_id": "CHBA",
+      "detachment": "Angelic Inheritors"
+    },
+    {
+      "name": "Ordained Sacrifice",
+      "id": "451e75dc-1a1a-55a1-ac5f-bdf7c4083c15",
+      "cost": "25",
+      "keywords": ["Blood Angels"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. The first time the bearer is destroyed, roll one D6 at the end of the phase: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining.",
+      "faction_id": "CHBA",
+      "detachment": "Angelic Inheritors"
     }
   ],
   "id": "CHBA",
@@ -3155,6 +3196,51 @@
       "faction_id": "CHBA",
       "fluff": "The Lost are consumed utterly by rage.",
       "detachment": "The Lost Brethren"
+    },
+    {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CHBA",
+      "fluff": "The belligerence of the Adeptus Astartes, combined with their transhuman physiology, makes them unyielding foes to face.",
+      "detachment": "Angelic Inheritors"
+    },
+    {
+      "name": "Focused Fury",
+      "id": "1c8679c8-2059-58c4-9333-8aa54898a952",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [LETHAL HITS] ability. If your unit is a CHARACTER unit, until the end of the phase, those weapons have the [LANCE] ability as well.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "CHBA",
+      "fluff": "Keeping the beast within under tight control, the Blood Angels nonetheless tap into that inner rage and shackle it to their precisely aimed blows.&x20;",
+      "detachment": "Angelic Inheritors"
+    },
+    {
+      "name": "In The Shadow Of Great Wings",
+      "id": "018bfafe-aecd-5774-8ead-986c6b131e8c",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS ASTARTES CHARACTER unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "CHBA",
+      "fluff": "The enemy is engulfed in a soul‑deep shadow for just a moment, as though mighty wings have spread above them and marred their vision with occluding darkness.",
+      "detachment": "Angelic Inheritors"
     },
     {
       "name": "Armour of Contempt",
@@ -3277,6 +3363,21 @@
       "detachment": "The Lost Brethren"
     },
     {
+      "name": "Instant of Grace",
+      "id": "d2fb1445-6de6-597d-97cc-4e6b18ed48fe",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES INFANTRY unit from your army.",
+      "when": "Your Command phase.",
+      "effect": "Select one non‑CHARACTER model in your unit. Until the start of your next Command phase, your model has the CHARACTER keyword.\n\nDesigner’s Note: While in effect, your model’s unit is therefore a CHARACTER unit, meaning it can interact with the Legacy of the Angel Detachment rule, in addition to other rules that interact with CHARACTER units.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["command"],
+      "faction_id": "CHBA",
+      "fluff": "In this most desperate moment of need, a lone battle‑brother rises to the challenge as a true inheritor of the Angel’s legacy.&x20;",
+      "detachment": "Angelic Inheritors"
+    },
+    {
       "name": "Unbridled Ardour",
       "id": "5f6b0b33-00ce-5f08-9595-8c0180c85f85",
       "cost": 1,
@@ -3337,6 +3438,36 @@
       "detachment": "The Lost Brethren"
     },
     {
+      "name": "Strike Now For Glory",
+      "id": "7f00af52-f5d0-5dcc-b6f7-91a559b7d64c",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "CHBA",
+      "fluff": "Knowing instinctively that the pivotal moment has arrived, these battle‑brothers aim and hammer their foes with unrelenting volleys.",
+      "detachment": "Angelic Inheritors"
+    },
+    {
+      "name": "Unto The Burning Skies",
+      "id": "79ec4d96-3a47-543a-9867-ce9470a0bee8",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS ASTARTES JUMP PACK unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units, unless it is THE SANGUINOR.",
+      "when": "End of your opponent’s Fight phase.",
+      "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.&x20;",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "CHBA",
+      "fluff": "In the face of encroaching doom, as the world seems to burn around them, these scions of Sanguinius leap high into the tormented heavens, ready to strike down with vengeful fury upon the enemy teeming below.&x20;",
+      "detachment": "Angelic Inheritors"
+    },
+    {
       "name": "Angelic Grace",
       "id": "b8bef002-424d-5221-a20b-88bd98fb0b06",
       "cost": 1,
@@ -3382,5 +3513,5 @@
       "detachment": "Liberator Assault Group"
     }
   ],
-  "updated": "2024-12-26T12:41:51.282Z"
+  "updated": "2025-01-20T10:01:28.345Z"
 }

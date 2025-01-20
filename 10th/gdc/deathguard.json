@@ -5228,7 +5228,7 @@
       "wargear": ["1 model can be equipped with 1 diseased icon."]
     }
   ],
-  "detachments": ["Plague Company"],
+  "detachments": ["Flyblown Host", "Plague Company"],
   "enhancements": [
     {
       "name": "Living Plague",
@@ -5269,6 +5269,46 @@
       "description": "DEATH GUARD model only. Each time the bearer’s unit is selected as a target of an enemy unit’s charge, until the end of the phase, subtract 2 from Charge rolls made for that enemy unit.",
       "faction_id": "DG",
       "detachment": "Plague Company"
+    },
+    {
+      "name": "Droning Chorus",
+      "id": "1c0aae8d-a9fa-5115-b502-8f9314613a82",
+      "cost": "15",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "DEATH GUARD INFANTRY model only. Ranged weapons equipped by models in the bearer’s unit have the [ASSAULT] ability.",
+      "faction_id": "DG",
+      "detachment": "Flyblown Host"
+    },
+    {
+      "name": "Insectile Murmuration",
+      "id": "0d584455-7317-5078-b7c9-6f1c121782d0",
+      "cost": "20",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "DEATH GUARD INFANTRY model only. Each time a model in the bearer’s unit makes an attack that targets a unit that is within Contagion Range of one or more DEATH GUARD units from your army, re‐roll a Wound roll of 1.",
+      "faction_id": "DG",
+      "detachment": "Flyblown Host"
+    },
+    {
+      "name": "Rejuvenating Swarm",
+      "id": "6431226c-3279-5d01-8cd7-02bf65646efe",
+      "cost": "10",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "DEATH GUARD INFANTRY model only. At the end of each phase, the bearer regains all of its lost wounds.",
+      "faction_id": "DG",
+      "detachment": "Flyblown Host"
+    },
+    {
+      "name": "Plagueveil",
+      "id": "80f51c5d-040d-5039-8fea-59cbc4dc05a3",
+      "cost": "25",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "DEATH GUARD INFANTRY model only. While the bearer’s unit is within range of one or more objective markers that you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+      "faction_id": "DG",
+      "detachment": "Flyblown Host"
     }
   ],
   "id": "DG",
@@ -5277,6 +5317,51 @@
   "name": "Death Guard",
   "parent_id": "",
   "stratagems": [
+    {
+      "name": "Droning Horror",
+      "id": "77eab370-dd66-531d-895b-801d439f60fd",
+      "cost": 1,
+      "turn": "your",
+      "target": "One DEATH GUARD INFANTRY unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a ranged attack, re‐roll a Hit roll of 1. If that attack targets a unit within half range, you can re‐roll the Hit roll instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "DG",
+      "fluff": "Clouds of droning daemon flies sweep across the battlefield to envelop the enemies of the Death Guard. As their victims claw and scratch at the seething swarms, Mortarion’s sons pick off their targets at leisure.",
+      "detachment": "Flyblown Host"
+    },
+    {
+      "name": "Myphitic Invigoration",
+      "id": "2573e98f-c2a8-5e7a-bdf7-6d05f9003068",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One DEATH GUARD INFANTRY unit from your army that is within 6\" of one or more friendly MYPHITIC BLIGHT‐HAULER units and that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of this unit, subtract 1 from the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "DG",
+      "fluff": "Daemon flies are drawn to and invigorated by the foul miasmas surrounding Myphitic Blight‐haulers. In the vicinity of these malodorous constructs, the swarms gather in densities great enough to form a living barrier to the foe’s attacks.",
+      "detachment": "Flyblown Host"
+    },
+    {
+      "name": "Vermin Cloud",
+      "id": "5cd95b86-965e-5c0a-a96a-a4811d616ae3",
+      "cost": 1,
+      "turn": "either",
+      "target": "One DEATH GUARD INFANTRY unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in this unit makes a Pile‐in or Consolidation move, it can move up to 6\" instead of up to 3\".",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "DG",
+      "fluff": "The storm of insectile contagion sweeps forward, dragging the Death Guard in its wake. None will escape the Plague God’s embrace.",
+      "detachment": "Flyblown Host"
+    },
     {
       "name": "Ferric Blight",
       "id": "b644282d-c760-5432-9cc6-60c28e8c5c28",
@@ -5338,6 +5423,51 @@
       "detachment": "Plague Company"
     },
     {
+      "name": "Enervating Onslaught",
+      "id": "724febd2-284c-5e6a-b553-e9af9a8a5812",
+      "cost": 1,
+      "turn": "your",
+      "target": "That DEATH GUARD INFANTRY unit.",
+      "when": "Your Charge phase, just after a DEATH GUARD INFANTRY unit from your army makes a Charge move.",
+      "effect": "Select one enemy unit within Engagement Range of your unit (excluding MONSTERS and VEHICLES). Roll one D6 for each model in your unit that is within Engagement Range of that unit, adding 1 to the result if that model is not a CULTIST or POXWALKER model: for each 5+, the selected enemy unit suffers 1 mortal wound (to a maximum of 6 mortal wounds).",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "faction_id": "DG",
+      "fluff": "Swathed in a buzzing cloak of pathogenic decay, Nurgle’s chosen crash into the foe, disease dealing death as surely as fist, maul and blade.",
+      "detachment": "Flyblown Host"
+    },
+    {
+      "name": "Nauseating Paroxysms",
+      "id": "9e7817d2-e1f8-50ff-9911-8e0b1b928459",
+      "cost": 1,
+      "turn": "either",
+      "target": "One DEATH GUARD INFANTRY unit from your army that is within Engagement Range of one or more enemy units.",
+      "when": "Start of the Fight phase.",
+      "effect": "Select one enemy unit within Engagement Range of your unit. That unit must take a Battle‐shock test, subtracting 1 from the result.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "DG",
+      "fluff": "The contagion borne by the Death Guard and their attendant swarms of winged vermin triggers bouts of sickness and convulsion in those they encounter.",
+      "detachment": "Flyblown Host"
+    },
+    {
+      "name": "Eye of the Swarm",
+      "id": "113725d5-3ae9-58b8-ac6f-0e15ac1333a6",
+      "cost": 1,
+      "turn": "your",
+      "target": "One DEATH GUARD INFANTRY unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit (excluding Blast weapons) have the [PISTOL] ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "DG",
+      "fluff": "The vermin swarms intensify as the Death Guard close in upon the enemy. As their foes clutch and tear their crawling skin, pitiless Plague Marines unleash volleys of point‐blank fire into their tormented foes.",
+      "detachment": "Flyblown Host"
+    },
+    {
       "name": "Boilblight",
       "id": "7aaa1c90-e8aa-5fba-8bf5-35219e020ea8",
       "cost": 1,
@@ -5368,5 +5498,5 @@
       "detachment": "Plague Company"
     }
   ],
-  "updated": "2024-12-26T12:41:50.672Z"
+  "updated": "2025-01-20T10:01:27.956Z"
 }

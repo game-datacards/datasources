@@ -2739,7 +2739,7 @@
       }
     }
   ],
-  "detachments": ["Righteous Crusaders"],
+  "detachments": ["Wrathful Procession", "Righteous Crusaders"],
   "enhancements": [
     {
       "name": "Perdition’s Edge",
@@ -2757,7 +2757,7 @@
       "cost": "10",
       "keywords": ["Black Templars"],
       "excludes": [],
-      "description": "Adeptus Astartes model only.\n\n■ The bearer’s ranged weapons have the [PRECISION], [ANTI-PSYKER 4+] and [DEVASTATING WOUNDS] abilities.\n■ If the Abhor the Witch, Destroy the Witch vow is active for your army, each time the bearer makes a ranged attack that targets a PSYKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
+      "description": "ADEPTUS ASTARTES model only.\n\n■ The bearer’s ranged weapons have the [PRECISION], [ANTI-PSYKER 4+] and [DEVASTATING WOUNDS] abilities.\n■ If the Abhor the Witch, Destroy the Witch vow is active for your army, each time the bearer makes a ranged attack that targets a PSYKER unit, you can re-roll the Hit roll and you can re-roll the Wound roll.",
       "faction_id": "CHBT",
       "detachment": "Righteous Crusaders"
     },
@@ -2780,6 +2780,46 @@
       "description": "ADEPTUS ASTARTES model only.\n\n■ Each time an attack is allocated to the bearer, halve the Damage characteristic of that attack.\n■ While the bearer is leading a unit, if the Uphold the Honour of the Emperor vow is active for your army, models in that unit have the Feel No Pain 5+ ability.",
       "faction_id": "CHBT",
       "detachment": "Righteous Crusaders"
+    },
+    {
+      "name": "Pyrebrand",
+      "id": "23d7fa73-1b1e-52da-9797-703be608041d",
+      "cost": "25",
+      "keywords": ["Black Templars"],
+      "excludes": [],
+      "description": "BLACK TEMPLARS model only. Models in the bearer’s unit have the Stealth ability.",
+      "faction_id": "CHBT",
+      "detachment": "Wrathful Procession"
+    },
+    {
+      "name": "Sacred Rage",
+      "id": "4cc6401e-0098-5825-8420-42bc16e8f990",
+      "cost": "30",
+      "keywords": ["Black Templars"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+      "faction_id": "CHBT",
+      "detachment": "Wrathful Procession"
+    },
+    {
+      "name": "Taramond’s Censer",
+      "id": "8926e802-ce4c-5628-8da2-4648f7b94360",
+      "cost": "15",
+      "keywords": ["Black Templars"],
+      "excludes": [],
+      "description": "BLACK TEMPLARS model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer’s unit must take a Battle‑shock test. When doing so, subtract 1 from the result.",
+      "faction_id": "CHBT",
+      "detachment": "Wrathful Procession"
+    },
+    {
+      "name": "Benediction of Fury",
+      "id": "01413b10-4b2b-5c5a-aced-17c61a04483f",
+      "cost": "10",
+      "keywords": ["Chaplain"],
+      "excludes": [],
+      "description": "CHAPLAIN model only. The bearer’s melee weapons have the [DEVASTATING WOUNDS] ability.",
+      "faction_id": "CHBT",
+      "detachment": "Wrathful Procession"
     }
   ],
   "id": "CHBT",
@@ -2818,6 +2858,66 @@
       "faction_id": "CHBT",
       "fluff": "The Black Templars channel their fervour into a hate-fuelled flurry of blows.",
       "detachment": "Righteous Crusaders"
+    },
+    {
+      "name": "Brute Fervour",
+      "id": "16d9ab42-f119-5ad1-8b2f-3e227d2ab619",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, re‑roll a Hit roll of 1 and you can ignore any or all modifiers to the following: that attack’s Weapon Skill characteristic; the Hit roll; the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "CHBT",
+      "fluff": "All the enemy’s skill, cunning and trickery come to naught in the face of the Black Templars’ direct and unrelenting brutality.",
+      "detachment": "Wrathful Procession"
+    },
+    {
+      "name": "Fuelled by Wrath",
+      "id": "ecc78d04-e6bd-56ad-ba74-244edfb50169",
+      "cost": 1,
+      "turn": "either",
+      "target": "That ADEPTUS ASTARTES unit.",
+      "when": "Any phase, just after a mortal wound is allocated to an ADEPTUS ASTARTES unit from your army.",
+      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["any"],
+      "faction_id": "CHBT",
+      "fluff": "So powerfully gripped by holy fervour are these warriors that they fight on through even the most grievous wounds to body and mind.",
+      "detachment": "Wrathful Procession"
+    },
+    {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CHBT",
+      "fluff": "The belligerence and transhuman physiologies of the Adeptus Astartes make them unyielding foes.",
+      "detachment": "Wrathful Procession"
+    },
+    {
+      "name": "Castigate the Demagogues",
+      "id": "82338bda-cea9-5506-bef9-382d4699bd4e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "CHBT",
+      "fluff": "There is nowhere that the architects of heresy can hide from the righteous judgement of the Black Templars.",
+      "detachment": "Wrathful Procession"
     },
     {
       "name": "Vicious Riposte",
@@ -2878,7 +2978,37 @@
       "faction_id": "CHBT",
       "fluff": "With a zealous cry, the Black Templars press forward towards victory.",
       "detachment": "Righteous Crusaders"
+    },
+    {
+      "name": "Relentless Momentum",
+      "id": "6a584481-c638-5e98-a89f-014eb8517a1e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to fight this phase and is within Engagement Range of one or more enemy units.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, when determining which models in your unit are eligible to fight, any models in it that are within 3\" of one or more enemy models are eligible to fight. When resolving those attacks, such models can target one of those enemy units that is within 3\" of them and within Engagement Range of their unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "CHBT",
+      "fluff": "The sheer momentum and ferocity of so many charging, armoured killers are almost impossible to stop, carrying them forward through rank after rank of the heretical foe.",
+      "detachment": "Wrathful Procession"
+    },
+    {
+      "name": "Voice of Devotion",
+      "id": "d05b650e-d24c-558c-8fed-12ee843f80c8",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army.",
+      "when": "Your Command phase.",
+      "effect": "Select the Chorus of Relentless Hate, Rite of Perfervid Wrath or Chant of Deathless Devotion Litany. Until the end of the battle round, that Litany is active for your unit instead of any other Litany that is active for your army.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "CHBT",
+      "fluff": "In the crucial moment, these battle‑brothers switch to the most apposite devotional litany just as they might select the correct weapon from the Chapter’s armouries.",
+      "detachment": "Wrathful Procession"
     }
   ],
-  "updated": "2024-12-26T12:41:51.331Z"
+  "updated": "2025-01-20T10:01:28.377Z"
 }

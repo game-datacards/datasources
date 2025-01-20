@@ -2066,7 +2066,7 @@
       ]
     }
   ],
-  "detachments": ["Oathband"],
+  "detachments": ["Oathband", "Hearthband"],
   "enhancements": [
     {
       "name": "Appraising Glare",
@@ -2107,6 +2107,46 @@
       "description": "LEAGUES OF VOTANN model only. The first time the bearer is destroyed, after placing a Judgement token next to the unit that destroyed it, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
       "faction_id": "LoV",
       "detachment": "Oathband"
+    },
+    {
+      "name": "Bastion Shield",
+      "id": "b9b3e0ec-1be1-52ea-954b-67644412302f",
+      "cost": "25",
+      "keywords": ["Leagues of Votann"],
+      "excludes": [],
+      "description": "LEAGUES OF VOTANN model only. Each time a ranged attack targets the bearer’s unit, if the attacking model is within 12\" of the bearer’s unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "faction_id": "LoV",
+      "detachment": "Hearthband"
+    },
+    {
+      "name": "Quake Multigenerator",
+      "id": "7396264d-c65f-557d-8797-18adc34bc730",
+      "cost": "15",
+      "keywords": ["Kâhl"],
+      "excludes": [],
+      "description": "KÂHL model only. In your Shooting phase, after the bearer has shot, select one enemy unit (excluding TITANIC units) hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
+      "faction_id": "LoV",
+      "detachment": "Hearthband"
+    },
+    {
+      "name": "Ironskein",
+      "id": "90538e66-95bc-5307-80ac-68615dd458de",
+      "cost": "10",
+      "keywords": ["Leagues of Votann"],
+      "excludes": [],
+      "description": "LEAGUES OF VOTANN model only. Add 2 to the bearer’s Wounds characteristic.",
+      "faction_id": "LoV",
+      "detachment": "Hearthband"
+    },
+    {
+      "name": "High Kâhl",
+      "id": "463bcb58-c699-5f27-9703-08d27cea34c4",
+      "cost": "30",
+      "keywords": ["Kâhl"],
+      "excludes": [],
+      "description": "KÂHL model only. Each time a model in the bearer’s unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+      "faction_id": "LoV",
+      "detachment": "Hearthband"
     }
   ],
   "id": "LoV",
@@ -2115,6 +2155,36 @@
   "name": "Votann",
   "parent_id": "",
   "stratagems": [
+    {
+      "name": "Brëkkeknots",
+      "id": "7d512c07-b270-56fa-9c75-fc7fd764ab1e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One KÂHL, ÛTHAR THE DESTINED or EINHYR HEARTHGUARD unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, models in your unit have a 4+ invulnerable save.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "LoV",
+      "fluff": "These micro shield generators, worked into warrior jewellery or armour crests, trigger on command to provide short‑lived boosted protection.",
+      "detachment": "Hearthband"
+    },
+    {
+      "name": "Fury of the Hearth",
+      "id": "00d1d805-9d8a-5a50-acdd-0e2bb9f26eb2",
+      "cost": 1,
+      "turn": "your",
+      "target": "One EINHYR HEARTHGUARD unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons (excluding Blast weapons) equipped by models in your unit have the [RAPID FIRE 1] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "LoV",
+      "fluff": "As though they unleash the raging flames of their kindred’s hearth upon the enemy, the Einhyr all but drown their enemies in fire.",
+      "detachment": "Hearthband"
+    },
     {
       "name": "Warrior Pride",
       "id": "36f7ea19-cd8e-55b3-ad56-a0561c395bf3",
@@ -2146,6 +2216,21 @@
       "detachment": "Oathband"
     },
     {
+      "name": "Superior Craftsmanship",
+      "id": "8634b6f5-b6b3-57b1-90d3-9ffbcdda15c1",
+      "cost": 2,
+      "turn": "either",
+      "target": "One LEAGUES OF VOTANN unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a MONSTER or VEHICLE unit, add 1 to the Damage characteristic of that attack.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "LoV",
+      "fluff": "Not only are the finest of the Kindred’s warriors selected for this duty, but they are also equipped with the best weaponry and wargear the Brôkhyr can produce.",
+      "detachment": "Hearthband"
+    },
+    {
       "name": "Reactive Reprisal",
       "id": "ba0f78b6-5ebd-5d9f-8d77-d15fd5901470",
       "cost": 2,
@@ -2159,6 +2244,51 @@
       "faction_id": "LoV",
       "fluff": "Once an enemy target has been marked out by the Eye of the Ancestors, the Kin focus their efforts upon its destruction, redoubling their fury should it attempt to engage.",
       "detachment": "Oathband"
+    },
+    {
+      "name": "Sure of Purpose",
+      "id": "ee272f14-96ef-58fe-b026-37a2a452ff34",
+      "cost": 1,
+      "turn": "either",
+      "target": "One LEAGUES OF VOTANN unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a Pile‑in or Consolidation move, it can move up to 6\" instead of up to 3\".",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "LoV",
+      "fluff": "The single‑minded advance of the Kin rolls over collapsing enemy lines and exploits every fault and weakness, driving on towards the objective.",
+      "detachment": "Hearthband"
+    },
+    {
+      "name": "Unyielding Aggression",
+      "id": "fe877a22-a2c4-5494-bb90-0d5a47d29334",
+      "cost": 1,
+      "turn": "your",
+      "target": "That LEAGUES OF VOTANN INFANTRY unit.",
+      "when": "Your Movement phase, just after a LEAGUES OF VOTANN INFANTRY unit from your army Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "LoV",
+      "fluff": "Even should they be compelled to pull back momentarily, the warriors of the Hearthband maintain a punishing curtain of fire to erode the enemy further or rally swiftly and drive back into the fight.",
+      "detachment": "Hearthband"
+    },
+    {
+      "name": "Materialisation Matrices",
+      "id": "f8d4cfeb-8348-596d-a232-545de1d3a1a9",
+      "cost": 1,
+      "turn": "your",
+      "target": "One LEAGUES OF VOTANN unit from your army that is in Reserves and has the Deep Strike ability.",
+      "when": "The Reinforcements step of your Movement phase.",
+      "effect": "Until the end of the phase, when your unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.",
+      "restrictions": "Until the end of the turn, your unit is not eligible to declare a charge.",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "LoV",
+      "fluff": "Built to a superior standard using secrets imparted by the Votann, the teleporters employed by this Hearthband can stabilise rematerialisation fields remarkably close to the foe.",
+      "detachment": "Hearthband"
     },
     {
       "name": "Ordered Retreat",
@@ -2206,5 +2336,5 @@
       "detachment": "Oathband"
     }
   ],
-  "updated": "2024-12-26T12:41:52.352Z"
+  "updated": "2025-01-20T10:01:29.065Z"
 }
