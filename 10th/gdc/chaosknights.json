@@ -3293,7 +3293,7 @@
       ]
     }
   ],
-  "detachments": ["Traitoris Lance"],
+  "detachments": ["Traitoris Lance", "Iconoclast Fiefdom"],
   "enhancements": [
     {
       "name": "Lord of Dread",
@@ -3304,6 +3304,26 @@
       "description": "CHAOS KNIGHTS model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that enemy unit must take a Battle-shock test.",
       "faction_id": "QT",
       "detachment": "Traitoris Lance"
+    },
+    {
+      "name": "Profane Altar",
+      "id": "50662511-6648-55a7-92b7-84f55484b78e",
+      "cost": "20",
+      "keywords": ["Chaos Knights"],
+      "excludes": [],
+      "description": "CHAOS KNIGHTS model only. Each time the bearer makes a Dark Sacrifice, the maximum number of models are destroyed in the selected DAMNED unit (i.e. 3 if the unit’s Leadership test is passed, or 6 if it is failed) but, until the end of the phase, the bearer’s weapons have both [LETHAL HITS] and [SUSTAINED HITS 1].",
+      "faction_id": "QT",
+      "detachment": "Iconoclast Fiefdom"
+    },
+    {
+      "name": "Pave The Way",
+      "id": "936e0e56-315e-533b-968a-f5a56d8d4362",
+      "cost": "15",
+      "keywords": ["Chaos Knights"],
+      "excludes": [],
+      "description": "CHAOS KNIGHTS model only. At the start of the Declare Battle Formations step, you can select up to three DAMNED units from your army. The selected units have the Scouts 6\" ability.",
+      "faction_id": "QT",
+      "detachment": "Iconoclast Fiefdom"
     },
     {
       "name": "Aura of Terror",
@@ -3326,6 +3346,26 @@
       "detachment": "Traitoris Lance"
     },
     {
+      "name": "Tyrant’s Banner",
+      "id": "f2f69e10-a9b5-5564-803f-c6d31b7e904e",
+      "cost": "5",
+      "keywords": ["Chaos Knights"],
+      "excludes": [],
+      "description": "CHAOS KNIGHTS model only. Each time the bearer makes a Dark Sacrifice, select one visible friendly DAMNED unit to take a Leadership test instead of a friendly DAMNED unit within 6\".",
+      "faction_id": "QT",
+      "detachment": "Iconoclast Fiefdom"
+    },
+    {
+      "name": "Diabolical Resilience",
+      "id": "40509376-f34b-5614-b1f0-3e858145ba52",
+      "cost": "35",
+      "keywords": ["Chaos Knights"],
+      "excludes": [],
+      "description": "CHAOS KNIGHTS model only. The bearer has the Feel No Pain 6+ ability and you can ignore any or all modifiers to its Move characteristic and/or to any Advance or Charge rolls made for it.",
+      "faction_id": "QT",
+      "detachment": "Iconoclast Fiefdom"
+    },
+    {
       "name": "Panoply of the Cursed Knights",
       "id": "787fd0ab-066d-5592-aabc-87b447c84648",
       "cost": "40",
@@ -3342,6 +3382,21 @@
   "name": "Chaos Knights",
   "parent_id": "",
   "stratagems": [
+    {
+      "name": "Soul Hunger",
+      "id": "0212f0a3-4429-5b1a-909a-0a563b024b1f",
+      "cost": 1,
+      "turn": "either",
+      "target": "That CHAOS KNIGHTS unit.",
+      "when": "Fight phase, just after a CHAOS KNIGHTS unit from your army has fought.",
+      "effect": "If one or more models were destroyed as a result of those attacks, your unit regains up to D3 lost wounds. If one or more models from Battle‑shocked units were destroyed as a result of those attacks, your unit regains up to D3+2 lost wounds instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "QT",
+      "fluff": "Daemonic corruption, both physical and spiritual, has debased once noble machines. As the pilots of corrupted Knight suits slaughter mortal victims, their mechanical steed feeds upon stolen life forces and raw fear.",
+      "detachment": "Iconoclast Fiefdom"
+    },
     {
       "name": "Dread Hounds",
       "id": "c2310f9a-156d-55b3-9182-38b8bf2ce581",
@@ -3373,6 +3428,21 @@
       "detachment": "Traitoris Lance"
     },
     {
+      "name": "Wretched Masses",
+      "id": "04721e18-ed31-545e-a10c-742ac6580b5d",
+      "cost": 2,
+      "turn": "either",
+      "target": "One DAMNED unit (excluding ACCURSED CULTISTS) from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.",
+      "when": "Any phase.",
+      "effect": "Add a new unit to your army identical to your destroyed unit, in Strategic Reserves, at its Starting Strength and with all of its wounds remaining.",
+      "restrictions": "You can only use this Stratagem once per battle. This Stratagem cannot be used to return destroyed CHARACTER units to Attached units.",
+      "type": "Battle Tactic",
+      "phase": ["any"],
+      "faction_id": "QT",
+      "fluff": "In the wake of striding Knights are dragged tides of desperate zealots. No sooner has one horde of baying mortals fallen than another surges forth to take their place.",
+      "detachment": "Iconoclast Fiefdom"
+    },
+    {
       "name": "Knights of Shade",
       "id": "13b7f334-a288-5a69-9ce8-42042090571e",
       "cost": 1,
@@ -3386,6 +3456,66 @@
       "faction_id": "QT",
       "fluff": "Like dark phantoms, some Chaos Knights can move through solid walls without hindrance.",
       "detachment": "Traitoris Lance"
+    },
+    {
+      "name": "Unrestrained Rage",
+      "id": "0ed85d05-b64f-50f3-89c6-0a8a5146a657",
+      "cost": 1,
+      "turn": "your",
+      "target": "That unit.",
+      "when": "Your Movement phase, just after a CHAOS KNIGHTS unit from your army Advances or Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced or Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "QT",
+      "fluff": "When consumed with battlelust, Fallen Nobles pilot their Knight suits with instinctive skill, rampaging through the enemies with horrific speed and savagery.",
+      "detachment": "Iconoclast Fiefdom"
+    },
+    {
+      "name": "Worthless Chattel",
+      "id": "f4b05bc8-1dc2-582f-b473-9a2c24c3dc57",
+      "cost": 1,
+      "turn": "your",
+      "target": "One DAMNED unit from your army.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, enemy units are not considered to be within Engagement Range of your unit for the purposes of selecting targets of ranged weapons. Until the end of the phase, each time an enemy model loses a wound, while that model’s unit is within Engagement Range of your unit, roll one D6: on a 4+, one model from your unit is destroyed after the attacking unit has finished making its attacks.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "QT",
+      "fluff": "The callous nobility of Iconoclast houses care naught for their devotees, obliterating enemies and mortal thralls alike in furious barrages of infernal firepower.",
+      "detachment": "Iconoclast Fiefdom"
+    },
+    {
+      "name": "Preserve The Idols",
+      "id": "4bcc1b93-b992-5744-a857-8e928aa97dd2",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One CHAOS KNIGHTS unit from your army that is within 9\" of that enemy unit.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+      "effect": "Select one DAMNED unit from your army that is not Battle‑shocked, not within Engagement Range of one or more enemy units and is within 6\" of your unit. That DAMNED unit can make a Normal move of up to 6\", but it must end this move closer to that enemy unit than when it started the move.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "QT",
+      "fluff": "Driven to preserve their Fallen Noble overlords, masses of mutants, cultists, and corrupted soldiers rush to interpose themselves between their knightly idols and the cursed foe.",
+      "detachment": "Iconoclast Fiefdom"
+    },
+    {
+      "name": "Avenge The Masters!",
+      "id": "ff0c5072-214e-54f7-aca4-4466383df3bc",
+      "cost": 1,
+      "turn": "either",
+      "target": "One CHAOS KNIGHTS unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed.",
+      "when": "Any phase.",
+      "effect": "Until the end of the battle, the enemy unit that destroyed your unit is Marked. Each time a DAMNED model from your army makes an attack that targets a Marked unit, that attack has the [LETHAL HITS] ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["any"],
+      "faction_id": "QT",
+      "fluff": "As the object of their adulation is consumed by fire, mortal worshippers are roused to a desperate fury, seeking vengeance on behalf of their deceased master.",
+      "detachment": "Iconoclast Fiefdom"
     },
     {
       "name": "A Long Leash",
@@ -3433,5 +3563,5 @@
       "detachment": "Traitoris Lance"
     }
   ],
-  "updated": "2024-12-26T12:41:51.799Z"
+  "updated": "2025-01-20T10:01:28.672Z"
 }

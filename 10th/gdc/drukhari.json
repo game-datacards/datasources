@@ -4021,7 +4021,7 @@
       "wargear": ["None"]
     }
   ],
-  "detachments": ["Realspace Raiders", "Skysplinter Assault"],
+  "detachments": ["Realspace Raiders", "Skysplinter Assault", "Reaper’s Wager"],
   "enhancements": [
     {
       "name": "Crucible of Malediction",
@@ -4102,6 +4102,46 @@
       "description": "DRUKHARI model only. Each time the bearer’s unit disembarks from a TRANSPORT, until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer’s unit.",
       "faction_id": "DRU",
       "detachment": "Skysplinter Assault"
+    },
+    {
+      "name": "Archraider",
+      "id": "299ed59c-451b-57ec-9517-9579aa162279",
+      "cost": "15",
+      "keywords": ["Harlequins"],
+      "excludes": [],
+      "description": "HARLEQUINS or DRUKHARI model only. In the Declare Battle Formations step, if the bearer starts the battle embarked within a DEDICATED TRANSPORT, that DEDICATED TRANSPORT has the Scouts 9\" ability.",
+      "faction_id": "DRU",
+      "detachment": "Reaper’s Wager"
+    },
+    {
+      "name": "Webway Walker",
+      "id": "47f62c0a-436a-5689-9641-2812b3cab45d",
+      "cost": "15",
+      "keywords": ["Harlequins"],
+      "excludes": [],
+      "description": "HARLEQUINS or DRUKHARI model only. Models in the bearer’s unit have the Deep Strike ability. Each time the bearer’s unit is set up on the battlefield using the Deep Strike ability, if that unit is currently losing the wager, until the end of the turn, you can re‑roll Charge rolls made for that unit.",
+      "faction_id": "DRU",
+      "detachment": "Reaper’s Wager"
+    },
+    {
+      "name": "Reaper’s Cowl",
+      "id": "d2021261-46ef-557d-934c-213f0b807c5b",
+      "cost": "25",
+      "keywords": ["Harlequins"],
+      "excludes": [],
+      "description": "HARLEQUINS model only. Models in the bearer’s unit have the Stealth and Infiltrators abilities.",
+      "faction_id": "DRU",
+      "detachment": "Reaper’s Wager"
+    },
+    {
+      "name": "Conductor of Torment",
+      "id": "057a9bb3-8145-5d38-bcca-1342fe4ec799",
+      "cost": "20",
+      "keywords": ["Drukhari"],
+      "excludes": [],
+      "description": "DRUKHARI model only. In your Command phase, you can do one of the following:\n\n■ If your DRUKHARI units are currently losing the wager, you can gain 1 Pain token. If you do, DRUKHARI units from your army are now winning the wager.\n■ If your DRUKHARI units are currently winning the wager, you can discard 1 Pain token. If you do, HARLEQUINS units from your army are now winning the wager.",
+      "faction_id": "DRU",
+      "detachment": "Reaper’s Wager"
     }
   ],
   "id": "DRU",
@@ -4124,6 +4164,36 @@
       "faction_id": "DRU",
       "fluff": "These warriors are well versed in raining suppressing fire on the foe even as they close with them from on high, shredding defences and leaving the survivors easy prey for the raid.",
       "detachment": "Skysplinter Assault"
+    },
+    {
+      "name": "Malicious Frenzy",
+      "id": "dd853d82-fe33-5190-a39a-c0aefea7c5b6",
+      "cost": 1,
+      "turn": "either",
+      "target": "One DRUKHARI or HARLEQUINS unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Select [LETHAL HITS] or [SUSTAINED HITS 1]. Until the end of the phase, weapons equipped by models in your unit have the selected ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "DRU",
+      "fluff": "Jealous competition descends into frenzied carnage as the kill count climbs higher and the intoxicating screams of the dying fill the air.",
+      "detachment": "Reaper’s Wager"
+    },
+    {
+      "name": "Murderer’s Circus",
+      "id": "a12d30ea-3c7f-53f3-8486-d2daf752942f",
+      "cost": 1,
+      "turn": "either",
+      "target": "One DRUKHARI or HARLEQUINS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "DRU",
+      "fluff": "In bounding leaps and graceful pirouettes, the cavalcade of capricious killers bounds through hails of fire, cackling gleefully as they come.",
+      "detachment": "Reaper’s Wager"
     },
     {
       "name": "Alliance of Agony",
@@ -4276,6 +4346,66 @@
       "detachment": "Skysplinter Assault"
     },
     {
+      "name": "Shorten The Odds",
+      "id": "71aefa86-1c9a-59f4-9a3c-7d2b6f664ffd",
+      "cost": 1,
+      "turn": "your",
+      "target": "That unit.",
+      "when": "Your Movement phase, just after a DRUKHARI or HARLEQUINS unit from your army has Advanced.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "DRU",
+      "fluff": "Having selected their victims, these killers strive to complete the kill with speed and brutality whilst moving ever closer to winning their macabre wager.",
+      "detachment": "Reaper’s Wager"
+    },
+    {
+      "name": "Scintillating Tempo",
+      "id": "68323425-d0df-5bbc-bfe8-828da7956fa4",
+      "cost": 1,
+      "turn": "your",
+      "target": "That unit.",
+      "when": "Your Movement phase or your Charge phase, just after a DRUKHARI or HARLEQUINS unit from your army is selected to make a Normal, Advance or Fall Back move, is set up on the battlefield, or declares a charge.",
+      "effect": "Until the end of the turn, enemy units cannot use the Fire Overwatch Stratagem to shoot at your unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge", "movement"],
+      "faction_id": "DRU",
+      "fluff": "Commorrite or Harlequin, these lithe combatants move with stunning speed, darting in and out of firing lines before their foes can raise their weapons.",
+      "detachment": "Reaper’s Wager"
+    },
+    {
+      "name": "Fateful Role",
+      "id": "b4c301fa-a54f-562a-8c5c-9dae9cbf1b52",
+      "cost": 1,
+      "turn": "either",
+      "target": "One DRUKHARI or HARLEQUINS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if that unit is losing the wager: on a 4+, do not remove it from play. That destroyed model can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "DRU",
+      "fluff": "These warriors are so absorbed by their desire to win the wager that they risk death to land their killing blows.",
+      "detachment": "Reaper’s Wager"
+    },
+    {
+      "name": "Dance Macabre",
+      "id": "ae363dcb-f5c4-5e71-ad59-763432cd730d",
+      "cost": 2,
+      "turn": "opponents",
+      "target": "One DRUKHARI INFANTRY or HARLEQUINS INFANTRY unit from your army that is within 9\" of that enemy unit.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+      "effect": "Your unit can make a Normal move of up to D6\". If your unit is currently losing the wager, it can make a Normal move of up to 6\" instead.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "DRU",
+      "fluff": "The saedath’s victims become unwitting partners in a frantic dance of ghastly slaughter.",
+      "detachment": "Reaper’s Wager"
+    },
+    {
       "name": "Night Shield",
       "id": "248a9019-c51a-54d3-8d82-511200a28ac6",
       "cost": 1,
@@ -4291,5 +4421,5 @@
       "detachment": "Skysplinter Assault"
     }
   ],
-  "updated": "2024-12-26T12:41:52.586Z"
+  "updated": "2025-01-20T10:01:29.242Z"
 }

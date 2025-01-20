@@ -2529,6 +2529,7 @@
   "detachments": [
     "Unforgiven Task Force",
     "Inner Circle Task Force",
+    "Lion’s Blade Task Force",
     "Company of Hunters"
   ],
   "enhancements": [
@@ -2628,7 +2629,7 @@
       "cost": "30",
       "keywords": ["Ravenwing"],
       "excludes": [],
-      "description": "RAVENWING model only. The bearer’s unit is eligible to declare a charge in a turn in which it Advanced or Fell Back.",
+      "description": "RAVENWING model only. You can re-roll Advance and Charge rolls made for the bearer’s unit.",
       "faction_id": "CHDA",
       "detachment": "Company of Hunters"
     },
@@ -2638,7 +2639,7 @@
       "cost": "15",
       "keywords": ["Ravenwing"],
       "excludes": [],
-      "description": "RAVENWING model only. You can re-roll Advance and Charge rolls made for the bearer’s unit.",
+      "description": "Ravenwing model only. If the bearer’s unit starts the battle in Strategic Reserves, its points value does not count towards the combined points limit for units from your army that are in Strategic Reserve, and for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
       "faction_id": "CHDA",
       "detachment": "Company of Hunters"
     },
@@ -2651,6 +2652,46 @@
       "description": "RAVENWING model only. Models in the bearer’s unit have the Scouts 9\" ability.",
       "faction_id": "CHDA",
       "detachment": "Company of Hunters"
+    },
+    {
+      "name": "Calibanite Armaments",
+      "id": "ff29ccdb-291f-5d03-9562-8c4e32decb99",
+      "cost": "15",
+      "keywords": ["Dark Angels"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Add 1 to the Damage characteristic of the bearer’s melee weapons.",
+      "faction_id": "CHDA",
+      "detachment": "Lion’s Blade Task Force"
+    },
+    {
+      "name": "Lord of the Hunt",
+      "id": "13ef326e-8145-57b6-8e90-44d7662d3c2d",
+      "cost": "15",
+      "keywords": ["Ravenwing"],
+      "excludes": [],
+      "description": "RAVENWING model only. The bearer’s unit is eligible to shoot and declare a charge in a turn in which it Fell Back and you can re‑roll Desperate Escape tests taken for models in the bearer’s unit.",
+      "faction_id": "CHDA",
+      "detachment": "Lion’s Blade Task Force"
+    },
+    {
+      "name": "Stalwart Champion",
+      "id": "d2ce8304-6b98-5ef4-95be-55b026b57a33",
+      "cost": "25",
+      "keywords": ["Captain", "Lieutenant", "Chaplain"],
+      "excludes": [],
+      "description": "CAPTAIN, CHAPLAIN or LIEUTENANT model only. While the bearer’s unit is not Battle‑shocked, add 1 to the Objective Control characteristic of models in the bearer’s unit.",
+      "faction_id": "CHDA",
+      "detachment": "Lion’s Blade Task Force"
+    },
+    {
+      "name": "Fulgus Magna",
+      "id": "64d1c02a-a7e4-578b-aef6-86cfba1a0af7",
+      "cost": "20",
+      "keywords": ["Deathwing"],
+      "excludes": [],
+      "description": "DEATHWING model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+      "faction_id": "CHDA",
+      "detachment": "Lion’s Blade Task Force"
     }
   ],
   "id": "CHDA",
@@ -2734,6 +2775,51 @@
       "faction_id": "CHDA",
       "fluff": "There is no escaping the wrath of the Unforgiven when they bring their disciplined firepower to bear.",
       "detachment": "Unforgiven Task Force"
+    },
+    {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CHDA",
+      "fluff": "The belligerence of the Adeptus Astartes combined with their transhuman physiology makes them unyielding foes to face.",
+      "detachment": "Lion’s Blade Task Force"
+    },
+    {
+      "name": "Strength in Unity",
+      "id": "4c62a2dc-5630-5e97-ae30-0aa8a21db3f3",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "If that enemy unit is within Engagement Range of one or more RAVENWING units from your army, until the end of the phase, each time a model in that enemy unit makes an attack, subtract 1 from the Hit roll. If that enemy unit is within Engagement Range of one or more DEATHWING units from your army, until the end of the phase, each time a model in that enemy unit makes an attack, if the Strength characteristic of that attack is greater than the Toughness characteristic of the target, subtract 1 from the Wound roll.",
+      "restrictions": "A unit cannot be targeted by this and the Armour of Contempt Stratagem in the same phase.",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "CHDA",
+      "fluff": "Combining their specialised methods of warfare, the Ravenwing and Deathwing confound their enemies with high‑speed manoeuvrability and stalwart fortitude.",
+      "detachment": "Lion’s Blade Task Force"
+    },
+    {
+      "name": "Illuminating Fire",
+      "id": "ceb62feb-531d-5079-8ca5-3a9964156783",
+      "cost": 1,
+      "turn": "your",
+      "target": "That RAVENWING unit.",
+      "when": "Your Shooting phase, just after a RAVENWING unit from your army has selected its targets.",
+      "effect": "Select one enemy unit within 12\" of your unit that was selected as the target of one or more of the attacking unit’s attacks. Until the end of the phase, each time a friendly DEATHWING unit makes an attack that targets that enemy unit, add 1 to the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "CHDA",
+      "fluff": "Ravenwing vehicles tear across the battlefield, identifying priority threats and targeting them with volleys of killing fire. The storm of blazing fury serves as a beacon for the wrathful battle‑brothers of the Inner Circle, who strive to bring final judgement to the foe.",
+      "detachment": "Lion’s Blade Task Force"
     },
     {
       "name": "Armour of Contempt",
@@ -2901,6 +2987,36 @@
       "detachment": "Unforgiven Task Force"
     },
     {
+      "name": "Overpowering Exaction",
+      "id": "1e62d841-d48c-5dff-b50b-0b17db2b8838",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army.",
+      "when": "Command phase or the start of the Fight phase.",
+      "effect": "Select one enemy unit within Engagement Range of your unit. That enemy unit must take a Battle‑shock test. When doing so, if your unit has the DEATHWING or RAVENWING keyword, subtract 1 from the result.",
+      "restrictions": "You can only use this Stratagem once per battle round.",
+      "type": "Strategic Ploy",
+      "phase": ["command", "fight"],
+      "faction_id": "CHDA",
+      "fluff": "Engines roar, and teleportation flares erupt across the battlefield. Such is the din and ferocity of the Dark Angels’ assault that even the most veteran foes are given cause to cower before it.",
+      "detachment": "Lion’s Blade Task Force"
+    },
+    {
+      "name": "Knights of Iron",
+      "id": "09221b66-6824-5bbe-9cd6-a5a325d0fdbd",
+      "cost": 1,
+      "turn": "your",
+      "target": "One RAVENWING unit from your army.",
+      "when": "Your Movement phase or your Charge phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a Normal, Advance or Charge move, it can move horizontally through terrain features.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge", "movement"],
+      "faction_id": "CHDA",
+      "fluff": "Atop their snarling mechanical steeds, the warriors of the Ravenwing surge through seemingly impassable terrain, smashing through rubble and ruin to unleash the wrath of the Unforgiven upon unsuspecting targets.",
+      "detachment": "Lion’s Blade Task Force"
+    },
+    {
       "name": "Hunter’s Trail",
       "id": "10236da0-d847-566a-ae85-0252c537389d",
       "cost": 1,
@@ -2929,7 +3045,22 @@
       "faction_id": "CHDA",
       "fluff": "Be it their true quarry or simply one who possesses knowledge that will lead them to their apprehension, when the Ravenwing strike at a priority target they do so with unmerciful surety.",
       "detachment": "Company of Hunters"
+    },
+    {
+      "name": "Inescapable Wrath",
+      "id": "2e8fa28c-a56d-53f3-90a1-70efd631211a",
+      "cost": 2,
+      "turn": "opponents",
+      "target": "One DEATHWING INFANTRY or DEATHWING WALKER unit from your army that is within 6\" of one or more enemy units and would be eligible to declare a charge against one or more of those enemy units if it were your Charge phase.",
+      "when": "End of your opponent’s Charge phase.",
+      "effect": "Your unit now declares a charge that only targets one or more of those enemy units, and you resolve that charge.",
+      "restrictions": "Note that even if this charge is successful, your unit does not receive any Charge bonus this turn.",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "faction_id": "CHDA",
+      "fluff": "The Dark Angels’ Inner Circle warriors pursue the Chapter’s sworn foes and any who shield them with relentless endurance and a determination borne of indoctrinated hatred.",
+      "detachment": "Lion’s Blade Task Force"
     }
   ],
-  "updated": "2024-12-26T12:41:50.597Z"
+  "updated": "2025-01-20T10:01:27.907Z"
 }
