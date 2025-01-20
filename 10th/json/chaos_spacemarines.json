@@ -12067,7 +12067,8 @@
     "Soulforged Warpack",
     "Pactbound Zealots",
     "Fellhammer Siege-host",
-    "Chaos Cult"
+    "Chaos Cult",
+    "Creations of Bile"
   ],
   "enhancements": [
     {
@@ -12389,6 +12390,46 @@
       "description": "HERETIC ASTARTES model only. While the bearer is on the battlefield, each time an enemy unit within 12\" of the bearer is destroyed, roll one D6: on a 5+, you gain 1CP.",
       "faction_id": "CSM",
       "detachment": "Soulforged Warpack"
+    },
+    {
+      "name": "Surgical Precision",
+      "id": "8d34b815-b659-58ca-b83a-e0944c8fe0b3",
+      "cost": "10",
+      "keywords": ["Heretic Astartes"],
+      "excludes": ["Damned"],
+      "description": "HERETIC ASTARTES model (excluding DAMNED models) only. The bearer’s melee weapons have the [PRECISION] ability.",
+      "faction_id": "CSM",
+      "detachment": "Creations of Bile"
+    },
+    {
+      "name": "Living Carapace",
+      "id": "68e02c87-ce0f-500c-9523-800ba865e312",
+      "cost": "15",
+      "keywords": ["Chaos Lord"],
+      "excludes": [],
+      "description": "CHAOS LORD model only. Add 1 to the bearer’s Wounds characteristic and the bearer has the Feel No Pain 5+ ability.",
+      "faction_id": "CSM",
+      "detachment": "Creations of Bile"
+    },
+    {
+      "name": "Helm of All-Seeing",
+      "id": "fbba0e4a-c616-5cdb-8283-bfb574e01e46",
+      "cost": "25",
+      "keywords": ["Infantry"],
+      "excludes": ["Damned"],
+      "description": "HERETIC ASTARTES INFANTRY model (excluding DAMNED models) only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer.",
+      "faction_id": "CSM",
+      "detachment": "Creations of Bile"
+    },
+    {
+      "name": "Prime Test Subject",
+      "id": "c7451a60-5586-5b96-8c7c-bfcb544d2e27",
+      "cost": "35",
+      "keywords": ["Infantry"],
+      "excludes": ["Damned"],
+      "description": "HERETIC ASTARTES INFANTRY model (excluding DAMNED models) only. Add 1 to the Damage characteristic of melee weapons equipped by the bearer. Each time the bearer makes a melee attack, you can re‑roll the Hit roll.",
+      "faction_id": "CSM",
+      "detachment": "Creations of Bile"
     }
   ],
   "id": "CSM",
@@ -13088,6 +13129,96 @@
       "detachment": "Pactbound Zealots"
     },
     {
+      "name": "Monstrous Visages",
+      "id": "128882b7-15cc-5a57-ada3-c9bb410a356f",
+      "cost": 1,
+      "turn": "either",
+      "target": "One HERETIC ASTARTES INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CSM",
+      "fluff": "Bile’s experimental ministrations have left these warriors as freakish monsters. Cursed with clusters of compound eyes, distended, fang‑stuffed jaws or myriad other grotesqueries, they are hideous to behold.",
+      "detachment": "Creations of Bile"
+    },
+    {
+      "name": "Masters Are Watching",
+      "id": "4d95b181-af4e-5fdc-b6ae-ce1f62fed6ba",
+      "cost": 1,
+      "turn": "either",
+      "target": "One HERETIC ASTARTES INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, subtracting 1 from the result if it is a DAMNED unit: on a 4+, do not remove it from play. That destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "CSM",
+      "fluff": "Feeling the expectant gaze of Bile’s greatest creations from across the battlefield, transhuman and mortal warriors strive slavishly to impress.",
+      "detachment": "Creations of Bile"
+    },
+    {
+      "name": "Diabolic Regeneration",
+      "id": "70f37db3-d5bb-53f7-aaf7-8be4d1eb5582",
+      "cost": 1,
+      "turn": "your",
+      "target": "One HERETIC ASTARTES INFANTRY unit (excluding DAMNED units) from your army.",
+      "when": "Your Command phase.",
+      "effect": "One destroyed model (excluding CHARACTER models) is returned to your unit. If your unit is a BATTLELINE unit, D3 destroyed models (excluding CHARACTER models) are returned to your unit instead.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "CSM",
+      "fluff": "Not even death can lay the most vile of Bile’s creations low.",
+      "detachment": "Creations of Bile"
+    },
+    {
+      "name": "Autostimulants",
+      "id": "93130767-a268-505a-a4d7-3765e458722e",
+      "cost": 1,
+      "turn": "your",
+      "target": "One HERETIC ASTARTES INFANTRY unit from your army.",
+      "when": "Start of your Charge phase.",
+      "effect": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Advanced.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "faction_id": "CSM",
+      "fluff": "Arrays of subdermal vials inject autostimulants and biocatalysts into the warriors’ enhanced muscles, invigorating them for incredible feats of exertion.",
+      "detachment": "Creations of Bile"
+    },
+    {
+      "name": "Specimens For The Spider",
+      "id": "0fcbd021-24b2-5d75-ab19-83ce878fb0fe",
+      "cost": 2,
+      "turn": "either",
+      "target": "One HERETIC ASTARTES INFANTRY unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a melee attack that targets a CHARACTER unit, you can re‑roll the Wound roll. After your unit has fought, if one or more enemy CHARACTER models were destroyed as a result of those attacks, select one enemy unit within 6\" of your unit. That enemy unit must take a Battle‑shock test. If the enemy WARLORD was destroyed as a result of those attacks, each enemy unit within 6\" of your unit must take a Battle‑shock test instead.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "CSM",
+      "fluff": "The Clonefather’s agents are always searching for new test subjects. They strive to harvest the bodies of great leaders and champions, dragging them from battle and leaving the remaining foes utterly demoralised.",
+      "detachment": "Creations of Bile"
+    },
+    {
+      "name": "Delayed Mutations",
+      "id": "bb1bf5f5-d602-5741-87e9-57eae0a74715",
+      "cost": 2,
+      "turn": "your",
+      "target": "One HERETIC ASTARTES INFANTRY unit (excluding DAMNED units) from your army.",
+      "when": "Your Command phase.",
+      "effect": "Your unit suffers D3 mortal wounds. Then select one augmentation (see Experimental Augmentations). Until the start of your next Command phase, models in your unit have the selected augmentation in addition to any other augmentations they have.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "CSM",
+      "fluff": "Fabius Bile’s experiments are notoriously unstable. In the heat of battle, new mutations may burst forth in explosions of gristle and oozing gore, many of which are as lethal to the subject as they are to the enemy.",
+      "detachment": "Creations of Bile"
+    },
+    {
       "name": "Warpcharged Engines",
       "id": "cf06ff0f-03b8-58bc-9b7f-97b4d4f8300a",
       "cost": 1,
@@ -13118,5 +13249,5 @@
       "detachment": "Deceptors"
     }
   ],
-  "updated": "2024-12-26T12:41:51.673Z"
+  "updated": "2025-01-20T10:01:28.601Z"
 }

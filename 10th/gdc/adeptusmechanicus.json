@@ -5179,6 +5179,7 @@
   "detachments": [
     "Cohort Cybernetica",
     "Explorator Maniple",
+    "Haloscreed Battle Clade",
     "Rad-Zone Corps",
     "Skitarii Hunter Cohort",
     "Data-psalm Conclave"
@@ -5383,6 +5384,46 @@
       "description": "TECH-PRIEST model only. Ranged weapons equipped by the bearer have the [ANTI-VEHICLE 4+] ability.",
       "faction_id": "AdM",
       "detachment": "Cohort Cybernetica"
+    },
+    {
+      "name": "Transoracular Dyad Wafers",
+      "id": "daab17ff-d650-5aa9-9e92-06a7f4e9cb9e",
+      "cost": "30",
+      "keywords": ["Cybernetica Datasmith"],
+      "excludes": [],
+      "description": "CYBERNETICA DATASMITH model only. When the bearer is attached to a KASTELAN ROBOTS unit, until the end of the battle, models in that unit have the Doctrina Imperatives ability and gain the HALO OVERRIDE keyword. This unit cannot be selected when selecting units as part of the Noospheric Transference Detachment rule.",
+      "faction_id": "AdM",
+      "detachment": "Haloscreed Battle Clade"
+    },
+    {
+      "name": "Cognitive Reinforcement",
+      "id": "f6dc034c-2b37-563c-a438-8661ef55f981",
+      "cost": "35",
+      "keywords": ["Adeptus Mechanicus"],
+      "excludes": ["Cybernetica Datasmith"],
+      "description": "ADEPTUS MECHANICUS model only (excluding CYBERNETICA DATASMITH models). The Conqueror Imperative and Protector Imperative are both active for the bearer’s unit.",
+      "faction_id": "AdM",
+      "detachment": "Haloscreed Battle Clade"
+    },
+    {
+      "name": "Sanctified Ordnance",
+      "id": "8c8cb2e7-0895-5f02-ba75-d65cb1af7462",
+      "cost": "10",
+      "keywords": ["Adeptus Mechanicus"],
+      "excludes": [],
+      "description": "ADEPTUS MECHANICUS model only. Add 6\" to the range characteristic of ranged weapons equipped by models in the bearer’s unit and, each time a Hazardous test is taken for that unit, you can re‑roll the result.",
+      "faction_id": "AdM",
+      "detachment": "Haloscreed Battle Clade"
+    },
+    {
+      "name": "Inloaded Lethality",
+      "id": "631f8681-3917-5b14-bf9b-df3ff77b5227",
+      "cost": "15",
+      "keywords": ["Manipulus", "Dominus"],
+      "excludes": [],
+      "description": "TECH‑PRIEST DOMINUS or TECH‑PRIEST MANIPULUS model only. Add 3 to the Attacks characteristic of the bearer’s melee weapons and add 1 to the Damage characteristic of the bearer’s melee weapons.",
+      "faction_id": "AdM",
+      "detachment": "Haloscreed Battle Clade"
     }
   ],
   "id": "AdM",
@@ -5391,6 +5432,51 @@
   "name": "Adeptus Mechanicus",
   "parent_id": "",
   "stratagems": [
+    {
+      "name": "Eradication Protocols",
+      "id": "3a8e78fd-3bfb-5fd0-87bd-83fa247abd99",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, re‑roll a Wound roll of 1, and, if it is a HALO OVERRIDE unit, re‑roll a Hit roll of 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "AdM",
+      "fluff": "Fresh imperatives flow down from on high. The orders are simple: eliminate the foe.",
+      "detachment": "Haloscreed Battle Clade"
+    },
+    {
+      "name": "Targeting Override",
+      "id": "29e221b8-2347-5001-99f5-eda215471147",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS MECHANICUS unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, an unmodified Hit roll of 5+ scores a Critical Hit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "AdM",
+      "fluff": "Experienced Tech‑Priests rapidly analyse the foe’s weaknesses and feed the resultant data to their soldiers, who exploit these flaws to destroy their targets.",
+      "detachment": "Haloscreed Battle Clade"
+    },
+    {
+      "name": "Guided Retreat",
+      "id": "1e661ed5-5ed9-52f1-8073-80a97a907807",
+      "cost": 1,
+      "turn": "your",
+      "target": "That ADEPTUS MECHANICUS unit.",
+      "when": "Your Movement phase, just after an ADEPTUS MECHANICUS unit from your army makes a Fall Back move.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back, and, if it is a HALO OVERRIDE unit, you can re‑roll Desperate Escape tests taken for it.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["movement"],
+      "faction_id": "AdM",
+      "fluff": "From their distant strategium pulpit, the Tech‑Priest commander’s guiding hand descends, seizing control of allied minds, steering their troops carefully away from harm whilst maintaining a hail of killing fire.",
+      "detachment": "Haloscreed Battle Clade"
+    },
     {
       "name": "Motive Imperative",
       "id": "84459e1a-dfb1-5924-a471-a524a085aa50",
@@ -5615,6 +5701,51 @@
       "faction_id": "AdM",
       "fluff": "Death is irrelevant compared to the hallowed duty of securing the Omnissiah’s knowledge for future retrieval.",
       "detachment": "Explorator Maniple"
+    },
+    {
+      "name": "Neural Overload",
+      "id": "17252d7e-e605-5269-b72e-98bd2c40f902",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS MECHANICUS unit from your army.",
+      "when": "Your Movement phase.",
+      "effect": "If your unit is a HALO OVERRIDE unit, it suffers D3 mortal wounds. Select one Override ability. Until the start of your next Command phase, that ability is active for your unit.\n\nDesigner’s Note: This means that if the targeted unit already has the HALO OVERRIDE keyword, it can be affected by multiple Override abilities at the same time, but suffers mortal wounds to do so. Alternatively, if your unit does not have the HALO OVERRIDE keyword, it instead has the chosen Override ability until the start of your next Command phase, but does not benefit from any other Override abilities that are active.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "AdM",
+      "fluff": "By projecting their consciousness into the minds of tech thralls, a Tech‑Priest may significantly enhance their warriors’ lethality. However, doing so risks overloading their combat units’ more limited neural networks. Such hazards are seen as an opportunity to give one’s life in the name of the Omnissiah.",
+      "detachment": "Haloscreed Battle Clade"
+    },
+    {
+      "name": "Aggressive Impulse",
+      "id": "ff40c3a7-3ef2-5ff3-b033-29786b4e8324",
+      "cost": 1,
+      "turn": "your",
+      "target": "One SKORPIUS DUNERIDER model from your army that has not been selected to move this phase.",
+      "when": "Your Movement phase.",
+      "effect": "Until the end of the turn, each time an ADEPTUS MECHANICUS unit disembarks from that model after it has made a Normal move, that unit is still eligible to declare a charge this turn.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "AdM",
+      "fluff": "Urgent imperatives flood into the crew thralls of Skitarius transport units, urging them to deploy their cargo of cybernetic soldiers into the heart of the fight.",
+      "detachment": "Haloscreed Battle Clade"
+    },
+    {
+      "name": "Analytical Divination",
+      "id": "b3fdb303-be81-52a7-becf-147924eb8527",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS MECHANICUS INFANTRY unit (excluding KATAPHRON units) from your army that is within 9\" of that enemy unit and not within Engagement Range of one or more enemy units.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
+      "effect": "Your unit can make a Normal move of up to D6\", or up to 6\" instead if it is a HALO OVERRIDE unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "AdM",
+      "fluff": "Tech‑Priest commanders process an overwhelming influx of data screeds, analysing this information to read the flow of battle and coordinate the movements of their thralls.",
+      "detachment": "Haloscreed Battle Clade"
     },
     {
       "name": "Transcendent Cogitation",
@@ -5842,5 +5973,5 @@
       "detachment": "Rad-Zone Corps"
     }
   ],
-  "updated": "2024-12-26T12:41:52.156Z"
+  "updated": "2025-01-20T10:01:28.923Z"
 }

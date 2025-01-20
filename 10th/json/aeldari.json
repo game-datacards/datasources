@@ -11716,7 +11716,7 @@
       ]
     }
   ],
-  "detachments": ["Battle Host"],
+  "detachments": ["Battle Host", "Armoured Warhost"],
   "enhancements": [
     {
       "name": "The Phoenix Gem",
@@ -11757,6 +11757,46 @@
       "description": "AELDARI model only. Once per turn, just after making a Hit roll, a Wound roll or a saving throw for the bearer, you can treat the result as an unmodified roll of 6 instead.",
       "faction_id": "AE",
       "detachment": "Battle Host"
+    },
+    {
+      "name": "Guiding Presence",
+      "id": "c1e8b97b-a246-525f-8cb2-12a267ad05cc",
+      "cost": "25",
+      "keywords": ["Psyker"],
+      "excludes": [],
+      "description": "AELDARI PSYKER model only. At the start of your Shooting phase, select one friendly AELDARI VEHICLE model within 9\" of the bearer. Until the end of the phase, each time that model makes an attack, add 1 to the Hit roll.",
+      "faction_id": "AE",
+      "detachment": "Armoured Warhost"
+    },
+    {
+      "name": "Harmonisation Matrix",
+      "id": "5119ef50-6cb8-5260-bd3d-4d068693295d",
+      "cost": "30",
+      "keywords": ["Aeldari"],
+      "excludes": [],
+      "description": "AELDARI model only. In your Command phase, if the bearer (or any TRANSPORT it is embarked within) is within range of an objective marker you control, roll one D6: on a 3+, you gain 1CP.",
+      "faction_id": "AE",
+      "detachment": "Armoured Warhost"
+    },
+    {
+      "name": "Spirit Stone of Raelyth",
+      "id": "a4eb62e4-dc85-5aca-aaa7-5ba2601ef021",
+      "cost": "20",
+      "keywords": ["Psyker"],
+      "excludes": [],
+      "description": "AELDARI PSYKER model only. While the bearer is within 3\" of one or more friendly AELDARI VEHICLE units, the bearer has the Lone Operative ability. In your Command phase, you can select one friendly AELDARI VEHICLE model within 3\" of the bearer. That model regains up to D3 lost wounds.",
+      "faction_id": "AE",
+      "detachment": "Armoured Warhost"
+    },
+    {
+      "name": "Guileful Strategist",
+      "id": "a83825b9-100a-5b0e-991a-7d3d8ce08ff3",
+      "cost": "15",
+      "keywords": ["Aeldari"],
+      "excludes": [],
+      "description": "AELDARI model only. If your army includes the bearer, after both players have deployed their armies, select up to three AELDARI VEHICLE units from your army and redeploy them. When doing so, any of those units can be placed into Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "faction_id": "AE",
+      "detachment": "Armoured Warhost"
     }
   ],
   "id": "AE",
@@ -11794,6 +11834,96 @@
       "faction_id": "AE",
       "fluff": "Grace in battle and merciless efficiency are prized virtues in craftworld armies. Like the shimmering blades of Khaine, the Asuryani carve through the ranks of their enemies.",
       "detachment": "Battle Host"
+    },
+    {
+      "name": "Cloudstrike",
+      "id": "5c93f521-5055-50e7-a903-b8916b190dea",
+      "cost": 1,
+      "turn": "your",
+      "target": "One AELDARI VEHICLE unit from your army that can FLY and is in Strategic Reserves.",
+      "when": "Start of the Reinforcements step of your Movement phase.",
+      "effect": "Until the end of the phase, your unit has the Deep Strike ability. When your unit is set up on the battlefield using the Deep Strike ability, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but if it does, until the end of the turn, it is not eligible to declare a charge. In addition, if your unit is a TRANSPORT, each unit that disembarks from it this turn must be set up more than 6\" horizontally from all enemy units and until the end of the turn, is not eligible to declare a charge.&x20;",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "AE",
+      "fluff": "The Asuryani often deploy their anti‑grav vehicles in the lower atmosphere rather than on the ground. At a signal, they strike before the enemy can react.",
+      "detachment": "Armoured Warhost"
+    },
+    {
+      "name": "Soulsight",
+      "id": "365a2986-4e10-59c2-8a27-62e8017d0e91",
+      "cost": 1,
+      "turn": "your",
+      "target": "One AELDARI VEHICLE unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time your unit is selected to shoot, you can re‑roll one Hit roll, one Wound roll and one Damage roll made for a model in your unit. If you are using fast dice rolling, you can select one of those rolls to re‑roll before moving onto the next step of the attack sequence.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "AE",
+      "fluff": "Spirit stones containing the souls of gifted seers have been embedded into this vehicle’s targeting matrices. The essences within lend guidance even in death.",
+      "detachment": "Armoured Warhost"
+    },
+    {
+      "name": "Anti-grav Repulsion",
+      "id": "0e273cc5-193d-5d0b-b463-a12d57ce7d7e",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One AELDARI VEHICLE unit from your army that can FLY and was selected as a target of that charge.",
+      "when": "Your opponent’s Charge phase, just after an enemy unit has declared a charge.",
+      "effect": "Until the end of the phase, subtract 2 from Charge rolls made for that enemy unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "faction_id": "AE",
+      "fluff": "Skilled Aeldari pilots angle their vehicle’s anti‑grav fields to repulse the enemy.",
+      "detachment": "Armoured Warhost"
+    },
+    {
+      "name": "Layered Wards",
+      "id": "33b00d70-3015-5361-b00b-17ed92fa6476",
+      "cost": 1,
+      "turn": "either",
+      "target": "That AELDARI VEHICLE unit.",
+      "when": "Any phase, just after a mortal wound is allocated to an AELDARI VEHICLE unit from your army.",
+      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["any"],
+      "faction_id": "AE",
+      "fluff": "The wraithbone superstructure of this vehicle has been interlaced with warding runes, enabling its hull to resist incoming fire.",
+      "detachment": "Armoured Warhost"
+    },
+    {
+      "name": "Swift Deployment",
+      "id": "8207b237-c0f6-52d7-b865-223deda06f77",
+      "cost": 1,
+      "turn": "your",
+      "target": "One AELDARI TRANSPORT unit from your army.",
+      "when": "Your Movement phase.",
+      "effect": "Until the end of the phase, units can disembark from your TRANSPORT after it has Advanced. Units that do so count as having made a Normal move that phase, and cannot declare a charge in the same turn, but can otherwise act normally.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "AE",
+      "fluff": "With consummate skill, Guardian crews guide their agile armoured transports across the battlefield before swooping low to unload their cargo of warriors.",
+      "detachment": "Armoured Warhost"
+    },
+    {
+      "name": "Vectored Engines",
+      "id": "0fbd8b6d-7f2e-51d1-816a-597ae73b2d15",
+      "cost": 1,
+      "turn": "your",
+      "target": "That AELDARI VEHICLE unit.",
+      "when": "Your Movement phase, just after an AELDARI VEHICLE unit from your army that can FLY Falls Back.",
+      "effect": "Until the end of the phase, your unit is eligible to shoot in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "AE",
+      "fluff": "The result of exquisite and ingenious Aeldari engineering, vectored engines enable grav vehicles to evade their enemies while maintaining accurate fire.",
+      "detachment": "Armoured Warhost"
     },
     {
       "name": "Feigned Retreat",
@@ -11856,5 +11986,5 @@
       "detachment": "Battle Host"
     }
   ],
-  "updated": "2024-12-26T12:41:52.547Z"
+  "updated": "2025-01-20T10:01:29.215Z"
 }

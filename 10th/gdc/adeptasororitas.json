@@ -5686,7 +5686,8 @@
     "Bringers of Flame",
     "Army of Faith",
     "Hallowed Martyrs",
-    "Penitent Host"
+    "Penitent Host",
+    "Champions of Faith"
   ],
   "enhancements": [
     {
@@ -5848,6 +5849,46 @@
       "description": "ADEPTA SORORITAS model only. Each time the bearer uses an Act of Faith to substitute a saving throw, that saving throw is successful, irrespective of the value of the Miracle dice used.",
       "faction_id": "AS",
       "detachment": "Army of Faith"
+    },
+    {
+      "name": "Triptych of Judgement",
+      "id": "93c1efc0-65c8-5ac3-bf40-a0a38f721e4c",
+      "cost": "15",
+      "keywords": ["Adepta Sororitas"],
+      "excludes": [],
+      "description": "ADEPTA SORORITAS model only. Each time a model in the bearer’s unit makes an attack, you can ignore any or all modifiers to that attack’s Ballistic Skill or Weapon Skill characteristics and/or any or all modifiers to the Hit roll.",
+      "faction_id": "AS",
+      "detachment": "Champions of Faith"
+    },
+    {
+      "name": "Mark of Devotion",
+      "id": "a824556d-864f-5dc2-af18-851dbf5454e5",
+      "cost": "30",
+      "keywords": ["Adepta Sororitas"],
+      "excludes": [],
+      "description": "ADEPTA SORORITAS model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. While the bearer’s unit is Righteous, add 2 to the Attacks characteristic and add 1 to the Damage characteristic of the bearer’s melee weapons instead.",
+      "faction_id": "AS",
+      "detachment": "Champions of Faith"
+    },
+    {
+      "name": "Eyes of the Oracle",
+      "id": "fca5578e-70f5-5c60-9906-d49803c4db07",
+      "cost": "10",
+      "keywords": ["Adepta Sororitas"],
+      "excludes": [],
+      "description": "ADEPTA SORORITAS model only. The bearer’s weapons have the [PRECISION] ability. Each time the bearer’s unit destroys an enemy CHARACTER model, you gain 1CP.",
+      "faction_id": "AS",
+      "detachment": "Champions of Faith"
+    },
+    {
+      "name": "Sanctified Amulet",
+      "id": "51d1d4c5-9135-5a90-b178-86f7e683cbaf",
+      "cost": "25",
+      "keywords": ["Adepta Sororitas"],
+      "excludes": [],
+      "description": "ADEPTA SORORITAS model only. Enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of the bearer.",
+      "faction_id": "AS",
+      "detachment": "Champions of Faith"
     }
   ],
   "id": "AS",
@@ -5960,6 +6001,66 @@
       "faction_id": "AS",
       "fluff": "At close range, the Adepta Sororitas unleash the full devastating potential of their blessed weapons.",
       "detachment": "Bringers of Flame"
+    },
+    {
+      "name": "Shield of Denial",
+      "id": "1417f382-994a-5de7-9b1b-eff0e580df9f",
+      "cost": 1,
+      "turn": "either",
+      "target": "That ADEPTA SORORITAS unit.",
+      "when": "Any phase, just after a mortal wound is allocated to an ADEPTA SORORITAS unit from your army.",
+      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 6+ ability against mortal wounds. If your unit is Righteous, until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["any"],
+      "faction_id": "AS",
+      "fluff": "With so singular and fanatical a purpose, the Adepta Sororitas can will their injuries away, at least until the fight is done.",
+      "detachment": "Champions of Faith"
+    },
+    {
+      "name": "To The Heart Of Heresy",
+      "id": "7ff39647-12b2-531d-910e-988841c032ba",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTA SORORITAS unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the turn, improve the Strength characteristic of melee weapons equipped by models in your unit by 1. If your unit is Righteous, until the end of the phase, improve the Armour Penetration characteristic of melee weapons equipped by models in your unit by 1 as well.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "AS",
+      "fluff": "Seizing their moment to drive like a burning blade through the enemy lines and complete their holy mission, these faithful strike with unstoppable might.&x20;",
+      "detachment": "Champions of Faith"
+    },
+    {
+      "name": "Path of the Righteous",
+      "id": "f225492e-676f-55d8-8f1e-12aa97a9476d",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTA SORORITAS unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the turn, each time a model in your unit makes a Pile‑in or Consolidation move, it can move up to 6\" instead of up to 3\". When doing so, if your unit is Righteous, it does not need to end that move closer to the closest enemy model, provided it ends that move as close as possible to the closest enemy unit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "AS",
+      "fluff": "When exemplars of the Imperial Creed stride to do the God‑Emperor’s will, little can slow their sacred procession.",
+      "detachment": "Champions of Faith"
+    },
+    {
+      "name": "Bastion of Faith",
+      "id": "b98ef633-0060-5bc7-ac4e-3bc436d08972",
+      "cost": 1,
+      "turn": "either",
+      "target": "One CELESTIAN SACRESANTS unit that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, subtract 1 from the Hit roll. In addition, if your unit is Righteous, you can select one other CELESTIAN SACRESANTS unit from your army that is not Battle‑shocked and is within 6\" of your unit. Until the end of the phase, each time an attack targets that CELESTIAN SACRESANTS unit, subtract 1 from the Hit roll as well.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "AS",
+      "fluff": "Unified in their inviolate dedication to fulfil their oaths to Him on the Throne, the Order’s elite form a rampart of ceramite and unyielding faith to throw back the desperate blows of the foe.&x20;",
+      "detachment": "Champions of Faith"
     },
     {
       "name": "Shield of Faith",
@@ -6172,6 +6273,36 @@
       "detachment": "Bringers of Flame"
     },
     {
+      "name": "Suffer Not The Unfaithful",
+      "id": "0a8c1bb7-3fc6-51db-aeca-d3edb49ddf1d",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTA SORORITAS unit from your army that is Righteous and that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until the end of the phase, weapons equipped by models in your unit have the selected ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight", "shooting"],
+      "faction_id": "AS",
+      "fluff": "No unclean foe can be permitted to stand between the Go‑Emperor’s sworn champions and their oathed duty. They must be struck down with unmerciful fury.",
+      "detachment": "Champions of Faith"
+    },
+    {
+      "name": "Indefatigable Dedication",
+      "id": "3a530d82-f011-5b2b-9d86-77eb6916dbe4",
+      "cost": 1,
+      "turn": "your",
+      "target": "That ADEPTA SORORITAS unit.",
+      "when": "Your Movement phase, just after an ADEPTA SORORITAS unit from your army Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot in a turn in which it Fell Back. If your unit is Righteous, until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back instead.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "AS",
+      "fluff": "Such champions of the God‑Emperor never stop fighting or striving for victory, transforming momentary retreats into another opportunity to purge the unclean and press on to their objective.",
+      "detachment": "Champions of Faith"
+    },
+    {
       "name": "Blinding Radiance",
       "id": "fd2bdbf5-de7d-550b-b7ae-81ac385a6faf",
       "cost": 1,
@@ -6217,5 +6348,5 @@
       "detachment": "Hallowed Martyrs"
     }
   ],
-  "updated": "2024-12-26T12:41:52.114Z"
+  "updated": "2025-01-20T10:01:28.889Z"
 }
