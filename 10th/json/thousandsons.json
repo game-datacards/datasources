@@ -4118,7 +4118,7 @@
       ]
     }
   ],
-  "detachments": ["Cult of Magic"],
+  "detachments": ["Hexwarp Thrallband", "Cult of Magic"],
   "enhancements": [
     {
       "name": "Lord of Forbidden Lore",
@@ -4159,6 +4159,46 @@
       "description": "THOUSAND SONS model only. Add 1 to the Strength and Damage characteristics of Psychic weapons equipped by the bearer.",
       "faction_id": "TS",
       "detachment": "Cult of Magic"
+    },
+    {
+      "name": "Arcane Might",
+      "id": "4aa02c68-5ad7-5447-96e3-ec472e76f5dc",
+      "cost": "20",
+      "keywords": ["Thousand Sons"],
+      "excludes": [],
+      "description": "THOUSAND SONS model only. Add 1 to the Strength characteristic of Psychic weapons equipped by models in the bearer’s unit. While the bearer’s unit is wholly within your army’s Flow of Magic, add 2 to the Strength characteristic of Psychic weapons equipped by models in that unit instead.",
+      "faction_id": "TS",
+      "detachment": "Hexwarp Thrallband"
+    },
+    {
+      "name": "Empowered Manifestation",
+      "id": "a1f4c88e-58a5-5422-b135-26a95467f13e",
+      "cost": "20",
+      "keywords": ["Thousand Sons"],
+      "excludes": [],
+      "description": "THOUSAND SONS model only. While the bearer’s unit is wholly within your army’s Flow of Magic, you can add 6\" to the range of Psychic abilities the bearer has that specify a range (including Rituals) and each time a model in the bearer’s unit takes a Hazardous test for a Psychic weapon, you can re‑roll the result.",
+      "faction_id": "TS",
+      "detachment": "Hexwarp Thrallband"
+    },
+    {
+      "name": "Empyric Onslaught",
+      "id": "485db1b0-f74c-5ec3-a526-ba74d778d372",
+      "cost": "25",
+      "keywords": ["Thousand Sons"],
+      "excludes": [],
+      "description": "THOUSAND SONS model only. While the bearer’s unit is wholly within your army’s Flow of Magic, add 3 to the Attacks characteristic of ranged Psychic weapons equipped by the bearer.",
+      "faction_id": "TS",
+      "detachment": "Hexwarp Thrallband"
+    },
+    {
+      "name": "Noctilith Mantle",
+      "id": "a344e349-5fce-5743-8314-cb3ccae23fdb",
+      "cost": "15",
+      "keywords": ["Thousand Sons"],
+      "excludes": [],
+      "description": "THOUSAND SONS model only. While the bearer’s unit is on the battlefield, it is wholly within your army’s Flow of Magic. Models in that unit cannot be selected to use any Rituals.",
+      "faction_id": "TS",
+      "detachment": "Hexwarp Thrallband"
     }
   ],
   "id": "TS",
@@ -4167,6 +4207,21 @@
   "name": "Thousand Sons",
   "parent_id": "",
   "stratagems": [
+    {
+      "name": "Kaleidoscopic Tempest",
+      "id": "00878a48-7a42-5775-890a-3a17f86abad1",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One THOUSAND SONS PSYKER unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, your unit has the Stealth ability, and, if your unit is wholly within your army’s Flow of Magic, each time an attack targets your unit, it has the Benefit of Cover against that attack.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "TS",
+      "fluff": "As the Thousand Sons solidify their control over sites of magical power, the Immaterium spills into reality in searing torrents, blossoming into a multi‑spectral storm of arcane energy that obscures mortal senses and mechanical augury.",
+      "detachment": "Hexwarp Thrallband"
+    },
     {
       "name": "Devastating Sorcery",
       "id": "218a9158-afd8-5690-aa23-91d216897302",
@@ -4181,6 +4236,36 @@
       "faction_id": "TS",
       "fluff": "This warrior’s veins burn with raw sorcery. The sheer unstoppable might of their conjurations is such that, when unleashed with destructive intent, there is little that can prevent them from devastating manifestation.",
       "detachment": "Cult of Magic"
+    },
+    {
+      "name": "Through The Veil",
+      "id": "3036e6d1-5a46-50f8-92ee-736dc47f89ff",
+      "cost": 1,
+      "turn": "your",
+      "target": "One RUBRIC MARINES or SCARAB OCCULT TERMINATORS unit from your army that is in Strategic Reserves.",
+      "when": "Start of the Reinforcements step of your Movement phase.",
+      "effect": "If it is a RUBRIC MARINES unit, until the end of the phase, it has the Deep Strike ability. When your unit is set up on the battlefield using the Deep Strike ability, if it is a SCARAB OCCULT TERMINATOR unit it can be set up anywhere on the battlefield that is wholly within your army’s Flow of Magic and more than 6\" horizontally away from all enemy models.",
+      "restrictions": "If a SCARAB OCCULT TERMINATORS unit is targeted with this Stratagem, it is not eligible to declare a charge in the same turn.",
+      "type": "Epic Deed",
+      "phase": ["movement"],
+      "faction_id": "TS",
+      "fluff": "With arcane energy flooding the battlefield, the veil between Warp and reality rapidly collapses. From yawning rifts emerge Rubricae reinforcements to ensure their thrallband’s victory.",
+      "detachment": "Hexwarp Thrallband"
+    },
+    {
+      "name": "Warding Hex",
+      "id": "750a63fb-483b-5ec7-ad97-1da36567d335",
+      "cost": 1,
+      "turn": "either",
+      "target": "One THOUSAND SONS PSYKER unit from your army within range of an objective marker you control, if that objective marker is wholly within your army’s Flow of Magic.",
+      "when": "Command phase.",
+      "effect": "That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.&x20;",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["command"],
+      "faction_id": "TS",
+      "fluff": "Thousand Sons Sorcerers draw upon tide swells of Warp energy to weave spells of binding and warding, thereby shackling sites of arcane power to their own arrogant will.",
+      "detachment": "Hexwarp Thrallband"
     },
     {
       "name": "Psychic Dominion",
@@ -4228,6 +4313,51 @@
       "detachment": "Cult of Magic"
     },
     {
+      "name": "Scouring Warpflame",
+      "id": "879ced92-4281-5513-9720-d0dd921885ef",
+      "cost": 1,
+      "turn": "your",
+      "target": "One THOUSAND SONS PSYKER unit from your army that has not been selected to shoot this phase and is wholly within your army’s Flow of Magic.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability. After your unit has shot this phase, select one enemy unit hit by one or more of those attacks. Until the end of the phase, models in that unit cannot have the Benefit of Cover.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "TS",
+      "fluff": "At a spat curse, Warp‑infused ammunition can be made to glow with sulphurous flame, enabling it to burn through solid cover to strike enemies beyond. Those hit by the fusillade find their forms wreathed in illuminating azure fire.",
+      "detachment": "Hexwarp Thrallband"
+    },
+    {
+      "name": "Wrath of the Doomed",
+      "id": "81d458ec-ffbe-5c94-b043-e9e1be92538a",
+      "cost": 1,
+      "turn": "either",
+      "target": "One THOUSAND SONS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if your unit is wholly within your army’s Flow of Magic: on a 4+, do not remove it from play. That destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "TS",
+      "fluff": "Forewarned of the moment of their demise, the followers of Tzeentch allow the flood of magic to run rampant through their forms, providing them with a final burst of killing energy before unbound arcane force rips their bodies asunder.",
+      "detachment": "Hexwarp Thrallband"
+    },
+    {
+      "name": "Strands of Time",
+      "id": "28652316-f1de-5464-8365-688ac2d32788",
+      "cost": 1,
+      "turn": "your",
+      "target": "That THOUSAND SONS PSYKER unit.",
+      "when": "Your Movement phase, just after a THOUSAND SONS PSYKER unit from your army Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot or declare a charge in a turn in which it Fell Back. If your unit is wholly within your army’s Flow of Magic when it is targeted with this Stratagem, then until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "TS",
+      "fluff": "By drawing upon their expanding nexus of magic, this disciple of Tzeentch can tear strands of temporal energy from the Warp and wind them around themselves and their thralls. Lent speed by this garland of stolen time, they melt away from their foes’ desperate strikes before lashing out again.",
+      "detachment": "Hexwarp Thrallband"
+    },
+    {
       "name": "Ensorcelled Infusion",
       "id": "fea50a32-4e26-50cd-93ea-6d3535945619",
       "cost": 1,
@@ -4258,5 +4388,5 @@
       "detachment": "Cult of Magic"
     }
   ],
-  "updated": "2024-12-26T12:41:51.533Z"
+  "updated": "2025-01-20T10:01:28.501Z"
 }
