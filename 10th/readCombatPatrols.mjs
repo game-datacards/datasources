@@ -108,8 +108,8 @@ const specialWeaponKeywords = [
   },
 ];
 
-const newDataExportFile = readFile('./temp/data-export-434.json');
-const newDataExport = sortObj(JSON.parse(newDataExportFile));
+const newDataExportFile = readFile('./temp/data-export-541.json');
+const newDataExport = sortObj(JSON.parse(newDataExportFile).data);
 
 function readCombatPatrols() {
   let foundUnits = [];
