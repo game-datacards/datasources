@@ -2494,7 +2494,7 @@
           },
           {
             "name": "Bomb Squigs",
-            "description": "Twice per battle, after this unit ends a Normal move, you can select one enemy unit within 12\" of it and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.\n\nDesigner’s Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
+            "description": "Twice per battle, after this unit ends a Normal move, you can use one Bomb Squig. If you do, select one enemy unit within 12\" and visible to this unit and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds.\n\nDesigner’s Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
             "showAbility": true,
             "showDescription": true
           }
@@ -2995,7 +2995,7 @@
           },
           {
             "name": "Bomb Squigs",
-            "description": "Twice per battle, after this unit ends a Normal move, you can select one enemy unit within 12\" of it and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.\n\nDesigner’s Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
+            "description": "Twice per battle, after this unit ends a Normal move, you can use one Bomb Squig. If you do, select one enemy unit within 12\" and visible to this unit and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds.\n\nDesigner’s Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
             "showAbility": true,
             "showDescription": true
           }
@@ -3080,7 +3080,7 @@
       "name": "Tankbustas",
       "points": [
         {
-          "cost": "120",
+          "cost": "135",
           "keyword": null,
           "models": "6",
           "active": true
@@ -6510,7 +6510,7 @@
       "name": "Big Mek with Shokk Attack Gun",
       "points": [
         {
-          "cost": "65",
+          "cost": "75",
           "keyword": null,
           "models": "1",
           "active": true
@@ -10582,7 +10582,8 @@
     "Bully Boyz",
     "Green Tide",
     "Da Big Hunt",
-    "Dread Mob"
+    "Dread Mob",
+    "More Dakka!"
   ],
   "enhancements": [
     {
@@ -10838,7 +10839,7 @@
     {
       "name": "Mek Kaptin",
       "id": "2fbca2fc-1640-5a1e-af91-348dc4e9feb4",
-      "cost": "35",
+      "cost": "45",
       "keywords": [
         "Big Mek with Shokk Attack Gun",
         "Big Mek",
@@ -10868,6 +10869,46 @@
       "description": "WARBOSS or MEK model only. Each time the bearer issues Taktiks, it can do so to a friendly ORKS INFANTRY or ORKS MOUNTED unit within 18\", instead of 6\".",
       "faction_id": "ORK",
       "detachment": "Taktikal Brigade"
+    },
+    {
+      "name": "Da Gobshot Thunderbuss",
+      "id": "52b64d3c-8692-5b3a-831b-3e8d3e57c3f6",
+      "cost": "15",
+      "keywords": ["Orks"],
+      "excludes": [],
+      "description": "ORKS model only. Ranged weapons equipped by the bearer have the [DEVASTATING WOUNDS] and [HAZARDOUS] abilities.",
+      "faction_id": "ORK",
+      "detachment": "More Dakka!"
+    },
+    {
+      "name": "Dead Shiny Shootas",
+      "id": "6c4c0e8d-4d3d-525e-a7b4-72abd9533b35",
+      "cost": "35",
+      "keywords": ["Orks"],
+      "excludes": [],
+      "description": "ORKS model only. Ranged weapons equipped by models in the bearer’s unit have the [RAPID FIRE 1] ability.",
+      "faction_id": "ORK",
+      "detachment": "More Dakka!"
+    },
+    {
+      "name": "Targetin’ Squigs",
+      "id": "8f58b27c-9e02-53cd-9d96-991e0a62b7ea",
+      "cost": "15",
+      "keywords": ["Orks"],
+      "excludes": [],
+      "description": "ORKS model only. Each time a model in the bearer’s unit makes a ranged attack, add 1 to the Hit roll.",
+      "faction_id": "ORK",
+      "detachment": "More Dakka!"
+    },
+    {
+      "name": "Zog Off and Eat Dakka!",
+      "id": "1f7c3780-cdd5-5d23-ae37-f9963f45b573",
+      "cost": "10",
+      "keywords": ["Orks"],
+      "excludes": [],
+      "description": "ORKS model only. The bearer’s unit is eligible to shoot in a turn in which it Fell Back.",
+      "faction_id": "ORK",
+      "detachment": "More Dakka!"
     }
   ],
   "id": "ORK",
@@ -10958,7 +10999,18 @@
         "detachment": "Taktikal Brigade",
         "rule": [
           {
-            "text": "Once per battle round, in your Command phase or after being set up on the battlefield in your Movement phase, each **BOSS SNIKROT**, **MEK** and **WARBOSS** model in your army can issue Taktiks abilities.\n\nTo do so, select one or two of the Taktiks abilities below and select one friendly **ORKS** unit within 6\" of that model to issue them to. If you selected two Taktiks, that model must take a Leadership test: if failed, the selected unit suffers D3 mortal wounds. Until the start of your next Command phase, the selected unit is affected by the selected Taktiks. A unit cannot have Taktiks issued to it in this way more than once per battle round.\n\nTaktiks abilities cannot be issued to Battle‑shocked units, and if a unit affected by Taktiks becomes Battle‑shocked, all Taktiks cease to affect that unit while it is Battle‑shocked.\n\n**Get Stuck In**: You can re‑roll Charge rolls made for this unit.\n\n**Get On Wiv It**: Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.\n\n**Sneaky Stalkin’**: **INFANTRY** and **MOUNTED** models (excluding **MEGANOBZ**) in this unit have the Stealth ability and each time a ranged attack targets this unit, those models have the Benefit of Cover against that attack.\n\n**Shoota Drills**: Each time an **INFANTRY** or **MOUNTED** model in this unit makes a ranged attack, add 1 to the Hit roll.",
+            "text": "Once per battle round, in your Command phase or after being set up on the battlefield in your Movement phase, each **BOSS SNIKROT**, **MEK** and **WARBOSS** model in your army can issue Taktiks abilities.\n\nTo do so, select one of the Taktiks abilities below and select one friendly **ORKS** unit within 6\" of that model to issue them to. That model must take a Leadership test: if failed, the selected unit suffers 1 mortal wound. Until the start of your next Command phase, the selected unit is affected by the selected Taktik. A unit cannot have Taktiks issued to it in this way more than once per battle round.\n\n**Get Stuck In**: You can re‑roll Charge rolls made for this unit.\n\n**Get On Wiv It**: Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.\n\n**Sneaky Stalkin’**: **INFANTRY** and **MOUNTED** models (excluding **MEGANOBZ**) in this unit have the Stealth ability and each time a ranged attack targets this unit, those models have the Benefit of Cover against that attack.\n\n**Shoota Drills**: Each time an **INFANTRY** or **MOUNTED** model in this unit makes a ranged attack, add 1 to the Hit roll.",
+            "order": 1,
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "name": "Dakka! Dakka! Dakka!",
+        "detachment": "More Dakka!",
+        "rule": [
+          {
+            "text": "During your Shooting phase, ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[SUSTAINED HITS 2]** ability.\n\nWhile the Waaagh! is active for your army, ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[ASSAULT]** ability.",
             "order": 1,
             "type": "text"
           }
@@ -11280,6 +11332,36 @@
       "detachment": "Taktikal Brigade"
     },
     {
+      "name": "Orks Is Still Orks",
+      "id": "da8488fd-6a13-55bb-aa4c-5c734962bf61",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ORKS unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit, re‐roll a Wound roll of 1. If that enemy unit is within range of an objective marker, you can re‐roll the Wound roll instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "ORK",
+      "fluff": "Even though they may be armed with the flashiest shootas, when enemies stray within arms reach, an Orks first and strongest instinct is to use their snazzy shoota as a cudgel, and bash their foe to a pulp.",
+      "detachment": "More Dakka!"
+    },
+    {
+      "name": "Long, Uncontrolled Bursts",
+      "id": "c0006e5f-3047-5438-9894-36d0d083a368",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ORKS CHARACTER model from your army.",
+      "when": "Start of your Shooting phase.",
+      "effect": "Select one enemy unit within 18\" of your ORKS CHARACTER model. Until the end of the phase, weapons equipped by ORKS models from your army have the [IGNORES COVER] ability while targeting that unit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "ORK",
+      "fluff": "When facing off against sneaky gitz who like to lurk in cover, most Orks believe the most effective strategy is to fire off so many bullets and munitions that something is bound to hit the target.",
+      "detachment": "More Dakka!"
+    },
+    {
       "name": "Careen!",
       "id": "9957f6c5-7afa-5c8e-983e-99108a3a9949",
       "cost": 1,
@@ -11323,6 +11405,36 @@
       "faction_id": "ORK",
       "fluff": "Once a horde of Orks get a sight of the foe, nothing can stop them.",
       "detachment": "Green Tide"
+    },
+    {
+      "name": "Get Stuck In, Ladz!",
+      "id": "240aef2a-1fed-5484-b62b-d499ae318a19",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ORKS unit from your army.",
+      "when": "Your Command phase.",
+      "effect": "Until the start of your next Command phase, the Waaagh! is active for your unit, even if you have already called a Waaagh! this battle.\n\nDesigner’s Note: This means that any abilities that are in effect while the Waaagh! is active for your army will be in effect for your unit.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["command"],
+      "faction_id": "ORK",
+      "fluff": "Lashing out with ferocious blows and bellowing loud enough to burst eardrums, the biggest Ork present persuades his ladz to fight even harder.",
+      "detachment": "More Dakka!"
+    },
+    {
+      "name": "Huge Show-offs",
+      "id": "df3d43df-4284-5dcb-8b65-b0e7716d337f",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ORKS WALKER unit (excluding KILLA KANS) from your army.",
+      "when": "Your Command phase.",
+      "effect": "Until the start of your next Command phase, improve your unit’s Move, Leadership and Objective Control characteristics by 1, and each time a model in your unit makes an attack, add 1 to the Hit roll.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["command"],
+      "faction_id": "ORK",
+      "fluff": "The pilots of the biggest Orky war machines are prone to showing off when the dakka starts flying. After all, they have a reputation to uphold.",
+      "detachment": "More Dakka!"
     },
     {
       "name": "Orks is Never Beaten",
@@ -11608,7 +11720,37 @@
       "faction_id": "ORK",
       "fluff": "Utilising camouflage, cover or misdirection, these Orks slip away to prepare their next ambush, leaving their foes staring at thin air.",
       "detachment": "Taktikal Brigade"
+    },
+    {
+      "name": "Call Dat Dakka?",
+      "id": "d48ef1a0-3097-5132-b784-26f9ac9502c2",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ORKS unit from your army that had one or more of its models destroyed as a result of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "effect": "Your unit can shoot as if it were your Shooting phase, but must target only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "ORK",
+      "fluff": "Gun‐crazed mobs of Orks take incoming fire as a primal challenge, one that must be answered with an even bigger show of dakka.",
+      "detachment": "More Dakka!"
+    },
+    {
+      "name": "Speshul Shells",
+      "id": "69abf31c-8882-53d6-8801-7cb92fd6159f",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ORKS unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets the closest eligible target within 18\", improve the Armour Penetration characteristic of ranged weapons equipped by models in your unit by 1.",
+      "restrictions": "",
+      "type": "Wargear",
+      "phase": ["shooting"],
+      "faction_id": "ORK",
+      "fluff": "Nothing helps a round punch through armour better than stuffing it full of extra propellant.",
+      "detachment": "More Dakka!"
     }
   ],
-  "updated": "2025-02-24T14:26:35.686Z"
+  "updated": "2025-03-14T07:29:41.291Z"
 }
