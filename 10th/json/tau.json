@@ -69,12 +69,12 @@
       "name": "Krootox Rampagers",
       "points": [
         {
-          "cost": "190",
+          "cost": "170",
           "keyword": null,
           "models": "6"
         },
         {
-          "cost": "95",
+          "cost": "85",
           "keyword": null,
           "models": "3"
         }
@@ -6050,7 +6050,7 @@
       "name": "Kroot Lone-spear",
       "points": [
         {
-          "cost": "90",
+          "cost": "80",
           "keyword": null,
           "models": "1"
         }
@@ -7200,6 +7200,7 @@
   "detachments": [
     "Auxiliary Cadre",
     "Kroot Hunting Pack",
+    "Experimental Prototype Cadre",
     "Kauyon",
     "Retaliation Cadre",
     "Mont’ka"
@@ -7404,6 +7405,46 @@
       "description": "T’AU EMPIRE WALKER model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. During your first Movement phase, when you set up the bearer’s unit, it must be set up within 12\" of one or more friendly KROOT or VESPID STINGWINGS units and not within 9\" horizontally of one or more enemy units.",
       "faction_id": "TAU",
       "detachment": "Auxiliary Cadre"
+    },
+    {
+      "name": "Supernova Launcher",
+      "id": "bd1851c2-6bf2-5ccb-9d72-cb06a3aa5dfd",
+      "cost": "15",
+      "keywords": ["T’au Empire"],
+      "excludes": [],
+      "description": "T’AU EMPIRE model only. Select one airbursting fragmentation projector equipped by the bearer. Improve the Strength characteristic of that weapon by 3, and improve the Armour Penetration and Damage characteristics of that weapon by 1.",
+      "faction_id": "TAU",
+      "detachment": "Experimental Prototype Cadre"
+    },
+    {
+      "name": "Thermoneutronic Projector",
+      "id": "9fc7149c-28aa-5c44-ae5f-0fe94248e773",
+      "cost": "20",
+      "keywords": ["T’au Empire"],
+      "excludes": [],
+      "description": "T’AU EMPIRE model only. Select one T’au flamer equipped by the bearer. Improve the Strength characteristic of that weapon by 2, and improve the Armour Penetration and Damage characteristics of that weapon by 1.",
+      "faction_id": "TAU",
+      "detachment": "Experimental Prototype Cadre"
+    },
+    {
+      "name": "Plasma Accelerator Rifle",
+      "id": "2e285f1f-409b-54b4-a420-d24ee2f48f41",
+      "cost": "10",
+      "keywords": ["T’au Empire"],
+      "excludes": [],
+      "description": "T’AU EMPIRE model only. Select one plasma rifle equipped by the bearer. Improve the Strength characteristic of that weapon by 2, and improve the Attacks, Armour Penetration and Damage characteristics of that weapon by 1.",
+      "faction_id": "TAU",
+      "detachment": "Experimental Prototype Cadre"
+    },
+    {
+      "name": "Fusion Blades",
+      "id": "33ebf5a0-f2f1-5d3d-ae17-c9453f54e0b2",
+      "cost": "25",
+      "keywords": ["T’au Empire"],
+      "excludes": [],
+      "description": "T’AU EMPIRE model only. Select one fusion blaster equipped by the bearer. Improve the Attacks characteristic of that weapon by 1, improve the Strength characteristic of that weapon by 3, and that weapon has the [MELTA 4] ability",
+      "faction_id": "TAU",
+      "detachment": "Experimental Prototype Cadre"
     }
   ],
   "id": "TAU",
@@ -7452,6 +7493,17 @@
         "rule": [
           {
             "text": "**Kroot** models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
+            "order": 1,
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "name": "Superior Craftsmanship",
+        "detachment": "Experimental Prototype Cadre",
+        "rule": [
+          {
+            "text": "Add 6\" to the Range characteristic of ranged weapons equipped by **T’AU EMPIRE** models from your army.",
             "order": 1,
             "type": "text"
           }
@@ -7643,6 +7695,36 @@
       "faction_id": "TAU",
       "fluff": "The Kroot have long perfected the art of ambush hunting, their packs working in deadly concert.",
       "detachment": "Kroot Hunting Pack"
+    },
+    {
+      "name": "Reactive Impact Dampeners",
+      "id": "a2bf2cf6-6fc1-5386-88ac-d7d28cfa1975",
+      "cost": 1,
+      "turn": "either",
+      "target": "One T’AU EMPIRE BATTLESUIT unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "TAU",
+      "fluff": "Advancements in battlesuit field technology include the addition of autoreactive shield dampers to absorb and dissipate the energy from high‐velocity kinetic strikes.",
+      "detachment": "Experimental Prototype Cadre"
+    },
+    {
+      "name": "Experimental Weaponry",
+      "id": "d56d21da-25a5-5274-909d-0500569c2ab1",
+      "cost": 1,
+      "turn": "your",
+      "target": "One T’AU EMPIRE unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time you roll one or more dice to determine the number of attacks made with a weapon equipped by a model in your unit, you can re‐roll the result.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "TAU",
+      "fluff": "T’au scientists have distributed the latest prototype weapons amongst this cadre’s contingents, all optimised to increase reliability and accuracy.",
+      "detachment": "Experimental Prototype Cadre"
     },
     {
       "name": "A Tempting Trap",
@@ -7855,6 +7937,21 @@
       "detachment": "Kroot Hunting Pack"
     },
     {
+      "name": "Automated Repair Drones",
+      "id": "7bc8793e-1d6d-54a5-a7ab-cc8764a54dc5",
+      "cost": 1,
+      "turn": "either",
+      "target": "One T’AU EMPIRE BATTLESUIT unit from your army.",
+      "when": "Command phase.",
+      "effect": "Select one BATTLESUIT model in your unit: that model regains up to D3+1 lost wounds.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "TAU",
+      "fluff": "Much research is being placed into deploying miniaturised drones to affect battlefield repairs and dispense emergency medical treatments in combat.",
+      "detachment": "Experimental Prototype Cadre"
+    },
+    {
       "name": "Experimental Modifications",
       "id": "b46665c6-092a-5aef-9fb8-e501381330b2",
       "cost": 1,
@@ -7960,6 +8057,51 @@
       "detachment": "Kroot Hunting Pack"
     },
     {
+      "name": "Experimental Ammunition",
+      "id": "4fdc3613-1176-552c-8cb5-f4b244083eb9",
+      "cost": 1,
+      "turn": "your",
+      "target": "One T’AU EMPIRE unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Select one of the following to apply to your unit until the end of the phase:\n\n• Improve the Strength characteristic of ranged weapons equipped by models in your unit by 1.\n• Improve the Strength and Armour Penetration characteristics of ranged weapons equipped by models in your unit by 1, and those weapons have the [HAZARDOUS] ability.",
+      "restrictions": "You cannot target the same unit with the Experimental Ammunition and Threat Assessment Analyser Stratagems in the same phase.",
+      "type": "Wargear",
+      "phase": ["shooting"],
+      "faction_id": "TAU",
+      "fluff": "From hardened warheads and amplified ion capacitors, to hyperaccelerated pulse fields and refined fusion cores, the T’au are forever innovating improvements to improve the lethality of their ammunition.",
+      "detachment": "Experimental Prototype Cadre"
+    },
+    {
+      "name": "Threat Assessment Analyser",
+      "id": "1c035207-8a5c-5426-aa01-aa70e858728e",
+      "cost": 1,
+      "turn": "your",
+      "target": "One T’AU EMPIRE unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Select the [SUSTAINED HITS 1] or [LETHAL HITS] ability. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. You can instead select the [SUSTAINED HITS 1], [LETHAL HITS] and [HAZARDOUS] abilities to apply to those weapons until the end of the phase.",
+      "restrictions": "You cannot target the same unit with the Experimental Ammunition and Threat Assessment Analyser Stratagems in the same phase.",
+      "type": "Wargear",
+      "phase": ["shooting"],
+      "faction_id": "TAU",
+      "fluff": "The Earth caste have been experimenting with implanting AI neurochip-technology into hand‐held scanners, enabling the swift calculation of precise firing solutions.",
+      "detachment": "Experimental Prototype Cadre"
+    },
+    {
+      "name": "Neuroweb System Jammer",
+      "id": "3e4c84f0-861d-50f1-ac4d-e2eaad86a6d8",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One T’AU EMPIRE CRISIS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, your unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+      "restrictions": "",
+      "type": "Wargear",
+      "phase": ["shooting"],
+      "faction_id": "TAU",
+      "fluff": "This prototype countermeasure device emits an intense neurostatic jamming field, scrambling the enemy’s senses and fouling their aim.",
+      "detachment": "Experimental Prototype Cadre"
+    },
+    {
       "name": "Combat Embarkation",
       "id": "8115052b-4528-50e5-990e-05021e763832",
       "cost": 1,
@@ -8005,5 +8147,5 @@
       "detachment": "Mont’ka"
     }
   ],
-  "updated": "2025-02-24T14:26:35.761Z"
+  "updated": "2025-03-14T07:29:41.379Z"
 }

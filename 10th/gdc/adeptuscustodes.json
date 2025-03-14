@@ -92,7 +92,7 @@
       "name": "Telemon Heavy Dreadnought",
       "points": [
         {
-          "cost": "215",
+          "cost": "225",
           "keyword": null,
           "models": "1",
           "active": true
@@ -512,7 +512,7 @@
       "name": "Venerable Contemptor Dreadnought",
       "points": [
         {
-          "cost": "160",
+          "cost": "170",
           "keyword": null,
           "models": "1",
           "active": true
@@ -675,7 +675,7 @@
       "name": "Blade Champion",
       "points": [
         {
-          "cost": "110",
+          "cost": "120",
           "keyword": null,
           "models": "1",
           "active": true
@@ -1112,7 +1112,7 @@
       "name": "Shield-Captain on Dawneagle Jetbike",
       "points": [
         {
-          "cost": "160",
+          "cost": "150",
           "keyword": null,
           "models": "1",
           "active": true
@@ -1760,13 +1760,13 @@
       "name": "Custodian Guard",
       "points": [
         {
-          "cost": "225",
+          "cost": "215",
           "keyword": null,
           "models": "5",
           "active": true
         },
         {
-          "cost": "180",
+          "cost": "170",
           "keyword": null,
           "models": "4",
           "active": true
@@ -2067,7 +2067,7 @@
       "name": "Knight-Centura",
       "points": [
         {
-          "cost": "70",
+          "cost": "55",
           "keyword": null,
           "models": "1",
           "active": true
@@ -2348,7 +2348,7 @@
       "name": "Aleya",
       "points": [
         {
-          "cost": "75",
+          "cost": "65",
           "keyword": null,
           "models": "1",
           "active": true
@@ -2786,13 +2786,13 @@
       "name": "Custodian Wardens",
       "points": [
         {
-          "cost": "250",
+          "cost": "260",
           "keyword": null,
           "models": "5",
           "active": true
         },
         {
-          "cost": "200",
+          "cost": "210",
           "keyword": null,
           "models": "4",
           "active": true
@@ -3450,7 +3450,7 @@
       "name": "Shield-Captain in Allarus Terminator Armour",
       "points": [
         {
-          "cost": "140",
+          "cost": "130",
           "keyword": null,
           "models": "1",
           "active": true
@@ -4225,7 +4225,7 @@
       "name": "Shield-Captain",
       "points": [
         {
-          "cost": "140",
+          "cost": "130",
           "keyword": null,
           "models": "1",
           "active": true
@@ -4451,7 +4451,8 @@
     "Auric Champions",
     "Null Maiden Vigil",
     "Shield Host",
-    "Talons of the Emperor"
+    "Talons of the Emperor",
+    "Lions of the Emperor"
   ],
   "enhancements": [
     {
@@ -4627,7 +4628,7 @@
     {
       "name": "Augury Uplink",
       "id": "5274b486-9020-5acf-8cd0-e90bf4c9feb5",
-      "cost": "25",
+      "cost": "35",
       "keywords": ["Adeptus Custodes"],
       "excludes": [],
       "description": "ADEPTUS CUSTODES model only. The bearer has the Feel No Pain 5+ ability.",
@@ -4653,6 +4654,46 @@
       "description": "ADEPTUS CUSTODES INFANTRY or ADEPTUS CUSTODES MOUNTED model only. In your Command phase, select one ADEPTUS CUSTODES VEHICLE or ADEPTUS CUSTODES MOUNTED unit within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back.",
       "faction_id": "AC",
       "detachment": "Solar Spearhead"
+    },
+    {
+      "name": "Superior Creation",
+      "id": "58b4d1fc-d24b-5c86-aafd-077b643d9731",
+      "cost": "25",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "ADEPTUS CUSTODES INFANTRY model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with its full wounds remaining.",
+      "faction_id": "AC",
+      "detachment": "Lions of the Emperor"
+    },
+    {
+      "name": "Praesidius",
+      "id": "2004f402-89ce-5b07-943f-8f962b4ced1e",
+      "cost": "25",
+      "keywords": ["Adeptus Custodes"],
+      "excludes": [],
+      "description": "ADEPTUS CUSTODES model only. The bearer has the Lone Operative and Stealth abilities.",
+      "faction_id": "AC",
+      "detachment": "Lions of the Emperor"
+    },
+    {
+      "name": "Fierce Conqueror",
+      "id": "dd505ad2-22e0-5e58-81fb-094afd364f0a",
+      "cost": "15",
+      "keywords": ["Shield-Captain"],
+      "excludes": [],
+      "description": "SHIELD‐CAPTAIN model only. At the start of the Fight phase, until the end of the phase, add 2 to the Attacks characteristic of melee weapons equipped by the bearer for every 5 enemy models within 6\" of the bearer (rounding down).",
+      "faction_id": "AC",
+      "detachment": "Lions of the Emperor"
+    },
+    {
+      "name": "Admonimortis",
+      "id": "fd5868cf-6cf7-53c2-a264-57df9670413b",
+      "cost": "10",
+      "keywords": ["Shield-Captain"],
+      "excludes": [],
+      "description": "SHIELD‐CAPTAIN model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 3, and improve the Armour Penetration and Damage characteristics of those weapons by 1.",
+      "faction_id": "AC",
+      "detachment": "Lions of the Emperor"
     }
   ],
   "id": "AC",
@@ -4662,6 +4703,17 @@
   "parent_id": "",
   "rules": {
     "detachment": [
+      {
+        "name": "Against All Odds",
+        "detachment": "Lions of the Emperor",
+        "rule": [
+          {
+            "text": "Each time an **ADEPTUS CUSTODES** unit from your army (excluding **VEHICLES**) makes an attack, if there are no other friendly units within 6\" of that unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+            "order": 1,
+            "type": "text"
+          }
+        ]
+      },
       {
         "name": "Assemblage of Might",
         "detachment": "Auric Champions",
@@ -4763,6 +4815,21 @@
     ]
   },
   "stratagems": [
+    {
+      "name": "Peerless Warrior",
+      "id": "b9e9f1c8-7535-5d2e-afd7-8ba32f2e0cf6",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS CUSTODES unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "AC",
+      "fluff": "With every strike, the Lions of the Emperor prove themselves the masters of single combat, even when engaging the mightiest foes.",
+      "detachment": "Lions of the Emperor"
+    },
     {
       "name": "Flawless Construction",
       "id": "f441144e-5491-5145-92f6-ed9e2b99a9ab",
@@ -5034,13 +5101,88 @@
       "detachment": "Auric Champions"
     },
     {
+      "name": "Gilded Champion",
+      "id": "eb74d639-319b-5aa3-b121-025763bd0063",
+      "cost": 1,
+      "turn": "either",
+      "target": "That ADEPTUS CUSTODES CHARACTER model.",
+      "when": "Any phase, just after an ADEPTUS CUSTODES CHARACTER model from your army has used an ability on its datasheet that states it can only be used ‘once per battle’.",
+      "effect": "Your model can use that ‘once per battle’ ability one additional time during the battle (but not in the same phase).",
+      "restrictions": "You cannot use this Stratagem on the same ADEPTUS CUSTODES CHARACTER model more than once per battle.",
+      "type": "Strategic Ploy",
+      "phase": ["any"],
+      "faction_id": "AC",
+      "fluff": "The shining champions of the Adeptus Custodes are looked upon in awe by all who witness their grim arts. Their judgement is without flaw, and their tactical acumen utterly impeccable.",
+      "detachment": "Lions of the Emperor"
+    },
+    {
+      "name": "Defiant To The Last",
+      "id": "d0da5fcc-d190-5e53-9df7-babedfb8e80f",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS CUSTODES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 2 to the result if that model has the CHARACTER keyword. On a 4+, do not remove it from play; the destroyed model can fight after the attacking unit has finished making its attacks (when doing so, it is treated as having 1 wound remaining), and is then removed from play.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "AC",
+      "fluff": "The harder the battle, and the heavier their losses, the more resolute the Lions of the Emperor become.",
+      "detachment": "Lions of the Emperor"
+    },
+    {
+      "name": "Unleash The Lions",
+      "id": "65ce73bd-58cb-54c8-8279-9b5f27e66abb",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ALLARUS CUSTODIANS or AQUILON CUSTODIANS unit from your army that is on the battlefield.",
+      "when": "Your Command phase.",
+      "effect": "That unit is split into separate units, each containing one model. These new units each have a Starting Strength of 1.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "AC",
+      "fluff": "Heroic bands of Terminator‐armoured Custodians engage entire armies in unrelenting battle.",
+      "detachment": "Lions of the Emperor"
+    },
+    {
+      "name": "Manoeuvre and Fire",
+      "id": "627a2ee8-d0ce-532a-b648-2d9709e3497c",
+      "cost": 1,
+      "turn": "your",
+      "target": "That ADEPTUS CUSTODES unit.",
+      "when": "Your Movement phase, just after an ADEPTUS CUSTODES unit from your army Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "AC",
+      "fluff": "The Adeptus Custodes are unrelenting in their advance, laying down punishing fire even as they manoeuvre to new positions.",
+      "detachment": "Lions of the Emperor"
+    },
+    {
+      "name": "Swift As The Eagle",
+      "id": "3cac7cff-9632-57b3-9d59-fa727f4ba86f",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS CUSTODES unit from your army (excluding VEHICLE units) that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "effect": "Your unit can make a Normal move of up to D6\".",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "AC",
+      "fluff": "Although every Custodian is devastatingly fast on the battlefield, with preternatural reactions to match, the Lions of the Emperor are outstanding even among their peers.",
+      "detachment": "Lions of the Emperor"
+    },
+    {
       "name": "Unstoppable",
       "id": "4172415c-b155-5de6-8438-a5bee358c639",
       "cost": 1,
       "turn": "your",
       "target": "One ADEPTUS CUSTODES VEHICLE or ADEPTUS CUSTODES MOUNTED unit from your army.",
-      "when": "Start of your Movement phase.",
-      "effect": "Until the end of the phase, models in your unit can move horizontally through models and terrain features.",
+      "when": "Your Movement phase or your Charge phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a move, it can move through terrain features.",
       "restrictions": "",
       "type": "Strategic Ploy",
       "phase": ["movement"],
@@ -5214,5 +5356,5 @@
       "detachment": "Shield Host"
     }
   ],
-  "updated": "2025-02-24T14:26:35.591Z"
+  "updated": "2025-03-14T07:29:41.198Z"
 }
