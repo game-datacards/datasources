@@ -1110,7 +1110,7 @@
       "name": "Militarum Tempestus Command Squad",
       "points": [
         {
-          "cost": "75",
+          "cost": "85",
           "keyword": null,
           "models": "5"
         }
@@ -2581,7 +2581,7 @@
       "name": "Field Ordnance Battery",
       "points": [
         {
-          "cost": "100",
+          "cost": "110",
           "keyword": null,
           "models": "2"
         }
@@ -3526,7 +3526,7 @@
       "name": "Cadian Heavy Weapons Squad",
       "points": [
         {
-          "cost": "50",
+          "cost": "65",
           "keyword": null,
           "models": "3"
         }
@@ -3707,7 +3707,7 @@
       "name": "Catachan Heavy Weapons Squad",
       "points": [
         {
-          "cost": "50",
+          "cost": "65",
           "keyword": null,
           "models": "3"
         }
@@ -5243,12 +5243,12 @@
       "name": "Tempestus Scions",
       "points": [
         {
-          "cost": "130",
+          "cost": "140",
           "keyword": null,
           "models": "10"
         },
         {
-          "cost": "65",
+          "cost": "70",
           "keyword": null,
           "models": "5"
         }
@@ -5614,7 +5614,7 @@
         "primarch": [],
         "special": [
           {
-            "description": "At the start of the Declare Battle Formations step, this model must join one COMMAND SQUAD unit from your army (a COMMAND SQUAD cannot have more than one LOYAL PROTECTOR model joined to it). This model then counts as part of that COMMAND SQUAD for the rest of the battle, and its Starting Strength is increased accordingly. If it is not possible to join this model to a COMMAND SQUAD, it does not take part in the battle and counts as having been destroyed.\n\nWhile this model is joined to a unit, it can embark within any TRANSPORT that unit can embark within, and takes up the space of 3 models.",
+            "description": "At the start of the Declare Battle Formations step, this model must join one COMMAND SQUAD unit from your army (a COMMAND SQUAD cannot have more than one LOYAL PROTECTOR model joined to it). This model then counts as part of that COMMAND SQUAD for the rest of the battle, and its Starting Strength is increased accordingly. If it is not possible to join this model to a COMMAND SQUAD, it does not take part in the battle and counts as having been destroyed.\n\nWhile this model is joined to a unit, it can embark within any TRANSPORT that unit can embark within, and takes up the space of 3 models.\n\nThis model cannot be selected as your WARLORD and cannot be given Enhancements.",
             "name": "Loyal Protector"
           }
         ],
@@ -6383,7 +6383,12 @@
           }
         ],
         "primarch": [],
-        "special": [],
+        "special": [
+          {
+            "description": "This unit’s OFFICER can issue 1 Order to a REGIMENT unit.",
+            "name": "Orders"
+          }
+        ],
         "wargear": [
           {
             "name": "Master Vox",
@@ -8692,7 +8697,7 @@
       ],
       "transport": "",
       "wargear": [
-        "1 Veteran Guardsman’s laspistol can be equipped with one of the following: ◦ 1 bolt pistol ◦ 1 plasma pistol",
+        "1 Veteran Guardsman not equipped with alchemyk counteragents can replace its laspistol with one of the following: ◦ 1 bolt pistol ◦ 1 plasma pistol",
         "1 Veteran Guardsman’s chainsword can be replaced with one of the following: ◦ 1 trench club ◦ 1 power weapon",
         "The Lord Commissar can be equipped with 1 plasma pistol.",
         "The Lord Commissar’s power weapon can be replaced with 1 power fist.",
@@ -9261,7 +9266,12 @@
           }
         ],
         "primarch": [],
-        "special": [],
+        "special": [
+          {
+            "description": "This OFFICER can issue up to 3 Orders to REGIMENT units.",
+            "name": "Orders"
+          }
+        ],
         "wargear": []
       },
 
@@ -10277,7 +10287,7 @@
           },
           {
             "name": "Tactical Genius",
-            "description": "Once per turn, one unit from your army with this ability can use it when a friendly REGIMENT unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP."
+            "description": "Once per battle round, one unit from your army with this ability can use it when a friendly REGIMENT unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP."
           }
         ],
         "primarch": [],
@@ -11530,7 +11540,7 @@
         "wargear": [
           {
             "name": "Remote Mine",
-            "description": "Once per battle, at the start of your Shooting phase, you can select one enemy unit within 12\" of the bearer and roll one D6: on a 3+, that enemy unit suffers D6 mortal wounds, or D3+3 mortal wounds instead if it is a VEHICLE or FORTIFICATIONS unit."
+            "description": "Once per battle, at the start of your Shooting phase, you can select one enemy unit within 9\" of and visible to the bearer and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds, or 2D3 mortal wounds instead if it is a VEHICLE or FORTIFICATIONS unit."
           }
         ]
       },
@@ -16726,7 +16736,7 @@
     {
       "name": "Bombast-class Vox-array",
       "id": "c2d05008-ffb8-55cd-9309-6fda99566903",
-      "cost": "25",
+      "cost": "35",
       "keywords": ["Militarum Tempestus", "Officer"],
       "excludes": [],
       "description": "MILITARUM TEMPESTUS OFFICER model only. Each time the bearer issues an Order, if the bearer’s unit contains one or more models equipped with a master vox, it can issue that Order to up to three different REGIMENT units, instead of only one.",
@@ -17010,7 +17020,7 @@
         "detachment": "Bridgehead Strike",
         "rule": [
           {
-            "text": "Each time a **MILITARUM TEMPESTUS** model from your army makes a ranged attack in a turn in which it was set up on the battlefield from Reserves or it disembarked from a **TRANSPORT**, add 1 to the Wound roll.",
+            "text": "Each time a **MILITARUM TEMPESTUS** model from your army makes a ranged attack in a turn in which it was set up on the battlefield from Reserves or it disembarked from a **TRANSPORT**, add 1 to the Hit roll.",
             "order": 1,
             "type": "text"
           }
@@ -17239,21 +17249,6 @@
       "detachment": "Bridgehead Strike"
     },
     {
-      "name": "Firing Hot",
-      "id": "0a4a57d8-8434-58bf-96ae-51001bec716f",
-      "cost": 1,
-      "turn": "your",
-      "target": "One MILITARUM TEMPESTUS or KASRKIN unit from your army that has not been selected to shoot this phase.",
-      "when": "Your Shooting phase.",
-      "effect": "Until the end of the phase, improve the Strength and Armour Penetration characteristics of hot‑shot lascarbines, hot‑shot lasguns, hot‑shot laspistols, hot‑shot marksman rifles, hot‑shot volley guns and sentry hot‑shot volley guns equipped by models in your unit by 1.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["shooting"],
-      "faction_id": "AM",
-      "fluff": "At the risk of permanently burning out power packs, hot‑shot weaponry can be temporarily overcharged to provide additional punch at the crucial moment.",
-      "detachment": "Bridgehead Strike"
-    },
-    {
       "name": "Clear and Secure",
       "id": "e99c047a-84dc-5bd9-844e-fd08a61b75a7",
       "cost": 1,
@@ -17327,6 +17322,21 @@
       "faction_id": "AM",
       "fluff": "Inured to the savage horrors of trench warfare, these warriors will fight until their last breath.",
       "detachment": "Siege Regiment"
+    },
+    {
+      "name": "Firing Hot",
+      "id": "0a4a57d8-8434-58bf-96ae-51001bec716f",
+      "cost": 2,
+      "turn": "your",
+      "target": "One MILITARUM TEMPESTUS or KASRKIN unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, when targeting an enemy unit within 12\", improve the Strength and Armour Penetration characteristics of hot‑shot lascarbines, hot‑shot lasguns, hot‑shot laspistols, hot‑shot marksman rifles, hot‑shot volley guns and sentry hot‑shot volley guns equipped by models in your unit by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "AM",
+      "fluff": "At the risk of permanently burning out power packs, hot‑shot weaponry can be temporarily overcharged to provide additional punch at the crucial moment.",
+      "detachment": "Bridgehead Strike"
     },
     {
       "name": "Final Hour",
@@ -17659,5 +17669,5 @@
       "detachment": "Hammer of the Emperor"
     }
   ],
-  "updated": "2025-02-24T14:26:35.428Z"
+  "updated": "2025-03-14T07:29:41.048Z"
 }
