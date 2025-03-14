@@ -275,7 +275,7 @@
               "ap": "-1",
               "attacks": "2",
               "damage": "3",
-              "keywords": [],
+              "keywords": ["Heavy", "Assault"],
               "name": "Master-crafted heavy bolt rifle",
               "range": "30\"",
               "skill": "2+",
@@ -3586,7 +3586,7 @@
       "name": "Predator Destructor",
       "points": [
         {
-          "cost": "130",
+          "cost": "140",
           "keyword": null,
           "models": "1",
           "active": true
@@ -4022,13 +4022,13 @@
       "name": "Bladeguard Veteran Squad",
       "points": [
         {
-          "cost": "180",
+          "cost": "160",
           "keyword": null,
           "models": "6",
           "active": true
         },
         {
-          "cost": "90",
+          "cost": "80",
           "keyword": null,
           "models": "3",
           "active": true
@@ -4773,7 +4773,7 @@
       "name": "Death Company Captain with Jump Pack",
       "points": [
         {
-          "cost": "85",
+          "cost": "75",
           "keyword": null,
           "models": "1",
           "active": true
@@ -5737,13 +5737,13 @@
       "name": "Death Company Marines",
       "points": [
         {
-          "cost": "180",
+          "cost": "160",
           "keyword": null,
           "models": "10",
           "active": true
         },
         {
-          "cost": "90",
+          "cost": "85",
           "keyword": null,
           "models": "5",
           "active": true
@@ -6947,7 +6947,7 @@
       "name": "Marneus Calgar",
       "points": [
         {
-          "cost": "200",
+          "cost": "210",
           "keyword": null,
           "models": "3",
           "active": true
@@ -7334,7 +7334,7 @@
           },
           {
             "name": "Master of the Fleet",
-            "description": "During the Declare Battle Formations step, if your army includes this model, select one ADEPTUS ASTARTES INFANTRY unit from your army. That unit gains the Deep Strike ability.",
+            "description": "During the Declare Battle Formations step, if your army includes this model, select one PHOBOS, GRAVIS or TACTICUS ADEPTUS ASTARTES INFANTRY unit from your army. That unit gains the Deep Strike ability.",
             "showAbility": true,
             "showDescription": true
           }
@@ -11143,13 +11143,13 @@
       "name": "Centurion Devastator Squad",
       "points": [
         {
-          "cost": "370",
+          "cost": "330",
           "keyword": null,
           "models": "6",
           "active": true
         },
         {
-          "cost": "185",
+          "cost": "165",
           "keyword": null,
           "models": "3",
           "active": true
@@ -17257,7 +17257,7 @@
       "name": "Vindicator",
       "points": [
         {
-          "cost": "175",
+          "cost": "185",
           "keyword": null,
           "models": "1",
           "active": true
@@ -18023,7 +18023,7 @@
       "name": "Whirlwind",
       "points": [
         {
-          "cost": "180",
+          "cost": "190",
           "keyword": null,
           "models": "1",
           "active": true
@@ -21850,13 +21850,13 @@
       "name": "Death Company Marines with Bolt Rifles",
       "points": [
         {
-          "cost": "180",
+          "cost": "160",
           "keyword": null,
           "models": "10",
           "active": true
         },
         {
-          "cost": "90",
+          "cost": "85",
           "keyword": null,
           "models": "5",
           "active": true
@@ -23552,7 +23552,7 @@
       "name": "Company Heroes",
       "points": [
         {
-          "cost": "95",
+          "cost": "105",
           "keyword": null,
           "models": "4",
           "active": true
@@ -25450,7 +25450,7 @@
       "name": "Predator Annihilator",
       "points": [
         {
-          "cost": "130",
+          "cost": "135",
           "keyword": null,
           "models": "1",
           "active": true
@@ -31392,7 +31392,7 @@
       "name": "Ballistus Dreadnought",
       "points": [
         {
-          "cost": "130",
+          "cost": "140",
           "keyword": null,
           "models": "1",
           "active": true
@@ -31635,13 +31635,13 @@
       "name": "Deathwatch Terminator Squad",
       "points": [
         {
-          "cost": "360",
+          "cost": "350",
           "keyword": null,
           "models": "10",
           "active": true
         },
         {
-          "cost": "180",
+          "cost": "190",
           "keyword": null,
           "models": "5",
           "active": true
@@ -32710,7 +32710,7 @@
           },
           {
             "name": "Strategic Dispersal",
-            "description": "In your Shooting phase, after this model’s unit has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to D6\".",
+            "description": "In your Shooting phase, after this model’s unit has shot, if it is not within Engagement Range of one or more enemy units, it can make a Normal move of up to 6\". If it does, until the end of the turn, that unit is not eligible to declare a charge.",
             "showAbility": true,
             "showDescription": true
           }
@@ -44060,6 +44060,16 @@
       "detachment": "Vanguard Spearhead"
     },
     {
+      "name": "Fire Discipline",
+      "id": "c4b474a4-1952-5cc0-9f13-5e6706a87a68",
+      "cost": "25",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can re-roll Advance rolls made for that unit.",
+      "faction_id": "SM",
+      "detachment": "Gladius Task Force"
+    },
+    {
       "name": "Shadow War Veteran",
       "id": "dbdf932f-b347-5e13-b20d-68b4bdb32b54",
       "cost": "30",
@@ -44068,16 +44078,6 @@
       "description": "PHOBOS model only. The bearer has the following ability:\n\nLord of Deceit (Aura): Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that use of that Stratagem by 1CP.",
       "faction_id": "SM",
       "detachment": "Vanguard Spearhead"
-    },
-    {
-      "name": "Fire Discipline",
-      "id": "c4b474a4-1952-5cc0-9f13-5e6706a87a68",
-      "cost": "40",
-      "keywords": ["Adeptus Astartes"],
-      "excludes": [],
-      "description": "ADEPTUS ASTARTES model only. While the bearer is leading a unit, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability. In addition, while the bearer’s unit is under the effects of the Devastator Doctrine, you can re-roll Advance rolls made for that unit.",
-      "faction_id": "SM",
-      "detachment": "Gladius Task Force"
     },
     {
       "name": "Indomitable Fury",
@@ -44312,7 +44312,7 @@
     {
       "name": "Fusillade",
       "id": "6936d90b-fcfe-5b33-8e05-e80163e68754",
-      "cost": "15",
+      "cost": "35",
       "keywords": ["Psyker"],
       "excludes": [],
       "description": "ADEPTUS ASTARTES PSYKER model only. Ranged weapons equipped by models in the bearer’s unit have the [ANTI‑MONSTER 5+] and [ANTI‑VEHICLE 5+] abilities, and:\n\n■ The [SUSTAINED HITS 1] ability if the Pyromancy Discipline is active for your army.\n■ Add 6\" to the Range characteristic of those weapons if the Telekinesis Discipline is active for your army.",
@@ -44501,7 +44501,7 @@
         "name": "Oath of Moment",
         "rule": [
           {
-            "text": "If your Army Faction is **ADEPTUS ASTARTES**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n\n■ You can re-roll the Hit roll.\n■ If your army does not include one or more units with the **BLACK TEMPLARS**, **BLOOD ANGELS**, **DARK ANGELS**, **DEATHWATCH** or **SPACE WOLVES** keywords, add 1 to the Wound roll as well.",
+            "text": "If your Army Faction is **ADEPTUS ASTARTES**, at the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Oath of Moment target. Each time a model with this ability makes an attack that targets your Oath of Moment target:\n\n■ You can re-roll the Hit roll.\n■ If you are using a Codex: Space Marines Detachment and your army does not include one or more units with the **BLACK TEMPLARS**, **BLOOD ANGELS**, **DARK ANGELS**, **DEATHWATCH** or **SPACE WOLVES** keywords, add 1 to the Wound roll as well.",
             "order": 1,
             "type": "text"
           }
@@ -45020,7 +45020,7 @@
       "id": "c3d09b49-2ce9-5936-990e-987d6dce1a37",
       "cost": 1,
       "turn": "opponents",
-      "target": "One ADEPTUS ASTARTES unit from your army that is within 9\" of that enemy unit.",
+      "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that is within 9\" of that enemy unit.",
       "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.",
       "effect": "Your unit can make a Normal move of up to 6\".",
       "restrictions": "You cannot select a unit that is within Engagement Range of one or more enemy units.",
@@ -45241,5 +45241,5 @@
       "detachment": "Stormlance Task Force"
     }
   ],
-  "updated": "2025-02-24T14:26:34.919Z"
+  "updated": "2025-03-14T07:29:40.600Z"
 }
