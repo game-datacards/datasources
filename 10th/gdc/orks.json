@@ -2494,7 +2494,7 @@
           },
           {
             "name": "Bomb Squigs",
-            "description": "Twice per battle, after this unit ends a Normal move, you can use one Bomb Squig. If you do, select one enemy unit within 12\" and visible to this unit and roll one D6: on a 3+, that enemy unit suffers D3 mortal wounds.\n\nDesigner’s Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
+            "description": "Twice per battle, after this unit ends a Normal move, you can select one enemy unit within 12\" of it and roll one D6: on a 2+, that enemy unit suffers D3 mortal wounds.\n\nDesigner’s Note: Place two Bomb Squig tokens next to the unit, removing one each time this unit uses this ability.",
             "showAbility": true,
             "showDescription": true
           }
@@ -11010,7 +11010,7 @@
         "detachment": "More Dakka!",
         "rule": [
           {
-            "text": "During your Shooting phase, ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[SUSTAINED HITS 2]** ability.\n\nWhile the Waaagh! is active for your army, ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[ASSAULT]** ability.",
+            "text": "Ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[ASSAULT]** ability.\n\nWhile the Waaagh! is active for your army, during your Shooting phase, ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[SUSTAINED HITS 1]** ability.",
             "order": 1,
             "type": "text"
           }
@@ -11351,9 +11351,9 @@
       "id": "c0006e5f-3047-5438-9894-36d0d083a368",
       "cost": 1,
       "turn": "your",
-      "target": "One ORKS CHARACTER model from your army.",
-      "when": "Start of your Shooting phase.",
-      "effect": "Select one enemy unit within 18\" of your ORKS CHARACTER model. Until the end of the phase, weapons equipped by ORKS models from your army have the [IGNORES COVER] ability while targeting that unit.",
+      "target": "One ORKS unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability.",
       "restrictions": "",
       "type": "Battle Tactic",
       "phase": ["shooting"],
@@ -11407,21 +11407,6 @@
       "detachment": "Green Tide"
     },
     {
-      "name": "Get Stuck In, Ladz!",
-      "id": "240aef2a-1fed-5484-b62b-d499ae318a19",
-      "cost": 1,
-      "turn": "your",
-      "target": "One ORKS unit from your army.",
-      "when": "Your Command phase.",
-      "effect": "Until the start of your next Command phase, the Waaagh! is active for your unit, even if you have already called a Waaagh! this battle.\n\nDesigner’s Note: This means that any abilities that are in effect while the Waaagh! is active for your army will be in effect for your unit.",
-      "restrictions": "",
-      "type": "Epic Deed",
-      "phase": ["command"],
-      "faction_id": "ORK",
-      "fluff": "Lashing out with ferocious blows and bellowing loud enough to burst eardrums, the biggest Ork present persuades his ladz to fight even harder.",
-      "detachment": "More Dakka!"
-    },
-    {
       "name": "Huge Show-offs",
       "id": "df3d43df-4284-5dcb-8b65-b0e7716d337f",
       "cost": 1,
@@ -11450,6 +11435,21 @@
       "faction_id": "ORK",
       "fluff": "So resilient is Ork physiology – and so slow are Orks on the uptake – even death can take time to register",
       "detachment": "War Horde"
+    },
+    {
+      "name": "Get Stuck In, Ladz!",
+      "id": "240aef2a-1fed-5484-b62b-d499ae318a19",
+      "cost": 2,
+      "turn": "your",
+      "target": "One ORKS unit (excluding GRETCHIN) from your army.",
+      "when": "Your Command phase.",
+      "effect": "Until the start of your next Command phase, the Waaagh! is active for your unit, even if you have already called a Waaagh! this battle.\n\nDesigner’s Note: This means that any abilities that are in effect while the Waaagh! is active for your army will be in effect for your unit.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["command"],
+      "faction_id": "ORK",
+      "fluff": "Lashing out with ferocious blows and bellowing loud enough to burst eardrums, the biggest Ork present persuades his ladz to fight even harder.",
+      "detachment": "More Dakka!"
     },
     {
       "name": "Speediest Freeks",
@@ -11752,5 +11752,5 @@
       "detachment": "More Dakka!"
     }
   ],
-  "updated": "2025-04-03T15:38:25.543Z"
+  "updated": "2025-04-09T12:47:15.290Z"
 }
