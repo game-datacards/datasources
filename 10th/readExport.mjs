@@ -106,7 +106,7 @@ const specialWeaponKeywords = [
   },
 ];
 
-const newDataExportFile = readFile('./temp/data-export-525.json');
+const newDataExportFile = readFile('./temp/data-export-609.json');
 const newDataExport = sortObj(JSON.parse(newDataExportFile).data);
 
 // Function to remove markdown from a string
@@ -608,7 +608,9 @@ function parseDataExport(fileName, factionName) {
       newUnit.abilities.damaged = {
         range: damageAbility[0].name
           .replaceAll('DAMAGED: ', '')
+          .replaceAll('DAMAGED:', '')
           .replaceAll('Damaged: ', '')
+          .replaceAll('Damaged:', '')
           .replaceAll('Damaged ', '')
           .toUpperCase(),
         description: removeMarkdown(damageAbility[0].rules),
