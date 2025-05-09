@@ -291,6 +291,8 @@ function parseDataExport(fileName, factionName) {
         excludes: newEnhancement.excluded,
         description: removeMarkdown(newEnhancement.rules) || '',
         faction_id: oldParsedUnits.id,
+        source: '40k-10e',
+        cardType: "enhancement",
         detachment:
           detachments.find((detachment) => {
             return detachment.id === newEnhancement.detachmentId;
