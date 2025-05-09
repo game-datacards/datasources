@@ -2291,6 +2291,8 @@
       "excludes": [],
       "description": "ADEPTUS ASTARTES model only. Improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 1. At the end of the Fight phase, if one or more enemy models were destroyed as a result of a melee attack made by the bearer this phase, until the end of the battle, improve the Strength, Damage and Armour Penetration characteristics of the bearer’s melee weapons by 2 instead.",
       "faction_id": "CHDW",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Black Spear Task Force"
     },
     {
@@ -2301,6 +2303,8 @@
       "excludes": [],
       "description": "WATCH MASTER or TECHMARINE model only. At the start of your opponent’s Shooting phase, select one enemy VEHICLE unit (excluding TITANIC units) within 12\" of and visible to the bearer. That unit must take a Leadership test. If that test is passed, until the end of the phase, each time a model in that unit makes an attack, subtract 1 from the Hit roll; if that test is failed, that unit is not eligible to shoot this phase.",
       "faction_id": "CHDW",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Black Spear Task Force"
     },
     {
@@ -2311,6 +2315,8 @@
       "excludes": [],
       "description": "ADEPTUS ASTARTES model only. Models in the bearer’s unit have the Deep Strike ability. In addition, you can target the bearer’s unit with the Rapid Ingress Stratagem for 0CP.",
       "faction_id": "CHDW",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Black Spear Task Force"
     },
     {
@@ -2321,6 +2327,8 @@
       "excludes": [],
       "description": "WATCH MASTER or CAPTAIN model only. Once per battle, after you have selected your Oath of Moment target, the bearer can use this Enhancement. If it does, select a second enemy unit to be an Oath of Moment target.\n\nDesigner’s Note: This means that each time a model with the Oath of Moment ability makes an attack that targets either of your Oath of Moment targets, you can re-roll the Hit roll.",
       "faction_id": "CHDW",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Black Spear Task Force"
     }
   ],
@@ -2334,54 +2342,70 @@
     "army": [
       {
         "name": "Kill Teams",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
             "text": "Each time an attack targets a **KILL TEAM** unit from your army that contains models with different Toughness characteristics, until the attacking unit has finished making its attacks, use the Toughness characteristic of the majority of the models in that unit when determining what result is required for that attack to successfully wound. If two or more Toughness characteristics are tied for majority, use the highest Toughness characteristic.\n\nFor the purposes of determining which models can embark within a **TRANSPORT** model, **KILL TEAM** models follow the normal restrictions listed on the **TRANSPORT** model.",
+            "order": 1,
+            "title": null,
             "type": "text"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
         "detachment": "Black Spear Task Force",
-        "name": "Mission Tactics",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of your Command phase, you can select one of the Mission Tactics listed below. Until the start of your next Command phase, that Mission Tactic is active and its effects apply to all units from your army with this ability. Each Mission Tactic can only be selected once per battle.",
-            "type": "text"
-          },
-          {
-            "order": 2,
-            "text": "Furor Tactics",
-            "type": "header"
-          },
-          {
-            "order": 3,
-            "text": "While this Mission Tactic is active, weapons equipped by **ADEPTUS ASTARTES** units from your army have the [**SUSTAINED HITS 1**] ability.",
-            "type": "text"
-          },
-          {
-            "order": 4,
-            "text": "Malleus Tactics",
-            "type": "header"
-          },
-          {
-            "order": 5,
-            "text": "While this Mission Tactic is active, weapons equipped by **ADEPTUS ASTARTES** units from your army have the [**LETHAL HITS**] ability.",
-            "type": "text"
-          },
-          {
-            "order": 6,
-            "text": "Purgatus Tactics",
-            "type": "header"
-          },
-          {
-            "order": 7,
-            "text": "While this Mission Tactic is active, each time an **ADEPTUS ASTARTES** unit from your army makes an attack, if a Critical Hit is scored, that attack has the [**PRECISION**] ability.",
-            "type": "text"
+            "name": "Mission Tactics",
+            "sections": [
+              {
+                "text": "At the start of your Command phase, you can select one of the Mission Tactics listed below. Until the start of your next Command phase, that Mission Tactic is active and its effects apply to all units from your army with this ability. Each Mission Tactic can only be selected once per battle.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "Furor Tactics",
+                "order": 3,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "While this Mission Tactic is active, weapons equipped by **ADEPTUS ASTARTES** units from your army have the [**SUSTAINED HITS 1**] ability.",
+                "order": 4,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "Malleus Tactics",
+                "order": 6,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "While this Mission Tactic is active, weapons equipped by **ADEPTUS ASTARTES** units from your army have the [**LETHAL HITS**] ability.",
+                "order": 7,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "Purgatus Tactics",
+                "order": 9,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "While this Mission Tactic is active, each time an **ADEPTUS ASTARTES** unit from your army makes an attack, if a Critical Hit is scored, that attack has the [**PRECISION**] ability.",
+                "order": 10,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -2479,5 +2503,5 @@
       "detachment": "Black Spear Task Force"
     }
   ],
-  "updated": "2025-05-08T19:15:27.618Z"
+  "updated": "2025-05-09T12:57:39.960Z"
 }

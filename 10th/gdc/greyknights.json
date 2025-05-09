@@ -5737,6 +5737,8 @@
       "excludes": [],
       "description": "GREY KNIGHTS model with the Deep Strike ability only. The bearer’s unit must start the battle in Reserves, but neither it, nor any TRANSPORT it is embarked within, is counted towards any limits the mission places on the number of Strategic Reserves units you can have. That unit can be set up using its Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
       "faction_id": "GK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Teleport Strike Force"
     },
     {
@@ -5747,6 +5749,8 @@
       "excludes": [],
       "description": "GREY KNIGHTS model only. Each time the bearer makes a melee attack add 1 to the Wound roll and, if that attack targets a DAEMON unit, add 1 to the Damage characteristic of that attack as well.",
       "faction_id": "GK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Teleport Strike Force"
     },
     {
@@ -5757,6 +5761,8 @@
       "excludes": [],
       "description": "GREY KNIGHTS model only. Once per battle, in your opponent’s Shooting phase, when the bearer’s unit is selected as the target of a ranged attack, you can remove the bearer’s unit from the battlefield and then set it back up again anywhere on the battlefield that is more than 9\" horizontally away from all enemy models. If the bearer is no longer an eligible target, your opponent can then select new targets for any attacks that had targeted the bearer’s unit.",
       "faction_id": "GK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Teleport Strike Force"
     },
     {
@@ -5767,6 +5773,8 @@
       "excludes": [],
       "description": "GREY KNIGHTS model only. Add 1 to Charge rolls made for the bearer’s unit.",
       "faction_id": "GK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Teleport Strike Force"
     },
     {
@@ -5777,6 +5785,8 @@
       "excludes": [],
       "description": "GREY KNIGHTS model only. While the bearer’s unit is not Battle‑shocked, add 3 to the bearer’s Objective Control characteristic.",
       "faction_id": "GK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Warpbane Task Force"
     },
     {
@@ -5787,6 +5797,8 @@
       "excludes": [],
       "description": "GREY KNIGHTS INFANTRY model only. The bearer’s melee weapons have the [PRECISION] ability, and while the bearer is wholly within your army’s Hallowed Ground, each time a melee attack made by the bearer scores a wound, the target of that attack suffers 1 mortal wound in addition to any normal damage.",
       "faction_id": "GK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Warpbane Task Force"
     },
     {
@@ -5797,6 +5809,8 @@
       "excludes": [],
       "description": "GREY KNIGHTS INFANTRY model only. Models in the bearer’s unit have the Stealth ability.",
       "faction_id": "GK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Warpbane Task Force"
     },
     {
@@ -5807,6 +5821,8 @@
       "excludes": [],
       "description": "GREY KNIGHTS model only. Once per battle, at the start of any phase, the bearer can select one friendly GREY KNIGHTS unit within 18\" of and visible to it. If it does, until the end of the phase, that unit is within your army’s Hallowed Ground.",
       "faction_id": "GK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Warpbane Task Force"
     }
   ],
@@ -5819,40 +5835,64 @@
     "army": [
       {
         "name": "Teleport Assault",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
             "text": "If your Army Faction is **GREY KNIGHTS**, at the end of your opponent’s turn, you can select a number of **GREY KNIGHTS** units from your army with this ability (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:",
+            "order": 1,
+            "title": null,
             "type": "text"
           },
           {
+            "text": "-",
             "order": 2,
+            "title": null,
+            "type": "image"
+          },
+          {
             "text": "Once you have made your selections, remove those units from the battlefield. In the Reinforcements step of your next Movement phase, set each of those units up anywhere on the battlefield that is more than 9\" horizontally away from all enemy models. Any units that are not on the battlefield at the end of the battle count as destroyed.",
+            "order": 3,
+            "title": null,
             "type": "text"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Teleport Strike Force",
-        "name": "Teleport Shunt",
-        "rule": [
+        "detachment": "Warpbane Task Force",
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time a **GREY KNIGHTS** unit with the Deep Strike ability Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to that unit’s Move characteristic and that unit can **FLY**.",
-            "type": "text"
+            "name": "Hallowed Ground",
+            "sections": [
+              {
+                "text": "Certain areas of the battlefield are within your army’s Hallowed Ground, as follows:\n\n■ Your deployment zone is always within your army’s Hallowed Ground.\n■ The area of the battlefield within 6\" of one or more **PURIFIER SQUAD** units from your army is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Hallowed Ground.\n\nEach time a model in a **GREY KNIGHTS** unit from your army makes an attack that targets a visible target, re‑roll a Hit roll of 1. If that unit is a **PURIFIER SQUAD** and/or is wholly within your army’s Hallowed Ground, you can re‑roll the Hit roll instead.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Warpbane Task Force",
-        "name": "Hallowed Ground",
-        "rule": [
+        "detachment": "Teleport Strike Force",
+        "rules": [
           {
-            "order": 1,
-            "text": "Certain areas of the battlefield are within your army’s Hallowed Ground, as follows:\n\n■ Your deployment zone is always within your army’s Hallowed Ground.\n■ The area of the battlefield within 6\" of one or more **PURIFIER SQUAD** units from your army is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Hallowed Ground.\n\nEach time a model in a **GREY KNIGHTS** unit from your army makes an attack that targets a visible target, re‑roll a Hit roll of 1. If that unit is a **PURIFIER SQUAD** and/or is wholly within your army’s Hallowed Ground, you can re‑roll the Hit roll instead.",
-            "type": "text"
+            "name": "Teleport Shunt",
+            "sections": [
+              {
+                "text": "Each time a **GREY KNIGHTS** unit with the Deep Strike ability Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to that unit’s Move characteristic and that unit can **FLY**.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -6040,5 +6080,5 @@
       "detachment": "Teleport Strike Force"
     }
   ],
-  "updated": "2025-05-08T19:15:28.015Z"
+  "updated": "2025-05-09T12:57:40.537Z"
 }

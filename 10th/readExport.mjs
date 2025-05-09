@@ -153,10 +153,74 @@ function parseDataExport(fileName, factionName) {
   let enhancements = newDataExport.enhancement.filter((enhancement) => {
     return enhancement.publicationId === newPublication?.id;
   });
-  console.log(newPublication);
+
+
+
   const detachments = newDataExport.detachment.filter((detachment) => {
     return detachment.publicationId === newPublication?.id;
   });
+
+  let armyRules = newDataExport.army_rule.filter((rule) => {
+    return rule.publicationId === newPublication?.id;
+  }).sort((a, b) => a.displayOrder - b.displayOrder);
+
+  armyRules = armyRules.map((rule) => {
+    const ruleSections = newDataExport.rule_container_component.filter((rule_container) => {
+      return armyRules.map((rule => rule.id)).includes(rule_container.armyRuleId) && rule_container.type !== "loreAccordion";
+    }).sort((a, b) => a.displayOrder - b.displayOrder).map((rule_container) => {
+      return {
+        text: rule_container.textContent,
+        order: rule_container.displayOrder,
+        title: rule_container.title,
+        subTitle: rule_container.subTitle,
+        type: rule_container.type,
+      };
+    });
+
+    return {
+      name: rule.name,
+      rules: ruleSections,
+      source: "40k-10e",
+      cardType: "armyRule",
+    }
+  });
+
+  let detachmentRules = detachments.map((detachment) => {
+    const detachmentRules = newDataExport.detachment_rule.filter((rule) => {
+      return rule.detachmentId === detachment.id;
+    }).sort((a, b) => a.displayOrder - b.displayOrder).map((rule) => {
+      const ruleSections = newDataExport.rule_container_component.filter((rule_container) => {
+        return rule.id === rule_container.detachmentRuleId && rule_container.type !== "loreAccordion";
+      }).sort((a, b) => a.displayOrder - b.displayOrder).map((rule_container) => {
+        return {
+          text: rule_container.textContent,
+          order: rule_container.displayOrder,
+          title: rule_container.title,
+          subTitle: rule_container.subTitle,
+          type: rule_container.type,
+        };
+      });
+
+      return {
+        name: rule.name,
+        sections: ruleSections,
+        source: "40k-10e",
+        cardType: "detachmentRule",
+      }
+    });
+
+
+
+    return {
+      detachment: detachment.name,
+      rules: detachmentRules,
+    }
+  });
+
+  console.log('Detachment rules', detachmentRules);
+
+  oldParsedUnits.rules = { army: armyRules, detachment: detachmentRules };
+
 
   oldParsedUnits.detachments = detachments.map((detachment) => {
     return detachment.name;
@@ -724,8 +788,8 @@ function parseDataExport(fileName, factionName) {
                   weapon.profiles.length > 1 && weapon.name !== profile.name
                     ? weapon.name + ' – ' + profile.name.charAt(0).toUpperCase() + profile.name.slice(1)
                     : profile.name === 'ranged'
-                    ? weapon.name
-                    : profile.name,
+                      ? weapon.name
+                      : profile.name,
                 range: profile.range,
                 skill: profile.ballisticSkill,
                 strength: profile.strength,
@@ -754,8 +818,8 @@ function parseDataExport(fileName, factionName) {
                   weapon.profiles.length > 1 && weapon.name !== profile.name
                     ? weapon.name + ' – ' + profile.name.charAt(0).toUpperCase() + profile.name.slice(1)
                     : profile.name === 'melee'
-                    ? weapon.name
-                    : profile.name,
+                      ? weapon.name
+                      : profile.name,
                 range: profile.range,
                 skill: profile.weaponSkill,
                 strength: profile.strength,

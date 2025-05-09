@@ -2687,6 +2687,8 @@
       "excludes": [],
       "description": "LEAGUES OF VOTANN model only. In your Command phase, you can select one objective marker your opponent controls. Until the start of your next Command phase, while an enemy unit is within range of that objective marker, it counts as having one more Judgement token than it actually has (to a maximum of 2).",
       "faction_id": "LoV",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Oathband"
     },
     {
@@ -2699,6 +2701,8 @@
       "excludes": [],
       "description": "LEAGUES OF VOTANN model only. Each time the bearer’s unit destroys an enemy unit, if that enemy unit has one or more Judgement tokens, you can select one other enemy unit that is visible to the bearer. That other unit gains one Judgement token.",
       "faction_id": "LoV",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Oathband"
     },
     {
@@ -2711,6 +2715,8 @@
       "excludes": [],
       "description": "LEAGUES OF VOTANN model only. You can re-roll Battle-shock tests taken for the bearer’s unit, and models in that unit can ignore any or all modifiers to their characteristics and/or to any rolls or tests made for them (excluding modifiers to saving throws).",
       "faction_id": "LoV",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Oathband"
     },
     {
@@ -2723,6 +2729,8 @@
       "excludes": [],
       "description": "LEAGUES OF VOTANN model only. The first time the bearer is destroyed, after placing a Judgement token next to the unit that destroyed it, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
       "faction_id": "LoV",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Oathband"
     },
     {
@@ -2735,6 +2743,8 @@
       "excludes": [],
       "description": "LEAGUES OF VOTANN model only. Each time a ranged attack targets the bearer’s unit, if the attacking model is within 12\" of the bearer’s unit, worsen the Armour Penetration characteristic of that attack by 1.",
       "faction_id": "LoV",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Hearthband"
     },
     {
@@ -2747,6 +2757,8 @@
       "excludes": [],
       "description": "KÂHL model only. In your Shooting phase, after the bearer has shot, select one enemy unit (excluding TITANIC units) hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
       "faction_id": "LoV",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Hearthband"
     },
     {
@@ -2759,6 +2771,8 @@
       "excludes": [],
       "description": "LEAGUES OF VOTANN model only. Add 2 to the bearer’s Wounds characteristic.",
       "faction_id": "LoV",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Hearthband"
     },
     {
@@ -2771,6 +2785,8 @@
       "excludes": [],
       "description": "KÂHL model only. Each time a model in the bearer’s unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
       "faction_id": "LoV",
+      "source": "40k-10e",
+      "cardType": "enhancement",
       "detachment": "Hearthband"
     }
   ],
@@ -2783,55 +2799,82 @@
     "army": [
       {
         "name": "Eye of the Ancestors",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
             "text": "If your Army Faction is **LEAGUES OF VOTANN**, each time an enemy unit destroys a **LEAGUES OF VOTANN** unit from your army, that enemy unit gains 1 Judgement token. An enemy unit can never have more than 2 Judgement tokens (any further Judgement tokens a unit would gain beyond this are ignored).\n\nEach time a model from your army with this ability makes an attack that targets a unit that has one or more Judgement tokens, until that model’s attacks have been resolved, apply the relevant bonus from the table below to that attack.\n\nIn addition, at the start of the battle, select two units from your opponent’s army; each of those units start the battle with 2 Judgement tokens.",
+            "order": 1,
+            "title": null,
             "type": "text"
           },
           {
+            "text": "-",
             "order": 2,
+            "title": null,
+            "type": "image"
+          },
+          {
             "text": "**Designer’s Note**: If a unit with Judgement tokens is removed from the battlefield, make a note of how many Judgement tokens it had when it was removed. If that unit is set up on the battlefield again, place the corresponding number of Judgement tokens next to it. If a unit with Judgement tokens splits up into two or more smaller units, each of those units gains a number of Judgement tokens equal to that of the original unit. If two units combine to form a single larger unit and either of those units had Judgement tokens, make a note of how many the unit with the most has, just before they combine – the new unit has a number of Judgement tokens equal to this.",
+            "order": 3,
+            "title": null,
             "type": "textItalic"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Hearthband",
-        "name": "Methodical Annihilation",
-        "rule": [
+        "detachment": "Oathband",
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time a **LEAGUES OF VOTANN** model from your army makes an attack with a weapon (excluding Blast weapons) that targets the closest eligible target or a target that is within Engagement Range of that model’s unit:\n\n■ Re‐roll a Hit roll of 1.\n■ If your unit is a **KÂHL**, **EINHYR HEARTHGUARD** or **ÛTHAR THE DESTINED** unit, improve the Armour Penetration characteristic of that attack by 1.",
-            "type": "text"
+            "name": "Ruthless Efficiency",
+            "sections": [
+              {
+                "text": "At the start of the battle, select an additional number of units from your opponent’s army depending on the battle size, as shown below:\n\n■ **Incursion**: 1 unit\n■ **Strike Force**: 2 units\n■ **Onslaught**: 4 units\n\nEach of those units start the battle with 2 Judgement tokens (see Eye of the Ancestors).\n\nIf, at the start of any of your Command phases, any of those units have been destroyed, you gain a number of CP depending on how early in the battle you destroyed it, as shown below (you can only gain CP in this way once per battle, and CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "-",
+                "order": 2,
+                "title": null,
+                "type": "image"
+              },
+              {
+                "text": "-",
+                "order": 3,
+                "title": null,
+                "type": "image"
+              },
+              {
+                "text": "-",
+                "order": 4,
+                "title": null,
+                "type": "image"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Oathband",
-        "name": "Ruthless Efficiency",
-        "rule": [
+        "detachment": "Hearthband",
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of the battle, select an additional number of units from your opponent’s army depending on the battle size, as shown below:\n\n■ **Incursion**: 1 unit\n■ **Strike Force**: 2 units\n■ **Onslaught**: 4 units\n\nEach of those units start the battle with 2 Judgement tokens (see Eye of the Ancestors).\n\nIf, at the start of any of your Command phases, any of those units have been destroyed, you gain a number of CP depending on how early in the battle you destroyed it, as shown below (you can only gain CP in this way once per battle, and CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).",
-            "type": "text"
-          },
-          {
-            "order": 2,
-            "text": "-",
-            "type": "image"
-          },
-          {
-            "order": 3,
-            "text": "-",
-            "type": "image"
-          },
-          {
-            "order": 4,
-            "text": "-",
-            "type": "image"
+            "name": "Methodical Annihilation",
+            "sections": [
+              {
+                "text": "Each time a **LEAGUES OF VOTANN** model from your army makes an attack with a weapon (excluding Blast weapons) that targets the closest eligible target or a target that is within Engagement Range of that model’s unit:\n\n■ Re‐roll a Hit roll of 1.\n■ If your unit is a **KÂHL**, **EINHYR HEARTHGUARD** or **ÛTHAR THE DESTINED** unit, improve the Armour Penetration characteristic of that attack by 1.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -3046,5 +3089,5 @@
       "detachment": "Oathband"
     }
   ],
-  "updated": "2025-05-08T19:15:28.272Z"
+  "updated": "2025-05-09T12:57:40.923Z"
 }
