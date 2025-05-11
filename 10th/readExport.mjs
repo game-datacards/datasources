@@ -926,7 +926,7 @@ parseDataExport('./gdc/orks.json', 'Orks');
 parseDataExport('./gdc/votann.json', 'Leagues of Votann');
 parseDataExport('./gdc/tau.json', 'T’au Empire');
 parseDataExport('./gdc/necrons.json', 'Necrons');
-parseDataExport('./gdc/aeldari.json', 'Aeldari');
+parseDataExport('./gdc/aeldari.json', 'Asuryani');
 parseDataExport('./gdc/drukhari.json', 'Drukhari');
 
 parseDataExport('./gdc/gsc.json', 'Genestealer Cults');
