@@ -847,7 +847,7 @@
         "wargear": []
       },
       "cardType": "DataCard",
-      "composition": ["3-9 Nurgling Swarms"],
+      "composition": ["3-6 Nurgling Swarms"],
       "factions": ["Legiones Daemonica"],
       "faction_id": "CD",
       "fluff": "Nurglings are malicious plague mites that pour across the battlefield in giggling masses. These foul imps might seem almost amusing from a distance, yet the illusion is shattered as the Nurglings spill forth to engulf their screaming victims in a rancid avalanche of needle fangs, filthy talons and bloated flesh.",
@@ -883,19 +883,13 @@
       "name": "Nurglings",
       "points": [
         {
-          "cost": "90",
-          "keyword": null,
-          "models": "9",
-          "active": true
-        },
-        {
-          "cost": "60",
+          "cost": "70",
           "keyword": null,
           "models": "6",
           "active": true
         },
         {
-          "cost": "35",
+          "cost": "40",
           "keyword": null,
           "models": "3",
           "active": true
@@ -8092,7 +8086,7 @@
     {
       "name": "Slaughterthirst (Aura)",
       "id": "0d42e7a5-7de9-505a-baa2-fe6dcdc3e8cc",
-      "cost": "35",
+      "cost": "25",
       "keywords": ["Khorne"],
       "excludes": [],
       "description": "LEGIONES DAEMONICA KHORNE model only. While a friendly LEGIONES DAEMONICA KHORNE unit (excluding MONSTERS) is within 6\" of the bearer, weapons equipped by models in that unit have the [LANCE] ability.",
@@ -8284,7 +8278,7 @@
     {
       "name": "Leaping Shadows",
       "id": "0fe07932-ffa8-5bca-934c-152e4e208165",
-      "cost": "15",
+      "cost": "25",
       "keywords": ["Shadow Legion"],
       "excludes": [],
       "description": "SHADOW LEGION model only. Models in the bearer’s unit have the Scouts 9” ability.",
@@ -8308,7 +8302,7 @@
     {
       "name": "Fade to Darkness",
       "id": "39ea4cd6-99fd-5ec1-9e26-27ac3c23609a",
-      "cost": "15",
+      "cost": "30",
       "keywords": ["Shadow Legion"],
       "excludes": [],
       "description": "SHADOW LEGION model only. At the end of the Fight phase, if the bearer’s unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
@@ -8646,6 +8640,21 @@
       "detachment": "Shadow Legion"
     },
     {
+      "name": "Pyrogenesis",
+      "id": "88b15926-a20d-57f5-afdf-4314b93f727b",
+      "cost": 1,
+      "turn": "either",
+      "target": "One LEGIONES DAEMONICA TZEENTCH unit from your army that has not been selected to shoot or fight that phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CD",
+      "fluff": "Warpflame is as changeable as the monsters who wield it, capable of easily burning through ceramite plates or reinforced hulls when desired.",
+      "detachment": "Scintillating Legion"
+    },
+    {
       "name": "Cavalcade of Blades",
       "id": "77effe88-30b2-5eb0-99aa-9a70b6615759",
       "cost": 1,
@@ -8689,21 +8698,6 @@
       "faction_id": "CD",
       "fluff": "A chill penumbra settles over the oncoming foe. Those that manage to cut their way through the blanket of twilight find themselves seized with terror as the darkness parts and the horrific nature of their enemy is revealed.",
       "detachment": "Shadow Legion"
-    },
-    {
-      "name": "Pyrogenesis",
-      "id": "88b15926-a20d-57f5-afdf-4314b93f727b",
-      "cost": 2,
-      "turn": "either",
-      "target": "One LEGIONES DAEMONICA TZEENTCH unit from your army that has not been selected to shoot or fight that phase.",
-      "when": "Your Shooting phase or the Fight phase.",
-      "effect": "Until the end of the phase, add 2 to the Strength characteristic of weapons equipped by models in your unit, or spend one Flux token and add 3 to the Strength characteristic of those weapons and improve the Armour Penetration characteristic of those weapons by 1 instead.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["fight", "shooting"],
-      "faction_id": "CD",
-      "fluff": "Warpflame is as changeable as the monsters who wield it, capable of easily burning through ceramite plates or reinforced hulls when desired.",
-      "detachment": "Scintillating Legion"
     },
     {
       "name": "Archagonists",
@@ -9051,5 +9045,6 @@
       "detachment": "Plague Legion"
     }
   ],
-  "updated": "2025-05-29T08:37:07.678Z"
+  "updated": "2025-06-04T15:40:02.898Z",
+  "compatibleDataVersion": 629
 }
