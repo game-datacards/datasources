@@ -23,6 +23,107 @@
         },
         "other": [
           {
+            "name": "Subterranean Tunnels",
+            "description": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can use a subterranean tunnel. If it does, this model can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["1 Trygon"],
+      "factions": ["Tyranids"],
+      "faction_id": "TYR",
+      "fluff": "Trygons are battle-tank-sized tunnelling machines. As they dig through the substrata of the prey world, they excavate huge tunnels for other Tyranid beasts to exploit. At the same time, the rasping of their chitinous plates builds up a powerful bio-electric charge that the Trygons can unleash as a weapon.",
+      "id": "6c4e1665-c826-50e4-8db9-304ca1d6fb74",
+      "keywords": ["Monster", "Great Devourer", "Vanguard Invader", "Trygon"],
+      "leader": "",
+      "loadout": "This model is equipped with: bio-electric pulse; Trygon scything talons.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "12",
+              "damage": "3",
+              "keywords": [],
+              "name": "Trygon scything talons",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        }
+      ],
+      "name": "Trygon",
+      "points": [
+        {
+          "cost": "140",
+          "keyword": null,
+          "models": "1",
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "6",
+              "damage": "1",
+              "keywords": ["Sustained Hits 2"],
+              "name": "Bio-electric pulse",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "8+",
+          "m": "10\"",
+          "name": "Trygon",
+          "oc": "4",
+          "showDamagedMarker": true,
+          "showName": false,
+          "sv": "3+",
+          "t": "10",
+          "w": "14"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Deep Strike"],
+        "damaged": {
+          "range": "1-5 WOUNDS REMAINING",
+          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+          "showDamagedAbility": true,
+          "showDescription": true
+        },
+        "faction": ["Synapse"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
             "name": "Terror From The Deep",
             "description": "Each time this model is set up on the battlefield using the Deep Strike ability, roll one D6 for each enemy unit within 12\" of this model: on a 2-4, that unit suffers D3 mortal wounds; on a 5+, that unit suffers 3 mortal wounds and must take a Battle-shock test.",
             "showAbility": true,
@@ -309,7 +410,7 @@
         "other": [
           {
             "name": "Will of the Hive Mind",
-            "description": "Once per turn, one unit from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
+            "description": "Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
             "showAbility": true,
             "showDescription": true
           },
@@ -396,7 +497,7 @@
       "name": "Winged Hive Tyrant",
       "points": [
         {
-          "cost": "200",
+          "cost": "170",
           "keyword": null,
           "models": "1",
           "active": true
@@ -1266,7 +1367,7 @@
       "name": "The Swarmlord",
       "points": [
         {
-          "cost": "240",
+          "cost": "220",
           "keyword": null,
           "models": "1",
           "active": true
@@ -2641,7 +2742,7 @@
         "other": [
           {
             "name": "Bio-stimulus (Aura)",
-            "description": "While a friendly TYRANIDS unit is within 6\" of this model, models in that unit have the Feel No Pain 6+ ability.",
+            "description": "In your Shooting phase, after this model has shot, select one enemy unit hit by one or more of those attacks. Until the end of the turn, each time a friendly TYRANIDS unit makes a melee attack that targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1. The same enemy unit can only be affected by this ability once per turn.",
             "showAbility": true,
             "showDescription": true
           },
@@ -2662,7 +2763,13 @@
       "faction_id": "TYR",
       "fluff": "These monsters stampede into battle with frightening speed. They devour any prey organism in their paths, but especially favour those victims with psychic abilities. How they metabolise such esoteric powers is unclear, but doing so allows them to project surges of psychocorrosive ash that deflagrate their victims’ minds and souls",
       "id": "d5a50301-0327-56f8-8e31-1741c01c7b28",
-      "keywords": ["Monster", "Great Devourer", "Harvester", "Psychophage"],
+      "keywords": [
+        "Monster",
+        "Smoke",
+        "Great Devourer",
+        "Harvester",
+        "Psychophage"
+      ],
       "leader": "",
       "loadout": "This model is equipped with: psychoclastic torrent; talons and betentacled maw.",
       "meleeWeapons": [
@@ -2671,8 +2778,8 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
-              "attacks": "D6+1",
+              "ap": "-2",
+              "attacks": "6",
               "damage": "2",
               "keywords": ["Devastating Wounds", "Anti-psyker 4+"],
               "name": "Talons and betentacled maw",
@@ -2686,7 +2793,7 @@
       "name": "Psychophage",
       "points": [
         {
-          "cost": "95",
+          "cost": "110",
           "keyword": null,
           "models": "1",
           "active": true
@@ -2715,7 +2822,7 @@
         {
           "active": true,
           "ld": "8+",
-          "m": "8\"",
+          "m": "12\"",
           "name": "Psychophage",
           "oc": "3",
           "showDamagedMarker": false,
@@ -2859,107 +2966,6 @@
       "transport": "",
       "wargear": ["None"],
       "leadBy": ["Neurotyrant"]
-    },
-    {
-      "abilities": {
-        "core": ["Deep Strike"],
-        "damaged": {
-          "range": "1-5 WOUNDS REMAINING",
-          "description": "While this model has 1-5 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
-          "showDamagedAbility": true,
-          "showDescription": true
-        },
-        "faction": ["Synapse"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "name": "Subterranean Tunnels",
-            "description": "In your Movement phase, when this model is set up on the battlefield using the Deep Strike ability, it can use a subterranean tunnel. If it does, this model can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units, but until the end of the turn, it is not eligible to declare a charge.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Trygon"],
-      "factions": ["Tyranids"],
-      "faction_id": "TYR",
-      "fluff": "Trygons are battle-tank-sized tunnelling machines. As they dig through the substrata of the prey world, they excavate huge tunnels for other Tyranid beasts to exploit. At the same time, the rasping of their chitinous plates builds up a powerful bio-electric charge that the Trygons can unleash as a weapon.",
-      "id": "6c4e1665-c826-50e4-8db9-304ca1d6fb74",
-      "keywords": ["Monster", "Great Devourer", "Vanguard Invader", "Trygon"],
-      "leader": "",
-      "loadout": "This model is equipped with: bio-electric pulse; Trygon scything talons.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "12",
-              "damage": "3",
-              "keywords": [],
-              "name": "Trygon scything talons",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        }
-      ],
-      "name": "Trygon",
-      "points": [
-        {
-          "cost": "140",
-          "keyword": null,
-          "models": "1",
-          "active": true
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "6",
-              "damage": "1",
-              "keywords": ["Sustained Hits 2"],
-              "name": "Bio-electric pulse",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "8+",
-          "m": "10\"",
-          "name": "Trygon",
-          "oc": "4",
-          "showDamagedMarker": true,
-          "showName": false,
-          "sv": "3+",
-          "t": "10",
-          "w": "14"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -3503,7 +3509,7 @@
       "name": "Screamer-Killer",
       "points": [
         {
-          "cost": "145",
+          "cost": "135",
           "keyword": null,
           "models": "1",
           "active": true
@@ -4419,13 +4425,13 @@
       "name": "Hive Guard",
       "points": [
         {
-          "cost": "200",
+          "cost": "180",
           "keyword": null,
           "models": "6",
           "active": true
         },
         {
-          "cost": "100",
+          "cost": "90",
           "keyword": null,
           "models": "3",
           "active": true
@@ -5483,7 +5489,7 @@
         "other": [
           {
             "name": "Will of the Hive Mind",
-            "description": "Once per turn, one unit from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
+            "description": "Once per battle round, one model from your army with this ability can use it when a friendly TYRANIDS unit within 12\" of that model is targeted with a Stratagem. If it does, reduce the CP cost of that usage of that Stratagem by 1CP.",
             "showAbility": true,
             "showDescription": true
           },
@@ -5551,7 +5557,7 @@
       "name": "Hive Tyrant",
       "points": [
         {
-          "cost": "225",
+          "cost": "195",
           "keyword": null,
           "models": "1",
           "active": true
@@ -6209,6 +6215,7 @@
     "Crusher Stampede",
     "Assimilation Swarm",
     "Unending Swarm",
+    "Subterranean Assault",
     "Synaptic Nexus",
     "Vanguard Onslaught",
     "Warrior Bioform Onslaught",
@@ -6550,6 +6557,54 @@
       "source": "40k-10e",
       "cardType": "enhancement",
       "detachment": "Warrior Bioform Onslaught"
+    },
+    {
+      "name": "Synaptic Strategy",
+      "id": "7d14c934-ceb5-5297-a8ba-538a2223dd8c",
+      "cost": "15",
+      "keywords": ["Tyranids"],
+      "excludes": [],
+      "description": "TYRANIDS model only. Once per battle, you can target the bearer’s unit with the Rapid Ingress stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this phase.",
+      "faction_id": "TYR",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Subterranean Assault"
+    },
+    {
+      "name": "Tremor Senses",
+      "id": "603c7ea3-fc95-5cb0-bd80-c4de2320c2c3",
+      "cost": "20",
+      "keywords": ["Tyranids"],
+      "excludes": [],
+      "description": "TYRANIDS model only. After both players have deployed their armies, select up to three friendly TYRANIDS units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "faction_id": "TYR",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Subterranean Assault"
+    },
+    {
+      "name": "Vanguard Intellect",
+      "id": "1617de6e-6736-5d2a-a664-4bb7acc15696",
+      "cost": "15",
+      "keywords": ["Tyranids"],
+      "excludes": [],
+      "description": "TYRANIDS model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+      "faction_id": "TYR",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Subterranean Assault"
+    },
+    {
+      "name": "Trygon Prime",
+      "id": "3ceee34a-6547-56e4-9241-dd21dd4eb54a",
+      "cost": "20",
+      "keywords": ["Trygon"],
+      "excludes": [],
+      "description": "TRYGON model only. The bearer gains the SYNAPSE keyword. Improve the Strength and Weapon Skill characteristics of melee weapons equipped by the bearer by 1.",
+      "faction_id": "TYR",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Subterranean Assault"
     }
   ],
   "id": "TYR",
@@ -7003,6 +7058,66 @@
       "detachment": "Synaptic Nexus"
     },
     {
+      "name": "Enfilading Emergence",
+      "id": "e737dadb-d212-5d38-8bc6-3bd208e6828a",
+      "cost": 1,
+      "turn": "your",
+      "target": "One TYRANIDS unit from your army that was set up as Reinforcements this turn.",
+      "when": "End of your Movement phase.",
+      "effect": "Until the end of your next Fight phase, weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [IGNORES COVER] abilities.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "TYR",
+      "fluff": "Emerging from the depths, Tyranid bioforms level their weapon morphs and spit hissing volleys of living ammunition into the exposed backs of outflanked prey.",
+      "detachment": "Subterranean Assault"
+    },
+    {
+      "name": "Tunnel Network",
+      "id": "e502d7f6-edba-57f0-973e-daed5873177e",
+      "cost": 1,
+      "turn": "your",
+      "target": "One TYRANIDS unit from your army that is wholly within 9\" of one or more of your Tunnel Markers.",
+      "when": "End of your Movement phase.",
+      "effect": "Remove your unit from the battlefield and set it up again, wholly within 9\" of another Tunnel Marker you placed, and more than 6\" horizontally away from all enemy units.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "TYR",
+      "fluff": "Taking advantage of freshly burrowed tunnels, Tyranid bioforms move swiftly across the landscape, emerging in unexpected locations.",
+      "detachment": "Subterranean Assault"
+    },
+    {
+      "name": "Swarming Assault",
+      "id": "f3b6df45-7ab9-56ad-a67a-af24cac75450",
+      "cost": 1,
+      "turn": "your",
+      "target": "One TYRANIDS MONSTER unit from your army that was set up as Reinforcements this turn.",
+      "when": "Your Charge phase.",
+      "effect": "Until the end of the phase, friendly TYRANIDS units within 6\" of your unit can re-roll Charge rolls.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "faction_id": "TYR",
+      "fluff": "A hive fleet’s vanguard organisms favour mobility and aggression, keeping the foe on the back foot with repeated coordinated assaults.",
+      "detachment": "Subterranean Assault"
+    },
+    {
+      "name": "Retreat Below",
+      "id": "aafee9ed-6f3b-53cc-9c0a-4d07f2b4a4d9",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One TYRANIDS unit or up to two BURROWER units from your army that are not within Engagement Range of one or more enemy units.",
+      "when": "End of your opponent’s Fight phase.",
+      "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "TYR",
+      "fluff": "The network of tunnels beneath the battlefield enables Tyranid organisms to retreat from the foe and prepare further ambushes.",
+      "detachment": "Subterranean Assault"
+    },
+    {
       "name": "Synaptic Amplification",
       "id": "1e6de282-b35a-532f-afb8-fbc3b5797a2e",
       "cost": 1,
@@ -7318,6 +7433,36 @@
       "detachment": "Vanguard Onslaught"
     },
     {
+      "name": "Adaptive Optimisation",
+      "id": "fc6b9778-cfa8-50c1-9281-f0fe8be1647b",
+      "cost": 1,
+      "turn": "either",
+      "target": "One MAWLOC or TRYGON unit from your army.",
+      "when": "Command phase.",
+      "effect": "Until the start of your next Command phase, your unit has the SYNAPSE keyword.",
+      "restrictions": "",
+      "type": "Wargear",
+      "phase": ["command"],
+      "faction_id": "TYR",
+      "fluff": "On occasions where subterranean assaults are deemed tactically useful, the hive mind may spontaneously alter its burrowing organisms, enabling them to act as beacons for its will.",
+      "detachment": "Subterranean Assault"
+    },
+    {
+      "name": "Replenishing Swarms",
+      "id": "113a99cc-781e-5522-a0cb-0e2bf22efd9a",
+      "cost": 1,
+      "turn": "your",
+      "target": "One TYRANIDS unit from your army, wholly within 9\" of one or more Tunnel Markers you placed.",
+      "when": "Your Movement phase.",
+      "effect": "One model in your unit regains up to D3+1 lost wounds, or you can return up to D3+1 destroyed models with a Wounds characteristic of 1 to your unit, with their full wounds remaining, instead.",
+      "restrictions": "",
+      "type": "Wargear",
+      "phase": ["movement"],
+      "faction_id": "TYR",
+      "fluff": "Scrambling through the tunnels come endless multitudes of warrior-beasts and harvester bioforms, spilling out of the depths to reinforce the teeming masses.",
+      "detachment": "Subterranean Assault"
+    },
+    {
       "name": "Spontaneous Hypercorrosion",
       "id": "8a4f8e96-0dc1-5cac-881b-d0bfc5727eed",
       "cost": 1,
@@ -7333,5 +7478,6 @@
       "detachment": "Warrior Bioform Onslaught"
     }
   ],
-  "updated": "2025-05-29T08:37:07.107Z"
+  "updated": "2025-06-04T15:40:01.836Z",
+  "compatibleDataVersion": 629
 }
