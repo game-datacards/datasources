@@ -1978,7 +1978,7 @@
           },
           {
             "name": "The Emperor’s Shield",
-            "description": "Each time a melee attack is allocated to this model, on an unmodified saving throw of 6, the attacking unit suffers 1 mortal wound after it has finished making its attacks.",
+            "description": "Each time an attack is allocated to this model, if the Strength characteristic of that attack is greater than the Toughness characteristic of this model, subtract 1 from the Wound roll.",
             
             
           },
@@ -1994,14 +1994,14 @@
             "name": "Primarch of the First Legion",
             "abilities": [
               {
-                "name": "All Secrets Revealed",
-                "description": "Once per turn, when your opponent targets a unit from their army with a Stratagem but before that Stratagem’s effects are resolved, if that unit is within 12\" of this model, you gain 1CP and that enemy unit must take a Battle-shock test. If that test is failed, in addition to that unit being Battle-shocked, that Stratagem’s effects are not resolved (that Stratagem still counts as having been used this phase).",
+                "name": "Mist-wreathed Shadow Realms",
+                "description": "In your Command phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves.",
                 
                 
               },
               {
                 "name": "Martial Exemplar (Aura)",
-                "description": "While a friendly ADEPTUS ASTARTES unit is within 6\" of this model, each time a model in that unit makes a melee attack, add 1 to the Hit roll.",
+                "description": "While a friendly ADEPTUS ASTARTES unit is within 6\" of this model, each time a model in that unit makes a melee attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
                 
                 
               },
@@ -2823,6 +2823,7 @@
   "detachments": [
     "Unforgiven Task Force",
     "Inner Circle Task Force",
+    "Wrath of the Rock",
     "Lion’s Blade Task Force",
     "Company of Hunters"
   ],
@@ -3053,6 +3054,62 @@
       "source": "40k-10e",
       "cardType": "enhancement",
       "detachment": "Lion’s Blade Task Force"
+    },
+    {
+      "name": "Tempered in Battle (Aura)",
+      "id": "b209832f-0a51-58d9-9664-dd2f59a9abea",
+      "cost": "10",
+      "keywords": [
+        "Dark Angels"
+      ],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. While a friendly ADEPTUS ASTARTES unit is within 6\" of this model, you can re-roll Battle-shock and Leadership tests taken for that unit.",
+      "faction_id": "CHDA",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Wrath of the Rock"
+    },
+    {
+      "name": "Ancient Weapons",
+      "id": "df176021-16b9-5d39-bed0-830aa98ac551",
+      "cost": "25",
+      "keywords": [
+        "Dark Angels"
+      ],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Improve the Strength characteristic of melee weapons equipped by the bearer by 2, and improve the Armour Penetration and Damage characteristics of those weapons by 1.",
+      "faction_id": "CHDA",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Wrath of the Rock"
+    },
+    {
+      "name": "Deathwing Assault",
+      "id": "7c778992-81c4-558f-8504-39ad4ca59aec",
+      "cost": "15",
+      "keywords": [
+        "Deathwing"
+      ],
+      "excludes": [],
+      "description": "DEATHWING model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules.",
+      "faction_id": "CHDA",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Wrath of the Rock"
+    },
+    {
+      "name": "Lord of the Ravenwing",
+      "id": "ffa403d0-7c36-5d0b-a86a-6e9ea9961cc7",
+      "cost": "10",
+      "keywords": [
+        "Ravenwing"
+      ],
+      "excludes": [],
+      "description": "RAVENWING model only. You can re-roll Advance and Charge rolls made for the bearer’s unit.",
+      "faction_id": "CHDA",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Wrath of the Rock"
     }
   ],
   "id": "CHDA",
@@ -3362,6 +3419,41 @@
       "detachment": "Company of Hunters"
     },
     {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": [
+        "fight",
+        "shooting"
+      ],
+      "faction_id": "CHDA",
+      "fluff": "The belligerence of the Adeptus Astartes combined with their transhuman physiology makes them unyielding foes to face.",
+      "detachment": "Wrath of the Rock"
+    },
+    {
+      "name": "Tactical Mastery",
+      "id": "375dc3ce-1900-54f2-a490-552556eede95",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES unit from your army.",
+      "when": "Your Movement phase.",
+      "effect": "Your unit is eligible to shoot and declare a charge in a turn in which it Advanced. If your unit has the RAVENWING keyword, it is also eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": [
+        "movement"
+      ],
+      "faction_id": "CHDA",
+      "fluff": "When the constituent elements of the Dark Angels fight as one, the enemy is often overwhelmed and torn apart by the fluidity of the Chapter’s rapid advances, tactical withdrawals and unexpected counteroffensives.",
+      "detachment": "Wrath of the Rock"
+    },
+    {
       "name": "Unbreakable Lines",
       "id": "d4cf58f4-ccc4-5724-b6a9-fffec890214a",
       "cost": 2,
@@ -3377,6 +3469,23 @@
       "faction_id": "CHDA",
       "fluff": "Countless assaults have faltered against the unbreakable ceramite wall that is the Unforgiven standing their ground.",
       "detachment": "Unforgiven Task Force"
+    },
+    {
+      "name": "Inescapable Justice",
+      "id": "d125581e-c511-54f8-8be4-ce506efb79f7",
+      "cost": 2,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES CHARACTER unit that is on the battlefield.",
+      "when": "Any phase, just after your Oath of Moment target is destroyed.",
+      "effect": "Select one enemy unit within 12\" and visible to your unit. That enemy unit becomes your Oath of Moment target until the start of your next Command phase.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": [
+        "any"
+      ],
+      "faction_id": "CHDA",
+      "fluff": "The Dark Angels pursue their enemies relentlessly, eliminating one with ruthless precision before turning to the next.",
+      "detachment": "Wrath of the Rock"
     },
     {
       "name": "Wrath of the Lion",
@@ -3552,6 +3661,57 @@
       "detachment": "Company of Hunters"
     },
     {
+      "name": "Lion’s Will",
+      "id": "74be8407-258d-5b0f-9f8e-564da3749565",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that is within Engagement Range of one or more enemy units.",
+      "when": "Command phase.",
+      "effect": "Until the start of your next Command phase, add 1 to the Objective Control characteristic of models in your unit. In addition, until the end of the turn, if your unit does not have the DEATHWING, RAVENWING or VEHICLE keyword, each time a model in your unit makes an attack, add 1 to the Hit roll.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": [
+        "command"
+      ],
+      "faction_id": "CHDA",
+      "fluff": "Unflinching in their loyalty to Chapter and Primarch, Dark Angels battle-brothers seize and hold their objectives with unrelenting determination and zealous fury.",
+      "detachment": "Wrath of the Rock"
+    },
+    {
+      "name": "Relics of the Dark Age",
+      "id": "8d9b2aba-93d6-5c3d-b704-451d22c0808c",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, add 2 to the Strength characteristic of ranged weapons equipped by models in your unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": [
+        "shooting"
+      ],
+      "faction_id": "CHDA",
+      "fluff": "Amongst the many secrets hoarded by the Dark Angels are those technological in nature. The armouries of the Rock contain potent weapons unseen in the armouries of other Chapters.",
+      "detachment": "Wrath of the Rock"
+    },
+    {
+      "name": "Leonine Aggression",
+      "id": "492be8df-f1c6-5dd5-a57e-4bafb40bd8bd",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS ASTARTES unit from your army within 3\" of one or more enemy units, or one Deathwing unit from your army within 6\" of one or more enemy units.",
+      "when": "End of your opponent’s Charge phase.",
+      "effect": "Your unit now declares a charge that only targets one or more of those enemy units, and you resolve that charge.",
+      "restrictions": "Note that even if this charge is successful, your unit does not receive any Charge bonus this turn.",
+      "type": "Strategic Ploy",
+      "phase": [
+        "charge"
+      ],
+      "faction_id": "CHDA",
+      "fluff": "The Dark Angels are always aggressive in their waging of war, seizing any opportunity to pounce upon and annihilate their prey.",
+      "detachment": "Wrath of the Rock"
+    },
+    {
       "name": "Inescapable Wrath",
       "id": "2e8fa28c-a56d-53f3-90a1-70efd631211a",
       "cost": 2,
@@ -3569,5 +3729,6 @@
       "detachment": "Lion’s Blade Task Force"
     }
   ],
-  "updated": "2025-05-29T08:37:07.017Z"
+  "updated": "2025-06-04T15:40:01.665Z",
+  "compatibleDataVersion": 629
 }
