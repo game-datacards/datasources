@@ -3,7 +3,7 @@
     "banner": "#175966",
     "header": "#2e5a6a"
   },
-  "compatibleDataVersion": 629,
+  "compatibleDataVersion": 640,
   "datasheets": [
     {
       "abilities": {
@@ -4470,6 +4470,12 @@
         "special": [],
         "wargear": [
           {
+            "name": "Weapon Support System",
+            "description": "Each time the bearer makes a ranged attack, you can ignore any or all modifiers to the Hit roll.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
             "name": "Battlesuit Support System",
             "description": "The bearer’s unit is eligible to shoot in a turn in which it Fell Back, but when doing so only models equipped with this wargear can make ranged attacks.",
             "showAbility": true,
@@ -4478,12 +4484,6 @@
           {
             "name": "Shield Generator",
             "description": "The bearer has a 4+ invulnerable save.",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "name": "Weapon Support System",
-            "description": "Each time the bearer makes a ranged attack, you can ignore any or all modifiers to the Hit roll.",
             "showAbility": true,
             "showDescription": true
           },
@@ -4591,6 +4591,22 @@
             {
               "active": true,
               "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Indirect Fire", "Blast"],
+              "name": "Airbursting fragmentation projector",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "3"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
               "attacks": "4",
               "damage": "1",
               "keywords": [],
@@ -4689,22 +4705,6 @@
               "range": "12\"",
               "skill": "N/A",
               "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Indirect Fire", "Blast"],
-              "name": "Airbursting fragmentation projector",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "3"
             }
           ]
         }
@@ -6214,8 +6214,8 @@
               "ap": "0",
               "attacks": "3",
               "damage": "1",
-              "keywords": ["Twin-linked", "Indirect Fire"],
-              "name": "Twin smart missile system",
+              "keywords": ["Indirect Fire"],
+              "name": "Smart missile system",
               "range": "30\"",
               "skill": "4+",
               "strength": "5"
@@ -6265,7 +6265,7 @@
       "transport": "",
       "wargear": [
         "This model can be equipped with up to 2 seeker missiles.",
-        "This model’s 2 twin pulse carbines can be replaced with one of the following: ◦ 2 accelerator burst cannons ◦ 2 twin smart missile systems",
+        "This model’s 2 twin pulse carbines can be replaced with one of the following: ◦ 2 accelerator burst cannons ◦ 2 smart missile systems",
         "This model’s railgun can be replaced with 1 ion cannon."
       ]
     },
@@ -9363,5 +9363,5 @@
       "detachment": "Mont’ka"
     }
   ],
-  "updated": "2025-06-12T15:06:09.439Z"
+  "updated": "2025-06-27T11:33:39.039Z"
 }
