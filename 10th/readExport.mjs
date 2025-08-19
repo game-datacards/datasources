@@ -106,7 +106,7 @@ const specialWeaponKeywords = [
   },
 ];
 
-const newDataExportFile = readFile('./temp/data-export-620.json');
+const newDataExportFile = readFile('./temp/data-export-662.json');
 const newDataExport = sortObj(JSON.parse(newDataExportFile).data);
 
 // Function to remove markdown from a string
@@ -153,7 +153,7 @@ function parseDataExport(fileName, factionName) {
   let enhancements = newDataExport.enhancement.filter((enhancement) => {
     return enhancement.publicationId === newPublication?.id;
   });
-  console.log(newPublication);
+
   const detachments = newDataExport.detachment.filter((detachment) => {
     return detachment.publicationId === newPublication?.id;
   });
@@ -311,8 +311,15 @@ function parseDataExport(fileName, factionName) {
       (datasheet_faction_keyword) => datasheet.id === datasheet_faction_keyword.datasheetId
     )
   );
+
+  let publicationDatasheets = newDataExport.datasheet.filter((datasheet) => datasheet.publicationId === newPublication?.id);
+
+  let combinedDatasheets = [...allDataSheets, ...publicationDatasheets].filter((datasheet, index, arr) => 
+    index === arr.findIndex(d => d.id === datasheet.id)
+  );
+
   // console.log(allDataSheets);
-  allDataSheets = allDataSheets.map((card, index) => {
+  allDataSheets = combinedDatasheets.map((card, index) => {
     card.publication = newDataExport.publication.find((publication) => publication.id === card.publicationId);
 
     //Find all miniatures (stat lines)
@@ -894,6 +901,7 @@ function parseDataExport(fileName, factionName) {
   const legendsUnits = oldParsedUnits.datasheets.filter((sheet) => sheet.legends === true);
   oldParsedUnits.datasheets = [...foundUnits, ...legendsUnits];
   oldParsedUnits.updated = new Date().toISOString();
+  oldParsedUnits.compatibleDataVersion = JSON.parse(newDataExportFile).metadata.data_version;
 
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
