@@ -106,7 +106,7 @@ const specialWeaponKeywords = [
   },
 ];
 
-const newDataExportFile = readFile('./temp/data-export-662.json');
+const newDataExportFile = readFile('./temp/data-export-674.json');
 const newDataExport = sortObj(JSON.parse(newDataExportFile).data);
 
 // Function to remove markdown from a string

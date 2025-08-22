@@ -1307,7 +1307,7 @@ convertTextToJson(
   "/deathwatch/",
   "deathwatch",
   "CHDW",
-  "Death Watch",
+  "Deathwatch",
   "#3d3e41",
   "#232425",
   3,
