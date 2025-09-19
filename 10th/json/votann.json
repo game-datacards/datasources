@@ -3,7 +3,7 @@
     "banner": "#572d0a",
     "header": "#3c4b3f"
   },
-  "compatibleDataVersion": 675,
+  "compatibleDataVersion": 687,
   "datasheets": [
     {
       "abilities": {
@@ -465,7 +465,7 @@
         {
           "profiles": [
             {
-              "ap": "0",
+              "ap": "-2",
               "attacks": "2",
               "damage": "1",
               "keywords": [],
@@ -1139,7 +1139,7 @@
           "w": "16"
         }
       ],
-      "transport": "This model has a transport capacity of 14 LEAGUES OF VOTANN INFANTRY models. Each EXOARMOUR, EXOFRAME or IRONKIN STEELJACKS model takes up the space of 2 models.",
+      "transport": "This model has a transport capacity of 14 LEAGUES OF VOTANN INFANTRY models. Each EXOARMOUR, EXOFRAME or IRONKIN STEELJACKS model takes up the space of 2 models. It cannot transport ARTILLERY models.",
       "wargear": [
         "This model’s panspectral scanner can be replaced with 1 Hekaton warhead.",
         "This model’s cyclic ion cannon can be replaced with one of the following: ◦ 1 SP heavy conversion beamer ◦ 1 heavy magna-rail cannon",
@@ -1578,7 +1578,7 @@
         "other": [
           {
             "name": "Ancestral Fortune",
-            "description": "Once per turn, you can spend 1YP to change one Hit roll, one Wound roll or one saving throw made for this model to a 6."
+            "description": "Once per turn, you can spend 1YP to change one Hit roll, one Wound roll or one saving throw made for this model to an unmodified 6."
           },
           {
             "name": "Grim Efficiency",
@@ -2591,7 +2591,7 @@
           "w": "9"
         }
       ],
-      "transport": "This model has a transport capacity of 6 LEAGUES OF VOTANN INFANTRY models. It cannot transport EXOARMOUR, EXOFRAME or IRONKIN STEELJACKS models.\n\nAt the start of the Declare Battle Formations step, you can select one HEARTHKYN WARRIORS unit from your army that has not been split. If you do, that unit is split into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units). One of these units must start the battle embarked within this TRANSPORT; the other can start the battle embarked within another TRANSPORT, or it can be deployed as a separate unit.",
+      "transport": "This model has a transport capacity of 6 LEAGUES OF VOTANN INFANTRY models. It cannot transport ARTILLERY, EXOARMOUR, EXOFRAME or IRONKIN STEELJACKS models.\n\nAt the start of the Declare Battle Formations step, you can select one HEARTHKYN WARRIORS unit from your army that has not been split. If you do, that unit is split into two units, each containing as equal a number of models as possible (when splitting a unit in this way, make a note of which models form each of the two new units). One of these units must start the battle embarked within this TRANSPORT; the other can start the battle embarked within another TRANSPORT, or it can be deployed as a separate unit.",
       "wargear": [
         "This model’s HYLas beam cannon can be replaced with one of the following: ◦ 1 L7 missile launcher and 1 Sagitaur missile launcher ◦ 1 MATR autocannon"
       ]
@@ -3051,7 +3051,7 @@
       "cost": "25",
       "keywords": ["Leagues of Votann"],
       "excludes": [],
-      "description": "LEAGUES OF VOTANN model only. Each time a ranged attack targets the bearer’s unit, if the attacking model is within 12\" of the bearer’s unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "description": "LEAGUES OF VOTANN model only. Each time a ranged attack targets the bearer’s unit, if the attacking model is within 12\" of the bearer’s unit, worsen the Armour Penetration characteristic of that attack by 1. If you spend 1YP, until the end of the phase, if the attacking model is within 18\" of the bearer’s unit, worsen the Armour Penetration characteristic of that attack by 1 instead.",
       "faction_id": "LoV",
       "source": "40k-10e",
       "cardType": "enhancement",
@@ -3492,7 +3492,7 @@
       "turn": "your",
       "target": "One EINHYR HEARTHGUARD unit from your army that has not been selected to shoot this phase.",
       "when": "Your Shooting phase.",
-      "effect": "Until the end of the phase, ranged weapons (excluding Blast weapons) equipped by models in your unit have the [RAPID FIRE 1] ability.",
+      "effect": "Until the end of the phase, improve the Strength characteristic of ranged weapons equipped by models in your unit by 1. If you spend 1YP, until the end of the phase, ranged weapons equipped by models in that unit have the [SUSTAINED HITS 1] ability as well.",
       "restrictions": "",
       "type": "Battle Tactic",
       "phase": ["shooting"],
@@ -3774,13 +3774,13 @@
       "name": "Secure Positions",
       "id": "79755c91-f2d4-5640-811e-a5664e0fd6da",
       "cost": 1,
-      "turn": "either",
+      "turn": "your",
       "target": "One LEAGUES OF VOTANN TRANSPORT unit from your army.",
-      "when": "End of any phase, if units from your army have Hostile Acquisition.",
-      "effect": "One LEAGUES OF VOTANN unit embarked within your TRANSPORT can disembark. When doing so, models in that unit can be set up anywhere on the battlefield wholly within 6\" of your TRANSPORT.",
+      "when": "End of any of your phases, if units from your army have Hostile Acquisition.",
+      "effect": "One LEAGUES OF VOTANN unit embarked within your TRANSPORT can disembark. When doing so, models in that unit can be set up anywhere on the battlefield wholly within 6\" of your TRANSPORT. That unit cannot declare a charge in the same turn, but can otherwise act normally in the remainder of the turn.",
       "restrictions": "",
       "type": "Strategic Ploy",
-      "phase": ["any"],
+      "phase": ["charge", "command", "fight", "movement", "shooting"],
       "faction_id": "LoV",
       "fluff": "While there are resources to secure, the Kin will seize any opportunity to effect a rapid and ordered deployment to establish defensive positions.",
       "detachment": "Brandfast Oathband"
@@ -3822,7 +3822,7 @@
       "turn": "opponents",
       "target": "One LEAGUES OF VOTANN unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
       "when": "Your opponent’s Shooting phase, just after an enemy unit has shot, if units from your army have Fortify Takeover.",
-      "effect": "Your unit can shoot as if it were your Shooting phase, only that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
+      "effect": "Your unit can shoot as if it were your Shooting phase, can only target that enemy unit when doing so, and can only do so if that enemy unit is an eligible target.",
       "restrictions": "",
       "type": "Strategic Ploy",
       "phase": ["shooting"],
@@ -3891,5 +3891,5 @@
       "detachment": "Brandfast Oathband"
     }
   ],
-  "updated": "2025-08-31T10:09:56.017Z"
+  "updated": "2025-09-19T06:40:55.424Z"
 }
