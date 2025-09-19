@@ -3,7 +3,7 @@
     "banner": "#291221",
     "header": "#391625"
   },
-  "compatibleDataVersion": 675,
+  "compatibleDataVersion": 687,
   "datasheets": [
     {
       "abilities": {
@@ -88,7 +88,7 @@
           "models": "9"
         },
         {
-          "cost": "75",
+          "cost": "85",
           "keyword": null,
           "models": "5"
         }
@@ -314,7 +314,7 @@
         "other": [
           {
             "name": "A Plan Generations in the Making",
-            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
           }
         ],
         "primarch": [],
@@ -1304,7 +1304,7 @@
           "models": "2"
         },
         {
-          "cost": "85",
+          "cost": "95",
           "keyword": null,
           "models": "1"
         }
@@ -1402,7 +1402,7 @@
         "other": [
           {
             "name": "Cult Demagogue",
-            "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can re-roll the Hit roll."
+            "description": "While this model is leading a unit, each time a model in that unit makes an attack, you can add 1 to the Hit roll."
           },
           {
             "name": "Decoys and Misdirection",
@@ -1455,7 +1455,7 @@
       "name": "Primus",
       "points": [
         {
-          "cost": "80",
+          "cost": "70",
           "keyword": null,
           "models": "1"
         }
@@ -1551,7 +1551,7 @@
       "name": "Abominant",
       "points": [
         {
-          "cost": "95",
+          "cost": "85",
           "keyword": null,
           "models": "1"
         }
@@ -2202,12 +2202,12 @@
       "name": "Hybrid Metamorphs",
       "points": [
         {
-          "cost": "160",
+          "cost": "140",
           "keyword": null,
           "models": "10"
         },
         {
-          "cost": "80",
+          "cost": "70",
           "keyword": null,
           "models": "5"
         }
@@ -2809,7 +2809,7 @@
       "name": "Purestrain Genestealers",
       "points": [
         {
-          "cost": "150",
+          "cost": "140",
           "keyword": null,
           "models": "10"
         },
@@ -3628,21 +3628,6 @@
       "detachment": "Xenocreed Congregation"
     },
     {
-      "name": "Primed and Readied",
-      "id": "fe3aeb57-64ad-538d-a2fe-43e426c64526",
-      "cost": 1,
-      "turn": "either",
-      "target": "One GENESTEALER CULTS units from your army that has not been selected to shoot or fight this phase.",
-      "when": "Your Shooting phase or the Fight phase.",
-      "effect": "Until the end of the phase, each time a model in your unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6.",
-      "restrictions": "",
-      "type": "Battle Tactic",
-      "phase": ["fight", "shooting"],
-      "faction_id": "GSC",
-      "fluff": "The broodkin have been trained and equipped for this moment, with weapons readied for Ascension.",
-      "detachment": "Host of Ascension"
-    },
-    {
       "name": "Coordinated Trap",
       "id": "3e1c90c0-9d7e-5b13-aa43-9968ff868926",
       "cost": 2,
@@ -3655,6 +3640,21 @@
       "phase": ["fight", "shooting"],
       "faction_id": "GSC",
       "fluff": "A tenet of guerrilla warfare is the concentration of even inferior firepower to inflict maximum harm.",
+      "detachment": "Host of Ascension"
+    },
+    {
+      "name": "Primed and Readied",
+      "id": "fe3aeb57-64ad-538d-a2fe-43e426c64526",
+      "cost": 2,
+      "turn": "either",
+      "target": "One GENESTEALER CULTS units from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, a Critical Hit is scored on an unmodified Hit roll of 5+, instead of only a 6.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "GSC",
+      "fluff": "The broodkin have been trained and equipped for this moment, with weapons readied for Ascension.",
       "detachment": "Host of Ascension"
     },
     {
@@ -3752,9 +3752,9 @@
       "id": "9bac0492-94cb-5407-85cc-13c198d8e6fa",
       "cost": 1,
       "turn": "either",
-      "target": "One PURESTRAIN GENESTEALERS unit from your army in Cult Ambush.",
+      "target": "Select one of those Cult Ambush markers.",
       "when": "Any phase, just after an enemy unit ends a move within 9\" of one or more of your Cult Ambush markers, before removing those markers from the battlefield.",
-      "effect": "Select one of those Cult Ambush markers. You can move that Cult Ambush marker up to 6\". If that marker is still within 9\" of one or more enemy units, it is removed from the battlefield; otherwise, until the end of the battle, you can only select PURESTRAIN GENESTEALERS units from your army to be set up using that Cult Ambush marker.",
+      "effect": "You can set up that Cult Ambush marker anywhere on the battlefield that is more than 9\" horizontally away from all enemy units.",
       "restrictions": "",
       "type": "Strategic Ploy",
       "phase": ["any"],
@@ -3782,9 +3782,9 @@
       "id": "a7da77bc-a4a4-54e1-9349-6f72b527faf7",
       "cost": 1,
       "turn": "either",
-      "target": "One ATALAN JACKALS unit from your army in Cult Ambush.",
+      "target": "Select one of those Cult Ambush markers.",
       "when": "Any phase, just after an enemy unit ends a move within 9\" of one or more of your Cult Ambush markers.",
-      "effect": "Select one of those Cult Ambush markers. You can set up that Cult Ambush marker anywhere on the battlefield that is more than 9\" horizontally away from all enemy units and wholly within 6\" of one or more battlefield edges. Until the end of the battle, you can only select ATALAN JACKALS units from your army to set up using that Cult Ambush marker.",
+      "effect": "You can set up that Cult Ambush marker anywhere on the battlefield that is more than 9\" horizontally away from all enemy units.",
       "restrictions": "",
       "type": "Strategic Ploy",
       "phase": ["any"],
@@ -3947,12 +3947,12 @@
       "id": "5b2a5617-7b82-51e7-809a-f90500b5c734",
       "cost": 1,
       "turn": "opponents",
-      "target": "One GENESTEALER CULTS INFANTRY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
-      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "target": "One GENESTEALER CULTS INFANTRY unit from your army that is not within Engagement Range of one or more enemy units.",
+      "when": "End of your opponent’s Fight phase.",
       "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.",
       "restrictions": "",
       "type": "Strategic Ploy",
-      "phase": ["shooting"],
+      "phase": ["fight"],
       "faction_id": "GSC",
       "fluff": "With their task of drawing the oppressors’ fire complete, the surviving cultists melt away, ready to strike again.",
       "detachment": "Host of Ascension"
@@ -3993,8 +3993,8 @@
       "cost": 2,
       "turn": "opponents",
       "target": "One ACOLYTE HYBRIDS, HYBRID METAMORPHS or NEOPHYTE HYBRIDS unit from your army in Cult Ambush.",
-      "when": "End of the Reinforcements step of your opponent’s Movement phase, if you have no Cult Ambush markers on the battlefield.",
-      "effect": "This phase, you can set up your unit on the battlefield without using a Cult Ambush marker. When doing so, set up your unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy units, not within your opponent’s deployment zone, and wholly within 9\" of one or more battlefield edges.",
+      "when": "End of the Reinforcements step of your opponent’s Movement phase.",
+      "effect": "Until the end of the phase, you can set up your unit on the battlefield without using a Cult Ambush marker. When doing so, set up your unit anywhere on the battlefield that is more than 6\" horizontally away from all enemy units.",
       "restrictions": "",
       "type": "Strategic Ploy",
       "phase": ["movement"],
@@ -4003,5 +4003,5 @@
       "detachment": "Xenocreed Congregation"
     }
   ],
-  "updated": "2025-08-31T10:09:56.424Z"
+  "updated": "2025-09-19T06:40:55.879Z"
 }

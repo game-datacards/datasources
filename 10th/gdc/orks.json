@@ -3,7 +3,7 @@
     "banner": "#283109",
     "header": "#465b18"
   },
-  "compatibleDataVersion": 675,
+  "compatibleDataVersion": 687,
   "datasheets": [
     {
       "abilities": {
@@ -356,13 +356,13 @@
       "name": "Warbikers",
       "points": [
         {
-          "cost": "140",
+          "cost": "130",
           "keyword": null,
           "models": "6",
           "active": true
         },
         {
-          "cost": "70",
+          "cost": "65",
           "keyword": null,
           "models": "3",
           "active": true
@@ -852,7 +852,7 @@
         "other": [
           {
             "name": "Shooty Power Trip",
-            "description": "Each time this unit is selected to shoot, you can roll one D6:\n\n■ On a 1‑2, this unit suffers D6 mortal wounds.\n■ On a 3‑4, until the end of the phase, add 1 to the Strength characteristic of ranged weapons equipped by models in this unit.\n■ On a 5‑6, until the end of the phase, add 1 to the Attacks characteristic of ranged weapons equipped by models in this unit.",
+            "description": "Each time this unit is selected to shoot, you can roll one D6:\n\n■ On a 1‑2, this unit suffers D3 mortal wounds.\n■ On a 3‑4, until the end of the phase, add 1 to the Strength characteristic of ranged weapons equipped by models in this unit.\n■ On a 5‑6, until the end of the phase, add 1 to the Attacks characteristic of ranged weapons equipped by models in this unit.",
             "showAbility": true,
             "showDescription": true
           }
@@ -1052,7 +1052,7 @@
       "name": "Lootas",
       "points": [
         {
-          "cost": "115",
+          "cost": "100",
           "keyword": null,
           "models": "10",
           "active": true
@@ -1565,7 +1565,7 @@
       "name": "Warboss in Mega Armour",
       "points": [
         {
-          "cost": "90",
+          "cost": "80",
           "keyword": null,
           "models": "1",
           "active": true
@@ -2006,7 +2006,7 @@
           "w": "16"
         }
       ],
-      "transport": "This model has a transport capacity of 22 ORKS INFANTRY models. If this model is equipped with a killkannon, it has a transport capacity of 12 ORKS INFANTRY models. Each MEGA ARMOUR or JUMP PACK model takes up the space of 2 models. The GHAZGHKULL THRAKA model takes up the space of 15 models but can only embark within this model if this model is not equipped with an ’ard case, kannon, killkannon or zzap gun.",
+      "transport": "This model has a transport capacity of 22 ORKS INFANTRY models. If this model is equipped with a killkannon, it has a transport capacity of 12 ORKS INFANTRY models. Each MEGA ARMOUR or JUMP PACK model takes up the space of 2 models. The GHAZGHKULL THRAKA model takes up the space of 4 models.",
       "wargear": [
         "This model can be equipped with any of the following:  ◦ 1 ’ard case ◦ 1 grabbin’ klaw ◦ 1 wreckin’ ball",
         "This model’s tracks and wheels can be replaced with 1 deff rolla.",
@@ -2087,7 +2087,7 @@
       "name": "Boss Snikrot",
       "points": [
         {
-          "cost": "95",
+          "cost": "75",
           "keyword": null,
           "models": "1",
           "active": true
@@ -2361,7 +2361,7 @@
         "Warboss",
         "Ghazgkull Thraka"
       ],
-      "leader": "This unit can be attached to the following unit: ■ MEGANOBZ If this unit’s Bodyguard unit is destroyed, Ghazkghull Thraka and Makari become a single unit with their original Starting Strength.",
+      "leader": "This unit can be attached to the following unit: ■ BOYZ ■ MEGANOBZ ■ NOBZ If this unit’s Bodyguard unit is destroyed, Ghazkghull Thraka and Makari become a single unit with their original Starting Strength.",
       "loadout": "Ghazghkull Thraka is equipped with: Mork’s Roar; Gork’s Klaw.\nMakari is equipped with: Makari’s stabba.",
       "meleeWeapons": [
         {
@@ -2465,7 +2465,7 @@
       "transport": "",
       "wargear": ["None"],
       "leads": {
-        "units": ["MEGANOBZ"],
+        "units": ["BOYZ", "MEGANOBZ", "NOBZ"],
         "extra": "If this unit’s Bodyguard unit is destroyed, Ghazkghull Thraka and Makari become a single unit with their original Starting Strength."
       }
     },
@@ -3181,7 +3181,14 @@
           }
         ],
         "primarch": [],
-        "special": [],
+        "special": [
+          {
+            "description": "At the start of the Declare Battle Formations step this unit can be split into two units, each containing five models.",
+            "name": "Patrol Squad",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
         "wargear": [
           {
             "name": "Bomb Squig",
@@ -3422,7 +3429,7 @@
         "other": [
           {
             "name": "Get Da Good Bitz",
-            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
             "showAbility": true,
             "showDescription": true
           }
@@ -3430,7 +3437,7 @@
         "primarch": [],
         "special": [
           {
-            "description": "If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one (but only if one of those is a WARBOSS model). If you do, and this unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths.",
+            "description": "If this unit has a Starting Strength of 20, you can attach up to two Leader units to it instead of one (but only if one of those is a WARBOSS unit). If you do, and this unit is destroyed, the Leader units attached to it become separate units with their original Starting Strengths.",
             "name": "Bodyguard",
             "showAbility": true,
             "showDescription": true
@@ -3652,6 +3659,7 @@
         "Weirdboy",
         "Painboy",
         "Big Mek",
+        "Ghazghkull Thraka",
         "Mek",
         "Big Mek with Shokk Attack Gun",
         "Warboss"
@@ -4435,7 +4443,7 @@
       "name": "Flash Gitz",
       "points": [
         {
-          "cost": "170",
+          "cost": "160",
           "keyword": null,
           "models": "10",
           "active": true
@@ -4626,7 +4634,7 @@
         "other": [
           {
             "name": "Piston-driven Brutality",
-            "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.",
+            "description": "Each time this model ends a Charge move, select one enemy unit within Engagement Range of it and roll one D6: on a 2-5, that enemy unit suffers D3 mortal wounds; on a 6, that enemy unit suffers D3+3 mortal wounds.",
             "showAbility": true,
             "showDescription": true
           }
@@ -6114,7 +6122,7 @@
       "name": "Mozrog Skragbad",
       "points": [
         {
-          "cost": "165",
+          "cost": "145",
           "keyword": null,
           "models": "1",
           "active": true
@@ -6511,7 +6519,7 @@
       "name": "Big Mek with Shokk Attack Gun",
       "points": [
         {
-          "cost": "85",
+          "cost": "80",
           "keyword": null,
           "models": "1",
           "active": true
@@ -6593,7 +6601,7 @@
       "fluff": "The Kill Rig’s stikka kannon fires rokkit‑harpoons big enough to wrangle battle tanks. Its ’eavy lobba hits with ground‑quaking force, and the tramplasquig that tows this land barge can flatten a fortress gate. Yet it is the Wurrboy atop his wurrtower that both the enemy and the Beast Snaggas themselves fear the most.",
       "id": "c70f4da0-73a6-5bb0-9c6f-893a5a9f42b1",
       "keywords": [
-        "Vehicle",
+        "Monster",
         "Transport",
         "Psyker",
         "Beast Snagga",
@@ -6643,7 +6651,7 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
+              "ap": "-2",
               "attacks": "6",
               "damage": "2",
               "keywords": [],
@@ -7090,6 +7098,7 @@
       "leadBy": [
         "Painboy",
         "Big Mek",
+        "Ghazghkull Thraka",
         "Mek",
         "Big Mek with Shokk Attack Gun",
         "Warboss"
@@ -7182,7 +7191,7 @@
       "name": "Beastboss on Squigosaur",
       "points": [
         {
-          "cost": "130",
+          "cost": "110",
           "keyword": null,
           "models": "1",
           "active": true
@@ -7335,25 +7344,25 @@
       "name": "Meganobz",
       "points": [
         {
-          "cost": "210",
+          "cost": "190",
           "keyword": null,
           "models": "6",
           "active": true
         },
         {
-          "cost": "175",
+          "cost": "160",
           "keyword": null,
           "models": "5",
           "active": true
         },
         {
-          "cost": "105",
+          "cost": "95",
           "keyword": null,
           "models": "3",
           "active": true
         },
         {
-          "cost": "70",
+          "cost": "65",
           "keyword": null,
           "models": "2",
           "active": true
@@ -7888,7 +7897,7 @@
       "faction_id": "ORK",
       "fluff": "Welded, lashed and nailed together from enemy wrecks and scavenged scrap, the Hunta Rig forgoes a Wurrboy wurrtower – much to its crew’s relief. Instead it boasts an open metal deck and copious grab‑handles, the better for chanting and bellowing mobs of Beast Snagga Boyz to ride along on the hunt.",
       "id": "5680837d-12d4-5c28-9b6e-6ceb36083c1c",
-      "keywords": ["Vehicle", "Transport", "Beast Snagga", "Hunta Rig"],
+      "keywords": ["Monster", "Transport", "Beast Snagga", "Hunta Rig"],
       "leader": "",
       "loadout": "This model is equipped with: ’eavy lobba; stikka kannon; butcha boyz; savage horns and hooves; saw blades.",
       "meleeWeapons": [
@@ -7933,7 +7942,7 @@
           "profiles": [
             {
               "active": true,
-              "ap": "-1",
+              "ap": "-2",
               "attacks": "6",
               "damage": "2",
               "keywords": [],
@@ -11817,5 +11826,5 @@
       "detachment": "More Dakka!"
     }
   ],
-  "updated": "2025-08-31T10:09:55.951Z"
+  "updated": "2025-09-19T06:40:55.340Z"
 }
