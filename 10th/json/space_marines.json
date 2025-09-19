@@ -4,7 +4,7 @@
     "banner": "#092135",
     "header": "#4b6262"
   },
-  "compatibleDataVersion": 675,
+  "compatibleDataVersion": 687,
   "datasheets": [
     {
       "abilities": {
@@ -177,7 +177,7 @@
       "name": "Ravenwing Darkshroud",
       "points": [
         {
-          "cost": "115",
+          "cost": "100",
           "keyword": null,
           "models": "1"
         }
@@ -1598,7 +1598,7 @@
     },
     {
       "abilities": {
-        "core": ["Deep Strike", "Leader", "Lone Operative", "Stealth"],
+        "core": ["Deep Strike", "Lone Operative", "Stealth"],
         "damaged": {
           "description": "",
           "range": ""
@@ -1611,28 +1611,29 @@
         },
         "other": [
           {
-            "name": "Trifold Path of Shadow",
-            "description": "While this model is leading a unit, that unit cannot be targeted by ranged attacks unless the attacking model is within 12\"."
+            "name": "Master of Shadows",
+            "description": "In your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time an ADEPTUS ASTARTES unit from your army declares a charge while it is within 12\" of that enemy unit, you can re-roll the Charge roll, but it must declare that enemy unit as a target of that charge (if possible)."
           },
           {
-            "name": "Echo of the Ravenspire",
-            "description": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves."
-          },
-          {
-            "name": "Inspiring Commander",
-            "description": "If you include this model in your army, until the end of the battle, non-CHARACTER models in ASSAULT INTERCESSORS WITH JUMP PACKS units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
+            "name": "Blackwing Mantle",
+            "description": "You can target this model’s unit with the Rapid Ingress and Heroic Intervention Stratagems for 0CP, even if you have already used that Stratagem on a different unit this phase."
           }
         ],
         "primarch": [],
-        "special": [],
+        "special": [
+          {
+            "description": "At the start of the Declare Battle Formations step, if your army includes AETHON SHAAN and KAYVAAN SHRIKE, until the end of the battle, your KAYVAAN SHRIKE unit loses its Lone Operative ability and it replaces its CHAPTER MASTER keyword with CAPTAIN.",
+            "name": "Chapter Master of the Raven Guard"
+          }
+        ],
         "wargear": []
       },
 
-      "composition": ["1 Kayvaan Shrike – EPIC HERO"],
+      "composition": ["1 Aethon Shaan – EPIC HERO&x20;"],
       "factions": ["Adeptus Astartes"],
       "faction_id": "SM",
-      "fluff": "Kayvaan Shrike is the Raven Guard Chapter’s foremost warrior and an exemplar of Corax’s teachings. A master of ambush, stealth and vigilance, he leads his warriors in daring raids, guerrilla campaigns and precision strikes, dropping silently from the skies before tearing his foes apart with savage slashes from the Raven’s Talons.",
-      "id": "54abfd41-d81e-5238-be09-db481da796ac",
+      "fluff": "As the Chapter Master of the Raven Guard, Aethon Shaan embodies the most patient and cunning aspects of his Primarch’s legacy. When he does choose to strike from the shadows he does so with sudden cold fury, bursting forth with the lightning-wreathed Claws of Severax flashing amidst gouts of enemy blood.",
+      "id": "adaaf09e-4121-59f8-bc1a-9dd869a965ad",
       "keywords": [
         "Infantry",
         "Character",
@@ -1640,12 +1641,12 @@
         "Fly",
         "Jump Pack",
         "Imperium",
-        "Phobos",
+        "Tacticus",
         "Chapter Master",
-        "Kayvaan Shrike"
+        "Aethon Shaan"
       ],
-      "leader": "This model can be attached to the following units: ■ ASSAULT INTERCESSORS WITH JUMP PACKS ■ VANGUARD VETERAN SQUAD WITH JUMP PACKS",
-      "loadout": "This model is equipped with: Blackout; the Raven’s Talons.",
+      "leader": "",
+      "loadout": "This model is equipped with: 1 heavy bolt pistol; 1 Claws of Severax",
       "meleeWeapons": [
         {
           "profiles": [
@@ -1653,8 +1654,8 @@
               "ap": "-2",
               "attacks": "7",
               "damage": "2",
-              "keywords": ["Twin-linked", "Precision"],
-              "name": "The Raven’s Talons",
+              "keywords": ["Twin-linked", "Sustained Hits 2"],
+              "name": "Claws of Severax",
               "range": "Melee",
               "skill": "2+",
               "strength": "5"
@@ -1662,10 +1663,10 @@
           ]
         }
       ],
-      "name": "Kayvaan Shrike",
+      "name": "Aethon Shaan",
       "points": [
         {
-          "cost": "100",
+          "cost": "85",
           "keyword": null,
           "models": "1"
         }
@@ -1675,13 +1676,13 @@
           "profiles": [
             {
               "ap": "-1",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": ["Precision", "Pistol"],
-              "name": "Blackout",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Heavy Bolt Pistol",
               "range": "18\"",
               "skill": "2+",
-              "strength": "5"
+              "strength": "4"
             }
           ]
         }
@@ -1690,8 +1691,8 @@
       "stats": [
         {
           "ld": "6+",
-          "m": "12\"",
-          "name": "Kayvaan Shrike",
+          "m": "14\"",
+          "name": "Aethon Shaan",
           "oc": "1",
 
           "sv": "3+",
@@ -1700,14 +1701,7 @@
         }
       ],
       "transport": "",
-      "wargear": ["None"],
-      "leads": {
-        "units": [
-          "ASSAULT INTERCESSORS WITH JUMP PACKS",
-          "VANGUARD VETERAN SQUAD WITH JUMP PACKS"
-        ],
-        "extra": ""
-      }
+      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -1839,8 +1833,8 @@
       ],
       "leadBy": [
         "Captain in Gravis Armour",
-        "Marneus Calgar",
         "Tor Garadon",
+        "Marneus Calgar",
         "Apothecary Biologis",
         "Iron Father Feirros"
       ]
@@ -2071,7 +2065,7 @@
       "name": "Ragnar Blackmane",
       "points": [
         {
-          "cost": "90",
+          "cost": "100",
           "keyword": null,
           "models": "1"
         }
@@ -2465,6 +2459,99 @@
       "wargear": ["None"],
       "leads": {
         "units": ["DEATHWATCH VETERANS", "FORTIS KILL TEAM"],
+        "extra": ""
+      }
+    },
+    {
+      "abilities": {
+        "core": ["Deep Strike", "Leader"],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": "4+"
+        },
+        "other": [
+          {
+            "name": "Icon of Obstinacy",
+            "description": "Each time an attack targets this model’s unit, if the Strength characteristic of that attack is greater than or equal to the Toughness characteristic of that unit, subtract 1 from the Wound roll."
+          },
+          {
+            "name": "Rampart",
+            "description": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save."
+          },
+          {
+            "name": "Inspiring Commander",
+            "description": "If you include this model in your army, until the end of the battle, non-CHARACTER models in TERMINATOR ASSAULT SQUAD and TERMINATOR SQUAD units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+
+      "composition": ["1 Darnath Lysander – EPIC HERO"],
+      "factions": ["Adeptus Astartes"],
+      "faction_id": "SM",
+      "fluff": "Raising high his storm shield, Rampart, as he swings the Fist of Dorn, Lysander wades through his foes like a warship smashing through stormy seas. Each hammer blow reduces enemies to bloody ruin, sweeping whole ranks of warriors from their feet. All the while, Lysander’s obstinate scowl never wavers, his determination absolute.",
+      "id": "5a09a60a-8d85-5328-911f-0f1fd393900a",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Imperium",
+        "Terminator",
+        "Captain",
+        "Darnath Lysander"
+      ],
+      "leader": "This model can be attached to the following units: ■ TERMINATOR ASSAULT SQUAD ■ TERMINATOR SQUAD",
+      "loadout": "This model is equipped with: 1 Fist of Dorn.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-3",
+              "attacks": "5",
+              "damage": "3",
+              "keywords": ["Devastating Wounds"],
+              "name": "Fist of Dorn",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "10"
+            }
+          ]
+        }
+      ],
+      "name": "Darnath Lysander",
+      "points": [
+        {
+          "cost": "100",
+          "keyword": null,
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "5\"",
+          "name": "Darnath Lysander",
+          "oc": "1",
+
+          "sv": "2+",
+          "t": "5",
+          "w": "7"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"],
+      "leads": {
+        "units": ["TERMINATOR ASSAULT SQUAD", "TERMINATOR SQUAD"],
         "extra": ""
       }
     },
@@ -3239,11 +3326,11 @@
         "For every 5 models in this unit, 1 Terminator’s storm bolter can be replaced with one of the following: ◦ 1 assault cannon ◦ 1 heavy flamer ◦ 1 cyclone missile launcher and 1 storm bolter.   This model’s storm bolter cannot be replaced."
       ],
       "leadBy": [
+        "Darnath Lysander",
         "Captain in Terminator Armour",
         "Librarian in Terminator Armour",
         "Belial",
         "Chaplain in Terminator Armour",
-        "Darnath Lysander",
         "Ancient in Terminator Armour"
       ]
     },
@@ -3307,7 +3394,7 @@
       "name": "Bladeguard Veteran Squad",
       "points": [
         {
-          "cost": "160",
+          "cost": "170",
           "keyword": null,
           "models": "6"
         },
@@ -4220,6 +4307,114 @@
         "Any number of Deathwing Terminators can each have their power fist replaced with 1 chainfist."
       ],
       "leadBy": ["Belial"]
+    },
+    {
+      "abilities": {
+        "core": ["Leader"],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": "4+"
+        },
+        "other": [
+          {
+            "name": "Signum Array",
+            "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability."
+          },
+          {
+            "name": "Siege Captain",
+            "description": "Each time this model makes an attack that targets a MONSTER, VEHICLE, or FORTIFICATION unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2."
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+
+      "composition": ["1 Tor Garadon – EPIC HERO"],
+      "factions": ["Adeptus Astartes"],
+      "faction_id": "SM",
+      "fluff": "Shot after shot bounces from the indomitable plate of Tor Garadon’s Gravis armour as he advances across the battlefield. Sharp-minded and possessing a knack for improvised warfare, Garadon directs the lethal fire of his warriors through a combination of natural skill and the advanced targeting data fed to him by his signum array.",
+      "id": "b066706e-e32b-5cae-9e48-2d158020b0d2",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Imperium",
+        "Gravis",
+        "Captain",
+        "Tor Garadon"
+      ],
+      "leader": "This model can be attached to the following units: ■ AGGRESSOR SQUAD ■ ERADICATOR SQUAD ■ HEAVY INTERCESSOR SQUAD",
+      "loadout": "This model is equipped with: artificer grav-gun; Hand of Defiance.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "5",
+              "damage": "2",
+              "keywords": [],
+              "name": "Hand of Defiance",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "12"
+            }
+          ]
+        }
+      ],
+      "name": "Tor Garadon",
+      "points": [
+        {
+          "cost": "90",
+          "keyword": null,
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Anti-vehicle 2+"],
+              "name": "Artificer grav-gun",
+              "range": "18\"",
+              "skill": "2+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "5\"",
+          "name": "Tor Garadon",
+          "oc": "1",
+
+          "sv": "3+",
+          "t": "6",
+          "w": "6"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"],
+      "leads": {
+        "units": [
+          "AGGRESSOR SQUAD",
+          "ERADICATOR SQUAD",
+          "HEAVY INTERCESSOR SQUAD"
+        ],
+        "extra": ""
+      }
     },
     {
       "abilities": {
@@ -7041,12 +7236,12 @@
       "name": "Thunderwolf Cavalry",
       "points": [
         {
-          "cost": "220",
+          "cost": "230",
           "keyword": null,
           "models": "6"
         },
         {
-          "cost": "100",
+          "cost": "115",
           "keyword": null,
           "models": "3"
         }
@@ -8101,7 +8296,7 @@
             {
               "ap": "-2",
               "attacks": "D6+1",
-              "damage": "1",
+              "damage": "2",
               "keywords": ["Twin-linked", "Blast"],
               "name": "Plasma storm battery – Standard",
               "range": "36\"",
@@ -8111,7 +8306,7 @@
             {
               "ap": "-3",
               "attacks": "D6+1",
-              "damage": "2",
+              "damage": "3",
               "keywords": ["Twin-linked", "Hazardous", "Blast"],
               "name": "Plasma storm battery – Supercharge",
               "range": "36\"",
@@ -8316,12 +8511,12 @@
       "name": "Indomitor Kill Team",
       "points": [
         {
-          "cost": "270",
+          "cost": "250",
           "keyword": null,
           "models": "16"
         },
         {
-          "cost": "270",
+          "cost": "250",
           "keyword": null,
           "models": "10"
         }
@@ -8593,7 +8788,7 @@
       "name": "Deathwatch Veterans",
       "points": [
         {
-          "cost": "200",
+          "cost": "190",
           "keyword": null,
           "models": "10"
         },
@@ -9930,8 +10125,8 @@
       ],
       "leadBy": [
         "Captain in Gravis Armour",
-        "Marneus Calgar",
         "Tor Garadon",
+        "Marneus Calgar",
         "Apothecary Biologis",
         "Iron Father Feirros"
       ]
@@ -10308,114 +10503,6 @@
         "The Scout Sergeant’s boltgun can be replaced with 1 Astartes chainsword."
       ],
       "leadBy": ["Captain in Phobos Armour"]
-    },
-    {
-      "abilities": {
-        "core": ["Leader"],
-        "damaged": {
-          "description": "",
-          "range": ""
-        },
-        "faction": ["Oath of Moment"],
-        "invul": {
-          "info": "",
-
-          "value": "4+"
-        },
-        "other": [
-          {
-            "name": "Signum Array",
-            "description": "While this model is leading a unit, ranged weapons equipped by models in that unit have the [IGNORES COVER] ability."
-          },
-          {
-            "name": "Siege Captain",
-            "description": "Each time this model makes an attack that targets a MONSTER, VEHICLE, or FORTIFICATION unit, improve the Strength, Armour Penetration and Damage characteristics of that attack by 2."
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-
-      "composition": ["1 Tor Garadon – EPIC HERO"],
-      "factions": ["Adeptus Astartes"],
-      "faction_id": "SM",
-      "fluff": "Shot after shot bounces from the indomitable plate of Tor Garadon’s Gravis armour as he advances across the battlefield. Sharp-minded and possessing a knack for improvised warfare, Garadon directs the lethal fire of his warriors through a combination of natural skill and the advanced targeting data fed to him by his signum array.",
-      "id": "b066706e-e32b-5cae-9e48-2d158020b0d2",
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Epic Hero",
-        "Imperium",
-        "Gravis",
-        "Captain",
-        "Tor Garadon"
-      ],
-      "leader": "This model can be attached to the following units: ■ AGGRESSOR SQUAD ■ ERADICATOR SQUAD ■ HEAVY INTERCESSOR SQUAD",
-      "loadout": "This model is equipped with: artificer grav-gun; Hand of Defiance.",
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-2",
-              "attacks": "5",
-              "damage": "2",
-              "keywords": [],
-              "name": "Hand of Defiance",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "12"
-            }
-          ]
-        }
-      ],
-      "name": "Tor Garadon",
-      "points": [
-        {
-          "cost": "90",
-          "keyword": null,
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-1",
-              "attacks": "2",
-              "damage": "2",
-              "keywords": ["Anti-vehicle 2+"],
-              "name": "Artificer grav-gun",
-              "range": "18\"",
-              "skill": "2+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "ld": "6+",
-          "m": "5\"",
-          "name": "Tor Garadon",
-          "oc": "1",
-
-          "sv": "3+",
-          "t": "6",
-          "w": "6"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"],
-      "leads": {
-        "units": [
-          "AGGRESSOR SQUAD",
-          "ERADICATOR SQUAD",
-          "HEAVY INTERCESSOR SQUAD"
-        ],
-        "extra": ""
-      }
     },
     {
       "abilities": {
@@ -11562,7 +11649,7 @@
       "name": "Land Raider",
       "points": [
         {
-          "cost": "240",
+          "cost": "220",
           "keyword": null,
           "models": "1"
         }
@@ -13270,6 +13357,7 @@
         "Ragnar Blackmane",
         "Iron Priest",
         "Njal Stormcaller",
+        "Ulrik the Slayer",
         "Wolf Guard Battle Leader"
       ]
     },
@@ -14026,7 +14114,7 @@
       "name": "Redemptor Dreadnought",
       "points": [
         {
-          "cost": "210",
+          "cost": "195",
           "keyword": null,
           "models": "1"
         }
@@ -15119,7 +15207,7 @@
         "other": [
           {
             "name": "Primarch of the First Legion",
-            "description": "In your Command phase, select one Primarch of the First Legion ability. Until the start of your next Command phase, this model has that ability."
+            "description": "At the start of your Command phase, select two Primarch of the First Legion abilities. Until the start of your next Command phase, this model has those abilities."
           },
           {
             "name": "The Emperor’s Shield",
@@ -15339,7 +15427,7 @@
       "name": "Assault Intercessors with Jump Packs",
       "points": [
         {
-          "cost": "160",
+          "cost": "170",
           "keyword": null,
           "models": "10"
         },
@@ -15423,10 +15511,10 @@
         "For every 5 models in this unit, 1 Assault Intercessor with Jump Pack’s heavy bolt pistol can be replaced with 1 plasma pistol."
       ],
       "leadBy": [
-        "Kayvaan Shrike",
         "Captain with Jump Pack",
         "Commander Dante",
-        "Chaplain with Jump Pack"
+        "Chaplain with Jump Pack",
+        "Kayvaan Shrike"
       ]
     },
     {
@@ -15539,12 +15627,12 @@
       "name": "Talonstrike Kill Team",
       "points": [
         {
-          "cost": "290",
+          "cost": "275",
           "keyword": null,
           "models": "15"
         },
         {
-          "cost": "290",
+          "cost": "275",
           "keyword": null,
           "models": "10"
         }
@@ -16052,7 +16140,7 @@
       "name": "Blood Claws",
       "points": [
         {
-          "cost": "270",
+          "cost": "285",
           "keyword": null,
           "models": "20"
         },
@@ -16746,99 +16834,6 @@
     },
     {
       "abilities": {
-        "core": ["Deep Strike", "Leader"],
-        "damaged": {
-          "description": "",
-          "range": ""
-        },
-        "faction": ["Oath of Moment"],
-        "invul": {
-          "info": "",
-
-          "value": "4+"
-        },
-        "other": [
-          {
-            "name": "Icon of Obstinacy",
-            "description": "While this model is leading a unit, each time an attack targets that unit, if the Strength characteristic of that attack is greater than or equal to the Toughness characteristic of that unit, subtract 1 from the Wound roll."
-          },
-          {
-            "name": "Rampart",
-            "description": "Once per battle, at the start of any phase, this model can use this ability. If it does, until the end of the phase, this model has a 2+ invulnerable save."
-          },
-          {
-            "name": "Inspiring Commander",
-            "description": "If you include this model in your army, until the end of the battle, non-CHARACTER models in TERMINATOR ASSAULT SQUAD and TERMINATOR SQUAD units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-
-      "composition": ["1 Darnath Lysander – EPIC HERO"],
-      "factions": ["Adeptus Astartes"],
-      "faction_id": "SM",
-      "fluff": "Raising high his storm shield, Rampart, as he swings the Fist of Dorn, Lysander wades through his foes like a warship smashing through stormy seas. Each hammer blow reduces enemies to bloody ruin, sweeping whole ranks of warriors from their feet. All the while, Lysander’s obstinate scowl never wavers, his determination absolute.",
-      "id": "5a09a60a-8d85-5328-911f-0f1fd393900a",
-      "keywords": [
-        "Infantry",
-        "Character",
-        "Epic Hero",
-        "Imperium",
-        "Terminator",
-        "Captain",
-        "Darnath Lysander"
-      ],
-      "leader": "This model can be attached to the following units: ■ TERMINATOR ASSAULT SQUAD ■ TERMINATOR SQUAD",
-      "loadout": "This model is equipped with: Fist of Dorn.",
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "ap": "-3",
-              "attacks": "5",
-              "damage": "3",
-              "keywords": ["Devastating Wounds"],
-              "name": "Fist of Dorn",
-              "range": "Melee",
-              "skill": "2+",
-              "strength": "10"
-            }
-          ]
-        }
-      ],
-      "name": "Darnath Lysander",
-      "points": [
-        {
-          "cost": "100",
-          "keyword": null,
-          "models": "1"
-        }
-      ],
-      "rangedWeapons": [],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "ld": "6+",
-          "m": "5\"",
-          "name": "Darnath Lysander",
-          "oc": "1",
-
-          "sv": "2+",
-          "t": "5",
-          "w": "6"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"],
-      "leads": {
-        "units": ["TERMINATOR ASSAULT SQUAD", "TERMINATOR SQUAD"],
-        "extra": ""
-      }
-    },
-    {
-      "abilities": {
         "core": ["Deep Strike", "Fights First", "Lone Operative"],
         "damaged": {
           "description": "",
@@ -16987,7 +16982,7 @@
               "keywords": [],
               "name": "Encarmine blade",
               "range": "Melee",
-              "skill": "3+",
+              "skill": "2+",
               "strength": "6"
             }
           ]
@@ -16996,12 +16991,12 @@
           "profiles": [
             {
               "ap": "-2",
-              "attacks": "3",
+              "attacks": "4",
               "damage": "2",
               "keywords": ["Lance"],
               "name": "Encarmine Spear",
               "range": "Melee",
-              "skill": "3+",
+              "skill": "2+",
               "strength": "6"
             }
           ]
@@ -17010,12 +17005,12 @@
       "name": "Sanguinary Guard",
       "points": [
         {
-          "cost": "240",
+          "cost": "260",
           "keyword": null,
           "models": "6"
         },
         {
-          "cost": "110",
+          "cost": "125",
           "keyword": null,
           "models": "3"
         }
@@ -17366,10 +17361,10 @@
         "Any number of models can each have their bolt pistol replaced one of the following: ◦ 1 storm shield ◦ 1 grav-pistol ◦ 1 hand flamer ◦ 1 inferno pistol ◦ 1 plasma pistol"
       ],
       "leadBy": [
-        "Kayvaan Shrike",
         "Captain with Jump Pack",
         "Commander Dante",
-        "Chaplain with Jump Pack"
+        "Chaplain with Jump Pack",
+        "Kayvaan Shrike"
       ]
     },
     {
@@ -17414,7 +17409,7 @@
         "Wolf Priest",
         "Ulrik the Slayer"
       ],
-      "leader": "This model can be attached to the following units: ■ BLOOD CLAWS ■ GREY HUNTERS ■ WOLF GUARD HEADHUNTERS",
+      "leader": "This model can be attached to the following units: ■ BLOOD CLAWS ■ GREY HUNTERS ■ WOLF GUARD HEADTAKERS",
       "loadout": "This model is equipped with: plasma pistol; artificer crozius arcanum.",
       "meleeWeapons": [
         {
@@ -17482,7 +17477,7 @@
       "transport": "",
       "wargear": ["None"],
       "leads": {
-        "units": ["BLOOD CLAWS", "GREY HUNTERS", "WOLF GUARD HEADHUNTERS"],
+        "units": ["BLOOD CLAWS", "GREY HUNTERS", "WOLF GUARD HEADTAKERS"],
         "extra": ""
       }
     },
@@ -17760,7 +17755,7 @@
       "name": "Roboute Guilliman",
       "points": [
         {
-          "cost": "320",
+          "cost": "340",
           "keyword": null,
           "models": "1"
         }
@@ -17848,7 +17843,7 @@
       "name": "Aggressor Squad",
       "points": [
         {
-          "cost": "220",
+          "cost": "200",
           "keyword": null,
           "models": "6"
         },
@@ -17921,8 +17916,8 @@
       ],
       "leadBy": [
         "Captain in Gravis Armour",
-        "Marneus Calgar",
         "Tor Garadon",
+        "Marneus Calgar",
         "Apothecary Biologis",
         "Iron Father Feirros"
       ]
@@ -19407,7 +19402,7 @@
         "other": [
           {
             "name": "High King of Fenris",
-            "description": "Once per battle round, in your Movement phase, you can select one friendly SPACE WOLVES unit that is in Strategic Reserves. If you do, until the end of the phase, for the purpose of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
+            "description": "Once per battle round, in your Movement phase, you can select one friendly SPACE WOLVES unit that is in Reserves. If you do, until the end of the phase, for the purpose of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is."
           },
           {
             "name": "Guile of the Wolf (Aura)",
@@ -19639,11 +19634,11 @@
         "Any number of models can each have their thunder hammer and storm shield replaced with 1 twin lightning claws."
       ],
       "leadBy": [
+        "Darnath Lysander",
         "Captain in Terminator Armour",
         "Librarian in Terminator Armour",
         "Belial",
         "Chaplain in Terminator Armour",
-        "Darnath Lysander",
         "Ancient in Terminator Armour"
       ]
     },
@@ -21103,7 +21098,7 @@
       "name": "Watch Master",
       "points": [
         {
-          "cost": "105",
+          "cost": "95",
           "keyword": null,
           "models": "1"
         }
@@ -21532,7 +21527,7 @@
         "other": [
           {
             "name": "Objective Secured",
-            "description": "If you control an objective marker at the end of your Command phase and this unit is within range of that objective marker, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn."
+            "description": "At the end of your Command phase, if this unit is within range of an objective marker you control, that objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase."
           },
           {
             "name": "Target Elimination",
@@ -22027,7 +22022,7 @@
       "name": "Land Raider Redeemer",
       "points": [
         {
-          "cost": "285",
+          "cost": "270",
           "keyword": null,
           "models": "1"
         }
@@ -23026,7 +23021,7 @@
       "name": "Arjac Rockfist",
       "points": [
         {
-          "cost": "95",
+          "cost": "105",
           "keyword": null,
           "models": "1"
         }
@@ -24433,7 +24428,7 @@
       "name": "Ballistus Dreadnought",
       "points": [
         {
-          "cost": "140",
+          "cost": "150",
           "keyword": null,
           "models": "1"
         }
@@ -25161,7 +25156,7 @@
       "name": "Gladiator Valiant",
       "points": [
         {
-          "cost": "160",
+          "cost": "150",
           "keyword": null,
           "models": "1"
         }
@@ -25242,6 +25237,119 @@
         "This model can be equipped with 1 Icarus rocket pod.",
         "This model can be equipped with 1 ironhail heavy stubber."
       ]
+    },
+    {
+      "abilities": {
+        "core": ["Deep Strike", "Leader", "Lone Operative", "Stealth"],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Oath of Moment"],
+        "invul": {
+          "info": "",
+
+          "value": "4+"
+        },
+        "other": [
+          {
+            "name": "Trifold Path of Shadow",
+            "description": "While this model is leading a unit, that unit cannot be targeted by ranged attacks unless the attacking model is within 12\"."
+          },
+          {
+            "name": "Echo of the Ravenspire",
+            "description": "At the end of your opponent’s turn, if this model’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves."
+          },
+          {
+            "name": "Inspiring Commander",
+            "description": "If you include this model in your army, until the end of the battle, non-CHARACTER models in ASSAULT INTERCESSORS WITH JUMP PACKS units from your army have an Objective Control characteristic of 2 while they are not Battle-shocked."
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+
+      "composition": ["1 Kayvaan Shrike – EPIC HERO"],
+      "factions": ["Adeptus Astartes"],
+      "faction_id": "SM",
+      "fluff": "Kayvaan Shrike is the Raven Guard Chapter’s foremost warrior and an exemplar of Corax’s teachings. A master of ambush, stealth and vigilance, he leads his warriors in daring raids, guerrilla campaigns and precision strikes, dropping silently from the skies before tearing his foes apart with savage slashes from the Raven’s Talons.",
+      "id": "54abfd41-d81e-5238-be09-db481da796ac",
+      "keywords": [
+        "Infantry",
+        "Character",
+        "Epic Hero",
+        "Fly",
+        "Jump Pack",
+        "Imperium",
+        "Phobos",
+        "Chapter Master",
+        "Kayvaan Shrike"
+      ],
+      "leader": "This model can be attached to the following units: ■ ASSAULT INTERCESSORS WITH JUMP PACKS ■ VANGUARD VETERAN SQUAD WITH JUMP PACKS",
+      "loadout": "This model is equipped with: Blackout; the Raven’s Talons.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "7",
+              "damage": "2",
+              "keywords": ["Twin-linked", "Precision"],
+              "name": "The Raven’s Talons",
+              "range": "Melee",
+              "skill": "2+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "name": "Kayvaan Shrike",
+      "points": [
+        {
+          "cost": "100",
+          "keyword": null,
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Precision", "Pistol"],
+              "name": "Blackout",
+              "range": "18\"",
+              "skill": "2+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "12\"",
+          "name": "Kayvaan Shrike",
+          "oc": "1",
+
+          "sv": "3+",
+          "t": "4",
+          "w": "5"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"],
+      "leads": {
+        "units": [
+          "ASSAULT INTERCESSORS WITH JUMP PACKS",
+          "VANGUARD VETERAN SQUAD WITH JUMP PACKS"
+        ],
+        "extra": ""
+      }
     },
     {
       "abilities": {
@@ -25907,12 +26015,12 @@
       "name": "Fortis Kill Team",
       "points": [
         {
-          "cost": "200",
+          "cost": "180",
           "keyword": null,
           "models": "24"
         },
         {
-          "cost": "200",
+          "cost": "180",
           "keyword": null,
           "models": "10"
         }
@@ -26738,12 +26846,12 @@
       "name": "Spectrus Kill Team",
       "points": [
         {
-          "cost": "200",
+          "cost": "180",
           "keyword": null,
           "models": "21"
         },
         {
-          "cost": "200",
+          "cost": "180",
           "keyword": null,
           "models": "10"
         }
@@ -35140,6 +35248,8 @@
     }
   ],
   "detachments": [
+    "Emperor’s Shield",
+    "Shadowmark Talon",
     "Librarius Conclave",
     "Ironstorm Spearhead",
     "1st Company Task Force",
@@ -35582,6 +35692,102 @@
       "source": "40k-10e",
       "cardType": "enhancement",
       "detachment": "Forgefather’s Seekers"
+    },
+    {
+      "name": "Champion of the Feast",
+      "id": "4cd57b70-07ee-59f8-96a9-b60a63a88d02",
+      "cost": "25",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Add 1 to the Attacks characteristic of the bearer’s melee weapons. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by other models in the bearer’s unit as well.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Emperor’s Shield"
+    },
+    {
+      "name": "Disciple of Rhetoricus",
+      "id": "383cd9f3-2fe4-5462-a980-af9ce37069b0",
+      "cost": "10",
+      "keywords": ["Terminator"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES TERMINATOR model only. Improve the Objective Control characteristic of the bearer by 1. Once per battle, at the start of any phase, the bearer can use this Enhancement. If it does, until the end of the phase, add 1 to the Objective Control characteristic of other models in the bearer’s unit as well.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Emperor’s Shield"
+    },
+    {
+      "name": "Indomitable Champion",
+      "id": "8ec87c75-9909-5c55-b4c0-addfe21704ed",
+      "cost": "20",
+      "keywords": ["Terminator"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES TERMINATOR model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Emperor’s Shield"
+    },
+    {
+      "name": "Malodraxian Standard",
+      "id": "4af23427-eff1-5de2-8043-e144b042ed12",
+      "cost": "20",
+      "keywords": ["Ancient"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES ANCIENT model only. Each time an attack targets the bearer’s unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of the bearer’s unit, subtract 1 from the Wound roll.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Emperor’s Shield"
+    },
+    {
+      "name": "Blackwing Shroud",
+      "id": "1724784f-d6d7-5899-a690-846d947d6275",
+      "cost": "25",
+      "keywords": ["Infantry"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES INFANTRY model only. While the bearer is leading a unit, models in that unit have the Infiltrators ability.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Shadowmark Talon"
+    },
+    {
+      "name": "Coronal Susurrant",
+      "id": "84399519-8d73-5752-b879-63ef3d37c969",
+      "cost": "30",
+      "keywords": ["Phobos"],
+      "excludes": [],
+      "description": "PHOBOS model only. The bearer has the following ability:\n\nLord of Deceit (Aura): Each time your opponent targets a unit from their army with a Stratagem, if that unit is within 12\" of this model, increase the cost of that usage of that Stratagem by 1CP.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Shadowmark Talon"
+    },
+    {
+      "name": "Umbral Raptor",
+      "id": "8c8dcae3-ff4a-5705-9eaf-f8567c04307c",
+      "cost": "15",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. The bearer has the Stealth and Lone Operative abilities.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Shadowmark Talon"
+    },
+    {
+      "name": "Hunter’s Instincts",
+      "id": "0bdbc832-0556-53e7-90aa-2f864a03506e",
+      "cost": "25",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. If the bearer’s unit is in Strategic Reserves, for the purposes of setting up that unit on the battlefield, treat the current battle round number as being one higher than it actually is.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Shadowmark Talon"
     }
   ],
   "id": "SM",
@@ -35946,6 +36152,81 @@
       "type": "Battle Tactic",
       "phase": ["fight", "shooting"],
       "faction_id": "SM",
+      "fluff": "The belligerence of the Adeptus Astartes combined with their post‑human physiology makes them unyielding foes to face.",
+      "detachment": "Emperor’s Shield"
+    },
+    {
+      "name": "Fury of the First",
+      "id": "1d0b0800-4e3c-5cd2-98cd-272b29e85b18",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that has not been selected to shoot or fight this phase.&x20;",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, add 1 to the Hit roll. If your unit is below its Starting Strength, add 1 to the Wound roll as well.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "SM",
+      "fluff": "Losses only serve to stoke the fiery wrath of the Imperial Fists and increase their resolve.",
+      "detachment": "Emperor’s Shield"
+    },
+    {
+      "name": "Obdurate Vengeance",
+      "id": "8b42dcac-1958-538f-a6b0-c171b4fca448",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.&x20;",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6: on a 3+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "SM",
+      "fluff": "Even when established wisdom favours retreat, the Imperial Fists remain defiant. Stubborn to the last, they would give their lives in the name of honour and the destruction of their foes",
+      "detachment": "Emperor’s Shield"
+    },
+    {
+      "name": "Disciplined Extermination",
+      "id": "9574b6e6-1429-5188-a49c-1ee1d1a03eb2",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army that has not been selected to shoot this phase.&x20;",
+      "when": "Your Shooting phase.&x20;",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability and improve the Armour Penetration characteristic of such weapons by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "SM",
+      "fluff": "Masters of bolter drill, the Imperial Fists utilise precise fire patterns to scour their enemies from hiding places and fell them in droves",
+      "detachment": "Emperor’s Shield"
+    },
+    {
+      "name": "Dropship Extraction",
+      "id": "10fac009-6fcc-5480-a123-d57d7b772573",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS ASTARTES TERMINATOR unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units.",
+      "when": "End of your opponent’s Fight phase.&x20;",
+      "effect": "Remove your unit from the battlefield and place it into Strategic Reserves.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "SM",
+      "fluff": "Making use of a lull in fighting, Terminator squads pull back from the front line, boarding airborne transports and withdrawing to prepare their next assault.",
+      "detachment": "Emperor’s Shield"
+    },
+    {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "SM",
       "fluff": "The belligerence of the Adeptus Astartes combined with their post-human physiology makes them unyielding foes to face.",
       "detachment": "Vanguard Spearhead"
     },
@@ -35971,7 +36252,7 @@
       "turn": "either",
       "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
       "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
-      "effect": "Until the end of the phase, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
       "restrictions": "",
       "type": "Battle Tactic",
       "phase": ["fight", "shooting"],
@@ -36008,6 +36289,66 @@
       "faction_id": "SM",
       "fluff": "To open fire on warriors of the Salamanders is merely to invite one’s own swift destruction.",
       "detachment": "Forgefather’s Seekers"
+    },
+    {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "SM",
+      "fluff": "The belligerence of the Adeptus Astartes combined with their post‑human physiology makes them unyielding foes to face.",
+      "detachment": "Shadowmark Talon"
+    },
+    {
+      "name": "Lay Low the Tyrants",
+      "id": "c16f6534-c127-52be-84df-8f4b0f029625",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to fight this phase.",
+      "when": "&x20;Fight phase.",
+      "effect": "Until the end of the phase, melee weapons equipped by models in your unit have the [PRECISION] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "SM",
+      "fluff": "In a storm of blade thrusts and bludgeoning strikes, enemy champions and commanders are laid low, leaving their troops in leaderless disarray.",
+      "detachment": "Shadowmark Talon"
+    },
+    {
+      "name": "Stunning Fusillade",
+      "id": "6f1c93bc-44a9-55da-be45-f3dd8ef6bfa0",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES INFANTRY unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.&x20;",
+      "effect": "Until the end of the phase, each time a model in your unit makes a ranged attack that targets an enemy unit that is more than 12\" away, improve the Ballistic Skill and Armour Penetration characteristics of that attack by 1. If one or more enemy models are destroyed as a result of those attacks, select one of those destroyed models; that destroyed model’s unit must take a Battle-shock test.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "SM",
+      "fluff": "From darkness and obscuring cover, Raven Guard battle‑brothers open fire as one, striking their unaware targets with precision fire.",
+      "detachment": "Shadowmark Talon"
+    },
+    {
+      "name": "Raptorial Vigilance",
+      "id": "bc2e0b69-821a-52a9-a90b-bdd4bb44f548",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that is within 9\" of the enemy unit that just ended that move. You cannot target a unit that is within Engagement Range of one or more enemy units.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit ends a Normal, Advance or Fall Back move.&x20;",
+      "effect": "Your unit can make a Normal move of up to D6\", or up to 6\" instead if it is a PHOBOS or SCOUT SQUAD unit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["movement"],
+      "faction_id": "SM",
+      "fluff": "The Raven Guard are swift to exploit the movements of their foes, whether to pursue their prey and complete the kill or to make use of an opportunity to fade once more from sight.",
+      "detachment": "Shadowmark Talon"
     },
     {
       "name": "Battle Drill Recall",
@@ -36286,7 +36627,7 @@
       "turn": "your",
       "target": "One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within range of an objective marker you control.",
       "when": "Your Movement phase.",
-      "effect": "That objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of any turn.",
+      "effect": "That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
       "restrictions": "",
       "type": "Strategic Ploy",
       "phase": ["movement"],
@@ -36445,6 +36786,21 @@
       "detachment": "Librarius Conclave"
     },
     {
+      "name": "Wrathful Conquerors",
+      "id": "d39307e4-46e3-580a-91f9-38358ff42357",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES TERMINATOR, BLADEGUARD VETERAN SQUAD, STERNGUARD VETERAN SQUAD or VANGUARD VETERAN SQUAD unit from your army within range of an objective marker you control.",
+      "when": "Your Movement phase.",
+      "effect": "That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "SM",
+      "fluff": "The battle‑brothers of the Imperial Fists 1st Company advance with merciless efficiency, eliminating all resistance and staking the Emperor’s claim.",
+      "detachment": "Emperor’s Shield"
+    },
+    {
       "name": "Calculated Feint",
       "id": "cd241c6c-741c-5c48-9cf5-0f70ca97ab91",
       "cost": 1,
@@ -36503,6 +36859,36 @@
       "faction_id": "SM",
       "fluff": "When faced with an onrushing horde, the Forgefather’s warriors set fire to the earth beneath their feet, impeding their advance and throwing them into confusion.",
       "detachment": "Forgefather’s Seekers"
+    },
+    {
+      "name": "Feint and Thrust",
+      "id": "5fcd4612-34cd-59b7-94c3-a44def413719",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES unit from your army.",
+      "when": "Your Movement phase.&x20;",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back. If it is a PHOBOS or SCOUT SQUAD unit, it is also eligible to shoot and declare a charge in a turn in which it Advanced.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "SM",
+      "fluff": "Retreating from the fight, these warriors lure their enemies on before swiftly turning the tables and hurling themselves into their now overextended foe.",
+      "detachment": "Shadowmark Talon"
+    },
+    {
+      "name": "Into Darkness",
+      "id": "babfc61c-5e76-513a-b86a-dfed49b102eb",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "Up to two PHOBOS and/or SCOUT SQUAD units from your army, or one other ADEPTUS ASTARTES INFANTRY unit from your army. You cannot target a unit that is within Engagement Range of one or more enemy units.",
+      "when": "End of your opponent’s Fight phase.",
+      "effect": "Remove those units from the battlefield and place them into Strategic Reserves.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "SM",
+      "fluff": "At the opportune moment, Raven Guard infiltration units slip away from battle, only to relocate ready to strike the foe again.",
+      "detachment": "Shadowmark Talon"
     },
     {
       "name": "Rigid Discipline",
@@ -36595,5 +36981,5 @@
       "detachment": "Stormlance Task Force"
     }
   ],
-  "updated": "2025-08-31T10:09:54.391Z"
+  "updated": "2025-09-19T06:40:53.572Z"
 }
