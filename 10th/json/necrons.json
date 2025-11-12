@@ -3,7 +3,7 @@
     "banner": "#032b16",
     "header": "#04532a"
   },
-  "compatibleDataVersion": 697,
+  "compatibleDataVersion": 708,
   "datasheets": [
     {
       "abilities": {
@@ -479,8 +479,139 @@
         "Overlord with Translocation Shroud",
         "Trazyn the Infinite",
         "Plasmancer",
+        "Geomancer",
         "Chronomancer"
       ]
+    },
+    {
+      "abilities": {
+        "core": ["Scouts 8\""],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Reanimation Protocols"],
+        "invul": {
+          "info": "",
+
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Harassment Swarm (Aura)",
+            "description": "While an enemy unit (excluding MONSTERS and VEHICLES) is within 3\" of this unit, each time a model in that unit makes an attack, subtract 1 from the Hit roll."
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": [
+          {
+            "name": "Nanoscarab Projector",
+            "description": "Once per battle round, when a friendly NECRONS unit within 3\" of this model’s Reanimation Protocols activate, it can use this ability. If it does, that unit reanimates 1 additional wound."
+          },
+          {
+            "name": "Accelerator Mandible",
+            "description": "At the start of the Fight phase, select one friendly CANOPTEK unit within 3\" of this unit. Until the end of the phase, improve the Weapon Skill characteristic of models in that unit by 1."
+          }
+        ]
+      },
+
+      "composition": ["5 Canoptek Macrocytes"],
+      "factions": ["Necrons"],
+      "faction_id": "NEC",
+      "fluff": "Swarms of Canoptek Macrocytes descend on those foolish enough to disturb Necron tombs or interfere with their Cryptek masters. Able to both augment the systems of fellow Canoptek constructs while also harassing and mauling enemy forces, these swift-skimming insectile horrors are far more dangerous than they seem at first glance.",
+      "id": "fd485a3b-39ef-5c9d-ac69-740352b9402e",
+      "keywords": ["Beasts", "Fly", "Canoptek", "Macrocytes"],
+      "leader": "",
+      "loadout": "Every model is equipped with: gauss scalpel; claws",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": [],
+              "name": "Claws",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "name": "Canoptek Macrocytes",
+      "points": [
+        {
+          "cost": "85",
+          "keyword": null,
+          "models": "5"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Lethal Hits"],
+              "name": "Gauss scalpel",
+              "range": "18\"",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Sustained Hits 1", "Assault"],
+              "name": "Tesla caster",
+              "range": "18\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": [],
+              "name": "Atomiser beam",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "8+",
+          "m": "8\"",
+          "name": "Canoptek Macrocytes",
+          "oc": "1",
+
+          "sv": "4+",
+          "t": "3",
+          "w": "1"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "1 model’s gauss scalpel or tesla caster can be replaced with 1 accelerator mandible.",
+        "1 model’s gauss scalpel or tesla caster can be replaced with 1 atomiser beam and 1 nanoscarab projector.",
+        "All models in this unit can each have their gauss scalpel replaced with 1 tesla caster."
+      ],
+      "leadBy": ["Geomancer"]
     },
     {
       "abilities": {
@@ -1138,6 +1269,7 @@
         "Overlord with Translocation Shroud",
         "Trazyn the Infinite",
         "Plasmancer",
+        "Geomancer",
         "Chronomancer"
       ]
     },
@@ -3984,6 +4116,115 @@
     },
     {
       "abilities": {
+        "core": [],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Reanimation Protocols"],
+        "invul": {
+          "info": "",
+
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Weapon Sentinels",
+            "description": "Each time a model in this unit makes a ranged attack that targets a unit within 12\", you can ignore any or all modifiers to the following: that attack’s Ballistic Skill characteristic; the Hit roll; the Wound roll"
+          }
+        ],
+        "primarch": [],
+        "special": [
+          {
+            "description": "At the start of the Declare Battle Formations step, this unit can join one other unit from your army that is being led by a CRYPTEK model (a unit cannot have more than one Tomb Crawlers unit joined to it and cannot have both a TOMB CRAWLERS and a CRYPTOTHRALLS unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly.",
+            "name": "Canoptek Retinue"
+          }
+        ],
+        "wargear": []
+      },
+
+      "composition": ["2 Canoptek Tomb Crawlers"],
+      "factions": ["Necrons"],
+      "faction_id": "NEC",
+      "fluff": "Lumbering weapon platforms and loyal bodyguards, Canoptek Tomb Crawlers are usually seen fighting alongside their Cryptek masters. They select and eliminate their targets with dogged persistence, their aim unwavering as they blast their victims to blackened ruin or pitch them screaming into dimensional oubliettes from which there is no escape.",
+      "id": "c6687d57-5f04-5692-a580-97d4f17a5fad",
+      "keywords": ["Beasts", "Canoptek", "Tomb Crawlers"],
+      "leader": "",
+      "loadout": "Every model is equipped with: twin gauss reaper; claws.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": [],
+              "name": "Claws",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "6"
+            }
+          ]
+        }
+      ],
+      "name": "Canoptek Tomb Crawlers",
+      "points": [
+        {
+          "cost": "50",
+          "keyword": null,
+          "models": "2"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-1",
+              "attacks": "2",
+              "damage": "1",
+              "keywords": ["Twin-linked", "Lethal Hits"],
+              "name": "Twin gauss reaper",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": [],
+              "name": "Transdimensional isolator",
+              "range": "12\"",
+              "skill": "4+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "8+",
+          "m": "5\"",
+          "name": "Canoptek Tomb Crawlers",
+          "oc": "1",
+
+          "sv": "3+",
+          "t": "4",
+          "w": "3"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "1 model’s twin gauss reaper can be replaced with 1 transdimensional isolator."
+      ]
+    },
+    {
+      "abilities": {
         "core": ["Deep Strike"],
         "damaged": {
           "description": "",
@@ -4711,6 +4952,117 @@
       ],
       "transport": "",
       "wargear": ["None"]
+    },
+    {
+      "abilities": {
+        "core": ["Leader"],
+        "damaged": {
+          "description": "",
+          "range": ""
+        },
+        "faction": ["Reanimation Protocols"],
+        "invul": {
+          "info": "",
+
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Tectonic Reverberations",
+            "description": "In your Movement phase, you can select one enemy unit within 18\" of and visible to this model. Until the start of your next Movement phase that enemy unit is pinned. While a unit is pinned, subtract 2 from that unit’s Move characteristic and subtract 2 from Charge rolls made for it."
+          },
+          {
+            "name": "Obelisk Node Control",
+            "description": "While this model is within range of an objective marker you control, enemy units that are set up on the battlefield from Reserves cannot be set up within 12\" of this model."
+          }
+        ],
+        "primarch": [],
+        "special": [
+          {
+            "description": "If this model is attached to a CANOPTEK MACROCYTES unit during the Declare Battle Formations step, this model has the Scouts 8\" ability.",
+            "name": "Vanguard Protocols"
+          }
+        ],
+        "wargear": []
+      },
+
+      "composition": ["1 Geomancer"],
+      "factions": ["Necrons"],
+      "faction_id": "NEC",
+      "fluff": "When Necron Crypteks turn their studies toward geomancy, they become masters of the battlefield. With their tremorglaives, they agitate their enemies’ molecules with explosive results. At the same time, their more esoteric arcana allow them to render the landscape temporarily insubstantial or dominate energistic leylines with summoned obelisk nodes.",
+      "id": "21b8c892-252b-57ab-977f-95ac8c2daa0e",
+      "keywords": ["Infantry", "Character", "Cryptek", "Geomancer"],
+      "leader": "This model can be attached to the following units: ■ CANOPTEK MACROCYTES ■ IMMORTALS ■ NECRON WARRIORS You can attach this model to one of the above units even if one ROYAL WARDEN or NOBLE model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+      "loadout": "This model is equipped with: tremorglaive.",
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": [],
+              "name": "Tremorglaive",
+              "range": "Melee",
+              "skill": "4+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "name": "Geomancer",
+      "points": [
+        {
+          "cost": "75",
+          "keyword": null,
+          "models": "1"
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "profiles": [
+            {
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "2",
+              "keywords": ["Melta 2"],
+              "name": "Tremorglaive – Reverberating beam",
+              "range": "18\"",
+              "skill": "4+",
+              "strength": "8"
+            },
+            {
+              "ap": "0",
+              "attacks": "D6+2",
+              "damage": "1",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Tremorglaive – Shock wave pulse",
+              "range": "18\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "ld": "6+",
+          "m": "8\"",
+          "name": "Geomancer",
+          "oc": "1",
+
+          "sv": "4+",
+          "t": "4",
+          "w": "4"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"],
+      "leads": {
+        "units": ["CANOPTEK MACROCYTES", "IMMORTALS", "NECRON WARRIORS"],
+        "extra": "You can attach this model to one of the above units even if one ROYAL WARDEN or NOBLE model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+      }
     },
     {
       "abilities": {
@@ -6910,5 +7262,5 @@
       "detachment": "Hypercrypt Legion"
     }
   ],
-  "updated": "2025-10-15T15:58:06.142Z"
+  "updated": "2025-11-12T16:52:28.114Z"
 }
