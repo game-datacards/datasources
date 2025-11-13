@@ -3,7 +3,7 @@
     "banner": "#175966",
     "header": "#2e5a6a"
   },
-  "compatibleDataVersion": 708,
+  "compatibleDataVersion": 715,
   "datasheets": [
     {
       "abilities": {
@@ -607,14 +607,6 @@
         "special": [],
         "wargear": [
           {
-            "name": "Homing Beacon",
-            "description": "Once per battle, you can use the Rapid Ingress Stratagem for 0CP. The target must be set up within 3\" of the bearer’s unit and not within 9\" of any enemy units."
-          },
-          {
-            "name": "Battlesuit Support System",
-            "description": "The bearer’s unit is eligible to shoot in a turn in which it Fell Back, but when doing so only models equipped with this wargear can make ranged attacks."
-          },
-          {
             "name": "Gun Drone",
             "description": "The bearer is equipped with the following ranged weapon:"
           },
@@ -623,24 +615,27 @@
             "description": "The bearer’s unit has the MARKERLIGHT keyword and can act as an Observer unit for another unit even if it Advanced this turn."
           },
           {
-            "name": "Shield Drone",
-            "description": "Add 1 to the bearer’s Wounds characteristic."
-          },
-          {
-            "name": "Battlesuit Support System",
-            "description": "The bearer’s unit is eligible to shoot in a turn in which it Fell Back, but when doing so only models equipped with this wargear can make ranged attacks."
+            "name": "Homing Beacon",
+            "description": "Once per battle, you can use the Rapid Ingress Stratagem for 0CP. The target must be set up within 3\" of the bearer’s unit and more than 9\" away from all enemy units."
           }
         ]
       },
 
-      "composition": ["1 Stealth Shas’vre", "2-5 Stealth Shas’ui"],
+      "composition": ["1 Stealth Shas’vre", "4 Stealth Shas’ui"],
       "factions": ["T’au Empire"],
       "faction_id": "TAU",
-      "fluff": "A comparatively lightweight and specialist mark of battlesuit, the XV25 conceals its pilot behind fields of sensor-baffling stealth technology. Benefiting from jet-assisted speed and impressive firepower, these teams make excellent forward operatives who can deploy homing beacons to guide entire insertion forces into battle from low orbit.",
+      "fluff": "Benefiting from sensor-baffling stealth technology, jet-assisted speed and impressive firepower, Stealth Battlesuit teams make excellent forward operatives who can deploy homing beacons to guide entire insertion forces into battle from low orbit.",
       "id": "e9255c83-49c4-59dd-a67d-8283e79a582d",
-      "keywords": ["Infantry", "Fly", "Battlesuit", "Stealth"],
+      "keywords": [
+        "Infantry",
+        "Fly",
+        "Battlesuit",
+        "Grenades",
+        "Markerlight",
+        "Stealth"
+      ],
       "leader": "",
-      "loadout": "The Stealth Shas’vre is equipped with: burst cannon, battlesuit fists, homing beacon.\nEvery Stealth Shas’ui model is equipped with: burst cannon; battlesuit fists.",
+      "loadout": "Every model is equipped with: burst cannon; battlesuit fists.",
       "meleeWeapons": [
         {
           "profiles": [
@@ -660,14 +655,9 @@
       "name": "Stealth Battlesuits",
       "points": [
         {
-          "cost": "120",
+          "cost": "110",
           "keyword": null,
-          "models": "6"
-        },
-        {
-          "cost": "80",
-          "keyword": null,
-          "models": "3"
+          "models": "5"
         }
       ],
       "rangedWeapons": [
@@ -680,6 +670,20 @@
               "keywords": [],
               "name": "Burst cannon",
               "range": "18\"",
+              "skill": "4+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Pulse pistol",
+              "range": "12\"",
               "skill": "4+",
               "strength": "5"
             }
@@ -715,9 +719,11 @@
       ],
       "transport": "",
       "wargear": [
-        "For every 3 models in the unit, 1 model can be equipped with 1 battlesuit support system.",
-        "For every 3 models in the unit, 1 model’s burst cannon can be replaced with 1 fusion blaster.",
-        "The Stealth Shas’vre can be equipped with up to two of the following, and can take duplicates: ◦ 1 gun drone ◦ 1 marker drone ◦ 1 shield drone"
+        "2 models can each have their burst cannon replaced with 1 fusion blaster.",
+        "1 Stealth Shas’ui can be equipped with 1 homing beacon.",
+        "The Stealth Shas’vre can be equipped with 1 pulse pistol.",
+        "The Stealth Shas’vre can be equipped with 1 marker drone.",
+        "The Stealth Shas’vre can be equipped with 1 gun drone."
       ]
     },
     {
@@ -8196,5 +8202,5 @@
       "detachment": "Mont’ka"
     }
   ],
-  "updated": "2025-11-12T16:52:28.035Z"
+  "updated": "2025-11-13T18:15:14.812Z"
 }
