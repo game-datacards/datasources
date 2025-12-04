@@ -4463,19 +4463,19 @@
     }
   ],
   "detachments": [
-    "Hallowed Conclave",
-    "Brotherhood Strike",
-    "Warpbane Task Force",
-    "Sanctic Spearhead",
     "Augurium Task Force",
-    "Banishers"
+    "Banishers",
+    "Warpbane Task Force",
+    "Brotherhood Strike",
+    "Hallowed Conclave",
+    "Sanctic Spearhead"
   ],
   "enhancements": [
     {
       "name": "Driven by Duty",
       "id": "7e698d92-ec5d-5bcd-b02e-cf23710fc022",
       "cost": "10",
-      "keywords": ["Walker"],
+      "keywords": ["Walker", "Grey Knights"],
       "excludes": [],
       "description": "GREY KNIGHTS WALKER model only. Each time the bearer’s unit Piles In or Consolidates, the bearer can move up to 6\" instead of up to 3\".",
       "faction_id": "GK",
@@ -4511,7 +4511,7 @@
       "name": "Quickening Foci",
       "id": "6050cd10-80b7-57f3-8314-07839c953fd9",
       "cost": "15",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Grey Knights"],
       "excludes": [],
       "description": "GREY KNIGHTS INFANTRY model only. In your Movement phase, each time the bearer’s unit disembarks from a TRANSPORT, until the end of the turn, you can re-roll Charge rolls made for that unit.",
       "faction_id": "GK",
@@ -4559,7 +4559,7 @@
       "name": "Spiritus Machina",
       "id": "ac02728c-dbd6-5eb9-b89f-b7a55b7d4647",
       "cost": "25",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Grey Knights"],
       "excludes": [],
       "description": "GREY KNIGHTS INFANTRY model only. In your Shooting phase, each time the bearer’s unit is selected to shoot, if the bearer’s unit disembarked from a TRANSPORT this turn, until the end of the phase, each time a model in the bearer’s unit makes an attack, you can re-roll the Wound roll.",
       "faction_id": "GK",
@@ -4583,7 +4583,7 @@
       "name": "Radiant Champion",
       "id": "d8d5c4c2-7628-5096-bfe7-3f4e00a2b32b",
       "cost": "15",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Grey Knights"],
       "excludes": [],
       "description": "GREY KNIGHTS INFANTRY model only. The bearer’s melee weapons have the [PRECISION] ability, and while the bearer is wholly within your army’s Hallowed Ground, each time a melee attack made by the bearer scores a wound, the target of that attack suffers 1 mortal wound in addition to any normal damage.",
       "faction_id": "GK",
@@ -4595,7 +4595,7 @@
       "name": "Phial of the Abyss",
       "id": "c89e096c-e12d-50d4-a727-d0ec00988bca",
       "cost": "25",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Grey Knights"],
       "excludes": [],
       "description": "GREY KNIGHTS INFANTRY model only. Models in the bearer’s unit have the Stealth ability.",
       "faction_id": "GK",
@@ -4643,7 +4643,7 @@
       "name": "Sanctic Reaper",
       "id": "3a88daa3-6c80-5370-b9f6-6ea50fff0914",
       "cost": "15",
-      "keywords": ["Terminator"],
+      "keywords": ["Terminator", "Grey Knights"],
       "excludes": [],
       "description": "GREY KNIGHTS TERMINATOR model only. Add 3 to the Attacks characteristic of the bearer’s melee weapons.",
       "faction_id": "GK",
@@ -4655,7 +4655,7 @@
       "name": "Nemesis Rounds",
       "id": "adc06d6b-fe6b-597d-87f6-bb73d4561209",
       "cost": "10",
-      "keywords": ["Terminator"],
+      "keywords": ["Terminator", "Grey Knights"],
       "excludes": [],
       "description": "GREY KNIGHTS TERMINATOR model only. Each time you target the bearer’s unit with the Fire Overwatch Stratagem, hits are scored on unmodified Hit rolls of 5+ while resolving that Stratagem.",
       "faction_id": "GK",
@@ -4679,7 +4679,7 @@
       "name": "Ephemeral Tome",
       "id": "67012e18-c380-5087-803d-c11c70f4e4af",
       "cost": "15",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Grey Knights"],
       "excludes": [],
       "description": "GREY KNIGHTS INFANTRY model only. At the start of your Shooting phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, the bearer’s unit can make a Normal move of up to D6\", and until the end of the turn, the bearer’s unit is not eligible to declare a charge.",
       "faction_id": "GK",
@@ -4768,41 +4768,137 @@
   "rules": {
     "army": [
       {
-        "name": "Teleport Assault",
-        "rule": [
+        "name": "Gate of Infinity",
+        "rules": [
           {
+            "text": "If your Army Faction is **GREY KNIGHTS,** at the end of your opponent’s Fight phase, you can select a number of units (see below) from your army that are on the battlefield (excluding units that are within Engagement Range of one or more enemy units), provided every model in those units has this ability. The maximum number of units you can select depends on the battle size, as follows:",
             "order": 1,
-            "text": "If your Army Faction is **GREY KNIGHTS**, at the end of your opponent’s turn, you can select a number of **GREY KNIGHTS** units from your army with this ability (excluding units that are within Engagement Range of one or more enemy units). The maximum number of units you can select depends on the battle size, as follows:",
+            "title": null,
             "type": "text"
           },
           {
+            "text": "-",
             "order": 2,
-            "text": "Once you have made your selections, remove those units from the battlefield. In the Reinforcements step of your next Movement phase, set each of those units up anywhere on the battlefield that is more than 9\" horizontally away from all enemy models. Any units that are not on the battlefield at the end of the battle count as destroyed.",
+            "title": null,
+            "type": "image"
+          },
+          {
+            "text": "Once you have made your selections, remove those units from the battlefield and place them into Strategic Reserves.",
+            "order": 3,
+            "title": null,
             "type": "text"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Teleport Strike Force",
-        "name": "Teleport Shunt",
-        "rule": [
+        "detachment": "Augurium Task Force",
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time a **GREY KNIGHTS** unit with the Deep Strike ability Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to that unit’s Move characteristic and that unit can **FLY**.",
-            "type": "text"
+            "name": "Prescient Redeployment",
+            "sections": [
+              {
+                "text": "From the second battle round onwards, at the start of your Movement phase, if you did not select the maximum number of **GREY KNIGHTS** units from your army using the Gate of Infinity ability at the end of your opponent’s previous turn, you can select one **GREY KNIGHTS** unit from your army that is on the battlefield that could have been selected using the Gate of Infinity ability. Remove that unit from the battlefield and place it into Strategic Reserves.\n\n**Designer’s Note:** *This means that your unit can retain its position* on *the battlefield at the end of your Command phase, and then be placed into Strategic Reserves at the start of your Movement phase,* to *set it up again in your Reinforcements step in another position.*",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Banishers",
+        "rules": [
+          {
+            "name": "Channelled Force",
+            "sections": [
+              {
+                "text": "Each time a **GREY KNIGHTS** unit from your army is selected to fight, that unit can take a Leadership test. If that test is passed, select one of the following rules. Until the end of the phase, that unit has that rule.\n\n■ Melee weapons equipped by models in this unit with the **[PSYCHIC]** ability also have the **[SUSTAINED HITS 1]** ability.\n■ Melee weapons equipped by models in this unit with the **[PSYCHIC]** ability also have the **[LETHAL HITS]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Warpbane Task Force",
-        "name": "Hallowed Ground",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "Certain areas of the battlefield are within your army’s Hallowed Ground, as follows:\n\n■ Your deployment zone is always within your army’s Hallowed Ground.\n■ The area of the battlefield within 6\" of one or more **PURIFIER SQUAD** units from your army is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Hallowed Ground.\n\nEach time a model in a **GREY KNIGHTS** unit from your army makes an attack that targets a visible target, re‑roll a Hit roll of 1. If that unit is a **PURIFIER SQUAD** and/or is wholly within your army’s Hallowed Ground, you can re‑roll the Hit roll instead.",
-            "type": "text"
+            "name": "Hallowed Ground",
+            "sections": [
+              {
+                "text": "Certain areas of the battlefield are within your army’s Hallowed Ground, as follows:\n\n■ Your deployment zone is always within your army’s Hallowed Ground.\n■ The area of the battlefield within 6\" of one or more **PURIFIER SQUAD** units from your army is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within No Man’s Land, until the end of that phase, No Man’s Land is within your army’s Hallowed Ground.\n■ At the start of any phase, if you control at least half of the objective markers within your opponent’s deployment zone, until the end of that phase, your opponent’s deployment zone is within your army’s Hallowed Ground.\n\nEach time a model in a **GREY KNIGHTS** unit from your army makes a ranged attack that targets a visible target or makes a melee attack, re‐roll a Hit roll of 1. If that unit is a **PURIFIER SQUAD** and/or is wholly within your army’s Hallowed Ground, you can re‐roll the Hit roll instead.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Brotherhood Strike",
+        "rules": [
+          {
+            "name": "Fury of Titan",
+            "sections": [
+              {
+                "text": "Each time a unit from your army is set up using the Deep Strike ability, until the end of the turn, each time a model in that unit makes an attack, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Hallowed Conclave",
+        "rules": [
+          {
+            "name": "Duty Before All",
+            "sections": [
+              {
+                "text": "**GREY KNIGHTS TERMINATOR** units from your army are eligible to shoot and declare a charge in a turn in which they Fell Back.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Sanctic Spearhead",
+        "rules": [
+          {
+            "name": "Mailed Fist",
+            "sections": [
+              {
+                "text": "Each time a **GREY KNIGHTS VEHICLE** unit from your army Advances, do not make an Advance roll for it; until the end of the phase, add 6\" to the Move characteristic of models in that unit, and until the end of the turn, ranged weapons equipped by models in that unit have the **[ASSAULT]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -5350,5 +5446,5 @@
       "detachment": "Brotherhood Strike"
     }
   ],
-  "updated": "2025-11-13T18:15:13.862Z"
+  "updated": "2025-12-04T10:11:06.069Z"
 }

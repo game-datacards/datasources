@@ -10587,12 +10587,12 @@
   ],
   "detachments": [
     "Kult of Speed",
-    "War Horde",
-    "Taktikal Brigade",
-    "Bully Boyz",
-    "Green Tide",
     "Da Big Hunt",
     "Dread Mob",
+    "War Horde",
+    "Bully Boyz",
+    "Green Tide",
+    "Taktikal Brigade",
     "More Dakka!"
   ],
   "enhancements": [
@@ -10708,7 +10708,7 @@
       "name": "Fasta Than Yooz",
       "id": "615dbb49-1211-5bc2-83e4-f8a30440c872",
       "cost": "35",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Orks"],
       "excludes": [],
       "description": "ORKS INFANTRY model only. Each time the bearer’s unit disembarks from a TRANSPORT after that TRANSPORT has made a Normal move, the bearer’s unit is still eligible to declare a charge this turn.",
       "faction_id": "ORK",
@@ -10792,7 +10792,7 @@
       "name": "Ferocious Show Off",
       "id": "a2af83f9-581c-530f-bb91-decaf1bdef0a",
       "cost": "10",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Orks"],
       "excludes": [],
       "description": "ORKS INFANTRY model only. Each time the bearer fights, while resolving those attacks, add 1 to the Strength characteristic of the bearer’s melee weapons. If the bearer’s unit contains 10 or more models, while resolving those attacks, add 3 to the Strength characteristic instead.",
       "faction_id": "ORK",
@@ -10804,7 +10804,7 @@
       "name": "Brutal But Kunnin’",
       "id": "4f02b2d6-abe5-5d7c-b48b-071811c2ccd4",
       "cost": "25",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Orks"],
       "excludes": [],
       "description": "ORKS INFANTRY model only. In your Command phase, if the bearer is on the battlefield (or is embarked within a TRANSPORT that is on the battlefield), roll one D6, adding 2 to the result if the bearer’s unit contains 10 or more models: on a 5+, you gain 1CP.",
       "faction_id": "ORK",
@@ -10816,7 +10816,7 @@
       "name": "Bloodthirsty Belligerence",
       "id": "c14bcbec-fcd0-50d5-bd24-5a7f7e719a86",
       "cost": "15",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Orks"],
       "excludes": [],
       "description": "ORKS INFANTRY model only. While the bearer is leading a unit, you can re‑roll Advance rolls made for that unit. While that unit contains 10 or more models, you can re‑roll Charge rolls made for that unit as well.",
       "faction_id": "ORK",
@@ -10828,7 +10828,7 @@
       "name": "Raucous Warcaller",
       "id": "337bf07f-eadc-53e1-8437-3ef3f9a2bd3c",
       "cost": "20",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Orks"],
       "excludes": [],
       "description": "ORKS INFANTRY model only. While the bearer is leading a unit, that unit always counts as containing 10 or more models for the purposes of your Detachment rule and any Stratagems you use.",
       "faction_id": "ORK",
@@ -10994,111 +10994,172 @@
     "army": [
       {
         "name": "Waaagh!",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
             "text": "If your Army Faction is **ORKS**, once per battle, at the start of your Command phase, you can call a Waaagh!. If you do, until the start of your next Command phase, the Waaagh! is active for your army and:\n\n■ Units from your army with this ability are eligible to declare a charge in a turn in which they Advanced.\n■ Add 1 to the Strength and Attacks characteristics of melee weapons equipped by models from your army with this ability.\n■ Models from your army with this ability have a 5+ invulnerable save.",
+            "order": 1,
+            "title": null,
             "type": "text"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Bully Boyz",
-        "name": "Da Boss Is Watchin’",
-        "rule": [
+        "detachment": "Kult of Speed",
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of your Command phase, in a turn in which you have not called a Waaagh!, if you have one or more **WARBOSS** models on the battlefield (or embarked within a **TRANSPORT** that is on the battlefield), you can call a Waaagh! for a second time this battle. When doing so, that second Waaagh! only counts as having been called for **WARBOSS**, **NOBZ** and **MEGANOBZ** units from your army.",
-            "type": "text"
+            "name": "Adrenaline Junkies",
+            "sections": [
+              {
+                "text": "**SPEED FREEKS** units from your army are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Da Big Hunt",
-        "name": "Da Hunt Is On",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of your Command phase, select one **MONSTER**, **VEHICLE** or **CHARACTER** unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Prey:\n\n■ Each time a **BEAST SNAGGA** unit from your army declares a charge that includes your Prey as one of the targets, you can re‑roll the Charge roll.\n■ Each time a **BEAST SNAGGA** model from your army makes an attack that targets your Prey, improve the Armour Penetration characteristic of that attack by 1.",
-            "type": "text"
+            "name": "Da Hunt Is On",
+            "sections": [
+              {
+                "text": "At the start of your Command phase, select one **MONSTER**, **VEHICLE** or **CHARACTER** unit from your opponent’s army. Until the start of your next Command phase, that enemy unit is your Prey:\n\n■ Each time a **BEAST SNAGGA** unit from your army declares a charge that includes your Prey as one of the targets, you can re‑roll the Charge roll.\n■ Each time a **BEAST SNAGGA** model from your army makes an attack that targets your Prey, improve the Armour Penetration characteristic of that attack by 1.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Dread Mob",
-        "name": "Try Dat Button!",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time a **MEK**, **ORKS WALKER** or **GROTS VEHICLE** unit from your army is selected to shoot or fight, roll one D6. Until the end of the phase, weapons equipped by models in that unit have the corresponding ability shown in the table below.",
-            "type": "text"
-          },
-          {
-            "order": 2,
-            "text": "-",
-            "type": "image"
-          },
-          {
-            "order": 3,
-            "text": "Alternatively, when such a unit is selected to shoot or fight, you can select one of the abilities above instead of rolling the D6. If you do, until the end of the phase, weapons equipped by models in that unit have the **[HAZARDOUS]** ability as well.\n\nIf a weapon equipped by a model from you army has the **[HAZARDOUS]** ability from multiple sources, each time you take a Hazardous test for that weapon, it is failed on a roll of a 1 or a 2.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Green Tide",
-        "name": "Mob Mentality",
-        "rule": [
-          {
-            "order": 1,
-            "text": "Each time an attack targets a **BOYZ** unit from your army, models in that unit have a 6+ invulnerable save against that attack. Each time an attack targets a **BOYZ** unit from your army that contains 10 or more models, models in that unit have a 5+ invulnerable save against that attack.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Kult of Speed",
-        "name": "Adrenaline Junkies",
-        "rule": [
-          {
-            "order": 1,
-            "text": "**SPEED FREEKS** units from your army are eligible to shoot in a turn in which they Advanced or Fell Back.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "More Dakka!",
-        "name": "Dakka! Dakka! Dakka!",
-        "rule": [
-          {
-            "order": 1,
-            "text": "Ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[ASSAULT]** ability.\n\nWhile the Waaagh! is active for your army, during your Shooting phase, ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[SUSTAINED HITS 1]** ability.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Taktikal Brigade",
-        "name": "Lissen ’Ere",
-        "rule": [
-          {
-            "order": 1,
-            "text": "Once per battle round, in your Command phase or after being set up on the battlefield in your Movement phase, each **BOSS SNIKROT**, **MEK** and **WARBOSS** model in your army can issue Taktiks abilities.\n\nTo do so, select one of the Taktiks abilities below and select one friendly **ORKS** unit within 6\" of that model to issue them to. That model must take a Leadership test: if failed, the selected unit suffers 1 mortal wound. Until the start of your next Command phase, the selected unit is affected by the selected Taktik. A unit cannot have Taktiks issued to it in this way more than once per battle round.\n\n**Get Stuck In**: You can re‑roll Charge rolls made for this unit.\n\n**Get On Wiv It**: Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.\n\n**Sneaky Stalkin’**: **INFANTRY** and **MOUNTED** models (excluding **MEGANOBZ**) in this unit have the Stealth ability and each time a ranged attack targets this unit, those models have the Benefit of Cover against that attack.\n\n**Shoota Drills**: Each time an **INFANTRY** or **MOUNTED** model in this unit makes a ranged attack, add 1 to the Hit roll.",
-            "type": "text"
+            "name": "Try Dat Button!",
+            "sections": [
+              {
+                "text": "Each time a **MEK**, **ORKS WALKER** or **GROTS VEHICLE** unit from your army is selected to shoot or fight, roll one D6. Until the end of the phase, weapons equipped by models in that unit have the corresponding ability shown in the table below.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "-",
+                "order": 2,
+                "title": null,
+                "type": "image"
+              },
+              {
+                "text": "Alternatively, when such a unit is selected to shoot or fight, you can select one of the abilities above instead of rolling the D6. If you do, until the end of the phase, weapons equipped by models in that unit have the **[HAZARDOUS]** ability as well.\n\nIf a weapon equipped by a model from you army has the **[HAZARDOUS]** ability from multiple sources, each time you take a Hazardous test for that weapon, it is failed on a roll of a 1 or a 2.",
+                "order": 3,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "War Horde",
-        "name": "Get Stuck In",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "Melee weapons equipped by **ORKS** models from your army have the **[SUSTAINED HITS 1]** ability.",
-            "type": "text"
+            "name": "Get Stuck In",
+            "sections": [
+              {
+                "text": "Melee weapons equipped by **ORKS** models from your army have the **[SUSTAINED HITS 1]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Bully Boyz",
+        "rules": [
+          {
+            "name": "Da Boss Is Watchin’",
+            "sections": [
+              {
+                "text": "At the start of your Command phase, in a turn in which you have not called a Waaagh!, if you have one or more **WARBOSS** models on the battlefield (or embarked within a **TRANSPORT** that is on the battlefield), you can call a Waaagh! for a second time this battle. When doing so, that second Waaagh! only counts as having been called for **WARBOSS**, **NOBZ** and **MEGANOBZ** units from your army.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Green Tide",
+        "rules": [
+          {
+            "name": "Mob Mentality",
+            "sections": [
+              {
+                "text": "Each time an attack targets a **BOYZ** unit from your army, models in that unit have a 6+ invulnerable save against that attack. Each time an attack targets a **BOYZ** unit from your army that contains 10 or more models, models in that unit have a 5+ invulnerable save against that attack.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Taktikal Brigade",
+        "rules": [
+          {
+            "name": "Lissen ’Ere",
+            "sections": [
+              {
+                "text": "Once per battle round, in your Command phase or after being set up on the battlefield in your Movement phase, each **BOSS SNIKROT**, **MEK** and **WARBOSS** model in your army can issue Taktiks abilities.\n\nTo do so, select one of the Taktiks abilities below and select one friendly **ORKS** unit within 6\" of that model to issue them to. That model must take a Leadership test: if failed, the selected unit suffers 1 mortal wound. Until the start of your next Command phase, the selected unit is affected by the selected Taktik. A unit cannot have Taktiks issued to it in this way more than once per battle round.\n\nTaktiks abilities cannot be issued to Battle‑shocked units, and if a unit affected by Taktiks becomes Battle‑shocked, all Taktiks cease to affect that unit while it is Battle‑shocked.\n\n**Get Stuck In**: You can re‑roll Charge rolls made for this unit.\n\n**Get On Wiv It**: Add 1 to the Strength characteristic of melee weapons equipped by models in this unit.\n\n**Sneaky Stalkin’**: **INFANTRY** and **MOUNTED** models (excluding **MEGANOBZ**) in this unit have the Stealth ability and each time a ranged attack targets this unit, those models have the Benefit of Cover against that attack.\n\n**Shoota Drills**: Each time an **INFANTRY** or **MOUNTED** model in this unit makes a ranged attack, add 1 to the Hit roll.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "More Dakka!",
+        "rules": [
+          {
+            "name": "Dakka! Dakka! Dakka!",
+            "sections": [
+              {
+                "text": "Ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[ASSAULT]** ability.\n\nWhile the Waaagh! is active for your army, during your Shooting phase, ranged weapons equipped by **ORKS INFANTRY**  and **ORKS WALKER** models from your army have the **[SUSTAINED HITS 1]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -11826,5 +11887,5 @@
       "detachment": "More Dakka!"
     }
   ],
-  "updated": "2025-11-13T18:15:14.552Z"
+  "updated": "2025-12-04T10:11:06.488Z"
 }

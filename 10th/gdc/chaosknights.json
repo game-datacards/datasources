@@ -3380,11 +3380,11 @@
     }
   ],
   "detachments": [
-    "Traitoris Lance",
-    "Houndpack Lance",
-    "Infernal Lance",
     "Iconoclast Fiefdom",
-    "Lords of Dread"
+    "Lords of Dread",
+    "Infernal Lance",
+    "Houndpack Lance",
+    "Traitoris Lance"
   ],
   "enhancements": [
     {
@@ -3660,81 +3660,295 @@
   "rules": {
     "army": [
       {
-        "name": "Dreadblades",
-        "rule": [
-          {
-            "order": 1,
-            "text": "If every model in your army has the **CHAOS** keyword, you can include either 1 **TITANIC CHAOS KNIGHTS** model or up to 3 **WAR DOG** models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your **WARLORD**, and they cannot be given Enhancements.",
-            "type": "text"
-          }
-        ]
-      },
-      {
         "name": "Harbingers of Dread",
-        "rule": [
+        "rules": [
           {
+            "text": "If your Army Faction is **CHAOS KNIGHTS,** each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6 below.\n\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.",
             "order": 1,
-            "text": "If your Army Faction is **CHAOS KNIGHTS**, each model from your army with this ability has the following Dread abilities:",
+            "title": null,
             "type": "text"
           },
           {
-            "order": 2,
-            "text": "DESPAIR (AURA)",
-            "type": "header"
-          },
-          {
-            "order": 3,
-            "text": "While an enemy unit is within 12\" of this model, each time that enemy unit takes a Battle-shock or Leadership test, subtract 1 from that test.",
+            "text": "If every model in your army has the **CHAOS** keyword, you can include either 1 **TITANIC CHAOS KNIGHTS** model or up to 3 **WAR DOG** models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your **WARLORD**, and they cannot be given Enhancements.",
+            "order": 1,
+            "title": null,
             "type": "text"
           },
           {
+            "text": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1",
             "order": 4,
-            "text": "DOOM AND DARKNESS",
-            "type": "header"
+            "title": "N/A - Deathly Terror (Aura)",
+            "type": "accordion"
           },
           {
+            "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability [see above].",
             "order": 5,
-            "text": "■ Each time this model makes an attack, if the target is Battle-shocked, add 1 to the Wound roll.\n■ Each time an attack targets this model, if the attacking model’s unit is Battle-shocked, subtract 1 from the Hit roll.",
-            "type": "text"
+            "title": "1 - Despair (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.",
+            "order": 8,
+            "title": "2 - Doom",
+            "type": "accordion"
+          },
+          {
+            "text": "Each time an attack is made against this model, if the attacking unit is Battle-shocked or more than 18\" away, subtract 1 from the Hit roll",
+            "order": 9,
+            "title": "3 - Darkness",
+            "type": "accordion"
+          },
+          {
+            "text": "In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.",
+            "order": 10,
+            "title": "4 - Dismay (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "While an enemy unit that is Below Half-strength is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.",
+            "order": 11,
+            "title": "5 - Delirium (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "Add 3\"to the range of this model’s Aura abilities.",
+            "order": 12,
+            "title": "6 - Dominion",
+            "type": "accordion"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       },
       {
         "name": "Super-heavy Walker",
-        "rule": [
+        "rules": [
           {
+            "text": "If your Army Faction is **CHAOS KNIGHTS,** each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6 below.\n\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.",
             "order": 1,
-            "text": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+            "title": null,
             "type": "text"
+          },
+          {
+            "text": "If every model in your army has the **CHAOS** keyword, you can include either 1 **TITANIC CHAOS KNIGHTS** model or up to 3 **WAR DOG** models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your **WARLORD**, and they cannot be given Enhancements.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1",
+            "order": 4,
+            "title": "N/A - Deathly Terror (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability [see above].",
+            "order": 5,
+            "title": "1 - Despair (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.",
+            "order": 8,
+            "title": "2 - Doom",
+            "type": "accordion"
+          },
+          {
+            "text": "Each time an attack is made against this model, if the attacking unit is Battle-shocked or more than 18\" away, subtract 1 from the Hit roll",
+            "order": 9,
+            "title": "3 - Darkness",
+            "type": "accordion"
+          },
+          {
+            "text": "In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.",
+            "order": 10,
+            "title": "4 - Dismay (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "While an enemy unit that is Below Half-strength is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.",
+            "order": 11,
+            "title": "5 - Delirium (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "Add 3\"to the range of this model’s Aura abilities.",
+            "order": 12,
+            "title": "6 - Dominion",
+            "type": "accordion"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
+      },
+      {
+        "name": "Dreadblades",
+        "rules": [
+          {
+            "text": "If your Army Faction is **CHAOS KNIGHTS,** each unit from your army with this ability gains Dread abilities, depending which are active for your army (see below). The Deathly Terror ability is active for your army from the start of the battle. In addition, at the start of the first, third and fifth battle rounds, you can either select one of the other Dread abilities or randomly select two Dread abilities to apply by rolling two D6 and applying the results rolled, from those numbered 1-6 below.\n\nAny Dread abilities that have been selected are active until the end of the battle. You cannot select the same Dread ability more than once, and any duplicated Dread abilities (as a result of randomly selecting them) have no additional effect.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If every model in your army has the **CHAOS** keyword, you can include either 1 **TITANIC CHAOS KNIGHTS** model or up to 3 **WAR DOG** models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your **WARLORD**, and they cannot be given Enhancements.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1",
+            "order": 4,
+            "title": "N/A - Deathly Terror (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "While an enemy unit is within 9\" of this model, worsen the Leadership characteristic of models in that unit by 1. This is cumulative with the Deathly Terror ability [see above].",
+            "order": 5,
+            "title": "1 - Despair (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "Each time this model makes an attack, if the target of that attack is Battle-shocked, add 1 to the Wound roll.",
+            "order": 8,
+            "title": "2 - Doom",
+            "type": "accordion"
+          },
+          {
+            "text": "Each time an attack is made against this model, if the attacking unit is Battle-shocked or more than 18\" away, subtract 1 from the Hit roll",
+            "order": 9,
+            "title": "3 - Darkness",
+            "type": "accordion"
+          },
+          {
+            "text": "In the Battle-shock step of your opponent’s Command phase, for each enemy unit that is below its Starting Strength and within 9\" of this model, that enemy unit must take a Battle-shock test.",
+            "order": 10,
+            "title": "4 - Dismay (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "While an enemy unit that is Below Half-strength is within 9\" of this model, each time that unit fails a Battle-shock test, it suffers D3 mortal wounds.",
+            "order": 11,
+            "title": "5 - Delirium (Aura)",
+            "type": "accordion"
+          },
+          {
+            "text": "Add 3\"to the range of this model’s Aura abilities.",
+            "order": 12,
+            "title": "6 - Dominion",
+            "type": "accordion"
+          }
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
         "detachment": "Iconoclast Fiefdom",
-        "name": "Dreaded Masters",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "**TITANIC CHAOS KNIGHTS** units from your army have the following abilities:\n\n**Dread Tyrants (Aura)**: While a friendly **DAMNED** unit is within 9\" of this unit, each time a model in that unit makes an attack, re‐roll a Hit roll of 1 and re‐roll a Wound roll of 1.\n\n**CHAOS KNIGHTS** units from your army have the following abilities:\n\n**Dark Sacrifice**: Each time a **CHAOS KNIGHTS** unit with this ability is selected to shoot or fight, it can make a Dark Sacrifice. If it does, select one friendly **DAMNED** unit within 6\". That **DAMNED** unit must take a Leadership test: if passed, destroy D3 models in that **DAMNED** unit; if failed, destroy D3+3 models in that **DAMNED** unit. In either case, then select one of the following abilities for your **CHAOS KNIGHTS** unit’s weapons to have until the end of the phase: **[LETHAL HITS]**; **[SUSTAINED HITS 1]**.",
-            "type": "text"
+            "name": "Dreaded Masters",
+            "sections": [
+              {
+                "text": "**TITANIC CHAOS KNIGHTS** units from your army have the following abilities:\n\n**Dread Tyrants (Aura)**: While a friendly **DAMNED** unit is within 9\" of this unit, each time a model in that unit makes an attack, re‐roll a Hit roll of 1 and re‐roll a Wound roll of 1.\n\n**CHAOS KNIGHTS** units from your army have the following abilities:\n\n**Dark Sacrifice**: Each time a **CHAOS KNIGHTS** unit with this ability is selected to shoot or fight, it can make a Dark Sacrifice. If it does, select one friendly **DAMNED** unit within 6\". That **DAMNED** unit must take a Leadership test: if passed, destroy D3 models in that **DAMNED** unit; if failed, destroy D3+3 models in that **DAMNED** unit. In either case, then select one of the following abilities for your **CHAOS KNIGHTS** unit’s weapons to have until the end of the phase: **[LETHAL HITS]**; **[SUSTAINED HITS 1]**.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Lords of Dread",
+        "rules": [
+          {
+            "name": "Tyrannical Court",
+            "sections": [
+              {
+                "text": "Improve the Objective Control characteristic of **CHAOS KNIGHTS CHARACTER** models from your army by 2. In addition, once per battle round, if your **WARLORD** is on the battlefield, you can use the Claimed for the Dark Gods Stratagem for 0CP.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Infernal Lance",
+        "rules": [
+          {
+            "name": "Malefic Surge",
+            "sections": [
+              {
+                "text": "In your Command phase, one or more **CHAOS KNIGHTS** units from your army can make a Malefic Surge. Each one that does must first take a Leadership test; if that test is failed, that unit suffers D3 mortal wounds. Then, until the start of your next Command phase, that unit is Empowered. While a unit is Empowered it can use one of the Malefic Surge abilities below. Once that unit has used a Malefic Surge ability, it is no longer Empowered.\n\n■ **Unholy Hunger:** When a model in this unit makes a Normal, Advance or Fall Back move, until the end of the phase, add 3\" to its Move characteristic.\n\n■ **Diabolic Power:** When this unit is selected to shoot or fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.\n\n■ **Unnatural Fortitude:** When this unit is selected as the target of an attack, until the end of the phase, select one of the following:\n○ Models in this unit have a 5+ invulnerable save.\n○ Models in this unit have the Feel No Pain 6+ ability.\n\n**Designer’s Note:** *We recommend placing a token next to Chaos Knights models that are Empowered, removing it once they have used a Malefic Surge ability, and removing all unused tokens at the start of your Command phase*",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Houndpack Lance",
+        "rules": [
+          {
+            "name": "Marked Prey",
+            "sections": [
+              {
+                "text": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a **WAR DOG** model from your army makes an attack that targets that enemy unit, if that unit is visible to the attacking model, that attack has the **[SUSTAINED HITS 1]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Traitoris Lance",
-        "name": "Forged in Terror (Aura)",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "In the Battle-shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of a **CHAOS KNIGHTS** model from your army, that enemy unit must take a Battle- shock test. For the purposes of this ability, if a unit has a Starting Strength of 1, it is considered to be below its Starting Strength while it has lost one or more wounds.",
-            "type": "text"
-          },
-          {
-            "order": 2,
-            "text": "**Designer’s Note**: This means that all enemy units within range of this Aura ability that have lost one or more models must take a Battle-shock test in your opponent’s Command phase, not just those that are Below Half-strength.",
-            "type": "textItalic"
+            "name": "Paragons of Terror",
+            "sections": [
+              {
+                "text": "At the start of the first battle round, after selecting one or more Dread abilities to be active for your army, you can select one additional Dread ability to be active for your army (this additional Dread ability cannot be randomly selected).",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -4192,5 +4406,5 @@
       "detachment": "Traitoris Lance"
     }
   ],
-  "updated": "2025-11-13T18:15:13.324Z"
+  "updated": "2025-12-04T10:11:05.759Z"
 }

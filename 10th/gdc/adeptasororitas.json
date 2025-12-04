@@ -6001,11 +6001,11 @@
     }
   ],
   "detachments": [
-    "Bringers of Flame",
-    "Army of Faith",
-    "Hallowed Martyrs",
     "Penitent Host",
-    "Champions of Faith"
+    "Hallowed Martyrs",
+    "Bringers of Flame",
+    "Champions of Faith",
+    "Army of Faith"
   ],
   "enhancements": [
     {
@@ -6258,123 +6258,172 @@
     "army": [
       {
         "name": "Acts of Faith",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
             "text": "If your Army Faction is **ADEPTA SORORITAS**, each unit from your army with this ability can perform one Act of Faith per phase. This is done using Miracle dice.",
+            "order": 1,
+            "title": null,
             "type": "text"
           },
           {
-            "order": 2,
             "text": "Gaining Miracle Dice",
+            "order": 2,
+            "title": null,
             "type": "header"
           },
           {
-            "order": 3,
             "text": "If your Army Faction is **ADEPTA SORORITAS**, you gain 1 Miracle dice:\n\n■ At the start of each battle round.\n■ Each time an **ADEPTA SORORITAS** unit from your army is destroyed.\n\nEach time you gain a Miracle dice, roll one D6. The number you roll is the value of that Miracle dice. This value cannot be changed or re‐rolled, unless a rule specifically states otherwise. Keep your Miracle dice to one side – this is your Miracle dice pool.",
+            "order": 3,
+            "title": null,
             "type": "text"
           },
           {
-            "order": 4,
             "text": "Performing an Act of Faith",
+            "order": 6,
+            "title": null,
             "type": "header"
           },
           {
-            "order": 5,
             "text": "Before making a dice roll for a model or unit from your army with the Acts of Faith ability, if you have one or more dice in your Miracle dice pool, that unit can perform an Act of Faith. If it does, select one of the dice from your Miracle dice pool to substitute that dice roll (if a roll involves more than one dice, e.g. a Charge roll or Battle-shock test, only a single dice can be substituted). The dice that is being substituted is not rolled; instead, the value of the selected Miracle dice is used as if it had been rolled (this counts as an unmodified dice roll of that value for all rules purposes). Each Miracle dice can only be selected for substitution once. Once all Miracle dice substitutions have been made, remove the chosen Miracle dice from your Miracle dice pool, and roll all remaining, unsubstituted dice that are apart of the dice roll. You can use Miracle dice when a unit performs an Act of Faith for any of the following types of dice roll:\n\n■ Advance roll\n■ Battle-shock test\n■ Charge roll\n■ Damage roll\n■ Hit roll\n■ Saving throw\n■ Wound roll",
+            "order": 7,
+            "title": null,
             "type": "text"
           },
           {
-            "order": 6,
             "text": "***Example:** Instead of rolling 2D6 to take a Battle-shock test for a unit, you could use one dice from your Miracle dice pool. If the value of that dice was 4, the unit’s Battle-shock test would be determined by rolling one D6 and adding 4 to it (i.e. it would be D6+4).*",
+            "order": 9,
+            "title": null,
             "type": "quote"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Army of Faith",
-        "name": "Sacred Rites",
-        "rule": [
+        "detachment": "Penitent Host",
+        "rules": [
           {
-            "order": 1,
-            "text": "Each **ADEPTA SORORITAS** unit from your army can perform up to two Acts of Faith per phase, instead of just one.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Bringers of Flame",
-        "name": "Fervent Purgation",
-        "rule": [
-          {
-            "order": 1,
-            "text": "Ranged weapons equipped by **ADEPTA SORORITAS** models from your army have the **[ASSAULT]** ability, and each time an attack made with such a weapon targets a unit within 6\", add 1 to the Strength characteristic of that attack.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Champions of Faith",
-        "name": "Righteous Purpose",
-        "rule": [
-          {
-            "order": 1,
-            "text": "In your Command phase, you can discard up to 3 of your Miracle dice. For each discarded, you can select one **ADEPTA SORORITAS** unit from your army. Until the start of your next Command phase, that unit is Righteous. While a unit is Righteous:\n\n■ Add 1\" to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by **BATTLE SISTERS SQUAD**, **CELESTIAN SACRESANTS** and **PARAGON WARSUITS** models in that unit by 1.",
-            "type": "text"
+            "name": "Desperate For Redemption",
+            "sections": [
+              {
+                "text": "At the start of the battle round, you can select one of the following Vows of Atonement to be active for your army until the start of the next battle round. You can only select each Vow of Atonement once per battle.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "The Path of the Penitent",
+                "order": 3,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Add 3\" to the Move characteristic of **PENITENT** models from your army.",
+                "order": 4,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "Absolution in Battle",
+                "order": 6,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Each time a unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks and Strength characteristics of melee weapons equipped by **PENITENT** models in that unit.",
+                "order": 7,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "Death Before Disgrace",
+                "order": 9,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Each time a **PENITENT** model from your army is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+                "order": 10,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Hallowed Martyrs",
-        "name": "The Blood of Martyrs",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time an **ADEPTA SORORITAS** model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.",
-            "type": "text"
+            "name": "The Blood of Martyrs",
+            "sections": [
+              {
+                "text": "Each time an **ADEPTA SORORITAS** model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Penitent Host",
-        "name": "Desperate For Redemption",
-        "rule": [
+        "detachment": "Bringers of Flame",
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of the battle round, you can select one of the following Vows of Atonement to be active for your army until the start of the next battle round. You can only select each Vow of Atonement once per battle.",
-            "type": "text"
-          },
+            "name": "Fervent Purgation",
+            "sections": [
+              {
+                "text": "Ranged weapons equipped by **ADEPTA SORORITAS** models from your army have the **[ASSAULT]** ability, and each time an attack made with such a weapon targets a unit within 6\", add 1 to the Strength characteristic of that attack.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Champions of Faith",
+        "rules": [
           {
-            "order": 2,
-            "text": "The Path of the Penitent",
-            "type": "header"
-          },
+            "name": "Righteous Purpose",
+            "sections": [
+              {
+                "text": "In your Command phase, you can select up to 3 **ADEPTA SORORITAS** units from your army (including units that are embarked within **TRANSPORTS**), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\n\n■ Add 1\" to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by **BATTLE SISTERS SQUAD**, **CELESTIAN SACRESANTS** and **PARAGON WARSUITS** models in that unit by 1.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Army of Faith",
+        "rules": [
           {
-            "order": 3,
-            "text": "Add 3\" to the Move characteristic of **PENITENT** models from your army.",
-            "type": "text"
-          },
-          {
-            "order": 4,
-            "text": "Absolution in Battle",
-            "type": "header"
-          },
-          {
-            "order": 5,
-            "text": "Each time a unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks and Strength characteristics of melee weapons equipped by **PENITENT** models in that unit.",
-            "type": "text"
-          },
-          {
-            "order": 6,
-            "text": "Death Before Disgrace",
-            "type": "header"
-          },
-          {
-            "order": 7,
-            "text": "Each time a **PENITENT** model from your army is destroyed by a melee attack, if that model has not fought this phase, roll one D6. On a 2+, do not remove it from play; the destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
-            "type": "text"
+            "name": "Sacred Rites",
+            "sections": [
+              {
+                "text": "Each **ADEPTA SORORITAS** unit from your army can perform up to two Acts of Faith per phase, instead of just one.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -6832,5 +6881,5 @@
       "detachment": "Hallowed Martyrs"
     }
   ],
-  "updated": "2025-11-13T18:15:14.003Z"
+  "updated": "2025-12-04T10:11:06.150Z"
 }

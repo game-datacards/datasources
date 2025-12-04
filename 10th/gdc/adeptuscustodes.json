@@ -4448,12 +4448,12 @@
     }
   ],
   "detachments": [
-    "Solar Spearhead",
+    "Lions of the Emperor",
     "Auric Champions",
-    "Null Maiden Vigil",
+    "Solar Spearhead",
     "Shield Host",
-    "Talons of the Emperor",
-    "Lions of the Emperor"
+    "Null Maiden Vigil",
+    "Talons of the Emperor"
   ],
   "enhancements": [
     {
@@ -4676,7 +4676,7 @@
       "name": "Honoured Fallen (Aura)",
       "id": "551da8bf-8c69-5faf-a328-0a03b9b99062",
       "cost": "15",
-      "keywords": ["Vehicle"],
+      "keywords": ["Vehicle", "Adeptus Custodes"],
       "excludes": [],
       "description": "ADEPTUS CUSTODES VEHICLE model only. While a friendly ADEPTUS CUSTODES INFANTRY or ADEPTUS CUSTODES MOUNTED unit is within 6\" of the bearer, each time a model in that unit makes an attack, re‑roll a Hit roll of 1.",
       "faction_id": "AC",
@@ -4688,7 +4688,7 @@
       "name": "Veteran of the Kataphraktoi",
       "id": "4671a39f-b2e8-5ace-b9db-054b51e2d070",
       "cost": "10",
-      "keywords": ["Infantry", "Mounted"],
+      "keywords": ["Infantry", "Adeptus Custodes", "Mounted"],
       "excludes": [],
       "description": "ADEPTUS CUSTODES INFANTRY or ADEPTUS CUSTODES MOUNTED model only. In your Command phase, select one ADEPTUS CUSTODES VEHICLE or ADEPTUS CUSTODES MOUNTED unit within 6\" of the bearer. Until the start of your next Command phase, that unit is eligible to shoot in a turn in which it Fell Back.",
       "faction_id": "AC",
@@ -4700,7 +4700,7 @@
       "name": "Superior Creation",
       "id": "58b4d1fc-d24b-5c86-aafd-077b643d9731",
       "cost": "25",
-      "keywords": ["Infantry"],
+      "keywords": ["Infantry", "Adeptus Custodes"],
       "excludes": [],
       "description": "ADEPTUS CUSTODES INFANTRY model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with its full wounds remaining.",
       "faction_id": "AC",
@@ -4754,110 +4754,161 @@
     "army": [
       {
         "name": "Martial Ka’tah",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
             "text": "Each time a unit from your army with this ability is selected to fight, select one of the Ka’tah Stances below. Until that unit has finished making its attacks, the selected Stance is active for it and it gains the relevant ability:",
+            "order": 1,
+            "title": null,
             "type": "text"
           },
           {
-            "order": 2,
             "text": "Dacatari Stance",
+            "order": 3,
+            "title": null,
             "type": "header"
           },
           {
-            "order": 3,
             "text": "Melee weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.",
+            "order": 4,
+            "title": null,
             "type": "text"
           },
           {
-            "order": 4,
             "text": "Rendax Stance",
+            "order": 6,
+            "title": null,
             "type": "header"
           },
           {
-            "order": 5,
             "text": "Melee weapons equipped by models in this unit have the **[LETHAL HITS]** ability.",
+            "order": 7,
+            "title": null,
             "type": "text"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Auric Champions",
-        "name": "Assemblage of Might",
-        "rule": [
-          {
-            "order": 1,
-            "text": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a model in an **ADEPTUS CUSTODES CHARACTER** unit from your army makes an attack that targets that enemy unit, add 1 to the Wound roll.",
-            "type": "text"
-          }
-        ]
-      },
-      {
         "detachment": "Lions of the Emperor",
-        "name": "Against All Odds",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time an **ADEPTUS CUSTODES** unit from your army (excluding **VEHICLES**) makes an attack, if there are no other friendly units within 6\" of that unit, add 1 to the Hit roll and add 1 to the Wound roll.",
-            "type": "text"
+            "name": "Against All Odds",
+            "sections": [
+              {
+                "text": "Each time a model in an **ADEPTUS CUSTODES** unit from your army (excluding **VEHICLES**) makes an attack, if there are no other friendly units within 6\" of that unit, add 1 to the Hit roll and add 1 to the Wound roll.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Null Maiden Vigil",
-        "name": "Creeping Dread (Aura)",
-        "rule": [
+        "detachment": "Auric Champions",
+        "rules": [
           {
-            "order": 1,
-            "text": "In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is either a **PSYKER** unit or below its Starting Strength is within 12\" of one or more **ANATHEMA PSYKANA** models from your army, that enemy unit must take a Battle‑shock test. If that unit is Below Half‑strength, it must subtract 1 from its Battle‑shock test this phase instead.\n\n**Designer’s Note:** *This means that all enemy **PSYKER** units within range of this Aura ability and all enemy units within range of this Aura ability that have lost one or more models must take a Battle‑shock test in your opponent’s Command phase, not just those that are Below Half‑strength.*",
-            "type": "text"
+            "name": "Assemblage of Might",
+            "sections": [
+              {
+                "text": "At the start of your Command phase, select one unit from your opponent’s army. Until the start of your next Command phase, each time a model in an **ADEPTUS CUSTODES CHARACTER** unit from your army makes an attack that targets that enemy unit, add 1 to the Wound roll.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Solar Spearhead",
+        "rules": [
+          {
+            "name": "Auric Armour",
+            "sections": [
+              {
+                "text": "■ While an **ADEPTUS CUSTODES VEHICLE** unit from your army is at Starting Strength, unless that unit is an **AIRCRAFT** or it is Battle‑shocked, add 2 to the Objective Control characteristic of models in that unit.\n■ While an **ADEPTUS CUSTODES VEHICLE** unit from your army is below Starting Strength, each time a model in that unit makes an attack, re‑roll a Hit roll of 1.\n■ While an **ADEPTUS CUSTODES VEHICLE** unit from your army is Below Half‑strength, each time a model in that unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          },
+          {
+            "name": "Moritoi Ancients",
+            "sections": [
+              {
+                "text": "Add 2\" to the Move characteristic of models in **ADEPTUS CUSTODES WALKER** units from your army and add 1 to Advance and Charge rolls made for such units.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Shield Host",
-        "name": "Martial Mastery",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of the battle round, you can select one of the bullet points below. If you do, until the start of the next battle round, that bullet point’s effects apply.\n\n■ Each time an **ADEPTUS CUSTODES** model from your army with the Martial Ka’tah ability makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.\n\n■ Improve the Armour Penetration characteristic of melee weapons equipped by **ADEPTUS CUSTODES** models from your army with the Martial Ka’tah ability by 1.",
-            "type": "text"
+            "name": "Martial Mastery",
+            "sections": [
+              {
+                "text": "At the start of the battle round, you can select one of the bullet points below. If you do, until the start of the next battle round, that bullet point’s effects apply.\n\n■ Each time an **ADEPTUS CUSTODES** model from your army with the Martial Ka’tah ability makes a melee attack, a successful unmodified Hit roll of 5+ scores a Critical Hit.\n\n■ Improve the Armour Penetration characteristic of melee weapons equipped by **ADEPTUS CUSTODES** models from your army with the Martial Ka’tah ability by 1.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Solar Spearhead",
-        "name": "Auric Armour",
-        "rule": [
+        "detachment": "Null Maiden Vigil",
+        "rules": [
           {
-            "order": 1,
-            "text": "■ While an **ADEPTUS CUSTODES VEHICLE** unit from your army is at Starting Strength, unless that unit is an **AIRCRAFT** or it is Battle‑shocked, add 2 to the Objective Control characteristic of models in that unit.\n■ While an **ADEPTUS CUSTODES VEHICLE** unit from your army is below Starting Strength, each time a model in that unit makes an attack, re‑roll a Hit roll of 1.\n■ While an **ADEPTUS CUSTODES VEHICLE** unit from your army is Below Half‑strength, each time a model in that unit makes an attack, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Solar Spearhead",
-        "name": "Moritoi Ancients",
-        "rule": [
-          {
-            "order": 1,
-            "text": "Add 2\" to the Move characteristic of models in **ADEPTUS CUSTODES WALKER** units from your army and add 1 to Advance and Charge rolls made for such units.",
-            "type": "text"
+            "name": "Creeping Dread (Aura)",
+            "sections": [
+              {
+                "text": "In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is either a **PSYKER** unit or below its Starting Strength is within 12\" of one or more **ANATHEMA PSYKANA** models from your army, that enemy unit must take a Battle‑shock test. If that unit is Below Half‑strength, it must subtract 1 from its Battle‑shock test this phase instead.\n\n**Designer’s Note:** *This means that all enemy **PSYKER** units within range of this Aura ability and all enemy units within range of this Aura ability that have lost one or more models must take a Battle‑shock test in your opponent’s Command phase, not just those that are Below Half‑strength.*",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Talons of the Emperor",
-        "name": "Revered Companions",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "**ANATHEMA PSYKANA** units from your army gain the following the ability:\n\n**Null Aegis (Aura)**: While an **ADEPTUS CUSTODES** unit is within 6\" of this unit, models in that unit have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.\n\nAll other **ADEPTUS CUSTODES** units from your army gain the following ability:\n\n**Deadly Unity (Aura)**: While an **ANATHEMA PSYKANA** unit is within 6\" of this unit, each time a model in that **ANATHEMA PSYKANA** unit makes an attack, add 1 to the Hit roll.",
-            "type": "text"
+            "name": "Revered Companions",
+            "sections": [
+              {
+                "text": "**ANATHEMA PSYKANA** units from your army gain the following the ability:\n\n**Null Aegis (Aura)**: While an **ADEPTUS CUSTODES** unit is within 6\" of this unit, models in that unit have the Feel No Pain 5+ ability against Psychic Attacks and mortal wounds.\n\nAll other **ADEPTUS CUSTODES** units from your army gain the following ability:\n\n**Deadly Unity (Aura)**: While an **ANATHEMA PSYKANA** unit is within 6\" of this unit, each time a model in that **ANATHEMA PSYKANA** unit makes an attack, add 1 to the Hit roll.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -5405,5 +5456,5 @@
       "detachment": "Shield Host"
     }
   ],
-  "updated": "2025-11-13T18:15:14.272Z"
+  "updated": "2025-12-04T10:11:06.289Z"
 }
