@@ -2,8 +2,108 @@ import { v5 as uuidv5 } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
 import { sortObj } from 'jsonabc';
+
+// Array to collect change reports for each faction
+const changeReports = [];
+
+// Progress tracking
+let currentFactionIndex = 0;
+let totalFactions = 0;
+
+// Progress bar helper
+function updateProgress(factionName, status = 'Processing') {
+  const barWidth = 30;
+  const progress = totalFactions > 0 ? currentFactionIndex / totalFactions : 0;
+  const filled = Math.round(barWidth * progress);
+  const empty = barWidth - filled;
+  const bar = '█'.repeat(filled) + '░'.repeat(empty);
+  const percent = Math.round(progress * 100);
+
+  // Clear line and write progress
+  process.stdout.write(`\r[${bar}] ${percent}% (${currentFactionIndex}/${totalFactions}) ${status}: ${factionName.padEnd(25)}`);
+}
+
+function clearProgress() {
+  process.stdout.write('\r' + ' '.repeat(100) + '\r');
+}
+
+// Helper function to deep compare two objects, ignoring specified keys
+function deepEqual(obj1, obj2, ignoreKeys = []) {
+  if (obj1 === obj2) return true;
+  if (obj1 === null || obj2 === null) return obj1 === obj2;
+  if (typeof obj1 !== 'object' || typeof obj2 !== 'object') return obj1 === obj2;
+
+  const keys1 = Object.keys(obj1).filter(k => !ignoreKeys.includes(k));
+  const keys2 = Object.keys(obj2).filter(k => !ignoreKeys.includes(k));
+
+  if (keys1.length !== keys2.length) return false;
+
+  for (const key of keys1) {
+    if (!keys2.includes(key)) return false;
+    if (!deepEqual(obj1[key], obj2[key], ignoreKeys)) return false;
+  }
+
+  return true;
+}
+
+// Helper function to sort object keys recursively (without sorting arrays)
+function sortObjectKeys(obj) {
+  if (obj === null || typeof obj !== 'object') {
+    return obj;
+  }
+  if (Array.isArray(obj)) {
+    return obj.map(sortObjectKeys);
+  }
+  const sorted = {};
+  for (const key of Object.keys(obj).sort()) {
+    sorted[key] = sortObjectKeys(obj[key]);
+  }
+  return sorted;
+}
+
+// Helper function to normalize an item for comparison (sort keys only, stringify)
+function normalizeForComparison(item) {
+  return JSON.stringify(sortObjectKeys(JSON.parse(JSON.stringify(item))));
+}
+
+// Helper function to compare arrays of items by name
+function compareByName(oldItems, newItems, itemType) {
+  const changes = {
+    added: [],
+    removed: [],
+    modified: []
+  };
+
+  const oldByName = new Map(oldItems?.map(item => [item.name, item]) || []);
+  const newByName = new Map(newItems?.map(item => [item.name, item]) || []);
+
+  // Find added and modified
+  for (const [name, newItem] of newByName) {
+    const oldItem = oldByName.get(name);
+    if (!oldItem) {
+      changes.added.push(name);
+    } else {
+      // Compare normalized JSON strings for accurate comparison
+      const oldNormalized = normalizeForComparison(oldItem);
+      const newNormalized = normalizeForComparison(newItem);
+      if (oldNormalized !== newNormalized) {
+        changes.modified.push(name);
+      }
+    }
+  }
+
+  // Find removed
+  for (const [name] of oldByName) {
+    if (!newByName.has(name)) {
+      changes.removed.push(name);
+    }
+  }
+
+  return changes;
+}
 
 const readFile = (file) => {
   if (!file) {
@@ -128,8 +228,16 @@ function removeMarkdown(str) {
 }
 
 function parseDataExport(fileName, factionName) {
+  currentFactionIndex++;
+  updateProgress(factionName, 'Reading');
+
   const oldParsedUnitsFile = readFile(fileName);
   const oldParsedUnits = sortObj(JSON.parse(oldParsedUnitsFile));
+
+  // Store original file content for comparison (will compare after write+prettier)
+  const originalFileContent = oldParsedUnitsFile;
+
+  updateProgress(factionName, 'Parsing');
 
   let foundUnits = [];
   const missingUnits = [];
@@ -234,8 +342,6 @@ function parseDataExport(fileName, factionName) {
       rules: detachmentRules,
     }
   });
-
-  console.log('Detachment rules', detachmentRules);
 
   oldParsedUnits.rules = { army: armyRules, detachment: detachmentRules };
 
@@ -992,14 +1098,100 @@ function parseDataExport(fileName, factionName) {
   }
 
   const legendsUnits = oldParsedUnits.datasheets.filter((sheet) => sheet.legends === true);
+
+  updateProgress(factionName, 'Writing');
+
   oldParsedUnits.datasheets = [...foundUnits, ...legendsUnits];
   oldParsedUnits.updated = new Date().toISOString();
   oldParsedUnits.compatibleDataVersion = JSON.parse(newDataExportFile).metadata.data_version;
 
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
-  fs.writeFileSync(path.resolve(__dirname, fileName), JSON.stringify(oldParsedUnits, null, 2));
+  const filePath = path.resolve(__dirname, fileName);
+  fs.writeFileSync(filePath, JSON.stringify(oldParsedUnits, null, 2));
+
+  updateProgress(factionName, 'Formatting');
+
+  // Run prettier on the output file
+  try {
+    execSync(`npx prettier --write "${filePath}"`, { stdio: 'pipe' });
+  } catch (e) {
+    // Prettier may not be available, continue without formatting
+  }
+
+  updateProgress(factionName, 'Comparing');
+
+  // Read the new file content after prettier
+  const newFileContent = readFile(fileName);
+
+  // Parse both files
+  const oldData = JSON.parse(originalFileContent);
+  const newData = JSON.parse(newFileContent);
+
+  // Check if data version changed BEFORE deleting the fields
+  const oldVersion = oldData.compatibleDataVersion;
+  const newVersion = newData.compatibleDataVersion;
+  const versionChanged = oldVersion !== newVersion;
+
+  // Remove fields that always change for data comparison
+  delete oldData.updated;
+  delete oldData.compatibleDataVersion;
+  delete newData.updated;
+  delete newData.compatibleDataVersion;
+
+  // Compare by section
+  const oldDatasheets = oldData.datasheets?.filter(s => !s.legends) || [];
+  const newDatasheets = newData.datasheets?.filter(s => !s.legends) || [];
+  const oldStratagems = oldData.stratagems || [];
+  const newStratagems = newData.stratagems || [];
+  const oldEnhancements = oldData.enhancements || [];
+  const newEnhancements = newData.enhancements || [];
+  const oldDetachments = oldData.detachments || [];
+  const newDetachments = newData.detachments || [];
+
+  // Compare using normalized JSON strings
+  const datasheetChanges = compareByName(oldDatasheets, newDatasheets, 'datasheets');
+  const stratagemChanges = compareByName(oldStratagems, newStratagems, 'stratagems');
+  const enhancementChanges = compareByName(oldEnhancements, newEnhancements, 'enhancements');
+
+  // Track detachment changes (simple string array comparison)
+  const detachmentChanges = {
+    added: newDetachments?.filter(d => !oldDetachments?.includes(d)) || [],
+    removed: oldDetachments?.filter(d => !newDetachments?.includes(d)) || [],
+    modified: []
+  };
+
+  // Check if there are any actual changes
+  const hasChanges =
+    datasheetChanges.added.length > 0 ||
+    datasheetChanges.removed.length > 0 ||
+    datasheetChanges.modified.length > 0 ||
+    stratagemChanges.added.length > 0 ||
+    stratagemChanges.removed.length > 0 ||
+    stratagemChanges.modified.length > 0 ||
+    enhancementChanges.added.length > 0 ||
+    enhancementChanges.removed.length > 0 ||
+    enhancementChanges.modified.length > 0 ||
+    detachmentChanges.added.length > 0 ||
+    detachmentChanges.removed.length > 0;
+
+  // Store change report
+  changeReports.push({
+    faction: factionName,
+    file: fileName,
+    filePath: filePath,
+    hasChanges,
+    versionChanged,
+    datasheets: datasheetChanges,
+    stratagems: stratagemChanges,
+    enhancements: enhancementChanges,
+    detachments: detachmentChanges
+  });
 }
+
+// Set total faction count for progress bar
+totalFactions = 29;
+console.log('Processing factions...\n');
 
 parseDataExport('./gdc/darkangels.json', 'Dark Angels');
 
@@ -1029,7 +1221,7 @@ parseDataExport('./gdc/orks.json', 'Orks');
 parseDataExport('./gdc/votann.json', 'Leagues of Votann');
 parseDataExport('./gdc/tau.json', 'T’au Empire');
 parseDataExport('./gdc/necrons.json', 'Necrons');
-parseDataExport('./gdc/aeldari.json', 'Aeldari');
+parseDataExport('./gdc/aeldari.json', 'Asuryani');
 parseDataExport('./gdc/drukhari.json', 'Drukhari');
 
 parseDataExport('./gdc/gsc.json', 'Genestealer Cults');
@@ -1045,3 +1237,198 @@ parseDataExport('./gdc/titan.json', 'Adeptus Titanicus');
 // parseDataExport('./gdc/space_marines.json', 'White Scars');
 
 // parseDataExport('./gdc/unaligned.json', 'Unaligned Forces');
+
+// Print summary report
+function printSummaryReport() {
+  // Clear progress bar and show completion
+  clearProgress();
+  console.log('\n✓ Processing complete!\n');
+  console.log('='.repeat(80));
+  console.log('CHANGE SUMMARY REPORT');
+  console.log('='.repeat(80) + '\n');
+
+  const factionsWithChanges = changeReports.filter(r => r.hasChanges);
+  const factionsWithoutChanges = changeReports.filter(r => !r.hasChanges);
+
+  if (factionsWithChanges.length === 0) {
+    console.log('No changes detected in any faction (besides data version and timestamp).\n');
+  } else {
+    console.log(`Factions with changes: ${factionsWithChanges.length}/${changeReports.length}\n`);
+
+    for (const report of factionsWithChanges) {
+      console.log('-'.repeat(60));
+      console.log(`FACTION: ${report.faction}`);
+      console.log('-'.repeat(60));
+
+      // Datasheets
+      if (report.datasheets.added.length > 0 || report.datasheets.removed.length > 0 || report.datasheets.modified.length > 0) {
+        console.log('\n  DATASHEETS:');
+        if (report.datasheets.added.length > 0) {
+          console.log(`    Added (${report.datasheets.added.length}):`);
+          report.datasheets.added.forEach(name => console.log(`      + ${name}`));
+        }
+        if (report.datasheets.removed.length > 0) {
+          console.log(`    Removed (${report.datasheets.removed.length}):`);
+          report.datasheets.removed.forEach(name => console.log(`      - ${name}`));
+        }
+        if (report.datasheets.modified.length > 0) {
+          console.log(`    Modified (${report.datasheets.modified.length}):`);
+          report.datasheets.modified.forEach(name => console.log(`      ~ ${name}`));
+        }
+      }
+
+      // Stratagems
+      if (report.stratagems.added.length > 0 || report.stratagems.removed.length > 0 || report.stratagems.modified.length > 0) {
+        console.log('\n  STRATAGEMS:');
+        if (report.stratagems.added.length > 0) {
+          console.log(`    Added (${report.stratagems.added.length}):`);
+          report.stratagems.added.forEach(name => console.log(`      + ${name}`));
+        }
+        if (report.stratagems.removed.length > 0) {
+          console.log(`    Removed (${report.stratagems.removed.length}):`);
+          report.stratagems.removed.forEach(name => console.log(`      - ${name}`));
+        }
+        if (report.stratagems.modified.length > 0) {
+          console.log(`    Modified (${report.stratagems.modified.length}):`);
+          report.stratagems.modified.forEach(name => console.log(`      ~ ${name}`));
+        }
+      }
+
+      // Enhancements
+      if (report.enhancements.added.length > 0 || report.enhancements.removed.length > 0 || report.enhancements.modified.length > 0) {
+        console.log('\n  ENHANCEMENTS:');
+        if (report.enhancements.added.length > 0) {
+          console.log(`    Added (${report.enhancements.added.length}):`);
+          report.enhancements.added.forEach(name => console.log(`      + ${name}`));
+        }
+        if (report.enhancements.removed.length > 0) {
+          console.log(`    Removed (${report.enhancements.removed.length}):`);
+          report.enhancements.removed.forEach(name => console.log(`      - ${name}`));
+        }
+        if (report.enhancements.modified.length > 0) {
+          console.log(`    Modified (${report.enhancements.modified.length}):`);
+          report.enhancements.modified.forEach(name => console.log(`      ~ ${name}`));
+        }
+      }
+
+      // Detachments
+      if (report.detachments.added.length > 0 || report.detachments.removed.length > 0) {
+        console.log('\n  DETACHMENTS:');
+        if (report.detachments.added.length > 0) {
+          console.log(`    Added (${report.detachments.added.length}):`);
+          report.detachments.added.forEach(name => console.log(`      + ${name}`));
+        }
+        if (report.detachments.removed.length > 0) {
+          console.log(`    Removed (${report.detachments.removed.length}):`);
+          report.detachments.removed.forEach(name => console.log(`      - ${name}`));
+        }
+      }
+
+      console.log('\n');
+    }
+  }
+
+  // List factions without changes
+  if (factionsWithoutChanges.length > 0) {
+    console.log('-'.repeat(60));
+    console.log('FACTIONS WITHOUT CHANGES:');
+    console.log('-'.repeat(60));
+    factionsWithoutChanges.forEach(r => console.log(`  - ${r.faction}`));
+    console.log('\n');
+  }
+
+  // Summary statistics
+  console.log('='.repeat(80));
+  console.log('STATISTICS');
+  console.log('='.repeat(80));
+  console.log(`Total factions processed: ${changeReports.length}`);
+  console.log(`Factions with changes: ${factionsWithChanges.length}`);
+  console.log(`Factions without changes: ${factionsWithoutChanges.length}`);
+
+  // Calculate totals
+  let totalDatasheetsAdded = 0, totalDatasheetsRemoved = 0, totalDatasheetsModified = 0;
+  let totalStratagemsAdded = 0, totalStratagemsRemoved = 0, totalStratagemsModified = 0;
+  let totalEnhancementsAdded = 0, totalEnhancementsRemoved = 0, totalEnhancementsModified = 0;
+  let totalDetachmentsAdded = 0, totalDetachmentsRemoved = 0;
+
+  for (const report of changeReports) {
+    totalDatasheetsAdded += report.datasheets.added.length;
+    totalDatasheetsRemoved += report.datasheets.removed.length;
+    totalDatasheetsModified += report.datasheets.modified.length;
+    totalStratagemsAdded += report.stratagems.added.length;
+    totalStratagemsRemoved += report.stratagems.removed.length;
+    totalStratagemsModified += report.stratagems.modified.length;
+    totalEnhancementsAdded += report.enhancements.added.length;
+    totalEnhancementsRemoved += report.enhancements.removed.length;
+    totalEnhancementsModified += report.enhancements.modified.length;
+    totalDetachmentsAdded += report.detachments.added.length;
+    totalDetachmentsRemoved += report.detachments.removed.length;
+  }
+
+  console.log(`\nDatasheets:    +${totalDatasheetsAdded} added, -${totalDatasheetsRemoved} removed, ~${totalDatasheetsModified} modified`);
+  console.log(`Stratagems:    +${totalStratagemsAdded} added, -${totalStratagemsRemoved} removed, ~${totalStratagemsModified} modified`);
+  console.log(`Enhancements:  +${totalEnhancementsAdded} added, -${totalEnhancementsRemoved} removed, ~${totalEnhancementsModified} modified`);
+  console.log(`Detachments:   +${totalDetachmentsAdded} added, -${totalDetachmentsRemoved} removed`);
+  console.log('='.repeat(80) + '\n');
+}
+
+// Handle git staging - only stage files with actual changes or version changes
+function handleGitStaging() {
+  console.log('='.repeat(80));
+  console.log('GIT STAGING');
+  console.log('='.repeat(80) + '\n');
+
+  const toStage = [];
+  const toRevert = [];
+
+  for (const report of changeReports) {
+    // Stage if there are actual data changes OR if the version changed
+    if (report.hasChanges || report.versionChanged) {
+      toStage.push(report);
+    } else {
+      // Only timestamp changed - revert
+      toRevert.push(report);
+    }
+  }
+
+  // Revert files with only timestamp changes
+  if (toRevert.length > 0) {
+    console.log(`Reverting ${toRevert.length} file(s) with only timestamp changes:`);
+    for (const report of toRevert) {
+      try {
+        execSync(`git checkout -- "${report.filePath}"`, { stdio: 'pipe' });
+        console.log(`  ↩ ${report.faction}`);
+      } catch (e) {
+        console.log(`  ✗ ${report.faction} (failed to revert)`);
+      }
+    }
+    console.log('');
+  }
+
+  // Stage files with actual changes
+  if (toStage.length > 0) {
+    console.log(`Staging ${toStage.length} file(s) with changes:`);
+    for (const report of toStage) {
+      const reasons = [];
+      if (report.hasChanges) reasons.push('data changes');
+      if (report.versionChanged) reasons.push('version update');
+
+      try {
+        execSync(`git add "${report.filePath}"`, { stdio: 'pipe' });
+        console.log(`  ✓ ${report.faction} (${reasons.join(', ')})`);
+      } catch (e) {
+        console.log(`  ✗ ${report.faction} (failed to stage)`);
+      }
+    }
+    console.log('');
+  }
+
+  // Summary
+  console.log('-'.repeat(60));
+  console.log(`Files staged: ${toStage.length}`);
+  console.log(`Files reverted: ${toRevert.length}`);
+  console.log('='.repeat(80) + '\n');
+}
+
+printSummaryReport();
+handleGitStaging();
