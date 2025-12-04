@@ -1,0 +1,3089 @@
+{
+  "id": "SYLVANETH",
+  "name": "Sylvaneth",
+  "grandAlliance": "Order",
+  "parentFaction": null,
+  "isLegends": false,
+  "colours": {
+    "banner": "#1E5B8C",
+    "header": "#2A7AB8"
+  },
+  "updated": "2025-12-04T20:35:11.084Z",
+  "compatibleDataVersion": 363,
+  "warscrolls": [
+    {
+      "id": "a6123b35-79ce-55c3-b385-b42531c5c0fc",
+      "name": "Alarielle the Everqueen",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": [
+        "Monster",
+        "Wizard",
+        "Unique",
+        "Ward (6+)",
+        "Fly",
+        "Warmaster",
+        "Hero"
+      ],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Alarielle is a being of ancient wisdom and terrifying power. A goddess bound to the energies of life, she exudes an aura of vitality capable of cleansing tainted lands. Yet these powers can just as soon be turned to war. At Alarielle’s command, her enemies are washed away in torrents of raging waters, strangled by thrashing ironoak roots, or transmuted to living wood. There is no mercy in the Everqueen’s heart; she has entered the season of her War Aspect and now blooms with a passion only vengeance can curb.\n\nAlarielle’s sorceries are able to summon flurries of healing pollen, as well as to mature new groves of Sylvaneth. In her right hand she wields the Spear of Kurnoth, a relic said to contain the dwindled essence of her consort and huntergod. Her left limb has been replaced by the Talon of the Dwindling, a sickle-like wooden claw that drains opponents of vitality. \n\nOne of the Everqueen’s most powerful allies is her mount, a hulking Wardroth Beetle. This titan’s horns can topple even fortress walls. When Alarielle takes wing, her Wardroth is capable of transforming into a swarm of pulsing glowspites to follow her and reform once more.",
+      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (3), Fly, Ward (6+), Order, Sylvaneth",
+      "stats": {
+        "move": "14\"",
+        "save": "3+",
+        "control": "5",
+        "health": "16",
+        "ward": "6+"
+      },
+      "points": 680,
+      "modelCount": 1,
+      "baseSize": "160mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Spear of Kurnoth",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "1",
+            "hit": "2+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "4",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Spear of Kurnoth",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": []
+          },
+          {
+            "name": "Wardroth’s Great Antlers",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "4",
+            "abilities": ["Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": null,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its Wardroth’s Great Antlers is 4."
+        },
+        {
+          "name": "Living Battering Ram",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "A charging Wardroth Beetle tramples all in its path.",
+          "declare": "If this unit charged this turn, pick an enemy INFANTRY unit within 1\" of it to be the target.",
+          "effect": "Roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Rite of Life",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Wherever the Everqueen goes, so too does the power of her great rite.",
+          "declare": "Pick a friendly SYLVANETH unit that has been destroyed to be the target. This unit can use this ability if it has been destroyed, but if it does, this unit must be the target.",
+          "effect": "Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 9\" of a friendly Awakened Wyldwood and more than 9\" from all enemy units. If the target was a MONSTER, allocate 6 damage points to the replacement unit (ward rolls cannot be made for those damage points)."
+        },
+        {
+          "name": "Metamorphosis",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "With a glare, Alarielle’s foes transform into living wood.",
+          "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Inflict 2D3 mortal damage on the target. If the target is destroyed by this spell, you can immediately resolve the effect of the ‘Treesong’ spell as if this unit had successfully cast it.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Lifebloom",
+          "phase": "heroPhase",
+          "phaseDetails": "Any Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The restorative energies of Ghyran heal Alarielle’s wounds.",
+          "declare": null,
+          "effect": "Pick 1 of the following effects:\n• Add 1 to casting rolls for this unit for the rest of the turn.\n• Heal (2D3) this unit."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "requiredKeywords": ["Forest Sentinel"],
+          "linkedWarscroll": null
+        },
+        {
+          "points": null,
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "d3339874-c9d8-55d2-9f53-95034215949c",
+      "name": "Arch-Revenant",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Forest Sentinel", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt"
+      ],
+      "fluff": "Wielding wickedly sharp glaives and borne to battle by zephyrspites that clasp their torsos, Arch-Revenants serve Alarielle as war leaders, scouts and special agents. Far afield do they roam, marshalling wargroves in accordance with the Everqueen’s will and reporting all they see back to Alarielle through their low, keening songs.\n\nArch-Revenants work in close tandem with their Kurnoth Hunter brethren, though their presence is received with caution by the Sylvaneth. The Arch- Revenants were planted by Alarielle at the height of her war aspect, when she had emerged from her long hibernation and wrought devastating vengeance against those that would harm Ghyran. This furious resolve is seeded within them, and bombastic aggression radiates within them like a midsummer storm. Though not blind to the intricate social hierarchies of their race, these spirits have little time for politics, and their brusque manner sees few glades eagerly receive them. Yet their fiery nature is an undeniable advantage over their foes. Other Sylvaneth are filled with brimming battle-lust when nearby a passionate Arch-Revenant, surging forth to enact Alarielle’s designs.",
+      "referenceKeywords": "Hero, Infantry, Fly, Order, Sylvaneth",
+      "stats": {
+        "move": "12\"",
+        "save": "4+",
+        "control": "2",
+        "health": "6",
+        "ward": null
+      },
+      "points": 120,
+      "modelCount": 1,
+      "baseSize": "40mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Revenant’s Glaive and Tail Pincers",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Champion of Kurnoth",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "An Arch‑Revenant commands instant obedience and commitment from Kurnoth Hunters who are nearby.",
+          "declare": null,
+          "effect": "Add 1 to wound rolls for combat attacks made by friendly KURNOTHI units while they are wholly within 12\" of this unit."
+        },
+        {
+          "name": "Crescent Shield",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "This shield can be used both to deflect the enemy’s blows and to steady the shaft of the bearer’s weapon.",
+          "declare": null,
+          "effect": "Pick 1 of the following effects to apply to this unit for the rest of the turn:\n\nDefensive Stance: This unit has WARD (4+).\n\nAggressive Stance: Add 1 to the Attacks characteristic of this unit’s melee weapons, and add 1 to wound rolls for this unit’s combat attacks."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "linkedWarscroll": null
+        },
+        {
+          "points": null,
+          "requiredKeywords": ["Kurnothi"],
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "088a0f57-197f-537d-8161-c1efa8056048",
+      "name": "Awakened Wyldwood",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Ward (5+)", "Faction Terrain"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt"
+      ],
+      "fluff": "When the Wyldwoods of the Sylvaneth stir, enemies of the natural order must be on their guard. The forest spirits that reside in these ancient groves are roused to terrible fury by intrusions into their domain, and will seek every chance to prey upon those foolish enough to stray beneath their shadowed boughs – even more so when arcane powers are at work nearby.\n\nThe Sylvaneth are beloved of these wild and verdant copses. The Wyldwoods’ ancient sentience recognises the efforts of Alarielle’s children to protect and cultivate life in all its forms, and will allow them to travel between them using their jade magic-laden roots. They also serve to protect those Sylvaneth that dwell within their glades, as it is only possible for foes to see a few yards into these foreboding thickets. Those unlucky enough to wander into these dense and disorienting woods find themselves lost almost immediately, with the fey laughter of the concealed Sylvaneth echoing from all around.",
+      "referenceKeywords": "Faction Terrain, Ward (5+), Order, Sylvaneth",
+      "stats": {
+        "move": "-",
+        "save": "4+",
+        "control": "-",
+        "health": "8",
+        "ward": "5+"
+      },
+      "points": null,
+      "modelCount": 1,
+      "baseSize": "Use model",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {},
+      "abilities": [
+        {
+          "name": "Vengeful Forest Spirits",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The spirits within a Sylvaneth wyldwood are easily angered by trespassers into their domain.",
+          "declare": "Pick each enemy unit within this terrain feature’s combat range to be the targets.",
+          "effect": "Roll a dice for each target. On a 4+, inflict D3 mortal damage on the target."
+        },
+        {
+          "name": "Overgrown Wilderness",
+          "phase": "shootingPhase",
+          "phaseDetails": "Passive",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Only the Sylvaneth can see more than a few yards into these foreboding thickets.",
+          "declare": null,
+          "effect": "Enemy units are visible to friendly SYLVANETH units even if every model in that enemy unit is within 1\" of this terrain feature. In addition, the Range characteristic of friendly SYLVANETH units’ ranged weapons is not halved while every model in that friendly unit is within 1\" of this terrain feature."
+        },
+        {
+          "name": "Growing Woods",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "An Awakened Wyldwood varies greatly in size and scale, but often grow rapidly once summoned by the Sylvaneth.",
+          "declare": null,
+          "effect": "Each time you set up an Awakened Wyldwood, you can place 1-3 scenery pieces (Terrain, 1.7). If you place more than 1 scenery piece, the tips at the end of each base must touch, forming a circle. The area inside this circle is considered to be part of this terrain feature. For each additional scenery piece in this terrain feature that is placed after the first:\n\n• Add 2 to the Health characteristic of this terrain feature.\n• Increase the range of friendly abilities that require friendly models to be wholly within 6\" of this terrain feature by 3\"."
+        },
+        {
+          "name": "Deploy Wyldwood",
+          "phase": "startOfTurn",
+          "phaseDetails": "Deployment Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The wyldwoods within which the Sylvaneth dwell are possessed of a bitter animus. They stir for the sole purpose of excising intruders to their tree-kin’s territories. Their reaching branches and choking roots will crush, slash and stab through any that dare come near, watering the soil with their blood.",
+          "declare": null,
+          "effect": "Set up this terrain feature wholly within friendly territory, more than 3\" from all objectives and other terrain features. This terrain feature has now been deployed.",
+          "keywords": ["Deploy Terrain"]
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "48c10826-0b6c-55e0-99fe-b83ba7218279",
+      "name": "Belthanos, First Thorn of Kurnoth",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Monster", "Kurnothi", "Unique", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt"
+      ],
+      "fluff": "Woe betide unwitting trespassers marked by Belthanos, for by the time they realise their fate, the hosts of the First Thorn will be chasing across valley, river and forest to trap their master’s prey. As the herald of the dormant hunter-god Kurnoth, Belthanos stands above his Kurnothi brethren as their leader. When he leads the Evergreen Hunt forth, primal life energy surges and ensnares foes with fresh buds and choking shoots.\n\nMany of Belthanos’s targets are not aware that they have been marked. The distinguishing feature can be as simple as the tear of a thorn or the prick of a nettle, but there can be no doubt when Belthanos sounds his terrible horn. Once blown, his prey are doomed to hear its maddeningly shrill echo right up until he plunges his Kurnoth glaive deep into their heart.\n\nThe Carnelian Greatspite that Belthanos rides is not a true insect but a construct of pure life energy; it is this creature that allows Belthanos such a measure of arboreal control. His aura of spring vibrancy bends the world around him, flushing quarry from the trees for his retinue of Kurnoth Hunters to strike down with arrow and scythe.",
+      "referenceKeywords": "Unique, Hero, Monster, Fly, Order, Sylvaneth, Kurnothi",
+      "stats": {
+        "move": "12\"",
+        "save": "3+",
+        "control": "5",
+        "health": "14",
+        "ward": null
+      },
+      "points": 350,
+      "modelCount": 1,
+      "baseSize": "150 × 95mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Carnelian Greatspite’s Razor-like Mandibles",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Companion"]
+          },
+          {
+            "name": "Kurnoth Glaive",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": null,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its Carnelian Greatspite’s Razor-like Mandibles is 3."
+        },
+        {
+          "name": "Kurnothi War-horn",
+          "phase": "chargePhase",
+          "phaseDetails": "Your Charge Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The sounding of Belthanos’s war-horn brings forth a surging response from the hunt.",
+          "declare": "Pick up to 3 friendly SYLVANETH units to be the target.",
+          "effect": "For the rest of the turn, each target can use CHARGE abilities even if they used a RUN ability in the same turn."
+        },
+        {
+          "name": "Rhythm of the Chase",
+          "phase": "combatPhase",
+          "phaseDetails": "Once per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Belthanos is a relentless hunter who harasses his quarry before fatally cutting them down.",
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll, then you can remove this unit from the battlefield and set it up again on the battlefield within 1\" of the target.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Nature Aetheric",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Battle, Start of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The Carnelian Greatspite is Ghyranite magic made manifest and where it roams, the land is imbued with life-giving energy.",
+          "declare": "Pick a terrain feature within 6\" of this unit to be the target.",
+          "effect": "For the rest of the battle, the target gains the ‘Place of Power’ terrain ability (Terrain 1.2) and counts as a friendly Awakened Wyldwood for the purposes of the ‘Endless Growth’, ‘Walk the Hidden Paths’ and ‘Strike and Fade’ abilities."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "requiredKeywords": ["Forest Sentinel"],
+          "linkedWarscroll": null
+        },
+        {
+          "points": null,
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "e34489cb-b030-5dd1-bfea-c5addf583ab5",
+      "name": "Branchwych",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Wizard", "Infantry", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Branchwyches are potent life-mages who are charged with guarding and tending a clan’s soulpod groves. It is they who bear the sombre duty of extracting lamentiri from fallen Sylvaneth, harvesting the soulseeds with reverent swings of their sickle-staves before returning to plant them in sacred soil.\n\nPart shaman and part subordinate to the Treelords, a Branchwych’s connection to the earth grants them strange intuition that any Sylvaneth would be wise to heed. The Branchwyches, however, are just as infamous for their tempers, for they are swift to anger when pressed – and the forests often reflect their anger, fed by their furious spirit.\n\nOnly the fey spites are immune to a Branchwych’s wrath, for these druidic Sylvaneth dote upon the strange little creatures. Many wondrous varieties of spite flutter around a Branchwych, but their closest companions are the bittergrubs – caterpillar-like entities that ride upon a Branchwych’s shoulder and savagely attack nearby foes. Once a bittergrub has fed sufficiently, it will metamorphosise into an emerald cocoon before splitting open to release a wave of shimmering, rejuvenating pollen across the tainted earth.",
+      "referenceKeywords": "Hero, Wizard (1), Infantry, Order, Sylvaneth",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": null
+      },
+      "points": 110,
+      "modelCount": 1,
+      "baseSize": "32mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Swarm of Spites",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)", "Companion"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Greenwood Scythe and Bittergrub",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Fury of the Forest",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Fiercely protective of the forests, Branchwyches provoke fury in their kin should their sacred domains and soulpod groves be threatened.",
+          "declare": "If this unit is wholly within 6\" of any friendly Awakened Wyldwoods, pick a friendly SYLVANETH unit wholly within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, the target has STRIKE-FIRST for the rest of the turn."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "requiredKeywords": ["Infantry"],
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "43c8cb82-4bb5-5ad2-995d-940bce108fe6",
+      "name": "Dryads",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Infantry"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "While motionless, a Dryad can appear as some inert trunk twisted by many seasons’ growth – until their wooden talons begin clicking and their eyes flash with wrath. When at war, a copse of Dryads acts akin to a singular entity, each mind linked by the magic of their spirit-song.\n\nOnce, the Dryads sang whimsical and joyous choruses – their elder Branch Nymphs are renowned for their ability to revitalise entire woodlands. However, centuries of woe have seen the song of the Dryads darken. The wailing notes of the Forest Folk – laments of loss and profound anger – leave the foe fearful and disoriented. These songs also call upon the lands that the Dryads tend so carefully, summoning thickets of tanglevines to ward off enemy blows.\n\nThough they will heed the wishes of a wargrove’s commander in the manner of the innately hierarchical Sylvaneth, Dryads are not soldiers – only killers. They are adept ambushers, slipping through dense wyldwoods to emerge where the foe least expects them. Then the Dryads begin their murderous work, talons lashing out with such fury that they can find purchase upon even the armour of Chaos.",
+      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "1",
+        "health": "1",
+        "ward": null
+      },
+      "points": 90,
+      "modelCount": 10,
+      "baseSize": "32mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Wracking Talons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Blessings of The Forest",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The forest folk draw upon currents of life magic running through their surroundings like freshwater streams, harnessing the energies to shield themselves from harm.",
+          "declare": null,
+          "effect": "Subtract 1 from hit rolls and wound rolls for attacks that target this unit while it is wholly within 6\" of any friendly Awakened Wyldwoods."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "9fa5bfb1-75bf-54e1-821a-0bb72b659cd0",
+      "name": "Drycha Hamadreth",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Monster", "Wizard", "Unique", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Drycha Hamadreth is man’s terror of the deep woods made manifest. Her loathing for all not born of the forests is endless. It would be preferable to perish at her wicked talons or the jaws of the deranged spite-swarms that surround her than be dragged off by her disciples to meet a grisly, unknowable fate amidst the darksome groves. Drycha is an old and bitter spirit. She was planted in the dark years of the Age of Chaos within the shaded vale of Hamadrithil.\n\nDrycha is a twisted monster of a forest spirit, cultivated in the hour of Alarielle’s fury and despair and thrust into fighting from the moment of her birth. Thorned vines lash furiously about her towering form as attendant spites buzz with a hunger for slaughter. She sings a song of bloodshed that draws in the most blackhearted and bitter of the Sylvaneth. Drycha and her followers now slaughter not only the followers of Nurgle, but any perceived trespassers to Ghyran.\n\nDespite their grievances, Drycha and Alarielle both grudgingly recognise that they each embody crucial aspects of the natural world. Drycha is willing to fight alongside those the Everqueen deems allies, though ‘accidents’ and disappearances abound.",
+      "referenceKeywords": "Unique, Hero, Monster, Wizard (1), Order, Sylvaneth",
+      "stats": {
+        "move": "9\"",
+        "save": "3+",
+        "control": "5",
+        "health": "10",
+        "ward": null
+      },
+      "points": 240,
+      "modelCount": 1,
+      "baseSize": "105 x 70mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Flitterfuries",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "10",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Shoot in Combat", "Companion"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Swarm of Squirmlings",
+            "type": "melee",
+            "range": null,
+            "attacks": "10",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Anti-INFANTRY (+1 Rend)", "Companion"]
+          },
+          {
+            "name": "Slashing Talons",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Primal Terror",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Throwing back her head, Drycha gives voice to a soul-rending scream of anguish and pain.",
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 2+, halve the target’s control score (rounding up) for the rest of the turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Song of Spite",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "castingValue": 6,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Drycha shares a special kinship with the Outcasts, who seem to echo her fury.",
+          "declare": "Pick an enemy INFANTRY unit within 12\" of the caster to be the target, then make a casting roll of 2D6.",
+          "effect": "The following effects apply for the rest of the turn:\n\nAdd 1 to hit rolls for combat attacks made by friendly SYLVANETH units that target that enemy unit.\n\nIn addition, add 1 to wound rolls for combat attacks made by friendly Spite-Revenants or The Twistweald units that target that enemy unit.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Mercurial Aspect",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn, Any Hero Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The Flitterfuries that dwell in Drycha’s body bask in the heat of her rage, while the Squirmlings she hosts suckle at her sorrow.",
+          "declare": null,
+          "effect": "Pick 1 of the following effects to apply to this unit for the rest of the turn:\n\nEnraged: Add 10 to the Attacks characteristic of this unit’s Flitterfuries.\n\nEmbittered: Add 10 to the Attacks characteristic of this unit’s Swarm of Squirmlings."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "requiredKeywords": ["Forest Sentinel"],
+          "linkedWarscroll": null
+        },
+        {
+          "points": null,
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "b78b3896-a40b-50ac-a58c-b2e3c8871801",
+      "name": "Gladewyrm",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Manifestation", "Endless Spell", "Ward (6+)"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Gladewyrms are ferocious subterranean spites formed from concentrated life magic. They work with the Sylvaneth to protect the realmroots – spirit paths that stretch between the glades of the realms – from eldritch invaders. Those that can channel Ghyran’s jade magic are capable of communing with these creatures via arcane means, allowing them to summon Gladewyrms to aid them in battle. With but a word, these half-real creatures leave their duty to erupt from the earth and wreak havoc throughout blindsided enemy front lines.\n\nBursting through the midst of the battlefield, Gladewyrms sow destruction with their fearsome mandibles and bladed carapaces, their prodigious size allowing them to skewer and crush multiple foes at once. Their intelligence, however, is far greater than that of a simple predator. Gladewyrms are able to sense when their tree-allies are suffering or endangered, and they are capable of exhaling emerald clouds of pure life magic that revive all children of Alarielle.",
+      "referenceKeywords": "Manifestation, Endless Spell, Ward (6+), Order, Sylvaneth",
+      "stats": {
+        "move": "8\"",
+        "save": "4+",
+        "control": "7+",
+        "health": "7",
+        "ward": "6+"
+      },
+      "points": null,
+      "modelCount": 1,
+      "baseSize": "Use model",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Fearsome Mandibles and Bladed Carapace",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": ["Anti-WIZARD (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Burrow Below",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Navigating the realmroots and ley lines in search of prey, Gladewyrms are able to burrow deep into the earth before reappearing elsewhere.",
+          "declare": null,
+          "effect": "If this MANIFESTATION is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9\" from all enemy non‑WIZARD units and more than 3\" from all enemy WIZARDS.",
+          "keywords": ["Core"]
+        },
+        {
+          "name": "Feed on Eldritch Energy",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The Gladewyrm emerges from below to protect the realmroots from hostile magic.",
+          "declare": "Pick an enemy WIZARD in combat with this MANIFESTATION to be the target.",
+          "effect": "Subtract 1 from casting rolls, unbinding rolls and banishment rolls for the target until the end of your next turn."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "ec196286-379f-5c68-8bf7-0923f5b94d7b",
+      "name": "Gossamid Archers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Infantry", "Fly"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "The Gossamid Archers are as graceful as they are deadly, weaving through the trees as if one with the wind itself before silently sending an arrow between the eyes of their foes. These skirmishers are infamous for their punishing accuracy and the hideous fate of those struck by their projectiles. Gossamid Archers are given the power of flight by the zephyrspites that clasp their torsos, magical creatures with powerful, buzzing double wings. Such is the bond between Sylvaneth and spite that, should a retreat need to be made, the zephyrspites will detach and fly at the enemy to buy time for their master.\n\nThough the Gossamids’ bows are supple and strong, it is their arrow shafts that hold the secret to their lethality. The quiverbug each keeps at their hip extrudes a special type of larval pod, its shape akin to an arrow. When fired into the flesh of an enemy, the ravenous grubs couched within the arrowhead hatch, eat and grow to maturity in seconds, usually resulting in a shocking explosion of gore. Once their gestation is complete, a buzzing whirlwind of new quiver-bugs will fly off, seeking out more Gossamids to recommence the cycle of life-through death.",
+      "referenceKeywords": "Infantry, Champion, Fly, Order, Sylvaneth",
+      "stats": {
+        "move": "12\"",
+        "save": "5+",
+        "control": "1",
+        "health": "2",
+        "ward": null
+      },
+      "points": 120,
+      "modelCount": 5,
+      "baseSize": "32mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Gossamid Bow",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)", "Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Cruel Talons",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Zephyrspites",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn, Any Shooting Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "These buzzing insectile symbiotes can be released to confound the attacks of the foe for a short time as their masters sprint off to find safety anew.",
+          "declare": null,
+          "effect": "If this unit used a SHOOT ability this phase, this unit can move D6\". It cannot end that move in combat."
+        },
+        {
+          "name": "Forest Fighters",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "These warriors fight in loosely scattered formations, the better to take advantage of the terrain in their arboreal domains.",
+          "declare": null,
+          "effect": "This unit has a coherency range of 2\"."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "1229a46e-d12a-5f9e-b3e7-26d9480593b3",
+      "name": "Kurnoth Hunters with Kurnoth Greatbows",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Kurnothi", "Infantry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt"
+      ],
+      "fluff": "Kurnoth Hunters are considered taciturn and strange even by other Sylvaneth. Their soulpods were planted after Alarielle’s metamorphosis into her war aspect, and what emerged was unlike anything that had come before. Masters of weapons as large as mortal men, Kurnoth Hunters are the knights of the forest, and their presence heralds a coming time of trial. Kurnoth Hunters will hunt down their prey with never-ending stamina, enduring defiantly as they strike down their foes.\n\nKurnoth Hunters are capable of detecting the subtlest arcane vibrations along the realmroots and spreading a portion of this power to their kin. Their affinity with the land also makes them excellent scouts; they often serve to secure sacred sites before the Sylvaneth’s enemies – or ostensible allies – can reach them.\n\nGiants amongst the forest kindred, those Kurnoth Hunters skilled in archery wield enormous greatbows in battle. Each of these weapons is sung into shape rather than carved; through the use of the Kurnoth Hunters’ keening melody, they can coax their bows into being from the boughs of the Oak of Ages Past. They are relentless in pursuit of their quarry, able to stalk their prey across entire nations without tiring.",
+      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Kurnothi",
+      "stats": {
+        "move": "5\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null
+      },
+      "points": 200,
+      "modelCount": 3,
+      "baseSize": "50mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Kurnoth Greatbow",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Anti-HERO (+1 Rend)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Vicious Claws",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Envoys of the Everqueen",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Kurnoth Hunters heed the will of Alarielle through arcane vibrations in nexuses of the realmroots.",
+          "declare": null,
+          "effect": "While this unit is contesting an objective, friendly SYLVANETH units contesting that objective have WARD (6+)."
+        },
+        {
+          "name": "Steady Aim",
+          "phase": "shootingPhase",
+          "phaseDetails": "Your Shooting Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Kurnoth Hunters take the time to steady their aim and line up a priority target before unleashing their arrows with deadly precision.",
+          "declare": null,
+          "effect": "For the rest of the turn, this unit can ignore the effects of the ‘Guarded Hero’ ability (Core Rules, 25.0) when picking targets for its shooting attacks."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "22361754-b8d2-518a-829d-498e72faa9f8",
+      "name": "Kurnoth Hunters with Kurnoth Greatswords",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Kurnothi", "Infantry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt"
+      ],
+      "fluff": "Kurnoth Hunters are considered taciturn and strange even by other Sylvaneth. Their soulpods were planted after Alarielle’s metamorphosis into her war aspect, and what emerged was unlike anything that had come before. Masters of weapons as large as mortal men, Kurnoth Hunters are the knights of the forest, and their presence heralds a coming time of trial. Kurnoth Hunters will hunt down their prey with never-ending stamina, enduring defiantly as they strike down their foes.\n\nKurnoth Hunters are capable of detecting the subtlest arcane vibrations along the realmroots and spreading a portion of this power to their kin. Their affinity with the land also makes them excellent scouts; they often serve to secure sacred sites before the Sylvaneth’s enemies – or ostensible allies – can reach them.\n\nThose Kurnothi that wield greatswords are the immovable front lines of the Sylvaneth warglades. They charge through the enemy with bludgeoning strides and swinging blades, decapitating those that do not fall beneath their churning roots. It is their job to cut down the enemy before they can approach the sacred groves of the Sylvaneth or to hunt and punish those that have affronted the Everqueen.",
+      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Kurnothi",
+      "stats": {
+        "move": "5\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null
+      },
+      "points": 210,
+      "modelCount": 3,
+      "baseSize": "50mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Kurnoth Greatsword",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Envoys of the Everqueen",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Kurnoth Hunters heed the will of Alarielle through arcane vibrations in nexuses of the realmroots.",
+          "declare": null,
+          "effect": "While this unit is contesting an objective, friendly SYLVANETH units contesting that objective have WARD (6+)."
+        },
+        {
+          "name": "Trample Underfoot",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Kurnoth Hunters use their size and strength against their foes, stamping on and crushing them.",
+          "declare": "If this unit charged this turn, pick an enemy unit that is in combat with this unit to be the target.",
+          "effect": "Roll a dice for each model in this unit. For each 3+, inflict 1 mortal damage on the target."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "a866f0b0-6493-5d27-99ca-5eb0c8794f86",
+      "name": "Kurnoth Hunters with Kurnoth Scythes",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Kurnothi", "Infantry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt"
+      ],
+      "fluff": "Kurnoth Hunters are considered taciturn and strange even by other Sylvaneth. Their soulpods were planted after Alarielle’s metamorphosis into her war aspect, and what emerged was unlike anything that had come before. Masters of weapons as large as mortal men, Kurnoth Hunters are the knights of the forest, and their presence heralds a coming time of trial. Kurnoth Hunters will hunt down their prey with never-ending stamina, enduring defiantly as they strike down their foes.\n\nKurnoth Hunters are capable of detecting the subtlest arcane vibrations along the realmroots and spreading a portion of this power to their kin. Their affinity with the land also makes them excellent scouts; they often serve to secure sacred sites before the Sylvaneth’s enemies – or ostensible allies – can reach them.\n\nThose Kurnothi that favour the scythe attack with great, graceful sweeps of their blade, capable of bisecting any enemies of the forest that attempt to pass them by. Striding forward with calm and implacable purpose, they carve furrows through the enemy ranks, sending heads and limbs flying like scattered leaves. These steadfast hunters sprout thick weaves of thorny branches that pin their foes in place, tearing limbs from their bodies should they try to move.",
+      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Kurnothi",
+      "stats": {
+        "move": "5\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null
+      },
+      "points": 190,
+      "modelCount": 3,
+      "baseSize": "50mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Kurnoth Scythe",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "3",
+            "abilities": ["Anti-charge (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Envoys of the Everqueen",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Kurnoth Hunters heed the will of Alarielle through arcane vibrations in nexuses of the realmroots.",
+          "declare": null,
+          "effect": "While this unit is contesting an objective, friendly SYLVANETH units contesting that objective have WARD (6+)."
+        },
+        {
+          "name": "Tanglethorn Thicket",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Kurnoth Hunters sprout thick weaves of thorned branches that pin their foe in place and tear them to shreds if they try to move.",
+          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+          "effect": "Roll a dice for each model in this unit. For each 3+, inflict 1 mortal damage on the target."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "09eeb6f0-d833-5d84-b76f-b82316101cf9",
+      "name": "Kurnoth’s Heralds",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Kurnothi", "Unique", "Cavalry"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "As graceful as they are merciless, Kurnoth’s Heralds have sworn to hunt and slay any trespassers who threaten the sanctity of Kurnotheal. They are led by Ylarin, Master of the Paths – a grizzled huntsman and veteran warden of the wild. Cullon is the warband’s mightiest fighter, as strong and resolute as an elder ironoak, while sharpshooter Lenwythe is so skilful that she can put an arrow through a grot’s eye at five hundred paces.",
+      "referenceKeywords": "Unique, Cavalry, Champion, Order, Sylvaneth, Kurnothi",
+      "stats": {
+        "move": "12\"",
+        "save": "5+",
+        "control": "1",
+        "health": "3",
+        "ward": null
+      },
+      "points": 110,
+      "modelCount": 3,
+      "baseSize": "60 x 35mm [3]",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Kurnothi Bow",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Hunter Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Graceful Leaps",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "&x20;The agility and deer-like lower bodies of these Kurnothi allow them to leap right over the heads of the foe in the middle of combat.",
+          "declare": null,
+          "effect": "Each time this unit makes a pile-in move:\n• Add 3\" to the distance this unit can move.\n• This unit can pass through models in enemy units."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "02e787cd-b416-5293-b7b0-42f00b02b43b",
+      "name": "Revenant Seekers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Standard Bearer", "Musician", "Fly", "Cavalry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt"
+      ],
+      "fluff": "The Revenant Seekers are charged with a critical mission: to travel to far-flung locations where wargroves have fallen and retrieve the precious lamentiri of the slain. They travel upon dragonspites – insectoid predators known for their agility. The Revenant Seekers are armed with sickles so redolent in the magic of the harvest that they can slice through steel like corn, and in their off hands, they bear shields imbued with the power of the Oak of Ages Past. Revenant Seekers are far less prone to flights of whimsy than their kin due to the solemnity of their duty, and the dirge-like, mourning refrains that they contribute to the spirit-song are prized only in those glades of the grimmest disposition.\n\nOn the battlefield, however, the Revenant Seekers’ moribund demeanour is replaced by a fierce determination. Fuelled by a desire to protect the legacy of their people, they will fly into the very jaws of death to this end. The rituals by which the Seekers extract the lamentiri from dead Sylvaneth fills nearby forest spirits with a portion of their kin’s final energies. This essence knits wounds back together and regrows lost limbs as a last gift from the fallen, imparted only to those who fight to ensure the continuation of their race.",
+      "referenceKeywords": "Cavalry, Champion, Musician (1/3), Standard Bearer (1/3), Fly, Order, Sylvaneth",
+      "stats": {
+        "move": "12\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null
+      },
+      "points": 200,
+      "modelCount": 3,
+      "baseSize": "60mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Seeker’s Sickle",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Mortal)"]
+          },
+          {
+            "name": "Sharp Mandibles",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Thrumming With Life",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Ancient creatures who endured the death of a world, dragonspites possess a deep connection to the energies of life, and are almost impossible to slay.",
+          "declare": null,
+          "effect": "Heal (3) this unit."
+        },
+        {
+          "name": "Harvesters of the Lamentiri",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The lamentiri collected by Revenant Seekers are potent stores of life energy that can be harnessed in desperate situations to heal and empower fellow Sylvaneth.",
+          "declare": null,
+          "effect": "Each time a friendly unit wholly within 12\" of any friendly Revenant Seekers units uses the ‘Rally’ command, you can make 3 additional rally rolls of D6."
+        },
+        {
+          "name": "Forest Fighters",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "These warriors fight in loosely scattered formations, the better to take advantage of the terrain in their arboreal domains.",
+          "declare": null,
+          "effect": "This unit has a coherency range of 2\"."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "41eab626-8ebb-5dae-84e6-0d3711753778",
+      "name": "Scourge of Ghyran Drycha Hamadreth",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Monster", "Wizard", "Unique", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Ghyran’s most ruthless and cruel-hearted defender, the feared Drycha Hamadreth is as much a living hive as a true forest spirit. When her home realm is threatened, Drycha’s spite-swarms become more furious and potent than ever, impeding their advance and rendering them staggering and helpless in the face of a Sylvaneth attack.",
+      "referenceKeywords": "Unique, Hero, Monster, Wizard (1), Order, Sylvaneth",
+      "stats": {
+        "move": "10\"",
+        "save": "3+",
+        "control": "5",
+        "health": "12",
+        "ward": null
+      },
+      "points": 300,
+      "modelCount": 1,
+      "baseSize": "105 x 70mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Slashing Talons",
+            "type": "melee",
+            "range": null,
+            "attacks": "10",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (2 Hits)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Twisted Spirit-Song",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "castingValue": 6,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Disharmonious and laced with anger, Drycha’s spirit-song fills her allies with rage.",
+          "declare": "Pick a visible friendly SYLVANETH unit wholly within 12\" of this unit to be the target. Then, make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, add 1 to wound rolls for the target’s combat attacks, including those made with Companion weapons.\n\nIn addition, if the target is non-KURNOTHI, add 1 to the Attacks characteristics of the target’s melee weapons.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Strength from Spite",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Having absorbed the dark and bitter energies permeating the cursed earth of the Hamadrithil, Drycha’s talons easily shred defences both mundane and magical.",
+          "declare": null,
+          "effect": "Ward rolls cannot be made for damage points inflicted by this unit’s attacks."
+        },
+        {
+          "name": "Vicious Spiteswarms",
+          "phase": "chargePhase",
+          "phaseDetails": "Reaction: Opponent declared a CHARGE ability for a unit within 18\" of this unit",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "lore": "Swarms of Flitterfuries and Squirmlings pour forth from the hives within Drycha’s towering barkflesh form.",
+          "declare": null,
+          "effect": "Your opponent must pick 1 of the following:\n\nAvoid the Swarm: Subtract D3 from the charge roll. In addition, if your opponent re-rolls that charge roll, subtract D3 from that roll.\n\nCharge Through the Swarm: Subtract 1 from hit rolls for that unit’s attacks for the rest of the turn, and add 1 to hit rolls for attacks that target that unit for the rest of the turn.",
+          "keywords": ["Rampage"]
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "requiredKeywords": ["Forest Sentinel"],
+          "linkedWarscroll": null
+        },
+        {
+          "points": null,
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "3ea1d24d-4aa5-5727-b174-7826b3b6d71e",
+      "name": "Scourge of Ghyran Revenant Seekers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Standard Bearer", "Musician", "Fly", "Cavalry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt"
+      ],
+      "fluff": "Riding atop fierce dragonspites and armed with sickles that can slice through ironoak bark, Revenant Seekers have the dangerous task of recovering lamentiri from fallen Sylvaneth. Tragically, when war comes to Ghyran, these soul-seeds are in plentiful number; in desperate times, their innate magic can be channelled by the Revenant Seekers to aid nearby Sylvaneth.",
+      "referenceKeywords": "Cavalry, Champion, Musician (1/3), Standard Bearer (1/3), Fly, Order, Sylvaneth",
+      "stats": {
+        "move": "12\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null
+      },
+      "points": 230,
+      "modelCount": 3,
+      "baseSize": "60mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Sharpened Mandibles",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
+          },
+          {
+            "name": "Scourge Sickle",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Lamentiri Life Energies",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The lamentiri recovered by Revenant Seekers from fallen Sylvaneth have powerful mystical properties that can be harnessed to benefit others of their kind.",
+          "declare": "Pick a visible friendly SYLVANETH unit wholly within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, the target has WARD (5+) for the rest of the turn."
+        },
+        {
+          "name": "Forest Fighters",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "These warriors fight in loosely scattered formations, the better to navigate the dense terrain of their arboreal domains.",
+          "declare": null,
+          "effect": "This unit has a coherency range of 2\"."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "30a8ed93-7fd8-5ca2-9250-0742adcfa2b9",
+      "name": "Skaeth's Wild Hunt",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": [
+        "Champion",
+        "Kurnothi",
+        "Wizard",
+        "Musician",
+        "Unique",
+        "Infantry"
+      ],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Skaeth and his Kurnothi kin are merciless hunters of those who would dare despoil the wilderness, running their prey to ground before piercing their hearts with spears, arrows and hurled javelins.",
+      "referenceKeywords": "Unique, Infantry, Champion, Musician (1/5), Order, Sylvaneth, Kurnothi",
+      "stats": {
+        "move": "6\"",
+        "save": "6+",
+        "control": "1",
+        "health": "2",
+        "ward": null
+      },
+      "points": 90,
+      "modelCount": 5,
+      "baseSize": "50 × 25mm [1], 32mm [3], 25mm [1]",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Wild Hunt Ranged Weapons",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Tracker Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Fleet of Foot",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Skaeth’s Wild Hunt advance on their foes with the speed of an autumn gale.",
+          "declare": null,
+          "effect": "This unit can use SHOOT and/or CHARGE abilities even if it used a RUN or RETREAT ability in the same turn."
+        },
+        {
+          "name": "Karthaen",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "With a blast of his horn, the air itself comes to the aid of Karthaen.",
+          "declare": null,
+          "effect": "While this unit’s Karthaen, Huntcaller, is on the battlefield, it has WIZARD (1)."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "4ec0f889-ff72-57a8-86b5-966a51a130cc",
+      "name": "Spirit of Durthu",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Monster", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Spirits of Durthu are amongst the mightiest of all Treelords, behemoths of bark and sap that serve as warrior champions of the wargroves. Armed with huge guardian swords that thrum with pure life energies, and able to conjure blasts of raw Ghyranite energy that turn their foes to verdant mulch, a Spirit of Durthu will never yield. When they plant their root-like feet, entire vanguards have been known to break against them.\n\nThe Spirits of Durthu serve as the Everqueen’s ambassadors, and as lifewards to those Sylvaneth deemed crucial to her plans, setting them apart from the hierarchy of the Glades. Alarielle herself is attended by the Sons of Durthu, hand-picked and fanatically loyal bodyguards. In the Age of Chaos, she banished the Sons in a fit of despair – yet they never lost faith in their goddess, and fought on as lonely guardians of her most sacred retreats. Since her rebirth, Alarielle has summoned her champions once more. Now the Sons of Durthu are redolent with the energies of life, making them living fonts of bountiful Ghyranite magic.",
+      "referenceKeywords": "Hero, Monster, Order, Sylvaneth",
+      "stats": {
+        "move": "5\"",
+        "save": "3+",
+        "control": "5",
+        "health": "14",
+        "ward": null
+      },
+      "points": 320,
+      "modelCount": 1,
+      "baseSize": "105 x 70mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Verdant Blast",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Massive Impaling Talons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Crit (Mortal)"]
+          },
+          {
+            "name": "Guardian Sword",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "5",
+            "abilities": ["Anti-MONSTER (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": null,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its Guardian Sword is 3."
+        },
+        {
+          "name": "Titanic Duel",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "These ancient protectors of the forest parry and hold back the mightiest of beasts with their guardian sword.",
+          "declare": "Pick an enemy MONSTER in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, subtract 1 from the Attacks characteristic of the target’s melee weapons for the rest of the turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Wrathful Guardian",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "When the sacred groves of the Sylvaneth are threatened, Spirits of Durthu fight with all the wrath of their legendary ancestor.",
+          "declare": null,
+          "effect": "Add 1 to hit rolls for this unit’s combat attacks while the target is within 3\" of an Awakened Wyldwood."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "requiredKeywords": ["Forest Sentinel"],
+          "linkedWarscroll": null
+        },
+        {
+          "points": null,
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "5e2c4c50-5698-5a28-82c8-853b5cbae53f",
+      "name": "Spite-Revenants",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Infantry"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Spite-Revenants are shrieking terrors wrought in the image of the deepest and most twisted woodlands. Light and shadow fluctuate around these ghastly beings as they tear and bite their victims, rending to bloody tatters any who do not fling down their weapons and flee. The Spite-Revenants were not grown like other Sylvaneth, but simply appeared within the Mortal Reams in increasing numbers since the winter of Alarielle’s despair. They embody the darkest of the natural cycles which sees them shunned even by their own kin, some of whom believe that their bitter malaise can spread. Many Spite-Revenants band together in exile and are collectively known as the Outcasts.\n\nSome say the Spite-Revenants were once spites who made grim bargains in an effort to become true Sylvaneth, or else are the product of a ritual of Alarielle’s that went hideously awry. When war calls, these twisted creatures creep forth from hidden groves, bodies glowing with eerie wisp-lights. Though their talons are sharp, the greatest weapon of the Spite-Revenants are their voices, for while they cannot harmonise with the spirit-song, they wail cacophonies of nerveshredding dissonance.",
+      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth",
+      "stats": {
+        "move": "5\"",
+        "save": "5+",
+        "control": "1",
+        "health": "2",
+        "ward": null
+      },
+      "points": 80,
+      "modelCount": 5,
+      "baseSize": "32mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Cruel Talons and Fangs",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Unbridled Malice",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Spite-Revenants fill the air with blood-chilling curses and wailed disharmonies in unknowable tongues.",
+          "declare": "Pick an enemy INFANTRY unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, the target cannot use commands for the rest of the turn."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "084707c4-3236-53e9-a5f1-60fdd54339e3",
+      "name": "Spiterider Lancers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Standard Bearer", "Musician", "Fly", "Cavalry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt"
+      ],
+      "fluff": "Spiterider Lancers are unions of tree-spirit and insectoid predator. With astounding agility they whirl above the battlefield before diving into a sudden, swift charge. To tame a dragonspite, a Sylvaneth must call upon the deepest notes of the spirit-song, soothing the flighty creatures through the emotion of their chorus. Should the dragonspite echo the song in its hissing voice – and not lash out with its mandibles to tear the supplicant apart – the Sylvaneth will be permitted to clamber atop their new steed. Only then are they deemed worthy to join Alarielle’s elite.\n\nDragonspites were once natives of the World-that-Was, nestling within the bark of the Oak of Ages. Even as the world ended and that great tree was cast into the void, the dragonspites survived, trapped within mystical amber. When Alarielle sang the Rite of Life to restore the realms from corruption, this amber was sent running like wax and the dragonspites were freed, swollen through the magics they had absorbed. Alarielle’s song has become entwined with their souls, and only a single mighty blow can hope to overcome their regenerative capabilities – otherwise they will heal and endure, as endless as the seasons.",
+      "referenceKeywords": "Cavalry, Champion, Musician (1/3), Standard Bearer (1/3), Fly, Order, Sylvaneth",
+      "stats": {
+        "move": "12\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null
+      },
+      "points": 190,
+      "modelCount": 3,
+      "baseSize": "60mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Spiterider Lance",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)", "Anti-CAVALRY (+1 Rend)"]
+          },
+          {
+            "name": "Sharp Mandibles",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Thrumming with Life",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Ancient creatures who endured the death of a world, dragonspites possess a deep connection to the energies of life, and are almost impossible to slay.",
+          "declare": null,
+          "effect": "Heal (3) this unit."
+        },
+        {
+          "name": "Descent of the Spiteriders",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Should the buzzing chorus of the Spiterider Lancers be heard, it is already too late to evade their devastating charge.",
+          "declare": null,
+          "effect": "If this unit charged this turn, roll a dice. On a 3+, this unit has STRIKE-FIRST for the rest of the turn."
+        },
+        {
+          "name": "Forest Fighters",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "These warriors fight in loosely scattered formations, the better to take advantage of the terrain in their arboreal domains.",
+          "declare": null,
+          "effect": "This unit has a coherency range of 2\"."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "be038cc4-5918-53d2-977f-51516bcfb141",
+      "name": "Spiteswarm Hive",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Manifestation", "Endless Spell", "Ward (6+)"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "With a humming chant, those versed in the magic of Ghyran can summon a Spiteswarm Hive. The air thrums near the comb, and the luminescent Spiteswarms buzz forth to swarm around their Sylvaneth companions. The insect-clouds blanket hosts of Sylvaneth to protect against missiles and cover retreats. Their mandibles are laden with pure life magic, and at a word from their summoner, they will dive forth to deliver vitalising bites that can re-energise weary troops.\n\nThough many Sylvaneth use magic to channel Spiteswarms onto the battlefield, the shamanic Swarmsages will carry their own hives with them. Outside of battle, the Swarmsages traditionally use Spiteswarms to cleanse lands tainted by Chaos, for the insects’ innate purifying magic allows them to consume corruption. Each warglade cultivates these insects in droves, for their corruption warding presence is vital in the protection of soulpod groves.",
+      "referenceKeywords": "Manifestation, Endless Spell, Ward (6+), Order, Sylvaneth",
+      "stats": {
+        "move": "-",
+        "save": "6+",
+        "control": "7+",
+        "health": "7",
+        "ward": "6+"
+      },
+      "points": null,
+      "modelCount": 1,
+      "baseSize": "50mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {},
+      "abilities": [
+        {
+          "name": "The Hive Nourishes",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Blessed are the Spiteswarms with Ghyranite magic, which suffuses their hives and drips from their mandibles. When these creatures are summoned forth by their Sylvaneth masters, they burst from the hive in obscuring clouds to bestow their healing bite.",
+          "declare": "Pick a visible friendly SYLVANETH unit within 3\" of this MANIFESTATION to be the target.",
+          "effect": "Roll a dice. On a 2+, pick 1 of the following effects to apply to the target for the rest of the turn:\n\nVital Venoms: Add 1 to run rolls and charge rolls for the target.\n\nShielding Swarm: The target has WARD (6+)."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "805aa43b-af92-5845-a681-36fce95bf6f5",
+      "name": "The Lady of Vines",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Monster", "Wizard", "Unique", "Warmaster", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "The Lady of Vines is held in the utmost respect by the Sylvaneth. She is Alarielle’s trusted right hand in the most literal sense, for after she died protecting her mother goddess, she was regrown from Alarielle’s severed limb. She wields Kurnotheal’s Wrath, a spear grown from a splinter of the Everqueen’s own legendary weapon. Within it resides a sliver of the hunter-god’s guiding animus, and when hurled it can wreak terrible damage before being plucked back into the Lady’s hand by a reaching vine. The Lady also bears the ultimate mark of Alarielle’s favour – her Verdian Crown, which blankets those fighting around her in her mother’s power and allows them a greater measure of arboreal control.\n\nThe liana-like whips that lash from the Lady’s body at will are thick and razoredged, thirsting for vengeance as a shadowed flower thirsts for sunlight. She has never faltered in her prosecution of the long War of Life against the Plague God’s forces. Without her certainty, her ability to navigate the realmroots and the incredible lengths that the Lady went to in order to keep Alarielle safe, the Everqueen would certainly be dead, and the realm of Ghyran rotted away by the scourge of Nurgle.",
+      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (2), Order, Sylvaneth",
+      "stats": {
+        "move": "8\"",
+        "save": "3+",
+        "control": "5",
+        "health": "8",
+        "ward": null
+      },
+      "points": 220,
+      "modelCount": 1,
+      "baseSize": "80mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Kurnotheal’s Wrath",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "1",
+            "hit": "2+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "D6",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Kurnotheal’s Wrath and Lashing Vines",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Aspect of the Everqueen",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The Lady of Vines channels the power of her goddess mother, shielding fellow Sylvaneth with the harnessed energies of nature.",
+          "declare": "Make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, friendly SYLVANETH units have WARD (5+) while they are wholly within 12\" of this unit.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Writhing Vines",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The whipping tendrils that sprout from the Lady’s back can ensnare foes or confound their attacks.",
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 2+, pick 1 of the following effects to apply for the rest of the turn:\n\nBarrier: Subtract 1 from hit rolls for the target’s attacks.\n\nEnsnare: Add 1 to hit rolls for attacks made by friendly units that target that enemy unit.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Verdian Crown",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The power of the Everqueen herself pulses through the Lady of Vines and radiates from the ornate crown she bears.",
+          "declare": null,
+          "effect": "This unit counts as an Awakened Wyldwood for the purposes of the ‘Endless Growth’, ‘Walk the Hidden Paths’ and ‘Strike and Fade’ abilities."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "requiredKeywords": ["Forest Sentinel"],
+          "linkedWarscroll": null
+        },
+        {
+          "points": null,
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "aeea9f91-89dd-5d24-8dc8-3591777c25c1",
+      "name": "The Twistweald",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Infantry"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "The Twistweald were once Sylvaneth like any other, flourishing with Alarielle’s life-giving magics. Now their bodies are grown over with parasitic plants and fungi that choke their bark and muddy their minds. These amalgamated beings wander in a state of pain-induced frenzy, attacking with lashing thorned roots and clouds of vicious spiteswarms until their enemies are shredded into pulp.\n\nThe Twistroot parasite manifests differently upon each host. The roots of the invading plant can often be seen weaving painfully in and out of Twistroot Revenants’ barkflesh, sometimes replacing eye sockets or hair. Even after a Twistweald’s attending Swarmsage summons spiteswarms to chew away the surface growths, the roots under the skin are impossible to fully purge, leaving the hosts in constant agony. They barely hang onto their sanity day by day, redirecting their pain into each devastating cleave of their weapons. Much like their kin, they rely on curved glaives and beautifully-wrought swords, though some have learned to use the chewed-off roots of their parasite as deadly thorned weapons as well. Many now sport whips capable of puncturing and tearing through even the toughest of flesh.",
+      "referenceKeywords": "Infantry, Champion (1/8), Order, Sylvaneth",
+      "stats": {
+        "move": "5\"",
+        "save": "5+",
+        "control": "1",
+        "health": "2",
+        "ward": null
+      },
+      "points": 100,
+      "modelCount": 8,
+      "baseSize": "40mm [2], 32mm [3], 28.5mm [3] or 40mm [1], 32mm [4], 28.5mm [3]",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Warden’s Bow",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Voracious Swarm",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "6",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Warden’s Blade",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          },
+          {
+            "name": "Twistroot Talons",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Eruption of Thorned Vines",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Barbed vines burst from the ground and infected Sylvaneth flesh to ensnare foes, slowing their movement and forcing them to confront the Twistweald head on.",
+          "declare": "If this unit is more than 6\" from all other friendly SYLVANETH units, pick an enemy unit within 12\" of this unit to be the target.",
+          "effect": "Subtract D3 from charge rolls for the target for the rest of the turn."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "092441de-7fab-5f2d-9f54-255de9765d5d",
+      "name": "Tree-Revenants",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Standard Bearer", "Musician", "Infantry"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "The heart of a Sylvaneth host are its Tree-Revenants. These warriors are a sombre breed, their lives spent protecting the sacred places or reclaiming tainted lands in the name of the Everqueen. Their appearance is undeniably eerie, a mixing of gnarled barkflesh and glowing forms said to resemble the Protectors – mysterious figures who once guarded the forests of the World-that-Was. The Tree-Revenants strive to embody the nobility of these mythical beings, from their selfless defence of Forest Folk tribes to their flowing fighting styles.\n\nMarshalling under fluttering silken banners, Tree-Revenants wield their enchanted glaives and blades with a skill to rival that of any aelven swordsman, and within their graceful forms lingers a potent reservoir of life energies. Yet despite their martial trappings, Tree-Revenants are not the sort to simply advance on a foe in disciplined lockstep. Using enchanted waypipes, they open paths through the realmroots, emerging from the depths of dense woodland to claim key reservoirs of magic or strike down unsuspecting enemies in a flurry of violence.",
+      "referenceKeywords": "Infantry, Champion, Musician (1/5), Standard Bearer (1/5), Order, Sylvaneth",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "1",
+        "health": "2",
+        "ward": null
+      },
+      "points": 90,
+      "modelCount": 5,
+      "baseSize": "32mm",
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Protector Glaive and Blade",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Waypiper's Dance",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The Tree- Revenants move with flowing grace, following their waypiper’s lead along the spirit paths to strike the enemy where it is most needed.",
+          "declare": null,
+          "effect": "If this unit is not in combat, remove it from the battlefield, and set it up again on the battlefield more than 9\" from all enemy units.",
+          "keywords": ["Core"]
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "18e1c4a6-ba56-51a9-a871-8487b5ddab76",
+      "name": "Treelord",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Monster", "Forest Sentinel", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Towering over their fellow Sylvaneth are the Treelords, the captains and champions of the wargroves. Even the least of these majestic entities has likely persisted for several mortal lifespans, and within their vital sap bubbles the endless exuberance of the Jade Realm. Warlike and prideful, Treelords are eager to reduce the Everqueen’s foes to ruin, either with bone-crushing blows from their oaken limbs or eviscerating strikes from tendrils that shoot forth from their open talons. They can call upon the spirits of the forest to aid them in times of need. With an earthshaking stomp, Treelords can also send nearby foes reeling, rendering them easy prey for smaller allies.\n\nTreelords possess an instinctive command of the spirit-song and are able to shape its notes to guide lesser Sylvaneth in accordance with the will of their glade’s rulers – and beyond that, the Everqueen herself. This innate skill leads to them developing a deep spiritual connection with the forests of the realms. Despite their great size, they are able to navigate strange and secret paths through the deepwoods and between sites of power, emerging seemingly from nowhere to assail a terrified enemy.",
+      "referenceKeywords": "Hero, Monster, Order, Sylvaneth",
+      "stats": {
+        "move": "5\"",
+        "save": "3+",
+        "control": "5",
+        "health": "14",
+        "ward": null
+      },
+      "points": 210,
+      "modelCount": 1,
+      "baseSize": "105 x 70mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Strangleroots",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Massive Impaling Talons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Crit (Mortal)"]
+          },
+          {
+            "name": "Sweeping Blows",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Anti-charge (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": null,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3."
+        },
+        {
+          "name": "Lash and Tangle",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "As a Treelord lays about themselves in combat, the whipping tendrils that shoot from their barkflesh ensnare enemies and keep them at bay with their frantic thrashing.",
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, subtract 1 from wound rolls for the target’s attacks for the rest of the turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Entangling Grasp",
+          "phase": "shootingPhase",
+          "phaseDetails": "Any Shooting Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Lashing strangleroots wrap around the foe, leaving them ensnared and at the mercy of the vengeful Sylvaneth.",
+          "declare": "Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit’s Strangleroots to be the target.",
+          "effect": "Roll a dice. On a 3+, the target cannot use RUN or RETREAT abilities until the start of your next turn."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "5a741a76-c342-50dd-bcd9-a44800c0270a",
+      "name": "Treelord Ancient",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Monster", "Wizard", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "As a Treelord ages, their barkflesh hardens, their sap-blood grows richer and more turgid, and they absorb ever more of the life magic permeating the realms. Over time, their mastery over the eldritch energies of Ghyran grows, and the recklessness of youth cools to wise even-headedness. Thus do they become Treelord Ancients, the leaders of the clans, calling upon the experience of centuries – or even millennia – to chart a path forwards.\n\nAge weighs upon even these creatures, however. Some Treelord Ancients are irascible souls jaded by centuries of life and loss. Others may appear outright mad by mortal standards, either in the manner of a charismatic sage or an unpredictable natural disaster that has begun to splinter under the weight of years. In most cases, a Treelord Ancient’s eccentricities stem from them simply hearing the spirit-song on a keener level than most, allowing them to weave complex spells from the strands of life and cultivate new Wyldwoods into being in an instant. Even in battle, as they lead their kin and harness their magic in breathtaking displays of jade spellcraft, a Treelord Ancient keeps part of their mind clear and detached. In doing so, they carefully observe all around them, the better to share their knowledge with future generations.",
+      "referenceKeywords": "Hero, Monster, Wizard (1), Order, Sylvaneth",
+      "stats": {
+        "move": "5\"",
+        "save": "3+",
+        "control": "5",
+        "health": "14",
+        "ward": null
+      },
+      "points": 230,
+      "modelCount": 1,
+      "baseSize": "105 x 70mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Doom Tendril Staff",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Massive Impaling Talons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Crit (Mortal)"]
+          },
+          {
+            "name": "Sweeping Blows",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Anti-charge (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": null,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its Sweeping Blows is 3."
+        },
+        {
+          "name": "Groundshaker",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The earth quakes as this mighty tree spirit stamps its limbs, shaking the enemy’s wits.",
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 4+, the target has STRIKE-LAST for the rest of the turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Awakening the Wood",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "At a Treelord Ancient’s command, wyldwood trees come to life and attack with twisted branches and thorny boughs.",
+          "declare": "Pick a visible friendly Awakened Wyldwood wholly within 18\" of this unit to be the target.",
+          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage equal to the roll on each enemy unit within the target’s combat range."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "requiredKeywords": ["Forest Sentinel"],
+          "linkedWarscroll": null
+        },
+        {
+          "points": null,
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "3f6948d7-8c90-58a5-9cda-0cf7118bda58",
+      "name": "Vengeful Skullroot",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Manifestation", "Endless Spell", "Ward (6+)", "Fly"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "Also known as the Drifting Death or the Creeping Willow, the Vengeful Skullroot is a manifestation of a forest’s spiritual fury. Black hearted and hateful, these arcane plants can be summoned by Sylvaneth versed in verdant jade magic. As this sentient tree stalks across the battlefield, its tentacle-like roots bludgeon, crush and strangle all they pass over.\n\nWherever this rogue spirit creeps, its roots open the shallow graves of battles past, dragging grotesque remains to the surface which chill the hearts of those who wish the forest harm. The grasping limbs of a Vengeful Skullroot constrict and choke these petrified foes with hate-fuelled strength. The wrath of these monstrous plants is all the greater when the kindred trees of a Wyldwood are threatened. Even when not called upon, the Skullroots despise the presence of outsiders. They will slaughter without mercy any that stumble upon their dark groves.",
+      "referenceKeywords": "Manifestation, Endless Spell, Fly, Ward (6+), Order, Sylvaneth",
+      "stats": {
+        "move": "8\"",
+        "save": "4+",
+        "control": "7+",
+        "health": "8",
+        "ward": "6+"
+      },
+      "points": null,
+      "modelCount": 1,
+      "baseSize": "105 x 70mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Lumbering Bulk",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Vengeful Terrors",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Wherever this rogue spirit creeps, its roots open the shallow graves of battles past, dragging grotesque remains to the surface which chill the hearts of the forest’s foes.",
+          "declare": "Pick an enemy unit within 3\" of this MANIFESTATION to be the target.",
+          "effect": "For the rest of the turn, subtract an amount from the target’s control score equal to the number of friendly units that have been destroyed this battle (not including MANIFESTATIONS or FACTION TERRAIN)."
+        },
+        {
+          "name": "Creeping Willow",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": null,
+          "declare": null,
+          "effect": "This MANIFESTATION counts as an Awakened Wyldwood for the purposes of the ‘Endless Growth’, ‘Walk the Hidden Paths’ and ‘Strike and Fade’ abilities."
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "492700be-9470-50fe-996b-f5a077a60016",
+      "name": "Warsong Revenant",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Wizard", "Infantry", "Ward (6+)", "Fly", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "First brought into being by the Everqueen’s Rite of Life, that grand spell cast to heal the corruption of the realms, the Warsong Revenants carry its energies within them. They channel it through an ornate flute set with a fragment of bark from the Oak of Ages Past. They possess an instinctive sense for the ley lines that cross the realms, following these arcane pathways and playing their song of rejuvenation so that they may coax the lands to healing. On their travels, they are surrounded by swarms of flittering spites and carpets of thrashing roots which viciously lash out at any who would impede them.\n\nThe song that these Revenants play is composed of pure arcane force. To the Sylvaneth, it is a stirring tune of great vibrancy, while to their allies it is a fey and unsettling earworm that never entirely fades from the edge of hearing. Beings corrupted by Chaos perceive the ballads of a Warsong Revenant as terrifying, soul-shredding dissonances that echo weirdly from the depths of the woods; those who hear it are left staggering and insensate, right up until they are beheaded by the Revenant’s arcanely charged falchion.",
+      "referenceKeywords": "Hero, Wizard (2), Infantry, Fly, Ward (6+), Order, Sylvaneth",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "7",
+        "ward": "6+"
+      },
+      "points": 200,
+      "modelCount": 1,
+      "baseSize": "105x70mm",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Spearing Vines and Spirit Falchion",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Alarielle's Song",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "To the Sylvaneth, the sound that emanates from a Warsong Revenant’s flute is sweet and uplifting. To their foes, it is a sonic assault of devastating potency.",
+          "declare": null,
+          "effect": "Friendly SYLVANETH units have WARD (6+) while they are wholly within 12\" of this unit. Subtract 1 from ward rolls for enemy units while they are within 12\" of this unit."
+        },
+        {
+          "name": "Unleash Swarm of Spites",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The Warsong Revenant summons a large swarm of malicious spites that spiral outwards to attack those who have drawn their ire.",
+          "declare": "Pick a friendly Awakened Wyldwood wholly within 18\" of this unit, pick up to 3 visible enemy units within 9\" of that terrain feature to be the targets, then make a casting roll of 2D6.",
+          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Wyldwood Revenants",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "Warsong Revenants are bound to nature and draw strength from the forests.",
+          "declare": null,
+          "effect": "Add 1 to unbinding rolls and banishment rolls for this unit while it is wholly within 6\" of any Awakened Wyldwoods."
+        }
+      ],
+      "regimentOptions": [
+        {
+          "points": null,
+          "excludedKeywords": ["Hero"],
+          "linkedWarscroll": null
+        }
+      ],
+      "notes": null
+    },
+    {
+      "id": "2ce32ef0-74d9-5a1e-8dd5-4c6eda454814",
+      "name": "Ylthari's Guardians",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Wizard", "Unique", "Infantry"],
+      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "fluff": "The Thornwych Ylthari tirelessly seeks those soulpods that have been claimed by Nagash, and by channelling rampant life magic she rids the dead places of those who would serve the Great Necromancer. Grown from ancient soulpods in the Realm of Death, Ylthari’s Guardians were once diplomats and emissaries, though now they are evergreen with bitter wrath and seek only vengeance for their kin who have been slain.",
+      "referenceKeywords": "Unique, Infantry, Champion, Order, Sylvaneth",
+      "stats": {
+        "move": "5\"",
+        "save": "5+",
+        "control": "1",
+        "health": "3",
+        "ward": null
+      },
+      "points": 140,
+      "modelCount": 4,
+      "baseSize": "32mm [4]",
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Revenant Bow",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Revenant Bow",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Enchanted Glade Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Bitterness of the Soul",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The souls of Ylthari’s Guardians are chilled through by the frost of the Everdusk.",
+          "declare": null,
+          "effect": "Add 1 to the Damage characteristic of this unit’s Enchanted Glade Weapons for each model in this unit that is slain.\n\nDesigner’s Note: Models that have been slain and returned to this unit do not count as being slain for the purposes of this ability."
+        },
+        {
+          "name": "Ylthari",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "lore": "The mellifluous sound of Sylvaneth magic is both beautiful and terrifying to those upon whom it is unleashed.",
+          "declare": null,
+          "effect": "While this unit’s Ylthari is on the battlefield, it has WIZARD (1)."
+        }
+      ],
+      "notes": null
+    }
+  ],
+  "battleFormations": [
+    {
+      "id": "a24a3e4c-fc06-5260-87dc-69959fae33d0",
+      "name": "Lords of the Clan",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Healing Song",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "lore": "The spirit-song surgesthrough the Lords of the Clan like a raging river. As they stride across the battlefield, the Treelords harness that energy to further rejuvenate their forms.",
+          "declare": null,
+          "effect": "When using the ‘Endless Growth’ ability, friendly SYLVANETH MONSTERS can Heal (3) instead of Heal (D3).",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "422c1b94-0d3e-5653-9dd4-203de09a3293",
+      "name": "Wargrove of the Burgeoning",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Stirring Life",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "special",
+          "lore": "The bloom brings a surge of rebirth to the Sylvaneth, invigorating their forms with supple green sapwood.",
+          "declare": "Pick a friendly non-HERO SYLVANETH unit within 3\" of a terrain feature to be the target.",
+          "effect": "If the target has a Health characteristic of 1, return up to 3 slain models to the target. If the target has a Health characteristic of 2 or more, roll a dice, then pick 1 of the following:\n• Heal (X) the target, where X is equal to the roll.\n• Return a number of slain models to the target with a combined Health characteristic that is equal to or less than the roll.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "87a30234-bb6b-5a63-8857-58c8e9ac51ea",
+      "name": "Outcasts",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "The Terror in the Eaves",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "control",
+          "lore": "The Outcasts are the terrors that lurk in the shadows, the creeping things beneath the forest eaves. When great masses of them surge into battle, it is all the enemy can do to avoid dying of sheer fright.",
+          "declare": null,
+          "effect": "Subtract 3 from the control scores of enemy units while they are in combat with friendly SYLVANETH units.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "83337894-4c23-5e2e-be22-d2e3abe11d87",
+      "name": "Free Spirits",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Fleet and Swift",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Your Charge Phase",
+          "icon": "movement",
+          "lore": "The Free Spirits are the instruments of Alarielle’s will, a cadre of elite warriors whose presence hones the Sylvaneth into a weapon of singular purpose that brings swift retribution.",
+          "declare": "Pick a friendly SYLVANETH CAVALRY unit to use this ability.",
+          "effect": "This unit can use CHARGE abilities even if it used a RUN ability this turn.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "d78247a2-2f27-5a07-aff1-afbc815c7217",
+      "name": "Forest Folk",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Lacerating Strike",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "lore": "Moving quickly through the undergrowth, the Forest Folk plunge into battle. Attacking from every side, multiple bands of infantry lash their victims to bloody tatters.",
+          "declare": null,
+          "effect": "Add 1 to the Rend characteristic of melee weapons used by friendly SYLVANETH non-KURNOTHI INFANTRY units that charged in the same turn.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "bd2e8e62-850b-5e7e-a0cd-1eeca3bd1868",
+      "name": "Wargrove of Everdusk",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Duskwalk",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "lore": "The creeping darkness of Everdusk provides those Sylvaneth with cold bitterness in their heartwood ample opportunities to set up ambushes.",
+          "declare": null,
+          "effect": "Friendly SYLVANETH HEROES can use the ‘Walk the Hidden Paths’ ability even if it has been used by another friendly unit in the same phase.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    }
+  ],
+  "lores": [],
+  "enhancements": {
+    "artefacts": [
+      {
+        "id": "0a0851f9-74d7-595b-a967-3688190a86d9",
+        "name": "Heartwood Hunting Horn",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle (Army), Any Hero Phase",
+        "icon": "special",
+        "lore": "Grown in the forests of Kurnotheal, this horn emits a melody that naturally harmonises with the song of the hunt.",
+        "declare": null,
+        "effect": "You gain 1 chord.",
+        "cpCost": null
+      },
+      {
+        "id": "72c631a0-9db4-5074-a688-423c4a41d849",
+        "name": "Seed of Rebirth",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "lore": "Should its bearer ever fall, the seed’s rejuvenating energies will pour into its host to grant them new life.",
+        "declare": null,
+        "effect": "If this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, Heal (1) this unit. This unit cannot use this ability again for the rest of the battle.",
+        "cpCost": null
+      },
+      {
+        "id": "a78bcfad-cf97-521c-b693-88321d6998f0",
+        "name": "Greenwood Gladius",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "offensive",
+        "lore": "This blade strikes with the youthful vigour of springtime.",
+        "declare": "Pick an enemy unit in combat with this unit to be the target.",
+        "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+        "cpCost": null
+      },
+      {
+        "id": "af8a698e-ed13-5015-8183-d7ce7fd473e1",
+        "name": "Crown of Fell Bowers",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "offensive",
+        "lore": "Rooted in this elegant circlet, a canopy of spectral branches forms above the foe, rendering them strangely vulnerable to the enchanted weapons of the Sylvaneth.",
+        "declare": "Pick an enemy unit in combat with this unit to be the target.",
+        "effect": "Roll a dice. On 3+, add 1 to wound rolls for combat attacks made by friendly SYLVANETH units that target that enemy unit this phase.",
+        "cpCost": null
+      },
+      {
+        "id": "a205102f-8e96-55d5-b497-d0c1ac844e9d",
+        "name": "Glamourweave",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "lore": "The Glamourweave’s illusory enchantments both enhance the wearer’s forest camouflage and conceal their strikes when battle is joined.",
+        "declare": null,
+        "effect": "Each phase, you can re-roll 1 hit roll, 1 wound roll and 1 save roll for this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "6f476d6c-3784-5e60-9725-6953409bbeb3",
+        "name": "Acorn of the Ages",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle, Your Hero Phase",
+        "icon": "special",
+        "lore": "Within this unassuming acorn lies untold potential for life.",
+        "declare": null,
+        "effect": "If there are fewer than 3 friendly Awakened Wyldwoods on the battlefield, set up an Awakened Wyldwood wholly within 12\" of this unit, more than 3\" from all objectives and more than 1\" from all enemy units and other terrain features.",
+        "cpCost": null
+      },
+      {
+        "id": "4ddf608c-fa65-584b-80c9-6e777c2f3277",
+        "name": "Ranu's Lamentiri",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Reaction: Opponent declared a SPELL ability for a unit within 30\" of this unit",
+        "icon": "special",
+        "lore": "Even in death, Ranu lends sorcerous strength to their kin.",
+        "declare": null,
+        "effect": "Make an unbinding roll of 2D6. If the roll exceeds the casting roll for the spell, the spell is unbound and its effect is not resolved. Then, inflict an amount of mortal damage on the caster equal to the difference between the casting roll and the unbinding roll, to a maximum of 6.",
+        "cpCost": null,
+        "keywords": ["Unbind"]
+      }
+    ],
+    "heroicTraits": [
+      {
+        "id": "567c53f2-05b5-5f37-9cb5-ab6bb0b0c18a",
+        "name": "Sapwood Leader",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "lore": "This young and vibrant general flourishes with the life-giving magic of the Everqueen.",
+        "declare": null,
+        "effect": "If you pick this unit to be a target of the 'Abundant Growth’ ability, Heal (3) this unit instead of Heal (1).",
+        "cpCost": null
+      },
+      {
+        "id": "efdb3d7f-a670-5f2a-8634-540be6fd74a9",
+        "name": "Warsinger",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "movement",
+        "lore": "This general spurs on Alarielle’s children with stirring songs.",
+        "declare": "Pick a friendly SYLVANETH unit wholly within 12\" of this unit to be the target.",
+        "effect": "Add 2\" to the Move characteristic of the target for the rest of the turn.",
+        "cpCost": null
+      },
+      {
+        "id": "c1a426d5-b04e-5922-8100-88eb7f586d7d",
+        "name": "Radiant Spirit",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: Opponent declared a SPELL or PRAYER ability",
+        "icon": "special",
+        "lore": "Shielding emerald energy surrounds this hero like a leafy sanctuary.",
+        "declare": null,
+        "effect": "Roll a dice. On a 3+, ignore the effect of that spell or prayer on that unit. This unit can use this ability more than once per phase but only once per SPELL or PRAYER ability.",
+        "cpCost": null
+      },
+      {
+        "id": "713c2bce-3730-5a48-b812-8a43ed6df70d",
+        "name": "Spellsinger",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "heroPhase",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "lore": "This hero draws on the magical power of the Awakened Wyldwoods.",
+        "declare": null,
+        "effect": "While this unit is within the combat range of an Awakened Wyldwood:\n\nIf this unit is a WIZARD, add 1 to casting rolls for this unit.\n\nIf this unit is not a WIZARD, it has WIZARD (1) instead.",
+        "cpCost": null
+      }
+    ],
+    "other": [
+      {
+        "id": "01e5601a-6289-505e-9097-3c65b04e3bf8",
+        "name": "Ominous Fog",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "lore": "A thick fog follows the Lost-Song Spirits, making them difficult to identify until it is too late.",
+        "declare": null,
+        "effect": "Units in this Regiment of Renown are not visible to enemy units more than 12\" from them while they are wholly within 9\" of the Treelord in this Regiment of Renown.",
+        "cpCost": null
+      },
+      {
+        "id": "59c0a701-d02f-5caf-81e0-21fe24333c0b",
+        "name": "Endless Wandering",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Enemy Hero Phase",
+        "icon": "movement",
+        "lore": "The spirits of the Lost-Song Forest are ever in motion, desperately seeking the ancestral harmonies denied to them.",
+        "declare": "Pick a unit in this Regiment of Renown that is not in combat to use this ability.",
+        "effect": "That unit can use the ‘Normal Move’ ability as if it were your movement phase.",
+        "cpCost": null
+      },
+      {
+        "id": "5b56b294-1f12-525e-acf3-849229add673",
+        "name": "Gossamid Champion",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "shootingPhase",
+        "phaseDetails": "Your Shooting Phase",
+        "icon": "shooting",
+        "lore": "Elthwin directs her Gossamid kin to let fly volleys of suppressing shots.",
+        "declare": "Pick the Arch-Revenant in this Regiment of Renown to use this ability, the pick a visible enemy unit within 12\" of them to be the target.",
+        "effect": "Until the start of your next turn, subtract X from charge rolls for the target, where X is the number of damage points allocated to the target this phase by shooting attacks made by the Gossamid Archers unit in the Regiment of Renown, to a maximum of 6.",
+        "cpCost": null
+      },
+      {
+        "id": "2d9f7cfb-6654-558b-aea5-17a4e00a43f9",
+        "name": "Flight of the Zephyrspites",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "shootingPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+        "icon": "shooting",
+        "lore": "In their effort to reach Alarielle’s court and be healed, Elthwin’s Thorns are carried by swift and loyal Zephyrspites.",
+        "declare": null,
+        "effect": "If both units in this Regiment of Renown are within each other’s combat range and neither unit is in combat, roll a dice. On a 3+, remove both units from the battlefield, then set them up again within each other’s combat range, wholly within 3\" of a terrain feature and more than 9\" from all enemy units.",
+        "cpCost": null
+      }
+    ]
+  },
+  "terrain": [
+    {
+      "id": "91ed0064-2852-56cf-854e-c00f6434e5e7",
+      "name": "Awakened Wyldwood",
+      "cardType": "FactionTerrain",
+      "source": "aos-4e",
+      "abilities": []
+    }
+  ],
+  "rules": {
+    "battleTraits": [
+      {
+        "name": "Abundant Growth",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+        "icon": "defensive",
+        "lore": "Lush, restorative flora blossoms and blooms in the path of the Evergreen Hunt.",
+        "declare": "Pick each friendly EVERGREEN HUNT unit that is wholly within 3\" of a terrain feature to be the targets.",
+        "effect": "Heal (1) each target."
+      },
+      {
+        "name": "Merciful Strike",
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "offensive",
+        "lore": "For those who join the divine hunt, the moment of the final, killing blow is one of momentous importance. It must be delivered swiftly and surely.",
+        "declare": "Pick a friendly EVERGREEN HUNT MONSTER that has not used a RAMPAGE ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
+        "effect": "Roll a dice and add the number of damage points the target has. If the result exceeds the target’s Health characteristic, 1 model in the target unit is slain."
+      },
+      {
+        "name": "A Prize Quarry is Sighted",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle (Army), Your Hero Phase",
+        "icon": "special",
+        "lore": "When a mighty prey is sighted, the hunters of Kurnoth focus all their efforts upon taking it down, for only a successful kill will appease their master.",
+        "declare": "Pick an enemy unit within 9\" of a friendly EVERGREEN HUNT unit to be the target.",
+        "effect": "The target becomes the quarry for the rest of the battle. If there was already a quarry on the battlefield when you declared this ability, that unit is no longer the quarry."
+      },
+      {
+        "name": "Rhythm of the Chase",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+        "icon": "special",
+        "lore": "The Evergreen Hunt relentlessly tracks its prey, skilfully manoeuvring it into a killing ground to administer a fatal blow.",
+        "declare": "If there is no quarry on the battlefield, pick an enemy unit on the battlefield to be the target.",
+        "effect": "The target is the quarry for the rest of the battle."
+      },
+      {
+        "name": "Opening Horn Blast",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+        "icon": "special",
+        "lore": "The ear-shattering peal of a hunting horn signals the coming of Kurnoth’s faithful, and foretells the bloody death of their prey.",
+        "declare": "You must use this ability at the start of the battle round.",
+        "effect": "Your chords are reset to 0. Then, you gain 1 chord:\n\n• If a friendly Belthanos is on the battlefield.\n• For each friendly EVERGREEN HUNT unit that is wholly within the same large quarter of the battlefield as the quarry.\n• For each quarry destroyed so far during the battle."
+      },
+      {
+        "name": "Song of the Hunt",
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "lore": "The stirring battle-song of Kurnoth’s hunters grows in intensity with every foe slain, until the world resounds to a crescendo of deafening, harshly melodic notes.",
+        "declare": null,
+        "effect": "The following cumulative effects apply to friendly EVERGREEN HUNT units depending on the number of chords you have:\n\n1 chord – Simple: Add 1 to run rolls and charge rolls for friendly units wholly within the same quarter of the battlefield as the quarry.\n\n2 chords – Tuneful: Add 1 to hit rolls and wound rolls for friendly units’ combat attacks that target an enemy unit wholly within the same quarter of the battlefield as the quarry.\n\n3-5 chords – Melodic: Add 1 to the Attacks characteristic of melee weapons used by friendly units while they are in combat with the quarry.\n\n6+ chords – Mellifluous: While a friendly unit is in combat with the quarry, the quarry has STRIKE-LAST."
+      },
+      {
+        "name": "Endless Growth",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "defensive",
+        "lore": "Flourishing groves underfoot bring a surge of rebirth to the Sylvaneth. Their forms are invigorated with restorative sapwood.",
+        "declare": "Pick any number of friendly SYLVANETH units wholly within 6\" of any friendly Awakened Wyldwoods to be the targets.",
+        "effect": "Heal (D3) each target."
+      },
+      {
+        "name": "Strike and Fade",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "movement",
+        "lore": "These warriors use the spirit paths to ambush the enemy before retreating back into the shadows.",
+        "declare": "Pick a friendly SYLVANETH unit that is in combat and is wholly within 6\"of a friendly Awakened Wyldwood to use this ability.",
+        "effect": "Remove that unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units and wholly within 6\" of a different friendly Awakened Wyldwood."
+      },
+      {
+        "name": "Walk the Hidden Paths",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+        "icon": "movement",
+        "lore": "Sylvaneth can draw upon the magic of the Wyldwoods to open hidden passageways across the battlefield.",
+        "declare": "Pick a friendly SYLVANETH unit that is not in combat and is wholly within 6\" of a friendly Awakened Wyldwood to use this ability.",
+        "effect": "Remove that unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units and wholly within 6\" of a different friendly Awakened Wyldwood."
+      }
+    ]
+  }
+}
