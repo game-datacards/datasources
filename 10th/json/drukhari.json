@@ -3627,11 +3627,11 @@
   ],
   "detachments": [
     "Spectacle of Spite",
-    "Realspace Raiders",
-    "Covenite Coterie",
     "Kabalite Cartel",
     "Skysplinter Assault",
-    "Reaper’s Wager"
+    "Reaper’s Wager",
+    "Realspace Raiders",
+    "Covenite Coterie"
   ],
   "enhancements": [
     {
@@ -3734,7 +3734,7 @@
       "name": "Archraider",
       "id": "299ed59c-451b-57ec-9517-9579aa162279",
       "cost": "15",
-      "keywords": ["Drukhari"],
+      "keywords": ["Drukhari", "Harlequins"],
       "excludes": [],
       "description": "HARLEQUINS or DRUKHARI model only. In the Declare Battle Formations step, if the bearer starts the battle embarked within a DEDICATED TRANSPORT, that DEDICATED TRANSPORT has the Scouts 9\" ability.",
       "faction_id": "DRU",
@@ -3746,7 +3746,7 @@
       "name": "Webway Walker",
       "id": "47f62c0a-436a-5689-9641-2812b3cab45d",
       "cost": "15",
-      "keywords": ["Drukhari"],
+      "keywords": ["Drukhari", "Harlequins"],
       "excludes": [],
       "description": "HARLEQUINS or DRUKHARI model only. Models in the bearer’s unit have the Deep Strike ability. Each time the bearer’s unit is set up on the battlefield using the Deep Strike ability, if that unit is currently losing the wager, until the end of the turn, you can re‑roll Charge rolls made for that unit.",
       "faction_id": "DRU",
@@ -3758,7 +3758,7 @@
       "name": "Reaper’s Cowl",
       "id": "d2021261-46ef-557d-934c-213f0b807c5b",
       "cost": "25",
-      "keywords": ["Drukhari"],
+      "keywords": ["Harlequins"],
       "excludes": [],
       "description": "HARLEQUINS model only. Models in the bearer’s unit have the Stealth and Infiltrators abilities.",
       "faction_id": "DRU",
@@ -3931,109 +3931,330 @@
   "rules": {
     "army": [
       {
-        "name": "Power from Pain",
-        "rule": [
+        "name": "Power From Pain",
+        "rules": [
           {
+            "text": "Pain Abilities",
             "order": 1,
-            "text": "If your Army Faction is **DRUKHARI**, units from your army with this ability can become Empowered Through Pain. This is done using Pain tokens.",
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "If your Army Faction is **DRUKHARI**, you can include **HARLEQUINS** and **ANHRATHE** units in your army, even though they do not have the **DRUKHARI** Faction keyword. The combined points value of **HARLEQUINS** and/or **ANHRATHE** units you can include in your army depends on the battle size, as follows:\n\n■ **Incursion:** Up to 250 pts\n■ **Strike Force:** Up to 500 pts\n■ **Onslaught:** Up to 750 pts\n\nNo **HARLEQUINS** or **ANHRATHE** models included in your army in this way can be your **WARLORD**, and they cannot be given Enhancements.",
+            "order": 1,
+            "title": null,
             "type": "text"
           },
           {
+            "text": "All **DRUKHARI** units have a Pain ability, tagged with the word ‘Pain’. Pain abilities only apply to a unit while it is Empowered. If your Army Faction is **DRUKHARI**, you can Empower units from your army with Pain abilities by spending Pain tokens (see below).\n\n**Designer’s Note:** *You can also spend Pain tokens to activate additional effects in certain other rules such as Enhancements and Stratagems.*",
             "order": 2,
-            "text": "GAINING PAIN TOKENS",
-            "type": "header"
+            "title": null,
+            "type": "text"
           },
           {
+            "text": "Gaining Pain Tokens",
             "order": 3,
-            "text": "If your Army Faction is **DRUKHARI**, you gain Pain tokens as follows:\n\n■ At the start of the battle, depending on the battle size:",
-            "type": "text"
-          },
-          {
-            "order": 4,
-            "text": "■ Each time an enemy unit is destroyed, you gain 1 Pain token.\n■ Each time an enemy unit fails a Battle-shock test, you gain 1 Pain token.\n\nEach time you gain a Pain token, keep it to one side – this is your Pain token pool.",
-            "type": "text"
-          },
-          {
-            "order": 5,
-            "text": "EMPOWERED THROUGH PAIN",
+            "title": null,
             "type": "header"
           },
           {
-            "order": 6,
-            "text": "At the start of any phase, you can expend one or more Pain tokens from your Pain token pool. Each time you do, select one unit from your army with the Power from Pain ability. Until the end of the phase, that unit is Empowered, and gains the abilities listed below, depending on the phase.",
+            "text": "If your Army Faction is **DRUKHARI**, you gain Pain tokens as follows:\n\n■ **1 Pain token** at the start of your Command phase.\n■ **1 Pain token** each time an enemy unit is destroyed.\n■ **1 Pain token** each time an enemy unit fails a Battle‑shock test.\n\nEach time you gain a Pain token, keep it to one side – this is your Pain token pool. Each time you spend a Pain token, reduce your Pain token pool by the same amount.",
+            "order": 4,
+            "title": null,
             "type": "text"
           },
           {
+            "text": "Empowered Through Pain",
             "order": 7,
-            "text": "■ Empowered in the Movement or Charge phase:\n◦ You can re-roll Advance or Charge rolls made for that unit.",
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "Each Pain ability will state when you can spend Pain tokens to Empower that unit. When you do, until the end of the phase, that unit is Empowered and all Pain abilities it has take effect. While an Attached unit is Empowered, the Pain abilities of all Leader and Bodyguard units in that unit take effect – you do not need to spend additional Pain tokens to activate each of those Pain abilities.",
+            "order": 8,
+            "title": null,
             "type": "text"
           },
           {
-            "order": 8,
-            "text": "■ Empowered in the Shooting or Fight phase:\n◦ Each time a model in that unit makes an attack, you can re-roll the Hit roll and, if it is a melee attack, improve the Armour Penetration characteristic of that attack by 1.",
-            "type": "text"
+            "text": "**Example**: *At the start of your Charge phase, you spend 1 Pain token to Empower a unit of Wyches. The unit becomes Empowered, and so its Acrobatic Gladiators ability takes effect until the end of the phase. A Succubus is leading the unit, and so its Lithe Agility ability also takes effect until the end of the phase (no additional Pain token is required to activate that ability as well).*",
+            "order": 9,
+            "title": null,
+            "type": "quote"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
+      },
+      {
+        "name": "Corsairs and Travelling Players",
+        "rules": [
+          {
+            "text": "Pain Abilities",
+            "order": 1,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "If your Army Faction is **DRUKHARI**, you can include **HARLEQUINS** and **ANHRATHE** units in your army, even though they do not have the **DRUKHARI** Faction keyword. The combined points value of **HARLEQUINS** and/or **ANHRATHE** units you can include in your army depends on the battle size, as follows:\n\n■ **Incursion:** Up to 250 pts\n■ **Strike Force:** Up to 500 pts\n■ **Onslaught:** Up to 750 pts\n\nNo **HARLEQUINS** or **ANHRATHE** models included in your army in this way can be your **WARLORD**, and they cannot be given Enhancements.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "All **DRUKHARI** units have a Pain ability, tagged with the word ‘Pain’. Pain abilities only apply to a unit while it is Empowered. If your Army Faction is **DRUKHARI**, you can Empower units from your army with Pain abilities by spending Pain tokens (see below).\n\n**Designer’s Note:** *You can also spend Pain tokens to activate additional effects in certain other rules such as Enhancements and Stratagems.*",
+            "order": 2,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Gaining Pain Tokens",
+            "order": 3,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "If your Army Faction is **DRUKHARI**, you gain Pain tokens as follows:\n\n■ **1 Pain token** at the start of your Command phase.\n■ **1 Pain token** each time an enemy unit is destroyed.\n■ **1 Pain token** each time an enemy unit fails a Battle‑shock test.\n\nEach time you gain a Pain token, keep it to one side – this is your Pain token pool. Each time you spend a Pain token, reduce your Pain token pool by the same amount.",
+            "order": 4,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Empowered Through Pain",
+            "order": 7,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "Each Pain ability will state when you can spend Pain tokens to Empower that unit. When you do, until the end of the phase, that unit is Empowered and all Pain abilities it has take effect. While an Attached unit is Empowered, the Pain abilities of all Leader and Bodyguard units in that unit take effect – you do not need to spend additional Pain tokens to activate each of those Pain abilities.",
+            "order": 8,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "**Example**: *At the start of your Charge phase, you spend 1 Pain token to Empower a unit of Wyches. The unit becomes Empowered, and so its Acrobatic Gladiators ability takes effect until the end of the phase. A Succubus is leading the unit, and so its Lithe Agility ability also takes effect until the end of the phase (no additional Pain token is required to activate that ability as well).*",
+            "order": 9,
+            "title": null,
+            "type": "quote"
+          }
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Realspace Raiders",
-        "name": "Corsairs and Travelling Players",
-        "rule": [
+        "detachment": "Spectacle of Spite",
+        "rules": [
           {
-            "order": 1,
-            "text": "If your Army Faction is **DRUKHARI**, you can include **HARLEQUINS** and **ANHRATHE** units in your army, even though they do not have the **DRUKHARI** Faction keyword. The combined points value of **HARLEQUINS** and/or **ANHRATHE** units you can include in your army depends on the battle size, as follows:\n\n■ **Incursion**: Up to 250 pts\n■ **Strike Force**: Up to 500 pts\n■ **Onslaught**: Up to 750 pts\n\nNo **HARLEQUINS** or **ANHRATHE** models included in your army in this way can be your Warlord, and they cannot be given Enhancements.’",
-            "type": "text"
+            "name": "Combat Drugs",
+            "sections": [
+              {
+                "text": "At the start of your Command phase, select which Combat Drugs will be active for your army until the start of your next Command phase. To do so, either select one from the list below (you cannot select the same Combat Drug more than once per battle), or randomly select two by rolling two D6. When doing so randomly, Combat Drugs you have previously selected can become active again, but if you randomly select one that is already active for your army, it has no additional effect.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "1. Adrenalight",
+                "order": 2,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Add 1 to the Attacks characteristic of melee weapons equipped by **WYCH CULT** models from your army.",
+                "order": 3,
+                "title": "1. Adrenalight",
+                "type": "text"
+              },
+              {
+                "text": "2. Hypex",
+                "order": 4,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Add 2\" to the Move characteristic of **WYCH CULT** models from your army.",
+                "order": 5,
+                "title": "2. Hypex",
+                "type": "text"
+              },
+              {
+                "text": "3. Serpentin",
+                "order": 6,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Improve the Weapon Skill characteristic of melee weapons equipped by **WYCH CULT** models from your army by 1.",
+                "order": 7,
+                "title": "3. Serpentin",
+                "type": "text"
+              },
+              {
+                "text": "4. Painbringer",
+                "order": 8,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Add 1 to the Toughness characteristic of **WYCH CULT** models from your army.",
+                "order": 9,
+                "title": "4. Painbringer",
+                "type": "text"
+              },
+              {
+                "text": "5. Grave Lotus",
+                "order": 10,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Add 1 to the Strength characteristic of melee weapons equipped by **WYCH CULT** models from your army.",
+                "order": 11,
+                "title": "5. Grave Lotus",
+                "type": "text"
+              },
+              {
+                "text": "6. Splintermind",
+                "order": 12,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Improve the Leadership characteristic of **WYCH CULT** models from your army by 1, and improve the Ballistic Skill characteristic of ranged weapons equipped by **WYCH CULT** models from your army by 1.",
+                "order": 13,
+                "title": "6. Splintermind",
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Realspace Raiders",
-        "name": "Realspace Raiders",
-        "rule": [
+        "detachment": "Kabalite Cartel",
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of the battle, you gain an additional 1 Pain token for each of the following your army contains:\n\n■ One or more **ARCHON** models\n■ One or more **SUCCUBUS** models\n■ One or more **HAEMONCULUS** models",
-            "type": "text"
-          },
+            "name": "Murderous Agenda",
+            "sections": [
+              {
+                "text": "At the start of the first battle round, select one of the Contracts below, then select one unit from your opponent’s army that matches the ‘Contract’ description in that Contract. Until that Contract is completed, that unit is your Contract unit and **KABAL** and **BLADES FOR HIRE** units from your army have the ability stated in that Contract. At the start of your Command phase, if your Contract unit is destroyed, that Contract is completed and you gain 3 Pain tokens.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "Trophy Hunters",
+                "order": 2,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "**Contract:** One **CHARACTER** unit.\n\n**Ability:** Each time a **KABAL** or **BLADES FOR HIRE** model in this unit makes an attack that targets the Contract unit, that attack has the **[PRECISION]** ability.",
+                "order": 3,
+                "title": null,
+                "type": "boxedText"
+              },
+              {
+                "text": "Sow Fear and Terror",
+                "order": 4,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "**Contract:** One **INFANTRY** or **MOUNTED** unit (excluding units containing only **CHARACTER** models). At the start of your Command phase, this Contract is completed if all non‑**CHARACTER** models in that unit are destroyed.\n\n**Ability:** Each time a **KABAL** or **BLADES FOR HIRE** model in this unit makes an attack that targets an **INFANTRY** or **MOUNTED** unit, that attack has the **[SUSTAINED HITS 1]** ability.",
+                "order": 5,
+                "title": null,
+                "type": "boxedText"
+              },
+              {
+                "text": "Show of Strength",
+                "order": 6,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "**Contract:** One **MONSTER** or **VEHICLE** unit.\n\n**Ability:** Each time a **KABAL** or **BLADES FOR HIRE** model in this unit makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.",
+                "order": 7,
+                "title": null,
+                "type": "boxedText"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Skysplinter Assault",
+        "rules": [
           {
-            "order": 2,
-            "text": "**Designer’s Note**: These are all cumulative, so if your army contains at least one Archon, at least one Succubus and at least one Haemonculus, you would start the battle with an additional 3 Pain tokens.",
-            "type": "textItalic"
+            "name": "Rain of Cruelty",
+            "sections": [
+              {
+                "text": "Each time a **DRUKHARI** unit from your army disembarks from a **TRANSPORT**, until the end of the turn:\n\n■ Ranged weapons equipped by models in that disembarking unit have the **[IGNORES COVER]** ability.\n■ Melee weapons equipped by models in that disembarking unit have the **[LANCE]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Reaper’s Wager",
-        "name": "Callous Competition",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of the battle, **DRUKHARI** units from your army are winning the wager.\n\nEach time a **DRUKHARI** unit from your army destroys an enemy unit, **DRUKHARI** units from your army are winning the wager.\n\nEach time a **HARLEQUINS** unit from your army destroys an enemy unit, **HARLEQUIN** units from your army are winning the wager.\n\nWhile **DRUKHARI** units from your army are winning the wager, **HARLEQUIN** units from your army are losing the wager, and vice versa.\n\nEach time a **DRUKHARI** or **HARLEQUINS** model from your army makes an attack, if that model’s unit is losing the wager, re‑roll a Hit roll of 1 and re‑roll a Wound roll of 1.",
-            "type": "text"
+            "name": "Callous Competition",
+            "sections": [
+              {
+                "text": "At the start of the battle, **DRUKHARI** units from your army are winning the wager.\n\nEach time a **DRUKHARI** unit from your army destroys an enemy unit, **DRUKHARI** units from your army are winning the wager.\n\nEach time a **HARLEQUINS** unit from your army destroys an enemy unit, **HARLEQUIN** units from your army are winning the wager.\n\nWhile **DRUKHARI** units from your army are winning the wager, **HARLEQUIN** units from your army are losing the wager, and vice versa.\n\nEach time a **DRUKHARI** or **HARLEQUINS** model from your army makes an attack, if that model’s unit is winning the wager, re‐roll a Hit roll of 1. If that model’s unit is losing the wager, re‐roll a Hit roll of 1 and re‐roll a Wound roll of 1 instead.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Skysplinter Assault",
-        "name": "Corsairs and Travelling Players",
-        "rule": [
+        "detachment": "Realspace Raiders",
+        "rules": [
           {
-            "order": 1,
-            "text": "If your Army Faction is **DRUKHARI**, you can include **HARLEQUINS** and **ANHRATHE** units in your army, even though they do not have the **DRUKHARI** Faction keyword. The combined points value of **HARLEQUINS** and/or **ANHRATHE** units you can include in your army depends on the battle size, as follows:\n\n■ **Incursion**: Up to 250 pts\n■ **Strike Force**: Up to 500 pts\n■ **Onslaught**: Up to 750 pts\n\nNo **HARLEQUINS** or **ANHRATHE** models included in your army in this way can be your Warlord, and they cannot be given Enhancements.’",
-            "type": "text"
+            "name": "Alliance of Agony",
+            "sections": [
+              {
+                "text": "At the start of the battle, you gain 2 Pain tokens for each of the following combinations your army contains (these do not need to be in the same Attached unit):\n\n■ One or more **ARCHON** models and one or more **KABALITE WARRIORS** units.\n■ One or more **SUCCUBUS** models and one or more **WYCHES** units.\n■ One or more **HAEMONCULUS** models and one or more **WRACKS** units.\n\n**Designer’s Note:** *These are all cumulative, so if your army contains at least one of all of the combinations listed above, you start the battle with 6 Pain tokens.*",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Skysplinter Assault",
-        "name": "Rain of Cruelty",
-        "rule": [
+        "detachment": "Covenite Coterie",
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time a **DRUKHARI** unit from your army disembarks from a **TRANSPORT**, until the end of the turn, that unit’s ranged weapons have the **[IGNORES COVER]** ability and that unit’s melee weapons have the **[LANCE]** ability.",
-            "type": "text"
+            "name": "Stitchflesh Abominations",
+            "sections": [
+              {
+                "text": "Each time an attack targets a **HAEMONCULUS COVENS** unit from your army, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -4581,5 +4802,5 @@
       "detachment": "Skysplinter Assault"
     }
   ],
-  "updated": "2025-11-13T18:15:15.207Z"
+  "updated": "2025-12-04T10:11:07.150Z"
 }

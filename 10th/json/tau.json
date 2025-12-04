@@ -7205,12 +7205,12 @@
     }
   ],
   "detachments": [
-    "Auxiliary Cadre",
+    "Retaliation Cadre",
+    "Mont’ka",
     "Kroot Hunting Pack",
     "Experimental Prototype Cadre",
     "Kauyon",
-    "Retaliation Cadre",
-    "Mont’ka"
+    "Auxiliary Cadre"
   ],
   "enhancements": [
     {
@@ -7313,7 +7313,7 @@
       "name": "Puretide Engram Neurochip",
       "id": "4687682c-84ca-50e4-bcc8-8c5ccedd85f2",
       "cost": "25",
-      "keywords": ["Battlesuit"],
+      "keywords": ["Battlesuit", "T’au Empire"],
       "excludes": [],
       "description": "T’AU EMPIRE BATTLESUIT model only. Each time you target the bearer’s unit with a Stratagem, roll one D6: on a 4+, you gain 1CP.",
       "faction_id": "TAU",
@@ -7325,7 +7325,7 @@
       "name": "Starflare Ignition System",
       "id": "28e7bc02-636f-510a-ba46-d2cb491d1a66",
       "cost": "20",
-      "keywords": ["Battlesuit"],
+      "keywords": ["Battlesuit", "T’au Empire"],
       "excludes": [],
       "description": "T’au EMPIRE BATTLESUIT model only. At the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove that unit from the battlefield and place it into Strategic Reserves.",
       "faction_id": "TAU",
@@ -7337,7 +7337,7 @@
       "name": "Internal Grenade Racks",
       "id": "3003886c-e0cc-5155-affe-f1ba0d44a93c",
       "cost": "20",
-      "keywords": ["Battlesuit"],
+      "keywords": ["Battlesuit", "T’au Empire"],
       "excludes": [],
       "description": "T’AU EMPIRE BATTLESUIT model only. The bearer has the GRENADES keyword, and each time the bearer ends a Normal move, you can select one enemy unit that it moved over during that move. If you do, roll six D6: for each 4+, that enemy unit suffers 1 mortal wound.",
       "faction_id": "TAU",
@@ -7349,7 +7349,7 @@
       "name": "Prototype Weapon System",
       "id": "cee3489a-6c94-574d-b3dc-3157e603d498",
       "cost": "15",
-      "keywords": ["Battlesuit"],
+      "keywords": ["Battlesuit", "T’au Empire"],
       "excludes": [],
       "description": "T’AU EMPIRE BATTLESUIT model only. Each time the bearer is selected to shoot, select either the [LETHAL HITS] or [SUSTAINED HITS 1] ability. Until those attacks are resolved, ranged weapons equipped by the bearer have the selected ability.",
       "faction_id": "TAU",
@@ -7445,7 +7445,7 @@
       "name": "Transponder Lock Module",
       "id": "d0a3a389-3b11-5948-8140-a1d856c6b485",
       "cost": "25",
-      "keywords": ["Walker"],
+      "keywords": ["Walker", "T’au Empire"],
       "excludes": [],
       "description": "T’AU EMPIRE WALKER model with the Deep Strike ability only. The bearer’s unit can be set up using the Deep Strike ability in the Reinforcements step of your first, second or third Movement phase, regardless of any mission rules. During your first Movement phase, when you set up the bearer’s unit, it must be set up within 12\" of one or more friendly KROOT or VESPID STINGWINGS units and not within 9\" horizontally of one or more enemy units.",
       "faction_id": "TAU",
@@ -7511,150 +7511,306 @@
     "army": [
       {
         "name": "Drones",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
             "text": "If you have upgraded a model to have a drone, place a Drone token next to your model as a reminder. These do not count as models for any rules purposes.",
+            "order": 1,
+            "title": null,
             "type": "textBold"
           },
           {
-            "order": 10,
-            "text": "Shield Drone",
-            "type": "header"
-          },
-          {
-            "order": 11,
-            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "text": "If your Army Faction is **T’AU EMPIRE**, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding **FORTIFICATION** and Battle-shocked units] select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the **[IGNORES COVER]** ability.",
+            "order": 1,
+            "title": null,
             "type": "text"
           },
           {
-            "order": 2,
             "text": "Guardian Drone",
+            "order": 2,
+            "title": null,
             "type": "header"
           },
           {
-            "order": 3,
             "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "order": 3,
+            "title": null,
             "type": "text"
           },
           {
-            "order": 4,
             "text": "Gun Drone",
-            "type": "header"
-          },
-          {
             "order": 5,
-            "text": "The bearer is equipped with the following ranged weapon:",
-            "type": "text"
+            "title": null,
+            "type": "header"
           },
           {
+            "text": "The bearer is equipped with the following ranged weapon:",
             "order": 6,
-            "text": "Marker Drone",
-            "type": "header"
-          },
-          {
-            "order": 7,
-            "text": "The bearer’s unit has the **MARKERLIGHT** keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "title": null,
             "type": "text"
           },
           {
-            "order": 8,
-            "text": "Missile Drone",
+            "text": "-",
+            "order": 7,
+            "title": null,
+            "type": "image"
+          },
+          {
+            "text": "Marker Drone",
+            "order": 9,
+            "title": null,
             "type": "header"
           },
           {
-            "order": 9,
+            "text": "The bearer’s unit has the **MARKERLIGHT** keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "order": 10,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Missile Drone",
+            "order": 12,
+            "title": null,
+            "type": "header"
+          },
+          {
             "text": "The bearer is equipped with the following ranged weapon:",
+            "order": 13,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "-",
+            "order": 14,
+            "title": null,
+            "type": "image"
+          },
+          {
+            "text": "Shield Drone",
+            "order": 16,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "order": 17,
+            "title": null,
             "type": "text"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       },
       {
         "name": "For the Greater Good",
-        "rule": [
+        "rules": [
           {
+            "text": "If you have upgraded a model to have a drone, place a Drone token next to your model as a reminder. These do not count as models for any rules purposes.",
             "order": 1,
-            "text": "If your Army Faction is **T’AU EMPIRE**, then in your Shooting phase units from your army can work in pairs to help each other target specific enemy units. When they do this, one unit is the Observer unit and the other is their Guided unit. The enemy unit they are targeting is called their Spotted unit.\n\nEach time you select this unit to shoot, if it is not an Observer unit, it can use this ability. If it does, select one other friendly unit with this ability that is also eligible to shoot (excluding **FORTIFICATION**, Battle-shocked and Observer units). Until the end of the phase, this unit is considered a Guided unit, and that friendly unit is considered an Observer unit. Then select one enemy unit that is visible to both of your units to be their Spotted unit. Until the end of the phase:\n\n■ Each time a model in a Guided unit makes an attack that targets their Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if their Observer unit has the **MARKERLIGHT** keyword, that attack has the **[IGNORES COVER]** ability.\n\n■ Each time a model in a Guided unit makes an attack that does not target their Spotted unit, worsen the Ballistic Skill characteristic of that attack by 1.",
+            "title": null,
+            "type": "textBold"
+          },
+          {
+            "text": "If your Army Faction is **T’AU EMPIRE**, at the start of your Shooting phase you can select units from your army with this ability to become Observer units.\n\nDuring your Shooting phase, for each Observer unit from your army that has not been selected to shoot this phase and is eligible to shoot (excluding **FORTIFICATION** and Battle-shocked units] select one enemy unit that is visible to be marked as their Spotted unit until the end of the phase. Each enemy unit can only be marked as a Spotted unit once per phase.\n\nUnits from your army with the For the Greater Good ability (excluding Observer units) are Guided units while targeting one or more Spotted units.\n\nUntil the end of the phase, each time a model from your army in a Guided unit makes an attack that targets a Spotted unit, improve the Ballistic Skill characteristic of that attack by 1 and, if the Spotted unit was marked by an Observer unit that has the Markerlight keyword, that attack has the **[IGNORES COVER]** ability.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Guardian Drone",
+            "order": 2,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "Each time a model makes a ranged attack that targets the bearer’s unit, subtract 1 from the Wound roll.",
+            "order": 3,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Gun Drone",
+            "order": 5,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "The bearer is equipped with the following ranged weapon:",
+            "order": 6,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "-",
+            "order": 7,
+            "title": null,
+            "type": "image"
+          },
+          {
+            "text": "Marker Drone",
+            "order": 9,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "The bearer’s unit has the **MARKERLIGHT** keyword and can act as an Observer unit for another unit even if it Advanced this turn.",
+            "order": 10,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Missile Drone",
+            "order": 12,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "The bearer is equipped with the following ranged weapon:",
+            "order": 13,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "-",
+            "order": 14,
+            "title": null,
+            "type": "image"
+          },
+          {
+            "text": "Shield Drone",
+            "order": 16,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "Add 1 to the bearer’s Wounds characteristic.",
+            "order": 17,
+            "title": null,
             "type": "text"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Auxiliary Cadre",
-        "name": "Integrated Command Structure",
-        "rule": [
+        "detachment": "Retaliation Cadre",
+        "rules": [
           {
-            "order": 1,
-            "text": "**KROOT** and **VESPID STINGWINGS** units from your army have the following ability:\n\n**Targeting Triangulation (Aura)**: While an enemy unit is within 9\" of and visible to this unit, each time a ranged attack made by a friendly **T’AU EMPIRE** model (excluding **KROOT**, **VESPID STINGWINGS** and **TITANIC** models) targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.\n\n**T’AU EMPIRE** units (excluding **KROOT** and **VESPID STINGWINGS** units) from your army have the following ability:\n\n**Localised Stealth Projectors (Aura)**: While a friendly **KROOT** or **VESPID STINGWINGS** unit is wholly within 6\" of and visible to this unit, that **KROOT** or **VESPID STINGWINGS** unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Experimental Prototype Cadre",
-        "name": "Superior Craftsmanship",
-        "rule": [
-          {
-            "order": 1,
-            "text": "Add 6\" to the Range characteristic of ranged weapons equipped by **T’AU EMPIRE** models from your army.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Kauyon",
-        "name": "Patient Hunter",
-        "rule": [
-          {
-            "order": 1,
-            "text": "From the third battle round onwards, ranged weapons equipped by **T’AU EMPIRE** models from your army have the **[SUSTAINED HITS 1]** ability, or the **[SUSTAINED HITS 2]** ability instead while targeting their unit’s Spotted unit.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Kroot Hunting Pack",
-        "name": "Hunter’s Instincts",
-        "rule": [
-          {
-            "order": 1,
-            "text": "Each time a **KROOT** model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Kroot Hunting Pack",
-        "name": "Skirmish Fighters",
-        "rule": [
-          {
-            "order": 1,
-            "text": "**Kroot** models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
-            "type": "text"
+            "name": "Bonded Heroes",
+            "sections": [
+              {
+                "text": "Each time a **T’AU EMPIRE BATTLESUIT** model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 9\", improve the Armour Penetration characteristic of that attack by 1 as well.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Mont’ka",
-        "name": "Killing Blow",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "During the first, second and third battle rounds, ranged weapons equipped by **T’AU EMPIRE** models from your army have the **[ASSAULT]** ability. During the first, second and third battle rounds, while a unit is a Guided unit (see For the Greater Good), its ranged weapons have the **[LETHAL HITS]** ability.",
-            "type": "text"
+            "name": "Killing Blow",
+            "sections": [
+              {
+                "text": "During the first, second and third battle rounds, ranged weapons equipped by **T’AU EMPIRE** models from your army have the **[ASSAULT]** ability. During the first, second and third battle rounds, while a unit is a Guided unit (see For the Greater Good), its ranged weapons have the **[LETHAL HITS]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Retaliation Cadre",
-        "name": "Bonded Heroes",
-        "rule": [
+        "detachment": "Kroot Hunting Pack",
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time a **T’AU EMPIRE BATTLESUIT** model from your army makes a ranged attack that targets a unit within 12\", improve the Strength characteristic of that attack by 1. If that attack targets a unit within 9\", improve the Armour Penetration characteristic of that attack by 1 as well.",
-            "type": "text"
+            "name": "Hunter’s Instincts",
+            "sections": [
+              {
+                "text": "Each time a **KROOT** model from your army makes an attack, add 1 to the Hit roll if the target of that attack is below its Starting Strength, and add 1 to the Wound roll as well if the target of that attack is Below Half-strength.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          },
+          {
+            "name": "Skirmish Fighters",
+            "sections": [
+              {
+                "text": "**Kroot** models from your army have a 6+ invulnerable save against melee attacks and a 5+ invulnerable save against ranged attacks.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Experimental Prototype Cadre",
+        "rules": [
+          {
+            "name": "Superior Craftsmanship",
+            "sections": [
+              {
+                "text": "Add 6\" to the Range characteristic of ranged weapons equipped by **T’AU EMPIRE** models from your army.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Kauyon",
+        "rules": [
+          {
+            "name": "Patient Hunter",
+            "sections": [
+              {
+                "text": "During the third, fourth and fifth battle rounds, ranged weapons equipped by **T’AU EMPIRE** models from your army have the **[SUSTAINED HITS 1]** ability. During the third, fourth and fifth battle rounds, while a unit is a Guided unit (see For the Greater Good), each time a ranged attack is made by a model in that unit that targets a Spotted unit, you can ignore any or all modifiers to that attack’s Ballistic skill characteristics and/or all modifiers to the Hit roll.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Auxiliary Cadre",
+        "rules": [
+          {
+            "name": "Integrated Command Structure",
+            "sections": [
+              {
+                "text": "**KROOT** and **VESPID STINGWINGS** units from your army have the following ability:\n\n**Targeting Triangulation (Aura)**: While an enemy unit is within 9\" of and visible to this unit, each time a ranged attack made by a friendly **T’AU EMPIRE** model (excluding **KROOT**, **VESPID STINGWINGS** and **TITANIC** models) targets that enemy unit, improve the Armour Penetration characteristic of that attack by 1.\n\n**T’AU EMPIRE** units (excluding **KROOT** and **VESPID STINGWINGS** units) from your army have the following ability:\n\n**Localised Stealth Projectors (Aura)**: While a friendly **KROOT** or **VESPID STINGWINGS** unit is wholly within 6\" of and visible to this unit, that **KROOT** or **VESPID STINGWINGS** unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -8202,5 +8358,5 @@
       "detachment": "Mont’ka"
     }
   ],
-  "updated": "2025-11-13T18:15:14.812Z"
+  "updated": "2025-12-04T10:11:06.741Z"
 }

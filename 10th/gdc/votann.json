@@ -3451,11 +3451,11 @@
     }
   ],
   "detachments": [
-    "Needgaârd Oathband",
-    "Hearthband",
-    "Dêlve Assault Shift",
     "Hearthfyre Arsenal",
     "Persecution Prospect",
+    "Needgaârd Oathband",
+    "Dêlve Assault Shift",
+    "Hearthband",
     "Brandfast Oathband"
   ],
   "enhancements": [
@@ -3523,7 +3523,7 @@
       "name": "Quake Multigenerator",
       "id": "7396264d-c65f-557d-8797-18adc34bc730",
       "cost": "15",
-      "keywords": ["Kâhl"],
+      "keywords": ["Kâhl", "Leagues of Votann"],
       "excludes": [],
       "description": "KÂHL model only. In your Shooting phase, after the bearer has shot, select one enemy unit (excluding TITANIC units) hit by one or more of those attacks. Until the start of your next turn, that enemy unit is suppressed. While a unit is suppressed, each time a model in that unit makes an attack, subtract 1 from the Hit roll.",
       "faction_id": "LoV",
@@ -3547,7 +3547,7 @@
       "name": "High Kâhl",
       "id": "463bcb58-c699-5f27-9703-08d27cea34c4",
       "cost": "30",
-      "keywords": ["Kâhl"],
+      "keywords": ["Kâhl", "Leagues of Votann"],
       "excludes": [],
       "description": "KÂHL model only. Each time a model in the bearer’s unit is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 4+, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
       "faction_id": "LoV",
@@ -3756,56 +3756,173 @@
   "rules": {
     "army": [
       {
-        "name": "Eye of the Ancestors",
-        "rule": [
+        "name": "Prioritised Efficiency",
+        "rules": [
           {
+            "text": "If your Army Faction is **LEAGUES OF VOTANN, LEAGUES OF VOTANN** units from your army have one of two abilities: Hostile Acquisition or Fortify Takeover (see below). During the battle, which ability those **LEAGUES OF VOTANN** units have will change depending on how many Yield points (YP) you currently have:\n\n■ At the start of the battle, your units have Hostile Acquisition until the start of your next Command phase.\n■ At the end of your Command phase, if you have fewer than 7YP, your units have Hostile Acquisition until the start of your next Command phase.\n■ At the end of your Command phase, if you have 7YP or more, your units have Fortify Takeover until the start of your next Command phase.",
             "order": 1,
-            "text": "If your Army Faction is **LEAGUES OF VOTANN**, each time an enemy unit destroys a **LEAGUES OF VOTANN** unit from your army, that enemy unit gains 1 Judgement token. An enemy unit can never have more than 2 Judgement tokens (any further Judgement tokens a unit would gain beyond this are ignored).\n\nEach time a model from your army with this ability makes an attack that targets a unit that has one or more Judgement tokens, until that model’s attacks have been resolved, apply the relevant bonus from the table below to that attack.\n\nIn addition, at the start of the battle, select two units from your opponent’s army; each of those units start the battle with 2 Judgement tokens.",
+            "title": null,
             "type": "text"
           },
           {
+            "text": "Hostile Acquisition",
             "order": 2,
-            "text": "**Designer’s Note**: If a unit with Judgement tokens is removed from the battlefield, make a note of how many Judgement tokens it had when it was removed. If that unit is set up on the battlefield again, place the corresponding number of Judgement tokens next to it. If a unit with Judgement tokens splits up into two or more smaller units, each of those units gains a number of Judgement tokens equal to that of the original unit. If two units combine to form a single larger unit and either of those units had Judgement tokens, make a note of how many the unit with the most has, just before they combine – the new unit has a number of Judgement tokens equal to this.",
-            "type": "textItalic"
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "■ Each time a model in this unit makes an attack that targets an enemy unit within range of one or more objective markers, add 1 to the Hit roll.\n■ You can re‑roll Advance and Charge rolls made for this unit.",
+            "order": 3,
+            "title": "Lore",
+            "type": "text"
+          },
+          {
+            "text": "Fortify Takeover",
+            "order": 4,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "■ Each time a model in this unit makes an attack that targets an enemy unit, if this unit is within range of one or more objective markers you control, add 1 to the Hit roll.\n■ Each time an attack targets this unit, if the Strength characteristic of that attack is greater than this unit’s Toughness characteristic and this unit is not a **VEHICLE**, subtract 1 from the Wound roll.",
+            "order": 5,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Yield Points",
+            "order": 6,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "At the end of each player’s Command phase, you gain 1YP if you control one or more objective markers within your deployment zone, and, from the second battle round onwards, you gain 1 additional YP for each of the following conditions you satisfy:\n\n■ You control one or more objective markers not within your deployment zone.\n■ You control two or more objective markers not within your deployment zone.\n■ You control more objective markers than your opponent. In your turn, YP gained in this way are always gained before checking which ability **LEAGUES OF VOTANN** units from your army have.\n\nWhenever a rule allows you to spend YP, reduce the number of YP you have by that amount (your YP cannot go below 0), otherwise you cannot use that rule.",
+            "order": 7,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "**Designer’s Note:** *This means you can use rules that let you gain or spend YP to influence which ability your units have – Hostile Acquisition or Fortify Takeover – depending on which will be most beneficial to you. Remember that your army only changes ability at the end of your Command phase, so you will sometimes need to plan ahead if you want your army to stay in or change ability.*",
+            "order": 8,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "**Example:** *In her third turn, Freida’s units had the Hostile Acquisition ability, as she had 6YP at the end of her Command phase. In her fourth turn, at the end of her Command phase, she controls one objective marker within her deployment zone, and one objective marker not within her deployment zone, and her opponent controls two objective markers. Freida gains 2YP, so she now has 8YP, and her units now have the Fortify Takeover ability instead.*\n\n*During her turn, Freida uses a Stratagem that allows her to spend YP. She spends 2YP, bringing her total down to 6YP. However, units from her army still have Fortify Takeover – it will only change if, at the end of her next Command phase, she still has fewer than 7YP.*",
+            "order": 9,
+            "title": null,
+            "type": "quote"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Hearthband",
-        "name": "Methodical Annihilation",
-        "rule": [
+        "detachment": "Hearthfyre Arsenal",
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time a **LEAGUES OF VOTANN** model from your army makes an attack with a weapon (excluding Blast weapons) that targets the closest eligible target or a target that is within Engagement Range of that model’s unit:\n\n■ Re‐roll a Hit roll of 1.\n■ If your unit is a **KÂHL**, **EINHYR HEARTHGUARD** or **ÛTHAR THE DESTINED** unit, improve the Armour Penetration characteristic of that attack by 1.",
-            "type": "text"
+            "name": "Optimal Application",
+            "sections": [
+              {
+                "text": "At the end of your Command phase, you gain 1YP for each objective marker you control that is not within your deployment zone and has one or more **IRON‑MASTER** and/or **MEMNYR STRATEGIST** models from your army within range of it (to a maximum of 2YP gained from this Detachment rule per turn).\n\nIn your Shooting phase, each time a **BRÔKHYR**, **IRONKIN STEELJACKS** or **ARKANYST EVALUATOR** unit from your army is selected to shoot, you can spend 1YP. If you do, until the end of the phase, each time a model in that unit makes an attack, re‑roll a Hit roll of 1.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Oathband",
-        "name": "Ruthless Efficiency",
-        "rule": [
+        "detachment": "Persecution Prospect",
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of the battle, select an additional number of units from your opponent’s army depending on the battle size, as shown below:\n\n■ **Incursion**: 1 unit\n■ **Strike Force**: 2 units\n■ **Onslaught**: 4 units\n\nEach of those units start the battle with 2 Judgement tokens (see Eye of the Ancestors).\n\nIf, at the start of any of your Command phases, any of those units have been destroyed, you gain a number of CP depending on how early in the battle you destroyed it, as shown below (you can only gain CP in this way once per battle, and CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).",
-            "type": "text"
-          },
+            "name": "Assailed From Every Angle",
+            "sections": [
+              {
+                "text": "**LEAGUES OF VOTANN** units from your army have the following ability:\n\n**Guerrilla Adepts:** In your Shooting phase, just after this unit is selected to shoot, this unit can use this ability. If it does, select one enemy unit (excluding **MONSTERS** and **VEHICLES**). Until the end of the phase, attacks made by models in this unit can only target that enemy unit (and only if it is an eligible target) and, after resolving those attacks, if one or more of those attacks hit that enemy unit, until the start of your next Shooting phase, that enemy unit is assailed (this simply labels that unit for the purposes of this ability and some Enhancements and Stratagems). If that unit is already assailed, until the start of your next Shooting phase, it is also pinned. While a unit is pinned, subtract 2\" from its Move characteristic and subtract 2 from Charge rolls made for it.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Needgaârd Oathband",
+        "rules": [
           {
-            "order": 2,
-            "text": "-",
-            "type": "image"
-          },
+            "name": "Martial Leverage",
+            "sections": [
+              {
+                "text": "Each time an enemy unit is destroyed, you gain 1YP.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Dêlve Assault Shift",
+        "rules": [
           {
-            "order": 3,
-            "text": "-",
-            "type": "image"
-          },
+            "name": "Fury From The Dêlve",
+            "sections": [
+              {
+                "text": "**CTHONIAN BESERKS** units from your army have the Deep Strike ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Hearthband",
+        "rules": [
           {
-            "order": 4,
-            "text": "-",
-            "type": "image"
+            "name": "Methodical Annihilation",
+            "sections": [
+              {
+                "text": "Each time a **LEAGUES OF VOTANN** model from your army makes an attack with a weapon that targets the closest eligible target or a target that is within Engagement Range of that model’s unit:\n\n■ Re‐roll a Wound roll of 1.\n■ If your unit is a **KÂHL**, **EINHYR HEARTHGUARD** or **ÛTHAR THE DESTINED** unit, improve the Armour Penetration characteristic of that attack by 1.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Brandfast Oathband",
+        "rules": [
+          {
+            "name": "Mobile Sensor Relays",
+            "sections": [
+              {
+                "text": "**LEAGUES OF VOTANN TRANSPORT** units from your army have the following ability:&#x20;\n\n**Firebase Control (Aura):** While a friendly **LEAGUES OF VOTANN INFANTRY** unit is wholly within 6\" of this **TRANSPORT**, ranged weapons equipped by models in that **INFANTRY** unit have the **[SUSTAINED HITS 1]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -4353,5 +4470,5 @@
       "detachment": "Brandfast Oathband"
     }
   ],
-  "updated": "2025-11-13T18:15:14.679Z"
+  "updated": "2025-12-04T10:11:06.558Z"
 }

@@ -4052,11 +4052,11 @@
     }
   ],
   "detachments": [
-    "Questoris Companions",
-    "Spearhead-at-Arms",
     "Valourstrike Lance",
     "Questor Forgepact",
-    "Gate Warden Lance"
+    "Gate Warden Lance",
+    "Spearhead-at-Arms",
+    "Questoris Companions"
   ],
   "enhancements": [
     {
@@ -4308,86 +4308,423 @@
   "rules": {
     "army": [
       {
-        "name": "Bondsman Abilities",
-        "rule": [
-          {
-            "order": 1,
-            "text": "Some **QUESTORIS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12\" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, the **ARMIGER** you selected is affected by that Bondsman ability.",
-            "type": "text"
-          }
-        ]
-      },
-      {
         "name": "Code Chivalric",
-        "rule": [
+        "rules": [
           {
+            "text": "Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12\" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.",
             "order": 1,
-            "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must select one of the Oaths below to be active for your army. Models from your army with this ability gain the associated Oath ability, and you gain the associated Deed to complete.\n\nIf, at the start of any of your Command phases, your selected Oath’s Deed is completed, your army becomes Honoured for the rest of the battle and you gain 3CP (you can only gain CP in this way once per battle, and CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).",
+            "title": null,
             "type": "text"
           },
           {
+            "text": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts – one Deed and one Quality. There are three options for each part, shown below.\n\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\n\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\n\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If every model in your army has the **IMPERIUM** keyword, you can include either one **TITANIC IMPERIAL KNIGHTS** model or up to three **ARMIGER** models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your **WARLORD**, and they cannot be given Enhancements.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Deed",
             "order": 2,
-            "text": "LAY LOW THE TYRANT",
+            "title": null,
             "type": "header"
           },
           {
+            "text": "At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.",
             "order": 3,
-            "text": "■ **Oath Ability**: Each time this model is selected to shoot or fight, you can re-roll one Hit roll and you can re-roll one Wound roll.\n■ **Deed**: This deed is completed if the enemy **WARLORD** is destroyed.",
-            "type": "text"
+            "title": "We vow to lay low the tyrant...",
+            "type": "accordion"
           },
           {
+            "text": "This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.",
             "order": 4,
-            "text": "RECLAIM THE REALM",
+            "title": "We swear to reclaim the realm...",
+            "type": "accordion"
+          },
+          {
+            "text": "This deed is completed at the end of a turn if the number of destroyed enemy units is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).",
+            "order": 5,
+            "title": "We pledge to reap a great tally...",
+            "type": "accordion"
+          },
+          {
+            "text": "Quality",
+            "order": 6,
+            "title": null,
             "type": "header"
           },
           {
-            "order": 5,
-            "text": "■ **Oath Ability**: Add 1\" to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.\n■ **Deed**: This deed is completed if you control one or more objective markers in your opponent’s deployment zone.",
-            "type": "text"
+            "text": "Each time this model is selected to shoot or fight, you can re‑roll one Hit roll and you can re‑roll one Wound roll.",
+            "order": 7,
+            "title": "...with all our martial valour risen over all.",
+            "type": "accordion"
+          },
+          {
+            "text": "Add 2” to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.",
+            "order": 8,
+            "title": "...and we are eager for the challenge.",
+            "type": "accordion"
+          },
+          {
+            "text": "Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.",
+            "order": 9,
+            "title": "...yet shall our legacy be unsullied.",
+            "type": "accordion"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       },
       {
-        "name": "Freeblades",
-        "rule": [
+        "name": "Bondsman",
+        "rules": [
           {
+            "text": "Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12\" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.",
             "order": 1,
-            "text": "If every model in your army has the **IMPERIUM** keyword, you can include either 1 **TITANIC IMPERIAL KNIGHTS** model or up to 3 **ARMIGER** models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your **WARLORD**, and they cannot be given Enhancements.",
+            "title": null,
             "type": "text"
+          },
+          {
+            "text": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts – one Deed and one Quality. There are three options for each part, shown below.\n\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\n\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\n\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If every model in your army has the **IMPERIUM** keyword, you can include either one **TITANIC IMPERIAL KNIGHTS** model or up to three **ARMIGER** models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your **WARLORD**, and they cannot be given Enhancements.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Deed",
+            "order": 2,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.",
+            "order": 3,
+            "title": "We vow to lay low the tyrant...",
+            "type": "accordion"
+          },
+          {
+            "text": "This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.",
+            "order": 4,
+            "title": "We swear to reclaim the realm...",
+            "type": "accordion"
+          },
+          {
+            "text": "This deed is completed at the end of a turn if the number of destroyed enemy units is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).",
+            "order": 5,
+            "title": "We pledge to reap a great tally...",
+            "type": "accordion"
+          },
+          {
+            "text": "Quality",
+            "order": 6,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "Each time this model is selected to shoot or fight, you can re‑roll one Hit roll and you can re‑roll one Wound roll.",
+            "order": 7,
+            "title": "...with all our martial valour risen over all.",
+            "type": "accordion"
+          },
+          {
+            "text": "Add 2” to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.",
+            "order": 8,
+            "title": "...and we are eager for the challenge.",
+            "type": "accordion"
+          },
+          {
+            "text": "Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.",
+            "order": 9,
+            "title": "...yet shall our legacy be unsullied.",
+            "type": "accordion"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       },
       {
         "name": "Super-heavy Walker",
-        "rule": [
+        "rules": [
           {
+            "text": "Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12\" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.",
             "order": 1,
-            "text": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+            "title": null,
             "type": "text"
+          },
+          {
+            "text": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts – one Deed and one Quality. There are three options for each part, shown below.\n\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\n\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\n\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If every model in your army has the **IMPERIUM** keyword, you can include either one **TITANIC IMPERIAL KNIGHTS** model or up to three **ARMIGER** models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your **WARLORD**, and they cannot be given Enhancements.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Deed",
+            "order": 2,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.",
+            "order": 3,
+            "title": "We vow to lay low the tyrant...",
+            "type": "accordion"
+          },
+          {
+            "text": "This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.",
+            "order": 4,
+            "title": "We swear to reclaim the realm...",
+            "type": "accordion"
+          },
+          {
+            "text": "This deed is completed at the end of a turn if the number of destroyed enemy units is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).",
+            "order": 5,
+            "title": "We pledge to reap a great tally...",
+            "type": "accordion"
+          },
+          {
+            "text": "Quality",
+            "order": 6,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "Each time this model is selected to shoot or fight, you can re‑roll one Hit roll and you can re‑roll one Wound roll.",
+            "order": 7,
+            "title": "...with all our martial valour risen over all.",
+            "type": "accordion"
+          },
+          {
+            "text": "Add 2” to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.",
+            "order": 8,
+            "title": "...and we are eager for the challenge.",
+            "type": "accordion"
+          },
+          {
+            "text": "Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.",
+            "order": 9,
+            "title": "...yet shall our legacy be unsullied.",
+            "type": "accordion"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
+      },
+      {
+        "name": "Freeblades",
+        "rules": [
+          {
+            "text": "Some **IMPERIAL KNIGHTS** models have a Bondsman ability, tagged with the word ‘Bondsman’. In your Command phase, one or more models from your army with a Bondsman ability can use that ability. For each one that does, select one friendly **ARMIGER** model within 12\" of that model (you cannot select an **ARMIGER** model that is already being affected by a Bondsman ability). Until the start of your next Command phase, that **ARMIGER** model is affected by that Bondsman ability.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Each time a model with this ability makes a Normal, Advance or Fall Back move, it can move through models (excluding **TITANIC** models) and sections of terrain features that are 4\" or less in height. When doing so:\n\n■ It can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them.\n■ It can also move through sections of terrain features that are more than 4\" in height, but if it does, after it has moved, roll one D6: on a 1, that model is Battle-shocked.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If your Army Faction is **IMPERIAL KNIGHTS**, at the end of the Read Mission Objectives step, you must determine your army’s Oath for the coming battle. An Oath consists of two parts – one Deed and one Quality. There are three options for each part, shown below.\n\nTo determine your army’s Deed, you can either select one Deed or you can randomly select one Deed by rolling a D6 and consulting the relevant table below. The selected Deed will describe what needs to be achieved in order to complete that Deed.\n\nTo determine your army’s Quality, you can either select one Quality or you can randomly select one Quality by rolling a D6 and consulting the relevant table below. Until the end of the battle, the ability described in the Quality selected applies to all models in your army with this ability.\n\nThe first time your selected Deed is completed your Oath is fulfilled and, until the end of the battle, your army becomes Honoured and you gain 2CP, or 3CP if you randomly selected your Deed and/or Quality (CP gained in this way are an exemption to the Core Rules that limit the maximum number of CP you can gain per battle round to 1).",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If every model in your army has the **IMPERIUM** keyword, you can include either one **TITANIC IMPERIAL KNIGHTS** model or up to three **ARMIGER** models in your army, even if they do not have the Faction keyword you selected in the Select Army Faction step. None of these models can be your **WARLORD**, and they cannot be given Enhancements.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "Deed",
+            "order": 2,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "At the start of the battle, select one **CHARACTER** model in your opponent’s army. This Deed is completed at the end of a turn if that **CHARACTER** is destroyed.",
+            "order": 3,
+            "title": "We vow to lay low the tyrant...",
+            "type": "accordion"
+          },
+          {
+            "text": "This deed is completed at the end of your opponent’s turn if you control more objective markers than your opponent.",
+            "order": 4,
+            "title": "We swear to reclaim the realm...",
+            "type": "accordion"
+          },
+          {
+            "text": "This deed is completed at the end of a turn if the number of destroyed enemy units is greater than the battle round number even if those units are subsequently returned to the battlefield (for example, two destroyed enemy units in the first battle round).",
+            "order": 5,
+            "title": "We pledge to reap a great tally...",
+            "type": "accordion"
+          },
+          {
+            "text": "Quality",
+            "order": 6,
+            "title": null,
+            "type": "header"
+          },
+          {
+            "text": "Each time this model is selected to shoot or fight, you can re‑roll one Hit roll and you can re‑roll one Wound roll.",
+            "order": 7,
+            "title": "...with all our martial valour risen over all.",
+            "type": "accordion"
+          },
+          {
+            "text": "Add 2” to this model’s Move characteristic and add 1 to Advance and Charge rolls made for this model.",
+            "order": 8,
+            "title": "...and we are eager for the challenge.",
+            "type": "accordion"
+          },
+          {
+            "text": "Improve this model’s Objective Control characteristic by 2 and its Leadership characteristic by 1.",
+            "order": 9,
+            "title": "...yet shall our legacy be unsullied.",
+            "type": "accordion"
+          }
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Noble Lance",
-        "name": "Indomitable Heroes",
-        "rule": [
+        "detachment": "Valourstrike Lance",
+        "rules": [
           {
-            "order": 1,
-            "text": "All **IMPERIAL KNIGHTS** models from your army have the Feel No Pain 6+ ability. If your army is Honoured, those models have the Feel No Pain 5+ ability.",
-            "type": "text"
+            "name": "Bold Gallantry",
+            "sections": [
+              {
+                "text": "Each time an **IMPERIAL KNIGHTS** unit from your army Advances, until the end of the turn, ranged weapons equipped by **IMPERIAL KNIGHTS** models from your army have the **[ASSAULT]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Questor Forgepact",
-        "name": "Cogbound Alliance",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "**IMPERIAL KNIGHT** units from your army have the following the ability:\n\n**Sacristan Pledge**: In your Command phase, one model in this unit regains 1 lost wound. If this unit is within 3\" of one or more friendly **TECH‐PRIEST** models, one model in this unit regains up to D3 lost wounds instead.\n\n**ADEPTUS MECHANICUS** units from your army have the following ability:\n\n**Divine Inspiration**: Each time a model in this unit makes a ranged attack, re‐roll a Hit roll of 1. If this unit is within 6\" of one or more friendly **IMPERIAL KNIGHTS** units, re‐roll a Wound roll of 1 as well.",
-            "type": "text"
+            "name": "Cogbound Alliance",
+            "sections": [
+              {
+                "text": "**IMPERIAL KNIGHT** units from your army have the following the ability:\n\n**Sacristan Pledge**: In your Command phase, one model in this unit regains 1 lost wound. If this unit is within 3\" of one or more friendly **TECH‐PRIEST** models, one model in this unit regains up to D3 lost wounds instead.\n\n**ADEPTUS MECHANICUS** units from your army have the following ability:\n\n**Divine Inspiration**: Each time a model in this unit makes a ranged attack, re‐roll a Hit roll of 1. If this unit is within 6\" of one or more friendly **IMPERIAL KNIGHTS** units, re‐roll a Wound roll of 1 as well.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Gate Warden Lance",
+        "rules": [
+          {
+            "name": "Dauntless Defenders",
+            "sections": [
+              {
+                "text": "At the start of the first battle round, select two objective markers on the battlefield to be your foundations. When you draw a line from any part of one of your foundations to the other, if any part of a model’s base (or any part of a model’s hull, for a model without a base) crosses that line, that model’s unit is said to be on your defensive line.\n\nWhile an **IMPERIAL KNIGHTS** unit from your army is on your defensive line, that unit has the following ability:\n\n**Against the Horde**: Each time a model in this unit makes an attack that targets a visible enemy unit, you can ignore any or all modifiers to the Hit roll, and weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability.&#x20;\n\nEach time one of your foundations is removed from the battlefield (e.g. by a Primary Mission rule), just after it is removed, select a new objective marker on the battlefield to be one of your foundations.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Spearhead-at-Arms",
+        "rules": [
+          {
+            "name": "Knightly Teachings",
+            "sections": [
+              {
+                "text": "Each time a model from your army uses its Bondsman ability, if no other model from your army has used that Bondsman ability that turn, you can select up to three friendly **ARMIGER** models (instead of one) within 12\" of that model, or within 15\" of that model while your army is Honoured (you still cannot select a model that is already being affected by a Bondsman ability). Until the start of your next Command phase, those models are affected by that Bondsman ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Questoris Companions",
+        "rules": [
+          {
+            "name": "Heroes of Legend",
+            "sections": [
+              {
+                "text": "At the start of your turn, if your current Oath is fulfilled, determine an additional Oath as described in Army Rules, with the exception that you cannot select a Deed or Quality you have already selected (if you are randomly selecting the Deed and/or Quality and roll any result that you have already selected, select a Deed or Quality you have not already selected instead). If you cannot determine an additional Oath because you have already selected each Deed and each Quality, do not determine an additional Oath.\n\nThe Qualities from Oaths you have fulfilled continue to apply to all models in your army with the Code Chivalric ability. When the Deed for an additional Oath is completed, you instead gain 1CP, regardless of how you selected the Deed or Quality.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          },
+          {
+            "name": "Valour’s Reward",
+            "sections": [
+              {
+                "text": "The Enhancements in this detachment can become expended. You cannot use such Enhancements while they are expended. Each time you fulfil your Oath, each expended Enhancement is no longer expended.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -4845,5 +5182,5 @@
       "detachment": "Valourstrike Lance"
     }
   ],
-  "updated": "2025-11-13T18:15:13.697Z"
+  "updated": "2025-12-04T10:11:05.993Z"
 }
