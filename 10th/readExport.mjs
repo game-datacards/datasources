@@ -221,7 +221,7 @@ function parseDataExport(fileName, factionName) {
 
       return {
         name: rule.name,
-        sections: ruleSections,
+        rules: ruleSections,
         source: "40k-10e",
         cardType: "detachmentRule",
       }
