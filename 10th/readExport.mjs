@@ -113,99 +113,6 @@ const readFile = (file) => {
   return res;
 };
 
-const specialWeaponKeywords = [
-  {
-    description:
-      'After the bearer has shot with this weapon, select one enemy Monster or Vehicle unit hit by one or more of those attacks. Until the end of the turn, each time the bearer selects that unit as a target of a charge, add 2 to the Charge roll.',
-    name: 'Harpooned',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Reverberating Summons',
-    description:
-      'Each time a model is destroyed by this weapon, you can select one friendly Plaguebearers unit within 12" of the bearer and return 1 destroyed Plaguebearer model to that unit.',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Dead Choppy',
-    description:
-      'The Attacks characteristic of this weapon is increased by 1 for each additional dread klaw this model is equipped with.',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Snagged',
-    description:
-      'Each time this weapon scores a hit against an enemy Monster or Vehicle unit, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer.',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Impaled',
-    description:
-      'Each time this weapon scores a hit against an enemy Monster or Vehicle unit, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Conversion',
-    description:
-      'Each time an attack made with this weapon targets a unit more than 12" from the bearer, an unmodified successful Hit roll of 4+ scores a Critical Hit.',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Hive Defences',
-    description:
-      'Each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within range of this weapon, if that enemy unit is an eligible target, the bearer can shoot with this weapon at that unit as if it were your Shooting phase (the bearer can do so up to four times per phase).',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'One Shot',
-    description: 'The bearer can only shoot with this weapon once per battle.',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Hooked',
-    description:
-      'Each time the bearer makes an attack with this weapon that targets a Monster or Vehicle unit, if a hit is scored, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer.',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Linked Fire',
-    description:
-      'When selecting targets for this weapon, you can measure range and determine visibility from another friendly Fire Prism model that is visible to the bearer.',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Psychic Assassin',
-    description:
-      'Each time you select a Psyker unit as the target for this weapon, until those attacks are resolved, change the Attacks characteristic of this weapon to 6.',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Plasma Warhead',
-    description:
-      'The bearer can only shoot with this weapon in your Shooting phase, and only if it  this model is selected to shoot, if it has not shot with its Remained Stationary this turn and you did not use its Deathstrike Missile ability to Designate Target',
-    showAbility: true,
-    showDescription: true,
-  },
-  {
-    name: 'Defensive Array',
-    description:
-      'Each time an enemy unit is set up or ends a Normal, Advance or Fall Back move within range of this weapon, if that enemy unit is an eligible target, the bearer can shoot this weapon at that target as if it were your Shooting phase. The bearer can shoot up to four times in this way in your opponent’s Movement phase.',
-    showAbility: true,
-    showDescription: true,
-  },
-];
-
 const newDataExportFile = readFile('./temp/data-export-715.json');
 const newDataExport = sortObj(JSON.parse(newDataExportFile).data);
 
@@ -226,6 +133,108 @@ function removeMarkdown(str) {
     .replace(/^( *\d+\. +.*)$/gm, '$1') // Remove ordered list items
     .trim(); // Trim whitespace
 }
+
+// Function to parse leader rules and extract structured data
+// Note: ruleText is already processed with removeMarkdown(), so no ** markers
+function parseLeaderRule(ruleText) {
+  const result = {
+    units: [],
+    extra: '',
+    canAttachWith: [],
+    isBodyguard: false,
+    isMandatory: false,
+  };
+
+  if (!ruleText) return result;
+
+  // Pattern 1: "Before the battle" format (no bullets, inline unit name after "unit:")
+  if (ruleText.includes('Before the battle')) {
+    // Match "unit: UNIT NAME." or "unit: UNIT NAME" at end
+    const match = ruleText.match(/unit:\s*([A-Z][A-Z\s''-]+)\.?$/i);
+    if (match) {
+      result.units.push(match[1].replace(/\.$/, '').trim());
+    }
+    result.isMandatory = true;
+    result.extra = ruleText;
+    return result;
+  }
+
+  // Determine where the unit list ends and extra text begins
+  const extraPatterns = [
+    'You can attach',
+    'You must attach',
+    'This model can be attached to a',
+    'This model cannot be attached to a',
+    "If this unit's Bodyguard",
+    "If this unit's Bodyguard",
+  ];
+
+  let extraStartIdx = ruleText.length;
+  let foundPattern = null;
+  for (const pattern of extraPatterns) {
+    const idx = ruleText.indexOf(pattern);
+    if (idx > 0 && idx < extraStartIdx) {
+      extraStartIdx = idx;
+      foundPattern = pattern;
+    }
+  }
+
+  // Pattern 2: Standard bullet format (■ UNIT NAME)
+  // Extract text from first ■ to where extra text begins
+  const bulletStart = ruleText.indexOf('■');
+  if (bulletStart >= 0) {
+    const unitSection = ruleText.substring(bulletStart, extraStartIdx);
+    const units = unitSection
+      .split('■')
+      .map((u) => u.trim())
+      .filter((u) => u.length > 0);
+    result.units = units;
+  }
+
+  // Pattern 3: Extract extra text
+  if (foundPattern && extraStartIdx < ruleText.length) {
+    result.extra = ruleText.substring(extraStartIdx).trim();
+  }
+
+  // Pattern 4: "even if one" with other leaders - extract co-attachable leader types
+  // Format after removeMarkdown: "even if one CAPTAIN, CHAPTER MASTER or LIEUTENANT model/unit"
+  if (ruleText.includes('even if one')) {
+    const leaderMatch = ruleText.match(/even if one\s+(.*?)\s*(?:model|unit) has already/i);
+    if (leaderMatch) {
+      const leaderText = leaderMatch[1];
+      // Split by comma and "or"
+      const leaders = leaderText
+        .split(/,\s*|\s+or\s+/)
+        .map((l) => l.trim())
+        .filter((l) => l.length > 0 && l !== 'or');
+      result.canAttachWith = leaders;
+    }
+  }
+
+  // Pattern 5: Bodyguard detection
+  if (ruleText.includes('Bodyguard')) {
+    result.isBodyguard = true;
+  }
+
+  // Pattern 6: Mandatory attachment detection
+  if (ruleText.includes('must be attached') || ruleText.includes('You must attach')) {
+    result.isMandatory = true;
+  }
+
+  return result;
+}
+
+// Generate specialWeaponKeywords dynamically from the data source
+// Only include abilities without lore (unique abilities, not core rules like Pistol, Lethal Hits, etc.)
+// Also exclude "Psychic" and "Anti-*" abilities (core rules with inconsistent lore data)
+const specialWeaponKeywords = newDataExport.wargear_ability
+  .filter((ability) => !ability.lore && ability.name !== 'Psychic' && !ability.name.startsWith('Anti-'))
+  .map((ability) => ({
+    name: ability.name,
+    description: removeMarkdown(ability.rules || ''),
+    showAbility: true,
+    showDescription: true,
+  }));
 
 function parseDataExport(fileName, factionName) {
   currentFactionIndex++;
@@ -976,26 +985,30 @@ function parseDataExport(fileName, factionName) {
     newUnit.meleeWeapons = [...meleeWeapons];
 
     newUnit.rangedWeapons?.forEach((wep) => {
-      let abilities = undefined;
+      let abilities = [];
       wep?.profiles?.forEach((prof) => {
         specialWeaponKeywords.forEach((val) => {
           if (prof.keywords.some((keyword) => val.name.toLowerCase() === keyword.toLowerCase())) {
-            abilities = [val];
+            if (!abilities.some((a) => a.name === val.name)) {
+              abilities.push(val);
+            }
           }
         });
       });
-      wep.abilities = abilities;
+      wep.abilities = abilities.length > 0 ? abilities : undefined;
     });
     newUnit.meleeWeapons?.forEach((wep) => {
-      let abilities = undefined;
+      let abilities = [];
       wep?.profiles?.forEach((prof) => {
         specialWeaponKeywords.forEach((val) => {
           if (prof.keywords.some((keyword) => val.name.toLowerCase() === keyword.toLowerCase())) {
-            abilities = [val];
+            if (!abilities.some((a) => a.name === val.name)) {
+              abilities.push(val);
+            }
           }
         });
       });
-      wep.abilities = abilities;
+      wep.abilities = abilities.length > 0 ? abilities : undefined;
     });
 
     newUnit.composition = removeMarkdown(card.unitComposition
@@ -1029,55 +1042,28 @@ function parseDataExport(fileName, factionName) {
     const unit = foundUnits[i];
 
     if (unit.leader) {
-      // console.log(i, unit.name, unit.leader);
-      let assignedUnits = undefined;
-      let extraText = '';
+      const parsed = parseLeaderRule(unit.leader);
 
-      if (unit.leader.includes('You can attach')) {
-        assignedUnits = removeMarkdown(unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You can attach')))
-          .split('■')
-          .filter((v) => v)
-          .map((v) => v.replaceAll('*', '').trim());
-        extraText = unit.leader.substring(unit.leader.indexOf('You can attach'));
-      } else if (unit.leader.includes('You must attach')) {
-        assignedUnits = removeMarkdown(unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('You must attach')))
-          .split('■')
-          .filter((v) => v)
-          .map((v) => v.replaceAll('*', '').trim());
-        extraText = unit.leader.substring(unit.leader.indexOf('You must attach'));
-      } else if (unit.leader.includes('This model can be attached to a')) {
-        assignedUnits = removeMarkdown(unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model can be attached to a')))
-          .split('■')
-          .filter((v) => v)
-          .map((v) => v.replaceAll('*', '').trim());
-        extraText = unit.leader.substring(unit.leader.indexOf('This model can be attached to a'));
-      } else if (unit.leader.includes('This model cannot be attached to a')) {
-        assignedUnits = removeMarkdown(unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('This model cannot be attached to a')))
-          .split('■')
-          .filter((v) => v)
-          .map((v) => v.replaceAll('*', '').trim());
-        extraText = unit.leader.substring(unit.leader.indexOf('This model cannot be attached to a'));
-      } else if (unit.leader.includes('If this unit’s Bodyguard')) {
-        assignedUnits = removeMarkdown(unit.leader
-          .substring(unit.leader.indexOf('■'), unit.leader.indexOf('If this unit’s')))
-          .split('■')
-          .filter((v) => v)
-          .map((v) => v.replaceAll('*', '').trim());
-        extraText = unit.leader.substring(unit.leader.indexOf('If this unit’s'));
-      } else {
-        assignedUnits = removeMarkdown(unit.leader
-          .substring(unit.leader.indexOf('■')))
-          .split('■')
-          .filter((v) => v)
-          .map((v) => v.replaceAll('*', '').trim());
+      // Build leads object with all parsed data
+      unit.leads = {
+        units: parsed.units,
+        extra: parsed.extra,
+      };
+
+      // Only include optional fields if they have values
+      if (parsed.canAttachWith.length > 0) {
+        unit.leads.canAttachWith = parsed.canAttachWith;
       }
-      unit.leads = { units: assignedUnits, extra: extraText };
-      if (assignedUnits.length > 0) {
-        assignedUnits.forEach((atUnit) => {
+      if (parsed.isBodyguard) {
+        unit.leads.isBodyguard = true;
+      }
+      if (parsed.isMandatory) {
+        unit.leads.isMandatory = true;
+      }
+
+      // Build bidirectional leadBy references
+      if (parsed.units.length > 0) {
+        parsed.units.forEach((atUnit) => {
           const foundUnitIndex = foundUnits.findIndex(
             (u) => u.name.toLowerCase().trim() === atUnit.toLowerCase().trim()
           );

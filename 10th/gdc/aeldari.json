@@ -638,7 +638,9 @@
           "STORM GUARDIANS",
           "WARLOCK CONCLAVE If this model is not already attached to a unit, you can attach this model to a unit, even if one WARLOCKS unit has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
         ],
-        "extra": ""
+        "extra": "",
+        "canAttachWith": ["WARLOCKS"],
+        "isBodyguard": true
       }
     },
     {
@@ -1557,7 +1559,7 @@
           "abilities": [
             {
               "name": "Linked Fire",
-              "description": "When selecting targets for this weapon, you can measure range and determine visibility from another friendly Fire Prism model that is visible to the bearer.",
+              "description": "When selecting targets for this weapon, you can measure range and determine visibility from another friendly FIRE PRISM model that is visible to the bearer. When doing so, this weapon has an Attacks characteristic of 1.",
               "showAbility": true,
               "showDescription": true
             }
@@ -2696,10 +2698,9 @@
       ],
       "leadBy": ["Farseer Skyrunner"],
       "leads": {
-        "units": [
-          "At the start of the Declare Battle Formations step, if this unit is not an Attached unit, this unit can join one WINDRIDERS unit from your army (a unit cannot have more than one WARLOCK SKYRUNNERS unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly."
-        ],
-        "extra": ""
+        "units": [],
+        "extra": "",
+        "isBodyguard": true
       }
     },
     {
@@ -6085,7 +6086,9 @@
       ],
       "leads": {
         "units": ["GUARDIAN DEFENDERS", "STORM GUARDIANS"],
-        "extra": "You can attach this model to a unit, even if one AUTARCH or FARSEER model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        "extra": "You can attach this model to a unit, even if one AUTARCH or FARSEER model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+        "canAttachWith": ["AUTARCH", "FARSEER"],
+        "isBodyguard": true
       }
     },
     {
@@ -6436,10 +6439,9 @@
       ],
       "leadBy": ["Farseer"],
       "leads": {
-        "units": [
-          "At the start of the Declare Battle Formations step, if this unit is not an Attached unit, this unit can join one GUARDIAN DEFENDERS or STORM GUARDIANS unit from your army (a unit cannot have more than one WARLOCK CONCLAVE unit joined to it). If it does, until the end of the battle, every model in this unit counts as being part of that Bodyguard unit, and that Bodyguard unit’s Starting Strength is increased accordingly."
-        ],
-        "extra": ""
+        "units": [],
+        "extra": "",
+        "isBodyguard": true
       }
     },
     {
@@ -11741,5 +11743,5 @@
       "detachment": "Devoted of Ynnead"
     }
   ],
-  "updated": "2025-12-04T16:08:35.666Z"
+  "updated": "2025-12-04T17:38:59.773Z"
 }
