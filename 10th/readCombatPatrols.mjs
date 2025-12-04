@@ -90,6 +90,26 @@ const readFile = (file) => {
   return res;
 };
 
+// Find the newest data-export file in temp folder
+function getNewestDataExport() {
+  const tempDir = './temp';
+  const files = fs.readdirSync(tempDir)
+    .filter(f => f.startsWith('data-export-') && f.endsWith('.json'))
+    .map(f => ({
+      name: f,
+      path: path.join(tempDir, f),
+      mtime: fs.statSync(path.join(tempDir, f)).mtime
+    }))
+    .sort((a, b) => b.mtime - a.mtime);
+
+  if (files.length === 0) {
+    throw new Error('No data-export files found in temp folder');
+  }
+
+  console.log(`Using data export: ${files[0].name}\n`);
+  return files[0].path;
+}
+
 // Function to remove markdown from a string
 function removeMarkdown(str) {
   if (!str) return str;
@@ -198,7 +218,8 @@ function parseLeaderRule(ruleText) {
   return result;
 }
 
-const newDataExportFile = readFile('./temp/data-export-715.json');
+const dataExportPath = getNewestDataExport();
+const newDataExportFile = readFile(dataExportPath);
 const newDataExport = sortObj(JSON.parse(newDataExportFile).data);
 
 // Generate specialWeaponKeywords dynamically from the data source
