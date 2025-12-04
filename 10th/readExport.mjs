@@ -106,7 +106,7 @@ const specialWeaponKeywords = [
   },
 ];
 
-const newDataExportFile = readFile('./temp/data-export-674.json');
+const newDataExportFile = readFile('./temp/data-export-715.json');
 const newDataExport = sortObj(JSON.parse(newDataExportFile).data);
 
 // Function to remove markdown from a string
@@ -146,17 +146,99 @@ function parseDataExport(fileName, factionName) {
     );
   });
 
+  // Get detachments via detachment_faction_keyword (includes shared detachments from parent factions)
+  const detachmentFactionLinks = newDataExport.detachment_faction_keyword.filter(
+    (link) => link.factionKeywordId === newFaction.id
+  );
+  const detachments = detachmentFactionLinks
+    .map((link) => newDataExport.detachment.find((d) => d.id === link.detachmentId))
+    .filter((d) => d !== undefined);
+
+  const detachmentIds = detachments.map((d) => d.id);
+
+  // Get stratagems from all detachments the faction can use
   const stratagems = newDataExport.stratagem.filter((stratagem) => {
-    return stratagem.publicationId === newPublication?.id;
+    return detachmentIds.includes(stratagem.detachmentId);
   });
 
+  // Get enhancements from all detachments the faction can use
   let enhancements = newDataExport.enhancement.filter((enhancement) => {
-    return enhancement.publicationId === newPublication?.id;
+    return detachmentIds.includes(enhancement.detachmentId);
   });
 
-  const detachments = newDataExport.detachment.filter((detachment) => {
-    return detachment.publicationId === newPublication?.id;
+  // Get army rules via army_rule_faction_keyword (includes parent faction rules)
+  const armyRuleFactionLinks = newDataExport.army_rule_faction_keyword.filter(
+    (link) => link.factionKeywordId === newFaction.id
+  );
+  let armyRules = armyRuleFactionLinks
+    .map((link) => newDataExport.army_rule.find((r) => r.id === link.armyRuleId))
+    .filter((r) => r !== undefined)
+    // Filter out combat patrol rules
+    .filter((rule) => {
+      const publication = newDataExport.publication.find((p) => p.id === rule.publicationId);
+      return publication && !publication.isCombatPatrol;
+    })
+    // Remove duplicates by id
+    .filter((rule, index, self) => index === self.findIndex((r) => r.id === rule.id))
+    .sort((a, b) => a.displayOrder - b.displayOrder);
+
+  armyRules = armyRules.map((rule) => {
+    const ruleSections = newDataExport.rule_container_component.filter((rule_container) => {
+      return armyRules.map((rule => rule.id)).includes(rule_container.armyRuleId) && rule_container.type !== "loreAccordion";
+    }).sort((a, b) => a.displayOrder - b.displayOrder).map((rule_container) => {
+      return {
+        text: rule_container.textContent,
+        order: rule_container.displayOrder,
+        title: rule_container.title,
+        subTitle: rule_container.subTitle,
+        type: rule_container.type,
+      };
+    });
+
+    return {
+      name: rule.name,
+      rules: ruleSections,
+      source: "40k-10e",
+      cardType: "armyRule",
+    }
   });
+
+  let detachmentRules = detachments.map((detachment) => {
+    const detachmentRules = newDataExport.detachment_rule.filter((rule) => {
+      return rule.detachmentId === detachment.id;
+    }).sort((a, b) => a.displayOrder - b.displayOrder).map((rule) => {
+      const ruleSections = newDataExport.rule_container_component.filter((rule_container) => {
+        return rule.id === rule_container.detachmentRuleId && rule_container.type !== "loreAccordion";
+      }).sort((a, b) => a.displayOrder - b.displayOrder).map((rule_container) => {
+        return {
+          text: rule_container.textContent,
+          order: rule_container.displayOrder,
+          title: rule_container.title,
+          subTitle: rule_container.subTitle,
+          type: rule_container.type,
+        };
+      });
+
+      return {
+        name: rule.name,
+        sections: ruleSections,
+        source: "40k-10e",
+        cardType: "detachmentRule",
+      }
+    });
+
+
+
+    return {
+      detachment: detachment.name,
+      rules: detachmentRules,
+    }
+  });
+
+  console.log('Detachment rules', detachmentRules);
+
+  oldParsedUnits.rules = { army: armyRules, detachment: detachmentRules };
+
 
   oldParsedUnits.detachments = detachments.map((detachment) => {
     return detachment.name;
@@ -239,6 +321,7 @@ function parseDataExport(fileName, factionName) {
     let foundKeywords = [];
 
     foundKeywordGroups.forEach((group) => {
+      // Get required unit keywords
       const foundKeywordGroupsKeyword = newDataExport.enhancement_required_keyword_group_keyword.filter(
         (groupKeyword) => {
           return groupKeyword.enhancementRequiredKeywordGroupId === group.id;
@@ -246,6 +329,20 @@ function parseDataExport(fileName, factionName) {
       );
 
       foundKeywords = [...foundKeywords, ...foundKeywordGroupsKeyword.map((kw) => kw.keywordId)];
+
+      // Get required faction keywords
+      const foundFactionKeywords = newDataExport.enhancement_required_keyword_group_faction_keyword.filter(
+        (fkReq) => {
+          return fkReq.enhancementRequiredKeywordGroupId === group.id;
+        }
+      );
+
+      foundFactionKeywords.forEach((fkReq) => {
+        const factionKw = newDataExport.faction_keyword.find((fk) => fk.id === fkReq.factionKeywordId);
+        if (factionKw) {
+          foundKeywords.push(factionKw.name);
+        }
+      });
     });
 
     let excludedKeywords = newDataExport.enhancement_excluded_keyword.filter((keyword) => {
@@ -262,7 +359,8 @@ function parseDataExport(fileName, factionName) {
         ...enhancement,
         keywords: [newFaction.name],
         excluded: excludedKeywords.map((keyword) => {
-          return newDataExport.keyword.find((kw) => kw.id === keyword).name || '';
+          const foundKeyword = newDataExport.keyword.find((kw) => kw.id === keyword);
+          return foundKeyword ? foundKeyword.name : '';
         }),
       };
     }
@@ -273,10 +371,12 @@ function parseDataExport(fileName, factionName) {
     return {
       ...enhancement,
       keywords: foundKeywords.map((keyword) => {
-        return newDataExport.keyword.find((kw) => kw.id === keyword).name || '';
+        const foundKeyword = newDataExport.keyword.find((kw) => kw.id === keyword);
+        return foundKeyword ? foundKeyword.name : keyword; // If not found by ID, it's already a name (faction keyword)
       }),
       excluded: excludedKeywords.map((keyword) => {
-        return newDataExport.keyword.find((kw) => kw.id === keyword).name || '';
+        const foundKeyword = newDataExport.keyword.find((kw) => kw.id === keyword);
+        return foundKeyword ? foundKeyword.name : '';
       }),
     };
   });
@@ -311,15 +411,8 @@ function parseDataExport(fileName, factionName) {
       (datasheet_faction_keyword) => datasheet.id === datasheet_faction_keyword.datasheetId
     )
   );
-
-  let publicationDatasheets = newDataExport.datasheet.filter((datasheet) => datasheet.publicationId === newPublication?.id);
-
-  let combinedDatasheets = [...allDataSheets, ...publicationDatasheets].filter((datasheet, index, arr) => 
-    index === arr.findIndex(d => d.id === datasheet.id)
-  );
-
   // console.log(allDataSheets);
-  allDataSheets = combinedDatasheets.map((card, index) => {
+  allDataSheets = allDataSheets.map((card, index) => {
     card.publication = newDataExport.publication.find((publication) => publication.id === card.publicationId);
 
     //Find all miniatures (stat lines)
@@ -416,7 +509,7 @@ function parseDataExport(fileName, factionName) {
       });
 
     weapons = weapons.filter(
-      (value, index, self) => index === self.findIndex((t) => t.attacks === value.attacks && t.name === value.name)
+      (value, index, self) => index === self.findIndex((t) => t.id === value.id)
     );
 
     //Find the damage ability
@@ -731,8 +824,8 @@ function parseDataExport(fileName, factionName) {
                   weapon.profiles.length > 1 && weapon.name !== profile.name
                     ? weapon.name + ' – ' + profile.name.charAt(0).toUpperCase() + profile.name.slice(1)
                     : profile.name === 'ranged'
-                    ? weapon.name
-                    : profile.name,
+                      ? weapon.name
+                      : profile.name,
                 range: profile.range,
                 skill: profile.ballisticSkill,
                 strength: profile.strength,
@@ -761,8 +854,8 @@ function parseDataExport(fileName, factionName) {
                   weapon.profiles.length > 1 && weapon.name !== profile.name
                     ? weapon.name + ' – ' + profile.name.charAt(0).toUpperCase() + profile.name.slice(1)
                     : profile.name === 'melee'
-                    ? weapon.name
-                    : profile.name,
+                      ? weapon.name
+                      : profile.name,
                 range: profile.range,
                 skill: profile.weaponSkill,
                 strength: profile.strength,
@@ -936,7 +1029,7 @@ parseDataExport('./gdc/orks.json', 'Orks');
 parseDataExport('./gdc/votann.json', 'Leagues of Votann');
 parseDataExport('./gdc/tau.json', 'T’au Empire');
 parseDataExport('./gdc/necrons.json', 'Necrons');
-parseDataExport('./gdc/aeldari.json', 'Asuryani');
+parseDataExport('./gdc/aeldari.json', 'Aeldari');
 parseDataExport('./gdc/drukhari.json', 'Drukhari');
 
 parseDataExport('./gdc/gsc.json', 'Genestealer Cults');

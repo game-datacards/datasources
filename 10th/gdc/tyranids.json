@@ -6332,14 +6332,14 @@
     }
   ],
   "detachments": [
-    "Crusher Stampede",
-    "Assimilation Swarm",
-    "Unending Swarm",
-    "Subterranean Assault",
     "Synaptic Nexus",
-    "Vanguard Onslaught",
+    "Subterranean Assault",
     "Warrior Bioform Onslaught",
-    "Invasion Fleet"
+    "Crusher Stampede",
+    "Unending Swarm",
+    "Vanguard Onslaught",
+    "Invasion Fleet",
+    "Assimilation Swarm"
   ],
   "enhancements": [
     {
@@ -6394,7 +6394,7 @@
       "name": "Ominous Presence",
       "id": "f84c9c3c-5135-5866-b4b6-74e9d409ff79",
       "cost": "15",
-      "keywords": ["Monster"],
+      "keywords": ["Monster", "Tyranids"],
       "excludes": [],
       "description": "TYRANIDS MONSTER model only. Add 3 to the bearer’s Objective Control characteristic.",
       "faction_id": "TYR",
@@ -6406,7 +6406,7 @@
       "name": "Enraged Reserves",
       "id": "c54fa1cb-99b5-59f9-b7c8-a5be084e4139",
       "cost": "20",
-      "keywords": ["Monster"],
+      "keywords": ["Monster", "Tyranids"],
       "excludes": [],
       "description": "TYRANIDS MONSTER model only. If the bearer is destroyed by a melee attack, if it has not fought this phase, roll one D6: on a 3+, do not remove it from play. It can fight after the attacking model’s unit has finished making its attacks, and is then removed from play.",
       "faction_id": "TYR",
@@ -6418,7 +6418,7 @@
       "name": "Null Nodules",
       "id": "70857bc4-5076-5ce3-b73d-da8bbe9eba77",
       "cost": "10",
-      "keywords": ["Monster"],
+      "keywords": ["Monster", "Tyranids"],
       "excludes": [],
       "description": "TYRANIDS MONSTER model only. Once per battle, when a Psychic Attack is allocated to the bearer, it can use this ability. If it does, until the end of the phase, the bearer has the Feel No Pain 5+ ability against Psychic Attacks.",
       "faction_id": "TYR",
@@ -6430,7 +6430,7 @@
       "name": "Monstrous Nemesis",
       "id": "aa33376f-07ef-55a6-878d-5cd44b5bbab6",
       "cost": "25",
-      "keywords": ["Monster"],
+      "keywords": ["Monster", "Tyranids"],
       "excludes": [],
       "description": "TYRANIDS MONSTER model only. Each time the bearer makes a melee attack that targets a MONSTER or VEHICLE unit, add 1 to the Wound roll.",
       "faction_id": "TYR",
@@ -6586,7 +6586,7 @@
       "name": "Power of the Hive Mind",
       "id": "814ada38-186a-55be-8a10-22a82c42fe2c",
       "cost": "10",
-      "keywords": ["Psyker"],
+      "keywords": ["Psyker", "Tyranids"],
       "excludes": [],
       "description": "TYRANIDS PSYKER model only. Improve the Strength and Armour Penetration characteristics of psychic weapons equipped by the bearer by 1.",
       "faction_id": "TYR",
@@ -6598,7 +6598,7 @@
       "name": "Psychostatic Disruption",
       "id": "6856fd9f-0c2e-57f9-9029-28d1fcc88755",
       "cost": "30",
-      "keywords": ["Synapse"],
+      "keywords": ["Synapse", "Tyranids"],
       "excludes": [],
       "description": "TYRANIDS SYNAPSE model only. Enemy units that arrive on the battlefield from Reserves cannot be set up within 12\" of the bearer. In addition, once per battle, during the first or second battle round, when your opponent declares that a unit will arrive on the battlefield from Strategic Reserves, the bearer can use this Enhancement. If it does, roll one D6: on a 4+, that enemy unit cannot arrive on the battlefield this turn.",
       "faction_id": "TYR",
@@ -6610,7 +6610,7 @@
       "name": "Synaptic Control",
       "id": "9b187ce4-bbb9-54f3-9304-3bf26bcc1a4b",
       "cost": "20",
-      "keywords": ["Synapse"],
+      "keywords": ["Synapse", "Tyranids"],
       "excludes": [],
       "description": "TYRANIDS SYNAPSE model only. Each time an attack is allocated to the bearer, subtract 1 from the Damage characteristic of that attack.",
       "faction_id": "TYR",
@@ -6622,7 +6622,7 @@
       "name": "The Dirgeheart of Kharis (Aura)",
       "id": "d5e68f7d-5d95-5a18-bb57-ac8062ca9ee4",
       "cost": "15",
-      "keywords": ["Synapse"],
+      "keywords": ["Synapse", "Tyranids"],
       "excludes": [],
       "description": "TYRANIDS SYNAPSE model only. While an enemy unit is within 9\" of the bearer, worsen that unit’s Leadership characteristic by 1.",
       "faction_id": "TYR",
@@ -6735,142 +6735,235 @@
   "rules": {
     "army": [
       {
-        "name": "Shadow in the Warp",
-        "rule": [
+        "name": "Synapse",
+        "rules": [
           {
-            "order": 1,
             "text": "If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more **SYNAPSE** units from your army, subtract 1 from that test.",
+            "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
+            "text": "If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6\" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n\n■ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n■ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "order": 1,
+            "title": null,
             "type": "text"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       },
       {
-        "name": "Synapse",
-        "rule": [
+        "name": "Shadow in the Warp",
+        "rules": [
           {
+            "text": "If your Army Faction is **TYRANIDS**, once per battle, in either player’s Command phase, if one or more units from your army with this ability are on the battlefield, you can unleash the Shadow in the Warp. When you do, each enemy unit on the battlefield must take a Battle-shock test. Each time an enemy unit takes such a Battle-shock test, if it is within 6\" of one or more **SYNAPSE** units from your army, subtract 1 from that test.",
             "order": 1,
+            "title": null,
+            "type": "text"
+          },
+          {
             "text": "If your Army Faction is **TYRANIDS**, while a **TYRANIDS** unit from your army is within 6\" of one or more friendly **SYNAPSE** models, that **TYRANIDS** unit is said to be within Synapse Range of that model and of your army. While a **TYRANIDS** unit from your army is within Synapse Range of your army:\n\n■ Each time that unit takes a Battle-shock test, take that test on 3D6 instead of 2D6.\n■ Each time a model in that unit makes a melee attack, add 1 to the Strength characteristic of that attack.",
+            "order": 1,
+            "title": null,
             "type": "text"
           }
-        ]
+        ],
+        "source": "40k-10e",
+        "cardType": "armyRule"
       }
     ],
     "detachment": [
       {
-        "detachment": "Assimilation Swarm",
-        "name": "Feed the Swarm",
-        "rule": [
-          {
-            "order": 1,
-            "text": "In your Command phase, each **HARVESTER** unit from your army can Regenerate one friendly **TYRANIDS** unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n\n■ One model in that unit regains up to D3+1 lost wounds.\n■ One destroyed **INFANTRY** model (excluding **CHARACTERS**) is returned to that unit with its full wounds remaining. If that unit is an **ENDLESS MULTITUDE** unit, up to 3 destroyed models are returned instead.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Crusher Stampede",
-        "name": "Enraged Behemoths",
-        "rule": [
-          {
-            "order": 1,
-            "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Invasion Fleet",
-        "name": "Hyper-adaptations",
-        "rule": [
-          {
-            "order": 1,
-            "text": "At the start of the first battle round, select one of the following Hyper-adaptations to be active for **TYRANIDS** units from your army until the end of the battle.",
-            "type": "text"
-          },
-          {
-            "order": 2,
-            "text": "Swarming Instincts",
-            "type": "header"
-          },
-          {
-            "order": 3,
-            "text": "Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.",
-            "type": "text"
-          },
-          {
-            "order": 4,
-            "text": "Hyper-aggression",
-            "type": "header"
-          },
-          {
-            "order": 5,
-            "text": "Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.",
-            "type": "text"
-          },
-          {
-            "order": 6,
-            "text": "Hive Predators",
-            "type": "header"
-          },
-          {
-            "order": 7,
-            "text": "Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability.",
-            "type": "text"
-          }
-        ]
-      },
-      {
         "detachment": "Synaptic Nexus",
-        "name": "Synaptic Imperatives",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a **TYRANIDS** unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n\n■ **Synaptic Augmentation**: While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n■ **Surging Vitality**: While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.\n■ **Goaded to Slaughter**: While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll.",
-            "type": "text"
+            "name": "Synaptic Imperatives",
+            "sections": [
+              {
+                "text": "At the start of the battle round, you can select one of the Synaptic Imperatives shown below. Until the end of the battle round, that Synaptic Imperative is active for your army and while a **TYRANIDS** unit from your army is within Synapse Range of your army, it will benefit from it. Each Synaptic Imperative can only be selected once per battle.\n\n■ **Synaptic Augmentation**: While this unit is within Synapse Range of your army, models in this unit have a 5+ invulnerable save.\n■ **Surging Vitality**: While this unit is within Synapse Range of your army, add 1 to Advance and Charge rolls made for this unit.\n■ **Goaded to Slaughter**: While this unit is within Synapse Range of your army, each time a model in this unit makes a melee attack, add 1 to the Hit roll.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
-        "detachment": "Unending Swarm",
-        "name": "Insurmountable Odds",
-        "rule": [
+        "detachment": "Subterranean Assault",
+        "rules": [
           {
-            "order": 1,
-            "text": "Each time an enemy unit is selected to shoot, after that unit has finished making its attacks, if one or more models from one or more **ENDLESS MULTITUDE** units from your army were destroyed as a result of those attacks, each such unit can make a Surge move. To do so, roll one D6: that unit can be moved a distance in inches up to the result, but that unit must end that move as close as possible to the closest enemy unit (excluding **AIRCRAFT**). When doing so, those models can be moved within Engagement Range of enemy units. A unit cannot make a Surge move while it is Battle-shocked.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Vanguard Onslaught",
-        "name": "Questing Tendrils",
-        "rule": [
-          {
-            "order": 1,
-            "text": "**TYRANIDS** units with this ability are eligible to charge in a turn in which they Fell Back. **VANGUARD INVADER** units with this ability are eligible to charge in a turn in which they Advanced.",
-            "type": "text"
-          }
-        ]
-      },
-      {
-        "detachment": "Vanguard Onslaught",
-        "name": "Vanguard Prime",
-        "rule": [
-          {
-            "order": 1,
-            "text": "**DEATHLEAPER** loses the Hunter Organism rule and can be your **WARLORD**.",
-            "type": "text"
+            "name": "Surprise Assault",
+            "sections": [
+              {
+                "text": "Each time a **TYRANIDS** model from your army makes an attack, re-roll a Hit roll of 1.\n\nEach time a **BURROWER** unit from your army is set up on the battlefield from Reserves, place a 40mm circular Tunnel Marker anywhere on the battlefield within 1\" of that unit and more than 3\" horizontally away from all enemy units.\n\nIn the Reinforcements step of your Movement phase, when you set up a unit on the battlefield from Reserves, you can set that unit up wholly within 9\" of one of your Tunnel Markers and more than 6\" horizontally away from any enemy units.\n\nIf an enemy model (excluding **AIRCRAFT**) ends any kind of move within 3\" of one of your Tunnel Markers, that Tunnel Marker is removed from the battlefield.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       },
       {
         "detachment": "Warrior Bioform Onslaught",
-        "name": "Leader-beasts",
-        "rule": [
+        "rules": [
           {
-            "order": 1,
-            "text": "**TYRANID WARRIORS** and **WINGED TYRANID PRIME** units from your army have a 5+ invulnerable save.",
-            "type": "text"
+            "name": "Leader-beasts",
+            "sections": [
+              {
+                "text": "**TYRANID WARRIORS** and **WINGED TYRANID PRIME** units from your army have a 5+ invulnerable save.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Crusher Stampede",
+        "rules": [
+          {
+            "name": "Enraged Behemoths",
+            "sections": [
+              {
+                "text": "Each time a **TYRANIDS MONSTER** model from your army makes an attack, add 1 to the Hit roll if that model’s unit is below its Starting Strength, and add 1 to the Wound roll as well if that model’s unit is Below Half-strength. In addition, while a **TYRANIDS MONSTER** unit from your army (excluding Battle-shocked units) is at its Starting Strength, add 2 to the Objective Control characteristic of models in that unit.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Unending Swarm",
+        "rules": [
+          {
+            "name": "Insurmountable Odds",
+            "sections": [
+              {
+                "text": "Each time an enemy unit is selected to shoot, after that unit has finished making its attacks, if one or more models from one or more **ENDLESS MULTITUDE** units from your army were destroyed as a result of those attacks, each such unit can make a Surge move. To do so, roll one D6: that unit can be moved a distance in inches up to the result, but that unit must end that move as close as possible to the closest enemy unit (excluding **AIRCRAFT**). When doing so, those models can be moved within Engagement Range of enemy units. A unit cannot make a Surge move while it is Battle-shocked.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Vanguard Onslaught",
+        "rules": [
+          {
+            "name": "Questing Tendrils",
+            "sections": [
+              {
+                "text": "**TYRANIDS** units with this ability are eligible to charge in a turn in which they Fell Back. **VANGUARD INVADER** units with this ability are eligible to charge in a turn in which they Advanced.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          },
+          {
+            "name": "Vanguard Prime",
+            "sections": [
+              {
+                "text": "**DEATHLEAPER** loses the Hunter Organism rule and can be your **WARLORD**.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Invasion Fleet",
+        "rules": [
+          {
+            "name": "Hyper-adaptations",
+            "sections": [
+              {
+                "text": "At the start of the first battle round, select one of the following Hyper-adaptations to be active for **TYRANIDS** units from your army until the end of the battle.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "Swarming Instincts",
+                "order": 2,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets an **INFANTRY** or **SWARM** unit, that attack has the **[SUSTAINED HITS 1]** ability.",
+                "order": 3,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "Hyper-aggression",
+                "order": 4,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.",
+                "order": 5,
+                "title": null,
+                "type": "text"
+              },
+              {
+                "text": "Hive Predators",
+                "order": 6,
+                "title": null,
+                "type": "header"
+              },
+              {
+                "text": "Each time a **TYRANIDS** model with this Hyper-adaptation makes an attack that targets a **CHARACTER** unit, on a Critical Hit, that attack has the **[PRECISION]** ability.",
+                "order": 7,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Assimilation Swarm",
+        "rules": [
+          {
+            "name": "Feed the Swarm",
+            "sections": [
+              {
+                "text": "In your Command phase, each **HARVESTER** unit from your army can Regenerate one friendly **TYRANIDS** unit that is within 6\" of it. A unit can only be regenerated once per phase. Each time a unit regenerates, do one of the following:\n\n■ One model in that unit regains up to D3+1 lost wounds.\n■ One destroyed **INFANTRY** model (excluding **CHARACTERS**) is returned to that unit with its full wounds remaining. If that unit is an **ENDLESS MULTITUDE** unit, up to 3 destroyed models are returned instead.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
           }
         ]
       }
@@ -7598,5 +7691,5 @@
       "detachment": "Warrior Bioform Onslaught"
     }
   ],
-  "updated": "2025-11-13T18:15:11.561Z"
+  "updated": "2025-12-04T10:11:04.515Z"
 }
