@@ -778,7 +778,7 @@ function processAoSFaction(outputFileName, factionName) {
     grandAlliance: grandAlliance,
     parentFaction: parentFaction,
     isLegends: faction.isLegends || false,
-    colours: existingData?.colours || defaultColours[grandAlliance] || defaultColours['Order'],
+    colours: defaultColours[grandAlliance] || defaultColours['Order'],
     updated: new Date().toISOString(),
     compatibleDataVersion: dataVersion,
 
@@ -842,7 +842,11 @@ function processAoSFaction(outputFileName, factionName) {
     const formationChanges = compareByName(oldData.battleFormations || [], newData.battleFormations || [], 'battleFormations');
     const loreChanges = compareByName(oldData.lores || [], newData.lores || [], 'lores');
 
+    // Check for colour changes
+    const coloursChanged = JSON.stringify(oldData.colours) !== JSON.stringify(newData.colours);
+
     hasChanges =
+      coloursChanged ||
       warscrollChanges.added.length > 0 ||
       warscrollChanges.removed.length > 0 ||
       warscrollChanges.modified.length > 0 ||
