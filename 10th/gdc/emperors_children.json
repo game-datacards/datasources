@@ -4,7 +4,7 @@
     "banner": "#2E0B03",
     "header": "#1A3037"
   },
-  "compatibleDataVersion": 715,
+  "compatibleDataVersion": 720,
   "datasheets": [
     {
       "abilities": {
@@ -298,7 +298,7 @@
       "name": "Chaos Terminators",
       "points": [
         {
-          "cost": "170",
+          "cost": "155",
           "keyword": null,
           "models": "5",
           "active": true
@@ -974,7 +974,7 @@
       "name": "Chaos Spawn",
       "points": [
         {
-          "cost": "80",
+          "cost": "70",
           "keyword": null,
           "models": "2",
           "active": true
@@ -1088,7 +1088,7 @@
       "name": "Daemon Prince of Slaanesh",
       "points": [
         {
-          "cost": "195",
+          "cost": "180",
           "keyword": null,
           "models": "1",
           "active": true
@@ -1772,7 +1772,7 @@
       "name": "Daemon Prince of Slaanesh with Wings",
       "points": [
         {
-          "cost": "200",
+          "cost": "215",
           "keyword": null,
           "models": "1",
           "active": true
@@ -2672,6 +2672,7 @@
     "Peerless Bladesmen",
     "Rapid Evisceration",
     "Mercurial Host",
+    "Court of the Phoenician",
     "Coterie of the Conceited"
   ],
   "enhancements": [
@@ -2962,6 +2963,54 @@
       "source": "40k-10e",
       "cardType": "enhancement",
       "detachment": "Slaanesh’s Chosen"
+    },
+    {
+      "name": "Tears of the Phoenix",
+      "id": "1bc92f5b-1c72-5742-8029-40471c8afd81",
+      "cost": "25",
+      "keywords": ["Emperor’s Children"],
+      "excludes": [],
+      "description": "EMPEROR’S CHILDREN model only. Each time a model in the bearer’s unit makes a melee attack, you can ignore any or all modifiers to that attack’s Weapon Skill characteristic and any or all modifiers to the Hit roll and Wound roll.",
+      "faction_id": "LGEC",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Court of the Phoenician"
+    },
+    {
+      "name": "Exalted Patron",
+      "id": "c3d8cd54-a4f3-5eb3-b0f7-dfb7912fb42e",
+      "cost": "15",
+      "keywords": ["Lord Exultant"],
+      "excludes": [],
+      "description": "LORD EXULTANT model only. Add 1\" to the Move characteristic of the bearer.\n\nIn the Declare Battle Formations step, the bearer can be attached to a FLAWLESS BLADES unit.",
+      "faction_id": "LGEC",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Court of the Phoenician"
+    },
+    {
+      "name": "Soulstain Made Manifest",
+      "id": "0822640a-d687-58c9-b2f0-2cde23da0d5e",
+      "cost": "15",
+      "keywords": ["Emperor’s Children"],
+      "excludes": [],
+      "description": "EMPEROR’S CHILDREN model only. At the start of the Fight phase, you can select one enemy unit within Engagement Range of the bearer; that unit must take a Battle‑shock test, subtracting 1 from the result.",
+      "faction_id": "LGEC",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Court of the Phoenician"
+    },
+    {
+      "name": "Spiritsliver",
+      "id": "7404603f-3925-53a3-a205-67078a07eab7",
+      "cost": "20",
+      "keywords": ["Daemon Prince", "Emperor’s Children"],
+      "excludes": [],
+      "description": "EMPEROR’S CHILDREN DAEMON PRINCE model only. Add 1 to the Strength and Attacks characteristics of the bearer’s melee weapons.",
+      "faction_id": "LGEC",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Court of the Phoenician"
     }
   ],
   "id": "LGEC",
@@ -3072,7 +3121,7 @@
             "name": "Mechanised Murder",
             "rules": [
               {
-                "text": "Each time an **EMPEROR’S CHILDREN** model from your army makes an attack, if it disembarked from a **TRANSPORT** this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+                "text": "Each time an **EMPEROR’S CHILDREN** model from your army makes an attack, if it is a **TRANSPORT** model or disembarked from a **TRANSPORT** this turn, re-roll a Hit roll of 1 and re-roll a Wound roll of 1.",
                 "order": 1,
                 "title": null,
                 "type": "text"
@@ -3091,6 +3140,37 @@
             "rules": [
               {
                 "text": "You can re-roll Advance rolls made for **EMPEROR’S CHILDREN** units from your army.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Court of the Phoenician",
+        "rules": [
+          {
+            "name": "Sensational Performance",
+            "rules": [
+              {
+                "text": "**EMPEROR’S CHILDREN** units from your army have the following ability:\n\n**Sensational Performance:** Each time this unit is selected to fight, if this unit made a Charge move this turn, it can use this ability. If it does, until the end of the phase:\n\n■ This unit cannot target a unit it was within Engagement Range of at the start of the turn.\n■ This unit cannot target a unit that was the target of another unit’s charge or attack this phase.\n■ Improve the Strength and Armour Penetration characteristics of this unit’s melee weapons by 1.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          },
+          {
+            "name": "Master of the Pageant",
+            "rules": [
+              {
+                "text": "Once per battle round, when you target a **FULGRIM** unit from your army with the Sinuous Breach or Prideful Superiority Stratagem, you can reduce the CP cost of that use of that Stratagem by 1CP.",
                 "order": 1,
                 "title": null,
                 "type": "text"
@@ -3309,6 +3389,51 @@
       "detachment": "Mercurial Host"
     },
     {
+      "name": "Contemptuous Disregard",
+      "id": "1190816a-dc74-52c2-bd62-26e2fe65ef03",
+      "cost": 1,
+      "turn": "either",
+      "target": "One EMPEROR’S CHILDREN unit from your army.",
+      "when": "Your opponent’s Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, if the Strength characteristic of that attack is greater than the Toughness characteristic of your unit, subtract 1 from the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "LGEC",
+      "fluff": "With cocktails of resilience-enhancing stimms or armour inlaid with forbidden runes of warding, the Emperor’s Children sneeringly disregard even powerful blows.",
+      "detachment": "Court of the Phoenician"
+    },
+    {
+      "name": "Close-quarters Excruciation",
+      "id": "750e1d5c-69a7-59a6-8d70-f2835eb32252",
+      "cost": 1,
+      "turn": "your",
+      "target": "One EMPEROR’S CHILDREN unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time an EMPEROR’S CHILDREN model in your unit makes an attack that targets an eligible unit within 12\", improve the Strength and  Armour Penetration characteristics of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "LGEC",
+      "fluff": "At short range, the Emperor’s Children eagerly target weak points in their enemies, exulting over every cry of pain they elicit.",
+      "detachment": "Court of the Phoenician"
+    },
+    {
+      "name": "Euphoric Inspiration",
+      "id": "cfaa3a12-153e-5cc5-827d-d202a62e5834",
+      "cost": 1,
+      "turn": "your",
+      "target": "One EMPEROR’S CHILDREN DAEMON unit from your army.",
+      "when": "Your Charge phase.",
+      "effect": "Until the end of the phase, you can re-roll Charge rolls for friendly EMPEROR’S CHILDREN units within 6\" of your unit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["charge"],
+      "faction_id": "LGEC",
+      "fluff": "Those with the Dark Prince’s blessings inspire euphoric floods of battle-lust in the Emperor’s Children, who power towards the foe with screams of murderous ecstasy.",
+      "detachment": "Court of the Phoenician"
+    },
+    {
       "name": "Martial Perfection",
       "id": "87a93d52-f74c-5ef7-aee6-6654c0a5a0b8",
       "cost": 1,
@@ -3337,6 +3462,21 @@
       "faction_id": "LGEC",
       "fluff": "Hideously euphoric concoctions empower the minds and constitutions of the Legion’s sybaritic warriors.",
       "detachment": "Mercurial Host"
+    },
+    {
+      "name": "Prideful Superiority",
+      "id": "32a93fad-5360-5aca-b979-c250fbc41890",
+      "cost": 2,
+      "turn": "either",
+      "target": "One EMPEROR’S CHILDREN unit from your army that has not been selected to fight this phase.",
+      "when": "Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER unit, you can re-roll the Hit roll and you can re‑roll the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "LGEC",
+      "fluff": "The chance to ostentatiously humble the foe’s champions and prove them worthless rivals is a lure few Emperor’s Children can resist.",
+      "detachment": "Court of the Phoenician"
     },
     {
       "name": "Diabolic Majesty",
@@ -3564,6 +3704,36 @@
       "detachment": "Mercurial Host"
     },
     {
+      "name": "Sinuous Breach",
+      "id": "07cea8e9-8fd3-56a2-990c-aff6a6ae3e77",
+      "cost": 1,
+      "turn": "your",
+      "target": "One EMPEROR’S CHILDREN DAEMON unit from your army that has not been selected to move or charge this phase.",
+      "when": "Your Movement phase or your Charge phase.",
+      "effect": "Until the end of the phase, each time your unit makes a Normal, Advance or Charge move, it can move horizontally through terrain features.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge", "movement"],
+      "faction_id": "LGEC",
+      "fluff": "The power of Slaanesh is an undulating and writhing thing, and his daemonic servants can mould their forms to slither over and through any obstacle.",
+      "detachment": "Court of the Phoenician"
+    },
+    {
+      "name": "Catalytic Stimulus",
+      "id": "8d34b743-15f6-5341-80b1-675b96650ad7",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One EMPEROR’S CHILDREN unit from your army that lost one or more wounds as a result of those attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "effect": "Your unit can make a Stimulus move. To do so, roll one D6: models in your unit move a number of inches up to the result, but your unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of that enemy unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "LGEC",
+      "fluff": "Invigorated by pain, the Emperor’s Children will embrace an enemy’s attack as a catalyst for masterful vengeance.",
+      "detachment": "Court of the Phoenician"
+    },
+    {
       "name": "Protection of the Dark Prince",
       "id": "aa03344d-44c1-5b5a-96bb-6a7249d82404",
       "cost": 1,
@@ -3669,5 +3839,5 @@
       "detachment": "Coterie of the Conceited"
     }
   ],
-  "updated": "2025-12-04T17:18:48.548Z"
+  "updated": "2025-12-11T13:44:13.198Z"
 }

@@ -280,9 +280,9 @@ function getAbilitiesForWarscroll(warscrollId, data) {
       chantValue: ability.chantValue || null,
       cpCost: ability.cpCost || null,
       isReaction: ability.reaction || false,
-      lore: removeMarkdown(ability.lore) || null,
-      declare: removeMarkdown(ability.declare) || null,
-      effect: removeMarkdown(ability.effect),
+      lore: ability.lore || null,
+      declare: ability.declare || null,
+      effect: ability.effect,
       keywords: keywords.length > 0 ? keywords : undefined
     };
   });
@@ -385,7 +385,7 @@ function transformWarscroll(warscroll, data, factionName, factionId) {
     factions: [factionName],
     keywords: keywords,
     factionKeywords: factionKeywords,
-    fluff: removeMarkdown(warscroll.lore) || null,
+    fluff: warscroll.lore || null,
     referenceKeywords: warscroll.referenceKeywords || null,
 
     stats: {
@@ -447,9 +447,9 @@ function getBattleFormationRules(formationId, data) {
       phase: rule.phase,
       phaseDetails: rule.phaseDetails,
       icon: rule.abilityAndCommandIcon,
-      lore: removeMarkdown(rule.lore) || null,
-      declare: removeMarkdown(rule.declare) || null,
-      effect: removeMarkdown(rule.effect),
+      lore: rule.lore || null,
+      declare: rule.declare || null,
+      effect: rule.effect,
       cpCost: rule.cpCost || null,
       isReaction: rule.reaction || false,
       keywords: keywords.length > 0 ? keywords : undefined
@@ -523,9 +523,9 @@ function getLoreAbilities(loreId, data) {
       phase: ability.phase,
       phaseDetails: ability.phaseDetails,
       icon: ability.abilityAndCommandIcon,
-      lore: removeMarkdown(ability.lore) || null,
-      declare: removeMarkdown(ability.declare) || null,
-      effect: removeMarkdown(ability.effect),
+      lore: ability.lore || null,
+      declare: ability.declare || null,
+      effect: ability.effect,
       keywords: keywords.length > 0 ? keywords : undefined
     };
   });
@@ -596,9 +596,9 @@ function getEnhancementsForFaction(factionId, data) {
           phase: ability.phase,
           phaseDetails: ability.phaseDetails,
           icon: ability.abilityAndCommandIcon,
-          lore: removeMarkdown(ability.lore) || null,
-          declare: removeMarkdown(ability.declare) || null,
-          effect: removeMarkdown(ability.effect),
+          lore: ability.lore || null,
+          declare: ability.declare || null,
+          effect: ability.effect,
           cpCost: ability.cpCost || null,
           keywords: keywords.length > 0 ? keywords : undefined
         };
@@ -657,9 +657,9 @@ function getBattleTraitsForFaction(factionId, data) {
         phase: ability.phase,
         phaseDetails: ability.phaseDetails,
         icon: ability.abilityAndCommandIcon,
-        lore: removeMarkdown(ability.lore) || null,
-        declare: removeMarkdown(ability.declare) || null,
-        effect: removeMarkdown(ability.effect)
+        lore: ability.lore || null,
+        declare: ability.declare || null,
+        effect: ability.effect
       }));
 
     battleTraits.push(...abilities);
@@ -704,10 +704,10 @@ function getTerrainForFaction(factionId, data) {
 
 // Default faction colours based on Grand Alliance
 const defaultColours = {
-  'Order': { banner: '#1E5B8C', header: '#2A7AB8' },
-  'Chaos': { banner: '#6B1C23', header: '#8B2830' },
-  'Death': { banner: '#2D1F3D', header: '#3D2A52' },
-  'Destruction': { banner: '#3D5C1F', header: '#4D7328' }
+  'Order': { banner: '#0f2b38', header: '#0f2b38' },
+  'Chaos': { banner: '#2a1a1a', header: '#2a1a1a' },
+  'Death': { banner: '#1a1a2a', header: '#1a1a2a' },
+  'Destruction': { banner: '#2a2a1a', header: '#2a2a1a' }
 };
 
 // Main processing function
