@@ -280,7 +280,6 @@ function getAbilitiesForWarscroll(warscrollId, data) {
       chantValue: ability.chantValue || null,
       cpCost: ability.cpCost || null,
       isReaction: ability.reaction || false,
-      lore: ability.lore || null,
       declare: ability.declare || null,
       effect: ability.effect,
       keywords: keywords.length > 0 ? keywords : undefined
@@ -288,8 +287,16 @@ function getAbilitiesForWarscroll(warscrollId, data) {
   });
 }
 
+// Extract keyword value (e.g., "4" from "Wizard (4)") from referenceKeywords
+function extractKeywordValue(referenceKeywords, keywordName) {
+  if (!referenceKeywords) return null;
+  const regex = new RegExp(`${keywordName}\\s*\\((\\d+)\\)`);
+  const match = referenceKeywords.match(regex);
+  return match ? match[1] : null;
+}
+
 // Get keywords for a warscroll
-function getKeywordsForWarscroll(warscrollId, data) {
+function getKeywordsForWarscroll(warscrollId, data, referenceKeywords) {
   const keywordLinks = data.warscroll_keyword.filter(
     link => link.warscrollId === warscrollId
   );
@@ -297,7 +304,15 @@ function getKeywordsForWarscroll(warscrollId, data) {
   return keywordLinks
     .map(link => {
       const kw = data.keyword.find(k => k.id === link.keywordId);
-      return kw ? kw.name : null;
+      if (!kw) return null;
+
+      // Enhance Wizard and Priest keywords with their values from referenceKeywords
+      if (kw.name === 'Wizard' || kw.name === 'Priest') {
+        const value = extractKeywordValue(referenceKeywords, kw.name);
+        if (value) return `${kw.name} (${value})`;
+      }
+
+      return kw.name;
     })
     .filter(k => k !== null);
 }
@@ -316,60 +331,12 @@ function getFactionKeywordsForWarscroll(warscrollId, data) {
     .filter(fk => fk !== null);
 }
 
-// Get regiment options for a warscroll
-function getRegimentOptionsForWarscroll(warscrollId, data) {
-  const options = (data.warscroll_regiment_option || [])
-    .filter(opt => opt.warscrollId === warscrollId)
-    .sort((a, b) => (a.displayOrder || 0) - (b.displayOrder || 0));
-
-  return options.map(option => {
-    // Get required keywords
-    const requiredKeywordLinks = (data.warscroll_regiment_option_required_keyword || []).filter(
-      link => link.warscrollRegimentOptionId === option.id
-    );
-    const requiredKeywords = requiredKeywordLinks
-      .map(link => {
-        const kw = data.keyword.find(k => k.id === link.keywordId);
-        return kw ? kw.name : null;
-      })
-      .filter(k => k !== null);
-
-    // Get excluded keywords
-    const excludedKeywordLinks = (data.warscroll_regiment_option_excluded_keyword || []).filter(
-      link => link.warscrollRegimentOptionId === option.id
-    );
-    const excludedKeywords = excludedKeywordLinks
-      .map(link => {
-        const kw = data.keyword.find(k => k.id === link.keywordId);
-        return kw ? kw.name : null;
-      })
-      .filter(k => k !== null);
-
-    // Get the linked warscroll if it's a specific unit reference
-    let linkedWarscroll = null;
-    if (option.linkedWarscrollId) {
-      const linked = data.warscroll.find(w => w.id === option.linkedWarscrollId);
-      linkedWarscroll = linked ? linked.name : null;
-    }
-
-    return {
-      type: option.regimentOptionType,
-      quantity: option.quantity,
-      points: option.points || null,
-      requiredKeywords: requiredKeywords.length > 0 ? requiredKeywords : undefined,
-      excludedKeywords: excludedKeywords.length > 0 ? excludedKeywords : undefined,
-      linkedWarscroll: linkedWarscroll
-    };
-  });
-}
-
 // Transform a warscroll to output format
 function transformWarscroll(warscroll, data, factionName, factionId) {
   const weapons = getWeaponsForWarscroll(warscroll.id, data);
   const abilities = getAbilitiesForWarscroll(warscroll.id, data);
-  const keywords = getKeywordsForWarscroll(warscroll.id, data);
+  const keywords = getKeywordsForWarscroll(warscroll.id, data, warscroll.referenceKeywords);
   const factionKeywords = getFactionKeywordsForWarscroll(warscroll.id, data);
-  const regimentOptions = getRegimentOptionsForWarscroll(warscroll.id, data);
 
   // Separate weapons by type
   const rangedWeapons = weapons.filter(w => w.type === 'ranged');
@@ -385,7 +352,6 @@ function transformWarscroll(warscroll, data, factionName, factionId) {
     factions: [factionName],
     keywords: keywords,
     factionKeywords: factionKeywords,
-    fluff: warscroll.lore || null,
     referenceKeywords: warscroll.referenceKeywords || null,
 
     stats: {
@@ -393,12 +359,13 @@ function transformWarscroll(warscroll, data, factionName, factionId) {
       save: warscroll.save,
       control: warscroll.control,
       health: warscroll.health,
-      ward: warscroll.wardSave || null
+      ward: warscroll.wardSave || null,
+      wizard: extractKeywordValue(warscroll.referenceKeywords, 'Wizard'),
+      priest: extractKeywordValue(warscroll.referenceKeywords, 'Priest')
     },
 
     points: warscroll.points,
     modelCount: warscroll.modelCount,
-    baseSize: warscroll.baseSize,
     cannotBeReinforced: warscroll.cannotBeReinforced || false,
     isSpearhead: warscroll.isSpearhead || false,
     isLegends: warscroll.hiddenFromReference || false,
@@ -409,8 +376,6 @@ function transformWarscroll(warscroll, data, factionName, factionId) {
     },
 
     abilities: abilities,
-
-    regimentOptions: regimentOptions.length > 0 ? regimentOptions : undefined,
 
     notes: null
   };
@@ -447,7 +412,6 @@ function getBattleFormationRules(formationId, data) {
       phase: rule.phase,
       phaseDetails: rule.phaseDetails,
       icon: rule.abilityAndCommandIcon,
-      lore: rule.lore || null,
       declare: rule.declare || null,
       effect: rule.effect,
       cpCost: rule.cpCost || null,
@@ -474,9 +438,18 @@ function transformBattleFormation(formation, data, factionId) {
   };
 }
 
+// Check if a lore is a manifestation lore (all its abilities summon manifestations)
+function isManifestationLore(loreId, data) {
+  const abilities = data.lore_ability.filter(a => a.loreId === loreId);
+  if (abilities.length === 0) return false;
+
+  // A lore is a manifestation lore if ALL its abilities have linkedWarscrollId
+  return abilities.every(a => a.linkedWarscrollId !== null);
+}
+
 // Get lores for a faction
 function getLoresForFaction(factionId, data) {
-  // Lores can be linked via lore_faction_keyword or directly via publication
+  // Lores can be linked via lore_faction_keyword or directly via factionId on lore table
   const loreFactionLinks = data.lore_faction_keyword?.filter(
     link => link.factionKeywordId === factionId
   ) || [];
@@ -485,15 +458,25 @@ function getLoresForFaction(factionId, data) {
     .map(link => data.lore.find(l => l.id === link.loreId))
     .filter(l => l !== undefined);
 
-  // Also check for lores that might be associated via publication
-  const faction = data.faction_keyword.find(f => f.id === factionId);
+  // Also get lores directly linked via factionId on the lore table
   const factionPublications = data.publication.filter(
     p => p.factionKeywordId === factionId && !p.spearheadName
   );
+  const factionPubIds = factionPublications.map(p => p.id);
 
-  // For now, return lores from the faction keyword links
-  // Additional logic could be added to get lores from publications if needed
-  return [...new Map(loresFromLinks.map(l => [l.id, l])).values()];
+  const loresFromFactionId = data.lore.filter(
+    l => l.factionId === factionId && factionPubIds.includes(l.publicationId)
+  );
+
+  // Combine and deduplicate
+  const allLores = [...loresFromLinks, ...loresFromFactionId];
+  const uniqueLores = [...new Map(allLores.map(l => [l.id, l])).values()];
+
+  // Separate spell lores from manifestation lores
+  const spellLores = uniqueLores.filter(l => !isManifestationLore(l.id, data));
+  const manifestationLores = uniqueLores.filter(l => isManifestationLore(l.id, data));
+
+  return { spellLores, manifestationLores };
 }
 
 // Get lore abilities (spells) for a lore
@@ -523,7 +506,6 @@ function getLoreAbilities(loreId, data) {
       phase: ability.phase,
       phaseDetails: ability.phaseDetails,
       icon: ability.abilityAndCommandIcon,
-      lore: ability.lore || null,
       declare: ability.declare || null,
       effect: ability.effect,
       keywords: keywords.length > 0 ? keywords : undefined
@@ -596,7 +578,6 @@ function getEnhancementsForFaction(factionId, data) {
           phase: ability.phase,
           phaseDetails: ability.phaseDetails,
           icon: ability.abilityAndCommandIcon,
-          lore: ability.lore || null,
           declare: ability.declare || null,
           effect: ability.effect,
           cpCost: ability.cpCost || null,
@@ -657,7 +638,6 @@ function getBattleTraitsForFaction(factionId, data) {
         phase: ability.phase,
         phaseDetails: ability.phaseDetails,
         icon: ability.abilityAndCommandIcon,
-        lore: ability.lore || null,
         declare: ability.declare || null,
         effect: ability.effect
       }));
@@ -752,9 +732,10 @@ function processAoSFaction(outputFileName, factionName) {
 
   updateProgress(factionName, 'Lores');
 
-  // Get lores
-  const lores = getLoresForFaction(faction.id, newDataExport)
-    .map(l => transformLore(l, newDataExport, factionId));
+  // Get lores (spell lores and manifestation lores)
+  const { spellLores, manifestationLores: rawManifestationLores } = getLoresForFaction(faction.id, newDataExport);
+  const lores = spellLores.map(l => transformLore(l, newDataExport, factionId));
+  const manifestationLores = rawManifestationLores.map(l => transformLore(l, newDataExport, factionId));
 
   updateProgress(factionName, 'Enhancements');
 
@@ -785,6 +766,7 @@ function processAoSFaction(outputFileName, factionName) {
     warscrolls: transformedWarscrolls,
     battleFormations: battleFormations,
     lores: lores,
+    manifestationLores: manifestationLores,
     enhancements: enhancements,
     terrain: terrain,
     rules: {
@@ -841,6 +823,7 @@ function processAoSFaction(outputFileName, factionName) {
     const warscrollChanges = compareByName(oldData.warscrolls || [], newData.warscrolls || [], 'warscrolls');
     const formationChanges = compareByName(oldData.battleFormations || [], newData.battleFormations || [], 'battleFormations');
     const loreChanges = compareByName(oldData.lores || [], newData.lores || [], 'lores');
+    const manifestationLoreChanges = compareByName(oldData.manifestationLores || [], newData.manifestationLores || [], 'manifestationLores');
 
     // Check for colour changes
     const coloursChanged = JSON.stringify(oldData.colours) !== JSON.stringify(newData.colours);
@@ -855,7 +838,10 @@ function processAoSFaction(outputFileName, factionName) {
       formationChanges.modified.length > 0 ||
       loreChanges.added.length > 0 ||
       loreChanges.removed.length > 0 ||
-      loreChanges.modified.length > 0;
+      loreChanges.modified.length > 0 ||
+      manifestationLoreChanges.added.length > 0 ||
+      manifestationLoreChanges.removed.length > 0 ||
+      manifestationLoreChanges.modified.length > 0;
 
     // Store change report
     changeReports.push({
@@ -866,7 +852,8 @@ function processAoSFaction(outputFileName, factionName) {
       versionChanged,
       warscrolls: warscrollChanges,
       battleFormations: formationChanges,
-      lores: loreChanges
+      lores: loreChanges,
+      manifestationLores: manifestationLoreChanges
     });
   } else {
     // New file
@@ -878,7 +865,8 @@ function processAoSFaction(outputFileName, factionName) {
       versionChanged: true,
       warscrolls: { added: transformedWarscrolls.map(w => w.name), removed: [], modified: [] },
       battleFormations: { added: battleFormations.map(bf => bf.name), removed: [], modified: [] },
-      lores: { added: lores.map(l => l.name), removed: [], modified: [] }
+      lores: { added: lores.map(l => l.name), removed: [], modified: [] },
+      manifestationLores: { added: manifestationLores.map(l => l.name), removed: [], modified: [] }
     });
   }
 }
@@ -961,6 +949,23 @@ function printSummaryReport() {
         }
       }
 
+      // Manifestation Lores
+      if (report.manifestationLores.added.length > 0 || report.manifestationLores.removed.length > 0 || report.manifestationLores.modified.length > 0) {
+        console.log('\n  MANIFESTATION LORES:');
+        if (report.manifestationLores.added.length > 0) {
+          console.log(`    Added (${report.manifestationLores.added.length}):`);
+          report.manifestationLores.added.forEach(name => console.log(`      + ${name}`));
+        }
+        if (report.manifestationLores.removed.length > 0) {
+          console.log(`    Removed (${report.manifestationLores.removed.length}):`);
+          report.manifestationLores.removed.forEach(name => console.log(`      - ${name}`));
+        }
+        if (report.manifestationLores.modified.length > 0) {
+          console.log(`    Modified (${report.manifestationLores.modified.length}):`);
+          report.manifestationLores.modified.forEach(name => console.log(`      ~ ${name}`));
+        }
+      }
+
       console.log('\n');
     }
   }
@@ -986,6 +991,7 @@ function printSummaryReport() {
   let totalWarscrollsAdded = 0, totalWarscrollsRemoved = 0, totalWarscrollsModified = 0;
   let totalFormationsAdded = 0, totalFormationsRemoved = 0, totalFormationsModified = 0;
   let totalLoresAdded = 0, totalLoresRemoved = 0, totalLoresModified = 0;
+  let totalManifestationLoresAdded = 0, totalManifestationLoresRemoved = 0, totalManifestationLoresModified = 0;
 
   for (const report of changeReports) {
     totalWarscrollsAdded += report.warscrolls.added.length;
@@ -997,11 +1003,15 @@ function printSummaryReport() {
     totalLoresAdded += report.lores.added.length;
     totalLoresRemoved += report.lores.removed.length;
     totalLoresModified += report.lores.modified.length;
+    totalManifestationLoresAdded += report.manifestationLores.added.length;
+    totalManifestationLoresRemoved += report.manifestationLores.removed.length;
+    totalManifestationLoresModified += report.manifestationLores.modified.length;
   }
 
-  console.log(`\nWarscrolls:        +${totalWarscrollsAdded} added, -${totalWarscrollsRemoved} removed, ~${totalWarscrollsModified} modified`);
-  console.log(`Battle Formations: +${totalFormationsAdded} added, -${totalFormationsRemoved} removed, ~${totalFormationsModified} modified`);
-  console.log(`Lores:             +${totalLoresAdded} added, -${totalLoresRemoved} removed, ~${totalLoresModified} modified`);
+  console.log(`\nWarscrolls:          +${totalWarscrollsAdded} added, -${totalWarscrollsRemoved} removed, ~${totalWarscrollsModified} modified`);
+  console.log(`Battle Formations:   +${totalFormationsAdded} added, -${totalFormationsRemoved} removed, ~${totalFormationsModified} modified`);
+  console.log(`Lores:               +${totalLoresAdded} added, -${totalLoresRemoved} removed, ~${totalLoresModified} modified`);
+  console.log(`Manifestation Lores: +${totalManifestationLoresAdded} added, -${totalManifestationLoresRemoved} removed, ~${totalManifestationLoresModified} modified`);
   console.log('='.repeat(80) + '\n');
 }
 
