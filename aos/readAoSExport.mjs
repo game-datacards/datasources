@@ -466,6 +466,50 @@ function isManifestationLore(loreId, data) {
   return abilities.every(a => a.linkedWarscrollId !== null);
 }
 
+// Check if a lore is truly generic (not tied to any faction)
+function isGenericLore(loreId, data) {
+  const lore = data.lore.find(l => l.id === loreId);
+  if (!lore) return false;
+
+  // Check if lore has a factionId
+  if (lore.factionId) return false;
+
+  // Check if lore has any faction keyword links
+  const factionLinks = data.lore_faction_keyword?.filter(l => l.loreId === loreId) || [];
+  if (factionLinks.length > 0) return false;
+
+  return true;
+}
+
+// Get generic manifestation lores (lores that summon manifestations and have no faction ties)
+function getGenericManifestationLores(data) {
+  // Find all lores that:
+  // 1. Have no faction association
+  // 2. Are manifestation lores (all abilities summon manifestations)
+  return data.lore.filter(l => {
+    // Must be a generic lore
+    if (!isGenericLore(l.id, data)) return false;
+
+    // Must be a manifestation lore
+    return isManifestationLore(l.id, data);
+  });
+}
+
+// Get generic manifestations (manifestations summoned by generic lores)
+function getGenericManifestations(data) {
+  const genericLores = getGenericManifestationLores(data);
+  const genericLoreIds = genericLores.map(l => l.id);
+
+  // Get all warscroll IDs summoned by generic lores
+  const genericWarscrollIds = new Set();
+  data.lore_ability
+    .filter(a => genericLoreIds.includes(a.loreId) && a.linkedWarscrollId)
+    .forEach(a => genericWarscrollIds.add(a.linkedWarscrollId));
+
+  // Return the warscrolls
+  return data.warscroll.filter(w => genericWarscrollIds.has(w.id));
+}
+
 // Get lores for a faction
 function getLoresForFaction(factionId, data) {
   // Lores can be linked via lore_faction_keyword or directly via factionId on lore table
@@ -1142,6 +1186,91 @@ console.log('Processing AoS factions...\n');
 // Process all factions
 for (const [fileName, factionName] of factions) {
   processAoSFaction(fileName, factionName);
+}
+
+// Process generic manifestations
+clearProgress();
+console.log('\nProcessing generic manifestations...');
+
+const genericManifestations = getGenericManifestations(newDataExport);
+const genericLores = getGenericManifestationLores(newDataExport);
+
+// Transform generic manifestations
+const transformedGenericWarscrolls = genericManifestations.map(w =>
+  transformWarscroll(w, newDataExport, 'Generic', 'GENERIC')
+);
+
+// Transform generic lores
+const transformedGenericLores = genericLores.map(lore => {
+  const spells = getLoreAbilities(lore.id, newDataExport);
+  return {
+    id: uuidv5(lore.name, AOS_UUID_NAMESPACE),
+    name: lore.name,
+    cardType: 'Lore',
+    source: 'aos-4e',
+    faction_id: 'GENERIC',
+    restrictionText: null,
+    spells: spells
+  };
+});
+
+const genericOutput = {
+  id: 'GENERIC',
+  name: 'Generic',
+  updated: new Date().toISOString(),
+  compatibleDataVersion: dataVersion,
+  warscrolls: transformedGenericWarscrolls,
+  manifestationLores: transformedGenericLores
+};
+
+// Write generic file
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const genericPath = path.resolve(__dirname, './gdc/generic.json');
+fs.writeFileSync(genericPath, JSON.stringify(genericOutput, null, 2));
+
+try {
+  execSync(`npx prettier --write "${genericPath}"`, { stdio: 'pipe' });
+} catch (e) {
+  // Prettier may not be available
+}
+
+console.log(`✓ Generic manifestations: ${transformedGenericWarscrolls.length} warscrolls, ${transformedGenericLores.length} lores`);
+
+// Generate index.json
+console.log('\nGenerating index.json...');
+
+const indexData = {
+  updated: new Date().toISOString(),
+  factions: factions.map(([file, name]) => ({
+    id: name.toUpperCase().replace(/[- ]/g, '_').replace(/'/g, ''),
+    name: name,
+    file: path.basename(file)
+  })),
+  generic: {
+    id: 'GENERIC',
+    name: 'Generic',
+    file: 'generic.json'
+  }
+};
+
+const indexPath = path.resolve(__dirname, './gdc/index.json');
+fs.writeFileSync(indexPath, JSON.stringify(indexData, null, 2));
+
+try {
+  execSync(`npx prettier --write "${indexPath}"`, { stdio: 'pipe' });
+} catch (e) {
+  // Prettier may not be available
+}
+
+console.log('✓ Index file generated');
+
+// Stage generic and index files
+try {
+  execSync(`git add "${genericPath}"`, { stdio: 'pipe' });
+  execSync(`git add "${indexPath}"`, { stdio: 'pipe' });
+} catch (e) {
+  // Git may not be available
 }
 
 printSummaryReport();
