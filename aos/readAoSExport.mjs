@@ -331,12 +331,29 @@ function getFactionKeywordsForWarscroll(warscrollId, data) {
     .filter(fk => fk !== null);
 }
 
+// Get summoning ability info for a warscroll (if it's a manifestation)
+function getSummonInfoForWarscroll(warscrollId, data) {
+  // Find the lore ability that summons this warscroll
+  const summonAbility = data.lore_ability.find(a => a.linkedWarscrollId === warscrollId);
+  if (!summonAbility) return null;
+
+  // Find the lore this ability belongs to
+  const lore = data.lore.find(l => l.id === summonAbility.loreId);
+
+  return {
+    spell: summonAbility.name,
+    lore: lore ? lore.name : null,
+    castingValue: summonAbility.castingValue || null
+  };
+}
+
 // Transform a warscroll to output format
 function transformWarscroll(warscroll, data, factionName, factionId) {
   const weapons = getWeaponsForWarscroll(warscroll.id, data);
   const abilities = getAbilitiesForWarscroll(warscroll.id, data);
   const keywords = getKeywordsForWarscroll(warscroll.id, data, warscroll.referenceKeywords);
   const factionKeywords = getFactionKeywordsForWarscroll(warscroll.id, data);
+  const summonedBy = getSummonInfoForWarscroll(warscroll.id, data);
 
   // Separate weapons by type
   const rangedWeapons = weapons.filter(w => w.type === 'ranged');
@@ -376,6 +393,8 @@ function transformWarscroll(warscroll, data, factionName, factionId) {
     },
 
     abilities: abilities,
+
+    summonedBy: summonedBy,
 
     notes: null
   };
@@ -498,6 +517,13 @@ function getLoreAbilities(loreId, data) {
       })
       .filter(k => k !== null);
 
+    // Get linked warscroll for summon spells
+    let linkedWarscroll = null;
+    if (ability.linkedWarscrollId) {
+      const warscroll = data.warscroll.find(w => w.id === ability.linkedWarscrollId);
+      linkedWarscroll = warscroll ? warscroll.name : null;
+    }
+
     return {
       id: uuidv5(ability.name, AOS_UUID_NAMESPACE),
       name: ability.name,
@@ -508,7 +534,8 @@ function getLoreAbilities(loreId, data) {
       icon: ability.abilityAndCommandIcon,
       declare: ability.declare || null,
       effect: ability.effect,
-      keywords: keywords.length > 0 ? keywords : undefined
+      keywords: keywords.length > 0 ? keywords : undefined,
+      linkedWarscroll: linkedWarscroll
     };
   });
 }
