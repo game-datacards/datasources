@@ -4,7 +4,7 @@
     "banner": "#631210",
     "header": "#72191c"
   },
-  "compatibleDataVersion": 715,
+  "compatibleDataVersion": 720,
   "datasheets": [
     {
       "abilities": {
@@ -322,7 +322,9 @@
           "TACTICAL SQUAD",
           "STERNGUARD VETERAN SQUAD"
         ],
-        "extra": "You can attach this model to one of the above units, even if one CAPTAIN, CHAPTER MASTER or LIEUTENANT model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        "extra": "You can attach this model to one of the above units, even if one CAPTAIN, CHAPTER MASTER or LIEUTENANT model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+        "canAttachWith": ["CAPTAIN", "CHAPTER MASTER", "LIEUTENANT"],
+        "isBodyguard": true
       }
     },
     {
@@ -1861,7 +1863,7 @@
       "name": "The Sanguinor",
       "points": [
         {
-          "cost": "140",
+          "cost": "130",
           "keyword": null,
           "models": "1",
           "active": true
@@ -2988,6 +2990,7 @@
     "Liberator Assault Group",
     "Vanguard Spearhead",
     "The Angelic Host",
+    "Rage-cursed Onslaught",
     "Anvil Siege Force",
     "Firestorm Assault Force",
     "Ironstorm Spearhead"
@@ -3438,6 +3441,18 @@
       "detachment": "Stormlance Task Force"
     },
     {
+      "name": "Carmine Reliquary",
+      "id": "6a494532-f48c-5090-9f0c-de213253846a",
+      "cost": "30",
+      "keywords": ["Chaplain"],
+      "excludes": [],
+      "description": "CHAPLAIN model only. Models in the bearer’s unit have the Scouts 6\" ability. Each time you take a Battle-shock test for an ADEPTUS ASTARTES unit within 6\" of the bearer, you can re-roll the result.",
+      "faction_id": "CHBA",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Rage-cursed Onslaught"
+    },
+    {
       "name": "Portents of Wisdom",
       "id": "5512281d-c3f6-52c2-a842-d3e6ea81dfdf",
       "cost": "15",
@@ -3448,6 +3463,18 @@
       "source": "40k-10e",
       "cardType": "enhancement",
       "detachment": "Stormlance Task Force"
+    },
+    {
+      "name": "Master of the Red Thirst",
+      "id": "ceed6b5e-f290-5d28-81f1-fc4abe5a93a5",
+      "cost": "25",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Once per battle, at the start of the Fight phase, the bearer can use this Enhancement. If it does, until the end of the phase, models in the bearer’s unit have the Fights First ability.",
+      "faction_id": "CHBA",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Rage-cursed Onslaught"
     },
     {
       "name": "Feinting Withdrawal",
@@ -3462,6 +3489,18 @@
       "detachment": "Stormlance Task Force"
     },
     {
+      "name": "Sanguinary Tear (Aura)",
+      "id": "2f568096-fb2b-502c-8562-d08daa641e5b",
+      "cost": "35",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. While a friendly DEATH COMPANY unit is within 6\" of the bearer, add 1 to the Strength characteristic of weapons equipped by models in that unit.",
+      "faction_id": "CHBA",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Rage-cursed Onslaught"
+    },
+    {
       "name": "Hunter’s Instincts",
       "id": "0bdbc832-0556-53e7-90aa-2f864a03506e",
       "cost": "25",
@@ -3472,6 +3511,18 @@
       "source": "40k-10e",
       "cardType": "enhancement",
       "detachment": "Stormlance Task Force"
+    },
+    {
+      "name": "Angel’s Fang",
+      "id": "fd792905-ddc8-5a21-b2f3-db92dc9e2791",
+      "cost": "25",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Each time the bearer makes a melee attack that targets a CHARACTER, MONSTER or VEHICLE unit, that attack has the [SUSTAINED HITS 2] ability.",
+      "faction_id": "CHBA",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Rage-cursed Onslaught"
     },
     {
       "name": "The Imperium’s Sword",
@@ -3975,6 +4026,24 @@
         ]
       },
       {
+        "detachment": "Rage-cursed Onslaught",
+        "rules": [
+          {
+            "name": "Maddened Ferocity",
+            "rules": [
+              {
+                "text": "Each time an **ADEPTUS ASTARTES** model from your army makes a melee attack, re-roll a Wound roll of 1.\n\nEach time an **ADEPTUS ASTARTES** unit from your army is selected to fight, if that unit made a Charge move this turn, until the end of the phase, add 1 to the Attacks characteristic of melee weapons equipped by models in that unit. If your unit is Battle-shocked, add 2 to the Attacks characteristic of melee weapons equipped by models in that unit instead.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
         "detachment": "Anvil Siege Force",
         "rules": [
           {
@@ -4390,6 +4459,51 @@
       "faction_id": "CHBA",
       "fluff": "The Blood Angels are mighty warriors indeed, and wield their gilded and shimmering blades with consummate skill.",
       "detachment": "The Angelic Host"
+    },
+    {
+      "name": "A Grim Warning",
+      "id": "86102807-9dec-56f5-9e70-d362e164edab",
+      "cost": 1,
+      "turn": "either",
+      "target": "One BLOOD ANGELS unit from your army that was just destroyed while it was within range of one or more objective markers you controlled at the end of the previous phase. You can use this Stratagem on that unit even though it was just destroyed.",
+      "when": "Any phase.",
+      "effect": "Select one of those objective markers. That objective marker remains under your control until your opponent’s Level of Control over that objective marker is greater than yours at the end of a phase.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["any"],
+      "faction_id": "CHBA",
+      "fluff": "So savagely butchered are the corpses left strewn by the Blood Angels that the mere sight of them gives the enemy pause.",
+      "detachment": "Rage-cursed Onslaught"
+    },
+    {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CHBA",
+      "fluff": "The belligerence of the Adeptus Astartes, combined with their enhanced physiology, makes them unyielding foes to face.",
+      "detachment": "Rage-cursed Onslaught"
+    },
+    {
+      "name": "Limb from Limb",
+      "id": "bc46fd97-272d-579f-a577-97f5225d61b6",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that made a Charge move this turn.",
+      "when": "Fight phase.",
+      "effect": "Select either the Strength or Armour Penetration characteristic of melee weapons equipped by models in your unit. Until the end of the phase, add 1 to the selected characteristic. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle‑shocked (but the effects of this Stratagem still apply to it), and until the end of the phase, add 1 to the Strength and Armour Penetration characteristics of melee weapons equipped by models in your unit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "CHBA",
+      "fluff": "While the Blood Angels display skill and discipline at close quarters, it is tinged with a blood-drenched brutality that only increases with their building rage.",
+      "detachment": "Rage-cursed Onslaught"
     },
     {
       "name": "Battle Drill Recall",
@@ -5022,6 +5136,36 @@
       "detachment": "Vanguard Spearhead"
     },
     {
+      "name": "Insensate Rampage",
+      "id": "2beefe49-3242-51f5-9968-843c70771df7",
+      "cost": 1,
+      "turn": "either",
+      "target": "One DEATH COMPANY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CHBA",
+      "fluff": "The agony of even the most catastrophic wounds means nothing to the warriors of the Death Company, pain finding no purchase on their maddened minds.",
+      "detachment": "Rage-cursed Onslaught"
+    },
+    {
+      "name": "Red Wrath",
+      "id": "c86f6d79-6371-5768-9f1f-75992c96d114",
+      "cost": 1,
+      "turn": "your",
+      "target": "That ADEPTUS ASTARTES unit.",
+      "when": "Your Movement phase, just after an ADEPTUS ASTARTES unit from your army Advances.",
+      "effect": "Until the end of the turn, your unit is eligible to either shoot or declare a charge in a turn in which it Advanced. You can instead choose for your unit to give in to the Red Thirst; if it does, it becomes Battle-shocked (but the effects of this Stratagem still apply to it), and until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Advanced.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "CHBA",
+      "fluff": "Already swift and aggressive even by Space Marine standards, the Blood Angels can enhance their might yet further by surrendering temporarily to the Red Thirst, albeit at the cost of higher strategic thought.",
+      "detachment": "Rage-cursed Onslaught"
+    },
+    {
       "name": "Rigid Discipline",
       "id": "5373aa5b-0d13-5875-9e4c-1f5bb4d9d564",
       "cost": 1,
@@ -5065,6 +5209,21 @@
       "faction_id": "CHBA",
       "fluff": "No time can be wasted in punishing the Emperor’s foes. Many are those that deserve death and once one enemy is vanquished, soon must another follow.",
       "detachment": "Firestorm Assault Force"
+    },
+    {
+      "name": "Deathless Duty",
+      "id": "c5d63cdb-0422-54e1-88e1-fc973f8748a3",
+      "cost": 2,
+      "turn": "either",
+      "target": "One DEATH COMPANY unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, do not remove it from play. The destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["fight"],
+      "faction_id": "CHBA",
+      "fluff": "Even as death at last smothers the inferno of fury consuming the minds of these lost brethren, they keep killing, until not even the faintest spark remains.",
+      "detachment": "Rage-cursed Onslaught"
     },
     {
       "name": "Hail of Vengeance",
@@ -5112,5 +5271,5 @@
       "detachment": "Stormlance Task Force"
     }
   ],
-  "updated": "2025-12-04T11:33:51.559Z"
+  "updated": "2025-12-11T13:44:01.356Z"
 }

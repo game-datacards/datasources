@@ -1,0 +1,3006 @@
+{
+  "id": "KHARADRON_OVERLORDS",
+  "name": "Kharadron Overlords",
+  "grandAlliance": "Order",
+  "parentFaction": null,
+  "isLegends": false,
+  "colours": {
+    "banner": "#0f2b38",
+    "header": "#0f2b38"
+  },
+  "updated": "2025-12-14T13:14:01.556Z",
+  "compatibleDataVersion": 363,
+  "warscrolls": [
+    {
+      "id": "174396fd-a31b-503c-8d6a-c72f0b9bf30a",
+      "name": "Aether-Khemist",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Guild Officer", "Duardin", "Infantry", "Skyfarer", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force"
+      ],
+      "referenceKeywords": "Hero, Infantry, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 120,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Atmospheric Anatomiser",
+            "type": "ranged",
+            "range": "8\"",
+            "attacks": "3D6",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "2",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Heavy Instruments",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Atmospheric Isolation",
+          "phase": "chargePhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Subtract 1 from charge rolls for enemy units within 9\" of this unit."
+        },
+        {
+          "name": "Aetheric Augmentation",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **Arkanaut Company** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, add 1 to the Rend characteristic of the target’s ranged weapons for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "186fd600-4c3b-551b-9bf3-dba61b4e832e",
+      "name": "Aetheric Navigator",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Guild Officer", "Duardin", "Infantry", "Skyfarer", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force",
+        "Pioneer Outpost"
+      ],
+      "referenceKeywords": "Hero, Infantry, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "2",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 130,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Ranging Pistol",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Zephyrscope",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Read the Winds",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **SKYVESSEL** or **AUTO-ENDRIN** within this unit’s combat range and that is not in combat to be the target.",
+          "effect": "Remove the target from the battlefield and set it up again on the battlefield more than 9\" from all enemy units. Then, if the target is a **SKYVESSEL**, you can remove this unit from the battlefield and set it up again on the battlefield wholly within 6\" of the target and more than 9\" from all enemy units."
+        },
+        {
+          "name": "Aethersight",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit can use **UNBIND** abilities as if it had **WIZARD (1)**."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "bb54758a-f6f5-5e9c-847c-ecad5de58611",
+      "name": "Arkanaut Admiral",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Duardin", "Infantry", "Skyfarer", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force",
+        "Pioneer Outpost"
+      ],
+      "referenceKeywords": "Hero, Infantry, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "2",
+        "health": "6",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 140,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Masterwork Volley Pistol",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Skalfhammer",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "The Admiral's Flagship",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **FLAGSHIP** wholly within 12\" of this unit to be the target.",
+          "effect": "For the rest of the phase, each time the target uses a **SHOOT** ability, you can re-roll 1 of the hit rolls made for that ability."
+        },
+        {
+          "name": "Bring Every Gun to Bear!",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **SKYVESSEL** wholly within 24\" of this unit to be the target.",
+          "effect": "For the rest of the turn, add 1 to the Attacks characteristic of the target’s ranged weapons."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "7247655e-ca79-5d95-9d94-08aeef528b27",
+      "name": "Arkanaut Company",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Champion", "Duardin", "Infantry", "Skyfarer"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Pioneer Outpost"
+      ],
+      "referenceKeywords": "Infantry, Champion, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "4+",
+        "control": "1",
+        "health": "1",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 90,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Privateer Pistol",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          },
+          {
+            "name": "Privateer Heavy Weapon",
+            "type": "ranged",
+            "range": "15\"",
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Arkanaut Hand Weapon",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Skypike",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Grizzled Buccaneers",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 3+:\n•  This unit can immediately use a **SHOOT** ability as if it were your shooting phase but all of its attacks must target the target enemy unit.\n•  For the rest of the phase, this unit’s **Privateer Heavy Weapons** have **Shoot in Combat**."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "2da49bbb-2607-5d30-b29d-f6633c5019b0",
+      "name": "Arkanaut Frigate",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["War Machine", "Skyvessel", "Duardin", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "War Machine, Fly, Order, Kharadron Overlords, Duardin, Skyvessel",
+      "stats": {
+        "move": "10\"",
+        "save": "2+",
+        "control": "5",
+        "health": "14",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 300,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Heavy Sky Ordnance",
+            "type": "ranged",
+            "range": "24\"",
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Boarding Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "8",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Heavy Sky Ordnance** is 3."
+        },
+        {
+          "name": "Assault Boat",
+          "phase": "chargePhase",
+          "phaseDetails": "Your Charge Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "This unit cannot use this ability if it is in combat or has used a **RUN** or **RETREAT** ability this turn. Pick a number of units up to its Transport Capacity that are wholly within 6\" of it, that are not in combat and that have not charged this turn to be the targets. Then, make a charge roll of 2D6.",
+          "effect": "This unit can move a distance up to the value of the charge roll and must end the move within ½\" of a visible enemy unit. If it does so:\n\n• Remove the targets from the battlefield and set them up again wholly within this unit’s combat range. The targets can be set up in combat.\n• This unit and the targets have charged, and the targets cannot use another **CORE** ability this phase.\n• Pick up to 1 of the targets to have **STRIKE-FIRST** for the rest of the turn.",
+          "keywords": ["Core", "Charge", "Move"]
+        },
+        {
+          "name": "Incoming!",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        },
+        {
+          "name": "Medium Bomb Racks",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that does not have **FLY** and that this unit passed across this phase to be the target.",
+          "effect": "Roll 6 dice. For each 4+, inflict 1 mortal damage on the target."
+        },
+        {
+          "name": "Transport Capacity",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit can transport up to 2 friendly **KHARADRON OVERLORDS INFANTRY** units with a combined model count of up to 12 (see Battle Traits)."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "d3c573d5-91f1-50fd-bd00-6fa964de51b9",
+      "name": "Arkanaut Ironclad",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["War Machine", "Skyvessel", "Duardin", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "War Machine, Fly, Order, Kharadron Overlords, Duardin, Skyvessel",
+      "stats": {
+        "move": "10\"",
+        "save": "2+",
+        "control": "5",
+        "health": "18",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 460,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Aethershock Torpedoes",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          },
+          {
+            "name": "Great Sky Ordnance",
+            "type": "ranged",
+            "range": "24\"",
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Boarding Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "8",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Great Sky Ordnance** is 4."
+        },
+        {
+          "name": "Incoming!",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        },
+        {
+          "name": "Heavy Bomb Racks",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that does not have **FLY** and that this unit passed across this phase to be the target.",
+          "effect": "Roll 10 dice. For each 4+, inflict 1 mortal damage on the target."
+        },
+        {
+          "name": "Transport Capacity",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit can transport up to 3 friendly **KHARADRON OVERLORDS INFANTRY** units with a combined model count of up to 22 (see Battle Traits)."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "05d5e729-ed28-5fe2-985c-f41e751c6a67",
+      "name": "Auto-Endrin",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["War Machine", "Auto-Endrin", "Fly"],
+      "factionKeywords": [
+        "Kharadron Overlords",
+        "Grand Alliance Order",
+        "Pioneer Outpost",
+        "Grundstok Expeditionary Force"
+      ],
+      "referenceKeywords": "War Machine, Fly, Order, Kharadron Overlords, Auto-Endrin",
+      "stats": {
+        "move": "12\"",
+        "save": "4+",
+        "control": "-",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {},
+      "abilities": [
+        {
+          "name": "Stuncloud Auto-Endrin",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit is a **Stuncloud Auto-Endrin** and is in combat, pick each enemy unit in combat with it to be the targets.",
+          "effect": "Roll a dice for each target. If the roll is equal to or lower than that target’s Health characteristic, subtract 10 from the control score of that target for the rest of the turn. Then, remove this unit from the battlefield."
+        },
+        {
+          "name": "Grudgeblast Auto-Endrin",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit is a **Grudgeblast Auto-Endrin** and is in combat, pick each enemy unit in combat with it to be the targets.",
+          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. Then, remove this unit from the battlefield."
+        },
+        {
+          "name": "Nullifier Auto-Endrin",
+          "phase": "combatPhase",
+          "phaseDetails": "**Once Per Turn (Army), Any Combat Phase**",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit is a **Nullifier Auto-Endrin** and is in combat with any enemy **MANIFESTATIONS**, pick each enemy **MANIFESTATION** in combat with it to be the targets.",
+          "effect": "Make a **banishment roll** of 3D6 for each target. If the banishment roll equals or exceeds the **banishment value** on the **MANIFESTATION**’s warscroll, it is banished and removed from play. Then, remove this unit from the battlefield."
+        },
+        {
+          "name": "Expendable Munitions",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "The following apply to this unit:\n\n•  This unit has a maximum control score of ‘-’.\n•  When this unit is destroyed or removed from the battlefield, it does not count as being destroyed for the purposes of other rules (such as scoring battle tactics).\n•  This unit cannot be picked to be the target of or be affected by any non-**CORE** abilities used by other friendly units unless the ability specifies **AUTO-ENDRIN**.\n•  Ignore this unit for the purposes of friendly and enemy battle tactics."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "e3cb5399-ad29-58d3-8f5e-605a1b55f143",
+      "name": "Brokk Grungsson, Lord-Magnate of Barak-Nar",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": [
+        "Unique",
+        "Duardin",
+        "Infantry",
+        "Skyfarer",
+        "Fly",
+        "Warmaster",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "Warmaster, Unique, Hero, Infantry, Fly, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "12\"",
+        "save": "3+",
+        "control": "2",
+        "health": "8",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 260,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Grungsson’s Boast",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "1",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "D3+3",
+            "abilities": []
+          },
+          {
+            "name": "The Magnate’s Charter",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "6",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Brokk’s Aethermatic Saw",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (2 Hits)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Command the Fleet",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Battle, Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick up to 3 visible friendly **SKYVESSELS** wholly within 24\" of this unit that are not in combat to be the targets.",
+          "effect": "Each target can use a **RUN** ability and still use **SHOOT** and/or **CHARGE** abilities later in the turn."
+        },
+        {
+          "name": "Moustache-mounted Aetherblasters",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        },
+        {
+          "name": "First Rule of Grungsson",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick up to 2 other friendly **SKYFARER** units within this unit’s combat range to be the targets.",
+          "effect": "Add 1 to the Attacks characteristic of the targets’ melee weapons for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "b9a99e50-4510-56ea-9312-1d66ecb9cb43",
+      "name": "Codewright",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Guild Officer", "Duardin", "Infantry", "Skyfarer", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force"
+      ],
+      "referenceKeywords": "Hero, Infantry, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "2",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 80,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Aethershot Pistol",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Battletome",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Advisory Role",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick up to 3 visible friendly **SKYFARERS** units to be the targets.",
+          "effect": "Roll a dice for each target. On a 3+, pick 1 of the following effects to apply to that target for the rest of the turn:\n\n***Seek New Prospects:*** Add 5 to the target’s control score.\n\n***Don’t Argue with the Wind:*** Add 1 to run rolls and charge rolls for the target.\n\n***There’s No Trading With Some People:*** The target can use a **RETREAT** ability and still use **SHOOT** abilities later in the turn. In addition, no mortal damage is inflicted on the target by **RETREAT** abilities."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "89851c08-7617-5d9f-b4ea-534b5adacfd7",
+      "name": "Drekki Flynt",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Unique", "Duardin", "Infantry", "Skyfarer", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Kharadron Overlords"],
+      "referenceKeywords": "Unique, Hero, Infantry, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "2",
+        "health": "6",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 130,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "The Aethermatic Equaliser Mk. III",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2D6",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Grunnsson’s Axe",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "3",
+            "abilities": ["Anti-MONSTER (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "She Can Handle It!",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "You can re-roll run rolls and charge rolls for the **AELSLING** while it is wholly within 12\" of this unit."
+        },
+        {
+          "name": "Captain of the Aelsling",
+          "phase": "startOfTurn",
+          "phaseDetails": "Deployment Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an **Arkanaut Frigate** in this unit’s regiment to be the target. This unit can use this ability while in reserve, and the target can also be in reserve.",
+          "effect": "The target has the **AELSLING** keyword. Add 1 to the Damage characteristic of the target’s **Boarding Weapons** for the rest of the battle."
+        },
+        {
+          "name": "Auxiliary Skyhook",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy **MONSTER** in combat with this unit to be the target.",
+          "effect": "Roll a D3. On a 2+:\n•  Inflict an amount of mortal damage on the target equal to the roll.\n•  Subtract 1 from wound rolls made for the target’s attacks for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "dcc69b2c-476e-59b7-8923-9bda4cb8728f",
+      "name": "Endrinmaster with Dirigible Suit",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": [
+        "Guild Officer",
+        "Duardin",
+        "Infantry",
+        "Skyfarer",
+        "Fly",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "12\"",
+        "save": "3+",
+        "control": "2",
+        "health": "8",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 160,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Aethercannon",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "1",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          },
+          {
+            "name": "Dirigible Suit Weapon Battery",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "6",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Upgraded Aethermatic Saw",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Mobile Repairs",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **SKYVESSEL** or **Zontari Endrin Dock** within this unit’s combat range to be the target.",
+          "effect": "Roll a dice. On a 2+, **Heal (3)** the target."
+        },
+        {
+          "name": "Combat Engineers",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick this unit and up to 1 friendly **Endrinriggers** unit wholly within 12\" of this unit to be the targets.",
+          "effect": "For the rest of the turn, combat attacks made by the targets against enemy units that charged this turn have **Crit (2 Hits)**."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "c1d0f992-b9fa-541b-998f-caa76ceccb97",
+      "name": "Endrinmaster with Endrinharness",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Guild Officer", "Duardin", "Infantry", "Skyfarer", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force",
+        "Pioneer Outpost"
+      ],
+      "referenceKeywords": "Hero, Infantry, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "2",
+        "health": "6",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 150,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Aethermight Hammer",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Mobile Repairs",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **SKYVESSEL** or **Zontari Endrin Dock** within this unit’s combat range to be the target.",
+          "effect": "Roll a dice. On a 2+, **Heal (3)** the target."
+        },
+        {
+          "name": "'Aye Aye, Captain!'",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **SKYVESSEL** within this unit’s combat range to be the target.",
+          "effect": "For the rest of the turn:\n\n•  The target can use a **RETREAT** or **RUN** ability and still use **SHOOT** abilities later in the turn.\n•  No mortal damage is inflicted on the target by **RETREAT** abilities."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "13d2a0aa-5b2e-5126-b6d4-49a619c1234f",
+      "name": "Endrinriggers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Champion", "Duardin", "Infantry", "Skyfarer", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Pioneer Outpost",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "Infantry, Champion, Fly, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "12\"",
+        "save": "3+",
+        "control": "1",
+        "health": "2",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 110,
+      "modelCount": 3,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Skyrigger Heavy Weapon",
+            "type": "ranged",
+            "range": "15\"",
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": ["Anti-MONSTER (+1 Rend)"]
+          },
+          {
+            "name": "Aethermatic Volley Gun",
+            "type": "ranged",
+            "range": "15\"",
+            "attacks": "2D6",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (2 Hits)"]
+          },
+          {
+            "name": "Rapid-fire Rivet Gun",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Gun Butt",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "5+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Aethermatic Saw",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Anti-charge (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Emergency Field Repairs",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **SKYVESSEL** or **Zontari Endrin Dock** within this unit’s combat range to be the target.",
+          "effect": "Make a field repairs roll of D6 for each model in this unit. For each 4-5, **Heal (1)** the target. For each 6, **Heal (2)** the target."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "ab791128-2a1f-58af-a9f3-e660eabefdc1",
+      "name": "Grundstok Gunhauler",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["War Machine", "Skyvessel", "Duardin", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force",
+        "Pioneer Outpost",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "War Machine, Fly, Order, Kharadron Overlords, Duardin, Skyvessel",
+      "stats": {
+        "move": "14\"",
+        "save": "2+",
+        "control": "2",
+        "health": "10",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 160,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Sky Ordnance",
+            "type": "ranged",
+            "range": "15\"",
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Boarding Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Aethershot Overwatch",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        },
+        {
+          "name": "Light Bomb Racks",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that does not have **FLY** and that this unit passed across this phase to be the target.",
+          "effect": "Roll 4 dice. For each 4+, inflict 1 mortal damage on the target."
+        },
+        {
+          "name": "Transport Capacity",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit can transport 1 friendly **KHARADRON OVERLORDS INFANTRY** unit with a model count of up to 5 (see Battle Traits)."
+        },
+        {
+          "name": "Long-line Slings",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "When you use the ‘Transport Skyfarers’ ability for this unit, you can pick units in combat to be targets."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "38838db9-4513-59b8-ae2c-2d8b86159b3b",
+      "name": "Grundstok Thunderers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": [
+        "Champion",
+        "Standard Bearer",
+        "Duardin",
+        "Infantry",
+        "Skyfarer"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force",
+        "Pioneer Outpost"
+      ],
+      "referenceKeywords": "Infantry, Champion, Standard Bearer (1/5), Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "1",
+        "health": "2",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 130,
+      "modelCount": 5,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Aethershot Rifle",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Grundstok Mortar or Aethercannon",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          },
+          {
+            "name": "Aetheric Fumigator or Decksweeper",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Gun Butt",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "5+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Specialist Grundstok Ammunition",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase, Reaction: You declared a SHOOT ability for this unit",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": "Pick **Shieldbreaker** ammunition or **Thunderdrakk** ammunition.",
+          "effect": "If all of the attacks made for that **SHOOT** ability target the same enemy unit, after that **SHOOT** ability has been resolved, roll a dice and add the number of damage points allocated to the target by that **SHOOT** ability. If the roll is higher than the target’s Control characteristic, apply the following effect to the target based on the ammunition type picked:\n\n***Shieldbreaker:*** Ward rolls cannot be made for the target until the start of your next turn.\n\n***Thunderdrakk:*** That target has a maximum control score of 1 until the start of your next turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "d68eb05f-4448-50c4-bbea-9d147b6f27a8",
+      "name": "Null-Khemist",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": [
+        "Guild Officer",
+        "Duardin",
+        "Infantry",
+        "Skyfarer",
+        "Fly",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Kharadron Overlords",
+        "Grand Alliance Order",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "12\"",
+        "save": "3+",
+        "control": "2",
+        "health": "8",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 130,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Null-gas Extinguisher",
+            "type": "ranged",
+            "range": "8\"",
+            "attacks": "3D6",
+            "hit": "2+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Prospecting Clamp",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Protection of the Void",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While they are wholly within 12\" of this unit, friendly **SKYFARER** units have **WARD (5+)** against mortal damage inflicted by **SPELL** abilities, **PRAYER** abilities and abilities used by **MANIFESTATIONS**."
+        },
+        {
+          "name": "Nullsuit",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Double the Damage characteristic of this unit’s weapons for attacks that target **PRIESTS**, **WIZARDS** or **MANIFESTATIONS**."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "24670cbf-d5c8-5515-9469-47078d2526da",
+      "name": "Scourge of Ghyran Codewright",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Guild Officer", "Duardin", "Infantry", "Skyfarer", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force"
+      ],
+      "referenceKeywords": "Hero, Infantry, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "2",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 110,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Aethershot Pistol",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Battletome",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Alright, Listen Up",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit is wholly within 12\" of a friendly non-**HERO KHARADRON OVERLORDS** unit, pick a visible enemy unit within 18\" of this unit to be the target. Then, choose to spend either 3 or 6 **vexed points**.",
+          "effect": "Pick 1 of the following effects to apply to the target for the rest of the turn:\n\n• ***Do you see how fast they are going?!***: If you spent 3 **vexed points**, subtract D3 from the target’s Move characteristic. If you spent 6 **vexed points**, halve the target’s Move characteristic.\n• ***Those weapons are against regulation!***: If you spent 3 **vexed points**, subtract 1 from wound rolls for the target’s combat attacks. If you spent 6 **vexed points**, subtract 1 from the Rend characteristic of the target’s melee weapons and subtract 1 from wound rolls for the target’s combat attacks."
+        },
+        {
+          "name": "I'm Watching You",
+          "phase": "heroPhase",
+          "phaseDetails": "Any Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Give this unit D3 **vexed points**."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "4340c406-2ff9-5fee-8fa2-ae67c07d5a42",
+      "name": "Scourge of Ghyran Grundstok Gunhauler",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["War Machine", "Skyvessel", "Duardin", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Grundstok Expeditionary Force",
+        "Pioneer Outpost",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "War Machine, Fly, Order, Kharadron Overlords, Duardin, Skyvessel",
+      "stats": {
+        "move": "14\"",
+        "save": "2+",
+        "control": "2",
+        "health": "10",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 170,
+      "modelCount": 1,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Sky Ordnance",
+            "type": "ranged",
+            "range": "15\"",
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Bombs and Boarding Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Fighter Vessel",
+          "phase": "shootingPhase",
+          "phaseDetails": "Any Shooting Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit used a **SHOOT** ability this phase, this unit can move D6\". It cannot end that move in combat."
+        },
+        {
+          "name": "Attack Squadron",
+          "phase": "shootingPhase",
+          "phaseDetails": "Passive",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit is wholly within 12\" of any other friendly **Grundstok Gunhaulers**, it can use **SHOOT** abilities even if it used the ‘Run’ ability in the same turn."
+        },
+        {
+          "name": "Transport Capacity",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit cannot transport any friendly units."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "532ddd1e-5f9c-5675-b556-29251ef0a9fc",
+      "name": "Skywardens",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Champion", "Duardin", "Infantry", "Skyfarer", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Pioneer Outpost",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "Infantry, Champion, Fly, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "12\"",
+        "save": "3+",
+        "control": "1",
+        "health": "2",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 130,
+      "modelCount": 3,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Skyrigger Heavy Weapon",
+            "type": "ranged",
+            "range": "15\"",
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": ["Anti-MONSTER (+1 Rend)"]
+          },
+          {
+            "name": "Aethermatic Volley Gun",
+            "type": "ranged",
+            "range": "15\"",
+            "attacks": "2D6",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (2 Hits)"]
+          },
+          {
+            "name": "Vulcaniser Pistol",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Gun Butt",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "5+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Skywarden's Skypike",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Timed Charges",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a D3. On a 2+:\n\n• Inflict an amount of mortal damage on the target equal to the roll.\n• This unit can immediately use the ‘Retreat’ ability as if it were your movement phase without any mortal damage being inflicted on it."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "89e1217a-df69-55cc-856b-44d13ece99af",
+      "name": "Thundrik's Profiteers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Unique", "Duardin", "Infantry", "Skyfarer"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Pioneer Outpost"
+      ],
+      "referenceKeywords": "Unique, Infantry, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "4\"",
+        "save": "4+",
+        "control": "1",
+        "health": "2",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 150,
+      "modelCount": 5,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Aethermatic Firearms",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Aethermatic Anatomiser",
+            "type": "ranged",
+            "range": "8\"",
+            "attacks": "3D6",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "2",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Arkanaut Cutter",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Skypike",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Aethermatic Anatomiser",
+          "phase": "shootingPhase",
+          "phaseDetails": "Your Shooting Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit’s **Bjorgen Thundrik** is on the battlefield, pick an objective within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+:\n• If the target is controlled by either player, that player loses control of that objective.\n• The target cannot be contested until the start of your next turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "6ce93285-20f3-5b5d-9b7c-bd188b2b63a9",
+      "name": "Vongrim Harpoon Crew",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Champion", "Duardin", "Infantry", "Skyfarer", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "Pioneer Outpost",
+        "The Magnate's Crew"
+      ],
+      "referenceKeywords": "Infantry, Champion, Fly, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "12\"",
+        "save": "4+",
+        "control": "1",
+        "health": "2",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 110,
+      "modelCount": 5,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Skydrake Harpoon or Firearm",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Anti-MONSTER (+1 Rend)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Pioneer Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Light Endrinpacks",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit is in combat, it can move 2D6\" but must end that move in combat."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "9337cfa3-6dcb-5d37-a314-7a49bbba36cd",
+      "name": "Vongrim Salvagers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Champion", "Duardin", "Infantry", "Skyfarer", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Kharadron Overlords",
+        "The Magnate's Crew",
+        "Pioneer Outpost"
+      ],
+      "referenceKeywords": "Infantry, Champion, Fly, Order, Kharadron Overlords, Duardin, Skyfarer",
+      "stats": {
+        "move": "12\"",
+        "save": "4+",
+        "control": "1",
+        "health": "2",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 120,
+      "modelCount": 5,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Privateer Pistol",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Vongrim Cutlass",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (2 Hits)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Spotter's Flaregun",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an objective within 9\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, apply the following effects for the rest of the turn:\n\n• Add 1 to hit rolls for combat attacks made by friendly **SKYFARER** units that target a unit that is contesting the target objective.\n• Add 1 to the Rend characteristic of melee weapons used by friendly **Vongrim Salvagers** and **Vongrim Harpoon Crew** units for attacks that target a unit that is contesting the target objective."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "bf137e6b-3a5e-56f6-bfc6-0f36b20ec293",
+      "name": "Zontari Endrin Dock",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factions": ["Kharadron Overlords"],
+      "keywords": ["Faction Terrain", "Fly"],
+      "factionKeywords": [
+        "Kharadron Overlords",
+        "Grand Alliance Order",
+        "Pioneer Outpost",
+        "Grundstok Expeditionary Force"
+      ],
+      "referenceKeywords": "Faction Terrain, Fly, Order, Kharadron Overlords",
+      "stats": {
+        "move": "-",
+        "save": "3+",
+        "control": "-",
+        "health": "10",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 20,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {},
+      "abilities": [
+        {
+          "name": "Repair Routines",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **SKYVESSEL** within 3\" of this terrain feature to be the target.",
+          "effect": "Make a repair roll of D6. Add 1 to the roll if there is a friendly **Endrinmaster with Dirigible Suit** or **Endrinmaster with Endrinharness** within 3\" of this terrain feature. On a 4+, **Heal (3)** the target."
+        },
+        {
+          "name": "Release The Auto-Endrins",
+          "phase": "startOfTurn",
+          "phaseDetails": "Deployment Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Set up a friendly **Nullifier Auto‑Endrin**, **Stuncloud Auto‑Endrin** and **Grudgeblast Auto‑Endrin** (see the Auto-Endrin warscroll) on the battlefield within friendly territory, wholly within 6\" of this terrain feature and more than 9\" from all enemy units."
+        },
+        {
+          "name": "Endrinworks Outpost",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **AUTO-ENDRIN** or replacement **AUTO‑ENDRIN** that has been removed from the battlefield to be the target.",
+          "effect": "Make a manufacturing roll of D6. Add 1 to the roll if there is a friendly **Endrinmaster with Dirigible Suit** or **Endrinmaster with Endrinharness** within 3\" of this terrain feature. On a 4+, set up a replacement **AUTO-ENDRIN** on the battlefield, wholly within 6\" of this terrain feature and more than 3\" from all enemy units."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    }
+  ],
+  "battleFormations": [
+    {
+      "id": "3909ae59-23e3-502f-b7f5-047bdae12310",
+      "name": "Rapid Redeployment Squadron",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Extra Rappel Anchors",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Friendly **Grundstok Gunhaulers** can transport up to 2 friendly **KHARADRON OVERLORDS INFANTRY** units instead of 1 and with a combined model count of up to 6 instead of 5 (see Kharadron Overlords Battle Traits).",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "3e2405b2-7d78-5397-a15b-888bd26303b7",
+      "name": "Veteran Ground Troops",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Entrenched Crews",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Start of Battle Round",
+          "icon": "defensive",
+          "declare": "Pick up to 3 friendly **Arkanaut Company** units to be the targets.",
+          "effect": "For the rest of the battle round, if the target has not been set up this battle round and while it has not moved this turn, subtract 1 from the Rend characteristic of attacks that target that unit.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "6617feb8-c66d-50f1-a1d7-2e44ed3be98c",
+      "name": "Endrineers Guild Expeditionary Force",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": 10,
+      "rules": [
+        {
+          "name": "Special Procurement",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "special",
+          "declare": "Pick a friendly non-**UNIQUE KHARADRON OVERLORDS HERO** that does not have an artefact of power. The target can be in reserve.",
+          "effect": "Give that **HERO** 1 artefact of power from the ‘Inventions of the Sky-ports’ or the ‘Ingenious Innovations.\n\n**Designer’s Note:** *This artefact of power is given to the unit during the deployment phase, not during army composition.*",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "24121de3-20b4-5c38-8659-6f6f15dc2df2",
+      "name": "Pioneers and Scavengers",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Gritty Fortune-hunters",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "Friendly **Vongrim Harpoon Crew** and **Vongrim Salvagers** units have **WARD** **(6+)** while they are contesting an objective.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    }
+  ],
+  "lores": [],
+  "manifestationLores": [],
+  "enhancements": {
+    "artefacts": [
+      {
+        "id": "b32c0f9b-bc6f-599c-b7e7-5529ab81c52a",
+        "name": "Aerodynamism",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "If this unit moved this turn, subtract 1 from hit rolls for attacks that target this unit for the rest of the turn.",
+        "cpCost": null
+      },
+      {
+        "id": "d3b58037-5cfa-5f55-b1a2-dad073a65a50",
+        "name": "Guns For All Occasions",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "End of Your Turn",
+        "icon": "offensive",
+        "declare": "Pick an enemy unit in combat with this unit to be the target.",
+        "effect": "Inflict D3 mortal damage on the target.",
+        "cpCost": null
+      },
+      {
+        "id": "769eddf9-c3a5-5dee-a7dd-1e03371e1b8c",
+        "name": "Aetheric Nullifier",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Reaction: Opponent declared a SHOOT or FIGHT ability for a MANIFESTATION within 9\" of the bearer",
+        "icon": "special",
+        "declare": null,
+        "effect": "Roll 2D6. If the roll equals or exceeds the banishment value listed on the **MANIFESTATION**’s warscroll, it is banished and removed from play. You cannot pick the same **MANIFESTATION** to be the target of this ability more than once per phase.",
+        "cpCost": null
+      },
+      {
+        "id": "5e15830c-484f-5fdc-8097-ba5c0b20115d",
+        "name": "Rockbuster Charges",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "offensive",
+        "declare": "Pick a terrain feature that this unit passed across this turn. Each enemy unit within 1\" of that terrain feature is a target.",
+        "effect": "Inflict D3 mortal damage on each target.",
+        "cpCost": null
+      },
+      {
+        "id": "331e697d-fadd-5866-91ee-a75e33681f8b",
+        "name": "Thorgsson's Universal Automaton Actuator",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "PAssive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Add 6\" to the Move characteristic of friendly **AUTO-ENDRINS** while they are wholly within 6\" of this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "f79957ee-1ce8-5974-bb85-7911c9f3eff4",
+        "name": "Voidstone Orb",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle, Reaction: Opponent declared a SPELL ability for a WIZARD within 30\" of this unit",
+        "icon": "special",
+        "declare": null,
+        "effect": "That spell is unbound.",
+        "cpCost": null
+      },
+      {
+        "id": "d4ea5229-8215-5367-bc15-09a478a70d43",
+        "name": "Celestium Burst Grenade",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "shootingPhase",
+        "phaseDetails": "Once Per Battle, Your Shooting Phase",
+        "icon": "offensive",
+        "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+        "effect": "Ward rolls cannot be made for the target for the rest of the turn.",
+        "cpCost": null
+      },
+      {
+        "id": "bac1715d-8abf-5c39-a84d-40e8757175a8",
+        "name": "Blazebeard and Sons Bamboozling Flakgun",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "chargePhase",
+        "phaseDetails": "Once Per Turn, Reaction: Opponent declared a CHARGE ability for a unit within 12\" of this unit",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Pick 1 dice in that charge roll. Then, make a **bamboozling flak roll** of D6. If the roll equals or exceeds the value on the dice, remove that dice from the charge roll.",
+        "cpCost": null
+      },
+      {
+        "id": "b264d1e5-2be9-5cd3-85b0-115534d3e9a8",
+        "name": "Emberstone Flare",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle, Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly **KHARADRON OVERLORDS** unit that has **FLY** and is not in combat to be the target.",
+        "effect": "Remove the target from the battlefield and set it up again wholly within 9\" of this unit and more than 9\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "e4c265a0-94ae-5453-9b11-a91de7bce9f0",
+        "name": "Spell in a Bottle",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle, Your Hero Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "This unit can use a **SUMMON** ability from the manifestation lore you picked during army composition as if it had **WIZARD (1)**. Instead of making a casting roll for that **SUMMON** ability, the casting roll is 7 and cannot be modified. That **SUMMON** ability cannot be unbound.",
+        "cpCost": null
+      },
+      {
+        "id": "f0ad2af4-ee46-5270-83ba-353cb2e90a05",
+        "name": "Karst-Bana Aether-Powered Combat Rig",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "This unit has **WARD (5+)**. In addition, add 1 to the Attacks characteristic of this unit’s melee weapons.",
+        "cpCost": null
+      }
+    ],
+    "heroicTraits": [
+      {
+        "id": "bfbe590d-0b51-55fe-9989-36381826df1a",
+        "name": "Master of Discipline",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Each time a friendly **MAGNATE’S CREW INFANTRY** unit wholly within 12\" of this unit uses the ‘Redeploy’ command, you can re-roll the dice.",
+        "cpCost": null
+      },
+      {
+        "id": "31dd719b-f1ae-57a6-b7b1-72c5193c9e45",
+        "name": "Flanking Fire",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "shootingPhase",
+        "phaseDetails": "Passive",
+        "icon": "shooting",
+        "declare": null,
+        "effect": "Add 1 to hit rolls for shooting attacks made by friendly **MAGNATE’S CREW SKYVESSELS** that target an enemy unit in combat with this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "951e5c17-dfea-5900-86cb-7e8653c458f5",
+        "name": "Entrenchment Expert",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Reaction: You declared the ‘All-out Defence’ command for a friendly unit wholly within 12\" of this HERO",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "That friendly unit has **WARD (5+)** for the rest of the turn.",
+        "cpCost": null
+      },
+      {
+        "id": "f864c1a6-c5a6-541f-84d0-978b26fb4fdf",
+        "name": "Copper Fingers",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle, Reaction: You declared the ‘Endrinworks Outpost’ ability for a Zontari Endrin Dock",
+        "icon": "special",
+        "declare": null,
+        "effect": "If this unit is wholly within 9\" of that **Zontari Endrin Dock**, instead of resolving the effect of the ‘Endrinworks Outpost’ ability, set up a replacement **AUTO-ENDRIN** on the battlefield, wholly within 6\" of that **Zontari Endrin Dock** and more than 3\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "b3d7013c-5481-5169-ad64-d979c061a7d9",
+        "name": "Territorial Trailblazer",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "control",
+        "declare": null,
+        "effect": "Subtract 3 from the control scores of enemy units while they are in combat with this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "0a4a47c6-34db-5dbb-9b7a-f493a842f678",
+        "name": "Shrewd Opportunist",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "movement",
+        "declare": "Pick this unit and up to 2 other friendly **KHARADRON OVERLORDS** non-**HERO INFANTRY** units to be the targets.",
+        "effect": "Each target can immediately use the ‘Normal Move’ ability as if it were your movement phase.",
+        "cpCost": null
+      },
+      {
+        "id": "e92ca578-99e1-524a-baec-cbb027992d56",
+        "name": "Bold As Brass",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "control",
+        "declare": null,
+        "effect": "Add 5 to this unit’s control score.",
+        "cpCost": null
+      },
+      {
+        "id": "25b1ab13-df53-5520-a32e-7cd1cf515f3e",
+        "name": "Combat Grafter",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Battle, Any Combat Phase",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "This unit can use 2 **FIGHT** abilities this phase. After the first is used, however, this unit has **STRIKE-LAST** for the rest of the phase.",
+        "cpCost": null
+      }
+    ],
+    "other": [
+      {
+        "id": "b848d389-c867-5b08-967f-04934ac04c31",
+        "name": "Hegsson Solutions 'Old Reliable' Hullplates",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "This unit has **WARD (5+)** against damage inflicted by **SHOOT** abilities.",
+        "cpCost": null
+      },
+      {
+        "id": "58e69753-0f46-50d3-8bf8-59021b88104d",
+        "name": "Gruksson Wide-bore Cylinders",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Add 2\" to this unit’s Move characteristic.",
+        "cpCost": null
+      },
+      {
+        "id": "f0d2044a-fadc-5782-a43d-dae9093d6c41",
+        "name": "Coalbeard's Collapsible Bombrack",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "Add 1 to each dice roll when using this unit’s ‘Heavy Bomb Racks’, ‘Medium Bomb Racks’ or ‘Light Bomb Racks’ ability.",
+        "cpCost": null
+      },
+      {
+        "id": "b7b49005-f4c7-57e0-9e7e-a17192c797c2",
+        "name": "Tracer-fire Rounds",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "shootingPhase",
+        "phaseDetails": "Your Shooting Phase, Reaction: You declared a Shoot ability for this unit",
+        "icon": "shooting",
+        "declare": null,
+        "effect": "If all of the attacks target the same enemy unit, ignore negative modifiers to hit rolls for those attacks.",
+        "cpCost": null
+      },
+      {
+        "id": "8010352b-862d-5a61-be68-a76ec751c3d2",
+        "name": "Grandiose Fuselage",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "control",
+        "declare": null,
+        "effect": "Add 5 to this unit’s Control characteristic.",
+        "cpCost": null
+      },
+      {
+        "id": "f3d145c9-f265-5fa1-91d2-a5483be9a2cc",
+        "name": "Nullstone Galvanisation",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "End of Any Turn",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "Inflict D6 mortal damage on each enemy **MANIFESTATION** within this unit’s combat range.",
+        "cpCost": null
+      },
+      {
+        "id": "1ae909a1-2796-5833-ab9d-5898e55561b0",
+        "name": "Blazebeard and Sons Ejector Pod",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Battle, Any Combat Phase",
+        "icon": "movement",
+        "declare": "If this unit is in combat, pick a visible friendly **KHARADRON OVERLORDS HERO** wholly within 6\" of this unit to be the target.",
+        "effect": "Remove the target from the battlefield, then set it up again wholly within 18\" of this unit and more than 9\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "c066463d-b15f-5db8-b22d-d8ff1e2e9876",
+        "name": "Zonbarcorp 'Dealbreaker' Battle Ram",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "chargePhase",
+        "phaseDetails": "Any Charge Phase",
+        "icon": "offensive",
+        "declare": "If this unit charged this phase, pick an enemy unit in combat with it to be the target.",
+        "effect": "Roll a number of dice equal to the unmodified charge roll. For each 4+, inflict 1 mortal damage on the target.",
+        "cpCost": null
+      },
+      {
+        "id": "f4bf5e45-2ddf-5469-9201-dac5e2466551",
+        "name": "Voidstone Repulser Vents",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: A friendly unit within 12\" of this unit was picked to be the target of an enemy SPELL ability",
+        "icon": "special",
+        "declare": null,
+        "effect": "Roll a dice. On a 4+:\n\n• Ignore the effect of that spell on that friendly unit.\n• Inflict D3 mortal damage on the caster.\n\nThis unit can use this ability more than once per phase but you can only roll once for each friendly unit per spell cast.",
+        "cpCost": null
+      },
+      {
+        "id": "64352a52-948e-5ba9-983d-57e83e5ec292",
+        "name": "Swoop In",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick the **Grundstok Gunhauler** in this Regiment of Renown to use this ability if it is **studying the battlefield**.",
+        "effect": "Set up the **Grundstok Gunhauler** on the battlefield more than 6\" from all enemy units that have an artefact of power and more than 9\" from all other enemy units. Then, set up all other units in this Regiment of Renown wholly within 3\" of the **Grundstok Gunhauler** and more than 6\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "ea5c961b-d4be-505a-b996-43a7b5e1dda7",
+        "name": "What's Yours Is Mine",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Combat Phase",
+        "icon": "special",
+        "declare": "Pick an enemy unit in combat with a unit in this Regiment of Renown to be the target. Then, pick an artefact of power the target has.",
+        "effect": "Roll a dice. Add 1 to the roll for each unit in this Regiment of Renown that is in combat with the target. On a 6+, the target no longer has that artefact of power.",
+        "cpCost": null
+      },
+      {
+        "id": "2b5d3f20-e958-5555-8625-1bdf9a69e778",
+        "name": "An Eye For Loot",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "special",
+        "declare": "This ability must be used to deploy this Regiment of Renown.",
+        "effect": "Set up the units in this Regiment of Renown in reserve **studying the battlefield**. They have now been deployed.",
+        "cpCost": null,
+        "keywords": ["Deploy"]
+      },
+      {
+        "id": "d3395a07-ae49-5e32-a84e-f2af280f71f9",
+        "name": "Supplies Dont Come Cheap",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "special",
+        "declare": "Pick a visible terrain feature within 18\" of the **Codewright** in this Regiment of Renown. Each friendly unit wholly within 3\" of that terrain feature is a target.",
+        "effect": "Roll a D3 for each target. On a 2+, **Heal (X)** the target, where **X** is an amount equal to the roll.",
+        "cpCost": 1
+      },
+      {
+        "id": "6d507085-439a-5f10-978d-fc2d12a3346d",
+        "name": "No One Rides For Free",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly **INFANTRY** unit with up to 10 models that is wholly within 9\" of the **Codewright** in this Regiment of Renown and not in combat to be the target.",
+        "effect": "Remove the target from the battlefield, then set it up again on the battlefield more than 9\" from all enemy units.",
+        "cpCost": 1
+      },
+      {
+        "id": "006509ac-d793-5b5f-9c5d-a5d8a6082791",
+        "name": "Long-range Support",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "shootingPhase",
+        "phaseDetails": "Your Shooting Phase",
+        "icon": "shooting",
+        "declare": "Pick an objective within 15\" of the **Codewright** in this Regiment of Renown and that no friendly units are contesting. Each unit contesting that objective is a target.",
+        "effect": "Roll a dice for each target. If the roll exceeds the target’s Health characteristic, inflict an amount of mortal damage on the target equal to the roll.",
+        "cpCost": 1
+      },
+      {
+        "id": "26ef1168-cd05-5a50-a568-7b02368b6bba",
+        "name": "Cruising Into Position",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "special",
+        "declare": "Pick all units in this Regiment of Renown that have not been deployed.",
+        "effect": "Set up all of those units in reserve **plying the winds**. They have now been deployed.",
+        "cpCost": null,
+        "keywords": ["Deploy"]
+      },
+      {
+        "id": "51ff9632-5dca-54ed-bf6c-78fe5caf6add",
+        "name": "You Call It Yours, I Call It Mine",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "shootingPhase",
+        "phaseDetails": "Passive",
+        "icon": "shooting",
+        "declare": null,
+        "effect": "Add 1 to hit rolls and wound rolls for shooting attacks made by units in this Regiment of Renown that target an enemy unit that is within 6\" of an enemy unit that has an enhancement.",
+        "cpCost": null
+      },
+      {
+        "id": "2dfb3e9a-1eed-5cac-81c0-aceb559d8493",
+        "name": "Daredevil Deployment",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick the **Arkanaut Frigate** in this Regiment of Renown to use this ability if it is **plying the winds**.",
+        "effect": "Set up the **Arkanaut Frigate** anywhere on the battlefield more than 9\" from all enemy units. Then, set up all other units in this Regiment of Renown wholly within 6\" of the **Arkanaut Frigate** and more than 9\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "cf2a6df7-3fd5-5cd7-a7eb-d2ca26c93dfa",
+        "name": "The Good Ship Aelsling",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "The **AELSLING** has a Health characteristic of 17 instead of 14.",
+        "cpCost": null
+      }
+    ]
+  },
+  "terrain": [
+    {
+      "id": "130d40a7-35d8-5f5a-a205-b155b97149e4",
+      "name": "Zontari Endrin Dock",
+      "cardType": "FactionTerrain",
+      "source": "aos-4e",
+      "abilities": []
+    }
+  ],
+  "rules": {
+    "battleTraits": [
+      {
+        "name": "Loyalty to the Magnate",
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "While a friendly **Brokk Grungsson** is wholly within the combat range of another friendly **MAGNATE’S CREW INFANTRY** unit, both those units have **WARD (5+)**."
+      },
+      {
+        "name": "Pay Your Debts",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+        "icon": "offensive",
+        "declare": "Pick an enemy unit on the battlefield or in reserve to be **indebted**.",
+        "effect": "Add 1 to wound rolls for combat attacks made by friendly **MAGNATE’S CREW** units that target the **indebted** unit."
+      },
+      {
+        "name": "Bold Moves",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle (Army), Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick any number of friendly **MAGNATE’S CREW INFANTRY** units that are in combat to be the targets. Make an **emergency launch roll** of 3D6 for each target.",
+        "effect": "Each target can move a distance up to the value of its **emergency launch roll**. It **can** move through the combat ranges of any enemy units but **cannot** end that move in combat with an enemy unit that it was not in combat with at the start of the phase.\n\nThe target(s) cannot use **CHARGE** abilities for the rest of the turn."
+      },
+      {
+        "name": "Cutting-Edge Endrinpacks",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick up to D3 friendly **MAGNATE’S CREW INFANTRY** units that are wholly within 9\" of a friendly **MAGNATE’S CREW SKYVESSEL** to be the targets.",
+        "effect": "Double the targets’ Move characteristic for the rest of the turn."
+      },
+      {
+        "name": "Invictunite-lined Hull",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle (Army), Enemy Hero Phase",
+        "icon": "defensive",
+        "declare": "Pick a friendly **MAGNATE’S CREW SKYVESSEL** to be the target.",
+        "effect": "Roll a D3. For the rest of the turn, subtract **X** from the Rend characteristic of weapons used for attacks that target that **SKYVESSEL**, where **X** is equal to the roll."
+      },
+      {
+        "name": "Constant Barrage",
+        "phase": "shootingPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+        "icon": "shooting",
+        "declare": "Pick an enemy unit that had any damage points allocated to it this phase by a friendly **MAGNATE’S CREW** unit’s attacks to be the target.",
+        "effect": "Until the start of your next turn, each time the target ends a move within 10\" of any friendly **MAGNATE’S CREW** units, roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+      },
+      {
+        "name": "No Safe Haven",
+        "phase": "endOfTurn",
+        "phaseDetails": "End of Any Turn",
+        "icon": "control",
+        "declare": "Pick an enemy unit to be the target.",
+        "effect": "Subtract 1 from the control score of that unit for each damage point allocated to it this turn by a shooting attack made by a friendly **EXPEDITIONARY FORCE** unit, to a maximum of 10 damage points."
+      },
+      {
+        "name": "Transport Skyfarers",
+        "phase": "movementPhase",
+        "phaseDetails": "Reaction: You declared a non-CHARGE MOVE ability for a friendly SKYVESSEL",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Pick a number of units up to that **SKYVESSEL**’s Transport Capacity (see its warscroll) that are wholly within 6\" of it to be the targets. Units that have been transported this turn cannot be targets.\n\nRemove the targets from the battlefield. After the **SKYVESSEL** ends its move, you must set up each target unit on the battlefield, wholly within 6\" of that **SKYVESSEL** and not in combat. Those units have been transported. A unit cannot use **CHARGE** abilities if it was transported in the same turn."
+      },
+      {
+        "name": "Gun Butt Low Blow",
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "While a friendly **EXPEDITIONARY FORCE INFANTRY** unit is contesting an objective that you control, its melee weapons have **Crit (Mortal)**."
+      },
+      {
+        "name": "Grudgefire Rounds",
+        "phase": "shootingPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+        "icon": "shooting",
+        "declare": "Pick a friendly **EXPEDITIONARY FORCE INFANTRY** unit to be the target.",
+        "effect": "Roll a dice. On a 3+, pick 1 of the target’s ranged weapons. Add 1 to the Attacks characteristic of that weapon for the rest of the phase."
+      },
+      {
+        "name": "Initial Investment",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Each friendly **AUTO-ENDRIN** can move 2D6\" but cannot finish that move in combat."
+      },
+      {
+        "name": "Settling Accounts",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "offensive",
+        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if a friendly **AUTO-ENDRIN** was destroyed this turn by an enemy unit.",
+        "effect": "For the rest of the battle, each time a friendly **AUTO-ENDRIN** is removed from the battlefield, before removing it, inflict D3 mortal damage on each enemy unit within 3\" of that **AUTO-ENDRIN**."
+      },
+      {
+        "name": "Aggressive Acquisitions",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "special",
+        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if there is a friendly **PIONEER** unit in each large quarter of the battlefield. Each of those units must be more than 6\" from all other large quarters of the battlefield and not in combat.",
+        "effect": "For the rest of the battle, enemy units cannot be set up within your territory or within 9\" of an objective that you control."
+      },
+      {
+        "name": "Secure Investments",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "defensive",
+        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if any enemy units that were within 3\" of your **Zontari Endrin Dock** this turn were destroyed this turn.",
+        "effect": "For the rest of the battle, ignore the Rend characteristic of combat attacks that target friendly non-**INFANTRY PIONEER** units or friendly faction terrain features."
+      },
+      {
+        "name": "Hostile Takeover",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "defensive",
+        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if an enemy **HERO** was destroyed by shooting attacks made by a friendly **PIONEER** unit this turn.",
+        "effect": "For the rest of the battle, subtract 1 from hit rolls for shooting attacks that target friendly **PIONEER** units or friendly faction terrain features."
+      },
+      {
+        "name": "Market Dominance",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "rallying",
+        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if you control every objective that is not wholly within enemy territory.",
+        "effect": "For the rest of the battle, each time you use your **Zontari Endrin Dock**’s ‘Endrinworks Outpost’ ability, you can set up a replacement **AUTO-ENDRIN** on a manufacturing roll of 3+ instead of 4+."
+      },
+      {
+        "name": "Skyvessel Cover",
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Subtract 1 from hit rolls for attacks that target friendly **KHARADRON OVERLORDS INFANTRY** units that have not charged in the same turn while they are wholly within 6\" of a friendly **Arkanaut Ironclad** or **Arkanaut Frigate** that has not charged in the same turn."
+      },
+      {
+        "name": "Flying High",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+        "icon": "special",
+        "declare": "Pick a friendly **SKYVESSEL** that is in a regiment from which no units have been deployed, then pick a number of units up to its Transport Capacity (see its warscroll) that are in its regiment.",
+        "effect": "Set up all of those units in reserve **in the clouds**. They have now been deployed."
+      },
+      {
+        "name": "The Flagship",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+        "icon": "special",
+        "declare": "Pick a friendly **SKYVESSEL** to be the target. The target can be in reserve.",
+        "effect": "The target has the **FLAGSHIP** keyword for the rest of the battle. Give the target 1 Great Endrinwork.\n\n**Designer’s Note:** *This Great Endrinwork is given to the unit during the deployment phase, not during army composition. It can be given to the target even if it already has a Great Endrinwork.*"
+      },
+      {
+        "name": "Descend from the Clouds",
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly **SKYVESSEL in the clouds** to use this ability.",
+        "effect": "Set up that **SKYVESSEL** anywhere on the battlefield more than 9\" from all enemy units. Then, set up all other units that were set up **in the clouds** with that **SKYVESSEL** wholly within 6\" of it and more than 9\" from all enemy units."
+      },
+      {
+        "name": "Transport Skyfarers",
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase, Reaction: You declared a non-CHARGE MOVE ability for a friendly SKYVESSEL",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Pick a number of units up to that **SKYVESSEL**’s Transport Capacity (see its warscroll) that are wholly within 6\" of it and not in combat to be the targets. Units that have been transported this turn cannot be targets.\n\nRemove the targets from the battlefield. After the **SKYVESSEL** ends its move, you must set up each target unit on the battlefield, wholly within 6\" of that **SKYVESSEL** and not in combat. Those units have been transported. A unit cannot use **CHARGE** abilities if it was transported in the same turn."
+      }
+    ]
+  }
+}

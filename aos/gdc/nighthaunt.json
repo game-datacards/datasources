@@ -1,0 +1,3303 @@
+{
+  "id": "NIGHTHAUNT",
+  "name": "Nighthaunt",
+  "grandAlliance": "Death",
+  "parentFaction": null,
+  "isLegends": false,
+  "colours": {
+    "banner": "#1a1a2a",
+    "header": "#1a1a2a"
+  },
+  "updated": "2025-12-14T13:14:05.758Z",
+  "compatibleDataVersion": 363,
+  "warscrolls": [
+    {
+      "id": "822d212e-9249-597b-aa14-e528ac611f9a",
+      "name": "Awlrach the Drowner",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "War Machine", "Unique", "Fly", "Hero"],
+      "factionKeywords": ["Grand Alliance Death", "Nighthaunt"],
+      "referenceKeywords": "Unique, Hero, War Machine, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "10\"",
+        "save": "5+",
+        "control": "2",
+        "health": "7",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 170,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Deathwood Oar",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "-",
+            "damage": "D3",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Passage Through The Underworlds",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Battle, Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit is not in combat, pick a friendly non-**HERO NIGHTHAUNT** unit that is not in combat and is wholly within 12\" of this unit to be the target.",
+          "effect": "Remove this unit and the target from the battlefield, then set them up again on the battlefield wholly within 6\" of each other and more than 7\" from all enemy units."
+        },
+        {
+          "name": "Drifting on Spectral Tides",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Roll a dice. On a 3+, this unit can immediately use the 'Normal Move' or the 'Retreat' ability as if it were your movement phase."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "191d1456-7e12-5f01-a834-7374a586304d",
+      "name": "Black Coach",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "War Machine", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Clattering Procession"
+      ],
+      "referenceKeywords": "War Machine, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "10\"",
+        "save": "5+",
+        "control": "5",
+        "health": "12",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 230,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Soulreach Grasp",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)", "Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Relic Bearers' Claws and Ethereal Steeds' Hooves",
+            "type": "melee",
+            "range": null,
+            "attacks": "14",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)", "Companion"]
+          },
+          {
+            "name": "Wraith's Spectral Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Anti-INFANTRY (+1 Rend)", "Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Nimbus of Power",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+          "keywords": ["Core"]
+        },
+        {
+          "name": "Runaway Coach",
+          "phase": "chargePhase",
+          "phaseDetails": "Any Charge Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit charged this phase, pick an enemy unit within 1\" of it to be the target.",
+          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage equal on the target equal to the roll."
+        },
+        {
+          "name": "Evocation of Death",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If any damage points were allocated to an enemy unit by this unit's combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-**UNIQUE NIGHTHAUNT HERO** that has been destroyed.",
+          "effect": "Set up a replacement unit wholly within 12\" of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "91d31773-9e70-5020-917c-80fe054d713e",
+      "name": "Bladegheist Revenants",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "2",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 210,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Tomb Greatblade",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Thrashing Desperation",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit contests an objective you control, enemy units cannot finish a charge move within ½\" of a model in this unit unless the unmodified charge roll was 7 or more."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "26c6e44f-51cc-505b-aa38-56d2931c4ac8",
+      "name": "Cairn Wraith",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Cursed Soul", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 130,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Cairnoch Scythe",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Eager Death-dealers",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Battle (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **Grimghast Reapers** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Add 1 to wound rolls for the target’s combat attacks for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "3dae8da9-059a-5e5a-9c2e-e699069708ff",
+      "name": "Chainghasts",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "2",
+        "health": "3",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 90,
+      "modelCount": 2,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Ghastflails",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Ghastflails",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Another Link in the Chain",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Roll a dice. Add 1 to the roll if this unit is wholly within 12\" of any friendly **Spirit Torments.** On a 3+, for the rest of the turn, add 1 to hit rolls for combat attacks made by friendly **NIGHTHAUNT** units while they are wholly within 12\" of this unit."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "2d830354-f343-5924-bb02-b7b45e1b1bf1",
+      "name": "Chainrasps",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Champion", "Ward (5+)", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Champion, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "1",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 100,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Malignant Weapon",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "5+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Chilling Horde",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick up to 3 friendly **Chainrasps** units to be the targets.",
+          "effect": "Each target can move 6\" but cannot end that move in combat."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "fd352df6-faac-5739-bab0-4a423b752a8b",
+      "name": "Craventhrone Guard",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": [
+        "Champion",
+        "Ward (5+)",
+        "Standard Bearer",
+        "Infantry",
+        "Fly"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Champion, Standard Bearer (1/5), Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "2",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 100,
+      "modelCount": 5,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Soulhunter’s Crossbow",
+            "type": "ranged",
+            "range": "16\"",
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Wicked Sidearm",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Black-hearted Lackeys",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a D3. On a 2+, this unit immediately uses the 'Retreat' ability without any mortal damage being inflicted on it. Then, inflict an amount of mortal damage on the target equal to the roll."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "c2520df3-f1b4-5fa5-90fd-8bcdbd287f22",
+      "name": "Dreadblade Harrows",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Fly", "Cavalry"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Clattering Procession"
+      ],
+      "referenceKeywords": "Cavalry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "12\"",
+        "save": "6+",
+        "control": "1",
+        "health": "3",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 150,
+      "modelCount": 2,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Ethereal Steed’s Ghostly Hooves and Teeth",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "5+",
+            "wound": "3+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)", "Companion"]
+          },
+          {
+            "name": "Dreadblade",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Curse of Loyalty",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit charged this turn, add 3 to the control scores of friendly **NIGHTHAUNT** units while they are wholly within 12\" of this unit."
+        },
+        {
+          "name": "Phantasmal Discorporation",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+          "keywords": ["Core"]
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "c0de022a-fb9d-58b1-90fe-3f38b134113e",
+      "name": "Dreadscythe Harridans",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Champion", "Ward (5+)", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Champion, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "2",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 210,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Scythed Limbs",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Harrowing Shrieks",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Enemy units cannot be healed or have slain models returned to them while they are in combat with this unit."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "8cc21bfe-10f2-5d2c-88f0-bfa047fae52a",
+      "name": "Glaivewraith Stalkers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Musician", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Musician (1/4), Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "2",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 90,
+      "modelCount": 4,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Hunter’s Glaive",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)", "Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Unerring Hunters",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "For the rest of the turn, each time this unit makes a pile-in move, add 3\" to the distance it can move."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "5d8bdee9-0eb8-5d34-86e5-e09f0e154f31",
+      "name": "Grimghast Reapers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Champion", "Ward (5+)", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Champion, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "2",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 210,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Slasher Scythe",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Anti-INFANTRY (+1 Rend)", "Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Reaped Like Corn",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that is within the combat ranges of 5 or more models in this unit to be the target.",
+          "effect": "Roll a number of dice equal to the number of models in the target unit. For each 6, inflict 1 mortal damage on the target. If the target unit has 20 or more models, inflict 1 mortal damage on the target for each 5+ instead."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "3f3d8cca-4d6c-5358-a653-f04d84a32221",
+      "name": "Guardian of Souls",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Wizard (1)", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Hero, Wizard (1), Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "5+",
+        "wizard": "1",
+        "priest": null
+      },
+      "points": 140,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Chill Blade",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Nightmare Lantern",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **NIGHTHAUNT** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, add 1 to wound rolls for the target's attacks for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "5f8d1139-958f-5144-bdc2-564d036d7787",
+      "name": "Hexwraiths",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Champion", "Ward (5+)", "Fly", "Cavalry"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Clattering Procession"
+      ],
+      "referenceKeywords": "Cavalry, Champion, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "12\"",
+        "save": "6+",
+        "control": "1",
+        "health": "3",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 180,
+      "modelCount": 5,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Spectral Scythe",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)", "Crit (Auto-wound)"]
+          },
+          {
+            "name": "Ethereal Steed’s Ghostly Hooves and Teeth",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "5+",
+            "wound": "3+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Spectral Hunters",
+          "phase": "chargePhase",
+          "phaseDetails": "Any Charge Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit charged this phase, pick an enemy unit within 1\" of it to be the target.",
+          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "36537370-0b40-5e33-9d40-e337bf9cf6fe",
+      "name": "Knight of Shrouds",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 100,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Sword of Stolen Hours",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Stolen Hours",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time this unit uses a **FIGHT** ability, after that **FIGHT** ability has been resolved, **Heal (X)** this unit, where **X** is the number of damage points allocated to enemy units by combat attacks made as part of that **FIGHT** ability."
+        },
+        {
+          "name": "Infantry Overseer",
+          "phase": "combatPhase",
+          "phaseDetails": "Reaction: You declared a FIGHT ability for this unit",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "Pick a friendly non-**HERO NIGHTHAUNT INFANTRY** unit that has not used a **FIGHT** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target’s attacks for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "a679e3c4-3eaa-5d99-b943-dfeb501f6b76",
+      "name": "Knight of Shrouds on Ethereal Steed",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Fly", "Cavalry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Clattering Procession"
+      ],
+      "referenceKeywords": "Hero, Cavalry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "12\"",
+        "save": "5+",
+        "control": "2",
+        "health": "7",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 170,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Ethereal Steed’s Ghostly Hooves and Teeth",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "5+",
+            "wound": "3+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)", "Companion"]
+          },
+          {
+            "name": "Sword of Stolen Hours",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Stolen Hours",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time this unit uses a **FIGHT** ability, after that **FIGHT** ability has been resolved, **Heal (X)** this unit, where **X** is the number of damage points allocated to enemy units by combat attacks made as part of that **FIGHT** ability."
+        },
+        {
+          "name": "Cavalry Overseer",
+          "phase": "combatPhase",
+          "phaseDetails": "Reaction: You declared a FIGHT ability for this unit",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "Pick a friendly non-**HERO NIGHTHAUNT CAVALRY** or **WAR MACHINE** unit that has not used a **FIGHT** ability this turn and is within this unit's combat range to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target's attacks for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "355beafe-790f-5381-98e6-e94aa347c4d6",
+      "name": "Krulghast Cruciator",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "6",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 140,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Phantasmal Torture",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)", "Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Talons and Flensing Knives",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Empowered Through Excruciation",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Ignore the first damage point that would be allocated to each friendly **NIGHTHAUNT** unit wholly within 12\" of this unit in each phase."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "06d5a8e3-7da5-5be0-af14-d2a8f0d58384",
+      "name": "Kurdoss Valentian, the Craven King",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Unique", "Infantry", "Fly", "Hero"],
+      "factionKeywords": ["Grand Alliance Death", "Nighthaunt"],
+      "referenceKeywords": "Unique, Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "5",
+        "health": "7",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 190,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Sepulchral Sceptre",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Hail Kurdoss! King of Nothing!",
+          "phase": "chargePhase",
+          "phaseDetails": "Your Charge Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit charged this phase, pick a friendly **Craventhrone Guard** unit that is not in combat to be the target.",
+          "effect": "The target can immediately use a **SHOOT** ability as if it were your shooting phase, but all of its attacks must target an enemy unit in combat with this unit. The target cannot use **CHARGE** abilities for the rest of the turn."
+        },
+        {
+          "name": "If I Cannot Rule, None Shall Rule!",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn, Reaction: Opponent declared a command for a unit within 12\" of this unit",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "Roll a dice. On a 3+, unless your opponent spends 1 additional command point to use that command, the command has no effect, it still counts as having been used and the command points spent to use the command are still lost."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "c5da133e-2f38-5e24-8f25-72b824aa5432",
+      "name": "Lady Olynder, Mortarch of Grief",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": [
+        "Ward (5+)",
+        "Wizard (2)",
+        "Unique",
+        "Infantry",
+        "Fly",
+        "Warmaster",
+        "Hero"
+      ],
+      "factionKeywords": ["Grand Alliance Death", "Nighthaunt"],
+      "referenceKeywords": "Warmaster, Unique, Hero, Wizard (2), Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "7",
+        "ward": "5+",
+        "wizard": "2",
+        "priest": null
+      },
+      "points": 300,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Horrifying Visage",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "1",
+            "hit": "2+",
+            "wound": "2+",
+            "rend": "3",
+            "damage": "D6",
+            "abilities": ["Crit (Auto-wound)", "Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Staff of Midnight",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Mortarch of Grief",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If the unmodified hit roll or unmodified wound roll for an attack that targets this unit is 1-4, the attack fails and the attack sequence ends."
+        },
+        {
+          "name": "No Rest for the Wicked",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Battle, Your Hero Phase",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick any number of friendly **NIGHTHAUNT** units on the battlefield to be the targets.",
+          "effect": "For each target, you can return a number of slain models to it with a combined Health characteristic of up to D3+3."
+        },
+        {
+          "name": "Grief-stricken",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 6,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Ignore positive modifiers to the target's control score and to hit rolls, wound rolls and save rolls for the target for the rest of the turn.",
+          "keywords": ["Spell"]
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "31e9d66e-3f3c-59b1-a408-7a36f56445cf",
+      "name": "Lord Executioner",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Cursed Soul", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 170,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Decapitating Greataxe",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Anti-HERO (+1 Rend)", "Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Ghastly Descent",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy **INFANTRY** or **CAVALRY HERO** that had any damage points allocated to it this turn by this unit's attacks to be the target.",
+          "effect": "Roll a dice. Add 1 to the roll if the target is a **SENTENCED** unit. On a 5+, the target is automatically destroyed."
+        },
+        {
+          "name": "Staring Death In The Face",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 2+, subtract 1 from the Attacks characteristic of the target's melee weapons for the rest of the turn. In addition, if the target is a **HERO**, subtract 5 from the target's control score for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "43499866-c279-5682-8f6d-34b33eaf4774",
+      "name": "Lord Vitriolic",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Cursed Soul", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 120,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Hurled Vial",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "1",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "D6",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Culler's Sickle",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Spectral Alchemy",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit within 10\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, pick 1 of the following effects or roll two dice and apply both corresponding effects in an order of your choosing, including duplicate effects:\n\n**1 *Phantasmal Solvent:*** If the target has a Move characteristic of'-', inflict 6 mortal damage on the target.\n\n**2 *Acidic Fug:*** Inflict D3 mortal damage on the target.\n\n**3 *Fling Concoctions:*** Add 1 to the Attacks characteristic of this unit's Hurled Vial this phase but all attacks made by this unit this phase must target that enemy unit.\n\n**4 *Choking Vapours:*** If the target is a **WIZARD**, subtract 1 from its power level until the start of your next turn.\n\n**5 *Fear-laced Hallucinogen:*** If the target is a **PRIEST**, remove D3 ritual points from it.\n\n**6 *Unholy Prescription:*** Ward rolls cannot be made for the target for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "34720cfa-c45c-5d5f-be88-1d6aeb8f9843",
+      "name": "Mortalis Terminexus",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Manifestation", "Endless Spell", "Ward (6+)"],
+      "factionKeywords": ["Grand Alliance Death", "Nighthaunt"],
+      "referenceKeywords": "Manifestation, Endless Spell, Ward (6+), Death, Nighthaunt",
+      "stats": {
+        "move": "-",
+        "save": "4+",
+        "control": "7+",
+        "health": "6",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {},
+      "abilities": [
+        {
+          "name": "Keeper of Mortality",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **NIGHTHAUNT** unit within 3\" of this **MANIFESTATION** to be the target.",
+          "effect": "Roll a dice. On a 2+, pick 1 of the following effects:\n\n• Add 1 to run rolls and charge rolls for target for the rest of the turn.\n• **Heal (3)** the target."
+        }
+      ],
+      "summonedBy": {
+        "spell": "Summon Mortalis Terminexus",
+        "lore": "The Eternal Nightmare Manifestation Lore",
+        "castingValue": 6
+      },
+      "notes": null
+    },
+    {
+      "id": "e26af487-430c-56e6-a6f3-4367a4353245",
+      "name": "Myrmourn Banshees",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "2",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 90,
+      "modelCount": 4,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Chill Dagger",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": ["Anti-WIZARD (+1 Rend)", "Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Spell-eaters",
+          "phase": "heroPhase",
+          "phaseDetails": "Reaction: Opponent declared a SPELL ability",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "If a friendly **NIGHTHAUNT** unit wholly within 12\" of this unit was picked to be the target of that spell, this unit can use the 'Unbind' ability as if it had **WIZARD (1).** Add 1 to the unbinding roll for that ability. If the spell is unbound, inflict D3 mortal damage on the caster."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "0797d7e6-8741-500a-9ad9-c749d57d82af",
+      "name": "Nagash, Supreme Lord of the Undead",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": [
+        "Ward (5+)",
+        "Monster",
+        "Wizard (9)",
+        "Unique",
+        "Fly",
+        "Warmaster",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Nighthaunt",
+        "Grand Alliance Death",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (9), Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "10\"",
+        "save": "3+",
+        "control": "10",
+        "health": "18",
+        "ward": "5+",
+        "wizard": "9",
+        "priest": null
+      },
+      "points": 840,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Zefet-nebtar, the Mortis Blade",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          },
+          {
+            "name": "Alakanash, the Staff of Power",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "D6",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, subtract 3 from its power level."
+        },
+        {
+          "name": "Hand of Dust",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy **HERO** or **MONSTER** in combat with this unit to be the target.",
+          "effect": "Hide a dice in one of your hands or under one of two appropriate containers. Your opponent must pick one of your hands or containers. If they pick the one hiding the dice, this ability has no effect. If they pick the empty one, the target is automatically destroyed.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Supreme Lord of the Undead",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Battle, Your Hero Phase",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly non-**HERO** non-**UNIQUE DEATH** unit that has been destroyed to be the target.",
+          "effect": "Set up a replacement unit identical to the target wholly within 12\" of this unit and more than 9\" from all enemy units."
+        },
+        {
+          "name": "Invocation of Nagash",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "This unit can cast this spell more than once per phase. Pick a visible unit wholly within 18\" of this unit that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.",
+          "effect": "If the target is an enemy unit, inflict D3 mortal damage on it. If the target is a friendly **DEATH** unit, pick 1 of the following effects:\n\n• Return a number of slain models to the target unit with a combined Health characteristic of up to 3.\n• If the target was not set up this turn and is not in combat, it can move up to 3\". It cannot move into combat.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "The Staff of Power",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Add 2 to casting rolls for this unit while it has not miscast any spells this turn. If this unit miscasts a spell, ignore the restriction that would stop this unit from casting any more spells this turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "f377b1ee-c6b5-5c54-994f-59289419516a",
+      "name": "Nexus of Grief",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Faction Terrain"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Faction Terrain, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "-",
+        "save": "5+",
+        "control": "-",
+        "health": "8",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {},
+      "abilities": [
+        {
+          "name": "Hungry Crypts",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Remove this terrain feature from the battlefield and set it up again on the battlefield within 3\" of a friendly **NIGHTHAUNT** unit, more than 3\" from all objectives and enemy units, more than 1\" from all terrain features and more than 12\" from all other friendly **Nexuses of Grief**."
+        },
+        {
+          "name": "Awful Refashioning",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **Nexus of Grief**, then pick up to 3 friendly **NIGHTHAUNT** units wholly within 12\" of it to be the targets. You cannot pick the same unit to be a target of this ability more than once per phase.",
+          "effect": "For each target:\n• If the target is damaged, **Heal (D3)** the target.\n• If the target is not damaged, return a number of slain models to it with a combined Health characteristic of up to D3."
+        },
+        {
+          "name": "Screams of the Penitent",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Enemy units cannot use commands while they are within 3\" of this terrain feature."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "c3fe6ebd-ac90-503b-a983-e6af32122ddb",
+      "name": "Pyregheists",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Champion", "Ward (5+)", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Champion, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "2",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 150,
+      "modelCount": 8,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Gout of Balefire",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2",
+            "hit": "2+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)", "Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Flaming Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Light A Pyre",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit is contesting an objective, pick a visible enemy unit within 6\" of this unit to be the target.",
+          "effect": "Roll a D3. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• Add a number equal to the roll to this unit’s control score for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "e075d158-147d-5104-b566-ea3c7709ca43",
+      "name": "Reikenor the Grimhailer",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": [
+        "Ward (5+)",
+        "Wizard (1)",
+        "Unique",
+        "Fly",
+        "Cavalry",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Clattering Procession"
+      ],
+      "referenceKeywords": "Unique, Hero, Wizard (1), Cavalry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "12\"",
+        "save": "5+",
+        "control": "2",
+        "health": "7",
+        "ward": "5+",
+        "wizard": "1",
+        "priest": null
+      },
+      "points": 240,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Kyllaron’s Ghostly Hooves and Teeth",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "5+",
+            "wound": "3+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)", "Companion"]
+          },
+          {
+            "name": "Fellreaper",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)", "Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Wraithstorm",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Inflict D3 mortal damage on the target. If any models are slain as a result of this ability, inflict a further D3 mortal damage on the target.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Grim Justice",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Add 1 to hit rolls and wound rolls for attacks made with this unit's **Fellreaper** if the target is a **WIZARD** or a **PRIEST.**"
+        },
+        {
+          "name": "Corpse Candles",
+          "phase": "heroPhase",
+          "phaseDetails": "Any Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick either this unit or a visible enemy unit within 12\" of this unit to be the target.",
+          "effect": "If you picked this unit, allocate 1 damage point to this unit and add 1 to casting rolls for this unit for the rest of the turn (ward rolls cannot be made for that damage point).\n\nIf you picked an enemy unit, roll a dice. On a 3+, inflict 1 mortal damage on that enemy unit and for the rest of the turn:\n\n• Add 1 to casting rolls for this unit.\n• Add 1 to this unit's power level."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "873d5203-ab64-5c49-8e72-92fa089061f1",
+      "name": "Scourge of Ghyran Black Coach",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "War Machine", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Clattering Procession"
+      ],
+      "referenceKeywords": "War Machine, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "10\"",
+        "save": "5+",
+        "control": "5",
+        "health": "12",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 300,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Wraith's Spectral Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)", "Crit (Auto-wound)"]
+          },
+          {
+            "name": "Black Coach’s Iron-shod Wheels",
+            "type": "melee",
+            "range": null,
+            "attacks": "8",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "One Stop, No Return",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an objective you do not control to be the target.",
+          "effect": "For the rest of the turn, while enemy units are contesting the target objective, they cannot score critical hits while this unit is also contesting it (hit rolls that would be critical hits score hits instead)."
+        },
+        {
+          "name": "Spectral Carriage",
+          "phase": "chargePhase",
+          "phaseDetails": "Your Charge Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "For the rest of the phase, add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3."
+        },
+        {
+          "name": "Spectral Attendants",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Pick 1 of the following to apply for the rest of the turn:\n\n***Noble Blade:*** This unit’s melee weapons, including **Companion** weapons, have **Crit (Mortal)** instead of **Crit (Auto-wound)**.\n\n***Unholy Grail:*** Pick a friendly **NIGHTHAUNT** unit wholly within 12\" of this unit. Each time that unit uses the ‘Rally’ command, you receive 3 additional rally points.\n\n***Tome of Undead Lore:*** This unit has **WIZARD (1)**."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "c10b4a80-90a2-501e-9eb2-6e3d6aa65343",
+      "name": "Scourge of Ghyran Kurdoss Valentian, the Craven King",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Unique", "Infantry", "Fly", "Hero"],
+      "factionKeywords": ["Grand Alliance Death", "Nighthaunt"],
+      "referenceKeywords": "Unique, Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "5",
+        "health": "7",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 200,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Sepulchral Sceptre",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Inescapable Mockery",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "Add 1 to hit rolls and wound rolls for this unit’s combat attacks that target an enemy unit that has a lower Control characteristic than this unit."
+        },
+        {
+          "name": "A Traitor's Legacy",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit is in combat, pick a visible friendly **NIGHTHAUNT** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Pick 1 of the following to apply for the rest of the turn:\n\n***Regicide and Kinslaying:*** The target’s melee weapons have **ANTI‐HERO (+1 REND)**.\n\n***Usurpation and Larceny:*** Add 5 to the target’s control score.\n\n***Sedition and Betrayal:*** Enemy units cannot use commands while they are in combat with the target."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "1e26ae8c-355a-55c0-874b-26dcd358f822",
+      "name": "Scriptor Mortis",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Cursed Soul", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 120,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Malicious Quill",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Judge, Jury and Executioner",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time a friendly **NIGHTHAUNT INFANTRY** unit uses a **FIGHT** ability, if all of its attacks target the same **SENTENCED** enemy unit, that friendly unit's melee weapons have **Crit (Mortal)** for that **FIGHT** ability."
+        },
+        {
+          "name": "Sentenced to Eternal Torment",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit within 18\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, inflict 1 mortal damage on the target and the target has the **SENTENCED** keyword until the start of your next turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "2e2ed1a7-c6a6-5b5a-9c20-d2fb7955c4f8",
+      "name": "Shyish Reaper",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Manifestation", "Endless Spell", "Ward (6+)", "Fly"],
+      "factionKeywords": ["Grand Alliance Death", "Nighthaunt"],
+      "referenceKeywords": "Manifestation, Endless Spell, Fly, Ward (6+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "4+",
+        "control": "7+",
+        "health": "7",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Almighty Reap",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "4",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Soul Reaper",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Add 2 to the Attacks characteristic of this **MANIFESTATION**'s **Almighty Reap** if it charged in the same turn."
+        }
+      ],
+      "summonedBy": {
+        "spell": "Summon Shyish Reaper",
+        "lore": "The Clattering Procession Manifestation Lore",
+        "castingValue": 6
+      },
+      "notes": null
+    },
+    {
+      "id": "6b809f22-f8a3-5bb2-90b1-a2f510959152",
+      "name": "Spirit Hosts",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "3",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 120,
+      "modelCount": 3,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Spectral Claws and Daggers",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Drawn to War",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Friendly **NIGHTHAUNT INFANTRY HEROES** have **WARD (4+)** while they are wholly within this unit’s combat range."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "7df3aa20-9844-5bc4-b300-7d98114ab65a",
+      "name": "Spirit Torment",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Cursed Soul", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 120,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Shacklegheist Chains",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Captured Soul Energy",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time a friendly **NIGHTHAUNT** unit wholly within 12\" of this unit uses the 'Rally' command, you can make 3 additional rally rolls of D6."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "734f0692-8e19-51ff-b50c-71286ec0507c",
+      "name": "The Headsmen's Curse",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Unique", "Infantry", "Ward (6+)", "Fly"],
+      "factionKeywords": ["Grand Alliance Death", "Nighthaunt"],
+      "referenceKeywords": "Unique, Infantry, Fly, Ward (6+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "4+",
+        "control": "1",
+        "health": "3",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 150,
+      "modelCount": 4,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Tool of Judgement",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Terminus",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "D6",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Furious Indictment",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, the target is **condemned** until the start of your next turn.\n\nWhile a unit is **condemned**:\n\n• Halve that unit’s Move characteristic.\n• That unit cannot use **RETREAT** abilities.\n• Subtract 1 from the number of dice rolled when making charge rolls for that unit, to a minimum of 1."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "71acd130-8847-5b2a-ad3b-db5be6c601b7",
+      "name": "Thorns of the Briar Queen",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Wizard", "Unique", "Infantry", "Ward (6+)", "Fly"],
+      "factionKeywords": ["Grand Alliance Death", "Nighthaunt"],
+      "referenceKeywords": "Unique, Infantry, Fly, Ward (6+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "1",
+        "health": "2",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 140,
+      "modelCount": 7,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Piercing Scream",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "D3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "D3",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Malignant Weapon",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "5+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          },
+          {
+            "name": "Ancient Chill Dagger",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "D3",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Ghostly Howl",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit’s **Piercing Scream** to be the target.",
+          "effect": "Roll a dice. On a 2+, the target cannot use commands until the start of your next turn."
+        },
+        {
+          "name": "The Briar Queen",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit’s **Briar Queen** is on the battlefield, it has **WIZARD (1)**."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "c6d7139a-a7c6-558e-ba81-4d51f832c532",
+      "name": "Tomb Banshee",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Ward (5+)", "Cursed Soul", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Nighthaunt",
+        "The Eternal Nightmare"
+      ],
+      "referenceKeywords": "Hero, Infantry, Fly, Ward (5+), Death, Nighthaunt",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 130,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Piercing Scream",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "D3",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Ancient Chill Dagger",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "D3",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Cacophony of Sorrow",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While there are any visible friendly **Myrmourn Banshees** units within this unit’s combat range, ignore positive modifiers to the control scores of enemy units within 12\" of this unit."
+        },
+        {
+          "name": "Ghostly Howl",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Battle (Army), Any Shooting Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Inflict D3 mortal damage on the target. If any models in the target unit are slain by this ability, the target cannot use commands for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "689d56a7-8bcc-5a2a-a328-e8435f145194",
+      "name": "Vault of Souls",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factions": ["Nighthaunt"],
+      "keywords": ["Manifestation", "Endless Spell", "Ward (6+)"],
+      "factionKeywords": ["Grand Alliance Death", "Nighthaunt"],
+      "referenceKeywords": "Manifestation, Endless Spell, Ward (6+), Death, Nighthaunt",
+      "stats": {
+        "move": "-",
+        "save": "4+",
+        "control": "8+",
+        "health": "6",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {},
+      "abilities": [
+        {
+          "name": "Soul Eruption",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this **MANIFESTATION** has 6 **soul points,** pick any number of enemy units within 6\" of this **MANIFESTATION** to be the targets.",
+          "effect": "Roll 6 dice for each target. For each 4+, inflict 1 mortal damage on the target. Then, reset this **MANIFESTATION**'s **soul points** to 0."
+        },
+        {
+          "name": "Siphon Souls",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time a model from a friendly or enemy unit is slain within 12\" of this **MANIFESTATION,** give this **MANIFESTATION** a **soul point,** to a maximum of 6."
+        }
+      ],
+      "summonedBy": {
+        "spell": "Summon Vault of Souls",
+        "lore": "The Eternal Nightmare Manifestation Lore",
+        "castingValue": 6
+      },
+      "notes": null
+    }
+  ],
+  "battleFormations": [
+    {
+      "id": "478a4e47-6b9f-5d6f-8584-89c3f5d90b84",
+      "name": "Royal Procession",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Lethal Rancour",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick up to 2 friendly **NIGHTHAUNT** units to be the targets.",
+          "effect": "The targets' melee weapons have **Anti-charge (+1 Rend)** for the rest of the turn.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "e9ab656d-2c35-567c-a7d1-1636bf9290c6",
+      "name": "Hungry Nexus",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Greedy for Souls",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Enemy Turn",
+          "icon": "movement",
+          "declare": "Pick a friendly **Nexus of Grief** to be the target.",
+          "effect": "For the rest of the turn, the target has a Move characteristic of 3\". It can immediately move up to 3\" and can move into combat but cannot end that move on a terrain feature or within 3\" of an objective.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "8ebacd59-7a39-5fd6-b5de-28feb8c758d5",
+      "name": "Shrieker Host",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Petrify",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Hero Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **NIGHTHAUNT HERO** to be the target.",
+          "effect": "For the rest of the turn, enemy units cannot use **RETREAT** abilities while they are in combat with the target.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "0260e06b-4966-5fc9-a734-9462828433e9",
+      "name": "Quicksilver Gheists",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": 40,
+      "rules": [
+        {
+          "name": "Vanish and Reappear",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **NIGHTHAUNT** unit that is in combat to use this ability.",
+          "effect": "Roll a dice. The unit using this ability can move a distance up to its Move characteristic added to the roll. It can pass through other models and the combat ranges of enemy units, and it can end that move in combat.",
+          "cpCost": null,
+          "isReaction": false,
+          "keywords": ["Core", "Move"]
+        }
+      ]
+    },
+    {
+      "id": "bc4ed14e-02db-5f98-a9eb-33f96e58c53e",
+      "name": "Death Stalkers",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "There Is No Escape",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "special",
+          "declare": "Pick a friendly **NIGHTHAUNT** unit to be the target.",
+          "effect": "For the rest of the turn:\n\n• The target can use **CHARGE** and **SHOOT** abilities even if it has used a **RETREAT** ability in the same turn.\n• The target can use the 'Retreat' ability without any mortal damage being inflicted on it.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "ef5fcbc2-bed2-5b57-9351-c2e067329f76",
+      "name": "Deathrust Gheists",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Blades of Eternal Rust",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick an enemy unit that is in combat with any friendly **NIGHTHAUNT** units to be the target.",
+          "effect": "Subtract 1 from save rolls for the target for the rest of the turn.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    }
+  ],
+  "lores": [
+    {
+      "id": "3ca3ef73-5c00-59bc-b255-3b87775afc8b",
+      "name": "Lore of the Underworlds",
+      "cardType": "Lore",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "restrictionText": null,
+      "spells": [
+        {
+          "id": "7004ac21-3702-5058-814e-a16f54788219",
+          "name": "Chains of Death",
+          "castingValue": 7,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **NIGHTHAUNT WIZARD** to cast this spell, pick a visible enemy **HERO** within 18\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "The target has **STRIKE-LAST** for the rest of the turn.",
+          "keywords": ["Spell"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "0b6ff576-8c94-51c6-a809-58c736683f91",
+          "name": "Wrench Souls",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **NIGHTHAUNT WIZARD** to cast this spell, pick a visible friendly non-**HERO** **NIGHTHAUNT INFANTRY** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "The target can immediately use the 'Normal Move' or 'Retreat' ability as if it were your movement phase.",
+          "keywords": ["Spell"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "1fbe83ff-b805-5adc-b98f-dcc2af1dbcb8",
+          "name": "Fell Blades",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **NIGHTHAUNT WIZARD** to cast this spell, pick a visible friendly **NIGHTHAUNT** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, each time the target uses a **FIGHT** ability, if all of its attacks targeted the same enemy unit, after that ability has been resolved, subtract 1 from save rolls for that enemy unit for the rest of the turn.",
+          "keywords": ["Spell", "Unlimited"],
+          "linkedWarscroll": null
+        }
+      ]
+    }
+  ],
+  "manifestationLores": [
+    {
+      "id": "250fb6fe-b213-5ce6-b4ef-953fd86059f1",
+      "name": "Infernal Sorceries",
+      "cardType": "Lore",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "restrictionText": null,
+      "spells": [
+        {
+          "id": "90fa0470-33dc-5c5d-8a9d-691f2a4b01e5",
+          "name": "Summon Mortalis Terminexus",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "declare": "If there is not a friendly **Mortalis Terminexus** on the battlefield, pick a friendly **NIGHTHAUNT WIZARD** to cast this spell, then make a casting roll of 2D6.",
+          "effect": "Set up a **Mortalis Terminexus** wholly within 18\" of the caster and visible to them.",
+          "keywords": ["Summon", "Spell"],
+          "linkedWarscroll": "Mortalis Terminexus"
+        },
+        {
+          "id": "0742867b-b6ef-54f9-9cfc-0c3f64f2b93f",
+          "name": "Summon Shyish Reaper",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "declare": "If there is not a friendly **Shyish Reaper** on the battlefield, pick a friendly **NIGHTHAUNT WIZARD** to cast this spell, then make a casting roll of 2D6.",
+          "effect": "Set up a **Shyish Reaper** wholly within 9\" of the caster, visible to them and more than 9\" from all enemy units.",
+          "keywords": ["Summon", "Spell"],
+          "linkedWarscroll": "Shyish Reaper"
+        },
+        {
+          "id": "43fce5f9-8128-58b8-9407-39c2e116f1be",
+          "name": "Summon Vault of Souls",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "declare": "If there is not a friendly **Vault of Souls** on the battlefield, pick a friendly **NIGHTHAUNT WIZARD** to cast this spell, then make a casting roll of 2D6.",
+          "effect": "Set up a **Vault of Souls** wholly within 18\" of the caster and visible to them.",
+          "keywords": ["Summon", "Spell"],
+          "linkedWarscroll": "Vault of Souls"
+        }
+      ]
+    }
+  ],
+  "enhancements": {
+    "artefacts": [
+      {
+        "id": "23633b59-8c99-59f7-abc5-625c78973d4b",
+        "name": "Amulet of Waking Nightmares",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "offensive",
+        "declare": "Pick a enemy **HERO** within 18\" of this unit to be the target.",
+        "effect": "Roll a dice. On a 3+, for the rest of the turn, the target cannot be affected by the ‘Guarded Hero’ ability or the ‘Obscuring’ terrain ability.",
+        "cpCost": null
+      },
+      {
+        "id": "86e96b3b-56f7-5f0f-9c83-3bdebe535e3c",
+        "name": "Tombstone of the Penitent",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "Add 1 to the Attacks characteristic of this unit’s melee weapons for each non-**FACTION TERRAIN** terrain feature that is being contested by friendly units, to a maximum of 8.",
+        "cpCost": null
+      },
+      {
+        "id": "7b905af5-68bc-53a9-80d1-439ecb67da37",
+        "name": "Stave of Suffering",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "While this unit is within 12\" of any damaged enemy units or enemy units that have had any models slain, add 1 to casting rolls for friendly **NIGHTHAUNT** units while they are wholly within 12\" of this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "d82e6159-a8ec-56f7-8d43-faba43bcc2d9",
+        "name": "Brazier of Nagashizzar",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Reaction: You declared the 'Redeploy' command for a friendly NIGHTHAUNT INFANTRY unit wholly within 12\" of this unit",
+        "icon": "movement",
+        "declare": null,
+        "effect": "If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.",
+        "cpCost": null
+      },
+      {
+        "id": "e81a48d1-cd95-52fc-a296-a60af5eda444",
+        "name": "Lightshard of the Harvest Moon",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Battle, Any Combat Phase",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "If this unit is in combat, add 1 to the Attacks characteristic of melee weapons used by friendly **NIGHTHAUNT** units while they are wholly within 12\" of this unit for the rest of the turn.",
+        "cpCost": null
+      },
+      {
+        "id": "42d0ccde-69a5-58c7-9582-2d649d0f9a70",
+        "name": "Mirror of Echoing Failures",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: Opponent declared a SPELL or PRAYER ability for a WIZARD or PRIEST within 12\" of this unit",
+        "icon": "special",
+        "declare": "Pick each enemy **WIZARD** and **PRIEST** within 12\" of this unit to be the targets.",
+        "effect": "Roll a D3. On a 2+, for the rest of the phase:\n\n• Subtract 1 from casting rolls and chanting rolls for the targets.\n• Each time any of the targets fails to cast a spell or chant a prayer, inflict 1 mortal damage on that target.",
+        "cpCost": null
+      },
+      {
+        "id": "2610bd0f-5586-5a36-9750-d190e3687adb",
+        "name": "Talisman of the Nadir",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: Opponent declared a SPELL ability",
+        "icon": "special",
+        "declare": null,
+        "effect": "If a friendly **CLATTERING PROCESSION** unit wholly within 12\" of this unit was picked to be the target of that spell, this unit can use the 'Unbind' ability as if it had **WIZARD (1).** Add 1 to the unbinding roll for that ability.",
+        "cpCost": null
+      },
+      {
+        "id": "ca93f2d6-5f5f-5271-a25c-1b9541c30f34",
+        "name": "The Seal of Nagash",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle, Your Hero Phase",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Allocate 3 damage points to this unit (ward rolls cannot be made for those damage points). Then, **Heal (3)** the friendly **Nagash.**",
+        "cpCost": null
+      }
+    ],
+    "heroicTraits": [
+      {
+        "id": "aff6addd-2473-5e18-aae8-33a703ac8f09",
+        "name": "Ruler of the Spectral Hosts",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+        "icon": "rallying",
+        "declare": "Pick up to 3 friendly non-**HERO NIGHTHAUNT** units wholly within 12\" of this unit to be the targets.",
+        "effect": "Roll a D3 for each target. On a 2+:\n\n• If the target is damaged, **Heal (X)** the target, where **X** is an amount equal to the roll.\n• If the target is not damaged, return a number of slain models to it with a combined Health characteristic of up to **X,** where **X** is an amount equal to the roll.",
+        "cpCost": null
+      },
+      {
+        "id": "2c973cf3-88e2-505f-9a27-155b267dcac0",
+        "name": "Deathly Possessor",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick an enemy **HERO** in combat with this unit to be the target, then pick another enemy unit within the target's combat range to be the victim.",
+        "effect": "Roll a dice. On a 3+, pick 1 of the target's melee weapons. Immediately resolve combat attacks for the target with that weapon against the victim.",
+        "cpCost": null
+      },
+      {
+        "id": "f5af7c68-b6dd-5f14-9490-d8c292967f8d",
+        "name": "Shadowy Aura",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Reaction: You declared the 'Redeploy' command for a friendly NIGHTHAUNT unit wholly within 12\" of this unit",
+        "icon": "movement",
+        "declare": null,
+        "effect": "For the rest of the turn, subtract 1 from hit rolls for attacks that target this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "cc0c39f7-f090-53b0-870e-9bf2417a6d59",
+        "name": "Silent Overseer",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "chargePhase",
+        "phaseDetails": "Your Charge Phase",
+        "icon": "movement",
+        "declare": "Pick up to 3 friendly **CLATTERING PROCESSION** units wholly within 12\" of this unit to be the targets.",
+        "effect": "For the rest of the turn, the targets can use **CHARGE** abilities even if they used a **RETREAT** ability in the same turn.",
+        "cpCost": null
+      },
+      {
+        "id": "bdba8e43-216b-5edf-95fa-0133a8ddd467",
+        "name": "Damned Vessel",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: You declared a SPELL ability for a friendly Nagash within 18\" of this unit",
+        "icon": "special",
+        "declare": null,
+        "effect": "Measure the range and visibility of that **SPELL** ability from this unit instead of that **Nagash.**",
+        "cpCost": null
+      }
+    ],
+    "other": [
+      {
+        "id": "eaf6555c-7236-5137-9be4-44d2d373d0b4",
+        "name": "Dark Resurrection",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "End of Any Turn",
+        "icon": "rallying",
+        "declare": "If any damage points were allocated to an enemy unit by this unit's combat attacks this turn and that enemy unit was destroyed this turn, pick a friendly non-**UNIQUE DEATH INFANTRY HERO** that has been destroyed to be the target.",
+        "effect": "Set up a replacement unit identical to the target wholly within 12\" of this unit. The replacement unit can only be set up in combat with enemy units that are in combat with this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "3cd2f076-1271-52b8-8fad-209bd731b200",
+        "name": "Enemy of the Throne",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "shooting",
+        "declare": null,
+        "effect": "Add 1 to hit rolls and wound rolls for units in this Regiment of Renown for attacks that target a **SENTENCED** unit.",
+        "cpCost": null
+      },
+      {
+        "id": "ffd2db58-387d-51d9-a807-2317dfe6603d",
+        "name": "Insubstantial",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Ignore negative modifiers to save rolls for units in this Regiment of Renown.",
+        "cpCost": null
+      },
+      {
+        "id": "e51256c2-ed3b-5eaa-a14a-20c18c3882d4",
+        "name": "Ghostly Paths",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "special",
+        "declare": "This spell can be cast by the same **WIZARD** more than once per phase. Pick the **Lady Olynder** in this Regiment of Renown to cast this spell, pick a visible friendly unit in this Regiment of Renown that is wholly within 12\" of them, that is not in combat and that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.",
+        "effect": "Remove the target from the battlefield and set it up again more than 9\" from all enemy units.",
+        "cpCost": 7,
+        "keywords": ["Spell", "Unlimited"]
+      },
+      {
+        "id": "92d4508f-20d4-5cc0-a521-0dec3d48a863",
+        "name": "Harvesters of Sorrow",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "chargePhase",
+        "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+        "icon": "special",
+        "declare": "Pick an enemy unit in combat with a unit in this Regiment of Renown to be the target.",
+        "effect": "Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.",
+        "cpCost": null
+      }
+    ]
+  },
+  "terrain": [
+    {
+      "id": "6d43234c-4b3f-575c-8af5-737530813713",
+      "name": "Nexus of Grief",
+      "cardType": "FactionTerrain",
+      "source": "aos-4e",
+      "abilities": []
+    }
+  ],
+  "rules": {
+    "battleTraits": [
+      {
+        "name": "Ethereal",
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Ignore negative modifiers to save rolls for friendly **NIGHTHAUNT** units, excluding **Nagash.**"
+      },
+      {
+        "name": "Sepulchral Apparitions",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "If there is a friendly **Nexus of Grief** on the battlefield, you can set up up to 2 additional **Nexuses of Grief** on the battlefield. Each must be set up wholly outside enemy territory, more than 3\" from all objectives and other terrain features, and more than 12\" from all other friendly **Nexuses of Grief**.\n\n**Designer’s Note:** *The original* **Nexus of Grief** *is set up in Step 1 of the deployment phase using the ‘Deploy Faction Terrain’ ability. This ability allows you to set up a second and third such terrain feature and is used in Step 3 of the deployment phase, after armies have been deployed.*"
+      },
+      {
+        "name": "Ethereal Translocation",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly **NIGHTHAUNT** unit that is not in combat to use this ability.",
+        "effect": "Remove that unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units."
+      },
+      {
+        "name": "Mounting Dread",
+        "phase": "endOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "control",
+        "declare": null,
+        "effect": "Subtract the current battle round number from the control scores of enemy units while they are in combat with any friendly **NIGHTHAUNT** units."
+      },
+      {
+        "name": "Ethereal",
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Ignore negative modifiers to save rolls for friendly **NIGHTHAUNT** units."
+      },
+      {
+        "name": "The Speed of Death",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Your Turn",
+        "icon": "movement",
+        "declare": "Pick a friendly **CLATTERING PROCESSION** unit that used a **CHARGE** or **RETREAT** ability this turn, is not in combat and is wholly within 9\" of a battlefield edge to use this ability.",
+        "effect": "Remove that unit from the battlefield and set it up again wholly within 9\" of a battlefield edge and more than 3\" from all enemy units."
+      },
+      {
+        "name": "Spectral Swiftness",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly **CLATTERING PROCESSION** unit that is in combat to use this ability.",
+        "effect": "That unit can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat."
+      },
+      {
+        "name": "Pitiless Reapers",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+        "icon": "offensive",
+        "declare": "Pick a friendly **CLATTERING PROCESSION** unit that passed across any enemy units this phase to use this ability, then pick 1 of those enemy units to be the target.",
+        "effect": "Roll a dice for each model in the **CLATTERING PROCESSION** unit that passed across the target. Add 1 to the roll if any friendly **CLATTERING PROCESSION Black Coaches** passed across the target this phase. For each 6+, inflict 1 mortal damage on the target."
+      },
+      {
+        "name": "Ethereal",
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Ignore negative modifiers to save rolls for friendly **NIGHTHAUNT** units, excluding **Nagash.**"
+      },
+      {
+        "name": "The Ritual Begins",
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "special",
+        "declare": "You must use this ability to set up the friendly **Nagash.** Pick a friendly **Nexus of Grief** wholly within friendly territory to be the **ritual site.**",
+        "effect": "Set up the friendly **Nagash** within 1\" of the **ritual site** and wholly within friendly territory. After you have done so, he has been **deployed.** That **Nexus of Grief** is the **ritual site** for the rest of the battle."
+      },
+      {
+        "name": "Gather Power",
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "The following effects apply to the friendly **Nagash** during the first and second battle rounds, as shown:\n\n**Battle Round 1:**\n\n• His Move characteristic is'-' and he cannot make pile-in moves.\n• He has **WARD (3+).**\n• He has a Control characteristic of 1.\n• **Alakanash** and **Zefet-nebtar** each have an Attacks characteristic of 2 instead of 4.\n\n**Battle Round 2:**\n\n• His Move characteristic is 6\".\n• He cannot end a move more than 6\" from the **ritual site.**\n• He has **WARD (4+).**\n• He has a Control characteristic of 5.\n• **Alakanash** and **Zefet-nebtar** each have an Attacks characteristic of 2 instead of 4."
+      },
+      {
+        "name": "Unholy Vessel",
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "The **ritual site** has **WARD (4+)** and cannot use the 'Hungry Crypts' ability."
+      }
+    ]
+  }
+}
