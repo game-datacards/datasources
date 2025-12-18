@@ -8,8 +8,8 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2025-12-14T13:14:02.605Z",
-  "compatibleDataVersion": 363,
+  "updated": "2025-12-18T18:42:37.746Z",
+  "compatibleDataVersion": 369,
   "warscrolls": [
     {
       "id": "a6123b35-79ce-55c3-b385-b42531c5c0fc",
@@ -174,7 +174,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 120,
+      "points": 110,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -563,7 +563,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 240,
+      "points": 220,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -807,6 +807,88 @@
       "notes": null
     },
     {
+      "id": "f200564a-b2fe-5114-90d0-98a9921f8ae0",
+      "name": "Kelthannor, the Forest Prince",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Kurnothi", "Unique", "Cavalry", "Hero"],
+      "factionKeywords": ["Sylvaneth", "Grand Alliance Order"],
+      "referenceKeywords": "Unique, Hero, Cavalry, Order, Sylvaneth, Kurnothi",
+      "stats": {
+        "move": "12\"",
+        "save": "4+",
+        "control": "2",
+        "health": "6",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Kurnothi Princeling’s Bow",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Hooves and Knuckles",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Debilitating Shot",
+          "phase": "shootingPhase",
+          "phaseDetails": "Any Shooting Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that has no more than 1 model and that had any damage points allocated to it this phase by this unit’s shooting attacks to be the target.",
+          "effect": "Roll a dice. On a 3+, subtract 1 from the Attacks characteristic of the target’s weapons until the start of your next turn."
+        },
+        {
+          "name": "Clarion of the Forest Prince",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly non-**WAR MACHINE** unit wholly within 12\" of this unit to be the target.",
+          "effect": "The target can move 3\". It can move through and end that move within the combat ranges of enemy units that it was in combat with at the start of that move, but not those of other enemy units. It does not have to end the move in combat."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
       "id": "1229a46e-d12a-5f9e-b3e7-26d9480593b3",
       "name": "Kurnoth Hunters with Kurnoth Greatbows",
       "subname": null,
@@ -916,7 +998,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 210,
+      "points": 200,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1132,7 +1214,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 200,
+      "points": 180,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1786,7 +1868,7 @@
         "wizard": "2",
         "priest": null
       },
-      "points": 220,
+      "points": 210,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2676,7 +2758,7 @@
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
           "declare": "If there is not a friendly **Gladewyrm** on the battlefield, pick a friendly **SYLVANETH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Gladewyrm** wholly within 9\" of the caster, visible to them and more than 9\" from all enemy units.",
+          "effect": "Set up a **Gladewyrm** wholly within 12\" of and visible to the caster, and more than 9\" from all enemy units.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Gladewyrm"
         },
@@ -2689,7 +2771,7 @@
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
           "declare": "If there is not a friendly **Spiteswarm Hive** on the battlefield, pick a friendly **SYLVANETH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Spiteswarm Hive** wholly within 9\" of the caster, visible to them and more than 3\" from all enemy units.",
+          "effect": "Set up a **Spiteswarm Hive** wholly within 18\" of and visible to the caster, and more than 3\" from all enemy units.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Spiteswarm Hive"
         },
@@ -2702,7 +2784,7 @@
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
           "declare": "If there is not a friendly **Vengeful Skullroot** on the battlefield, pick a friendly **SYLVANETH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Vengeful Skullroot** wholly within 9\" of the caster, visible to them and more than 9\" from all enemy units.",
+          "effect": "Set up a **Vengeful Skullroot** wholly within 12\" of and visible to the caster, and more than 9\" from all enemy units.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Vengeful Skullroot"
         }
@@ -2731,7 +2813,7 @@
         "cardType": "Enhancement",
         "enhancementType": "artefactsOfPower",
         "source": "aos-4e",
-        "points": 20,
+        "points": null,
         "phase": "defensive",
         "phaseDetails": "Passive",
         "icon": "defensive",
@@ -2860,7 +2942,7 @@
         "cardType": "Enhancement",
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
-        "points": 20,
+        "points": null,
         "phase": "heroPhase",
         "phaseDetails": "Passive",
         "icon": "special",
