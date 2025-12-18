@@ -4,7 +4,7 @@
     "banner": "#0a2118",
     "header": "#324935"
   },
-  "compatibleDataVersion": 715,
+  "compatibleDataVersion": 720,
   "datasheets": [
     {
       "abilities": {
@@ -4548,7 +4548,11 @@
           "abilities": [
             {
               "name": "Plasma Warhead",
-              "description": "The bearer can only shoot with this weapon in your Shooting phase, and only if it  this model is selected to shoot, if it has not shot with its Remained Stationary this turn and you did not use its Deathstrike Missile ability to Designate Target"
+              "description": "The bearer can only shoot with this weapon in your Shooting phase, and only if it Remained Stationary this turn and you did not use its Deathstrike Missile ability to Designate Target or Adjust Target this phase. When the bearer shoots with this weapon, do not select a target. Instead, resolve this weapon’s attacks, rolling for each unit within 6\" of the centre of its Deathstrike Target marker individually."
+            },
+            {
+              "name": "One Shot",
+              "description": "The bearer can only shoot with this weapon once per battle."
             }
           ]
         },
@@ -16719,6 +16723,7 @@
     "Recon Element",
     "Hammer of the Emperor",
     "Combined Arms",
+    "Grizzled Company",
     "Bridgehead Strike",
     "Mechanised Assault",
     "Siege Regiment"
@@ -17011,6 +17016,54 @@
       "source": "40k-10e",
       "cardType": "enhancement",
       "detachment": "Recon Element"
+    },
+    {
+      "name": "Abhuman Detail",
+      "id": "46d87cf5-17df-5457-bf3f-dfbe7eaeea00",
+      "cost": "20",
+      "keywords": ["Commissar"],
+      "excludes": [],
+      "description": "COMMISSAR model only. Add the OGRYN keyword to the list of units this model can issue Orders too (as stated on its datasheet).\n\nIn the Declare Battle Formations step, the bearer can be attached to an OGRYN SQUAD or BULLGRYN SQUAD unit.",
+      "faction_id": "AM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Grizzled Company"
+    },
+    {
+      "name": "Aquilan Eye",
+      "id": "af135840-b62c-55b0-9f16-c4db80105a25",
+      "cost": "20",
+      "keywords": ["Officer", "Astra Militarum"],
+      "excludes": [],
+      "description": "ASTRA MILITARUM OFFICER model only. Each time you select an Order for the bearer to issue, you can select the Order below:\n\nTarget Weak Spot (Order): Each time a model in this unit makes a ranged attack that targets an enemy unit within 12\", improve the Armour Penetration characteristic of that attack by 1.",
+      "faction_id": "AM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Grizzled Company"
+    },
+    {
+      "name": "Spec Ops Veteran",
+      "id": "9a751742-4c76-59a7-8235-0e466a06a580",
+      "cost": "15",
+      "keywords": ["Officer", "Infantry", "Astra Militarum"],
+      "excludes": [],
+      "description": "ASTRA MILITARUM INFANTRY OFFICER model only. Each time you select an Order for the bearer to issue, you can select the Order below:\n\nMove to the Shadows (Order): Each time a ranged attack targets this unit, until those attacks are resolved, models in this unit have the Stealth ability.",
+      "faction_id": "AM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Grizzled Company"
+    },
+    {
+      "name": "Laud Hailer",
+      "id": "b953bc13-843e-51ef-8883-c15ed17635dd",
+      "cost": "10",
+      "keywords": ["Officer", "Astra Militarum"],
+      "excludes": [],
+      "description": "ASTRA MILITARUM OFFICER model only. Each time you select a unit for this OFFICER model to issue an Order to, that unit can be within 12\" instead of within 6\".",
+      "faction_id": "AM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Grizzled Company"
     }
   ],
   "id": "AM",
@@ -17151,6 +17204,24 @@
             "rules": [
               {
                 "text": "Each time a model in a **REGIMENT** unit from your army makes a ranged attack that targets a visible unit (excluding **MONSTERS** and **VEHICLES**), that attack has the **[LETHAL HITS]** ability.\n\nEach time a model in a **SQUADRON** unit from your army makes a ranged attack that targets a visible **MONSTER** or **VEHICLE** unit, that attack has the **[LETHAL HITS]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Grizzled Company",
+        "rules": [
+          {
+            "name": "Ruthless Discipline",
+            "rules": [
+              {
+                "text": "Add 1 to the number of Orders each **ASTRA MILITARUM OFFICER** model from your army can issue, as stated on their datasheet.\n\nWhile an **ASTRA MILITARUM** unit from your army is affected by an Order, each time a model in that unit makes an attack, re-roll a Hit roll of 1. If the target of that attack is within range of an objective marker, re-roll a Wound roll of 1 as well.",
                 "order": 1,
                 "title": null,
                 "type": "text"
@@ -17343,6 +17414,66 @@
       "detachment": "Combined Arms"
     },
     {
+      "name": "Veteran Sharpshooters",
+      "id": "7205696f-881f-517e-9150-c7c2f34e06eb",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ASTRA MILITARUM unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [IGNORES COVER] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "AM",
+      "fluff": "Marksmanship is a skill that only increases with experience.",
+      "detachment": "Grizzled Company"
+    },
+    {
+      "name": "Purging Fire",
+      "id": "142c2894-fad5-5857-85fc-9c8da1afc262",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ASTRA MILITARUM unit from your army affected by an Order that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "If your unit is within range of an objective marker, until the end of the phase, ranged weapons equipped by models in your unit have the [LETHAL HITS] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "AM",
+      "fluff": "Clear the area and defend your objectives. Take no prisoners.",
+      "detachment": "Grizzled Company"
+    },
+    {
+      "name": "Mordian Minute",
+      "id": "c20db55a-2b89-5e1b-b74c-7e1524f64189",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ASTRA MILITARUM INFANTRY unit from your army affected by the First Rank, Fire! Second Rank, Fire! Order.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, improve the Strength characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "AM",
+      "fluff": "Named for the soldiers of Mordian, this rapid-fire drill requires exceptional accuracy and coordination, but renders even the humble lasgun highly lethal.",
+      "detachment": "Grizzled Company"
+    },
+    {
+      "name": "Additional Armour",
+      "id": "fe202c1d-a5c4-5979-a168-6500026f2801",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ASTRA MILITARUM unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "AM",
+      "fluff": "Veteran soldiers know the value of additional protection, whether welded to vehicles or worn under flak armour.",
+      "detachment": "Grizzled Company"
+    },
+    {
       "name": "Bellicosa Drop",
       "id": "660f986a-c35a-5d06-81e5-7e3f64315175",
       "cost": 1,
@@ -17478,6 +17609,21 @@
       "detachment": "Combined Arms"
     },
     {
+      "name": "Snap To It",
+      "id": "f4f0c156-c4b8-5302-935c-156ff8296c6e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ASTRA MILITARUM OFFICER unit from your army.",
+      "when": "Start of any phase.",
+      "effect": "Your unit’s OFFICER model can issue 1 Order as if it were your Command phase.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["any"],
+      "faction_id": "AM",
+      "fluff": "Reading the flow of battle and reacting in accordance, this officer expects their barked orders to be followed post-haste.",
+      "detachment": "Grizzled Company"
+    },
+    {
       "name": "Aerial Extraction",
       "id": "be83bbd3-526f-5975-a955-abc2cad941ae",
       "cost": 1,
@@ -17566,6 +17712,21 @@
       "faction_id": "AM",
       "fluff": "Ruins, barricades, bunkers; few such structures can impede the grinding advance of an Astra Militarum armoured corps.",
       "detachment": "Hammer of the Emperor"
+    },
+    {
+      "name": "No Retreat!",
+      "id": "efcf2167-febb-582b-bb1d-f64eb3828fcd",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ASTRA MILITARUM unit from your army affected by the Duty and Honour! Order.",
+      "when": "Your Command phase.",
+      "effect": "If your unit is within range of an objective marker you control, that objective marker remains under your control, even if you have no models within range of it, until your opponent controls it at the start or end of a phase.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "AM",
+      "fluff": "Battle-hardened and zealous, the company’s grizzled elites will gladly give their lives to honour the Emperor.",
+      "detachment": "Grizzled Company"
     },
     {
       "name": "Servo-Designators",
@@ -17778,5 +17939,5 @@
       "detachment": "Hammer of the Emperor"
     }
   ],
-  "updated": "2025-12-04T11:33:52.311Z"
+  "updated": "2025-12-11T13:44:04.862Z"
 }

@@ -3,7 +3,7 @@
     "banner": "#283743",
     "header": "#435d63"
   },
-  "compatibleDataVersion": 715,
+  "compatibleDataVersion": 720,
   "datasheets": [
     {
       "abilities": {
@@ -356,7 +356,7 @@
       "name": "Grey Hunters",
       "points": [
         {
-          "cost": "180",
+          "cost": "165",
           "keyword": null,
           "models": "10"
         }
@@ -861,7 +861,7 @@
       "name": "Iron Priest",
       "points": [
         {
-          "cost": "60",
+          "cost": "55",
           "keyword": null,
           "models": "1"
         }
@@ -1694,7 +1694,7 @@
       "name": "Venerable Dreadnought",
       "points": [
         {
-          "cost": "140",
+          "cost": "130",
           "keyword": null,
           "models": "1"
         }
@@ -2108,7 +2108,7 @@
       "name": "Bjorn the Fell-Handed",
       "points": [
         {
-          "cost": "170",
+          "cost": "160",
           "keyword": null,
           "models": "1"
         }
@@ -2880,7 +2880,7 @@
       "name": "Murderfang",
       "points": [
         {
-          "cost": "160",
+          "cost": "150",
           "keyword": null,
           "models": "1"
         }
@@ -3110,6 +3110,7 @@
     "Vanguard Spearhead",
     "Champions of Fenris",
     "Saga of the Hunter",
+    "Saga of the Great Wolf",
     "Anvil Siege Force",
     "Saga of the Bold",
     "Firestorm Assault Force",
@@ -3595,6 +3596,54 @@
       "source": "40k-10e",
       "cardType": "enhancement",
       "detachment": "Stormlance Task Force"
+    },
+    {
+      "name": "Grimnar’s Mark",
+      "id": "ce7295f8-a57f-5af7-8273-e04df6d8f7e1",
+      "cost": "20",
+      "keywords": ["Terminator", "Captain", "Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES TERMINATOR CAPTAIN model only. Once per battle round, from the second battle round onwards, you can target the bearer’s unit with the Rapid Ingress or Heroic Intervention Stratagem for 0CP, and can do so even if you have already targeted a different unit with that Stratagem this turn.\n\nIn the Declare Battle Formations step, the bearer can be attached to a WOLF GUARD TERMINATORS unit.",
+      "faction_id": "CHSW",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Saga of the Great Wolf"
+    },
+    {
+      "name": "Howlmaw",
+      "id": "8cc2b378-c763-5caf-a79c-c09670a3c07c",
+      "cost": "15",
+      "keywords": ["Wolf Priest"],
+      "excludes": [],
+      "description": "WOLF PRIEST model only. At the start of the Fight phase, you can select one enemy unit within 6\" of the bearer. That unit must take a Battle-shock, subtracting 1 from the result.",
+      "faction_id": "CHSW",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Saga of the Great Wolf"
+    },
+    {
+      "name": "Chariots of the Storm",
+      "id": "c6e6fe5c-c3a8-5d9c-84e0-81e252ee5ea0",
+      "cost": "25",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. After both players have deployed their armies, select up to three ADEPTUS ASTARTES units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "faction_id": "CHSW",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Saga of the Great Wolf"
+    },
+    {
+      "name": "Skjald’s Foretelling",
+      "id": "a6b5d9c1-10bc-5b85-a962-c80cc8a83672",
+      "cost": "25",
+      "keywords": ["Battle Leader", "Wolf Guard"],
+      "excludes": [],
+      "description": "WOLF GUARD BATTLE LEADER model only. While the bearer is leading a unit, weapons equipped by models in that unit have the [LANCE] ability.",
+      "faction_id": "CHSW",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Saga of the Great Wolf"
     },
     {
       "name": "The Imperium’s Sword",
@@ -4097,6 +4146,37 @@
         ]
       },
       {
+        "detachment": "Saga of the Great Wolf",
+        "rules": [
+          {
+            "name": "Master of Wolves",
+            "rules": [
+              {
+                "text": "At the start of your Command phase, you can select one of the Hunting Packs listed below. Until the start of your next Command phase, that Hunting Pack is active and its effects apply to all **ADEPTUS ASTARTES** units from your army. You can only select each Hunting Pack once per battle. \n\n■ **Encircling Jaws:** This unit can re-roll Advance rolls and Charge rolls. \n■ **Hunter’s Eye:** Each time a model in this unit makes a ranged attack, add 1 to the Hit roll. \n■ **Ferocious Strike:** Each time this unit is selected to fight, select either the **[LETHAL HITS]** or **[SUSTAINED HITS 1]** ability. Until the end of the phase, weapons equipped by models in this unit have the selected ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          },
+          {
+            "name": "Howling Onslaught",
+            "rules": [
+              {
+                "text": "Once per battle, when selecting a Hunting Pack for the Master of Wolves Detachment rule (see above), if a **LOGAN GRIMNAR** model from your army is on the battlefield, you can select a Hunting Pack you have already selected this battle.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
         "detachment": "Anvil Siege Force",
         "rules": [
           {
@@ -4407,6 +4487,36 @@
       "faction_id": "CHSW",
       "fluff": "At the barked orders of their Pack Leaders, the Space Wolves focus their fury upon a single target, combining their firepower to bring the foe down.",
       "detachment": "Saga of the Hunter"
+    },
+    {
+      "name": "The Foe Foreseen",
+      "id": "13f5cf38-311e-544e-9dda-51fe41e4e73c",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CHSW",
+      "fluff": "With his great strategic wisdom, Grimnar predicted the peril these warriors would encounter and warned them to be ready for it.",
+      "detachment": "Saga of the Great Wolf"
+    },
+    {
+      "name": "Eye of the Pack",
+      "id": "1247e1e2-917f-55e3-8ea5-87bd7e8a42b6",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack, you can add 1 to the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "CHSW",
+      "fluff": "Once one Fenrisian warrior has perceived some slight weakness in the defences of their foes, they all strike at it like encircling predators dragging down prey.",
+      "detachment": "Saga of the Great Wolf"
     },
     {
       "name": "Battle Drill Recall",
@@ -5174,6 +5284,66 @@
       "detachment": "Saga of the Hunter"
     },
     {
+      "name": "Grimnar’s Command",
+      "id": "d271e394-1c54-5491-a993-bf84376c6b9f",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES unit from your army.",
+      "when": "Your Command phase.",
+      "effect": "Select one Hunting Pack from the Master of Wolves Detachment rule. Until the start of your next Command phase, that Hunting Pack is active for your unit instead of any other Hunting Pack that is active, even if you have already selected that Hunting Pack this battle.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "CHSW",
+      "fluff": "Pivotal as they are to the Great Wolf’s plans, this pack have their own orders to fulfil in this moment that come directly from Grimnar himself.",
+      "detachment": "Saga of the Great Wolf"
+    },
+    {
+      "name": "Fenrisian Ferocity",
+      "id": "f2059b6b-7251-5967-8482-d632a5c3674e",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES MOUNTED or ADEPTUS ASTARTES WALKER unit from your army that has not been selected to move or charge this phase.",
+      "when": "Your Movement phase or your Charge phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes a Normal, Advance, Fall Back or Charge move, it can move horizontally through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end a Normal, Advance or Fall Back move within Engagement Range of them.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge", "movement"],
+      "faction_id": "CHSW",
+      "fluff": "Even the most challenging terrain or formidable fortifications cannot stop the Great Wolf’s chief hunters once they are in motion.",
+      "detachment": "Saga of the Great Wolf"
+    },
+    {
+      "name": "Unrelenting Hunters",
+      "id": "1f1f4e4f-786d-5ba7-ad44-3540f11c6a9d",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to move this phase.",
+      "when": "Your Movement phase.",
+      "effect": "Until the end of the turn, your unit is eligible to declare a charge in a turn in which it Fell Back. If your unit is a SPACE WOLVES unit, until the end of the turn, it is eligible to declare a charge in a turn in which it Advanced or Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "CHSW",
+      "fluff": "Knowing their part in the grand plan and determined to execute it with the magnificence of true champions, these warriors fight with a fluid and inescapable ferocity.",
+      "detachment": "Saga of the Great Wolf"
+    },
+    {
+      "name": "Battle Instincts",
+      "id": "00b26278-c3be-5dae-a3cd-ba0d56cf6ef0",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One SPACE WOLVES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "effect": "Your unit can make a Normal move of up to D6\".",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "CHSW",
+      "fluff": "These champions of Fenris respond to enemy fire with instinctive swiftness, rarely giving their foes a second chance to shoot at them.",
+      "detachment": "Saga of the Great Wolf"
+    },
+    {
       "name": "Rigid Discipline",
       "id": "5373aa5b-0d13-5875-9e4c-1f5bb4d9d564",
       "cost": 1,
@@ -5264,5 +5434,5 @@
       "detachment": "Stormlance Task Force"
     }
   ],
-  "updated": "2025-12-04T11:33:51.732Z"
+  "updated": "2025-12-11T13:44:02.071Z"
 }

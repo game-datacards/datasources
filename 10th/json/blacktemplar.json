@@ -4,7 +4,7 @@
     "banner": "#202a2f",
     "header": "#142637"
   },
-  "compatibleDataVersion": 715,
+  "compatibleDataVersion": 720,
   "datasheets": [
     {
       "abilities": {
@@ -1141,7 +1141,7 @@
       "name": "Execrator",
       "points": [
         {
-          "cost": "70",
+          "cost": "60",
           "keyword": null,
           "models": "1"
         }
@@ -1822,7 +1822,7 @@
       "name": "Castellan",
       "points": [
         {
-          "cost": "60",
+          "cost": "70",
           "keyword": null,
           "models": "1"
         }
@@ -1888,7 +1888,9 @@
           "STERNGUARD VETERAN SQUAD",
           "SWORD BRETHREN SQUAD"
         ],
-        "extra": "You can attach this model to one of the above units even if one CAPTAIN or CHAPTER MASTER model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        "extra": "You can attach this model to one of the above units even if one CAPTAIN or CHAPTER MASTER model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+        "canAttachWith": ["CAPTAIN", "CHAPTER MASTER"],
+        "isBodyguard": true
       }
     },
     {
@@ -1968,7 +1970,7 @@
       "name": "Emperor’s Champion",
       "points": [
         {
-          "cost": "90",
+          "cost": "100",
           "keyword": null,
           "models": "1"
         }
@@ -2269,7 +2271,7 @@
       "name": "Repulsor Executioner",
       "points": [
         {
-          "cost": "220",
+          "cost": "235",
           "keyword": null,
           "models": "1"
         }
@@ -2483,7 +2485,7 @@
       "name": "Gladiator Valiant",
       "points": [
         {
-          "cost": "160",
+          "cost": "150",
           "keyword": null,
           "models": "1"
         }
@@ -2630,7 +2632,7 @@
       "name": "Crusade Ancient",
       "points": [
         {
-          "cost": "65",
+          "cost": "55",
           "keyword": null,
           "models": "1"
         }
@@ -2668,7 +2670,14 @@
       "wargear": ["None"],
       "leads": {
         "units": ["CRUSADER SQUAD", "SWORD BRETHREN SQUAD"],
-        "extra": "You can attach this model to one of the above units even if one CAPTAIN, CHAPTER MASTER, EXECRATOR or LIEUTENANT model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        "extra": "You can attach this model to one of the above units even if one CAPTAIN, CHAPTER MASTER, EXECRATOR or LIEUTENANT model has already been attached to it. If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+        "canAttachWith": [
+          "CAPTAIN",
+          "CHAPTER MASTER",
+          "EXECRATOR",
+          "LIEUTENANT"
+        ],
+        "isBodyguard": true
       }
     },
     {
@@ -5097,5 +5106,5 @@
       "detachment": "Stormlance Task Force"
     }
   ],
-  "updated": "2025-12-04T11:33:51.652Z"
+  "updated": "2025-12-11T13:44:01.713Z"
 }

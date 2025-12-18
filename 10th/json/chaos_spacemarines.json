@@ -4,7 +4,7 @@
     "banner": "#320b0d",
     "header": "#222a2f"
   },
-  "compatibleDataVersion": 715,
+  "compatibleDataVersion": 720,
   "datasheets": [
     {
       "abilities": {
@@ -4262,7 +4262,7 @@
       "name": "Forgefiend",
       "points": [
         {
-          "cost": "180",
+          "cost": "170",
           "keyword": null,
           "models": "1"
         }
@@ -4558,7 +4558,7 @@
       "name": "Chaos Lord in Terminator Armour",
       "points": [
         {
-          "cost": "95",
+          "cost": "85",
           "keyword": null,
           "models": "1"
         }
@@ -4720,7 +4720,9 @@
       "wargear": ["None"],
       "leads": {
         "units": ["CHOSEN", "LEGIONARIES"],
-        "extra": "You can attach this model to one of the above units even if one other CHARACTER model has already been attached to it (a unit cannot have two MASTERS OF EXECUTIONS attached to it). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths."
+        "extra": "You can attach this model to one of the above units even if one other CHARACTER model has already been attached to it (a unit cannot have two MASTERS OF EXECUTIONS attached to it). If you do, and that Bodyguard unit is destroyed, the Leader units attached to it become separate units, with their original Starting Strengths.",
+        "canAttachWith": ["other CHARACTER"],
+        "isBodyguard": true
       }
     },
     {
@@ -7098,7 +7100,7 @@
       "name": "Fabius Bile",
       "points": [
         {
-          "cost": "85",
+          "cost": "100",
           "keyword": null,
           "models": "2"
         }
@@ -12076,6 +12078,7 @@
     "Dread Talons",
     "Chaos Cult",
     "Veterans of the Long War",
+    "Nightmare Hunt",
     "Pactbound Zealots",
     "Creations of Bile"
   ],
@@ -12563,6 +12566,54 @@
       "source": "40k-10e",
       "cardType": "enhancement",
       "detachment": "Cabal of Chaos"
+    },
+    {
+      "name": "Greyveil Hex",
+      "id": "10d5b37f-ba72-54b7-a1bc-a3b7cf971b8c",
+      "cost": "25",
+      "keywords": ["Chaos Lord"],
+      "excludes": [],
+      "description": "CHAOS LORD model only. Models in the bearer’s unit have the Stealth ability.\n\nWhile the bearer’s unit is within range of one or more objective markers you control, that unit can only be selected as the target of a ranged attack if the attacking model is within 18\".",
+      "faction_id": "CSM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Nightmare Hunt"
+    },
+    {
+      "name": "Warp-fuelled Thrusters",
+      "id": "97354611-22d6-5e18-b302-3227dc6142d8",
+      "cost": "20",
+      "keywords": ["Chaos Lord", "Jump Pack"],
+      "excludes": [],
+      "description": "CHAOS LORD JUMP PACK model only. At the end of your opponent’s Fight phase, if the bearer’s unit is not within Engagement Range of one or more enemy units, you can remove the bearer’s unit from the battlefield and place it into Strategic Reserves.",
+      "faction_id": "CSM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Nightmare Hunt"
+    },
+    {
+      "name": "Terrorglut Parasite",
+      "id": "78de1275-02fd-5762-96f4-90171bca5b08",
+      "cost": "20",
+      "keywords": ["Heretic Astartes"],
+      "excludes": [],
+      "description": "HERETIC ASTARTES model only. At the start of the Fight phase, each enemy unit within Engagement Range of the bearer must take a Battle‑shock test, subtracting 1 from the result.",
+      "faction_id": "CSM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Nightmare Hunt"
+    },
+    {
+      "name": "Sorrowscent Vulture",
+      "id": "6ba4ea0a-1281-5bb9-8f63-7d8f9e49b469",
+      "cost": "35",
+      "keywords": ["Chaos Lord", "Jump Pack"],
+      "excludes": [],
+      "description": "CHAOS LORD JUMP PACK model only. Models in the bearer’s unit have the Scouts 6\" ability.\n\nIn the Declare Battle Formations step, the bearer can be attached to a WARP TALONS unit.",
+      "faction_id": "CSM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Nightmare Hunt"
     }
   ],
   "id": "CSM",
@@ -12764,6 +12815,24 @@
             "rules": [
               {
                 "text": "At the start of your Command phase, select one unit from your opponent’s army to be your focus of hatred. Until the start of your next Command phase, each time a **HERETIC ASTARTES** model from your army (excluding **DAMNED** models) makes an attack that targets your focus of hatred, you can re-roll the Hit roll.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Nightmare Hunt",
+        "rules": [
+          {
+            "name": "Terror Made Manifest",
+            "rules": [
+              {
+                "text": "In the Battle‑shock step of your opponent’s Command phase, if an enemy unit that is below its Starting Strength is within 12\" of one or more **HERETIC ASTARTES** units from your army, that enemy unit must take a Battle‑shock test, subtracting 1 from the result. Enemy units affected by this Detachment rule do not need to take any other Battle‑shock tests in the same phase.\n\nEach time a **HERETIC ASTARTES** model from your army makes an attack that targets a unit that is Below Half‑strength, add 1 to the Hit roll.\n\nEach time an attack targets a **HERETIC ASTARTES** unit from your army, if the attacking model is Battle‐shocked, subtract 1 from the Hit roll.\n\nEach time a **HERETIC ASTARTES** model from your army makes an attack that targets a Battle‐shocked unit, add 1 to the Wound roll.",
                 "order": 1,
                 "title": null,
                 "type": "text"
@@ -13091,6 +13160,51 @@
       "faction_id": "CSM",
       "fluff": "No barricade or fortification is proof against the vengeful fury of these hate-fuelled murderers.",
       "detachment": "Veterans of the Long War"
+    },
+    {
+      "name": "Talons Sunk Deep",
+      "id": "2adc4594-cdb3-5377-bb8c-ce4be33d1414",
+      "cost": 1,
+      "turn": "either",
+      "target": "One HERETIC ASTARTES INFANTRY unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle‑shocked and/or Below Half‑strength, improve the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CSM",
+      "fluff": "When indecision and terror grip the foe, their frailties are exposed to the cruelest of lunges.",
+      "detachment": "Nightmare Hunt"
+    },
+    {
+      "name": "Prey on the Weak",
+      "id": "8c9dfafc-87f6-5b6a-8bee-a2a639f86f6a",
+      "cost": 1,
+      "turn": "either",
+      "target": "One HERETIC ASTARTES INFANTRY unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a unit that is Battle‑shocked and/or Below Half‑strength, you can re‑roll the Hit roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "CSM",
+      "fluff": "Suitably wounded, or with the corpses of their comrades around them, the enemy’s faltering cohesion marks them as doomed.",
+      "detachment": "Nightmare Hunt"
+    },
+    {
+      "name": "Sadistic Display",
+      "id": "48814a14-71a0-50cc-8ff9-ee84dfafa79c",
+      "cost": 1,
+      "turn": "either",
+      "target": "That HERETIC ASTARTES unit.",
+      "when": "Fight phase, just after a HERETIC ASTARTES unit from your army destroys an enemy unit.",
+      "effect": "Each enemy unit within 6\" of and visible to your unit (excluding MONSTER and VEHICLE units) must take a Battle‑shock test.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "CSM",
+      "fluff": "It is not enough to slay. The foe’s allies must understand exactly what horrors await them.",
+      "detachment": "Nightmare Hunt"
     },
     {
       "name": "Profane Zeal",
@@ -13573,6 +13687,51 @@
       "detachment": "Veterans of the Long War"
     },
     {
+      "name": "Malicious Surge",
+      "id": "269e5b76-28ac-53de-a908-ebbd49fb49b9",
+      "cost": 1,
+      "turn": "your",
+      "target": "One HERETIC ASTARTES INFANTRY unit from your army.",
+      "when": "Your Charge phase.",
+      "effect": "Until the end of the phase, your unit is eligible to declare a charge in a turn in which it Advanced.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["charge"],
+      "faction_id": "CSM",
+      "fluff": "Pairing unholy power with blistering speed, the full horror of these warriors’ strength is brought crashing into their foes.",
+      "detachment": "Nightmare Hunt"
+    },
+    {
+      "name": "Relentless Terror",
+      "id": "945a9688-343b-5263-aa40-4d7797fa87f1",
+      "cost": 1,
+      "turn": "your",
+      "target": "That HERETIC ASTARTES unit.",
+      "when": "Your Movement phase, just after a HERETIC ASTARTES INFANTRY unit from your army Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "CSM",
+      "fluff": "These warriors strike in screaming waves, each charge as brutal as the last.",
+      "detachment": "Nightmare Hunt"
+    },
+    {
+      "name": "Horrific Incursion",
+      "id": "a228b9a1-f2e0-5858-ba59-627cc7847c87",
+      "cost": 1,
+      "turn": "your",
+      "target": "One HERETIC ASTARTES unit from your army that arrived from Reserves this turn.",
+      "when": "Your Movement phase.",
+      "effect": "Select one enemy unit (excluding MONSTER and VEHICLE units) within 12\" of and visible to your unit: that unit must take a Battle‑shock test, subtracting 1 from the result.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "CSM",
+      "fluff": "Accompanied by a burst of sensory torment, a sudden deployment can shatter the prey’s discipline.",
+      "detachment": "Nightmare Hunt"
+    },
+    {
       "name": "Eternal Hate",
       "id": "80f7308a-3e4d-5e94-9fd7-85231d5fc8d1",
       "cost": 1,
@@ -13738,5 +13897,5 @@
       "detachment": "Deceptors"
     }
   ],
-  "updated": "2025-12-04T11:33:52.047Z"
+  "updated": "2025-12-11T13:44:03.518Z"
 }

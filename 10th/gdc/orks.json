@@ -3,7 +3,7 @@
     "banner": "#283109",
     "header": "#465b18"
   },
-  "compatibleDataVersion": 715,
+  "compatibleDataVersion": 720,
   "datasheets": [
     {
       "abilities": {
@@ -2465,8 +2465,13 @@
       "transport": "",
       "wargear": ["None"],
       "leads": {
-        "units": ["BOYZ", "MEGANOBZ", "NOBZ"],
-        "extra": "If this unit’s Bodyguard unit is destroyed, Ghazkghull Thraka and Makari become a single unit with their original Starting Strength."
+        "units": [
+          "BOYZ",
+          "MEGANOBZ",
+          "NOBZ If this unit’s Bodyguard unit is destroyed, Ghazkghull Thraka and Makari become a single unit with their original Starting Strength."
+        ],
+        "extra": "",
+        "isBodyguard": true
       }
     },
     {
@@ -4186,6 +4191,14 @@
               "skill": "4+",
               "strength": "12"
             }
+          ],
+          "abilities": [
+            {
+              "name": "Bubblechukka",
+              "description": "Before selecting targets for one or more models equipped with this weapon, roll one D6 to determine which profile models equipped with this weapon will make attacks with, comparing the result with the numbers shown on the left.",
+              "showAbility": true,
+              "showDescription": true
+            }
           ]
         },
         {
@@ -4687,7 +4700,7 @@
           "abilities": [
             {
               "name": "Dead Choppy",
-              "description": "The Attacks characteristic of this weapon is increased by 1 for each additional dread klaw this model is equipped with.",
+              "description": "The Attacks characteristic of this weapon is increased by 1 for each additional Dread klaw the bearer is equipped with.",
               "showAbility": true,
               "showDescription": true
             }
@@ -6707,7 +6720,7 @@
           "abilities": [
             {
               "name": "Snagged",
-              "description": "Each time this weapon scores a hit against an enemy Monster or Vehicle unit, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer.",
+              "description": "Each time this weapon scores a hit against a MONSTER or VEHICLE unit, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer.",
               "showAbility": true,
               "showDescription": true
             }
@@ -7098,7 +7111,6 @@
       "leadBy": [
         "Painboy",
         "Big Mek",
-        "Ghazghkull Thraka",
         "Mek",
         "Big Mek with Shokk Attack Gun",
         "Warboss"
@@ -7998,7 +8010,7 @@
           "abilities": [
             {
               "name": "Snagged",
-              "description": "Each time this weapon scores a hit against an enemy Monster or Vehicle unit, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer.",
+              "description": "Each time this weapon scores a hit against a MONSTER or VEHICLE unit, until the end of the turn, if the bearer selects that unit as a target of a charge, add 2 to Charge rolls made for the bearer and enemy units cannot use the Fire Overwatch Stratagem to shoot at the bearer.",
               "showAbility": true,
               "showDescription": true
             }
@@ -11887,5 +11899,5 @@
       "detachment": "More Dakka!"
     }
   ],
-  "updated": "2025-12-04T11:33:52.860Z"
+  "updated": "2025-12-11T13:44:10.355Z"
 }
