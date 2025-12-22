@@ -719,6 +719,94 @@ function getBattleTraitsForFaction(factionId, data) {
   return battleTraits;
 }
 
+// ============================================================================
+// REGIMENTS OF RENOWN
+// ============================================================================
+
+// Get all Regiments of Renown
+function getRegimentsOfRenown(data) {
+  return data.ability_group
+    .filter(ag => ag.abilityGroupType === 'regimentOfRenown');
+}
+
+// Get permitted factions for a Regiment of Renown
+function getPermittedFactionsForRoR(abilityGroupId, data) {
+  const links = data.ability_group_regiment_of_renown_permitted_faction_keyword
+    ?.filter(link => link.abilityGroupId === abilityGroupId) || [];
+
+  return links.map(link => {
+    const faction = data.faction_keyword.find(f => f.id === link.factionKeywordId);
+    return faction ? faction.name : null;
+  }).filter(f => f !== null);
+}
+
+// Get linked warscrolls for a Regiment of Renown
+function getLinkedWarscrollsForRoR(abilityGroupId, data) {
+  const links = data.ability_group_regiment_of_renown_linked_warscroll
+    ?.filter(link => link.abilityGroupId === abilityGroupId) || [];
+
+  return links.map(link => {
+    const warscroll = data.warscroll.find(w => w.id === link.warscrollId);
+    return {
+      name: warscroll?.name,
+      minCount: link.minCount,
+      maxCount: link.maxCount
+    };
+  }).filter(w => w.name);
+}
+
+// Transform Regiment of Renown to output format
+function transformRegimentOfRenown(ror, data) {
+  return {
+    id: uuidv5(ror.name, AOS_UUID_NAMESPACE),
+    name: ror.name,
+    cardType: 'RegimentOfRenown',
+    source: 'aos-4e',
+    points: ror.regimentOfRenownPointsCost,
+    lore: ror.subsectionLore,
+    organisation: ror.subsectionRulesText,
+    image: ror.image,
+    permittedFactions: getPermittedFactionsForRoR(ror.id, data),
+    linkedWarscrolls: getLinkedWarscrollsForRoR(ror.id, data),
+    isLegends: ror.isLegends || false
+  };
+}
+
+// ============================================================================
+// BATTLE TACTICS
+// ============================================================================
+
+// Get all Battle Tactics
+function getBattleTactics(data) {
+  return data.battle_tactic || [];
+}
+
+// Get Battle Tactic Card info
+function getBattleTacticCard(cardId, data) {
+  return data.battle_tactic_card?.find(c => c.id === cardId);
+}
+
+// Transform Battle Tactic to output format
+function transformBattleTactic(tactic, data) {
+  const card = getBattleTacticCard(tactic.battleTacticCardId, data);
+
+  return {
+    id: uuidv5(tactic.name, AOS_UUID_NAMESPACE),
+    name: tactic.name,
+    cardType: 'BattleTactic',
+    source: 'aos-4e',
+    tacticType: tactic.battleTacticType, // 'affray', 'domination', 'strike'
+    lore: tactic.lore,
+    rulesText: tactic.rulesText,
+    victoryPoints: tactic.victoryPoints,
+    battleTacticCard: card ? card.name : null
+  };
+}
+
+// ============================================================================
+// TERRAIN
+// ============================================================================
+
 // Get terrain for a faction
 function getTerrainForFaction(factionId, data) {
   // Get warscrolls that are faction terrain via warscroll_terrain_ability
@@ -762,7 +850,7 @@ const defaultColours = {
 };
 
 // Main processing function
-function processAoSFaction(outputFileName, factionName) {
+function processAoSFaction(outputFileName, factionName, allRegimentsOfRenown = []) {
   currentFactionIndex++;
   updateProgress(factionName, 'Reading');
 
@@ -823,6 +911,12 @@ function processAoSFaction(outputFileName, factionName) {
   // Get battle traits
   const battleTraits = getBattleTraitsForFaction(faction.id, newDataExport);
 
+  // Get available Regiments of Renown for this faction
+  const availableRegimentsOfRenown = allRegimentsOfRenown
+    .filter(ror => ror.permittedFactions.includes(factionName))
+    .map(ror => ror.name)
+    .sort();
+
   // Build output object
   const output = {
     id: factionId,
@@ -840,6 +934,7 @@ function processAoSFaction(outputFileName, factionName) {
     manifestationLores: manifestationLores,
     enhancements: enhancements,
     terrain: terrain,
+    availableRegimentsOfRenown: availableRegimentsOfRenown,
     rules: {
       battleTraits: battleTraits
     }
@@ -899,8 +994,14 @@ function processAoSFaction(outputFileName, factionName) {
     // Check for colour changes
     const coloursChanged = JSON.stringify(oldData.colours) !== JSON.stringify(newData.colours);
 
+    // Check for availableRegimentsOfRenown changes
+    const oldRoR = (oldData.availableRegimentsOfRenown || []).sort();
+    const newRoR = (newData.availableRegimentsOfRenown || []).sort();
+    const rorChanged = JSON.stringify(oldRoR) !== JSON.stringify(newRoR);
+
     hasChanges =
       coloursChanged ||
+      rorChanged ||
       warscrollChanges.added.length > 0 ||
       warscrollChanges.removed.length > 0 ||
       warscrollChanges.modified.length > 0 ||
@@ -924,7 +1025,8 @@ function processAoSFaction(outputFileName, factionName) {
       warscrolls: warscrollChanges,
       battleFormations: formationChanges,
       lores: loreChanges,
-      manifestationLores: manifestationLoreChanges
+      manifestationLores: manifestationLoreChanges,
+      availableRegimentsOfRenown: rorChanged ? { old: oldRoR, new: newRoR } : null
     });
   } else {
     // New file
@@ -937,7 +1039,8 @@ function processAoSFaction(outputFileName, factionName) {
       warscrolls: { added: transformedWarscrolls.map(w => w.name), removed: [], modified: [] },
       battleFormations: { added: battleFormations.map(bf => bf.name), removed: [], modified: [] },
       lores: { added: lores.map(l => l.name), removed: [], modified: [] },
-      manifestationLores: { added: manifestationLores.map(l => l.name), removed: [], modified: [] }
+      manifestationLores: { added: manifestationLores.map(l => l.name), removed: [], modified: [] },
+      availableRegimentsOfRenown: availableRegimentsOfRenown.length > 0 ? { old: [], new: availableRegimentsOfRenown } : null
     });
   }
 }
@@ -1037,6 +1140,23 @@ function printSummaryReport() {
         }
       }
 
+      // Available Regiments of Renown
+      if (report.availableRegimentsOfRenown) {
+        console.log('\n  AVAILABLE REGIMENTS OF RENOWN:');
+        const oldSet = new Set(report.availableRegimentsOfRenown.old);
+        const newSet = new Set(report.availableRegimentsOfRenown.new);
+        const added = report.availableRegimentsOfRenown.new.filter(r => !oldSet.has(r));
+        const removed = report.availableRegimentsOfRenown.old.filter(r => !newSet.has(r));
+        if (added.length > 0) {
+          console.log(`    Added (${added.length}):`);
+          added.forEach(name => console.log(`      + ${name}`));
+        }
+        if (removed.length > 0) {
+          console.log(`    Removed (${removed.length}):`);
+          removed.forEach(name => console.log(`      - ${name}`));
+        }
+      }
+
       console.log('\n');
     }
   }
@@ -1063,6 +1183,7 @@ function printSummaryReport() {
   let totalFormationsAdded = 0, totalFormationsRemoved = 0, totalFormationsModified = 0;
   let totalLoresAdded = 0, totalLoresRemoved = 0, totalLoresModified = 0;
   let totalManifestationLoresAdded = 0, totalManifestationLoresRemoved = 0, totalManifestationLoresModified = 0;
+  let factionsWithRoRChanges = 0;
 
   for (const report of changeReports) {
     totalWarscrollsAdded += report.warscrolls.added.length;
@@ -1077,12 +1198,14 @@ function printSummaryReport() {
     totalManifestationLoresAdded += report.manifestationLores.added.length;
     totalManifestationLoresRemoved += report.manifestationLores.removed.length;
     totalManifestationLoresModified += report.manifestationLores.modified.length;
+    if (report.availableRegimentsOfRenown) factionsWithRoRChanges++;
   }
 
   console.log(`\nWarscrolls:          +${totalWarscrollsAdded} added, -${totalWarscrollsRemoved} removed, ~${totalWarscrollsModified} modified`);
   console.log(`Battle Formations:   +${totalFormationsAdded} added, -${totalFormationsRemoved} removed, ~${totalFormationsModified} modified`);
   console.log(`Lores:               +${totalLoresAdded} added, -${totalLoresRemoved} removed, ~${totalLoresModified} modified`);
   console.log(`Manifestation Lores: +${totalManifestationLoresAdded} added, -${totalManifestationLoresRemoved} removed, ~${totalManifestationLoresModified} modified`);
+  console.log(`Regiments of Renown: ${factionsWithRoRChanges} factions with availability changes`);
   console.log('='.repeat(80) + '\n');
 }
 
@@ -1181,16 +1304,21 @@ const factions = [
 
 // Set total faction count for progress bar
 totalFactions = factions.length;
+
+// Pre-compute Regiments of Renown for faction availability lookup
+const allRegimentsOfRenown = getRegimentsOfRenown(newDataExport)
+  .map(ror => transformRegimentOfRenown(ror, newDataExport));
+
 console.log('Processing AoS factions...\n');
 
 // Process all factions
 for (const [fileName, factionName] of factions) {
-  processAoSFaction(fileName, factionName);
+  processAoSFaction(fileName, factionName, allRegimentsOfRenown);
 }
 
-// Process generic manifestations
+// Process generic manifestations, Regiments of Renown, and Battle Tactics
 clearProgress();
-console.log('\nProcessing generic manifestations...');
+console.log('\nProcessing generic data...');
 
 const genericManifestations = getGenericManifestations(newDataExport);
 const genericLores = getGenericManifestationLores(newDataExport);
@@ -1214,13 +1342,24 @@ const transformedGenericLores = genericLores.map(lore => {
   };
 });
 
+// Use pre-computed Regiments of Renown (sorted)
+const regimentsOfRenown = [...allRegimentsOfRenown]
+  .sort((a, b) => a.name.localeCompare(b.name));
+
+// Transform Battle Tactics
+const battleTactics = getBattleTactics(newDataExport)
+  .map(tactic => transformBattleTactic(tactic, newDataExport))
+  .sort((a, b) => a.name.localeCompare(b.name));
+
 const genericOutput = {
   id: 'GENERIC',
   name: 'Generic',
   updated: new Date().toISOString(),
   compatibleDataVersion: dataVersion,
   warscrolls: transformedGenericWarscrolls,
-  manifestationLores: transformedGenericLores
+  manifestationLores: transformedGenericLores,
+  regimentsOfRenown: regimentsOfRenown,
+  battleTactics: battleTactics
 };
 
 // Write generic file
@@ -1235,7 +1374,7 @@ try {
   // Prettier may not be available
 }
 
-console.log(`✓ Generic manifestations: ${transformedGenericWarscrolls.length} warscrolls, ${transformedGenericLores.length} lores`);
+console.log(`✓ Generic data: ${transformedGenericWarscrolls.length} manifestations, ${transformedGenericLores.length} lores, ${regimentsOfRenown.length} Regiments of Renown, ${battleTactics.length} Battle Tactics`);
 
 // Generate index.json
 console.log('\nGenerating index.json...');

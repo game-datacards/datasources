@@ -322,7 +322,7 @@ function parseDataExport(fileName, factionName) {
 
   armyRules = armyRules.map((rule) => {
     const ruleSections = newDataExport.rule_container_component.filter((rule_container) => {
-      return armyRules.map((rule => rule.id)).includes(rule_container.armyRuleId) && rule_container.type !== "loreAccordion";
+      return rule.id === rule_container.armyRuleId && rule_container.type !== "loreAccordion";
     }).sort((a, b) => a.displayOrder - b.displayOrder).map((rule_container) => {
       return {
         text: rule_container.textContent,
@@ -1155,11 +1155,14 @@ function parseDataExport(fileName, factionName) {
   const newEnhancements = newData.enhancements || [];
   const oldDetachments = oldData.detachments || [];
   const newDetachments = newData.detachments || [];
+  const oldArmyRules = oldData.rules?.army || [];
+  const newArmyRules = newData.rules?.army || [];
 
   // Compare using normalized JSON strings
   const datasheetChanges = compareByName(oldDatasheets, newDatasheets, 'datasheets');
   const stratagemChanges = compareByName(oldStratagems, newStratagems, 'stratagems');
   const enhancementChanges = compareByName(oldEnhancements, newEnhancements, 'enhancements');
+  const armyRuleChanges = compareByName(oldArmyRules, newArmyRules, 'armyRules');
 
   // Track detachment changes (simple string array comparison)
   const detachmentChanges = {
@@ -1180,7 +1183,10 @@ function parseDataExport(fileName, factionName) {
     enhancementChanges.removed.length > 0 ||
     enhancementChanges.modified.length > 0 ||
     detachmentChanges.added.length > 0 ||
-    detachmentChanges.removed.length > 0;
+    detachmentChanges.removed.length > 0 ||
+    armyRuleChanges.added.length > 0 ||
+    armyRuleChanges.removed.length > 0 ||
+    armyRuleChanges.modified.length > 0;
 
   // Store change report
   changeReports.push({
@@ -1192,7 +1198,8 @@ function parseDataExport(fileName, factionName) {
     datasheets: datasheetChanges,
     stratagems: stratagemChanges,
     enhancements: enhancementChanges,
-    detachments: detachmentChanges
+    detachments: detachmentChanges,
+    armyRules: armyRuleChanges
   });
 }
 
@@ -1357,6 +1364,7 @@ function printSummaryReport() {
   let totalStratagemsAdded = 0, totalStratagemsRemoved = 0, totalStratagemsModified = 0;
   let totalEnhancementsAdded = 0, totalEnhancementsRemoved = 0, totalEnhancementsModified = 0;
   let totalDetachmentsAdded = 0, totalDetachmentsRemoved = 0;
+  let totalArmyRulesAdded = 0, totalArmyRulesRemoved = 0, totalArmyRulesModified = 0;
 
   for (const report of changeReports) {
     totalDatasheetsAdded += report.datasheets.added.length;
@@ -1370,12 +1378,16 @@ function printSummaryReport() {
     totalEnhancementsModified += report.enhancements.modified.length;
     totalDetachmentsAdded += report.detachments.added.length;
     totalDetachmentsRemoved += report.detachments.removed.length;
+    totalArmyRulesAdded += report.armyRules.added.length;
+    totalArmyRulesRemoved += report.armyRules.removed.length;
+    totalArmyRulesModified += report.armyRules.modified.length;
   }
 
   console.log(`\nDatasheets:    +${totalDatasheetsAdded} added, -${totalDatasheetsRemoved} removed, ~${totalDatasheetsModified} modified`);
   console.log(`Stratagems:    +${totalStratagemsAdded} added, -${totalStratagemsRemoved} removed, ~${totalStratagemsModified} modified`);
   console.log(`Enhancements:  +${totalEnhancementsAdded} added, -${totalEnhancementsRemoved} removed, ~${totalEnhancementsModified} modified`);
   console.log(`Detachments:   +${totalDetachmentsAdded} added, -${totalDetachmentsRemoved} removed`);
+  console.log(`Army Rules:    +${totalArmyRulesAdded} added, -${totalArmyRulesRemoved} removed, ~${totalArmyRulesModified} modified`);
   console.log('='.repeat(80) + '\n');
 }
 
