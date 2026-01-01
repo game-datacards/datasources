@@ -257,7 +257,7 @@ const specialWeaponKeywords = newDataExport.wargear_ability
     showDescription: true,
   }));
 
-function parseDataExport(fileName, factionName) {
+function parseDataExport(fileName, factionName, additionalFactions = []) {
   currentFactionIndex++;
   updateProgress(factionName, 'Reading');
 
@@ -538,8 +538,17 @@ function parseDataExport(fileName, factionName) {
     // console.log('Not found old stratagem', oldStratagem.name);
   );
 
+  // Collect all faction IDs to include (primary + additional factions)
+  const factionIds = [newFaction.id];
+  for (const additionalFactionName of additionalFactions) {
+    const additionalFaction = newDataExport.faction_keyword.find((faction) => faction.name === additionalFactionName);
+    if (additionalFaction) {
+      factionIds.push(additionalFaction.id);
+    }
+  }
+
   const allDatasheetFactionKeywords = newDataExport.datasheet_faction_keyword.filter((datasheet_faction_keyword) => {
-    return datasheet_faction_keyword.factionKeywordId === newFaction.id;
+    return factionIds.includes(datasheet_faction_keyword.factionKeywordId);
   });
 
   let allDataSheets = newDataExport.datasheet.filter((datasheet) =>
@@ -1235,7 +1244,7 @@ parseDataExport('./gdc/orks.json', 'Orks');
 parseDataExport('./gdc/votann.json', 'Leagues of Votann');
 parseDataExport('./gdc/tau.json', 'T’au Empire');
 parseDataExport('./gdc/necrons.json', 'Necrons');
-parseDataExport('./gdc/aeldari.json', 'Asuryani');
+parseDataExport('./gdc/aeldari.json', 'Asuryani', ['Harlequins', 'Ynnari']);
 parseDataExport('./gdc/drukhari.json', 'Drukhari');
 
 parseDataExport('./gdc/gsc.json', 'Genestealer Cults');
