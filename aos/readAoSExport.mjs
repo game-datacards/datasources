@@ -1381,11 +1381,16 @@ console.log('\nGenerating index.json...');
 
 const indexData = {
   updated: new Date().toISOString(),
-  factions: factions.map(([file, name]) => ({
-    id: name.toUpperCase().replace(/[- ]/g, '_').replace(/'/g, ''),
-    name: name,
-    file: path.basename(file)
-  })),
+  factions: factions.map(([file, name]) => {
+    const factionPath = path.resolve(__dirname, file);
+    const factionData = JSON.parse(fs.readFileSync(factionPath, 'utf8'));
+    return {
+      id: name.toUpperCase().replace(/[- ]/g, '_').replace(/'/g, ''),
+      name: name,
+      file: path.basename(file),
+      isLegends: factionData.isLegends || false
+    };
+  }),
   generic: {
     id: 'GENERIC',
     name: 'Generic',
