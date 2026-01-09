@@ -4,7 +4,7 @@
     "banner": "#320b0d",
     "header": "#222a2f"
   },
-  "compatibleDataVersion": 720,
+  "compatibleDataVersion": 726,
   "datasheets": [
     {
       "abilities": {
@@ -2261,7 +2261,7 @@
         "other": [
           {
             "name": "Brutal Example",
-            "description": "Once per turn, while this unit is leading a unit and contains a TRAITOR ENFORCER model, you can target that unit with the Fire Overwatch Stratagem for OCP, and can do so even if you have already targeted a different unit from your army with that Stratagem this turn. Each time you use this ability, one Bodyguard model in that unit is destroyed.",
+            "description": "Once per turn, while this unit is leading a unit and contains a TRAITOR ENFORCER model, you can target that unit with the Fire Overwatch Stratagem for 0CP, and can do so even if you have already targeted a different unit from your army with that Stratagem this turn. Each time you use this ability, one Bodyguard model in that unit is destroyed.",
             "showAbility": true,
             "showDescription": true
           },
@@ -3341,6 +3341,285 @@
     },
     {
       "abilities": {
+        "core": ["Deep Strike"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Dark Pacts"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": false,
+          "value": ""
+        },
+        "other": [
+          {
+            "name": "Fearsome (Aura)",
+            "description": "While an enemy unit is within 6\" of this unit, each time that enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Terrifying Assault",
+            "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["1 Raptor Champion", "4-9 Raptors"],
+      "factions": ["Heretic Astartes"],
+      "faction_id": "CSM",
+      "fluff": "A subculture of sky warriors that cuts across Legion boundaries, Raptors hunt like avian predators and are unified by the thrill of the chase. With screeching battle cries amplified to terrify their prey, they descend in meteoric charges, a flurry of reaping blades and intense, short-ranged firepower.",
+      "id": "1968abec-d0d8-53c5-8897-ae74b9cf80f1",
+      "keywords": [
+        "Infantry",
+        "Fly",
+        "Jump Pack",
+        "Grenades",
+        "Chaos",
+        "Raptors"
+      ],
+      "leader": "",
+      "loadout": "Every model is equipped with: bolt pistol; Astartes chainsword.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": [],
+              "name": "Astartes chainsword",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": [],
+              "name": "Accursed weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "3",
+              "damage": "2",
+              "keywords": [],
+              "name": "Heavy melee weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": [],
+              "name": "Mutations",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "3",
+              "damage": "1",
+              "keywords": [],
+              "name": "Close combat weapon",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        }
+      ],
+      "name": "Raptors",
+      "points": [
+        {
+          "cost": "210",
+          "keyword": null,
+          "models": "10",
+          "active": true
+        },
+        {
+          "cost": "110",
+          "keyword": null,
+          "models": "5",
+          "active": true
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Bolt pistol",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Pistol"],
+              "name": "Plasma pistol – Standard",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "7"
+            },
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Pistol", "Hazardous"],
+              "name": "Plasma pistol – Supercharge",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "0",
+              "attacks": "D6",
+              "damage": "1",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Flamer",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "4"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-4",
+              "attacks": "1",
+              "damage": "D6",
+              "keywords": ["Melta 2"],
+              "name": "Meltagun",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "1",
+              "damage": "1",
+              "keywords": ["Rapid Fire 1"],
+              "name": "Plasma gun – Standard",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "7"
+            },
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "1",
+              "damage": "2",
+              "keywords": ["Rapid Fire 1", "Hazardous"],
+              "name": "Plasma gun – Supercharge",
+              "range": "24\"",
+              "skill": "3+",
+              "strength": "8"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "12\"",
+          "name": "Raptor",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "3+",
+          "t": "4",
+          "w": "2"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "If this unit contains 10 models, up to 2 additional Raptors can each have their Astartes chainsword replaced with one of the following options (you cannot select the same option more than once): 1 flamer and 1 close combat weapon 1 meltagun and 1 close combat weapon 1 plasma gun and 1 close combat weapon",
+        "Up to 2 Raptors can each have their Astartes chainsword replaced with one of the following options (you cannot select the same option more than once): 1 flamer and 1 close combat weapon 1 meltagun and 1 close combat weapon 1 plasma gun and 1 close combat weapon",
+        "For every 5 models in this unit, 1 Raptor can replace their Astartes chainsword with 1 mutations.",
+        "For every 5 models in this unit, up 2 Raptors can each have their Astartes chainsword replaced with 1 heavy melee weapon.",
+        "For every 5 models in this unit, up to 2 Raptors can each have their bolt pistol replaced with 1 plasma pistol (these models’ Astartes chainswords cannot be replaced).",
+        "The Raptor Champion’s Astartes chainsword can be replaced with one of the following: 1 accursed weapon 1 heavy melee weapon",
+        "The Raptor Champion’s bolt pistol can be replaced with 1 plasma pistol."
+      ],
+      "leadBy": ["Chaos Lord with Jump Pack", "Haarken Worldclaimer"]
+    },
+    {
+      "abilities": {
         "core": ["Deadly Demise D3"],
         "damaged": {
           "range": "1-5 WOUNDS REMAINING",
@@ -4399,258 +4678,6 @@
       "wargear": [
         "This model’s Hades autocannon can be replaced with 1 baleflamer."
       ]
-    },
-    {
-      "abilities": {
-        "core": ["Deep Strike"],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Dark Pacts"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": false,
-          "value": ""
-        },
-        "other": [
-          {
-            "name": "Fearsome (Aura)",
-            "description": "While an enemy unit is within 6\" of this unit, each time that enemy unit takes a Battle-shock or Leadership test, subtract 1 from the result.",
-            "showAbility": true,
-            "showDescription": true
-          },
-          {
-            "name": "Terrifying Assault",
-            "description": "At the start of the Fight phase, each enemy unit within Engagement Range of one or more units with this ability must take a Battle-shock test.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Raptor Champion", "4-9 Raptors"],
-      "factions": ["Heretic Astartes"],
-      "faction_id": "CSM",
-      "fluff": "A subculture of sky warriors that cuts across Legion boundaries, Raptors hunt like avian predators and are unified by the thrill of the chase. With screeching battle cries amplified to terrify their prey, they descend in meteoric charges, a flurry of reaping blades and intense, short-ranged firepower.",
-      "id": "1968abec-d0d8-53c5-8897-ae74b9cf80f1",
-      "keywords": ["Infantry", "Fly", "Jump Pack", "Chaos", "Raptors"],
-      "leader": "",
-      "loadout": "Every model is equipped with: bolt pistol; Astartes chainsword.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-1",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": [],
-              "name": "Astartes chainsword",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": [],
-              "name": "Accursed weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "3",
-              "damage": "2",
-              "keywords": [],
-              "name": "Power fist",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "3",
-              "damage": "1",
-              "keywords": [],
-              "name": "Close combat weapon",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        }
-      ],
-      "name": "Raptors",
-      "points": [
-        {
-          "cost": "170",
-          "keyword": null,
-          "models": "10",
-          "active": true
-        },
-        {
-          "cost": "90",
-          "keyword": null,
-          "models": "5",
-          "active": true
-        }
-      ],
-      "rangedWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Bolt pistol",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Pistol"],
-              "name": "Plasma pistol – Standard",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "7"
-            },
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Pistol", "Hazardous"],
-              "name": "Plasma pistol – Supercharge",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "0",
-              "attacks": "D6",
-              "damage": "1",
-              "keywords": ["Torrent", "Ignores Cover"],
-              "name": "Flamer",
-              "range": "12\"",
-              "skill": "N/A",
-              "strength": "4"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-4",
-              "attacks": "1",
-              "damage": "D6",
-              "keywords": ["Melta 2"],
-              "name": "Meltagun",
-              "range": "12\"",
-              "skill": "3+",
-              "strength": "9"
-            }
-          ]
-        },
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "1",
-              "damage": "1",
-              "keywords": ["Rapid Fire 1"],
-              "name": "Plasma gun – Standard",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "7"
-            },
-            {
-              "active": true,
-              "ap": "-3",
-              "attacks": "1",
-              "damage": "2",
-              "keywords": ["Rapid Fire 1", "Hazardous"],
-              "name": "Plasma gun – Supercharge",
-              "range": "24\"",
-              "skill": "3+",
-              "strength": "8"
-            }
-          ]
-        }
-      ],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "12\"",
-          "name": "Raptor",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "3+",
-          "t": "4",
-          "w": "2"
-        }
-      ],
-      "transport": "",
-      "wargear": [
-        "For every 5 models in this unit, up to 2 Raptors can each have their bolt pistol replaced with 1 plasma pistol, or have their bolt pistol and Astartes chainsword replaced with one of the following: ◦ 1 flamer and 1 close combat weapon ◦ 1 meltagun and 1 close combat weapon ◦ 1 plasma gun and 1 close combat weapon",
-        "The Raptor Champion’s Astartes chainsword can be replaced with one of the following: ◦ 1 accursed weapon ◦ 1 power fist",
-        "The Raptor Champion’s bolt pistol can be replaced with 1 plasma pistol."
-      ],
-      "leadBy": ["Chaos Lord with Jump Pack", "Haarken Worldclaimer"]
     },
     {
       "abilities": {
@@ -6609,6 +6636,104 @@
     },
     {
       "abilities": {
+        "core": ["Deep Strike"],
+        "damaged": {
+          "description": "",
+          "range": "",
+          "showDamagedAbility": false,
+          "showDescription": true
+        },
+        "faction": ["Dark Pacts"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "5+"
+        },
+        "other": [
+          {
+            "name": "Warp Strike",
+            "description": "At the end of the Fight phase, if this unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["1 Warp Talon Champion", "4-9 Warp Talons"],
+      "factions": ["Heretic Astartes"],
+      "faction_id": "CSM",
+      "fluff": "Often appearing from the immaterium, wreathed in unholy fire and with their armour warped into daemonic likenesses, Warp Talons are tainted warriors who have fallen further than most. They are skyborne assassins, their flaming talons equally adept at slicing through armour or tearing through the fabric of realspace.",
+      "id": "03dd37e5-b1cc-573b-8660-3bf964254426",
+      "keywords": [
+        "Infantry",
+        "Fly",
+        "Jump Pack",
+        "Grenades",
+        "Chaos",
+        "Daemon",
+        "Warp Talons"
+      ],
+      "leader": "",
+      "loadout": "Every model is equipped with: warp claws.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "4",
+              "damage": "1",
+              "keywords": ["Twin-linked"],
+              "name": "Warp claws",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "5"
+            }
+          ]
+        }
+      ],
+      "name": "Warp Talons",
+      "points": [
+        {
+          "cost": "270",
+          "keyword": null,
+          "models": "10",
+          "active": true
+        },
+        {
+          "cost": "125",
+          "keyword": null,
+          "models": "5",
+          "active": true
+        }
+      ],
+      "rangedWeapons": [],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "12\"",
+          "name": "Warp Talon",
+          "oc": "1",
+          "showDamagedMarker": false,
+          "showName": true,
+          "sv": "3+",
+          "t": "4",
+          "w": "2"
+        }
+      ],
+      "transport": "",
+      "wargear": ["None"]
+    },
+    {
+      "abilities": {
         "core": [],
         "damaged": {
           "description": "",
@@ -7491,103 +7616,6 @@
         "Fabius Bile",
         "Huron Blackheart"
       ]
-    },
-    {
-      "abilities": {
-        "core": ["Deep Strike"],
-        "damaged": {
-          "description": "",
-          "range": "",
-          "showDamagedAbility": false,
-          "showDescription": true
-        },
-        "faction": ["Dark Pacts"],
-        "invul": {
-          "info": "",
-          "showAtTop": true,
-          "showInfo": false,
-          "showInvulnerableSave": true,
-          "value": "5+"
-        },
-        "other": [
-          {
-            "name": "Warp Strike",
-            "description": "At the end of the Fight phase, if this unit destroyed one or more enemy units this phase and is not within Engagement Range of one or more enemy units, you can remove this unit from the battlefield and place it into Strategic Reserves.",
-            "showAbility": true,
-            "showDescription": true
-          }
-        ],
-        "primarch": [],
-        "special": [],
-        "wargear": []
-      },
-      "cardType": "DataCard",
-      "composition": ["1 Warp Talon Champion", "4-9 Warp Talons"],
-      "factions": ["Heretic Astartes"],
-      "faction_id": "CSM",
-      "fluff": "Often appearing from the immaterium, wreathed in unholy fire and with their armour warped into daemonic likenesses, Warp Talons are tainted warriors who have fallen further than most. They are skyborne assassins, their flaming talons equally adept at slicing through armour or tearing through the fabric of realspace.",
-      "id": "03dd37e5-b1cc-573b-8660-3bf964254426",
-      "keywords": [
-        "Infantry",
-        "Fly",
-        "Jump Pack",
-        "Chaos",
-        "Daemon",
-        "Warp Talons"
-      ],
-      "leader": "",
-      "loadout": "Every model is equipped with: warp claws.",
-      "meleeWeapons": [
-        {
-          "active": true,
-          "profiles": [
-            {
-              "active": true,
-              "ap": "-2",
-              "attacks": "4",
-              "damage": "1",
-              "keywords": ["Twin-linked"],
-              "name": "Warp claws",
-              "range": "Melee",
-              "skill": "3+",
-              "strength": "5"
-            }
-          ]
-        }
-      ],
-      "name": "Warp Talons",
-      "points": [
-        {
-          "cost": "270",
-          "keyword": null,
-          "models": "10",
-          "active": true
-        },
-        {
-          "cost": "125",
-          "keyword": null,
-          "models": "5",
-          "active": true
-        }
-      ],
-      "rangedWeapons": [],
-      "source": "40k-10e",
-      "stats": [
-        {
-          "active": true,
-          "ld": "6+",
-          "m": "12\"",
-          "name": "Warp Talon",
-          "oc": "1",
-          "showDamagedMarker": false,
-          "showName": true,
-          "sv": "3+",
-          "t": "4",
-          "w": "2"
-        }
-      ],
-      "transport": "",
-      "wargear": ["None"]
     },
     {
       "abilities": {
@@ -15584,5 +15612,5 @@
       "detachment": "Deceptors"
     }
   ],
-  "updated": "2025-12-22T19:44:36.346Z"
+  "updated": "2026-01-09T16:08:46.958Z"
 }
