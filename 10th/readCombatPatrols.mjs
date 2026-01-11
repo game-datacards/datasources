@@ -9,6 +9,9 @@ import { sortObj } from 'jsonabc';
 // Array to collect change reports for each combat patrol
 const changeReports = [];
 
+// Array to collect combat patrol file info for index
+const combatPatrolIndex = [];
+
 // Progress tracking
 let currentPatrolIndex = 0;
 let totalPatrols = 0;
@@ -915,6 +918,13 @@ function processCombatPatrol(combatPatrol) {
 
   fs.writeFileSync(filePath, JSON.stringify(newCombatPatrol, null, 2));
 
+  // Add to index (use just the filename without directory prefix)
+  combatPatrolIndex.push({
+    id: newCombatPatrol.id,
+    name: newCombatPatrol.name,
+    file: path.basename(fileName),
+  });
+
   updateProgress(detachmentName, 'Formatting');
 
   // Run prettier on the output file
@@ -1164,6 +1174,33 @@ function handleGitStaging() {
   console.log('='.repeat(80) + '\n');
 }
 
+// Write index file with all combat patrols
+function writeIndexFile() {
+  const combatPatrolDir = path.resolve(__dirname, 'combatpatrol');
+  const indexPath = path.join(combatPatrolDir, 'index.json');
+
+  // Sort alphabetically by name
+  combatPatrolIndex.sort((a, b) => a.name.localeCompare(b.name));
+
+  const indexData = {
+    combatPatrols: combatPatrolIndex,
+    updated: new Date().toISOString(),
+    count: combatPatrolIndex.length,
+  };
+
+  fs.writeFileSync(indexPath, JSON.stringify(indexData, null, 2));
+
+  // Run prettier on the index file
+  try {
+    execSync(`npx prettier --write "${indexPath}"`, { stdio: 'pipe' });
+  } catch (e) {
+    // Prettier may not be available, continue without formatting
+  }
+
+  console.log(`Index file written: ${indexPath} (${combatPatrolIndex.length} combat patrols)\n`);
+}
+
 readCombatPatrols();
+writeIndexFile();
 printSummaryReport();
 handleGitStaging();
