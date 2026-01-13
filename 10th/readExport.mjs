@@ -276,6 +276,48 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
     return faction_keyword.name === factionName;
   });
 
+  // Check if this faction is a child faction (has a parent)
+  const isChildFaction = newFaction.parentFactionKeywordId !== null;
+  const parentFaction = isChildFaction
+    ? newDataExport.faction_keyword.find((fk) => fk.id === newFaction.parentFactionKeywordId)
+    : null;
+
+  // Get all child factions (factions that have this faction as their parent)
+  const childFactions = newDataExport.faction_keyword
+    .filter((fk) => fk.parentFactionKeywordId === newFaction.id);
+
+  // Build faction ID to name mapping for detachment attribution
+  const factionIdToName = new Map([
+    [newFaction.id, newFaction.name],
+    ...childFactions.map((fk) => [fk.id, fk.name])
+  ]);
+
+  // All faction IDs to include for detachment lookup
+  // For child factions: only include own faction (not parent) to get chapter-specific detachments only
+  // For parent factions: include self + children
+  const detachmentFactionIds = isChildFaction
+    ? [newFaction.id]
+    : [newFaction.id, ...childFactions.map((fk) => fk.id)];
+
+  // Chapter supplement publications to exclude from parent faction exports
+  // These have their own dedicated export files
+  const chapterSupplementPublications = [
+    'Codex Supplement: Black Templars',
+    'Codex Supplement: Space Wolves',
+    'Codex Supplement: Dark Angels',
+    'Codex Supplement: Blood Angels',
+  ];
+
+  // Child factions that have their own dedicated export files
+  // Their detachments should be excluded from the parent faction export
+  const childFactionsWithDedicatedFiles = [
+    'Blood Angels',
+    'Dark Angels',
+    'Space Wolves',
+    'Black Templars',
+    'Deathwatch',
+  ];
+
   const newPublication = newDataExport.publication.find((publication) => {
     return (
       publication.factionKeywordId === newFaction.id &&
@@ -284,13 +326,42 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
     );
   });
 
-  // Get detachments via detachment_faction_keyword (includes shared detachments from parent factions)
+  // Get detachments via detachment_faction_keyword (includes shared detachments from parent factions and child factions)
   const detachmentFactionLinks = newDataExport.detachment_faction_keyword.filter(
-    (link) => link.factionKeywordId === newFaction.id
+    (link) => detachmentFactionIds.includes(link.factionKeywordId)
   );
-  const detachments = detachmentFactionLinks
-    .map((link) => newDataExport.detachment.find((d) => d.id === link.detachmentId))
-    .filter((d) => d !== undefined);
+
+  // Build detachments with faction attribution, deduplicating by ID
+  const detachmentsMap = new Map();
+  for (const link of detachmentFactionLinks) {
+    const detachment = newDataExport.detachment.find((d) => d.id === link.detachmentId);
+    if (detachment && !detachmentsMap.has(detachment.id)) {
+      detachmentsMap.set(detachment.id, {
+        ...detachment,
+        faction: factionIdToName.get(link.factionKeywordId) || factionName
+      });
+    }
+  }
+
+  let detachments = [...detachmentsMap.values()];
+
+  // For child factions: exclude detachments that are also linked to the parent faction
+  // These shared detachments should only appear in the parent's export
+  if (isChildFaction && parentFaction) {
+    const parentDetachmentIds = new Set(
+      newDataExport.detachment_faction_keyword
+        .filter((link) => link.factionKeywordId === parentFaction.id)
+        .map((link) => link.detachmentId)
+    );
+    detachments = detachments.filter((d) => !parentDetachmentIds.has(d.id));
+  }
+
+  // For parent factions: filter out detachments from child factions that have their own dedicated files
+  if (childFactions.length > 0) {
+    detachments = detachments.filter(
+      (d) => !childFactionsWithDedicatedFiles.includes(d.faction)
+    );
+  }
 
   const detachmentIds = detachments.map((d) => d.id);
 
@@ -316,8 +387,21 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
       const publication = newDataExport.publication.find((p) => p.id === rule.publicationId);
       return publication && !publication.isCombatPatrol;
     })
+    // Filter out chapter supplement rules when extracting parent faction (they duplicate main codex rules)
+    // But allow them when extracting the chapter itself (e.g., Blood Angels extracting Blood Angels supplement)
+    .filter((rule) => {
+      const publication = newDataExport.publication.find((p) => p.id === rule.publicationId);
+      if (!publication) return false;
+      // Only filter supplements when extracting a parent faction that has children
+      if (childFactions.length > 0 && chapterSupplementPublications.includes(publication.name)) {
+        return false;
+      }
+      return true;
+    })
     // Remove duplicates by id
     .filter((rule, index, self) => index === self.findIndex((r) => r.id === rule.id))
+    // Remove duplicates by name (prefer first occurrence which is typically main codex)
+    .filter((rule, index, self) => index === self.findIndex((r) => r.name === rule.name))
     .sort((a, b) => a.displayOrder - b.displayOrder);
 
   armyRules = armyRules.map((rule) => {
@@ -369,6 +453,7 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
 
     return {
       detachment: detachment.name,
+      faction: detachment.faction,
       rules: detachmentRules,
     }
   });
@@ -377,7 +462,10 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
 
 
   oldParsedUnits.detachments = detachments.map((detachment) => {
-    return detachment.name;
+    return {
+      name: detachment.name,
+      faction: detachment.faction
+    };
   });
 
   oldParsedUnits.stratagems = stratagems?.map(
@@ -436,6 +524,10 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
           detachments.find((detachment) => {
             return detachment.id === newStratagem.detachmentId;
           })?.name || '',
+        detachment_faction:
+          detachments.find((detachment) => {
+            return detachment.id === newStratagem.detachmentId;
+          })?.faction || factionName,
       };
     }
     // console.log('Not found old stratagem', oldStratagem.name);
@@ -533,6 +625,10 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
           detachments.find((detachment) => {
             return detachment.id === newEnhancement.detachmentId;
           })?.name || '',
+        detachment_faction:
+          detachments.find((detachment) => {
+            return detachment.id === newEnhancement.detachmentId;
+          })?.faction || factionName,
       };
     }
     // console.log('Not found old stratagem', oldStratagem.name);
@@ -709,6 +805,15 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
   allDataSheets = allDataSheets.filter(
     (card) => card.publication.isCombatPatrol === false || card.publication.isCombatPatrol === 0
   );
+
+  // Filter out chapter supplement datasheets when extracting parent faction
+  // These units have their own versions in dedicated chapter files
+  // Only apply when extracting a parent faction that has children
+  if (childFactions.length > 0) {
+    allDataSheets = allDataSheets.filter(
+      (card) => !chapterSupplementPublications.includes(card.publication.name)
+    );
+  }
 
   allDataSheets.map((card, index) => {
     let newUnit = {
@@ -1062,6 +1167,35 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
     //And set the name
     newUnit.name = card.name;
 
+    // Determine chapter/subfaction for this datasheet
+    // Check which factions this datasheet is linked to
+    const datasheetFactionLinks = newDataExport.datasheet_faction_keyword.filter(
+      (link) => link.datasheetId === card.id
+    );
+    const linkedFactionIds = datasheetFactionLinks.map((link) => link.factionKeywordId);
+
+    // Check for child faction links (e.g., Ultramarines, Space Wolves for Space Marines)
+    let chapter = null;
+    for (const childFaction of childFactions) {
+      if (linkedFactionIds.includes(childFaction.id)) {
+        chapter = childFaction.name;
+        break;
+      }
+    }
+
+    // Check for additionalFactions links (e.g., Harlequins, Ynnari for Aeldari)
+    if (!chapter && additionalFactions.length > 0) {
+      for (const addFactionName of additionalFactions) {
+        const addFaction = newDataExport.faction_keyword.find((fk) => fk.name === addFactionName);
+        if (addFaction && linkedFactionIds.includes(addFaction.id)) {
+          chapter = addFactionName;
+          break;
+        }
+      }
+    }
+
+    newUnit.chapter = chapter;
+
     newUnit.leadBy = undefined;
     newUnit.leads = undefined;
 
@@ -1121,6 +1255,21 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
   oldParsedUnits.updated = new Date().toISOString();
   oldParsedUnits.compatibleDataVersion = JSON.parse(newDataExportFile).metadata.data_version;
 
+  // Add parent faction reference for child factions
+  // Frontend can use this to look up shared content (detachments, stratagems, etc.)
+  // Map parent faction names to their output file IDs
+  const parentFactionIdMap = {
+    'Adeptus Astartes': 'SM',
+  };
+
+  if (isChildFaction && parentFaction) {
+    oldParsedUnits.parent_id = parentFactionIdMap[parentFaction.name] || null;
+    oldParsedUnits.parent_name = parentFaction.name;
+  } else {
+    oldParsedUnits.parent_id = null;
+    oldParsedUnits.parent_name = null;
+  }
+
   const __filename = fileURLToPath(import.meta.url);
   const __dirname = path.dirname(__filename);
   const filePath = path.resolve(__dirname, fileName);
@@ -1173,12 +1322,17 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
   const enhancementChanges = compareByName(oldEnhancements, newEnhancements, 'enhancements');
   const armyRuleChanges = compareByName(oldArmyRules, newArmyRules, 'armyRules');
 
-  // Track detachment changes (simple string array comparison)
+  // Track detachment changes (compare by name for object format)
+  const oldDetachmentNames = oldDetachments?.map(d => typeof d === 'object' ? d.name : d) || [];
+  const newDetachmentNames = newDetachments?.map(d => typeof d === 'object' ? d.name : d) || [];
   const detachmentChanges = {
-    added: newDetachments?.filter(d => !oldDetachments?.includes(d)) || [],
-    removed: oldDetachments?.filter(d => !newDetachments?.includes(d)) || [],
+    added: newDetachmentNames.filter(name => !oldDetachmentNames.includes(name)),
+    removed: oldDetachmentNames.filter(name => !newDetachmentNames.includes(name)),
     modified: []
   };
+
+  // Check for parent_id changes
+  const parentIdChanged = oldData.parent_id !== newData.parent_id;
 
   // Check if there are any actual changes
   const hasChanges =
@@ -1195,7 +1349,8 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
     detachmentChanges.removed.length > 0 ||
     armyRuleChanges.added.length > 0 ||
     armyRuleChanges.removed.length > 0 ||
-    armyRuleChanges.modified.length > 0;
+    armyRuleChanges.modified.length > 0 ||
+    parentIdChanged;
 
   // Store change report
   changeReports.push({
