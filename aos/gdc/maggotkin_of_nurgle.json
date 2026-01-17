@@ -8,19 +8,23 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2025-12-19T07:31:13.887Z",
-  "compatibleDataVersion": 369,
+  "updated": "2026-01-17T11:39:42.937Z",
+  "compatibleDataVersion": 377,
   "warscrolls": [
     {
-      "id": "c26302e4-b28e-5ba9-b2e1-089c65995593",
-      "name": "Beasts of Nurgle",
+      "id": "c987854f-52b9-582e-a2c5-d6c36b332b1d",
+      "name": "Beast of Nurgle",
       "subname": null,
       "cardType": "Warscroll",
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
       "keywords": ["Daemon", "Ward (5+)", "Beast"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Beast, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "7\"",
@@ -67,15 +71,96 @@
         {
           "name": "Attention Seekers",
           "phase": "chargePhase",
-          "phaseDetails": "Any Charge Phase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": "If this unit is not in combat, pick the closest enemy unit to it to be the target. If 2 or more enemy units are tied to be the closest, you can pick which is the target. Then, make a charge roll of 2D6.",
-          "effect": "This unit can move a distance up to the value of the charge roll. During that move, this unit can move into combat and can pass through models in the target unit, but it must end that move within 1\" of the target. If it does so, this unit has charged. Then, inflict D3 mortal damage on the target.",
+          "effect": "This unit can move a distance up to the value of the charge roll. It can move through the combat ranges of enemy units and must end that move within 1/2\" of the target. Then, inflict D3 mortal damage on the target. This unit has charged.",
           "keywords": ["Core", "Charge", "Move"]
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "f4743a03-1182-5f67-ba03-5f19ed4d838e",
+      "name": "Belga the Cystwitch",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factions": ["Maggotkin of Nurgle"],
+      "keywords": [
+        "Rotbringers",
+        "Priest (1)",
+        "Unique",
+        "Infantry",
+        "Ward (6+)",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Unique, Hero, Priest (1), Infantry, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "stats": {
+        "move": "4\"",
+        "save": "5+",
+        "control": "3",
+        "health": "7",
+        "ward": "6+",
+        "wizard": null,
+        "priest": "1"
+      },
+      "points": 120,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Thrice-tainted Staff",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Ruptured Cysts",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 4,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible **DISEASED** enemy unit within 18\" of this unit to be the target, then make a chanting roll of D6.",
+          "effect": "Inflict D3 mortal damage on the target. Then, inflict 1 mortal damage on each other **DISEASED** enemy unit within 3\" of the target. If the chanting roll was 9+, you can also pick a friendly **PLAGUEBEARERS** unit within 12\" of the target. For each enemy **INFANTRY** model slain by this ability this turn, you can return 1 slain model to that friendly unit.",
+          "keywords": ["Prayer"]
+        },
+        {
+          "name": "Scry the Filth",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Pick 1 of the following effects to apply for the rest of the turn:\n\n• Add 1 to casting rolls for friendly **MAGGOTKIN OF NURGLE WIZARDS** while they are within 3\" of this unit.\n• Add 1 to chanting rolls for friendly **MAGGOTKIN OF NURGLE PRIESTS** while they are within 3\" of this unit."
         }
       ],
       "summonedBy": null,
@@ -91,24 +176,28 @@
       "factions": ["Maggotkin of Nurgle"],
       "keywords": [
         "Rotbringers",
-        "Ward (5+)",
         "Monster",
         "Wizard (1)",
         "Unique",
+        "Ward (6+)",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Unique, Hero, Monster, Wizard (1), Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Unique, Hero, Monster, Wizard (1), Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "8\"",
         "save": "4+",
         "control": "5",
         "health": "14",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": "1",
         "priest": null
       },
-      "points": 300,
+      "points": 270,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -137,10 +226,10 @@
             "wound": "3+",
             "rend": "1",
             "damage": "2",
-            "abilities": []
+            "abilities": ["Anti-MONSTER (+1 Rend)"]
           },
           {
-            "name": "Bilespurter’s Claws and Maw",
+            "name": "Bilespurter’s Claws",
             "type": "melee",
             "range": null,
             "attacks": "5",
@@ -163,7 +252,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Bilespurter’s Claws and Maw** is 3."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Bilespurter’s Claws** is 3."
         },
         {
           "name": "Miasma of Pestilence",
@@ -174,8 +263,8 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
-          "effect": "Until the start of your next turn, each time a friendly ability is used that resulted in any damage points being allocated to the target, roll a dice. On a 4+, allocate 1 additional damage point to the target (ward rolls cannot be made for that damage point).",
+          "declare": "Pick a visible friendly unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, other than the **Companion** weapon ability, weapon abilities for attacks that target that friendly unit have no effect.",
           "keywords": ["Spell"]
         },
         {
@@ -187,9 +276,102 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick each enemy unit within 7\" of this unit to be the targets.",
-          "effect": "Roll a dice for each target. On a 4+:\n\n• Inflict 1 mortal damage on the target.\n• Subtract 1 from hit rolls for the target’s combat attacks for the rest of the turn.",
+          "declare": "Pick an enemy **MONSTER** in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, subtract 1 from the Attacks characteristic of the target’s melee weapons for the rest of the turn.",
           "keywords": ["Rampage"]
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "586552c7-9118-5046-9252-b2f947e2ed9a",
+      "name": "Cankerborn",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factions": ["Maggotkin of Nurgle"],
+      "keywords": [
+        "Daemon",
+        "Ward (5+)",
+        "Plague Scion",
+        "Unique",
+        "Infantry",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
+      "referenceKeywords": "Unique, Hero, Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
+      "stats": {
+        "move": "4\"",
+        "save": "5+",
+        "control": "2",
+        "health": "6",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 200,
+      "modelCount": 2,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Blightblades",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "3",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Entropy Endures",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit has 2 models and would be automatically destroyed, it is not automatically destroyed. Instead, 1 model in this unit is slain."
+        },
+        {
+          "name": "From the Tainted Earth",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Remove this unit from the battlefield and set it up again more than 9\" from all enemy units and wholly within 3\" of:\n\n• An objective or terrain feature that has a friendly **Pestilent Pollutant**, or\n\n• A **POLLUTED** terrain feature (see Gelgus Pust’s warscroll), or\n• An objective you control.",
+          "keywords": ["Core", "Move"]
+        },
+        {
+          "name": "Utter Defilement",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "This unit’s **Pestilent Pollutants** are tokens. This unit has 2 **Pestilent Pollutants**. Pick an objective or terrain feature within 12\" of this unit to be the target.",
+          "effect": "Place 1 of this unit’s **Pestilent Pollutants** next to the target. If both of this unit’s **Pestilent Pollutants** are already on the battlefield, pick 1 of them, remove it from the battlefield and place it next to the target instead."
         }
       ],
       "summonedBy": null,
@@ -204,7 +386,11 @@
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
       "keywords": ["Daemon", "Ward (5+)", "Unique", "Infantry", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Unique, Hero, Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "4\"",
@@ -272,7 +458,12 @@
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
       "keywords": ["Ward (5+)", "Faction Terrain"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Faction Terrain, Ward (5+), Chaos, Maggotkin of Nurgle",
       "stats": {
         "move": "-",
@@ -305,16 +496,40 @@
       },
       "abilities": [
         {
-          "name": "Riddled With Disease",
-          "phase": "endOfTurn",
-          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
-          "icon": "special",
+          "name": "Rot-Blossom",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit within 6\" of this terrain feature to be the target.",
-          "effect": "Roll a dice. On a 4+, the target has the **DISEASED** keyword."
+          "declare": null,
+          "effect": "Friendly **ROTBRINGERS** units have **WARD (5+)** while they are wholly within 12\" of this terrain feature"
+        },
+        {
+          "name": "Tendrils of Corruption",
+          "phase": "movementPhase",
+          "phaseDetails": "Any Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "For the rest of the phase, this terrain feature has a Move characteristic of 3\" and can immediately move 3\". It cannot move through or end that move within the combat ranges of enemy units and it cannot end that move on an objective or another terrain feature.\n\n**Designer’s Note:** *This terrain feature cannot use* **RUN**, **RETREAT** *or* **CHARGE** *abilities.*"
+        },
+        {
+          "name": "Riddled With Disease",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time a friendly **MAGGOTKIN OF NURGLE DAEMON** unit wholly within 12\" of this terrain feature uses the ‘Rally’ command, you can make 1 additional rally roll of D6. If that unit is a non-**HERO** unit, you can make 3 additional rally rolls of D6 instead."
         }
       ],
       "summonedBy": null,
@@ -336,7 +551,11 @@
         "Infantry",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
       "referenceKeywords": "Unique, Hero, Wizard (1), Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "4\"",
@@ -398,6 +617,219 @@
       "notes": null
     },
     {
+      "id": "76033048-3573-5b01-879d-d88d7cf3757d",
+      "name": "Festus the Leechlord",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factions": ["Maggotkin of Nurgle"],
+      "keywords": [
+        "Daemon",
+        "Ward (5+)",
+        "Monster",
+        "Wizard (2)",
+        "Unique",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
+      "referenceKeywords": "Unique, Hero, Monster, Wizard (2), Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
+      "stats": {
+        "move": "5\"",
+        "save": "4+",
+        "control": "5",
+        "health": "14",
+        "ward": "5+",
+        "wizard": "2",
+        "priest": null
+      },
+      "points": 320,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Gnarled Plague Staff",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": ["Crit (Auto-wound)"]
+          },
+          {
+            "name": "Gathoblyt’s Fanged Maw",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Crit (Mortal)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Gathoblyt’s Fanged Maw** is 3."
+        },
+        {
+          "name": "Annelid Engorgement",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "For each enemy unit that was in combat with this unit this turn and was destroyed this turn, this unit gains D3 **leech points** for the rest of the battle. Add 1 to this unit’s Control characteristic for each **leech point** it has."
+        },
+        {
+          "name": "Vile Poisons and Debilitating Toxins",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target. You cannot pick a **MANIFESTATION** or terrain feature.",
+          "effect": "You and your opponent must roll off. Add this unit’s Control characteristic to your roll and the target’s Control characteristic to your opponent’s roll. If your roll is higher, apply the corresponding effect:\n\n• If the target is a **HERO** or **MONSTER**, inflict an amount of mortal damage on the target equal to the difference between your roll and your opponent’s roll.\n\n• If the target is a non-**HERO** non‑**MONSTER** unit, 1 model in the target unit is slain."
+        },
+        {
+          "name": "The Leechlord's Curse",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 6,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "This unit gains 1 **leech point**. Until the start of your next turn, each time the target uses a **CORE** ability or command, after that ability has been resolved, roll a dice. On a 3+, inflict 1 mortal damage on the target. Then, if any damage points were allocated to the target by this ability, **Heal (1)** this unit.",
+          "keywords": ["Spell"]
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "8ba1c860-d31f-5d2b-ab85-1c49aafd0ad9",
+      "name": "Gelgus Pust",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factions": ["Maggotkin of Nurgle"],
+      "keywords": ["Daemon", "Ward (5+)", "Unique", "Infantry", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
+      "referenceKeywords": "Unique, Hero, Infantry, Fly, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
+      "stats": {
+        "move": "8\"",
+        "save": "3+",
+        "control": "5",
+        "health": "8",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 220,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Malady and Contagion",
+            "type": "melee",
+            "range": null,
+            "attacks": "7",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "3",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Polluting Aura",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While a friendly **MAGGOTKIN OF NURGLE** unit is wholly within 6\" of a **POLLUTED** terrain feature, each time that unit uses or is the target of an ability that would heal 1 or more damage points, add 1 to the number of damage points healed.\n\nWhile an enemy unit is within 6\" of a **POLLUTED** terrain feature, each time that unit uses or is the target of an ability that would heal 1 or more damage points, subtract 1 from the number of damage points healed, to a minimum of 0."
+        },
+        {
+          "name": "Parasitic Infestation",
+          "phase": "chargePhase",
+          "phaseDetails": "Any Charge Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick each enemy unit that charged this turn and is in combat with this unit to be the targets.",
+          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        },
+        {
+          "name": "Master Contaminator",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Battle, Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a terrain feature within 6\" of this unit to be the target.",
+          "effect": "The target has the **POLLUTED** keyword for the rest of the battle."
+        },
+        {
+          "name": "Grin of the Grandfather",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick each enemy unit in combat with this unit to be the targets.",
+          "effect": "Roll a dice for each target. If the roll equals or exceeds the target’s Control characteristic, pick 1 of the following to apply for the rest of the turn:\n\n• Subtract 1 from hit rolls for the target’s combat attacks.\n• Subtract 1 from wound rolls for the target’s combat attacks.\n• Subtract 1 from the target’s Control characteristic."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
       "id": "baf90658-68bb-5f54-86a5-d48d984e61cd",
       "name": "Grandfather's Gardeners",
       "subname": null,
@@ -413,7 +845,11 @@
         "Unique",
         "Infantry"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Unique, Infantry, Champion, Standard Bearer, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "4\"",
@@ -493,7 +929,7 @@
         "wizard": "2",
         "priest": null
       },
-      "points": 460,
+      "points": 430,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -513,17 +949,6 @@
           }
         ],
         "melee": [
-          {
-            "name": "Host of Nurglings",
-            "type": "melee",
-            "range": null,
-            "attacks": "10",
-            "hit": "5+",
-            "wound": "5+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": ["Crit (Auto-wound)", "Companion"]
-          },
           {
             "name": "Colossal Blight Weapons",
             "type": "melee",
@@ -570,10 +995,10 @@
           "icon": "rallying",
           "castingValue": null,
           "chantValue": null,
-          "cpCost": null,
+          "cpCost": 1,
           "isReaction": false,
           "declare": "Pick a friendly **MAGGOTKIN OF NURGLE DAEMON** unit that started the battle with 3 or more models and that has been destroyed to be the target.",
-          "effect": "Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12\" of this unit and more than 9\" from all enemy units."
+          "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 6\" of this unit or a friendly **Feculent Gnarlmaw** and more than 9\" from all enemy units."
         },
         {
           "name": "Plague Wind",
@@ -584,7 +1009,7 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+          "declare": "Pick a visible enemy unit within 12\" of this unit to be the target. You cannot pick a **MANIFESTATION** or terrain feature. Then, make a casting roll of 2D6.",
           "effect": "The target has the **DISEASED** keyword.",
           "keywords": ["Spell"]
         }
@@ -600,19 +1025,23 @@
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
-      "keywords": ["Rotbringers", "Ward (5+)", "Unique", "Infantry", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Unique, Hero, Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "keywords": ["Rotbringers", "Unique", "Infantry", "Ward (6+)", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Unique, Hero, Infantry, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "4\"",
         "save": "4+",
         "control": "2",
         "health": "7",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 130,
+      "points": 120,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -628,7 +1057,7 @@
             "wound": "2+",
             "rend": "1",
             "damage": "2",
-            "abilities": ["Crit (Mortal)", "Anti-HERO (+1 Rend)"]
+            "abilities": ["Anti-HERO (+1 Rend)", "Crit (Mortal)"]
           }
         ]
       },
@@ -682,19 +1111,23 @@
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
-      "keywords": ["Rotbringers", "Ward (5+)", "Priest (1)", "Cavalry", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Hero, Priest (1), Cavalry, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "keywords": ["Rotbringers", "Priest (1)", "Ward (6+)", "Cavalry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Hero, Priest (1), Cavalry, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "8\"",
         "save": "3+",
         "control": "2",
         "health": "7",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": "1"
       },
-      "points": 150,
+      "points": 140,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -743,13 +1176,13 @@
           "name": "Knell of Doom",
           "phase": "heroPhase",
           "phaseDetails": "Once Per Battle (Army), Enemy Hero Phase",
-          "icon": "special",
+          "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick up to 3 enemy units within 24\" of this unit to be the targets.",
-          "effect": "Until the start of your next turn, subtract 1\" from the Move characteristic of each target and subtract 1 from run rolls and charge rolls for each target."
+          "declare": "Pick an enemy unit within 18\" of this unit to be the target.",
+          "effect": "Roll a D3. If the target is within 6\" of a friendly **Sloven Knights** unit, you can roll a D6 instead. If the roll equals or exceeds the target’s Control characteristic, subtract 1 from wound rolls for the target’s attacks until the start of your next turn."
         }
       ],
       "summonedBy": null,
@@ -764,7 +1197,11 @@
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
       "keywords": ["Daemon", "Ward (5+)", "Unique", "Cavalry", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Unique, Hero, Cavalry, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "4\"",
@@ -794,7 +1231,7 @@
             "abilities": []
           },
           {
-            "name": "Slime-encrusted Jaws",
+            "name": "Mulch's Slime-encrusted Jaws",
             "type": "melee",
             "range": null,
             "attacks": "4",
@@ -808,15 +1245,27 @@
       },
       "abilities": [
         {
-          "name": "Beast Handler",
-          "phase": "movementPhase",
-          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
-          "icon": "special",
+          "name": "Gnarlmaw Whisperer",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Your Turn",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a friendly **Beasts of Nurgle** unit that has been destroyed.",
+          "declare": "Pick a friendly **Feculent Gnarlmaw** to be the target.",
+          "effect": "Remove the target from the battlefield and set it up again wholly within 12\" of this unit and more than 3\" from all enemy units, objectives and other terrain features."
+        },
+        {
+          "name": "Beast Handler",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **Beast of Nurgle** unit that has been destroyed.",
           "effect": "Roll a dice. On a 3+, set up a replacement unit wholly within 12\" of this unit and more than 9\" from all enemy units."
         },
         {
@@ -829,7 +1278,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If there are fewer than 3 friendly **Feculent Gnarlmaws** on the battlefield, you can set up a **Feculent Gnarlmaw** wholly within 12\" of this unit, more than 3\" from all enemy units, objectives and other terrain features."
+          "effect": "If there is no more than 1 friendly **Feculent Gnarlmaw** on the battlefield, you can set up a **Feculent Gnarlmaw** wholly within 12\" of this unit and more than 3\" from all enemy units, objectives and other terrain features."
         }
       ],
       "summonedBy": null,
@@ -843,15 +1292,19 @@
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
-      "keywords": ["Rotbringers", "Ward (5+)", "Fly", "Cavalry", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Hero, Cavalry, Fly, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "keywords": ["Rotbringers", "Ward (6+)", "Fly", "Cavalry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Hero, Cavalry, Fly, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "8\"",
         "save": "3+",
         "control": "2",
         "health": "8",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
@@ -897,7 +1350,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "If this unit charged this turn, pick this unit and up to 2 friendly **Pusgoyle Blightlords** units wholly within 12\" of this unit to be the targets.",
-          "effect": "Add 1 to the Rend characteristic of the targets’ **Companion** melee weapons for the rest of the turn."
+          "effect": "Add 1 to the Rend characteristic of the targets’ **Rot Fly’s Mouthparts and Sting** for the rest of the turn."
         },
         {
           "name": "Vectors of Foulest Contagion",
@@ -925,19 +1378,23 @@
       "factions": ["Maggotkin of Nurgle"],
       "keywords": [
         "Rotbringers",
-        "Ward (5+)",
         "Rotbringer Lord",
         "Infantry",
+        "Ward (6+)",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Hero, Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Hero, Infantry, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "4\"",
         "save": "3+",
         "control": "2",
         "health": "7",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
@@ -963,28 +1420,28 @@
       },
       "abilities": [
         {
-          "name": "Thrice-ripened Death's Heads",
-          "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
-          "effect": "Roll D3. On 2+, inflict an amount of mortal damage on the target equal to the roll."
-        },
-        {
           "name": "Festering Bulwark",
           "phase": "combatPhase",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick this unit and a friendly **Putrid Blightkings** unit within 3\" of this unit to be the targets.",
+          "effect": "Roll a dice. On a 3+, ignore negative modifiers to save rolls for the targets for the rest of the turn."
+        },
+        {
+          "name": "Thrice-ripened Death's Heads",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "The **Blighted Weapons** used by friendly **Putrid Blightkings** units have **Anti‑CHARGE (+1 Rend)** while those units are wholly within 12\" of this unit."
+          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit or with a friendly **Plague Drones** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Roll D3. On 2+, inflict an amount of mortal damage on the target equal to the roll."
         }
       ],
       "summonedBy": null,
@@ -1000,19 +1457,23 @@
       "factions": ["Maggotkin of Nurgle"],
       "keywords": [
         "Rotbringers",
-        "Ward (5+)",
         "Rotbringer Lord",
         "Infantry",
+        "Ward (6+)",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Hero, Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Hero, Infantry, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "4\"",
         "save": "4+",
         "control": "2",
         "health": "7",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
@@ -1038,18 +1499,6 @@
       },
       "abilities": [
         {
-          "name": "Lord of the Blightkings",
-          "phase": "chargePhase",
-          "phaseDetails": "Passive",
-          "icon": "movement",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "Add 1 to charge rolls for friendly **Putrid Blightkings** units while they are wholly within 12\" of this unit."
-        },
-        {
           "name": "Sevenfold Slaughter",
           "phase": "combatPhase",
           "phaseDetails": "Any Combat Phase",
@@ -1058,8 +1507,20 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a friendly **Putrid Blightkings** unit that charged this turn and is wholly within 12\" of this unit to be the target.",
-          "effect": "Roll a dice. On a 2+, add 1 to the Attacks characteristic of the target’s **Blighted Weapons** for the rest of the turn."
+          "declare": "Pick a friendly **Rotswords** unit that did not charge this turn and is wholly within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 2+, add 1 to the Attacks characteristic of the target’s **Ruined Master-crafted Weapons** for the rest of the turn."
+        },
+        {
+          "name": "Lord of the Blightkings",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Add 1 to wound rolls for combat attacks made by friendly **Rotswords** units that did not charge this turn while they are wholly within 12\" of this unit."
         }
       ],
       "summonedBy": null,
@@ -1073,19 +1534,23 @@
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
-      "keywords": ["Rotbringers", "Ward (5+)", "Monster", "Unique", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Unique, Hero, Monster, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "keywords": ["Rotbringers", "Monster", "Unique", "Ward (6+)", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Unique, Hero, Monster, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "8\"",
         "save": "4+",
         "control": "5",
         "health": "14",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 270,
+      "points": 260,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1117,7 +1582,7 @@
             "abilities": []
           },
           {
-            "name": "Tripletongue’s Claws and Maw",
+            "name": "Tripletongue’s Claws",
             "type": "melee",
             "range": null,
             "attacks": "5",
@@ -1140,7 +1605,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Tripletongue’s Claws and Maw** is 3."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Tripletongue’s Claws** is 3."
         },
         {
           "name": "Gigantic Nurgling-kin",
@@ -1163,8 +1628,8 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a friendly **Nurglings** unit within this unit’s combat range to be the target.",
-          "effect": "Roll a dice. On a 2+, the target’s melee weapons have **Crit (Mortal)** for the rest of the turn.",
+          "declare": "Pick up to 2 friendly **Nurglings** units wholly within 12\" of this unit to be the targets.",
+          "effect": "Roll a dice for each target. On a 2+:\n• If the target is not in combat, it can move a number of inches equal to the roll but cannot end that move in combat.\n• If the target is in combat, it can make a pile-in move.",
           "keywords": ["Rampage"]
         },
         {
@@ -1177,7 +1642,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While any friendly **Nurglings** units are wholly within 12\" of this unit:\n\n• Ignore the first damage point that would be allocated to each of those units each phase.\n• Add 3 to those units’ control scores."
+          "effect": "While any friendly **Nurglings** units are wholly within 12\" of this unit:\n• Ignore the first damage point that would be allocated to that **Nurglings** unit each phase.\n• That **Nurglings** unit can ignore the effect of the ‘Beast’ ability."
         }
       ],
       "summonedBy": null,
@@ -1191,9 +1656,13 @@
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
-      "keywords": ["Daemon", "Ward (5+)", "Infantry"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
+      "keywords": ["Daemon", "Ward (5+)", "Beast"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
+      "referenceKeywords": "Beast, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "4\"",
         "save": "6+",
@@ -1225,16 +1694,28 @@
       },
       "abilities": [
         {
-          "name": "Endless Swarm",
+          "name": "Beast",
           "phase": "endOfTurn",
-          "phaseDetails": "End of Any Turn",
-          "icon": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "control",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "**Heal (3)** this unit."
+          "effect": "This unit has a maximum control score of 1."
+        },
+        {
+          "name": "Endless Swarm",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "This unit can only use this ability if it has been destroyed.",
+          "effect": "Set up a replacement unit wholly within 6\" of a friendly **Feculent Gnarlmaw** and more than 9\" from all enemy units."
         }
       ],
       "summonedBy": null,
@@ -1248,19 +1729,23 @@
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
-      "keywords": ["Rotbringers", "Ward (5+)", "Monster", "Unique", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Unique, Hero, Monster, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "keywords": ["Rotbringers", "Monster", "Unique", "Ward (6+)", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Unique, Hero, Monster, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "8\"",
         "save": "3+",
         "control": "5",
         "health": "14",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 280,
+      "points": 270,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1281,7 +1766,7 @@
         ],
         "melee": [
           {
-            "name": "Whippermaw’s Claws and Maws",
+            "name": "Whippermaw’s Claws",
             "type": "melee",
             "range": null,
             "attacks": "5",
@@ -1315,7 +1800,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Whippermaw’s Claws and Maws** is 3."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Whippermaw’s Claws** is 3."
         },
         {
           "name": "Grasping Tongue",
@@ -1347,6 +1832,74 @@
       "notes": null
     },
     {
+      "id": "e2482c97-2d78-52f9-ae46-a477aba6da60",
+      "name": "Pestigors",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factions": ["Maggotkin of Nurgle"],
+      "keywords": [
+        "Champion",
+        "Rotbringers",
+        "Standard Bearer",
+        "Musician",
+        "Infantry",
+        "Ward (6+)"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Infantry, Champion, Musician (1/10), Standard Bearer (1/10), Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "1",
+        "health": "2",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 130,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Corroded Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Bestial Desecration",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Add 1 to the Rend characteristic of this unit’s melee weapons while it is not within enemy territory."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
       "id": "c30e69ae-0e1c-5973-a2c5-8ba4f4094351",
       "name": "Plague Drones",
       "subname": null,
@@ -1363,7 +1916,11 @@
         "Fly",
         "Cavalry"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Cavalry, Champion, Musician (1/3), Standard Bearer (1/3), Fly, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "8\"",
@@ -1374,7 +1931,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 170,
+      "points": 150,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1393,7 +1950,7 @@
             "abilities": ["Crit (Mortal)"]
           },
           {
-            "name": "Rot Fly Limbs and Sting",
+            "name": "Rot Fly's Mouthparts and Sting",
             "type": "melee",
             "range": null,
             "attacks": "6",
@@ -1450,7 +2007,11 @@
         "Musician",
         "Infantry"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Infantry, Champion, Musician (1/10), Standard Bearer (1/10), Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "4\"",
@@ -1461,7 +2022,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 140,
+      "points": 130,
       "modelCount": 10,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1492,7 +2053,80 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Subtract 1 from hit rolls for shooting attacks that target this unit."
+          "effect": "Subtract 1 from hit rolls for attacks that target this unit while it is contesting an objective you control."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "0eb92fa6-4497-5b18-a111-cb2f4388aecc",
+      "name": "Pox-Wretches",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factions": ["Maggotkin of Nurgle"],
+      "keywords": ["Champion", "Rotbringers", "Infantry", "Ward (6+)"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Infantry, Champion, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "stats": {
+        "move": "5\"",
+        "save": "6+",
+        "control": "1",
+        "health": "1",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 100,
+      "modelCount": 14,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Decaying Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Contagious Catarrh",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit has any **Mire Kelpies**, pick an enemy unit in combat with this unit to be the target. You cannot pick a **MANIFESTATION** or terrain feature.",
+          "effect": "Pick any number of this unit’s **Mire Kelpies** and remove them from the battlefield. Then, roll a dice, adding 1 to the roll for each **Mire Kelpie** you removed this phase. On an unmodified roll of 1, this ability has no effect. On a 6+, the target has the **DISEASED** keyword."
+        },
+        {
+          "name": "Mire Kelpies",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit’s **Mire Kelpies** are tokens. There are 6 **Mire Kelpies** for every 14 models in this unit."
         }
       ],
       "summonedBy": null,
@@ -1514,7 +2148,11 @@
         "Infantry",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Hero, Wizard (1), Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "4\"",
@@ -1525,7 +2163,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 100,
+      "points": 90,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1533,7 +2171,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Balesword",
+            "name": "Corrupted Balesword",
             "type": "melee",
             "range": null,
             "attacks": "3",
@@ -1556,7 +2194,7 @@
           "cpCost": null,
           "isReaction": true,
           "declare": null,
-          "effect": "Pick a friendly **Plaguebearers** unit that has not used a **FIGHT** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target’s attacks for the rest of the turn."
+          "effect": "Pick a friendly **Plaguebearers** unit that has not used a **FIGHT** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved. If it is picked to do so, add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn."
         }
       ],
       "summonedBy": null,
@@ -1570,19 +2208,23 @@
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
-      "keywords": ["Rotbringers", "Ward (5+)", "Fly", "Cavalry"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Cavalry, Fly, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "keywords": ["Rotbringers", "Fly", "Cavalry"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Cavalry, Fly, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "8\"",
         "save": "4+",
         "control": "2",
         "health": "8",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 210,
+      "points": 200,
       "modelCount": 2,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1624,7 +2266,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to the Rend characteristic of this unit’s **Flyrider’s Arsenal** for attacks that target units contesting an objective you do not control."
+          "effect": "Add 1 to the Rend characteristic of this unit’s **Flyrider’s Arsenal** for attacks that target units contesting an objective."
         },
         {
           "name": "Dispersed Formation",
@@ -1650,19 +2292,23 @@
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
-      "keywords": ["Rotbringers", "Ward (5+)", "Fly", "Cavalry"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Cavalry, Fly, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "keywords": ["Rotbringers", "Ward (6+)", "Fly", "Cavalry"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Cavalry, Fly, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "8\"",
         "save": "4+",
         "control": "2",
         "health": "8",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 130,
+      "points": 110,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1704,7 +2350,19 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to the Rend characteristic of this unit’s **Flyrider’s Arsenal** for attacks that target units contesting an objective you do not control."
+          "effect": "Add 1 to the Rend characteristic of this unit’s **Flyrider’s Arsenal** for attacks that target units contesting an objective."
+        },
+        {
+          "name": "Dispersed Formation",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit has a coherency range of 2\"."
         }
       ],
       "summonedBy": null,
@@ -1721,23 +2379,27 @@
       "keywords": [
         "Champion",
         "Rotbringers",
-        "Ward (5+)",
         "Standard Bearer",
         "Musician",
-        "Infantry"
+        "Infantry",
+        "Ward (6+)"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Infantry, Champion, Musician (1/5), Standard Bearer (1/5), Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Infantry, Champion, Standard Bearer (1/5), Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "4\"",
-        "save": "3+",
+        "save": "5+",
         "control": "1",
         "health": "3",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 190,
+      "points": 130,
       "modelCount": 5,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1745,7 +2407,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Blighted Weapons",
+            "name": "Pox-blighted Weapons",
             "type": "melee",
             "range": null,
             "attacks": "4",
@@ -1753,22 +2415,22 @@
             "wound": "3+",
             "rend": "1",
             "damage": "1",
-            "abilities": []
+            "abilities": ["Anti-PRIEST (+1 Rend)", "Anti-WIZARD (+1 Rend)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Bloated Bulk",
+          "name": "Discomfiting Stench",
           "phase": "endOfTurn",
-          "phaseDetails": "Passive",
-          "icon": "control",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "Add 3 to this unit’s control score while each model in this unit is contesting an objective you control."
+          "declare": "Pick a visible enemy **WIZARD** or **PRIEST** within 12\" of this unit to be the target.",
+          "effect": "Roll a dice.\n\n• If the target is a **WIZARD** and the roll exceeds the target’s power level, until the start of your next turn, each time a casting roll for the target includes 2 or more rolls of 1, 2 or more rolls of 2 or 2 or more rolls of 3, the spell is miscast.\n\n• If the target is a **PRIEST** and the roll exceeds the target’s power level, until the start of your next turn, each time your opponent makes an unmodified chanting roll of 1 or 2 for the target, the prayer fails, its effect is not resolved and your opponent must remove D3 ritual points from the target."
         }
       ],
       "summonedBy": null,
@@ -1784,23 +2446,27 @@
       "factions": ["Maggotkin of Nurgle"],
       "keywords": [
         "Rotbringers",
-        "Ward (5+)",
         "Wizard (1)",
         "Infantry",
+        "Ward (6+)",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Hero, Wizard (1), Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Hero, Wizard (1), Infantry, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "4\"",
         "save": "5+",
         "control": "2",
         "health": "6",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": "1",
         "priest": null
       },
-      "points": 110,
+      "points": 100,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1854,18 +2520,22 @@
         "Warmaster",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (2), Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "6\"",
         "save": "4+",
-        "control": "5",
+        "control": "10",
         "health": "22",
         "ward": "5+",
         "wizard": "2",
         "priest": null
       },
-      "points": 430,
+      "points": 410,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1873,21 +2543,10 @@
       "weapons": {
         "melee": [
           {
-            "name": "Host of Nurglings",
-            "type": "melee",
-            "range": null,
-            "attacks": "10",
-            "hit": "5+",
-            "wound": "5+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": ["Crit (Auto-wound)", "Companion"]
-          },
-          {
             "name": "Fanged Maws",
             "type": "melee",
             "range": null,
-            "attacks": "2",
+            "attacks": "4",
             "hit": "3+",
             "wound": "2+",
             "rend": "2",
@@ -1929,7 +2588,7 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit charged this phase, roll a dice. On a 3+, pick an enemy unit within 1\" of it to be the target.",
+          "declare": "If this unit charged this phase, roll a dice. On a 3+, pick a visible enemy unit within 1\" of it to be the target.",
           "effect": "Roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on the target.",
           "keywords": ["Rampage"]
         },
@@ -1942,8 +2601,8 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick each **DISEASED** enemy unit on the battlefield and each friendly **MAGGOTKIN OF NURGLE** unit in combat with any **DISEASED** enemy units to be the targets. Then, make a casting roll of 2D6.",
-          "effect": "Roll a D3 for each target. On a 2+:\n\n• If the target is an enemy unit, inflict an amount of mortal damage on the target equal to the roll.\n• If the target is a friendly unit, **Heal (X)** the target, where **X** is an amount equal to the roll.",
+          "declare": "Pick each enemy unit within 18\" of this unit to be the enemy targets, then pick each friendly **MAGGOTKIN OF NURGLE** unit within 18\" of this unit to be the friendly targets. Then, make a casting roll of 2D6.",
+          "effect": "Inflict 1 mortal damage on each enemy target and **Heal (1)** each friendly target.\n\nThen, until the start of your next turn, while they are within 18\" of this unit, enemy units cannot use or be picked to be the target of any abilities that heal or return slain models to a unit.",
           "keywords": ["Spell"]
         },
         {
@@ -1956,7 +2615,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to casting rolls for this unit."
+          "effect": "Add 1 to casting rolls for friendly **MAGGOTKIN OF NURGLE**  units while they are wholly within 12\" of this unit."
         }
       ],
       "summonedBy": null,
@@ -1970,19 +2629,23 @@
       "source": "aos-4e",
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
-      "keywords": ["Champion", "Rotbringers", "Ward (5+)", "Infantry"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Infantry, Champion (1/10), Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "keywords": ["Champion", "Rotbringers", "Infantry", "Ward (6+)"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Infantry, Champion (1/10), Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "5\"",
         "save": "6+",
         "control": "1",
         "health": "1",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 130,
+      "points": 120,
       "modelCount": 10,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2026,7 +2689,75 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "When using the ‘Blessed by the Plaguefather’ ability, if you choose to infect an enemy unit, you can pick an enemy unit that had any damage points allocated to it by this unit’s shooting attacks this turn to be the target even if that unit is not in combat with a friendly **MAGGOTKIN OF NURGLE** unit."
+          "effect": "When picking an enemy unit to be the target of the ‘Infect’ effect of the ‘Blessed by the Plaguefather’ ability, you can pick an enemy unit that had any damage points allocated to it by this unit’s shooting attacks this turn to be the target, even if that unit is not within 7\" of any friendly **MAGGOTKIN** **OF NURGLE** units. You cannot pick a **MANIFESTATION** or terrain feature."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "b8be526b-41e1-584d-a528-5ef2450ddef9",
+      "name": "Rotswords",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factions": ["Maggotkin of Nurgle"],
+      "keywords": [
+        "Champion",
+        "Rotbringers",
+        "Standard Bearer",
+        "Musician",
+        "Infantry",
+        "Ward (6+)"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Infantry, Champion, Musician (1/10), Standard Bearer (1/10), Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "1",
+        "health": "2",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 200,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Ruined Master-crafted Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (2 Hits)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Sweat-Soaked and Reeking",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, the target cannot use commands for the rest of the turn."
         }
       ],
       "summonedBy": null,
@@ -2049,7 +2780,11 @@
         "Warmaster",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (2), Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "6\"",
@@ -2170,6 +2905,87 @@
       "notes": null
     },
     {
+      "id": "d36c483b-b44b-53eb-969c-5defd8a4712a",
+      "name": "Shaman Foulhoof",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factions": ["Maggotkin of Nurgle"],
+      "keywords": [
+        "Rotbringers",
+        "Wizard (1)",
+        "Unique",
+        "Infantry",
+        "Ward (6+)",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Unique, Hero, Wizard (1), Infantry, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "6+",
+        "wizard": "1",
+        "priest": null
+      },
+      "points": 110,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Rotstave",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Purulent Profusion",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Subtract 1 from the Rend characteristic of the target’s melee weapons until the start of your next turn.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Rampant Defilement",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **Pestigors** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
       "id": "83dbdd19-3d36-5371-a516-62425a4e3b43",
       "name": "Sloppity Bilepiper, Herald of Nurgle",
       "subname": null,
@@ -2178,7 +2994,11 @@
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
       "keywords": ["Daemon", "Ward (5+)", "Plague Scion", "Infantry", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Hero, Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "4\"",
@@ -2212,15 +3032,87 @@
       "abilities": [
         {
           "name": "Jolly Gutpipes",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a visible friendly **MAGGOTKIN OF NURGLE DAEMON** unit wholly within 12\" of this unit to be the target.",
-          "effect": "Roll a dice. On a 2+, pick 1 of the following effects to apply for the rest of the turn:\n\n***A-Stabbing We Will Go!:***\nAdd 1 to wound rolls for the target’s attacks.\n\n***Early One Evening My Pustule Was Seeping:***\nWard rolls cannot be made for damage points inflicted by the target’s combat attacks.\n\n***My Love Is Like a Ripe, Ripe Fart:***\nSubtract 1 from hit rolls for attacks made by enemy units that target the target unit."
+          "declare": "Pick a visible friendly **MAGGOTKIN OF NURGLE DAEMON** unit wholly within 12\" of this unit or a visible enemy unit within 12\" of this unit to be the target.",
+          "effect": "If you picked a friendly unit to be the target, roll a dice. If the roll equals or exceeds the target’s Control characteristic, add 2 to run rolls and charge rolls for the target until the start of your next turn.\n\nIf you picked an enemy unit to be the target, roll a dice. If the roll equals or exceeds the target’s Control characteristic, until the start of your next turn, while this unit is on the battlefield, inflict D3 mortal damage on the target:\n\n• Each time the target ends a move further from this unit than it was at the start of the move, after the ability used by the target has been resolved.\n• Each time the target is removed from the battlefield and set up again on the battlefield further from this unit than it was before it was removed, after the ability used by the target has been resolved."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "4fe3e72a-95bf-5abd-939c-ccf4c443fe23",
+      "name": "Sloven Knights",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factions": ["Maggotkin of Nurgle"],
+      "keywords": ["Champion", "Rotbringers", "Ward (6+)", "Cavalry"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Cavalry, Champion, Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "stats": {
+        "move": "8\"",
+        "save": "3+",
+        "control": "1",
+        "health": "4",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 180,
+      "modelCount": 3,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Foetid Nag’s Hooves",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "5+",
+            "wound": "3+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Companion"]
+          },
+          {
+            "name": "Entropic Bludgeons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Pall of Exhaustion",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. Add 1 to the roll if the target is in combat with any other friendly **ROTBRINGERS** units. On a 3+, the target has **STRIKE‑LAST** for the rest of the turn."
         }
       ],
       "summonedBy": null,
@@ -2235,7 +3127,11 @@
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
       "keywords": ["Daemon", "Ward (5+)", "Plague Scion", "Infantry", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Hero, Infantry, Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "4\"",
@@ -2284,13 +3180,25 @@
           "name": "Keep Counting, I'm Watching You",
           "phase": "heroPhase",
           "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
-          "icon": "defensive",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick a friendly **Plaguebearers** unit wholly within 12\" of this unit to be the target.",
-          "effect": "Roll a D6. On a 2+, pick 1 of the following effects to apply until the start of your next turn:\n\n***Tally of Blows:*** Add 1 to the Attacks characteristic of the target’s melee weapons.\n\n***Recorded Stamina:*** Add 1 to save rolls for the target."
+          "effect": "Roll a D6. On a 2+, pick 1 of the following effects to apply until the start of your next turn:\n\n***Tally of Blows:*** Add 1 to wound rolls for the target’s combat attacks.\n***Recorded Stamina:*** Add 5 to the target’s control score."
+        },
+        {
+          "name": "Stupefying Sneezes",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy **MONSTER** that had any damage points allocated to it this phase by this unit’s shooting attacks to be the target.",
+          "effect": "The target cannot use **RAMPAGE** abilities until the start of your next turn."
         }
       ],
       "summonedBy": null,
@@ -2305,27 +3213,30 @@
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
       "keywords": [
-        "Daemon",
         "Rotbringers",
-        "Ward (5+)",
         "Monster",
         "Wizard (1)",
         "Unique",
+        "Ward (6+)",
         "Warmaster",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
-      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (1), Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
+      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (1), Ward (6+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "6\"",
         "save": "4+",
         "control": "10",
         "health": "24",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": "1",
         "priest": null
       },
-      "points": 500,
+      "points": 470,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2362,7 +3273,7 @@
             "hit": "3+",
             "wound": "2+",
             "rend": "2",
-            "damage": "D3+3",
+            "damage": "5",
             "abilities": []
           }
         ]
@@ -2378,7 +3289,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points,the Attacks characteristic of **Ghurk’s Tentacle** is 2."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Ghurk’s Tentacle** is 3."
         },
         {
           "name": "Horrific Opponent",
@@ -2390,7 +3301,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Subtract 3 from the control scores of enemy units while they are in combat with this unit."
+          "effect": "Subtract 5 from the control scores of enemy units while they are in combat with this unit."
         },
         {
           "name": "Blighted Stampede",
@@ -2415,8 +3326,20 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
-          "effect": "Roll a number of dice equal to the target’s Health characteristic. For each 5+, inflict 1 mortal damage on the target, to a maximum of 7 mortal damage.",
+          "effect": "Roll a number of dice equal to the target’s Health characteristic. For each 5+, inflict 1 mortal damage on the target, to a maximum of 7 mortal damage. If any mortal damage was inflicted on the target, and the target was not a Manifestation or terrain feature, it has the **DISEASED** keyword.",
           "keywords": ["Spell"]
+        },
+        {
+          "name": "Tentacle Trap",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy **HERO** or **MONSTER** in combat with this unit to be the target",
+          "effect": "Roll a dice. On a 4+, for the rest of the turn:\n\n• The target cannot move and cannot be removed from the battlefield by an ability that would allow it to be set up elsewhere on the battlefield.\n• Add 1 to hit rolls for combat attacks that target that enemy unit."
         }
       ],
       "summonedBy": null,
@@ -2438,7 +3361,11 @@
         "Unique",
         "Infantry"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "Cycle of Corruption"
+      ],
       "referenceKeywords": "Unique, Infantry, Champion, Ward (5+), Chaos, Maggotkin of Nurgle, Rotbringers",
       "stats": {
         "move": "4\"",
@@ -2511,12 +3438,34 @@
       "points": null,
       "rules": [
         {
-          "name": "Disease and Pestilence Personified",
-          "phase": "endOfTurn",
+          "name": "Plague Progenitor",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "special",
+          "declare": "Pick an enemy unit on the battlefield to be the **plague progenitor** for the rest of the battle. You cannot pick a **MANIFESTATION** or terrain feature.",
+          "effect": "Roll 2D3. On a 6, or if the roll equals or exceeds the **plague progenitor**’s Health characteristic, it has the **DISEASED** keyword.\n\nIn the first battle round, while the plague progenitor has the **DISEASED** keyword, it cannot use or be picked to be the target of any abilities that could heal or return slain models to it.\n\nEach time the **plague progenitor** is picked to be the target of the ‘Spread’ effect of the ‘Blessed by the Plaguefather’ ability, inflict D3 mortal damage on each other enemy unit within its combat range, excluding **MANIFESTATIONS** and terrain features, in addition to the effect of that ability.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "6613a420-2f36-52cf-b921-5359679f03f6",
+      "name": "Nurgle's Menagerie",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Denizens of the Garden",
+          "phase": "combatPhase",
           "phaseDetails": "Passive",
           "icon": "offensive",
           "declare": null,
-          "effect": "From the second battle round onwards, add 1 to the amount of mortal damage inflicted, if any, by the ‘Wracked with Disease’ ability.",
+          "effect": "**Companion** weapons used by friendly **MAGGOTKIN OF NURGLE** units have **Crit (2 Hits)**.",
           "cpCost": null,
           "isReaction": false
         }
@@ -2533,12 +3482,12 @@
       "points": null,
       "rules": [
         {
-          "name": "From Noxious Skies",
-          "phase": "startOfTurn",
-          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "name": "Filth-laden Daemonic Blooms",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
           "icon": "movement",
-          "declare": "Pick up to 2 friendly **MAGGOTKIN OF NURGLE** units that have **FLY**.",
-          "effect": "Remove the targets from the battlefield and set them up again on the battlefield more than 9\" from all enemy units.",
+          "declare": null,
+          "effect": "Each time you make a run roll for a friendly non-**MONSTER MAGGOTKIN OF NURGLE DAEMON** unit, you can change that roll to a 4.",
           "cpCost": null,
           "isReaction": false
         }
@@ -2556,33 +3505,11 @@
       "rules": [
         {
           "name": "Vectors of Contagion",
-          "phase": "combatPhase",
+          "phase": "endOfTurn",
           "phaseDetails": "Passive",
-          "icon": "offensive",
+          "icon": "control",
           "declare": null,
-          "effect": "Each time a model in a friendly **ROTBRINGERS** unit is slain by a combat attack and that model was in combat with the attacking unit, roll a number of dice equal to the slain model’s Health characteristic, to a maximum of 4. For each 5+, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
-      "id": "6613a420-2f36-52cf-b921-5359679f03f6",
-      "name": "Nurgle's Menagerie",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "MAGGOTKIN_OF_NURGLE",
-      "factionTerrainLimit": 2,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Tenders of the Garden Grotesque",
-          "phase": "startOfTurn",
-          "phaseDetails": "Passive",
-          "icon": "special",
-          "declare": null,
-          "effect": "During army composition, you can include 2 **Feculent** **Gnarlmaws** in your army instead of 1.",
+          "effect": "Add 5 to the control scores of friendly non-**HERO ROTBRINGERS** units while they are wholly within 12\" of any friendly **MAGGOTKIN OF NURGLE DAEMON** units.",
           "cpCost": null,
           "isReaction": false
         }
@@ -2590,6 +3517,55 @@
     }
   ],
   "lores": [
+    {
+      "id": "0aa72981-7e3e-5e6a-ae25-c2722a04cd67",
+      "name": "Lore of Virulence",
+      "cardType": "Lore",
+      "source": "aos-4e",
+      "faction_id": "MAGGOTKIN_OF_NURGLE",
+      "restrictionText": null,
+      "spells": [
+        {
+          "id": "8520e32d-e5b6-5649-b688-5de3f0bb8e34",
+          "name": "Gift of Disease",
+          "castingValue": 3,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **MAGGOTKIN OF NURGLE PRIEST** to chant this prayer, then make a chanting roll of D6.",
+          "effect": "Until the start of your next turn, subtract 1 from wound rolls for attacks made by enemy units while they are in combat with the chanter. In addition, if the chanting roll was 10+, each enemy unit in combat with the chanter, excluding **MANIFESTATIONS** and terrain features, has the **DISEASED** keyword.",
+          "keywords": ["Prayer", "Unlimited"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "c53bfbcd-62b9-580a-acdd-1dab8ba03263",
+          "name": "Bloated with Sickness",
+          "castingValue": 4,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **MAGGOTKIN OF NURGLE** Priest to chant this prayer, pick a visible friendly non-**MONSTER MAGGOTKIN OF NURGLE** unit wholly within 12\" of the chanter to be the target, then make a chanting roll of D6.",
+          "effect": "Until the start of your next turn, ignore the first damage point that would be allocated to the target in each phase. If the chanting roll was 10+, you can pick another eligible unit to be a second target.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "65ddde49-75dd-545c-9f0d-24f065879f4a",
+          "name": "Favoured Poxes",
+          "castingValue": 4,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **MAGGOTKIN OF NURGLE PRIEST** to chant this prayer, pick a visible enemy unit within 18\" of the chanter to be the target, then make a chanting roll of D6.",
+          "effect": "Until the start of your next turn, subtract 2 from charge rolls for the target. If the chanting roll was 10+, until the start of your next turn, subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1, instead.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        }
+      ]
+    },
     {
       "id": "c2baf87e-1702-59ea-996d-ca97cb4e93a5",
       "name": "Bendictions of Sickness",
@@ -2650,26 +3626,26 @@
         {
           "id": "b6d45145-1019-5d26-9212-bca18c145a65",
           "name": "Fleshy Abundance",
-          "castingValue": 7,
+          "castingValue": 6,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "defensive",
           "declare": "Pick a friendly **MAGGOTKIN OF NURGLE WIZARD** to cast this spell, pick a visible friendly **MAGGOTKIN OF NURGLE** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
-          "effect": "Pick 1 of the following effects:\n• Heal (D3) the target.\n• Subtract 1 from wound rolls for attacks that target that unit until the start of your next turn.",
+          "effect": "Pick 1 of the following effects:\n• **Heal (D3)** the target.\n• Subtract 1 from wound rolls for attacks that target that friendly unit until the start of your next turn.",
           "keywords": ["Spell", "Unlimited"],
           "linkedWarscroll": null
         },
         {
-          "id": "5b9a0f36-693a-5cc3-8088-5983c3445cb2",
-          "name": "Magnificent Buboes",
-          "castingValue": 7,
+          "id": "8316490b-659b-59c0-8a33-9af9fc21c8a2",
+          "name": "Crippling Despair",
+          "castingValue": 6,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
-          "declare": "Pick a friendly **MAGGOTKIN OF NURGLE WIZARD** to cast this spell, pick a visible enemy **Hero** within 18\" of them to be the target, then make a casting roll of 2D6.",
-          "effect": "Until the start of your next turn, subtract 1 from hit rolls for the target’s attacks and subtract 1 from casting rolls, chanting rolls, banishment rolls and unbinding rolls for the target.",
+          "declare": "Pick a friendly **MAGGOTKIN OF NURGLE WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "The target cannot use commands for the rest of the turn.",
           "keywords": ["Spell"],
           "linkedWarscroll": null
         },
@@ -2682,7 +3658,7 @@
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
           "declare": "Pick a friendly **MAGGOTKIN OF NURGLE WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
-          "effect": "Halve the target’s Move characteristic until the start of your next turn. If the target’s Save characteristic is 3+ or better, subtract 1 from run rolls and charge rolls for that unit until the start of your next turn.",
+          "effect": "Until the start of your next turn:\n•  Halve the target’s Move characteristic.\n•  If the target’s Save characteristic is 3+ or better, subtract 1 from run rolls and charge rolls for the target.",
           "keywords": ["Spell"],
           "linkedWarscroll": null
         }
@@ -2693,6 +3669,34 @@
   "enhancements": {
     "artefacts": [
       {
+        "id": "12e78364-e9cb-5c31-bfe6-b2c20cd79ae3",
+        "name": "Cankerous Nail",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "Add 1 to the Rend characteristic of this unit’s melee weapons.",
+        "cpCost": null
+      },
+      {
+        "id": "54d75e30-18ae-5ef0-a32c-2446901f7dce",
+        "name": "The Witherstave",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "defensive",
+        "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+        "effect": "Roll a dice. On a 3+, subtract 1 from the Damage characteristic of the target’s melee weapons for the rest of the turn.",
+        "cpCost": null
+      },
+      {
         "id": "9c4df9a3-1c5f-5a71-8414-764f78a8d996",
         "name": "The Carrion Dirge",
         "cardType": "Enhancement",
@@ -2702,22 +3706,8 @@
         "phase": "heroPhase",
         "phaseDetails": "Once Per Battle, Any Hero Phase",
         "icon": "control",
-        "declare": "Pick up to 3 enemy units within 12\" of this unit to be the targets.",
-        "effect": "Subtract 3 from each target’s control score for the rest of the turn.",
-        "cpCost": null
-      },
-      {
-        "id": "54d75e30-18ae-5ef0-a32c-2446901f7dce",
-        "name": "The Witherstave",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": 20,
-        "phase": "combatPhase",
-        "phaseDetails": "Any Combat Phase",
-        "icon": "defensive",
-        "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
-        "effect": "Roll a dice. On a 4+, the target has **STRIKE-LAST** for the rest of the turn.",
+        "declare": "Pick up to 3 enemy units within 18\" of this unit to be the targets.",
+        "effect": "Subtract 5 from each target’s control score for the rest of the turn.",
         "cpCost": null
       },
       {
@@ -2728,14 +3718,28 @@
         "source": "aos-4e",
         "points": null,
         "phase": "combatPhase",
-        "phaseDetails": "Once Per Battle, Any Combat Phase",
+        "phaseDetails": "Any Combat Phase",
         "icon": "offensive",
-        "declare": "Pick an enemy **HERO** in combat with this unit to be the target.",
-        "effect": "Subtract 1 from save rolls for the target for the rest of the battle.",
+        "declare": "Pick an enemy **HERO** or **MONSTER** in combat with this unit to be the target.",
+        "effect": "Subtract 1 from save rolls for the target for the rest of the turn.",
         "cpCost": null
       }
     ],
     "heroicTraits": [
+      {
+        "id": "4e0ad060-7988-5d48-9a5b-ee9c85f33102",
+        "name": "Utterly Disgusting",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Subtract 1 from hit rolls for attacks that target this unit.",
+        "cpCost": null
+      },
       {
         "id": "fde3c0a0-ad7b-5a4a-bdd4-a0dfbd92a62e",
         "name": "Corpulent Avalanche",
@@ -2789,7 +3793,7 @@
         "phaseDetails": "End of Any Turn",
         "icon": "defensive",
         "declare": null,
-        "effect": "If this unit is in combat with a **DISEASED** enemy unit, **Heal** (**D6)** this unit.",
+        "effect": "If this unit is in combat with a **Diseased** enemy unit, **Heal (D3)** this unit.",
         "cpCost": null
       },
       {
@@ -2799,11 +3803,11 @@
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Passive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Add 1\" to the Move characteristic of friendly **MAGGOTKIN OF NURGLE** units that do not have **FLY** if they are wholly within 12\" of this unit at the start of the move.",
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick a visible friendly non-**HERO MAGGOTKIN OF NURGLE** unit that is wholly within 12\" of this unit to be the target.",
+        "effect": "Roll a dice. On a 3+, add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn.",
         "cpCost": null
       },
       {
@@ -2813,15 +3817,58 @@
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
-        "phase": "startOfTurn",
-        "phaseDetails": "Reaction: Opponent declared a command for a unit in combat with this unit",
-        "icon": "special",
-        "declare": null,
-        "effect": "Roll a dice. On a 5+, that command has no effect. The command still counts as having been used and the command points spent to use the command are still lost.",
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick an enemy unit in combat with this unit to be the target.",
+        "effect": "You and your opponent must roll off. If your roll is higher, pick 1 of the following effects to apply for the rest of the turn:\n\n• Ignore positive modifiers to save rolls for the target.\n• Subtract 1 from ward rolls for the target.",
         "cpCost": null
       }
     ],
     "other": [
+      {
+        "id": "5a3c9e37-a942-54da-bbe7-c789f9b87751",
+        "name": "The Piper's Infectious Melodies",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "chargePhase",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "While a **Beast of Nurgle** in this Regiment of Renown is within 3\" of this Regiment of Renown’s **Sloppity Bilepiper**, it can use the ‘Attention Seekers’ ability even if the other **Beast** **of Nurgle** in this Regiment of Renown has already used it this turn.",
+        "cpCost": null
+      },
+      {
+        "id": "9013c395-38c0-59dd-ac47-f9f08ba57216",
+        "name": "Blighted Growth",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "Set up this Regiment of Renown’s **Feculent Gnarlmaw** wholly within friendly territory and more than 3\" from all objectives and other terrain features. After you have done so, it has been deployed.",
+        "cpCost": null,
+        "keywords": ["Deploy Terrain"]
+      },
+      {
+        "id": "0ee3060d-309c-568d-86da-00eefe23eb54",
+        "name": "Multitudinous Diseases",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "special",
+        "declare": "If this Regiment of Renown’s **Plaguebearers** unit is wholly within 12\" of this Regiment of Renown’s **Feculent Gnarlmaw**, pick that **Plaguebearers** unit to be the target.",
+        "effect": "**Heal (1)** the target. If the target is contesting an objective, you can also return 1 slain model to the target unit.",
+        "cpCost": null
+      },
       {
         "id": "f4c4209f-00c8-516a-9f2c-7ed3783efa3c",
         "name": "Incubation Period",
@@ -2910,28 +3957,76 @@
   "rules": {
     "battleTraits": [
       {
-        "name": "Wracked with Disease",
+        "name": "Revolution and Revulsion",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+        "icon": "special",
+        "declare": "You must use this ability at the start of each battle round.",
+        "effect": "If it is the first battle round, roll a dice to determine which **CYCLE** ability is ripe for the rest of the battle round.\n\n1 ‘Unnatural Vitality’\n2 ‘Fecund Vigour’\n3 ‘Burgeoning Filth’\n4 ‘Plague of Misery’\n5 ‘Nauseous Revulsion’\n6 ‘Rampant Disease’\n7 ‘Corrupted Regrowth’\n\nIf it is not the first battle round, the next **CYCLE** ability in the sequence is ripe for the rest of the battle round. If the ‘Corrupted Regrowth’ ability was ripe last battle round, the ‘Unnatural Vitality’ ability is ripe this battle round.\n\nYou can only use a **CYCLE** ability if it is ripe. Only 1 **CYCLE** ability is ripe each battle round."
+      },
+      {
+        "name": "Unnatural Vitality",
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Friendly non-**MONSTER CYCLE OF CORRUPTION HEROES** have **WARD (4+)**."
+      },
+      {
+        "name": "Fecund Vigour",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "**HEAL (D3)** each friendly **CYCLE OF CORRUPTION** unit."
+      },
+      {
+        "name": "Burgeoning Filth",
         "phase": "endOfTurn",
-        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "phaseDetails": "Passive",
+        "icon": "control",
+        "declare": null,
+        "effect": "Subtract 3 from the control scores of enemy units while they are in combat with any friendly **CYCLE OF CORRUPTION** units."
+      },
+      {
+        "name": "Plague of Misery",
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "While enemy units are within 12\" of any friendly **CYCLE OF CORRUPTION** units, they cannot use abilities that heal or return slain models to a unit."
+      },
+      {
+        "name": "Nauseous Revulsion",
+        "phase": "chargePhase",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Subtract 1 from charge rolls for enemy units."
+      },
+      {
+        "name": "Rampant Disease",
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
         "icon": "offensive",
         "declare": null,
-        "effect": "Roll a D3 for each **DISEASED** enemy unit. On a 2+, inflict an amount of mortal damage on that unit equal to the roll."
+        "effect": "Melee weapons used by friendly non-**HERO CYCLE OF CORRUPTION** units have **Crit (2 Hits)**."
       },
       {
-        "name": "Burst Pustules",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
+        "name": "Corrupted Regrowth",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+        "icon": "defensive",
         "declare": null,
-        "effect": "Each time a **DISEASED** enemy unit would be destroyed, before the last model in the unit is removed from play, roll a dice. On a 3+, pick another enemy unit within 9\" of that model to be **DISEASED**."
+        "effect": "**Heal (7)** each friendly **Feculent Gnarlmaw**.\n\nIf there are no friendly **Feculent Gnarlmaws** on the battlefield, you can set up a **Feculent Gnarlmaw** on the battlefield more than 9\" from all enemy units and more than 3\" from all objectives and other terrain features."
       },
       {
-        "name": "Desperate Remedies",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
+        "name": "Blighted Regrowth",
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
         "icon": "special",
-        "declare": null,
-        "effect": "If an ability would heal or return slain models to a **DISEASED** enemy unit, that ability does not heal any damage points or return any slain models to it. Instead, it no longer has the **DISEASED** keyword.\n\n**MANIFESTATIONS** and faction terrain features cannot be given the **DISEASED** keyword by any friendly abilities."
+        "declare": "You can use this ability if there are no friendly **Feculent Gnarlmaws** on the battlefield.",
+        "effect": "Set up a **Feculent Gnarlmaw** on the battlefield wholly within 12\" of an objective you control and more than 3\" from all enemy units, objectives and other terrain features."
       },
       {
         "name": "Blessed by the Plaguefather",
@@ -2939,7 +4034,39 @@
         "phaseDetails": "Once Per Turn (Army), End of Any Turn",
         "icon": "special",
         "declare": null,
-        "effect": "You cannot pick **MANIFESTATIONS** or terrain features to be the targets of this ability. Pick 1 of the following effects:\n\n***Infect:*** Pick an enemy unit that is in combat with a friendly **MAGGOTKIN OF NURGLE** unit to be the target. The target has the **DISEASED** keyword.\n\n***Spread:*** Pick a **DISEASED** enemy unit to be the target. Each other enemy unit within the target’s combat range has the **DISEASED** keyword.\n\n***Mutate:*** If all enemy units on the battlefield have the **DISEASED** keyword, inflict 1 mortal damage on each of them."
+        "effect": "Pick 1 of the following effects:\n\n***Infect:*** Pick an enemy unit within 7\" of any friendly Maggotkin of Nurgle units to be the target. You cannot pick a **MANIFESTATION** or terrain feature.\n• If the target is in combat with any friendly **MAGGOTKIN OF NURGLE** units, it has the **DISEASED** keyword.\n• If the target is not in combat with any friendly **MAGGOTKIN OF NURGLE** units, roll a dice. On a 4+, the target has the **DISEASED** keyword.\n\n***Spread:*** Pick a **DISEASED** enemy unit to be the target. Each other enemy unit within the target’s combat range, excluding **MANIFESTATIONS** and terrain features, has the **DISEASED** keyword.\n\n***Mutate:*** If all enemy units on the battlefield, excluding **MANIFESTATIONS** and terrain features, have the **DISEASED** keyword, inflict 1 mortal damage on each of them."
+      },
+      {
+        "name": "Wracked with Disease",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "offensive",
+        "declare": "Pick each **DISEASED** enemy unit to be the targets.",
+        "effect": "Inflict D3 mortal damage on each target."
+      },
+      {
+        "name": "Ceaseless Infectors",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "special",
+        "declare": "Pick an enemy unit that was in combat with a friendly **ROTBRINGERS** unit that was destroyed this turn to be the target. You cannot pick a **MANIFESTATION** or terrain feature.",
+        "effect": "Roll a dice. On a 3+, the target has the **DISEASED** keyword."
+      },
+      {
+        "name": "Burst Pustules",
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "Each time a **DISEASED** enemy unit is destroyed, before the last model in the unit is removed from play, roll a dice. On a 3+, pick another enemy unit within 9\" of that model to be the target. You cannot pick a **MANIFESTATION** or terrain feature. The target has the **DISEASED** keyword."
+      },
+      {
+        "name": "Desperate Remedies",
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "If an ability would heal or return slain models to a **DISEASED** enemy unit, that ability does not heal or return any slain models to it. Instead, it no longer has the **DISEASED** keyword."
       }
     ]
   }
