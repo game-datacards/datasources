@@ -521,6 +521,12 @@ function processCombatPatrol(combatPatrol) {
         const unitCompMini = newDataExport.unit_composition_miniature.filter(
           (pointComp) => pointComp.unitCompositionId === point.id
         );
+        const detachmentLink = newDataExport.unit_composition_required_detachment.find(
+          (d) => d.unitCompositionId === point.id
+        );
+        const detachment = detachmentLink
+          ? newDataExport.detachment.find((d) => d.id === detachmentLink.detachmentId)?.name || null
+          : null;
         return {
           cost: point.points.toString(),
           models: unitCompMini
@@ -529,6 +535,7 @@ function processCombatPatrol(combatPatrol) {
             }, 0)
             .toString(),
           active: true,
+          detachment,
         };
       });
 
@@ -593,6 +600,7 @@ function processCombatPatrol(combatPatrol) {
       stats: [],
       transport: '',
       wargear: [],
+      baseSize: '',
     };
 
     const factionAbilities = card.datasheetAbilities
@@ -901,6 +909,7 @@ function processCombatPatrol(combatPatrol) {
     newUnit.keywords = [...new Set(keywords)];
     newUnit.points = card.points;
     newUnit.name = card.name;
+    newUnit.baseSize = card.baseSize || '';
 
     newCombatPatrol.datasheets.push(newUnit);
   });

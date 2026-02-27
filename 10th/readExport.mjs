@@ -767,6 +767,12 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
         const unitCompMini = newDataExport.unit_composition_miniature.filter(
           (pointComp) => pointComp.unitCompositionId === point.id
         );
+        const detachmentLink = newDataExport.unit_composition_required_detachment.find(
+          (d) => d.unitCompositionId === point.id
+        );
+        const detachment = detachmentLink
+          ? newDataExport.detachment.find((d) => d.id === detachmentLink.detachmentId)?.name || null
+          : null;
         return {
           cost: point.points.toString(),
           keyword:
@@ -779,6 +785,7 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
             }, 0)
             .toString(),
           active: true,
+          detachment,
         };
       });
 
@@ -856,6 +863,7 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
       stats: [],
       transport: '',
       wargear: [],
+      baseSize: '',
     };
 
     //Faction abilities
@@ -1166,6 +1174,7 @@ function parseDataExport(fileName, factionName, additionalFactions = []) {
     newUnit.points = card.points;
     //And set the name
     newUnit.name = card.name;
+    newUnit.baseSize = card.baseSize || '';
 
     // Determine chapter/subfaction for this datasheet
     // Check which factions this datasheet is linked to
