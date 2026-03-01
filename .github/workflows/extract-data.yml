@@ -1,0 +1,55 @@
+name: Extract APK Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: '0 6 * * *'
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Install apktool
+        run: |
+          APKTOOL_VERSION="3.0.1"
+          wget -q "https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool" -O /usr/local/bin/apktool
+          wget -q "https://github.com/iBotPeaches/Apktool/releases/download/v${APKTOOL_VERSION}/apktool_${APKTOOL_VERSION}.jar" -O /usr/local/bin/apktool.jar
+          chmod +x /usr/local/bin/apktool
+          apktool --version
+
+      - name: Install apkeep
+        run: |
+          APKEEP_VERSION="0.18.0"
+          wget -q "https://github.com/EFForg/apkeep/releases/download/${APKEEP_VERSION}/apkeep-x86_64-unknown-linux-gnu" -O /usr/local/bin/apkeep
+          chmod +x /usr/local/bin/apkeep
+          apkeep --version
+
+      - name: Download APK
+        run: ./pipeline/download-apk.sh
+
+      - name: Decompile APK
+        run: ./pipeline/decompile-apk.sh
+
+      - name: Extract dump.json
+        run: |
+          DATA_VERSION=$(python3 -c "import json; print(json.load(open('pipeline/decompiled/assets/dump.json'))['metadata']['data_version'])")
+          echo "data_version=$DATA_VERSION" >> "$GITHUB_ENV"
+          echo "Extracted data version: $DATA_VERSION"
+          cp pipeline/decompiled/assets/dump.json "10th/temp/data-export-${DATA_VERSION}.json"
+
+      - name: Upload data export
+        uses: actions/upload-artifact@v4
+        with:
+          name: data-export-${{ env.data_version }}
+          path: 10th/temp/data-export-${{ env.data_version }}.json
