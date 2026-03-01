@@ -3,7 +3,7 @@
     "banner": "#283109",
     "header": "#465b18"
   },
-  "compatibleDataVersion": 732,
+  "compatibleDataVersion": 743,
   "datasheets": [
     {
       "abilities": {
@@ -10805,6 +10805,10 @@
     {
       "name": "More Dakka!",
       "faction": "Orks"
+    },
+    {
+      "name": "Freebooter Krew",
+      "faction": "Orks"
     }
   ],
   "enhancements": [
@@ -11227,6 +11231,58 @@
       "cardType": "enhancement",
       "detachment": "More Dakka!",
       "detachment_faction": "Orks"
+    },
+    {
+      "name": "Da Kaptin",
+      "id": "2821c29d-8b5f-5b01-8ce9-0cb002409f62",
+      "cost": "10",
+      "keywords": ["Warboss"],
+      "excludes": [],
+      "description": "WARBOSS model only. Once per battle round, at the start of any phase, you can select one friendly ORKS unit that is Battle‑shocked and within 12\" of the bearer. That unit suffers D3 mortal wounds and it is no longer Battle‑shocked.",
+      "faction_id": "ORK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Freebooter Krew",
+      "detachment_faction": "Orks"
+    },
+    {
+      "name": "Git-Spotter Squig",
+      "id": "c40d7255-95c5-56df-92e6-a4233147c9e4",
+      "cost": "20",
+      "keywords": ["Orks"],
+      "excludes": [],
+      "description": "ORKS model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+      "faction_id": "ORK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Freebooter Krew",
+      "detachment_faction": "Orks"
+    },
+    {
+      "name": "Bionik Workshop",
+      "id": "5df9f664-a385-5577-8495-3405d037a5d1",
+      "cost": "15",
+      "keywords": ["Big Mek", "Painboy"],
+      "excludes": [],
+      "description": "BIG MEK or PAINBOY model only. At the start of the battle, roll one D3 and compare the result to the list below. Until the end of the battle, models in the bearer’s unit have that bioniks ability.\n\n1.  Bionik Legs: Add 2\" to the Move characteristic of this model.\n2.  Bionik Arms: Add 1 to the Strength characteristic of melee weapons equipped by this model.\n3.  Bionik Bonce: Improve the Weapon Skill characteristic of melee weapons equipped by this model by 1.",
+      "faction_id": "ORK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Freebooter Krew",
+      "detachment_faction": "Orks"
+    },
+    {
+      "name": "Razgit’s Magik Map",
+      "id": "d8c2d39e-4895-5d24-80f2-dec0bb0585e6",
+      "cost": "25",
+      "keywords": ["Orks"],
+      "excludes": [],
+      "description": "ORKS model only. After both players have deployed their armies, select up to three ORKS INFANTRY units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "faction_id": "ORK",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Freebooter Krew",
+      "detachment_faction": "Orks"
     }
   ],
   "id": "ORK",
@@ -11406,6 +11462,25 @@
             "rules": [
               {
                 "text": "Ranged weapons equipped by **ORKS INFANTRY** and **ORKS WALKER** models from your army have the **[ASSAULT]** ability.\n\nWhile the Waaagh! is active for your army, during your Shooting phase, ranged weapons equipped by **ORKS INFANTRY**  and **ORKS WALKER** models from your army have the **[SUSTAINED HITS 1]** ability.",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
+        "detachment": "Freebooter Krew",
+        "faction": "Orks",
+        "rules": [
+          {
+            "name": "Here be Loot",
+            "rules": [
+              {
+                "text": "At the start of the battle round, select one objective marker. Until the start of the next battle round, that objective marker is your loot objective.\n\nEach time a model in an **ORKS INFANTRY**, **ORKS MOUNTED** or **ORKS WALKER** unit from your army makes an attack, that attack has the **[SUSTAINED HITS 1]** ability if either or both of the following are true:\n\n■  That model’s unit is within range of your loot objective.\n■ That attack targets a unit within range of your loot objective.",
                 "order": 1,
                 "title": null,
                 "type": "text"
@@ -11769,6 +11844,38 @@
       "faction_id": "ORK",
       "fluff": "When facing off against sneaky gitz who like to lurk in cover, most Orks believe the most effective strategy is to fire off so many bullets and munitions that something is bound to hit the target.",
       "detachment": "More Dakka!",
+      "detachment_faction": "Orks"
+    },
+    {
+      "name": "Bash and Grab",
+      "id": "ad697d65-64ca-5894-b23f-158a59bdab24",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ORKS unit from your army that has not been selected to fight this phase.",
+      "when": "The Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets an enemy unit within range of the loot objective, you can re‑roll the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight"],
+      "faction_id": "ORK",
+      "fluff": "Freebooterz waste no time getting violently stuck into anyone unwise enough to try to keep prized loot out of their grasping claws.",
+      "detachment": "Freebooter Krew",
+      "detachment_faction": "Orks"
+    },
+    {
+      "name": "Boardin’ Rush",
+      "id": "409fc219-e763-5c67-b5aa-0f9e639577ad",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ORKS unit from your army that has not been selected to move this phase.",
+      "when": "Your Movement phase.",
+      "effect": "Until the end of the phase, each time your unit Advances, do not make an Advance roll. Instead, until the end of the phase, add 6\" to the Move characteristic of models in your unit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["movement"],
+      "faction_id": "ORK",
+      "fluff": "Having cut their gold‑plated fangs storming aboard hostile warships, these Freebooterz are good at getting stuck straight into the enemy.",
+      "detachment": "Freebooter Krew",
       "detachment_faction": "Orks"
     },
     {
@@ -12172,6 +12279,70 @@
       "detachment_faction": "Orks"
     },
     {
+      "name": "Grab and Bash",
+      "id": "39f7172b-ddd9-52fa-b745-9d3a31bab69e",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ORKS unit from your army (excluding GRETCHIN units) that is within range of the loot objective.",
+      "when": "Your Command phase.",
+      "effect": "Until the start of your next Command phase, the Waaagh! is active for your unit, even if you have already called a Waaagh! this battle.\n\nDesigner’s Note: This means that any abilities that are in effect while the Waaagh! is active for your army will be in effect for your unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["command"],
+      "faction_id": "ORK",
+      "fluff": "Few warriors in the galaxy fight with greater brutality than a Freebooter determined to hang onto his loot.",
+      "detachment": "Freebooter Krew",
+      "detachment_faction": "Orks"
+    },
+    {
+      "name": "Deck Fraggers",
+      "id": "346e95a0-cda5-5c5d-a887-fb48e61ea54d",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ORKS unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, each time a model in your unit targets an INFANTRY unit with a ranged weapon, that weapon has the [BLAST] ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "ORK",
+      "fluff": "Invented by some sadistic Bad Mek, these shrapnel‑packed rounds of kustom ammunition are excellent for scything down tight‑packed enemy infantry.",
+      "detachment": "Freebooter Krew",
+      "detachment_faction": "Orks"
+    },
+    {
+      "name": "Rolling Loot-Heap",
+      "id": "c5f57b69-255e-5ed6-a35a-3b356b93d76c",
+      "cost": 1,
+      "turn": "your",
+      "target": "One FLASH GITZ unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Until the end of the phase, ranged weapons equipped by models in your unit have the [ANTI‑VEHICLE 4+] ability.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "ORK",
+      "fluff": "Just because an enemy vehicle is still mobile and fighting doesn’t stop any suitably arrogant Flash Gitz from claiming it as their loot, especially when their snazzguns are more than capable of explosively backing up that claim.",
+      "detachment": "Freebooter Krew",
+      "detachment_faction": "Orks"
+    },
+    {
+      "name": "Krump and Run",
+      "id": "6944232f-1e4a-59ec-ab4b-06c6ce6a109c",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ORKS unit from your army that was within engagement range of that enemy unit at the start of the phase and is not within range of one or more enemy units.",
+      "when": "Your opponent’s Movement phase, just after an enemy unit falls back.",
+      "effect": "Your unit can make a Normal move of up to 6\".",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "ORK",
+      "fluff": "Freebooterz are unscrupulous pirates through and through, always on the look out for new looting opportunities and sometimes even willing to forgo a good punch up in favour of hauling away their riches.",
+      "detachment": "Freebooter Krew",
+      "detachment_faction": "Orks"
+    },
+    {
       "name": "Speshul Shells",
       "id": "69abf31c-8882-53d6-8801-7cb92fd6159f",
       "cost": 1,
@@ -12188,5 +12359,5 @@
       "detachment_faction": "Orks"
     }
   ],
-  "updated": "2026-02-27T10:15:50.416Z"
+  "updated": "2026-03-01T14:21:54.152Z"
 }
