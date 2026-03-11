@@ -8,8 +8,8 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-01-17T11:39:41.237Z",
-  "compatibleDataVersion": 377,
+  "updated": "2026-03-11T23:18:17.498Z",
+  "compatibleDataVersion": 410,
   "warscrolls": [
     {
       "id": "970f68c9-63a0-5047-94f5-faa49de1e991",
@@ -19,19 +19,23 @@
       "source": "aos-4e",
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
-      "keywords": ["Monster", "Alarith", "Ward (6+)"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
-      "referenceKeywords": "Monster, Ward (6+), Order, Lumineth Realm‑lords, Alarith",
+      "keywords": ["Monster", "Alarith"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
+      ],
+      "referenceKeywords": "Monster, Order, Lumineth Realm‑lords, Alarith",
       "stats": {
         "move": "6\"",
         "save": "3+",
         "control": "5",
         "health": "14",
-        "ward": "6+",
+        "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 280,
+      "points": 340,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -47,27 +51,16 @@
             "wound": "2+",
             "rend": "2",
             "damage": "D6",
-            "abilities": []
+            "abilities": ["Shoot in Combat"]
           }
         ],
         "melee": [
-          {
-            "name": "Cloven Hooves",
-            "type": "melee",
-            "range": null,
-            "attacks": "2",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "1",
-            "damage": "2",
-            "abilities": []
-          },
           {
             "name": "Stoneheart Worldhammer",
             "type": "melee",
             "range": null,
             "attacks": "4",
-            "hit": "3+",
+            "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "5",
@@ -89,29 +82,29 @@
           "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Stoneheart Worldhammer** is 3."
         },
         {
-          "name": "Stoneheart Shockwave",
+          "name": "Rain of Stone",
           "phase": "combatPhase",
           "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-          "icon": "defensive",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.",
-          "effect": "Roll a dice. On a 4+, the target has **STRIKE-LAST** for the rest of the turn.",
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a D3. Add 2 to the roll if the target charged this turn. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
           "keywords": ["Rampage"]
         },
         {
-          "name": "Stonemage Symbiosis",
-          "phase": "defensive",
+          "name": "With the Force of a Landslide",
+          "phase": "combatPhase",
           "phaseDetails": "Passive",
-          "icon": "defensive",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "The ‘Battle Damaged’ ability has no effect on this unit while it is wholly within 12\" of a friendly **Alarith Stonemage**."
+          "effect": "Add 1 to the Attacks characteristic of this unit’s **Stoneheart Worldhammer** for each instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**."
         }
       ],
       "summonedBy": null,
@@ -132,10 +125,14 @@
         "Alarith",
         "Infantry"
       ],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
+      ],
       "referenceKeywords": "Infantry, Champion, Standard Bearer (1/5), Order, Lumineth Realm‑lords, Aelf, Alarith",
       "stats": {
-        "move": "4\"",
+        "move": "5\"",
         "save": "4+",
         "control": "1",
         "health": "2",
@@ -174,7 +171,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "This unit has **WARD (5+)** while all of its models are contesting an objective you control."
+          "effect": "While you have 2 or more instances of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**, this unit’s Save characteristic is 3+."
         }
       ],
       "summonedBy": null,
@@ -191,8 +188,8 @@
       "keywords": ["Aelf", "Wizard (1)", "Alarith", "Infantry", "Hero"],
       "factionKeywords": [
         "Grand Alliance Order",
-        "Grand Alliance Destruction",
-        "Lumineth Realm-lords"
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
       ],
       "referenceKeywords": "Hero, Wizard (1), Infantry, Order, Lumineth Realm‑lords, Aelf, Alarith",
       "stats": {
@@ -204,7 +201,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 120,
+      "points": 130,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -226,29 +223,29 @@
       },
       "abilities": [
         {
-          "name": "Living Fissure",
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "offensive",
-          "castingValue": 7,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick a point on the battlefield within 18\" of this unit to be the target, then make a casting roll of 2D6.",
-          "effect": "Draw a straight line between the target and the closest part of this unit’s base. Roll a D3 for each unit (friendly and enemy) that the line passes across. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.",
-          "keywords": ["Spell"]
-        },
-        {
-          "name": "Stonemage Stance",
+          "name": "Strength of Stone",
           "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a friendly **ALARITH AELF** unit wholly within 12\" of this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, add 1 to the Rend characteristic of the target’s melee weapons for the rest of the turn."
+          "declare": "Pick a visible friendly **Alarith Stoneguard** unit wholly within 12\" of this unit to be the target.",
+          "effect": "For the rest of the turn:\n• Add 1 to the Rend characteristic of the target’s melee weapons.\n• The target cannot make pile-in moves."
+        },
+        {
+          "name": "Raise the Earth",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an objective within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, each time a non-**FLY** unit (friendly or enemy) that is contesting the target objective uses a **MOVE** ability, inflict D6 mortal damage on that unit after that ability has been resolved.",
+          "keywords": ["Spell"]
         }
       ],
       "summonedBy": null,
@@ -276,14 +273,14 @@
       "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (4), Fly, Ward (5+), Order, Lumineth Realm‑lords, Aelf",
       "stats": {
         "move": "10\"",
-        "save": "5+",
+        "save": "4+",
         "control": "10",
         "health": "16",
         "ward": "5+",
         "wizard": "4",
         "priest": null
       },
-      "points": 560,
+      "points": 640,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -298,7 +295,7 @@
             "hit": "2+",
             "wound": "2+",
             "rend": "2",
-            "damage": "D6",
+            "damage": "D3+3",
             "abilities": []
           }
         ],
@@ -312,7 +309,7 @@
             "wound": "3+",
             "rend": "2",
             "damage": "D3",
-            "abilities": []
+            "abilities": ["Crit (Mortal)"]
           },
           {
             "name": "Celennar’s Moonbright Talons",
@@ -322,7 +319,7 @@
             "hit": "3+",
             "wound": "3+",
             "rend": "2",
-            "damage": "2",
+            "damage": "3",
             "abilities": ["Companion"]
           }
         ]
@@ -341,30 +338,29 @@
           "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Celennar’s Moonbright Talons** is 3."
         },
         {
-          "name": "Storm of Searing White Light",
+          "name": "The Light of Truth",
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "offensive",
-          "castingValue": 10,
+          "castingValue": 7,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick any number of different visible enemy units within 18\" of this unit to be the targets, then make a casting roll of 2D6 (see the ‘Archmage’ ability).",
-          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+          "declare": "Pick any number of different visible enemy units within 18\" of this unit to be the targets, then make a casting roll of 2D6.",
+          "effect": "Inflict D3 mortal damage on each target.",
           "keywords": ["Spell"]
         },
         {
-          "name": "Spirit of the Moon",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "name": "Discs of the Aelementiri",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Start of Battle Round",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, the target cannot use commands for the rest of the turn.",
-          "keywords": ["Rampage"]
+          "declare": "You cannot use this ability in the first battle round.&#x20;",
+          "effect": "Depict a rune of your choice on your **battle scripture**.\n\n**Designer’s Note:** *This allows you to have that rune depicted earlier in the **battle scripture** for the purposes of other abilities. Do not resolve the effect of the ‘Depict Rune’ ability as part of this ability.*"
         },
         {
           "name": "Aura of Celennar",
@@ -376,19 +372,19 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to casting rolls for other friendly **LUMINETH REALM‑LORDS WIZARDS** while they are wholly within 12\" of this unit."
+          "effect": "Add 1 to casting rolls and banishment rolls for friendly **LUMINETH REALM-LORDS WIZARDS** while they are wholly within 12\" of this unit.\n\nIn addition, this unit can use Spell abilities from the Lore of Hysh, the Lore of the Awakened Realms and the warscrolls of all friendly **LUMINETH REALM-LORDS WIZARDS** on the battlefield."
         },
         {
           "name": "Archmage",
           "phase": "heroPhase",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Once Per Turn, Your Hero Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Instead of making a casting roll for this unit, you can use a value of 10 for the roll that cannot be modified. In addition, instead of making an unbinding roll or banishment roll for this unit, you can use a value of 8 for the roll that cannot be modified."
+          "effect": "Pick 1 of the following:\n\n***Magical Supremacy:*** Instead of making a casting roll for the next **SPELL** ability used by this unit this turn, you can use a value of 12 for the roll that cannot be modified.\n\n***Drain Power:*** Pick a visible enemy **WIZARD** or **PRIEST** within 18\" of this unit to be the target. Subtract 1 from the target’s power level, to a minimum of 0, until the start of your next turn."
         }
       ],
       "summonedBy": null,
@@ -402,26 +398,23 @@
       "source": "aos-4e",
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
-      "keywords": [
-        "Monster",
-        "Alarith",
-        "Unique",
-        "Ward (6+)",
-        "Warmaster",
-        "Hero"
+      "keywords": ["Monster", "Alarith", "Unique", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
       ],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
-      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Ward (6+), Order, Lumineth Realm‑lords, Alarith",
+      "referenceKeywords": "Unique, Hero, Monster, Order, Lumineth Realm‑lords, Alarith",
       "stats": {
         "move": "6\"",
         "save": "3+",
         "control": "5",
         "health": "16",
-        "ward": "6+",
+        "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 410,
+      "points": 420,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -437,27 +430,16 @@
             "wound": "2+",
             "rend": "2",
             "damage": "D6",
-            "abilities": []
+            "abilities": ["Shoot in Combat"]
           }
         ],
         "melee": [
-          {
-            "name": "Cloven Hooves",
-            "type": "melee",
-            "range": null,
-            "attacks": "2",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "1",
-            "damage": "2",
-            "abilities": []
-          },
           {
             "name": "Firestealer Hammers",
             "type": "melee",
             "range": null,
             "attacks": "6",
-            "hit": "3+",
+            "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "4",
@@ -479,41 +461,41 @@
           "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Firestealer Hammers** is 4."
         },
         {
-          "name": "Stonemage Symbiosis",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
+          "name": "Unbreakable Bulwark",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "The ‘Battle Damaged’ ability has no effect on this unit while it is wholly within 12\" of a friendly **Alarith Stonemage**."
+          "declare": "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.",
+          "effect": "Roll a dice. On a 3+, for the rest of the turn, while that enemy unit is in combat with this unit, all attacks made by models in that enemy unit within this unit’s combat range must target this unit.",
+          "keywords": ["Rampage"]
         },
         {
-          "name": "Unshakeable Faith of the Mountains",
+          "name": "With the Force of a Landslide",
           "phase": "combatPhase",
-          "phaseDetails": "Your Combat Phase",
+          "phaseDetails": "Passive",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
-          "cpCost": 1,
+          "cpCost": null,
           "isReaction": false,
-          "declare": "Pick up to 3 different friendly **ALARITH AELF** units wholly within 12\" of this unit to be the targets.",
-          "effect": "Add 1 to the Attacks characteristic of the targets’ melee weapons for the rest of the turn."
+          "declare": null,
+          "effect": "Add 1 to the Attacks characteristic of this unit’s **Firestealer Hammers** for each instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**."
         },
         {
-          "name": "Unbreakable Bulwark",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "name": "Call of the Mountains",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.",
-          "effect": "Roll a dice. On a 2+, subtract 1 from the Rend characteristic of the target’s melee weapons for the rest of the turn and add 1 to the Attacks characteristic of this unit’s melee weapons for the rest of the turn.",
-          "keywords": ["Rampage"]
+          "declare": null,
+          "effect": "While a visible friendly **ALARITH** unit is wholly within 12\" of this unit:\n•  You are treated as having 1 additional instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture** for the purposes of the abilities on that unit’s warscroll.\n•  If that unit is picked to be a target of the ‘Depict Rune’ ability, you can apply the enhanced effects of that ability to that unit as if you had an instance of **Alaithi, Rune of the Mountain** depicted on your **battle scripture**."
         }
       ],
       "summonedBy": null,
@@ -543,12 +525,12 @@
         "move": "6\"",
         "save": "4+",
         "control": "4",
-        "health": "8",
+        "health": "10",
         "ward": "5+",
         "wizard": "1",
         "priest": null
       },
-      "points": 300,
+      "points": 290,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -560,9 +542,9 @@
             "type": "ranged",
             "range": "12\"",
             "attacks": "3",
-            "hit": "2+",
+            "hit": "3+",
             "wound": "3+",
-            "rend": "2",
+            "rend": "1",
             "damage": "D3",
             "abilities": ["Crit (Auto-wound)"]
           }
@@ -603,7 +585,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Make a casting roll of 2D6.",
-          "effect": "Until the start of your next turn, the first time an enemy unit uses a command within 18\" of this unit, your opponent must spend an additional command point to use that command.",
+          "effect": "Until the start of your next turn, the first time an enemy unit within 18\" of this unit uses a command, unless your opponent spends 1 additional command point, the command has no effect, it still counts as having been used and the command points spent to use the command are still lost.",
           "keywords": ["Spell"]
         },
         {
@@ -616,7 +598,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick whether Ellania will take the lead or Ellathor will take the lead.",
-          "effect": "If Ellania takes the lead, until the start of your next turn, add 1 to this unit’s power level and it has **WARD (4+)**. If Ellathor takes the lead, until the start of your next turn, add the current battle round number to the Damage characteristic of **Altairi**."
+          "effect": "If Ellania takes the lead, until the start of your next turn, add 1 to this unit’s power level and it has **WARD (4+)**.\n\nIf Ellathor takes the lead, until the start of your next turn, add the current battle round number to the Damage characteristic of **Altairi**."
         },
         {
           "name": "Sudden Translocation",
@@ -627,8 +609,8 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "This unit can use this ability if any enemy models were slain by it this turn. **Heal (D6)** this unit. Then, remove it from the battlefield and set it up again on the battlefield more than 9\" from all enemy units. When using the ‘Equal Prodigies’ ability in your next turn, you must pick Ellania to take the lead."
+          "declare": "This unit can only use this ability if any enemy models were slain this turn by this unit’s combat attacks.",
+          "effect": "**Heal (D6)** this unit. Then, remove it from the battlefield and set it up again on the battlefield more than 9\" from all enemy units."
         }
       ],
       "summonedBy": null,
@@ -643,7 +625,11 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Ward (5+)", "Monster", "Hurakan", "Fly"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
+      ],
       "referenceKeywords": "Monster, Fly, Ward (5+), Order, Lumineth Realm‑lords, Hurakan",
       "stats": {
         "move": "18\"",
@@ -654,7 +640,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 250,
+      "points": 270,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -664,13 +650,13 @@
           {
             "name": "Bow of the Wind’s Vengeance",
             "type": "ranged",
-            "range": "12\"",
+            "range": "15\"",
             "attacks": "4",
             "hit": "2+",
             "wound": "3+",
             "rend": "2",
-            "damage": "D3",
-            "abilities": ["Shoot in Combat", "Anti-MONSTER (+1 Rend)"]
+            "damage": "2",
+            "abilities": ["Anti-MONSTER (+1 Rend)", "Shoot in Combat"]
           }
         ],
         "melee": [
@@ -681,13 +667,39 @@
             "attacks": "6",
             "hit": "2+",
             "wound": "4+",
-            "rend": "1",
+            "rend": "-",
             "damage": "1",
-            "abilities": []
+            "abilities": ["Crit (Mortal)"]
           }
         ]
       },
       "abilities": [
+        {
+          "name": "Hurricane Winds",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that had any damage points allocated to it this turn by this unit’s shooting attacks to be the target.",
+          "effect": "Roll a dice. On a 3+, the target has **STRIKE-LAST** for the rest of the turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Spirit of the Wind",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit used a **SHOOT** ability this phase, this unit can move D6\". Add 2 to the roll for each instance of **Oreali, Rune of the Wind** depicted on your **battle scripture**. It cannot end that move in combat.",
+          "keywords": ["Move"]
+        },
         {
           "name": "Hunters of Majestic Beasts",
           "phase": "shootingPhase",
@@ -699,31 +711,6 @@
           "isReaction": false,
           "declare": null,
           "effect": "The Damage characteristic of this unit’s **Bow of the Wind’s Vengeance** is 3 for attacks that target **MONSTERS**."
-        },
-        {
-          "name": "Living Cyclone",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-          "icon": "special",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll, then this unit can move 6\", but it must end that move in combat.",
-          "keywords": ["Rampage"]
-        },
-        {
-          "name": "Spirit of the Wind",
-          "phase": "movementPhase",
-          "phaseDetails": "Passive",
-          "icon": "special",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "While friendly **HURAKAN** units are wholly within 12\" of this unit, they can use **SHOOT** and/or **CHARGE** abilities even if they used a **RUN** or **RETREAT** ability in the same turn and no mortal damage is inflicted on them by **RETREAT** abilities."
         }
       ],
       "summonedBy": null,
@@ -738,7 +725,11 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Champion", "Standard Bearer", "Aelf", "Hurakan", "Cavalry"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
+      ],
       "referenceKeywords": "Cavalry, Champion, Standard Bearer (1/5), Order, Lumineth Realm‑lords, Aelf, Hurakan",
       "stats": {
         "move": "14\"",
@@ -765,16 +756,16 @@
             "wound": "4+",
             "rend": "1",
             "damage": "1",
-            "abilities": ["Shoot in Combat"]
+            "abilities": ["Anti-CAVALRY (+1 Rend)", "Crit (Auto-wound)"]
           }
         ],
         "melee": [
           {
-            "name": "Windcharger Bow",
+            "name": "Windcharger Blade",
             "type": "melee",
             "range": null,
             "attacks": "1",
-            "hit": "3+",
+            "hit": "4+",
             "wound": "4+",
             "rend": "-",
             "damage": "1",
@@ -795,7 +786,7 @@
       },
       "abilities": [
         {
-          "name": "Windcharger Arrows",
+          "name": "Guided by the Winds",
           "phase": "shootingPhase",
           "phaseDetails": "Passive",
           "icon": "shooting",
@@ -804,7 +795,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Ward rolls cannot be made for damage points inflicted by this unit’s shooting attacks."
+          "effect": "While you have 2 or more instances of **Oreali, Rune of the Wind** depicted on your **battle scripture**, add 6\" to the Range characteristic of this unit’s Windcharger Bows."
         }
       ],
       "summonedBy": null,
@@ -819,7 +810,11 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Aelf", "Wizard (1)", "Hurakan", "Infantry", "Fly", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
+      ],
       "referenceKeywords": "Hero, Wizard (1), Infantry, Fly, Order, Lumineth Realm‑lords, Aelf, Hurakan",
       "stats": {
         "move": "12\"",
@@ -840,7 +835,7 @@
           {
             "name": "Windblast Vortex",
             "type": "ranged",
-            "range": "10\"",
+            "range": "12\"",
             "attacks": "1",
             "hit": "2+",
             "wound": "3+",
@@ -854,11 +849,11 @@
             "name": "Aspiragillum",
             "type": "melee",
             "range": null,
-            "attacks": "2",
+            "attacks": "3",
             "hit": "3+",
             "wound": "4+",
             "rend": "1",
-            "damage": "2",
+            "damage": "D3",
             "abilities": []
           }
         ]
@@ -880,14 +875,14 @@
         {
           "name": "Windleap",
           "phase": "movementPhase",
-          "phaseDetails": "Your Movement Phase",
+          "phaseDetails": "Once Per Battle (Army), Your Movement Phase",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a friendly **Hurakan Windchargers** unit wholly within 12\" of this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, add 3\" to the target’s Move characteristic for the rest of the turn and the target has **FLY** for the rest of the turn."
+          "declare": "Pick up to 3 friendly **HURAKAN** unit wholly within 12\" of this unit to be the targets.",
+          "effect": "For the rest of the turn, each target can use a **RUN** ability and still use **SHOOT** and/or **CHARGE** abilities later in the turn."
         }
       ],
       "summonedBy": null,
@@ -905,7 +900,7 @@
       "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
       "referenceKeywords": "Manifestation, Endless Spell, Ward (6+), Order, Lumineth Realm‑lords",
       "stats": {
-        "move": "-",
+        "move": "5\"",
         "save": "4+",
         "control": "7+",
         "health": "5",
@@ -918,8 +913,34 @@
       "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
-      "weapons": {},
+      "weapons": {
+        "melee": [
+          {
+            "name": "Crackling Energy",
+            "type": "melee",
+            "range": null,
+            "attacks": "2D6",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
       "abilities": [
+        {
+          "name": "Release Arcane Charge",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a **SPELL** or **UNBIND** ability for a **LUMINETH REALM-LORDS WIZARD** within 3\" of this **MANIFESTATION**",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Add this **MANIFESTATION’**&#x73; **arcane charge points** to the casting roll or unbinding roll. Then, reset this **MANIFESTATION’**&#x73; **arcane charge points** to 0."
+        },
         {
           "name": "Reservoir of Power",
           "phase": "heroPhase",
@@ -930,13 +951,13 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to casting rolls for friendly **LUMINETH REALM‑LORDS** units while they are wholly within 6\" of this **MANIFESTATION** or are garrisoning a faction terrain feature within 3\" of this **MANIFESTATION**."
+          "effect": "Each time a unit (friendly or enemy) successfully casts a spell while it is within 12\" of this **MANIFESTATION**, give this **MANIFESTATION** 1 **arcane charge point.**\n\nThis **MANIFESTATION** can have a maximum of 6 **arcane charge points**."
         }
       ],
       "summonedBy": {
-        "spell": "Summon Hyshian Twinstones",
-        "lore": "Manifestations of Hysh",
-        "castingValue": 5
+        "spell": "Cycle Manifestation",
+        "lore": "Aelementiri Conclave Manifestation Lore",
+        "castingValue": 6
       },
       "notes": null
     },
@@ -960,25 +981,12 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 200,
+      "points": 250,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
       "weapons": {
-        "ranged": [
-          {
-            "name": "Daemonbane",
-            "type": "ranged",
-            "range": "12\"",
-            "attacks": "1",
-            "hit": "2+",
-            "wound": "2+",
-            "rend": "2",
-            "damage": "D3",
-            "abilities": ["Anti-DAEMON (+1 Rend)"]
-          }
-        ],
         "melee": [
           {
             "name": "Daemonbane",
@@ -989,16 +997,16 @@
             "wound": "3+",
             "rend": "1",
             "damage": "2",
-            "abilities": ["Charge (+1 Damage)", "Anti-DAEMON (+1 Rend)"]
+            "abilities": ["Anti-DAEMON (+1 Rend)", "Charge (+1 Damage)"]
           },
           {
             "name": "Farael’s Horns and Claws",
             "type": "melee",
             "range": null,
             "attacks": "4",
-            "hit": "5+",
+            "hit": "4+",
             "wound": "3+",
-            "rend": "-",
+            "rend": "1",
             "damage": "1",
             "abilities": ["Companion"]
           },
@@ -1006,31 +1014,31 @@
             "name": "Lyrior’s Sword",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "5",
             "hit": "2+",
             "wound": "3+",
             "rend": "1",
             "damage": "2",
-            "abilities": ["Crit (Mortal)"]
+            "abilities": ["Charge (+1 Damage)", "Crit (Mortal)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Solar Flare",
+          "name": "Focused Fury",
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "offensive",
-          "castingValue": 7,
+          "castingValue": 5,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a visible enemy unit or **MANIFESTATION** wholly within 18\" of this unit to be the target, then make a casting roll of 2D6.",
-          "effect": "If the target is a **MANIFESTATION**, inflict 3D6 mortal damage on it. Otherwise, roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.",
+          "declare": "Make a casting roll of 2D6. Add 2 to the roll if this unit is in combat.",
+          "effect": "This unit has **STRIKE-FIRST** for the rest of the turn.",
           "keywords": ["Spell"]
         },
         {
-          "name": "Voice of Tyrion",
+          "name": "Champion of the Lord Phoenix",
           "phase": "startOfTurn",
           "phaseDetails": "Passive",
           "icon": "special",
@@ -1039,7 +1047,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Each time a friendly **LUMINETH REALM‐LORDS** unit wholly within 12\" of this unit uses the ‘All-out Attack’ command, no command points are spent."
+          "effect": "While a visible friendly **VANARI** unit is wholly within 12\" of this unit:\n•  You are treated as having 1 additional instance of **Varinor, Rune of Strength** depicted on your **battle scripture** for the purposes of the abilities on that unit’s warscroll.\n•  If that unit is picked to be a target of the ‘Depict Rune’ ability, you can apply the enhanced effects of that ability to that unit as if you had an instance of **Varinor, Rune of Strength** depicted on your **battle scripture**."
         }
       ],
       "summonedBy": null,
@@ -1062,7 +1070,11 @@
         "Unique",
         "Infantry"
       ],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
+      ],
       "referenceKeywords": "Unique, Infantry, Champion, Order, Lumineth Realm-lords, Aelf, Vanari, Scinari, Alarith",
       "stats": {
         "move": "6\"",
@@ -1172,8 +1184,8 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick each enemy unit within 6\" of this **MANIFESTATION** to be the targets.",
-          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If a target has 3 mortal damage inflicted on it by this ability, it has **STRIKE-LAST** for the rest of the turn."
+          "declare": null,
+          "effect": "Roll a D3 for each enemy unit within 6\" of this **MANIFESTATION**. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll. If an enemy unit has 3 mortal damage inflicted on it by this ability, it has **STRIKE-LAST** for the rest of the turn."
         }
       ],
       "summonedBy": {
@@ -1191,15 +1203,15 @@
       "source": "aos-4e",
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
-      "keywords": ["Manifestation", "Endless Spell"],
+      "keywords": ["Manifestation", "Endless Spell", "Ward (6+)"],
       "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
-      "referenceKeywords": "Manifestation, Endless Spell, Order, Lumineth Realm‑lords",
+      "referenceKeywords": "Manifestation, Endless Spell, Ward (6+), Order, Lumineth Realm‑lords",
       "stats": {
         "move": "-",
-        "save": "-",
+        "save": "4+",
         "control": "7+",
-        "health": "-",
-        "ward": null,
+        "health": "6",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
@@ -1220,13 +1232,13 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While the unit that was picked to be the target of the ‘Summon Sanctum of Amyntok’ ability is inside the ring formed by this **MANIFESTATION**:\n\n• That unit has **WARD (4+)**.\n• If that unit is a **WIZARD**, add 1 to that unit’s power level.\n• Instead of measuring range or visibility to that unit, measure to this **MANIFESTATION** instead.\n• This **MANIFESTATION** cannot be picked to be the target of abilities other than **BANISH** abilities.\n• If that unit uses a **MOVE** ability, makes a pile-in move or is removed from the battlefield, this **MANIFESTATION** is removed from play."
+          "effect": "While a friendly unit with a Health characteristic of 10 or less is wholly inside the ring formed by this **MANIFESTATION**:\n\n•  That unit is not visible to enemy units.\n•  Enemy abilities that would target that unit must target this **MANIFESTATION** instead."
         }
       ],
       "summonedBy": {
-        "spell": "Summon Sanctum of Amyntok",
-        "lore": "Manifestations of Hysh",
-        "castingValue": 4
+        "spell": "Cycle Manifestation",
+        "lore": "Aelementiri Conclave Manifestation Lore",
+        "castingValue": 6
       },
       "notes": null
     },
@@ -1250,7 +1262,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 150,
+      "points": 130,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1273,15 +1285,15 @@
       "abilities": [
         {
           "name": "Realmscribe",
-          "phase": "heroPhase",
-          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a SUMMON SPELL ability for this unit",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Reaction: You declared the ‘Depict Rune’ ability",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": true,
           "declare": null,
-          "effect": "Change the casting roll for that spell to a value of 8 that cannot be modified."
+          "effect": "Replace 1 instance of a rune on your **battle scripture** with 1 of the following:\n\n**• Varinor, Rune of Strength**\n**• Ydriliqi, Rune of the River**\n**• Alaithi, Rune of the Mountain**\n**• Oreali, Rune of the Wind**"
         }
       ],
       "summonedBy": null,
@@ -1307,7 +1319,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 110,
+      "points": 130,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1331,26 +1343,14 @@
         {
           "name": "Darkness of the Soul",
           "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "control",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit within 12\" of this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, subtract D6 from the target’s control score for the rest of the turn."
-        },
-        {
-          "name": "Absorb Despair",
-          "phase": "endOfTurn",
-          "phaseDetails": "Passive",
-          "icon": "control",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "Ignore negative modifiers to the control scores of friendly **LUMINETH REALM-LORDS** units while they are wholly within 12\" of this unit."
+          "declare": "Pick a visible enemy unit within 18\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, the target cannot use commands until the start of your next turn."
         }
       ],
       "summonedBy": null,
@@ -1411,29 +1411,29 @@
       },
       "abilities": [
         {
-          "name": "Ethereal Blessings",
+          "name": "Clarity of Thought",
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "defensive",
-          "castingValue": 6,
+          "castingValue": 7,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a visible friendly **LUMINETH REALM‑LORDS INFANTRY** unit wholly within 18\" of this unit to be the target, then make a casting roll of 2D6.",
-          "effect": "Ignore all modifiers to save rolls for the target (positive and negative) until the start of your next turn.",
-          "keywords": ["Spell"]
+          "declare": "Pick a visible friendly **LUMINETH REALM-LORDS INFANTRY** unit wholly within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, attacks that target that friendly unit cannot score critical hits (treat them as regular hits instead).",
+          "keywords": ["Spell", "Unlimited"]
         },
         {
           "name": "Rune of Enthlai",
           "phase": "heroPhase",
-          "phaseDetails": "Once Per Turn, Reaction: You declared the ‘Speed of Hysh’, ‘Overwhelming Heat’ or ‘Ethereal Blessings’ spell for this unit",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared an **UNLIMITED SPELL** ability for this unit",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": true,
           "declare": null,
-          "effect": "If that spell is successfully cast, roll a dice. On a 3+, after resolving the effect of that spell, this unit can immediately cast that spell a second time using the same casting roll. Do not count the second spell towards the number of **SPELL** abilities this unit can use this turn."
+          "effect": "If that spell is successfully cast, roll a dice. On a 4+, after resolving the effect of that spell, this unit can immediately cast that spell a second time using the same casting roll. Do not count the second spell towards the number of **SPELL** abilities this unit can use this turn."
         }
       ],
       "summonedBy": null,
@@ -1459,7 +1459,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 130,
+      "points": 140,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1494,29 +1494,28 @@
       },
       "abilities": [
         {
-          "name": "Lone Agent",
-          "phase": "endOfTurn",
-          "phaseDetails": "Passive",
-          "icon": "control",
+          "name": "Independent Operative",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 5 to this unit’s control score while it is more than 9\" from all other friendly units."
+          "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units."
         },
         {
-          "name": "Independent Operative",
-          "phase": "startOfTurn",
-          "phaseDetails": "Deployment Phase",
+          "name": "Arcane Discovery",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Battle (Army), Your Movement Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "If this unit has not been deployed, set it up anywhere on the battlefield not in combat with any enemy units. This unit has now been deployed.\n\n**Designer’s Note:** *Enemy units that deploy after this unit can deploy in combat with it.*",
-          "keywords": ["Deploy"]
+          "declare": "Pick a non-**FACTION TERRAIN** terrain feature within 3\" of this unit to be the target.",
+          "effect": "For the rest of the battle, add 1 to casting rolls for units (friendly and enemy) while they are within 3\" of the target."
         }
       ],
       "summonedBy": null,
@@ -1538,7 +1537,11 @@
         "Ward (4+)",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
       "referenceKeywords": "Unique, Hero, Infantry, Ward (4+), Order, Lumineth Realm‑lords, Aelf",
       "stats": {
         "move": "6\"",
@@ -1631,7 +1634,11 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Aelf", "Lumineth Paragon", "Vanari", "Infantry", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
       "referenceKeywords": "Hero, Infantry, Order, Lumineth Realm‑lords, Aelf, Vanari",
       "stats": {
         "move": "6\"",
@@ -1687,17 +1694,13 @@
       "source": "aos-4e",
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
-      "keywords": [
-        "Ward (5+)",
-        "Monster",
-        "Hurakan",
-        "Unique",
-        "Fly",
-        "Warmaster",
-        "Hero"
+      "keywords": ["Ward (5+)", "Monster", "Hurakan", "Unique", "Fly", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
       ],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
-      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Fly, Ward (5+), Order, Lumineth Realm‑lords, Hurakan",
+      "referenceKeywords": "Unique, Hero, Monster, Fly, Ward (5+), Order, Lumineth Realm‑lords, Hurakan",
       "stats": {
         "move": "18\"",
         "save": "4+",
@@ -1717,12 +1720,12 @@
           {
             "name": "Enathrai, the Howling Death",
             "type": "ranged",
-            "range": "12\"",
+            "range": "15\"",
             "attacks": "4",
             "hit": "2+",
             "wound": "3+",
             "rend": "3",
-            "damage": "D3+1",
+            "damage": "3",
             "abilities": ["Shoot in Combat"]
           }
         ],
@@ -1734,24 +1737,25 @@
             "attacks": "6",
             "hit": "2+",
             "wound": "4+",
-            "rend": "1",
+            "rend": "-",
             "damage": "1",
-            "abilities": []
+            "abilities": ["Crit (Mortal)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "The Living Gale",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
+          "name": "Spirit of the Wind",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "This unit cannot be targeted by shooting attacks made by enemy units that are more than 9\" from this unit."
+          "effect": "If this unit used a **SHOOT** ability this phase, this unit can move D6\". Add 2 to the roll for each instance of **Oreali, Rune of the Wind** depicted on your **battle scripture**. It cannot end that move in combat.",
+          "keywords": ["Move"]
         },
         {
           "name": "Searing Desert Winds",
@@ -1762,13 +1766,13 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick up to 3 different enemy units in combat with this unit to be the targets.",
+          "declare": "Pick up to 3 visible enemy units within 6\" of this unit to be the targets.",
           "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll and subtract 1 from wound rolls for the target’s attacks for the rest of the turn.",
           "keywords": ["Rampage"]
         },
         {
-          "name": "Spirit of the Wind",
-          "phase": "movementPhase",
+          "name": "Call of the Winds",
+          "phase": "startOfTurn",
           "phaseDetails": "Passive",
           "icon": "special",
           "castingValue": null,
@@ -1776,7 +1780,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While friendly **Hurakan** units are wholly within 12\" of this unit, they can use **SHOOT** and/or **CHARGE** abilities even if they used a **RUN** or **RETREAT** ability in the same turn and no mortal damage is inflicted on them by **RETREAT** abilities."
+          "effect": "While a visible friendly **HURAKAN** unit is wholly within 12\" of this unit:\n•  You are treated as having 1 additional instance of **Oreali, Rune of the Wind** depicted on your **battle scripture** for the purposes of the abilities on that unit’s warscroll.\n•  If that unit is picked to be a target of the ‘Depict Rune’ ability, you can apply the enhanced effects of that ability to that unit as if you had an instance of **Oreali, Rune of the Wind** depicted on your **battle scripture**."
         }
       ],
       "summonedBy": null,
@@ -1791,7 +1795,12 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Faction Terrain", "Fly"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave",
+        "Vanari Paragons"
+      ],
       "referenceKeywords": "Faction Terrain, Fly, Order, Lumineth Realm‑lords",
       "stats": {
         "move": "-",
@@ -1802,7 +1811,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 20,
+      "points": null,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1836,7 +1845,7 @@
         {
           "name": "Cleansing Rituals",
           "phase": "heroPhase",
-          "phaseDetails": "Once Per Turn, Reaction: You declared a SPELL ability for a unit wholly within 12\" of this terrain feature",
+          "phaseDetails": "Once Per Turn, Reaction: You declared a **SPELL** ability for a **LUMINETH REALM-LORDS** unit wholly within 12\" of this terrain feature",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
@@ -1855,7 +1864,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this terrain feature has a Shrine Guardian:\n\n• This terrain feature has a Move characteristic of 6\" and can use non-command non-**CHARGE MOVE** abilities as if it were a unit.\n• The Shrine Guardian cannot use **MOVE** abilities and remains on this terrain feature each time it moves.\n• Instead of measuring range or visibility to the Shrine Guardian, measure to this terrain feature instead.\n• All attacks that would target the Shrine Guardian target this terrain feature instead.\n• If this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Shrine Guardian. Then, set up the Shrine Guardian on the battlefield wholly within 3\" of this terrain feature and not in combat. That unit is no longer a Shrine Guardian. If it is not possible to set up the Shrine Guardian, it is slain."
+          "effect": "While this terrain feature has a Shrine Guardian:\n\n•  This terrain feature has a Move characteristic of 6\" and can use non‑command non-**CHARGE MOVE** abilities as if it were a unit. It cannot end a **MOVE** ability within the combat range of an enemy unit.\n•  The Shrine Guardian cannot use **MOVE** abilities and remains on this terrain feature each time it moves.\n•  Instead of measuring range and visibility to the Shrine Guardian, measure to this terrain feature instead.\n•  All attacks that would target the Shrine Guardian target this terrain feature instead.\n\nIf this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Shrine Guardian. Then, set up the Shrine Guardian on the battlefield wholly within 3\" of this terrain feature and not in combat. That unit is no longer a Shrine Guardian. If it is not possible to set up the Shrine Guardian, it is slain."
         }
       ],
       "summonedBy": null,
@@ -1870,25 +1879,29 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": [
-        "Ward (5+)",
         "Aelf",
         "Lumineth Paragon",
         "Unique",
         "Infantry",
+        "Ward (4+)",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
-      "referenceKeywords": "Unique, Hero, Infantry, Ward (5+), Order, Lumineth Realm‑lords, Aelf",
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
+      "referenceKeywords": "Unique, Hero, Infantry, Ward (4+), Order, Lumineth Realm‑lords, Aelf",
       "stats": {
         "move": "6\"",
         "save": "3+",
         "control": "2",
-        "health": "6",
-        "ward": "5+",
+        "health": "7",
+        "ward": "4+",
         "wizard": null,
         "priest": null
       },
-      "points": 210,
+      "points": 290,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1904,7 +1917,7 @@
             "wound": "3+",
             "rend": "2",
             "damage": "D3",
-            "abilities": []
+            "abilities": ["Shoot in Combat"]
           }
         ],
         "melee": [
@@ -1923,7 +1936,7 @@
             "name": "Fangsword of Eltharion",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "5",
             "hit": "2+",
             "wound": "3+",
             "rend": "3",
@@ -1934,16 +1947,16 @@
       },
       "abilities": [
         {
-          "name": "Spirit Armour",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
+          "name": "Valorous intervention",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "Ignore all modifiers to save rolls for this unit (positive and negative)."
+          "declare": "This unit cannot use this ability if it is in combat. Pick a friendly unit that is in combat to be the target.",
+          "effect": "Remove this unit from the battlefield and set it up again within 1\" of the target and in combat."
         },
         {
           "name": "Supreme Swordmaster",
@@ -1955,7 +1968,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Ignore negative modifiers to hit rolls and wound rolls for this unit’s attacks. In addition, ignore negative modifiers to the characteristics of this unit’s melee weapons."
+          "effect": "Ignore negative modifiers to hit rolls and wound rolls for this unit’s attacks."
         }
       ],
       "summonedBy": null,
@@ -1970,7 +1983,11 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Champion", "Aelf", "Vanari", "Infantry"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
       "referenceKeywords": "Infantry, Champion, Order, Lumineth Realm‑lords, Aelf, Vanari",
       "stats": {
         "move": "6\"",
@@ -1981,7 +1998,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 160,
+      "points": 140,
       "modelCount": 10,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2002,7 +2019,7 @@
         ],
         "melee": [
           {
-            "name": "Sentinel Blades",
+            "name": "Sentinel Blade",
             "type": "melee",
             "range": null,
             "attacks": "1",
@@ -2040,7 +2057,11 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Champion", "Aelf", "Vanari", "Infantry"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
       "referenceKeywords": "Infantry, Champion, Order, Lumineth Realm‑lords, Aelf, Vanari",
       "stats": {
         "move": "6\"",
@@ -2051,7 +2072,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 140,
+      "points": 120,
       "modelCount": 10,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2059,7 +2080,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Warden Pikes and Blades",
+            "name": "Warden Pike and Blade",
             "type": "melee",
             "range": null,
             "attacks": "2",
@@ -2067,22 +2088,22 @@
             "wound": "4+",
             "rend": "-",
             "damage": "1",
-            "abilities": ["Crit (Mortal)", "Anti-charge (+1 Rend)"]
+            "abilities": ["Anti-charge (+1 Rend)", "Crit (Mortal)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Wall of Blades",
-          "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
-          "icon": "offensive",
+          "name": "Anticipated Strike",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If this unit did not charge this turn and is in combat with an enemy unit that charged this turn, roll a dice. Add 1 to the roll if that enemy unit is **CAVALRY**. On a 4+, this unit has **STRIKE-FIRST** for the rest of the turn."
+          "effect": "If this unit has not charged this turn, ignore the effect of the **Charge (+1 Damage)** ability for combat attacks made by enemy units that target this unit."
         }
       ],
       "summonedBy": null,
@@ -2097,18 +2118,22 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Aelf", "Lumineth Paragon", "Vanari", "Infantry", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
       "referenceKeywords": "Hero, Infantry, Order, Lumineth Realm‑lords, Aelf, Vanari",
       "stats": {
         "move": "6\"",
-        "save": "3+",
+        "save": "4+",
         "control": "5",
         "health": "5",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 130,
+      "points": 140,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2119,7 +2144,7 @@
             "name": "Bannerblade’s Sword",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "5",
             "hit": "3+",
             "wound": "4+",
             "rend": "1",
@@ -2131,15 +2156,15 @@
       "abilities": [
         {
           "name": "World Banner",
-          "phase": "endOfTurn",
+          "phase": "heroPhase",
           "phaseDetails": "Passive",
-          "icon": "control",
+          "icon": "rallying",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 3 to the control scores of other friendly **LUMINETH REALM‑LORDS** units while they are wholly within 18\" of this unit."
+          "effect": "While a visible friendly **LUMINETH REALM-LORDS** unit is wholly within 12\" of this unit, it can use the ‘Rally’ command even if it is in combat."
         }
       ],
       "summonedBy": null,
@@ -2154,7 +2179,11 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Champion", "Aelf", "Vanari", "Infantry"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
       "referenceKeywords": "Infantry, Champion, Order, Lumineth Realm‑lords, Aelf, Vanari",
       "stats": {
         "move": "6\"",
@@ -2173,18 +2202,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Sunmetal Blade: Perfect Strike",
-            "type": "melee",
-            "range": null,
-            "attacks": "1",
-            "hit": "✹",
-            "wound": "✹",
-            "rend": "✹",
-            "damage": "✹",
-            "abilities": []
-          },
-          {
-            "name": "Sunmetal Blade: Flurry of Blows",
+            "name": "Sunmetal Blade",
             "type": "melee",
             "range": null,
             "attacks": "3",
@@ -2192,13 +2210,13 @@
             "wound": "4+",
             "rend": "1",
             "damage": "1",
-            "abilities": ["Crit (Mortal)", "Anti-INFANTRY (+1 Rend)"]
+            "abilities": ["Crit (Mortal)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Guardians",
+          "name": "Guardians of the Scinari",
           "phase": "defensive",
           "phaseDetails": "Passive",
           "icon": "defensive",
@@ -2210,7 +2228,7 @@
           "effect": "While any friendly **SCINARI HEROES** are wholly within this unit’s combat range, both this unit and those friendly units have **WARD (5+)**."
         },
         {
-          "name": "Swordmasters",
+          "name": "Masters of Combat",
           "phase": "combatPhase",
           "phaseDetails": "Passive",
           "icon": "offensive",
@@ -2219,7 +2237,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Each time this unit uses a **FIGHT** ability, you must pick either the **Perfect Strike** or **Flurry of Blows** weapon characteristics for all the attacks it makes with its **Sunmetal Blades**.\n\nIn addition, do not use the attack sequence for an attack made with **Perfect Strike**. Instead, roll a dice. On a 2+, inflict 1 mortal damage on the target."
+          "effect": "Add 1 to the Rend characteristic of this unit’s **Sunmetal Blades** for each instance of **Varinor, Rune of Strength** depicted on your **battle scripture**."
         }
       ],
       "summonedBy": null,
@@ -2234,18 +2252,22 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Champion", "Standard Bearer", "Aelf", "Vanari", "Cavalry"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
       "referenceKeywords": "Cavalry, Champion, Standard Bearer (1/5), Order, Lumineth Realm‑lords, Aelf, Vanari",
       "stats": {
         "move": "14\"",
-        "save": "3+",
+        "save": "4+",
         "control": "1",
         "health": "3",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 220,
+      "points": 180,
       "modelCount": 5,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2253,7 +2275,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Dawnrider Lances and Blades",
+            "name": "Dawnrider Lance and Blade",
             "type": "melee",
             "range": null,
             "attacks": "2",
@@ -2261,7 +2283,7 @@
             "wound": "4+",
             "rend": "1",
             "damage": "1",
-            "abilities": ["Crit (Mortal)", "Charge (+1 Damage)"]
+            "abilities": ["Charge (+1 Damage)", "Crit (Mortal)"]
           },
           {
             "name": "Stallions’ Dashing Hooves",
@@ -2278,16 +2300,16 @@
       },
       "abilities": [
         {
-          "name": "Deathly Furrows",
-          "phase": "chargePhase",
-          "phaseDetails": "Any Charge Phase",
+          "name": "Dawnrider Charge",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit charged this phase, pick an enemy **INFANTRY** unit within 1\" of it to be the target.",
-          "effect": "Roll a dice for each model in this unit. For each 3+, inflict 1 mortal damage on the target."
+          "declare": null,
+          "effect": "Add 1 to the Rend characteristic of this unit’s **Dawnrider Lances and Blades** if it charged in the same turn."
         }
       ],
       "summonedBy": null,
@@ -2301,19 +2323,96 @@
       "source": "aos-4e",
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
-      "keywords": ["Aelf", "Wizard (1)", "Vanari", "Cavalry", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
-      "referenceKeywords": "Hero, Wizard (1), Cavalry, Order, Lumineth Realm‑lords, Aelf, Vanari",
+      "keywords": ["Aelf", "Lumineth Paragon", "Vanari", "Infantry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
+      "referenceKeywords": "Hero, Infantry, Order, Lumineth Realm-lords, Aelf, Vanari",
+      "stats": {
+        "move": "6\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 110,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Regent’s Sword",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Wall of Blades",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **VANARI AURALAN WARDENS** unit wholly within 12\" of this unit to be the wall of blades. Then, pick an enemy unit in combat with the wall of blades to be the target.",
+          "effect": "Roll a dice for each model in the wall of blades that is within 3\" of the target. For each 5+, inflict 1 mortal damage on the target."
+        },
+        {
+          "name": "Shining Example",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time a friendly **LUMINETH REALM-LORDS** unit wholly within 12\" of this unit uses the ‘Rally’ command, you can make 3 additional rally rolls of D6."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "04bf3094-8c0c-575e-a210-137affb15705",
+      "name": "Vanari Lord Regent on Lightcourser",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "LUMINETH_REALM_LORDS",
+      "factions": ["Lumineth Realm-lords"],
+      "keywords": ["Aelf", "Vanari", "Cavalry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
+      "referenceKeywords": "Hero, Cavalry, Order, Lumineth Realm‑lords, Aelf, Vanari",
       "stats": {
         "move": "14\"",
         "save": "3+",
         "control": "2",
         "health": "7",
         "ward": null,
-        "wizard": "1",
+        "wizard": null,
         "priest": null
       },
-      "points": 200,
+      "points": 150,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2325,9 +2424,9 @@
             "type": "melee",
             "range": null,
             "attacks": "3",
-            "hit": "5+",
+            "hit": "4+",
             "wound": "3+",
-            "rend": "-",
+            "rend": "1",
             "damage": "1",
             "abilities": ["Companion"]
           },
@@ -2346,16 +2445,16 @@
       },
       "abilities": [
         {
-          "name": "Charge of the Lumineth",
+          "name": "Lead the Charge",
           "phase": "chargePhase",
-          "phaseDetails": "Once Per Battle, Your Charge Phase",
-          "icon": "special",
+          "phaseDetails": "Passive",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick this unit and up to 2 friendly **Vanari Dawnriders** units within this unit’s combat range to be the targets.",
-          "effect": "You can re-roll charge rolls for the targets for the rest of the turn. In addition, if a target charges this phase, add 1 to the Attacks characteristic of that target’s weapons for the rest of the turn."
+          "declare": null,
+          "effect": "You can re-roll charge rolls for friendly **LUMINETH REALM‑LORDS** units while they are wholly within 6\" of this unit."
         },
         {
           "name": "Purest Aetherquartz",
@@ -2367,7 +2466,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "For the rest of the turn, add 1 to casting rolls for this unit and subtract 1 from hit rolls for attacks that target this unit."
+          "effect": "For the rest of the turn, add 1 to hit rolls for this unit’s attacks and subtract 1 from hit rolls for attacks that target this unit."
         }
       ],
       "summonedBy": null,
@@ -2382,7 +2481,11 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["War Machine", "Vanari"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Vanari Paragons"
+      ],
       "referenceKeywords": "War Machine, Order, Lumineth Realm‑lords, Vanari",
       "stats": {
         "move": "6\"",
@@ -2393,7 +2496,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 90,
+      "points": 120,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2404,12 +2507,12 @@
             "name": "Starshard Bolts",
             "type": "ranged",
             "range": "24\"",
-            "attacks": "3",
-            "hit": "2+",
+            "attacks": "4",
+            "hit": "3+",
             "wound": "3+",
             "rend": "1",
-            "damage": "D3",
-            "abilities": ["Crit (2 Hits)", "Anti-MONSTER (+1 Rend)"]
+            "damage": "2",
+            "abilities": ["Anti-MONSTER (+1 Rend)", "Crit (2 Hits)"]
           }
         ],
         "melee": [
@@ -2422,34 +2525,34 @@
             "wound": "4+",
             "rend": "-",
             "damage": "1",
-            "abilities": ["Companion"]
+            "abilities": []
           }
         ]
       },
       "abilities": [
         {
-          "name": "Scryhawks",
-          "phase": "shootingPhase",
-          "phaseDetails": "Your Shooting Phase",
-          "icon": "shooting",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "For the rest of the turn, add 6\" to the Range characteristic of this unit’s **Starshard Bolts** while it is wholly within 12\" of any friendly **Vanari Auralan** **Sentinels** units."
-        },
-        {
           "name": "Blinding Bolts",
           "phase": "shootingPhase",
-          "phaseDetails": "Once Per Battle, Your Shooting Phase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that was targeted by all of this unit’s shooting attacks this phase to be the target.",
+          "effect": "Roll a dice. Add 1 to the roll if the target is a **MONSTER**. On a 3+, subtract 1 from hit rolls for the target’s attacks for the rest of the turn."
+        },
+        {
+          "name": "Scryhawks",
+          "phase": "shootingPhase",
+          "phaseDetails": "Passive",
           "icon": "shooting",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If all of this unit’s shooting attacks this turn target the same enemy unit, subtract 1 from hit rolls for the target’s attacks for the rest of the turn."
+          "effect": "Add 6\" to the Range characteristic of this unit’s **Starshard Bolts** while it is wholly within 12\" of any friendly **Vanari Auralan Sentinels** units."
         }
       ],
       "summonedBy": null,
@@ -2464,8 +2567,12 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factions": ["Lumineth Realm-lords"],
       "keywords": ["Champion", "Aelf", "Ydrilan", "Infantry"],
-      "factionKeywords": ["Grand Alliance Order", "Lumineth Realm-lords"],
-      "referenceKeywords": "Infantry, Champion (1/10), Order, Lumineth Realm‑lords, Aelf, Ydrilan",
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
+      ],
+      "referenceKeywords": "Infantry, Champion, Order, Lumineth Realm‑lords, Aelf, Ydrilan",
       "stats": {
         "move": "7\"",
         "save": "5+",
@@ -2475,7 +2582,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 160,
+      "points": 140,
       "modelCount": 10,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2499,12 +2606,12 @@
             "name": "Ydrilan Blades",
             "type": "melee",
             "range": null,
-            "attacks": "3",
+            "attacks": "2",
             "hit": "3+",
             "wound": "4+",
             "rend": "1",
             "damage": "1",
-            "abilities": ["Anti-HERO (+1 Rend)"]
+            "abilities": []
           }
         ]
       },
@@ -2512,7 +2619,7 @@
         {
           "name": "Relentless as the Driving Current",
           "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
@@ -2524,15 +2631,14 @@
         {
           "name": "Travel The Waterways",
           "phase": "movementPhase",
-          "phaseDetails": "Your Movement Phase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Remove this unit from the battlefield and set it up again on the battlefield wholly within 6\" of a battlefield edge and more than 9\" from all enemy units.",
-          "keywords": ["Core"]
+          "effect": "Remove this unit from the battlefield and set it up again on the battlefield wholly within 6\" of a battlefield edge and more than 9\" from all enemy units.\n\nIf you picked to depict **Ydriliqi, Rune of the River** on your **battle scripture** this battle round, you can instead set up this unit anywhere on the battlefield more than 9\" from all enemy units."
         }
       ],
       "summonedBy": null,
@@ -2541,72 +2647,6 @@
   ],
   "battleFormations": [
     {
-      "id": "beed786f-2003-5d76-96e8-5da71401950e",
-      "name": "Vanari Battlehost",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "LUMINETH_REALM_LORDS",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": 10,
-      "rules": [
-        {
-          "name": "Vanari Brilliance",
-          "phase": "startOfTurn",
-          "phaseDetails": "Passive",
-          "icon": "special",
-          "declare": null,
-          "effect": "You can use the ‘Power of Hysh’ ability in addition to the other **FACET OF WAR** ability used during the battle round.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
-      "id": "187cded8-9a13-547b-ba70-0fdb311b893d",
-      "name": "Hurakan Temple",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "LUMINETH_REALM_LORDS",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Grace of the Hurakan",
-          "phase": "shootingPhase",
-          "phaseDetails": "Passive",
-          "icon": "special",
-          "declare": null,
-          "effect": "You can use the ‘Move Like the Wind’ ability in addition to the other **FACET OF WAR** ability used during the battle round.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
-      "id": "1f7b53bd-550a-58ce-92b2-8996788e1e97",
-      "name": "Alarith Temple",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "LUMINETH_REALM_LORDS",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Alarith Fortitude",
-          "phase": "startOfTurn",
-          "phaseDetails": "Passive",
-          "icon": "special",
-          "declare": null,
-          "effect": "You can use the ‘Enduring as Rock’ ability in addition to the other **FACET OF WAR** ability used during the battle round.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
       "id": "c7ee8506-122e-5936-a6b2-8e9f02029bca",
       "name": "Scinari Council",
       "cardType": "BattleFormation",
@@ -2614,15 +2654,81 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factionTerrainLimit": 1,
       "isLegends": false,
-      "points": 10,
+      "points": null,
       "rules": [
         {
-          "name": "Lore of the Scinari",
-          "phase": "startOfTurn",
+          "name": "Arcane Focus",
+          "phase": "heroPhase",
           "phaseDetails": "Passive",
           "icon": "special",
           "declare": null,
-          "effect": "You can use the ‘Deep Thinkers’ ability in addition to the other **FACET OF WAR** ability used during the battle round.",
+          "effect": "**SPELL** abilities from the Lore of Hysh or the Lore of the Awakened Realms used by friendly **LUMINETH REALM-LORDS** **WIZARDS** have the **UNLIMITED** keyword. However, you cannot pick the same unit to be the target of the same **SPELL** ability in the same turn.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "15b68204-cdd7-5203-9ae9-01503ea45eee",
+      "name": "Pilgrims of Haixiah",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "LUMINETH_REALM_LORDS",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": 20,
+      "rules": [
+        {
+          "name": "Trick of the Light",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Friendly **LUMINETH REALM-LORDS** units can use the ‘Power Through’ command even if they have not charged this turn.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "1b700a0c-bbe9-52fd-ab0e-62923fe6ecc1",
+      "name": "Warhost of Duality",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "LUMINETH_REALM_LORDS",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Strike as One",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "declare": null,
+          "effect": "When players are alternating picking units to use a **FIGHT** ability, when it is your turn to pick a unit, you can pick 2 friendly **LUMINETH REALM‑LORDS** units instead of 1. Resolve the second **FIGHT** ability immediately after the first.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "3b27bf3e-2870-52d6-8944-11e88e5b0e9b",
+      "name": "Aelementor Guardians",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "LUMINETH_REALM_LORDS",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": 10,
+      "rules": [
+        {
+          "name": "Ancient Spirits",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **LUMINETH REALM-LORDS MONSTER** to be the target.",
+          "effect": "For the rest of the turn, ignore the first damage point that would be allocated to each visible friendly **LUMINETH REALM-LORDS** unit in each phase while it is wholly within 12\" of the target.",
           "cpCost": null,
           "isReaction": false
         }
@@ -2639,29 +2745,29 @@
       "restrictionText": null,
       "spells": [
         {
-          "id": "e9cfea5c-0044-5d34-a675-582b783d4f48",
-          "name": "Protection of Hysh",
-          "castingValue": 8,
+          "id": "bd5efa3e-3123-5e01-9820-724484e243d2",
+          "name": "Beacon of Hysh",
+          "castingValue": 6,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "defensive",
-          "declare": "Pick a friendly **LUMINETH REALM‑LORDS WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Until the start of your next turn, friendly **LUMINETH REALM‑LORDS** units have **WARD (5+)** while they are wholly within 12\" of the caster.",
-          "keywords": ["Spell"],
+          "declare": "Pick a friendly **LUMINETH REALM-LORDS WIZARD** to cast this spell, pick a visible friendly non‑**MONSTER LUMINETH REALM-LORDS** unit wholly with 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, if the unmodified hit roll for an attack that targets that friendly unit is 1-3, the attack fails and the attack sequence ends.",
+          "keywords": ["Spell", "Unlimited"],
           "linkedWarscroll": null
         },
         {
-          "id": "ffb9a6e9-3b2d-52a8-9554-6c91ade6a425",
-          "name": "Speed of Hysh",
-          "castingValue": 5,
+          "id": "ef673127-87bb-57cf-9dcb-a036fd5dfbc1",
+          "name": "Piercing Refraction",
+          "castingValue": 7,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
-          "icon": "movement",
-          "declare": "Pick a friendly **LUMINETH REALM‑LORDS WIZARD** to cast this spell, pick a visible friendly **LUMINETH REALM‑LORDS** unit wholly within 18\" of them to be the target, then make a casting roll of 2D6.",
-          "effect": "Add 4\" to the target’s Move characteristic until the start of your next turn.",
-          "keywords": ["Spell", "Unlimited"],
+          "icon": "offensive",
+          "declare": "Pick a friendly **LUMINETH REALM-LORDS WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.",
+          "keywords": ["Spell"],
           "linkedWarscroll": null
         },
         {
@@ -2672,8 +2778,57 @@
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
-          "declare": "Pick a friendly **LUMINETH REALM‑LORDS WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+          "declare": "Pick a friendly **LUMINETH REALM-LORDS WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
           "effect": "Halve the target’s Move characteristic until the start of your next turn, then roll a dice. If the roll equals or exceeds the target’s Save characteristic, inflict D3 mortal damage on it.",
+          "keywords": ["Spell"],
+          "linkedWarscroll": null
+        }
+      ]
+    },
+    {
+      "id": "5e7bcbfa-7015-50d6-b571-45555a4208e2",
+      "name": "Lore of the Awakened Realms",
+      "cardType": "Lore",
+      "source": "aos-4e",
+      "faction_id": "LUMINETH_REALM_LORDS",
+      "restrictionText": null,
+      "spells": [
+        {
+          "id": "d685a7de-9b65-5b1d-a516-c54519861813",
+          "name": "Focused Erosion",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **LUMINETH REALM-LORDS WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Subtract 1 from the Rend characteristic of the target’s weapons until the start of your next turn.",
+          "keywords": ["Spell", "Unlimited"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "49cb7f65-4fdf-5d6b-860c-3d04c6d9aeba",
+          "name": "Realmshield",
+          "castingValue": 7,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **LUMINETH REALM-LORDS WIZARD** to cast this spell, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, friendly **LUMINETH REALM-LORDS** units have **WARD (5+)** while they are wholly within 12\" of the caster.",
+          "keywords": ["Spell"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "9a8aa7f9-50eb-5df3-b937-4651972f35c1",
+          "name": "Elemental Push",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **LUMINETH REALM-LORDS WIZARD** to cast this spell, pick a visible friendly **LUMINETH REALM-LORDS** unit wholly within 12\" of them that was not set up this turn to be the target, then make a casting roll of 2D6. Subtract 1 from the roll if the target is in combat.",
+          "effect": "The target can move up to 5\". It can pass through the combat ranges of enemy units but cannot end that move in combat.",
           "keywords": ["Spell"],
           "linkedWarscroll": null
         }
@@ -2739,28 +2894,15 @@
       "restrictionText": null,
       "spells": [
         {
-          "id": "8e2ac091-a6e3-590e-b153-3ea15a6e3e32",
-          "name": "Summon Sanctum of Amyntok",
-          "castingValue": 4,
-          "chantValue": null,
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "special",
-          "declare": "If there is not a friendly **Sanctum of Amyntok** on the battlefield, pick a friendly **LUMINETH REALM‑LORDS WIZARD** to cast this spell, pick a visible friendly **LUMINETH REALM‑LORDS INFANTRY HERO** wholly within 12\" of them and more than 3\" from all other units and terrain features to be the target, then make a casting roll of 2D6.",
-          "effect": "Set up a **Sanctum of Amyntok** within the target’s combat range, visible to the caster and more than 3\" from all enemy units. A **Sanctum of Amyntok** has 3 parts that must be set up with the tip of each part touching the tip of another part so that the three parts form a ring with the target inside.",
-          "keywords": ["Summon", "Spell"],
-          "linkedWarscroll": "Sanctum of Amyntok"
-        },
-        {
           "id": "db8c9ed3-0add-5197-9112-625b74ebb522",
           "name": "Summon Hyshian Twinstones",
-          "castingValue": 5,
+          "castingValue": 6,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
           "declare": "If there is not a friendly **Hyshian Twinstones** endless spell on the battlefield, pick a friendly **LUMINETH REALM‑LORDS WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Hyshian Twinstones** endless spell wholly within 6\" of the caster.",
+          "effect": "Set up a **Hyshian Twinstones** endless spell wholly within 18\" of the caster and visible to them.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Hyshian Twinstones"
         },
@@ -2773,15 +2915,70 @@
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
           "declare": "If there is not a friendly **Rune of Petrification** on the battlefield, pick a friendly **LUMINETH REALM‑LORDS WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Rune of Petrification** wholly within 18\" of the caster and visible to them.",
+          "effect": "Set up a **Rune of Petrification** wholly within 12\" of the caster and visible to them.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Rune of Petrification"
+        },
+        {
+          "id": "8e2ac091-a6e3-590e-b153-3ea15a6e3e32",
+          "name": "Summon Sanctum of Amyntok",
+          "castingValue": 7,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "declare": "If there is not a friendly **Sanctum of Amyntok** on the battlefield, pick a friendly **LUMINETH REALM-LORDS WIZARD** to cast this spell, then make a casting roll of 2D6.",
+          "effect": "Set up a **Sanctum of Amyntok** wholly within 12\" of the caster and more than 3\" from all enemy units. A **Sanctum of Amyntok** has 3 parts that must be set up touching each other so that they form a ring.",
+          "keywords": ["Summon", "Spell"],
+          "linkedWarscroll": "Sanctum of Amyntok"
         }
       ]
     }
   ],
   "enhancements": {
     "artefacts": [
+      {
+        "id": "33660aae-b06f-5a08-ae3e-1bfae61f8543",
+        "name": "Swiftfeather Talisman",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly **LUMINETH REALM-LORDS** unit wholly within 12\" of this unit to be the target.",
+        "effect": "Add 2\" to the target’s Move characteristic for the rest of the turn.",
+        "cpCost": null
+      },
+      {
+        "id": "b775180d-f4d5-526c-a6a2-2f25ada99833",
+        "name": "Phoenix Blade",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "This unit’s combat attacks score critical hits on unmodified hit rolls of 5+.",
+        "cpCost": null
+      },
+      {
+        "id": "68613127-c087-5175-8a91-d109955ce521",
+        "name": "Nullstone Beads",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "This unit can use the ‘Unbind’ ability as if it had **WIZARD (1)**.",
+        "cpCost": null
+      },
       {
         "id": "d42048a7-dc3e-55df-a8a8-247bebce385e",
         "name": "Phoenix Stone",
@@ -2793,7 +2990,7 @@
         "phaseDetails": "Passive",
         "icon": "defensive",
         "declare": null,
-        "effect": "If this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, **Heal (1)** this unit. This unit cannot use this ability again for the rest of the battle.",
+        "effect": "The first time this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, **Heal (D3)** this unit.",
         "cpCost": null
       },
       {
@@ -2804,12 +3001,11 @@
         "source": "aos-4e",
         "points": null,
         "phase": "movementPhase",
-        "phaseDetails": "Once Per Battle, Your Movement Phase",
+        "phaseDetails": "Your Movement Phase",
         "icon": "movement",
         "declare": null,
-        "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
-        "cpCost": null,
-        "keywords": ["Core"]
+        "effect": "Remove this unit from the battlefield and set it up again wholly within friendly territory and more than 9\" from all enemy units.",
+        "cpCost": null
       },
       {
         "id": "625c40df-96ea-50d9-8f5a-97cc8df64be9",
@@ -2817,30 +3013,43 @@
         "cardType": "Enhancement",
         "enhancementType": "artefactsOfPower",
         "source": "aos-4e",
-        "points": 20,
+        "points": null,
         "phase": "heroPhase",
         "phaseDetails": "Passive",
         "icon": "special",
         "declare": null,
-        "effect": "If this unit is not a **WIZARD**, it has **WIZARD (1)**. Otherwise, add 1 to this unit’s power level.",
+        "effect": "If this unit is not a **WIZARD**, it can use the ‘Unbind’ ability as if it had **WIZARD (1)**. Otherwise, add 1 to casting rolls for this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "be7d8edf-9ea8-5375-bc01-a7af140d6576",
+        "name": "Aelementor Focus",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Any Hero Phase",
+        "icon": "defensive",
+        "declare": "Pick a terrain feature to be the target.",
+        "effect": "Measure the range and visibility of the next **SPELL** ability used by this unit from the target instead of from this unit.",
         "cpCost": null
       }
     ],
     "heroicTraits": [
       {
-        "id": "ab79b60b-eb64-59d6-a4c4-4c3d48bafa10",
-        "name": "Perfect Strike",
+        "id": "7beee037-2658-58b3-bcea-b082056b7122",
+        "name": "Master Duellist",
         "cardType": "Enhancement",
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
         "phase": "combatPhase",
-        "phaseDetails": "Once Per Battle, Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick an enemy unit in combat with this unit to be the target.",
-        "effect": "Inflict D3+3 mortal damage on the target.",
-        "cpCost": null,
-        "keywords": ["Core", "Attack", "Fight"]
+        "phaseDetails": "Any Combat Phase",
+        "icon": "special",
+        "declare": "Pick a visible enemy **HERO** in combat with this unit to be the target.",
+        "effect": "Roll a dice. On a 4+:\n• If the target has an artefact of power, it no longer has that artefact of power.\n• The target has **STRIKE‑LAST** for the rest of the turn.",
+        "cpCost": null
       },
       {
         "id": "e5fd2e9f-f304-5c5c-ba5f-1c5b11c2a044",
@@ -2850,24 +3059,38 @@
         "source": "aos-4e",
         "points": null,
         "phase": "movementPhase",
-        "phaseDetails": "Reaction: You declared the ‘Redeploy’ command for a friendly LUMINETH REALM‑LORDS unit wholly within 12\" of this unit",
-        "icon": "special",
+        "phaseDetails": "Reaction: You declared the ‘Redeploy’ command for a visible friendly **LUMINETH REALM-LORDS** unit wholly within 12\" of this unit",
+        "icon": "movement",
         "declare": null,
         "effect": "If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.",
         "cpCost": null
       },
       {
-        "id": "c8a4a434-d173-520d-97c9-dd525e463dc6",
-        "name": "Paragon of Hysh",
+        "id": "52449791-8291-5030-9367-a75341d82a10",
+        "name": "Acolyte of the Runes",
         "cardType": "Enhancement",
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
         "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle, Reaction: You declared the ‘Charge’ ability or a SPELL ability for this unit",
+        "phaseDetails": "Start of Battle Round",
         "icon": "special",
-        "declare": null,
-        "effect": "You can re-roll the charge roll or casting roll for that ability.",
+        "declare": "Pick a friendly **LUMINETH REALM-LORDS HERO** wholly within 12\" of this unit to be the target.",
+        "effect": "That **HERO** can be picked as an additional target the next time you use the ‘Depict Rune’ ability.",
+        "cpCost": null
+      },
+      {
+        "id": "75cc1c2c-ec6c-50ad-b279-17aa5cbdad4b",
+        "name": "Flawless Commander",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "movement",
+        "declare": "Pick up to 3 visible friendly **LUMINETH REALM-LORDS INFANTRY** units wholly within 18\" of this unit to be the targets.",
+        "effect": "Each target can use the ‘Normal Move’ ability as if it were your movement phase.",
         "cpCost": null
       },
       {
@@ -2911,9 +3134,95 @@
         "declare": "Pick a visible enemy unit within 12\" of this unit that is damaged or that had any models slain this turn to be the target.",
         "effect": "Roll a dice. On a 3+, add 1 to wound rolls for combat attacks made by friendly **LUMINETH REALM-LORDS INFANTRY** units that target that enemy unit for the rest of the turn.",
         "cpCost": null
+      },
+      {
+        "id": "1d77bbfa-09ae-5584-a92f-6b2b1ff65eb8",
+        "name": "World-Mage",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "Add 1 to casting rolls for this unit for each unique rune depicted on your **battle scripture**.",
+        "cpCost": null
       }
     ],
-    "other": []
+    "other": [
+      {
+        "id": "018d2720-a78c-5ed6-a104-55405be5f419",
+        "name": "Cycle Manifestation",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "special",
+        "declare": "Pick the **Scinari Calligrave** in this Regiment of Renown to cast this spell, pick 1 of the friendly **MANIFESTATIONS** below that is not on the battlefield, then make a casting roll of 2D6.\n\n**• Sanctum of Amyntok**\n**• Hyshian Twinstones**\n**• Rune of Petrification**",
+        "effect": "If there is already a friendly **MANIFESTATION** from the list above on the battlefield, it is immediately banished. Then, set up the Manifestation you picked within 1\" of the caster and visible to them. If that **MANIFESTATION** is a **Sanctum of Amyntok**, it must instead be set up wholly within 12\" of the caster, more than 3\" from all enemy units, and with its 3 parts touching each other so that they form a ring.",
+        "cpCost": 6,
+        "keywords": ["Summon", "Spell"]
+      },
+      {
+        "id": "4c63a88c-5aae-5005-9bd9-fedfb42e1f41",
+        "name": "Swift Erasure",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: Opponent declared a **SPELL** ability",
+        "icon": "special",
+        "declare": null,
+        "effect": "Roll a dice for each friendly unit that was picked to be a target of that **SPELL** ability and that is wholly within 12\" of the **Scinari Calligrave** in this Regiment of Renown. On a 4+, that **SPELL** ability has no effect on that unit.",
+        "cpCost": null
+      },
+      {
+        "id": "2ab8abef-8e63-5c8e-b9a4-259b06bf282e",
+        "name": "Arcane Taxonomy",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn, Your Movement Phase",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Remove the **Scinari Calligrave** in this Regiment of Renown from the battlefield and set it up again on the battlefield wholly within 3\" of a friendly **MANIFESTATION** and more than 7\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "8cdd531c-22b4-54a2-a29a-174c244638a6",
+        "name": "Blinding Charge",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "chargePhase",
+        "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+        "icon": "offensive",
+        "declare": "Pick a unit in this Regiment of Renown that charged this turn. Then, pick an enemy **INFANTRY** unit within 1\" of that unit to be the target.",
+        "effect": "For the rest of the turn, ignore positive modifiers to save rolls for the target.",
+        "cpCost": null
+      },
+      {
+        "id": "ae406a21-b19d-5d4d-9dba-5a5d449294a1",
+        "name": "Masters of all Terrain",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Ignore negative modifiers to run rolls and charge rolls for units in this Regiment of Renown and to their Move characteristic.",
+        "cpCost": null
+      }
+    ]
   },
   "terrain": [
     {
@@ -2933,6 +3242,7 @@
     "Fjori's Flamebearers",
     "Gotrek Gurnisson",
     "Heroes of the Jade Abbey",
+    "Mask of the Deceiver",
     "Namarti Shore Raid",
     "Norgrimm's Rune Throng",
     "Nurgle's Gift",
@@ -2947,52 +3257,84 @@
   "rules": {
     "battleTraits": [
       {
-        "name": "Shining Company",
+        "name": "Rewards of Valour",
         "phase": "startOfTurn",
-        "phaseDetails": "Start of Battle Round",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "You can only use this ability if you have not used any **FACET OF WAR** abilities this battle round.\n\nFor the rest of the battle round, subtract 1 from hit rolls for attacks that target friendly **VANARI** units that have not charged this turn and that have not been picked as the target of the ‘Power of Hysh’ ability this battle round."
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+        "icon": "special",
+        "declare": "Pick a friendly non-**UNIQUE VANARI HERO** that does not have an artefact of power to be the target.",
+        "effect": "Give the target 1 artefact of power from the 'Vanari Paragons' Army of Renown rules.\n\n**Designer's Note:** *This artefact of power is given to the* **HERO** *during the deployment phase, not during army composition.*"
       },
       {
-        "name": "Enduring As Rock",
-        "phase": "startOfTurn",
-        "phaseDetails": "Start of Battle Round",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "You can only use this ability if you have not used any **FACET OF WAR** abilities this battle round.\n\nSubtract 1 from the Rend characteristic of weapons used for attacks that target friendly **ALARITH** units for the rest of the battle round."
-      },
-      {
-        "name": "Power of Hysh",
-        "phase": "startOfTurn",
-        "phaseDetails": "Start of Battle Round",
+        "name": "Labour of Might",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
         "icon": "offensive",
-        "declare": "You can only use this ability if you have not used any **FACET OF WAR** abilities this battle round. Pick a friendly **VANARI** unit to be the target.",
-        "effect": "The target’s attacks score critical hits on unmodified hit rolls of 5+ for the rest of the battle round."
+        "declare": "You can only use this ability if 3 or more enemy units have been destroyed this battle.",
+        "effect": "Add 1 to the number of **labours** you have completed. For the rest of the battle, add 1 to wound rolls for combat attacks made by friendly **LUMINETH REALM-LORDS** units."
       },
       {
-        "name": "Lightning Reactions",
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "When players are alternating picking units to use a **FIGHT** ability, when it is your turn to pick a unit, you can pick 2 **LUMINETH REALM-LORDS** units instead of 1. Resolve the second **FIGHT** ability immediately after the first."
+        "name": "Labour of Control",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+        "icon": "movement",
+        "declare": "You can only use this ability if there is at least 1 different friendly unit within 6\" of each battlefield edge.",
+        "effect": "Add 1 to the number of **labours** you have completed. For the rest of the battle, add 2\" to the Move characteristic of friendly **LUMINETH REALM-LORDS** units."
       },
       {
-        "name": "Move Like the Wind",
-        "phase": "shootingPhase",
-        "phaseDetails": "Your Shooting Phase",
-        "icon": "shooting",
-        "declare": "You can only use this ability if you have not used any **FACET OF WAR** abilities this battle round. Pick up to 3 friendly **HURAKAN** units that are not in combat to be the targets.",
-        "effect": "Each target can move 2D6\". It cannot move into combat during any part of that move, and it cannot use **SHOOT** abilities for the rest of the turn."
+        "name": "Labour of Precision",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+        "icon": "control",
+        "declare": "You can only use this ability if there are no enemy units with an artefact of power on the battlefield.",
+        "effect": "Add 1 to the number of **labours** you have completed. For the rest of the battle, add 10 to the control scores of friendly **LUMINETH REALM‑LORDS** units."
       },
       {
-        "name": "Deep Thinkers",
+        "name": "Blessing of Tyrion",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+        "icon": "defensive",
+        "declare": "You can only use this ability if you have completed 3 **labours**.",
+        "effect": "For the rest of the battle, friendly **LUMINETH REALM-LORDS** units have **WARD (5+)**."
+      },
+      {
+        "name": "Depict Rune",
         "phase": "startOfTurn",
-        "phaseDetails": "Start of Battle Round",
+        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
         "icon": "special",
         "declare": null,
-        "effect": "You can only use this ability if you have not used any **FACET OF WAR** abilities this battle round.\n\nAdd 1 to casting rolls for friendly **SCINARI** units for the rest of the battle round."
+        "effect": "Pick 1 of the following runes to depict on your **battle scripture**. The effect and conditional enhanced effects of that rune last for the rest of the battle round. Each rune remains on your **battle scripture** for the rest of the battle or until it is removed or replaced by another ability.\n\n**Varinor, Rune of Strength:** Pick up to 2 friendly **LUMINETH REALM-LORDS** units for each instance of this rune depicted on your **battle scripture** to be the targets. Add 1 to run rolls and charge rolls for each target. In addition, the following enhanced effects apply:\n• While **Ydriliqi, Rune of the River** is depicted on your **battle scripture**, add 1 to wound rolls for each target’s combat attacks.\n• While **Oreali, Rune of the Wind** is depicted on your **battle scripture**, each target can use **SHOOT** and/or **CHARGE** abilities even if it used a **RETREAT** ability in the same turn.\n\n**Alaithi, Rune of the Mountain**: Pick up to 2 friendly **LUMINETH REALM-LORDS** units for each instance of this rune depicted on your **battle scripture** to be the targets. Each target has **WARD (5+)**. In addition, the following enhanced effects apply:\n• While **Varinor, Rune of Strength** is depicted on your **battle scripture**, the targets’ melee weapons have **Anti-charge (+1 Rend)**.\n• While **Ydriliqi, Rune of the River** is depicted on your **battle scripture**, subtract 1 from wound rolls for attacks made by enemy units while they are in combat with any of the targets.\n\n**Ydriliqi, Rune of the River**: Pick up to 2 friendly **LUMINETH REALM-LORDS** units for each instance of this rune depicted on your **battle scripture** to be the targets. Subtract 2 from charge rolls for enemy units while they are within 12\" of any of the targets. In addition, the following enhanced effects apply:\n• While **Alaithi, Rune of the Mountain** is depicted on your **battle scripture**, ignore negative modifiers to hit rolls and wound rolls for attacks made by the targets.\n• If **Oreali, Rune of the Wind** is depicted on your **battle scripture**, each target can immediately move up to 3\". They can pass through the combat ranges of enemy units and can end that move in combat.\n\n**Oreali, Rune of the Wind**: Pick up to 2 friendly **LUMINETH REALM-LORDS** units for each instance of this rune depicted on your **battle scripture** to be the targets. Subtract 1 from hit rolls for attacks made by enemy units while they are in combat with any of the targets. In addition, the following enhanced effects apply:\n• While **Varinor, Rune of Strength** is depicted on your battle scripture, add 4\" to each target’s Move characteristic.\n• While **Alaithi, Rune of the Mountain** is depicted on your **battle scripture**, add 5 to each target’s control score.\n\n**Thalari, Rune of the Zenith**: Add 2 to casting rolls for friendly **LUMINETH REALM-LORDS** units. In addition, if you have 4 or more unique runes depicted on your **battle scripture**, add 4\" to the Move characteristic of friendly **LUMINETH REALM-LORDS** units and friendly **LUMINETH REALM-LORDS** units’ attacks score critical hits on unmodified hit rolls of 5+.\n\n**Designer’s Note:** *We recommend noting the runes you have inscribed in each battle round on a piece of paper to keep track of which are currently depicted on your **battle scripture.** Feel free to note them by type (Strength, River, Mountain etc.), by initial (each has a different first letter) or, if you are feeling particularly adventurous, you can try your hand at aelven calligraphy and learn to draw each rune!*"
+      },
+      {
+        "name": "World Runes",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "Add 1 **Alaithi, Rune of the Mountain** to your **library** for each friendly **ALARITH** unit on the battlefield.\n\nAdd 1 **Oreali, Rune of the Wind** to your **library** for each friendly **HURAKAN** unit on the battlefield.\n\nAdd 1 **Ydriliqi, Rune of the River** to your **library** for each friendly **YDRILAN** unit on the battlefield.\n\nYou can have a maximum of 6 of each type of rune in your **library**."
+      },
+      {
+        "name": "Entreat Spirits",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+        "icon": "rallying",
+        "declare": "You can use this ability if you have 3 or more runes in your **library**. Pick a friendly non- **UNIQUE MONSTER** unit that has been destroyed to be the target.",
+        "effect": "Remove any 3 runes from your **library**. Then, set up a replacement unit identical to the target wholly within 6\" of a terrain feature and more than 9\" from all enemy units. Allocate 6 damage points to the replacement unit (ward rolls cannot be made for those damage points)."
+      },
+      {
+        "name": "Depict Rune",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+        "icon": "offensive",
+        "declare": "You must use this ability.",
+        "effect": "Remove all runes from your **battle scripture**. Then, pick any number of runes to remove from your **library** and depict them on your **battle scripture**. Runes removed from your library in this way are removed for the rest of the battle.\n\n**Designer’s Note:** *Runes are used to activate powerful abilities on your units’ warscrolls.*"
+      },
+      {
+        "name": "The Realms Fight Back",
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "special",
+        "declare": "Pick a terrain feature. Then, pick an enemy unit within 6\" of that terrain feature to be the target.",
+        "effect": "Roll a D3 and apply the corresponding effect for the rest of the turn.\n\n**1.  Eruption of Earth:** Inflict 3 mortal damage on the target.\n**2.  Howling Winds:** Subtract 5 from the target’s control score.\n**3.  Flash Flood:** The target has **STRIKE-LAST**."
       }
     ]
   }

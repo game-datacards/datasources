@@ -8,8 +8,8 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-01-17T11:39:42.937Z",
-  "compatibleDataVersion": 377,
+  "updated": "2026-03-11T23:18:21.820Z",
+  "compatibleDataVersion": 410,
   "warscrolls": [
     {
       "id": "c987854f-52b9-582e-a2c5-d6c36b332b1d",
@@ -78,7 +78,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "If this unit is not in combat, pick the closest enemy unit to it to be the target. If 2 or more enemy units are tied to be the closest, you can pick which is the target. Then, make a charge roll of 2D6.",
-          "effect": "This unit can move a distance up to the value of the charge roll. It can move through the combat ranges of enemy units and must end that move within 1/2\" of the target. Then, inflict D3 mortal damage on the target. This unit has charged.",
+          "effect": "This unit can move a distance up to the value of the charge roll. It can move through the combat ranges of enemy units and must end that move within 1/2\" of the target. Then, inflict D3 mortal damage on the target. If it does so, this unit has charged.",
           "keywords": ["Core", "Charge", "Move"]
         }
       ],
@@ -517,7 +517,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "For the rest of the phase, this terrain feature has a Move characteristic of 3\" and can immediately move 3\". It cannot move through or end that move within the combat ranges of enemy units and it cannot end that move on an objective or another terrain feature.\n\n**Designer’s Note:** *This terrain feature cannot use* **RUN**, **RETREAT** *or* **CHARGE** *abilities.*"
+          "effect": "For the rest of the phase, this terrain feature has a Move characteristic of 3\" and can immediately move 3\". It cannot move through or end that move within the combat ranges of enemy units and it cannot end that move on an objective or another terrain feature.\n\n**Designer’s Note:** *This terrain feature cannot use* **MOVE**, **RUN**, **RETREAT** *or* **CHARGE** *abilities.*"
         },
         {
           "name": "Riddled With Disease",
@@ -918,7 +918,11 @@
       "faction_id": "MAGGOTKIN_OF_NURGLE",
       "factions": ["Maggotkin of Nurgle"],
       "keywords": ["Daemon", "Ward (5+)", "Monster", "Wizard (2)", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Maggotkin of Nurgle"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Maggotkin of Nurgle",
+        "The Gardeners of Nurgle"
+      ],
       "referenceKeywords": "Hero, Monster, Wizard (2), Ward (5+), Chaos, Maggotkin of Nurgle, Daemon",
       "stats": {
         "move": "6\"",
@@ -1175,7 +1179,7 @@
         {
           "name": "Knell of Doom",
           "phase": "heroPhase",
-          "phaseDetails": "Once Per Battle (Army), Enemy Hero Phase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Hero Phase",
           "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
@@ -1511,7 +1515,7 @@
           "effect": "Roll a dice. On a 2+, add 1 to the Attacks characteristic of the target’s **Ruined Master-crafted Weapons** for the rest of the turn."
         },
         {
-          "name": "Lord of the Blightkings",
+          "name": "Lord of the Infected Legions",
           "phase": "combatPhase",
           "phaseDetails": "Passive",
           "icon": "offensive",
@@ -2430,7 +2434,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick a visible enemy **WIZARD** or **PRIEST** within 12\" of this unit to be the target.",
-          "effect": "Roll a dice.\n\n• If the target is a **WIZARD** and the roll exceeds the target’s power level, until the start of your next turn, each time a casting roll for the target includes 2 or more rolls of 1, 2 or more rolls of 2 or 2 or more rolls of 3, the spell is miscast.\n\n• If the target is a **PRIEST** and the roll exceeds the target’s power level, until the start of your next turn, each time your opponent makes an unmodified chanting roll of 1 or 2 for the target, the prayer fails, its effect is not resolved and your opponent must remove D3 ritual points from the target."
+          "effect": "Roll a dice.\n\n• If the target is a **WIZARD** and the roll exceeds the target’s power level, until the start of your next turn, each time a casting roll for the target includes 2 or more rolls of 1, 2 or more rolls of 2 or 2 or more rolls of 3, the spell is miscast.\n\n• If the target is a **PRIEST** and the roll exceeds the target’s power level, until the start of your next turn, each time your opponent makes an unmodified chanting roll of 1 or 2 for the target, the prayer fails, its effect is not resolved and your opponent must remove D3 ritual points from the target. In addition, your opponent cannot give that **PRIEST** any ritual points for the rest of the phase."
         }
       ],
       "summonedBy": null,
@@ -2602,7 +2606,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick each enemy unit within 18\" of this unit to be the enemy targets, then pick each friendly **MAGGOTKIN OF NURGLE** unit within 18\" of this unit to be the friendly targets. Then, make a casting roll of 2D6.",
-          "effect": "Inflict 1 mortal damage on each enemy target and **Heal (1)** each friendly target.\n\nThen, until the start of your next turn, while they are within 18\" of this unit, enemy units cannot use or be picked to be the target of any abilities that heal or return slain models to a unit.",
+          "effect": "Inflict 1 mortal damage on each enemy target and **Heal (1)** each friendly target.\n\nThen, until the start of your next turn, if an ability would heal or return any slain models to an enemy unit while they are within 18\" of this unit, that ability does not heal any damage points or return any slain models to it.",
           "keywords": ["Spell"]
         },
         {
@@ -3262,7 +3266,7 @@
             "hit": "3+",
             "wound": "3+",
             "rend": "1",
-            "damage": "2",
+            "damage": "3",
             "abilities": []
           },
           {
@@ -3443,7 +3447,7 @@
           "phaseDetails": "Once Per Battle (Army), Deployment Phase",
           "icon": "special",
           "declare": "Pick an enemy unit on the battlefield to be the **plague progenitor** for the rest of the battle. You cannot pick a **MANIFESTATION** or terrain feature.",
-          "effect": "Roll 2D3. On a 6, or if the roll equals or exceeds the **plague progenitor**’s Health characteristic, it has the **DISEASED** keyword.\n\nIn the first battle round, while the plague progenitor has the **DISEASED** keyword, it cannot use or be picked to be the target of any abilities that could heal or return slain models to it.\n\nEach time the **plague progenitor** is picked to be the target of the ‘Spread’ effect of the ‘Blessed by the Plaguefather’ ability, inflict D3 mortal damage on each other enemy unit within its combat range, excluding **MANIFESTATIONS** and terrain features, in addition to the effect of that ability.",
+          "effect": "Roll 2D3. On a 6, or if the roll equals or exceeds the **plague progenitor**’s Health characteristic, it has the **DISEASED** keyword.\n\nIn the first battle round, if an ability would heal or return any slain models to a **DISEASED plague progenitor**, that ability does not heal any damage points or return any slain models to it.\n\nEach time the **plague progenitor** is picked to be the target of the ‘Spread’ effect of the ‘Blessed by the Plaguefather’ ability, inflict D3 mortal damage on each other enemy unit within its combat range, excluding **MANIFESTATIONS** and terrain features, in addition to the effect of that ability.",
           "cpCost": null,
           "isReaction": false
         }
@@ -3683,6 +3687,20 @@
         "cpCost": null
       },
       {
+        "id": "3cbb3dde-c53b-5131-844d-c5e24e196a04",
+        "name": "Stinking Sporeseed",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle, Your Movement Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "Set up a **Feculent Gnarlmaw** within 3\" of this unit and more than 3\" from all enemy units, objectives and other terrain features.",
+        "cpCost": null
+      },
+      {
         "id": "54d75e30-18ae-5ef0-a32c-2446901f7dce",
         "name": "The Witherstave",
         "cardType": "Enhancement",
@@ -3738,6 +3756,20 @@
         "icon": "defensive",
         "declare": null,
         "effect": "Subtract 1 from hit rolls for attacks that target this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "29879005-5242-53f1-a2c9-d056ffd4264f",
+        "name": "Foetid Orchardist",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "Add 1 to hit rolls for this unit’s combat attacks while it is wholly within 7\" of any friendly **Feculent Gnarlmaws**.",
         "cpCost": null
       },
       {
@@ -3943,8 +3975,10 @@
     "Hargax's Pit-Beasts",
     "Krittok's Clawpack",
     "Lord Skaldior's Chosen",
+    "Mask of the Deceiver",
     "One-eyed Grunnock",
     "Seeker of the Dread Dirge",
+    "Seekers of Silver",
     "Snerk's Trogg-Fer-Hire",
     "Squires of the Everchosen",
     "Stumblefoot Gargant",
@@ -4019,6 +4053,54 @@
         "icon": "defensive",
         "declare": null,
         "effect": "**Heal (7)** each friendly **Feculent Gnarlmaw**.\n\nIf there are no friendly **Feculent Gnarlmaws** on the battlefield, you can set up a **Feculent Gnarlmaw** on the battlefield more than 9\" from all enemy units and more than 3\" from all objectives and other terrain features."
+      },
+      {
+        "name": "The Garden Grows",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "Set up a **Feculent Gnarlmaw** on the battlefield more than 3\" from all enemy units, objectives and other terrain features."
+      },
+      {
+        "name": "Transplanting",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly **Feculent Gnarlmaw** to be the target.",
+        "effect": "Remove the target from the battlefield and set it up again within 3\" of a friendly **GARDENERS OF NURGLE HERO** and more than 3\" from all enemy units, objectives and other terrain features."
+      },
+      {
+        "name": "The Head Gardener",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle (Army), Your Movement Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "The friendly **Horticulous Slimux** can use his ‘Cultivating the Garden of Nurgle’ ability this phase even if there are 1 or more friendly **Feculent Gnarlmaws** on the battlefield."
+      },
+      {
+        "name": "Putrescent Sap",
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick each enemy unit within 3\" of any friendly **Feculent** **Gnarlmaws** to be the targets.",
+        "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+      },
+      {
+        "name": "Foul Fauna",
+        "phase": "movementPhase",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Add 2\" to the Move characteristic of friendly **GARDENERS OF NURGLE** **Beasts of Nurgle** and **Plague Drones** units while they are wholly within 6\" of any friendly **Feculent** **Gnarlmaws**."
+      },
+      {
+        "name": "Sickly Sores",
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "While a friendly **GARDENERS OF NURGLE INFANTRY** unit is wholly within 12\" of a friendly **Feculent Gnarlmaw**, ignore the first damage point that would be allocated to it in each phase."
       },
       {
         "name": "Blighted Regrowth",
