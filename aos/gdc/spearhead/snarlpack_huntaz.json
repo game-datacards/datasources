@@ -1,0 +1,463 @@
+{
+  "name": "Spearhead: Gloomspite Gitz",
+  "id": "764f9978-ef86-57ed-bffb-0d6f510f5aa6",
+  "isSpearhead": true,
+  "faction_id": "GLOOMSPITE_GITZ",
+  "factionName": "Gloomspite Gitz",
+  "warscrolls": [
+    {
+      "id": "1fc9c1a5-316b-5d9a-aeb6-5f814c3e8798",
+      "name": "Loonboss",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "GLOOMSPITE_GITZ",
+      "factions": ["Gloomspite Gitz"],
+      "keywords": ["Infantry", "Ward (6+)", "Hero"],
+      "factionKeywords": ["Gloomspite Gitz"],
+      "referenceKeywords": "Hero, Infantry, Ward (6+)",
+      "stats": {
+        "move": "5\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": true,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Moon-slicer",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "I'm Da Boss",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **Moonclan Stabbas** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Pick 1:\n\n***Beckon the Loonatic Hordes:*** If the target unit is not in combat, you can return D6 slain models to it.\n\n***Stab ’Em Good!:*** Add 1 to hit rolls for attacks made by the target unit until the start of your next turn."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "0aebfa72-030e-5957-9c63-e73832dd4920",
+      "name": "Moonclan Stabbas",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "GLOOMSPITE_GITZ",
+      "factions": ["Gloomspite Gitz"],
+      "keywords": ["Reinforcements", "Infantry"],
+      "factionKeywords": ["Gloomspite Gitz"],
+      "referenceKeywords": "Infantry, Reinforcements",
+      "stats": {
+        "move": "5\"",
+        "save": "5+",
+        "control": "1",
+        "health": "1",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 10,
+      "cannotBeReinforced": true,
+      "isSpearhead": true,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Stabba",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "5+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Netters",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy **INFANTRY** unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 2+, subtract 1 from hit rolls for attacks made by the target unit this phase."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "a6343248-4e8a-52f7-a7b9-601f51788494",
+      "name": "Rockgut Troggoths",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "GLOOMSPITE_GITZ",
+      "factions": ["Gloomspite Gitz"],
+      "keywords": ["Ward (5+)", "Infantry"],
+      "factionKeywords": ["Gloomspite Gitz"],
+      "referenceKeywords": "Infantry, Ward (5+)",
+      "stats": {
+        "move": "6\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 3,
+      "cannotBeReinforced": true,
+      "isSpearhead": true,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Throwin’ Boulders",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "1",
+            "hit": "5+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "D3",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Massive Stone Maul",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Regeneration",
+          "phase": "startOfTurn",
+          "phaseDetails": "Start of Any Turn",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "**Heal (D3)** this unit."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    },
+    {
+      "id": "3f03b820-5346-5a43-a7f9-09e915eeb276",
+      "name": "Squig Hoppers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "GLOOMSPITE_GITZ",
+      "factions": ["Gloomspite Gitz"],
+      "keywords": ["Fly", "Cavalry"],
+      "factionKeywords": ["Gloomspite Gitz"],
+      "referenceKeywords": "Cavalry, Fly",
+      "stats": {
+        "move": "D6+8\"",
+        "save": "6+",
+        "control": "1",
+        "health": "2",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 5,
+      "cannotBeReinforced": true,
+      "isSpearhead": true,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Slitta",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "5+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Squig’s Fang-filled Gob",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Boing! Boing! Boing!",
+          "phase": "movementPhase",
+          "phaseDetails": "Any Movement Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that any models in this unit passed across this phase to be the target, then roll a dice for each model in this unit that did so.",
+          "effect": "For each 4+, inflict 1 mortal damage on the target."
+        }
+      ],
+      "summonedBy": null,
+      "notes": null
+    }
+  ],
+  "enhancements": [
+    {
+      "id": "18238916-a6dd-5a39-8d0c-24e941a86576",
+      "name": "Flankin' Force",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "startOfTurn",
+      "phaseDetails": "Once Per Battle, Deployment Phase",
+      "icon": "movement",
+      "declare": null,
+      "effect": "Pick up to 2 friendly units. Remove them from the battlefield and set them up again anywhere on the battlefield more than 6\" from all enemy units.",
+      "cpCost": null
+    },
+    {
+      "id": "e25247b5-48c6-5817-ad4c-48c8bb95da0c",
+      "name": "Frazzleboom",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "combatPhase",
+      "phaseDetails": "Passive",
+      "icon": "offensive",
+      "declare": null,
+      "effect": "Each time a friendly **WAR MACHINE** is destroyed, before removing it from play, pick an enemy unit within 3\" of that **WAR MACHINE** and roll a D3. On a 2+, inflict an amount of mortal damage on that unit equal to the roll.",
+      "cpCost": null
+    },
+    {
+      "id": "edf84b0a-8541-558c-9b31-95b270622cef",
+      "name": "The Hand of Gork",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "movementPhase",
+      "phaseDetails": "Once Per Battle, (Army) Your Movement Phase",
+      "icon": "movement",
+      "declare": "Pick a friendly unit that is not in combat to use this ability.",
+      "effect": "Remove that unit from the battlefield and set it up again more than 9\" from all enemy units.",
+      "cpCost": null,
+      "keywords": ["Core"]
+    },
+    {
+      "id": "c1f27356-9241-55dc-9d2b-27a688c98207",
+      "name": "The Lunatic Hordes",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "heroPhase",
+      "phaseDetails": "Your Hero Phase",
+      "icon": "rallying",
+      "declare": "Pick a friendly **Moonclan Stabbas** unit to use this ability.",
+      "effect": "You can return up to D3 slain models to that unit.",
+      "cpCost": null
+    },
+    {
+      "id": "148a4760-e62f-54e0-b8b2-f935a78a8639",
+      "name": "Nightshade Mushroom",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "movementPhase",
+      "phaseDetails": "Once Per Battle, Enemy Movement Phase",
+      "icon": "defensive",
+      "declare": "Pick a friendly unit within your general’s combat range.",
+      "effect": "That unit cannot be targeted by shooting attacks in the next shooting phase.",
+      "cpCost": null
+    },
+    {
+      "id": "e3b6d0cc-bf83-589e-ad9a-0652d12a8134",
+      "name": "The Clammy Cowl",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "defensive",
+      "phaseDetails": "Passive",
+      "icon": "defensive",
+      "declare": null,
+      "effect": "Subtract 1 from hit rolls for attacks that target your general.",
+      "cpCost": null
+    },
+    {
+      "id": "c76f4d12-818e-5fad-b7e8-fb7b5762508c",
+      "name": "Hallucinogenic Fungus Brew",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "defensive",
+      "phaseDetails": "Passive",
+      "icon": "defensive",
+      "declare": null,
+      "effect": "Your general has **WARD (4+)** in the first battle round, **WARD (5+)** in the second battle round, and **WARD (6+)** in the third and fourth battle rounds.",
+      "cpCost": null
+    },
+    {
+      "id": "a85d2961-b43b-568b-b585-7c74b940324d",
+      "name": "Fight Another Day",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "endOfTurn",
+      "phaseDetails": "End of Any Turn",
+      "icon": "movement",
+      "declare": "Pick your general to use this ability if they used a **FIGHT** ability this turn.",
+      "effect": "Your general can make a 2D6\" move but cannot end that move in combat.",
+      "cpCost": null
+    },
+    {
+      "id": "fb14a211-17f3-573b-8f7e-c2aa760961d2",
+      "name": "Glare of Frazzlegit",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "combatPhase",
+      "phaseDetails": "Once Per Battle, Any Combat Phase",
+      "icon": "defensive",
+      "declare": "Pick an enemy unit in combat with your general to be the target.",
+      "effect": "Subtract 1 from hit rolls for attacks made by the target for the rest of the turn.",
+      "cpCost": null
+    },
+    {
+      "id": "47ef0eee-1507-582b-9640-2ac586e13189",
+      "name": "Sunsteala Shard",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "movementPhase",
+      "phaseDetails": "Once Per Battle, Enemy Movement Phase",
+      "icon": "defensive",
+      "declare": null,
+      "effect": "For the rest of the turn, friendly units cannot be targeted by shooting attacks while they are wholly within 6\" of this unit, unless the attacking unit is in combat with the target unit.",
+      "cpCost": null
+    },
+    {
+      "id": "4f1690da-4d0e-55c1-9892-57f90e94b417",
+      "name": "Devious Backstabba",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "endOfTurn",
+      "phaseDetails": "End of Any Turn",
+      "icon": "offensive",
+      "declare": "Pick an enemy **HERO** in combat with this unit to be the target.",
+      "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+      "cpCost": null
+    },
+    {
+      "id": "e718160f-c471-5025-b83c-7d6959b49ac1",
+      "name": "Kunnin' As A Snarlfang",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "combatPhase",
+      "phaseDetails": "Once Per Battle, Any Combat Phase",
+      "icon": "offensive",
+      "declare": null,
+      "effect": "For the rest of the turn, add 1 to the Rend characteristic of melee weapons used by friendly units while they are wholly within 12\" of the bearer.",
+      "cpCost": null
+    }
+  ],
+  "lores": [],
+  "rules": {
+    "battleTraits": [
+      {
+        "name": "Fast As Frazzlegit",
+        "phase": "chargePhase",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Friendly units can use **CHARGE** abilities even if they used a **RETREAT** ability in the same turn. In addition, no mortal damage is inflicted on friendly units by **RETREAT** abilities."
+      },
+      {
+        "name": "Squigalanche",
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Set up this unit wholly within your territory, wholly within 3\" of a battlefield edge and more than 6\" from all enemy units."
+      },
+      {
+        "name": "Under the Light of the Bad Moon",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle, Start of the First Battle Round",
+        "icon": "special",
+        "declare": "Pick a territory (either friendly territory or enemy territory) to be **under the Light of the Bad Moon**. If both players can use this ability, the players roll off and the winner picks a territory to be under the Light of the Bad Moon.\n\nThe territory picked remains under the Light of the Bad Moon in the first and second battle rounds. In the third and fourth battle rounds, the other territory is under the Light of the Bad Moon.",
+        "effect": "While a friendly unit is wholly within the territory that is **under the Light of the Bad Moon**, the appropriate effect below applies to it:\n\n***Frothing Zealots:*** If the unit is a **Moonclan Stabbas** unit, add 3 to its control score.\n\n***Lunar Squigs:*** If the unit is a **Squig Hoppers** unit, no mortal damage is inflicted on it when it uses **Retreat** abilities.\n\n***Moonlit Hide:*** If the unit is a **Rockgut Troggoths** unit, add 1 to save rolls for it."
+      }
+    ]
+  },
+  "updated": "2026-03-13T22:06:11.382Z",
+  "compatibleDataVersion": 410
+}
