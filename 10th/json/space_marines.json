@@ -26520,6 +26520,10 @@
     {
       "name": "Ironstorm Spearhead",
       "faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Ceramite Sentinels",
+      "faction": "Adeptus Astartes"
     }
   ],
   "enhancements": [
@@ -27406,6 +27410,58 @@
       "cardType": "enhancement",
       "detachment": "Reclamation Force",
       "detachment_faction": "Ultramarines"
+    },
+    {
+      "name": "Castellum Omnivox",
+      "id": "069b94fc-21bd-4268-937b-58e5b327a7b1",
+      "cost": "20",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Each time the bearer’s unit makes a Fall Back move, select one of the following to apply to that unit until the end of the turn:\n\n■ That unit is eligible to perform an Action in a turn in which it Fell Back.\n■ That unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Ceramite Sentinels",
+      "detachment_faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Defensive Mastery",
+      "id": "82855984-c959-45a0-83df-3e22716fb1b0",
+      "cost": "25",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. After both players have deployed their armies, select up to three ADEPTUS ASTARTES units from your army and redeploy them. When doing so, you can set those units up in Strategic Reserves, regardless of how many units are already in Strategic Reserves.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Ceramite Sentinels",
+      "detachment_faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Honour Indefatigable",
+      "id": "403a9ce1-9318-458c-b358-e4c498d43455",
+      "cost": "25",
+      "keywords": ["Gravis"],
+      "excludes": [],
+      "description": "GRAVIS model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield, as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with its full wounds remaining.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Ceramite Sentinels",
+      "detachment_faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Spy-skull Data Link",
+      "id": "210514bc-2845-4d33-ad68-6fce6b3db979",
+      "cost": "15",
+      "keywords": ["Adeptus Astartes"],
+      "excludes": [],
+      "description": "ADEPTUS ASTARTES model only. Ranged weapons equipped by models in the bearer’s unit have the [IGNORES COVER] ability.",
+      "faction_id": "SM",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Ceramite Sentinels",
+      "detachment_faction": "Adeptus Astartes"
     }
   ],
   "id": "SM",
@@ -27962,7 +28018,38 @@
             "cardType": "detachmentRule"
           }
         ]
-      }
+      },
+    {
+      "detachment": "Ceramite Sentinels",
+      "faction": "Adeptus Astartes",
+      "rules": [
+        {
+          "name": "Adaptive Defence",
+          "rules": [
+            {
+              "text": "Each time an **ADEPTUS ASTARTES** model from your army makes an attack, if that model’s unit is within a terrain feature, re‑roll a Hit roll of 1 and re-roll a Wound roll of 1.",
+              "order": 1,
+              "title": null,
+              "type": "text"
+            },
+            {
+              "text": "**ADEPTUS ASTARTES** units from your army gain the **Entrenched** keyword while all of the following are true:",
+              "order": 2,
+              "title": null,
+              "type": "text"
+            },
+            {
+              "text": "■ That unit is within a terrain feature.\n■ That unit was not set up on the battlefield this turn.\n■ No model in that unit has moved more than 3\" this turn.",
+              "order": 3,
+              "title": null,
+              "type": "text"
+            }
+          ],
+          "source": "40k-10e",
+          "cardType": "detachmentRule"
+        }
+      ]
+    }
     ]
   },
   "stratagems": [
@@ -29596,6 +29683,102 @@
       "faction_id": "SM",
       "fluff": "On the eve of riding down the most elusive prey, the task force’s expert Techmarines will entreat the engine spirits of their vehicles, honing the iron steeds’ performance to elicit even more speed from them.",
       "detachment": "Stormlance Task Force",
+      "detachment_faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Unyielding Might",
+      "id": "0052b4da-312e-476a-aa44-4c5318c645d3",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES unit from your army that is within Engagement Range of one or more enemy units.",
+      "when": "Command phase.",
+      "effect": "Until the start of your next Command phase, add 1 to the Objective Control characteristics of models in your unit.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["command"],
+      "faction_id": "SM",
+      "fluff": "Knowing that this strategically vital site must be secure for the defence lines to hold, Space Marines stand indomitable in the face of the foe.",
+      "detachment": "Ceramite Sentinels",
+      "detachment_faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Priority Strike",
+      "id": "1ef0e360-85d5-45fb-83b5-5434dcb545a1",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that has not been selected to shoot or fight this phase.",
+      "when": "Your Shooting phase or the Fight phase.",
+      "effect": "Until the end of the phase, each time a model in your unit makes an attack that targets a CHARACTER, MONSTER or VEHICLE unit, you can re‑roll the Wound roll.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting", "fight"],
+      "faction_id": "SM",
+      "fluff": "Eliminating key enemy assets is crucial to stalling then reversing the foe’s momentum.",
+      "detachment": "Ceramite Sentinels",
+      "detachment_faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Armour of Contempt",
+      "id": "1e21c885-2bf2-56a3-9088-17477f475788",
+      "cost": 1,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "SM",
+      "fluff": "The belligerence of the Adeptus Astartes combined with their post‑human physiology makes them unyielding foes to face.",
+      "detachment": "Ceramite Sentinels",
+      "detachment_faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Stand to the End",
+      "id": "af8d2898-0c63-406a-aa7f-368468cca319",
+      "cost": 2,
+      "turn": "either",
+      "target": "One ADEPTUS ASTARTES unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the end of the phase, each time a model in your unit is destroyed, if that model has not fought this phase, roll one D6, adding 1 to the result if it is an Entrenched unit: on a 4+, do not remove it from play. That destroyed model can fight after the attacking unit has finished making its attacks, and is then removed from play.",
+      "restrictions": "",
+      "type": "Epic Deed",
+      "phase": ["fight"],
+      "faction_id": "SM",
+      "fluff": "Aware of how vital it is that the defence line holds, these warriors fight even to their last breath.",
+      "detachment": "Ceramite Sentinels",
+      "detachment_faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Augmented Targeting",
+      "id": "0e6ad42e-860c-4086-b032-f4897152f727",
+      "cost": 1,
+      "turn": "your",
+      "target": "One ADEPTUS ASTARTES unit from your army that has not been selected to shoot this phase.",
+      "when": "Your Shooting phase.",
+      "effect": "Select either the [SUSTAINED HITS 1] or [LETHAL HITS] abilities. Until the end of the phase, ranged weapons equipped by models in your unit have the selected ability. If your unit is Entrenched, until the end of the phase, ranged weapons equipped by models in your unit have the [SUSTAINED HITS 1] and [LETHAL HITS] abilities instead.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["shooting"],
+      "faction_id": "SM",
+      "fluff": "Auto‑sense targeting subroutines specially adapted for defensive fire patterns aid these warriors’ aim.",
+      "detachment": "Ceramite Sentinels",
+      "detachment_faction": "Adeptus Astartes"
+    },
+    {
+      "name": "Evasive Repositioning",
+      "id": "ba15b511-0f6f-4c02-8e4b-c731616157f1",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One ADEPTUS ASTARTES INFANTRY or ADEPTUS ASTARTES MOUNTED unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "effect": "Your unit can make a Normal move of up to D6\". If your unit is Entrenched, you can re‑roll the D6 to determine how far your unit can move.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "SM",
+      "fluff": "Codex doctrine when conducting an aggressive defence is to swiftly take up new positions whenever the foe finds your range.",
+      "detachment": "Ceramite Sentinels",
       "detachment_faction": "Adeptus Astartes"
     }
   ],
