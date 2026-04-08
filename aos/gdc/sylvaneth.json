@@ -8,8 +8,8 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-04-01T10:06:47.612Z",
-  "compatibleDataVersion": 412,
+  "updated": "2026-04-08T11:18:10.583Z",
+  "compatibleDataVersion": 417,
   "warscrolls": [
     {
       "id": "a6123b35-79ce-55c3-b385-b42531c5c0fc",
@@ -20,26 +20,26 @@
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
       "keywords": [
+        "Ward (5+)",
         "Monster",
         "Wizard (3)",
         "Unique",
-        "Ward (6+)",
         "Fly",
         "Warmaster",
         "Hero"
       ],
       "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (3), Fly, Ward (6+), Order, Sylvaneth",
+      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (3), Fly, Ward (5+), Order, Sylvaneth",
       "stats": {
         "move": "14\"",
-        "save": "3+",
-        "control": "5",
+        "save": "4+",
+        "control": "10",
         "health": "16",
-        "ward": "6+",
+        "ward": "5+",
         "wizard": "3",
         "priest": null
       },
-      "points": 680,
+      "points": 600,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -68,10 +68,10 @@
             "wound": "3+",
             "rend": "2",
             "damage": "2",
-            "abilities": []
+            "abilities": ["Charge (+1 Damage)"]
           },
           {
-            "name": "Wardroth’s Great Antlers",
+            "name": "Wardroth Beetle's Antlers",
             "type": "melee",
             "range": null,
             "attacks": "6",
@@ -94,7 +94,19 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Wardroth’s Great Antlers** is 4."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Wardroth Beetle's Antlers** is 4."
+        },
+        {
+          "name": "Lifebloom",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "**Heal (2D6)** this unit."
         },
         {
           "name": "Living Battering Ram",
@@ -105,21 +117,21 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit charged this turn, pick an enemy **INFANTRY** unit within 1\" of it to be the target.",
+          "declare": "If this unit charged this turn, pick a visible enemy unit within 1\" of it to be the target.",
           "effect": "Roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll.",
           "keywords": ["Rampage"]
         },
         {
-          "name": "Rite of Life",
+          "name": "The Goddess of Life",
           "phase": "movementPhase",
-          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "phaseDetails": "Once Per Battle, Your Movement Phase",
           "icon": "rallying",
           "castingValue": null,
           "chantValue": null,
-          "cpCost": null,
+          "cpCost": 2,
           "isReaction": false,
-          "declare": "Pick a friendly **SYLVANETH** unit that has been destroyed to be the target. This unit can use this ability if it has been destroyed, but if it does, this unit must be the target.",
-          "effect": "Roll a dice. On a 4+, set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 9\" of a friendly **Awakened Wyldwood** and more than 9\" from all enemy units. If the target was a **MONSTER**, allocate 6 damage points to the replacement unit (ward rolls cannot be made for those damage points)."
+          "declare": "This unit can use this ability even if it has been destroyed.",
+          "effect": "Set up a replacement unit with 8 damage points allocated to it (ward rolls cannot be made for those damage points) wholly within the **creeping overgrowth** and more than 9\" from all enemy units."
         },
         {
           "name": "Metamorphosis",
@@ -131,20 +143,20 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
-          "effect": "Inflict 2D3 mortal damage on the target. If the target is destroyed by this spell, you can immediately resolve the effect of the ‘Treesong’ spell as if this unit had successfully cast it.",
+          "effect": "Inflict 2D3 mortal damage on the target. If the target would be destroyed by this spell, before removing any models, pick the closest terrain feature to the target that does not have a friendly **overgrown token** and give it a friendly **overgrown token**. If all terrain features on the battlefield already have a friendly **overgrown token**, inflict D3 mortal damage on each enemy unit within 6\" of the target instead.",
           "keywords": ["Spell"]
         },
         {
-          "name": "Lifebloom",
-          "phase": "heroPhase",
-          "phaseDetails": "Any Hero Phase",
+          "name": "Seasons of War",
+          "phase": "startOfTurn",
+          "phaseDetails": "Start of Battle Round",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "Pick 1 of the following effects:\n• Add 1 to casting rolls for this unit for the rest of the turn.\n• **Heal (2D3)** this unit."
+          "declare": "You must use this ability.",
+          "effect": "Pick 1 of the following effects to apply for the rest of the battle round. You cannot pick the effect that you picked in the previous battle round.\n\n***The Burgeoning:*** Each time a friendly **Awakened Wyldwood** uses the ‘Ever Growing’ ability, you can pick any terrain feature your opponent does not control to be the target rather than the closest.\n\n***The Reaping:*** Add 1 to casting rolls and chanting rolls for friendly **SYLVANETH** units while they are wholly within 12\" of this unit.\n\n***The Dwindling:*** Friendly **SYLVANETH** units can use **CHARGE** abilities even if they used a **RETREAT** ability in the same turn. In addition, no mortal damage is inflicted on those units when they use **Retreat** abilities.\n\n***Everdusk:*** Each time you use the ‘Creeping Dread’ ability this battle round, you can pick up to 3 targets instead of 1."
         }
       ],
       "summonedBy": null,
@@ -160,13 +172,14 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Forest Sentinel", "Infantry", "Fly", "Hero"],
+      "keywords": ["Revenant", "Forest Sentinel", "Infantry", "Fly", "Hero"],
       "factionKeywords": [
         "Grand Alliance Order",
         "Sylvaneth",
-        "The Evergreen Hunt"
+        "The Evergreen Hunt",
+        "Soulpod Guardians"
       ],
-      "referenceKeywords": "Hero, Infantry, Fly, Order, Sylvaneth",
+      "referenceKeywords": "Hero, Infantry, Fly, Order, Sylvaneth, Revenant",
       "stats": {
         "move": "12\"",
         "save": "4+",
@@ -176,7 +189,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 110,
+      "points": 130,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -184,7 +197,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Revenant’s Glaive and Tail Pincers",
+            "name": "Arch-Revenant’s Glaive",
             "type": "melee",
             "range": null,
             "attacks": "5",
@@ -198,28 +211,28 @@
       },
       "abilities": [
         {
-          "name": "Champion of Kurnoth",
+          "name": "Fight and Fly",
           "phase": "combatPhase",
-          "phaseDetails": "Passive",
-          "icon": "offensive",
+          "phaseDetails": "Reaction: You declared a **FIGHT** ability for this unit",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
-          "isReaction": false,
+          "isReaction": true,
           "declare": null,
-          "effect": "Add 1 to wound rolls for combat attacks made by friendly **KURNOTHI** units while they are wholly within 12\" of this unit."
+          "effect": "If this unit charged this turn, this unit can move up to 2D6\" after that **FIGHT** ability has been resolved. It cannot end that move in combat."
         },
         {
-          "name": "Crescent Shield",
+          "name": "Gossamid Commander",
           "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
-          "icon": "special",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "shooting",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "Pick 1 of the following effects to apply to this unit for the rest of the turn:\n\n***Defensive Stance:*** This unit has **WARD (4+)**.\n\n***Aggressive Stance:*** Add 1 to the Attacks characteristic of this unit’s melee weapons, and add 1 to wound rolls for this unit’s combat attacks."
+          "declare": "If this unit charged this turn, pick a visible friendly **Gossamid Archers** unit that is not in combat and is wholly within 18\" of this unit to be the target.",
+          "effect": "The target can immediately use a **SHOOT** ability as if it were your shooting phase but all of the attacks made as part of that **SHOOT** ability must target an enemy unit that is in combat with this unit."
         }
       ],
       "summonedBy": null,
@@ -235,19 +248,21 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Ward (5+)", "Faction Terrain"],
+      "keywords": ["Faction Terrain"],
       "factionKeywords": [
         "Grand Alliance Order",
         "Sylvaneth",
-        "The Evergreen Hunt"
+        "The Evergreen Hunt",
+        "Lords of the Clan",
+        "Soulpod Guardians"
       ],
-      "referenceKeywords": "Faction Terrain, Ward (5+), Order, Sylvaneth",
+      "referenceKeywords": "Faction Terrain, Order, Sylvaneth",
       "stats": {
         "move": "-",
         "save": "4+",
         "control": "-",
         "health": "8",
-        "ward": "5+",
+        "ward": null,
         "wizard": null,
         "priest": null
       },
@@ -267,23 +282,23 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick each enemy unit within this terrain feature’s combat range to be the targets.",
-          "effect": "Roll a dice for each target. On a 4+, inflict D3 mortal damage on the target."
+          "declare": "Pick each enemy unit within 3\" of this terrain feature to be the targets.",
+          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
         },
         {
-          "name": "Overgrown Wilderness",
-          "phase": "shootingPhase",
-          "phaseDetails": "Passive",
-          "icon": "shooting",
+          "name": "Ever Growing",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle Round, Start of Battle Round",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "Enemy units are visible to friendly **SYLVANETH** units even if every model in that enemy unit is within 1\" of this terrain feature. In addition, the Range characteristic of friendly **SYLVANETH** units’ ranged weapons is not halved while every model in that friendly unit is within 1\" of this terrain feature."
+          "declare": "Pick the closest terrain feature to this terrain feature that does not have a friendly **overgrown token** to be the target.",
+          "effect": "If the target is not controlled by your opponent, give the target a friendly **overgrown token**."
         },
         {
-          "name": "Growing Woods",
+          "name": "Budding Forests",
           "phase": "startOfTurn",
           "phaseDetails": "Passive",
           "icon": "special",
@@ -292,24 +307,11 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Each time you set up an **Awakened Wyldwood**, you can place 1-3 scenery pieces (Terrain, 1.7). If you place more than 1 scenery piece, the tips at the end of each base must touch, forming a circle. The area inside this circle is considered to be part of this terrain feature. For each additional scenery piece in this terrain feature that is placed after the first:\n\n• Add 2 to the Health characteristic of this terrain feature.\n• Increase the range of friendly abilities that require friendly models to be wholly within 6\" of this terrain feature by 3\"."
-        },
-        {
-          "name": "Deploy Wyldwood",
-          "phase": "startOfTurn",
-          "phaseDetails": "Deployment Phase",
-          "icon": "special",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "Set up this terrain feature wholly within friendly territory, more than 3\" from all objectives and other terrain features. This terrain feature has now been deployed.",
-          "keywords": ["Deploy Terrain"]
+          "effect": "When this terrain feature is set up, give it a friendly **overgrown token**."
         }
       ],
       "summonedBy": null,
-      "loadout": "The following universal terrain abilities apply to this terrain feature (Terrain, 1.2):\n\nCover, Unstable, Obscuring",
+      "loadout": "The following universal terrain abilities apply to this terrain feature (Terrain, 1.2):\n\nCover, Unstable, Obscuring\n\nDesigner’s Note: For rules purposes, an Awakened Wyldwood is a single tree miniature with a crescent-shaped base.",
       "baseSize": "Use model",
       "notes": null
     },
@@ -337,7 +339,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 350,
+      "points": 290,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -345,7 +347,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Carnelian Greatspite’s Razor-like Mandibles",
+            "name": "Carnelian Greatspite’s Mandibles",
             "type": "melee",
             "range": null,
             "attacks": "4",
@@ -379,19 +381,31 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Carnelian Greatspite’s Razor-like Mandibles** is 3."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Carnelian Greatspite’s Mandibles** is 3."
         },
         {
           "name": "Kurnothi War-horn",
-          "phase": "chargePhase",
-          "phaseDetails": "Your Charge Phase",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick up to 3 friendly **SYLVANETH** units to be the target.",
-          "effect": "For the rest of the turn, each target can use **CHARGE** abilities even if they used a **RUN** ability in the same turn."
+          "declare": null,
+          "effect": "Add 2\" to the Move characteristic of friendly **KURNOTHI** units while they are wholly within 12\" of this unit."
+        },
+        {
+          "name": "Huntmaster's Strike",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit charged this turn, remove it from the battlefield and set it up again more than 6\" from all enemy units and wholly within the **creeping overgrowth**."
         },
         {
           "name": "Rhythm of the Chase",
@@ -403,20 +417,8 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll, then you can remove this unit from the battlefield and set it up again on the battlefield within 1\" of the target.",
+          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll, then you can remove this unit from the battlefield and set it up again within 1\" of the target.",
           "keywords": ["Rampage"]
-        },
-        {
-          "name": "Nature Aetheric",
-          "phase": "heroPhase",
-          "phaseDetails": "Once Per Battle, Start of Any Turn",
-          "icon": "special",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick a terrain feature within 6\" of this unit to be the target.",
-          "effect": "For the rest of the battle, the target gains the ‘Place of Power’ terrain ability (Terrain 1.2) and counts as a friendly **Awakened Wyldwood** for the purposes of the ‘Endless Growth’, ‘Walk the Hidden Paths’ and ‘Strike and Fade’ abilities."
         }
       ],
       "summonedBy": null,
@@ -433,7 +435,11 @@
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
       "keywords": ["Wizard (1)", "Infantry", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Soulpod Guardians"
+      ],
       "referenceKeywords": "Hero, Wizard (1), Infantry, Order, Sylvaneth",
       "stats": {
         "move": "6\"",
@@ -444,25 +450,12 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 110,
+      "points": 100,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
       "weapons": {
-        "ranged": [
-          {
-            "name": "Swarm of Spites",
-            "type": "ranged",
-            "range": "12\"",
-            "attacks": "6",
-            "hit": "4+",
-            "wound": "4+",
-            "rend": "1",
-            "damage": "1",
-            "abilities": ["Crit (Auto-wound)", "Companion"]
-          }
-        ],
         "melee": [
           {
             "name": "Greenwood Scythe and Bittergrub",
@@ -479,16 +472,16 @@
       },
       "abilities": [
         {
-          "name": "Fury of the Forest",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Enemy Combat Phase",
+          "name": "Slay the Trespassers!",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit is wholly within 6\" of any friendly **Awakened Wyldwoods**, pick a friendly **SYLVANETH** unit wholly within 12\" of this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, the target has **STRIKE-FIRST** for the rest of the turn."
+          "declare": "Pick an enemy unit that is within the **creeping overgrowth** or that is visible to this unit and within friendly territory to be the target.",
+          "effect": "Roll a dice. On a 3+, add 1 to wound rolls for combat attacks that target that enemy unit for the rest of the turn."
         }
       ],
       "summonedBy": null,
@@ -538,7 +531,7 @@
       },
       "abilities": [
         {
-          "name": "Blessings of The Forest",
+          "name": "One With The Forest",
           "phase": "defensive",
           "phaseDetails": "Passive",
           "icon": "defensive",
@@ -547,7 +540,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Subtract 1 from hit rolls and wound rolls for attacks that target this unit while it is wholly within 6\" of any friendly **Awakened Wyldwoods**."
+          "effect": "Subtract 1 from hit rolls and wound rolls for attacks that target this unit while it is wholly within the **creeping overgrowth**."
         }
       ],
       "summonedBy": null,
@@ -563,48 +556,35 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Monster", "Wizard (1)", "Unique", "Hero"],
+      "keywords": ["Monster", "Wizard (1)", "Forest Elder", "Unique", "Hero"],
       "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Unique, Hero, Monster, Wizard (1), Order, Sylvaneth",
+      "referenceKeywords": "Unique, Hero, Monster, Wizard (1), Order, Sylvaneth, Forest Elder",
       "stats": {
-        "move": "9\"",
+        "move": "10\"",
         "save": "3+",
         "control": "5",
-        "health": "10",
+        "health": "12",
         "ward": null,
         "wizard": "1",
         "priest": null
       },
-      "points": 220,
+      "points": 250,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
       "weapons": {
-        "ranged": [
-          {
-            "name": "Flitterfuries",
-            "type": "ranged",
-            "range": "12\"",
-            "attacks": "10",
-            "hit": "4+",
-            "wound": "4+",
-            "rend": "1",
-            "damage": "1",
-            "abilities": ["Shoot in Combat", "Companion"]
-          }
-        ],
         "melee": [
           {
-            "name": "Swarm of Squirmlings",
+            "name": "Swarm of Spites",
             "type": "melee",
             "range": null,
-            "attacks": "10",
+            "attacks": "20",
             "hit": "4+",
             "wound": "4+",
-            "rend": "1",
+            "rend": "-",
             "damage": "1",
-            "abilities": ["Anti-INFANTRY (+1 Rend)", "Companion"]
+            "abilities": ["Crit (Mortal)", "Companion"]
           },
           {
             "name": "Slashing Talons",
@@ -613,50 +593,50 @@
             "attacks": "5",
             "hit": "3+",
             "wound": "2+",
-            "rend": "1",
+            "rend": "2",
             "damage": "2",
-            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+            "abilities": ["Crit (2 Hits)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Primal Terror",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-          "icon": "control",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 2+, halve the target’s control score (rounding up) for the rest of the turn.",
-          "keywords": ["Rampage"]
-        },
-        {
-          "name": "Song of Spite",
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "offensive",
-          "castingValue": 6,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy **INFANTRY** unit within 12\" of the caster to be the target, then make a casting roll of 2D6.",
-          "effect": "The following effects apply for the rest of the turn:\n\nAdd 1 to hit rolls for combat attacks made by friendly **SYLVANETH** units that target that enemy unit.\n\nIn addition, add 1 to wound rolls for combat attacks made by friendly **Spite-Revenants** or **The Twistweald** units that target that enemy unit.",
-          "keywords": ["Spell"]
-        },
-        {
-          "name": "Mercurial Aspect",
-          "phase": "heroPhase",
-          "phaseDetails": "Once Per Turn, Any Hero Phase",
-          "icon": "offensive",
+          "name": "Terror of the Deep Woods",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Pick 1 of the following effects to apply to this unit for the rest of the turn:\n\n***Enraged:*** Add 10 to the Attacks characteristic of this unit’s **Flitterfuries**.\n\n***Embittered:*** Add 10 to the Attacks characteristic of this unit’s **Swarm of Squirmlings**."
+          "effect": "Enemy units cannot use **RUN** or **RETREAT** abilities while they are within 9\" of this unit."
+        },
+        {
+          "name": "Merciless Ambush",
+          "phase": "chargePhase",
+          "phaseDetails": "Your Charge Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit is not in combat and has not used a **RUN** or **RETREAT** ability this turn, make a charge roll of 2D6. Then, remove this unit from the battlefield and set it up again within ½\" of an enemy unit and wholly within **X**\" of a terrain feature that has a friendly **overgrown token**, where **X** is equal to the charge roll. If you do so, this unit has charged.",
+          "keywords": ["Core", "Rampage", "Charge", "Move"]
+        },
+        {
+          "name": "Enrage the Spites",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick up to 3 enemy units that are visible to and within 12\" of this unit or that are within the **creeping overgrowth** to be the targets, then make a casting roll of 2D6.",
+          "effect": "Inflict D3 mortal damage on each target.",
+          "keywords": ["Spell"]
         }
       ],
       "summonedBy": null,
@@ -700,13 +680,13 @@
             "wound": "2+",
             "rend": "1",
             "damage": "D3",
-            "abilities": ["Anti-WIZARD (+1 Rend)"]
+            "abilities": ["Anti-PRIEST (+1 Rend)", "Anti-WIZARD (+1 Rend)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Burrow Below",
+          "name": "Eldritch Hunters",
           "phase": "movementPhase",
           "phaseDetails": "Your Movement Phase",
           "icon": "movement",
@@ -715,26 +695,26 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If this **MANIFESTATION** is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9\" from all enemy non‑**WIZARD** units and more than 3\" from all enemy **WIZARDS**.",
+          "effect": "If this **MANIFESTATION** is not in combat, remove it from the battlefield and set it up again on the battlefield more than 9\" from all enemy non-**WIZARD** non-**PRIEST** units and more than 3\" from all enemy **WIZARDS** and enemy **PRIESTS**.",
           "keywords": ["Core"]
         },
         {
           "name": "Feed on Eldritch Energy",
-          "phase": "endOfTurn",
-          "phaseDetails": "End of Any Turn",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy **WIZARD** in combat with this **MANIFESTATION** to be the target.",
-          "effect": "Subtract 1 from casting rolls, unbinding rolls and banishment rolls for the target until the end of your next turn."
+          "declare": null,
+          "effect": "Subtract 1 from casting rolls, unbinding rolls, chanting rolls and banishment rolls for enemy units while they are in combat with this **Manifestation**."
         }
       ],
       "summonedBy": {
-        "spell": "Summon Gladewyrm",
-        "lore": "Manifestations of the Deepwood",
-        "castingValue": 7
+        "spell": "Jade Winds",
+        "lore": "Soulpod Guardians Manifestation Lore",
+        "castingValue": 6
       },
       "loadout": null,
       "baseSize": "Use model",
@@ -748,9 +728,13 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Champion", "Infantry", "Fly"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Infantry, Champion, Fly, Order, Sylvaneth",
+      "keywords": ["Champion", "Revenant", "Infantry", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Soulpod Guardians"
+      ],
+      "referenceKeywords": "Infantry, Champion, Fly, Order, Sylvaneth, Revenant",
       "stats": {
         "move": "12\"",
         "save": "5+",
@@ -773,7 +757,7 @@
             "range": "12\"",
             "attacks": "2",
             "hit": "3+",
-            "wound": "3+",
+            "wound": "4+",
             "rend": "1",
             "damage": "1",
             "abilities": ["Crit (Auto-wound)", "Shoot in Combat"]
@@ -797,14 +781,15 @@
         {
           "name": "Zephyrspites",
           "phase": "shootingPhase",
-          "phaseDetails": "Once Per Turn, Any Shooting Phase",
+          "phaseDetails": "Reaction: You declared a **SHOOT** ability for this unit",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
-          "isReaction": false,
+          "isReaction": true,
           "declare": null,
-          "effect": "If this unit used a **SHOOT** ability this phase, this unit can move D6\". It cannot end that move in combat."
+          "effect": "After that **SHOOT** ability has been resolved, this unit can move up to D6\". It cannot move into combat during any part of that move.",
+          "keywords": ["Move"]
         },
         {
           "name": "Forest Fighters",
@@ -822,6 +807,93 @@
       "summonedBy": null,
       "loadout": null,
       "baseSize": "32mm",
+      "notes": null
+    },
+    {
+      "id": "6aa19a97-a7d4-597f-993e-bb65df89eaa6",
+      "name": "Grove Guardian",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Priest (2)", "Forest Elder", "Infantry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Soulpod Guardians"
+      ],
+      "referenceKeywords": "Hero, Priest (2), Infantry, Order, Sylvaneth, Forest Elder",
+      "stats": {
+        "move": "4\"",
+        "save": "5+",
+        "control": "2",
+        "health": "7",
+        "ward": null,
+        "wizard": null,
+        "priest": "2"
+      },
+      "points": 220,
+      "modelCount": 1,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Grove Sickle or Shears",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          },
+          {
+            "name": "Guardian Spites",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": ["Crit (Mortal)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Soulshriek",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time a model in a friendly non-**HERO REVENANT** unit wholly within 12\" of and visible to this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a number of dice equal to the slain model’s Health characteristic. For each 5+, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved."
+        },
+        {
+          "name": "Regenesis",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 4,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Declare: Pick a friendly **SYLVANETH** unit that is wholly within the **creeping overgrowth** or that is visible to and wholly within 12\" of this unit to be the target, then make a chanting roll of D6.",
+          "effect": "If the chanting roll was 6+, you can pick another eligible unit to be a second target. If a target is a **REVENANT INFANTRY** or **DRYADS** unit, return up to D3 models to that target unit. Otherwise, **Heal (3)** that target.",
+          "keywords": ["Prayer"]
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "90 × 52mm",
       "notes": null
     },
     {
@@ -909,8 +981,8 @@
       "notes": null
     },
     {
-      "id": "1229a46e-d12a-5f9e-b3e7-26d9480593b3",
-      "name": "Kurnoth Hunters with Kurnoth Greatbows",
+      "id": "b8ee38ed-1814-5b61-984e-3f0528966c9c",
+      "name": "Kurnoth Hunters with Greatbows",
       "subname": null,
       "cardType": "Warscroll",
       "source": "aos-4e",
@@ -920,11 +992,12 @@
       "factionKeywords": [
         "Grand Alliance Order",
         "Sylvaneth",
-        "The Evergreen Hunt"
+        "The Evergreen Hunt",
+        "Lords of the Clan"
       ],
       "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Kurnothi",
       "stats": {
-        "move": "5\"",
+        "move": "6\"",
         "save": "4+",
         "control": "2",
         "health": "5",
@@ -948,7 +1021,7 @@
             "wound": "3+",
             "rend": "1",
             "damage": "2",
-            "abilities": ["Anti-HERO (+1 Rend)"]
+            "abilities": ["Anti-CAVALRY (+1 Rend)"]
           }
         ],
         "melee": [
@@ -967,7 +1040,7 @@
       },
       "abilities": [
         {
-          "name": "Envoys of the Everqueen",
+          "name": "Hunter's Endurance",
           "phase": "defensive",
           "phaseDetails": "Passive",
           "icon": "defensive",
@@ -976,19 +1049,19 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit is contesting an objective, friendly **SYLVANETH** units contesting that objective have **WARD (6+)**."
+          "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within the **creeping overgrowth**."
         },
         {
           "name": "Steady Aim",
           "phase": "shootingPhase",
-          "phaseDetails": "Your Shooting Phase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
           "icon": "shooting",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "For the rest of the turn, this unit can ignore the effects of the ‘Guarded Hero’ ability (Core Rules, 25.0) when picking targets for its shooting attacks."
+          "effect": "If this unit has not used a **MOVE** ability this turn and was not set up this turn, add 1 to hit rolls for this unit’s shooting attacks for the rest of the turn."
         }
       ],
       "summonedBy": null,
@@ -997,8 +1070,8 @@
       "notes": null
     },
     {
-      "id": "22361754-b8d2-518a-829d-498e72faa9f8",
-      "name": "Kurnoth Hunters with Kurnoth Greatswords",
+      "id": "b97ea9d7-4644-5e44-904b-81bf5322ecf3",
+      "name": "Kurnoth Hunters with Greatscythes",
       "subname": null,
       "cardType": "Warscroll",
       "source": "aos-4e",
@@ -1008,11 +1081,88 @@
       "factionKeywords": [
         "Grand Alliance Order",
         "Sylvaneth",
-        "The Evergreen Hunt"
+        "The Evergreen Hunt",
+        "Lords of the Clan"
       ],
       "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Kurnothi",
       "stats": {
-        "move": "5\"",
+        "move": "6\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 190,
+      "modelCount": 3,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Kurnoth Greatscythe",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "3",
+            "abilities": ["Anti-charge (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Hunter's Endurance",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within the **creeping overgrowth**."
+        },
+        {
+          "name": "Tanglethorn Thickets",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
+          "effect": "Roll a dice for each model in this unit that is in combat with the target. For each 3+, inflict 1 mortal damage on the target."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "50mm",
+      "notes": null
+    },
+    {
+      "id": "952b51fc-e32d-5d6a-abd4-e69960b64d75",
+      "name": "Kurnoth Hunters with Greatswords",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Kurnothi", "Infantry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt",
+        "Lords of the Clan"
+      ],
+      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Kurnothi",
+      "stats": {
+        "move": "6\"",
         "save": "4+",
         "control": "2",
         "health": "5",
@@ -1042,7 +1192,7 @@
       },
       "abilities": [
         {
-          "name": "Envoys of the Everqueen",
+          "name": "Hunter's Endurance",
           "phase": "defensive",
           "phaseDetails": "Passive",
           "icon": "defensive",
@@ -1051,10 +1201,10 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit is contesting an objective, friendly **SYLVANETH** units contesting that objective have **WARD (6+)**."
+          "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within the **creeping overgrowth**."
         },
         {
-          "name": "Trample Underfoot",
+          "name": "Crashing Impact",
           "phase": "combatPhase",
           "phaseDetails": "Any Combat Phase",
           "icon": "offensive",
@@ -1062,83 +1212,8 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit charged this turn, pick an enemy unit that is in combat with this unit to be the target.",
-          "effect": "Roll a dice for each model in this unit. For each 3+, inflict 1 mortal damage on the target."
-        }
-      ],
-      "summonedBy": null,
-      "loadout": null,
-      "baseSize": "50mm",
-      "notes": null
-    },
-    {
-      "id": "a866f0b0-6493-5d27-99ca-5eb0c8794f86",
-      "name": "Kurnoth Hunters with Kurnoth Scythes",
-      "subname": null,
-      "cardType": "Warscroll",
-      "source": "aos-4e",
-      "faction_id": "SYLVANETH",
-      "factions": ["Sylvaneth"],
-      "keywords": ["Champion", "Kurnothi", "Infantry"],
-      "factionKeywords": [
-        "Grand Alliance Order",
-        "Sylvaneth",
-        "The Evergreen Hunt"
-      ],
-      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Kurnothi",
-      "stats": {
-        "move": "5\"",
-        "save": "4+",
-        "control": "2",
-        "health": "5",
-        "ward": null,
-        "wizard": null,
-        "priest": null
-      },
-      "points": 190,
-      "modelCount": 3,
-      "cannotBeReinforced": false,
-      "isSpearhead": false,
-      "isLegends": false,
-      "weapons": {
-        "melee": [
-          {
-            "name": "Kurnoth Scythe",
-            "type": "melee",
-            "range": null,
-            "attacks": "3",
-            "hit": "3+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "3",
-            "abilities": ["Anti-charge (+1 Rend)"]
-          }
-        ]
-      },
-      "abilities": [
-        {
-          "name": "Envoys of the Everqueen",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "While this unit is contesting an objective, friendly **SYLVANETH** units contesting that objective have **WARD (6+)**."
-        },
-        {
-          "name": "Tanglethorn Thicket",
-          "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
-          "effect": "Roll a dice for each model in this unit. For each 3+, inflict 1 mortal damage on the target."
+          "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
+          "effect": "Roll a dice for each model in this unit that is in combat with the target. For each 3+, inflict 1 mortal damage on the target."
         }
       ],
       "summonedBy": null,
@@ -1226,13 +1301,21 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Champion", "Standard Bearer", "Musician", "Fly", "Cavalry"],
+      "keywords": [
+        "Champion",
+        "Standard Bearer",
+        "Revenant",
+        "Musician",
+        "Fly",
+        "Cavalry"
+      ],
       "factionKeywords": [
         "Grand Alliance Order",
         "Sylvaneth",
-        "The Evergreen Hunt"
+        "The Evergreen Hunt",
+        "Soulpod Guardians"
       ],
-      "referenceKeywords": "Cavalry, Champion, Musician (1/3), Standard Bearer (1/3), Fly, Order, Sylvaneth",
+      "referenceKeywords": "Cavalry, Champion, Musician (1/3), Standard Bearer (1/3), Fly, Order, Sylvaneth, Revenant",
       "stats": {
         "move": "12\"",
         "save": "4+",
@@ -1261,42 +1344,30 @@
             "abilities": ["Crit (Mortal)"]
           },
           {
-            "name": "Sharp Mandibles",
+            "name": "Dragonspite's Mandibles",
             "type": "melee",
             "range": null,
             "attacks": "3",
             "hit": "4+",
             "wound": "3+",
             "rend": "1",
-            "damage": "1",
-            "abilities": ["Charge (+1 Damage)", "Companion"]
+            "damage": "2",
+            "abilities": ["Companion"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Thrumming With Life",
-          "phase": "endOfTurn",
-          "phaseDetails": "End of Any Turn",
+          "name": "Deafening Drone",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "**Heal (3)** this unit."
-        },
-        {
-          "name": "Harvesters of the Lamentiri",
-          "phase": "heroPhase",
-          "phaseDetails": "Passive",
-          "icon": "rallying",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "Each time a friendly unit wholly within 12\" of any friendly **Revenant Seekers** units uses the ‘Rally’ command, you can make 3 additional rally rolls of D6."
+          "declare": "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.",
+          "effect": "Subtract 1 from the Attacks characteristic of the target’s melee weapons for the rest of the turn."
         },
         {
           "name": "Forest Fighters",
@@ -1503,7 +1574,11 @@
         "Unique",
         "Infantry"
       ],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Lords of the Clan"
+      ],
       "referenceKeywords": "Unique, Infantry, Champion, Musician (1/5), Order, Sylvaneth, Kurnothi",
       "stats": {
         "move": "6\"",
@@ -1586,11 +1661,15 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Monster", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Hero, Monster, Order, Sylvaneth",
+      "keywords": ["Monster", "Forest Elder", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Lords of the Clan"
+      ],
+      "referenceKeywords": "Hero, Monster, Order, Sylvaneth, Forest Elder",
       "stats": {
-        "move": "5\"",
+        "move": "6\"",
         "save": "3+",
         "control": "5",
         "health": "14",
@@ -1633,11 +1712,11 @@
             "name": "Guardian Sword",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "5",
             "hit": "3+",
             "wound": "2+",
             "rend": "2",
-            "damage": "5",
+            "damage": "4",
             "abilities": ["Anti-MONSTER (+1 Rend)"]
           }
         ]
@@ -1664,21 +1743,21 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy **MONSTER** in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, subtract 1 from the Attacks characteristic of the target’s melee weapons for the rest of the turn.",
+          "declare": "Pick an enemy non-**FLY INFANTRY** or **CAVALRY** unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, the target has **STRIKE-LAST** for the rest of the turn.",
           "keywords": ["Rampage"]
         },
         {
-          "name": "Wrathful Guardian",
-          "phase": "combatPhase",
-          "phaseDetails": "Passive",
+          "name": "Guardian of the Glades",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a **CHARGE** ability for this unit",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
-          "isReaction": false,
+          "isReaction": true,
           "declare": null,
-          "effect": "Add 1 to hit rolls for this unit’s combat attacks while the target is within 3\" of an **Awakened Wyldwood**."
+          "effect": "Add 2 to the charge roll but this unit must end that charge move within ½\" of an enemy unit that is in combat with another friendly **SYLVANETH HERO**."
         }
       ],
       "summonedBy": null,
@@ -1694,11 +1773,15 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Champion", "Infantry"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth",
+      "keywords": ["Champion", "Revenant", "Infantry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Soulpod Guardians"
+      ],
+      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Revenant",
       "stats": {
-        "move": "5\"",
+        "move": "6\"",
         "save": "5+",
         "control": "1",
         "health": "2",
@@ -1728,16 +1811,16 @@
       },
       "abilities": [
         {
-          "name": "Unbridled Malice",
-          "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
-          "icon": "special",
+          "name": "Shadowcreep",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy **INFANTRY** unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, the target cannot use commands for the rest of the turn."
+          "declare": null,
+          "effect": "If this unit is wholly within the **creeping overgrowth**, remove this unit from the battlefield and set it up again wholly within 3\" of a terrain feature and more than 9\" from all enemy units. Then, add 1 to charge rolls for this unit for the rest of the turn."
         }
       ],
       "summonedBy": null,
@@ -1753,13 +1836,21 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Champion", "Standard Bearer", "Musician", "Fly", "Cavalry"],
+      "keywords": [
+        "Champion",
+        "Standard Bearer",
+        "Revenant",
+        "Musician",
+        "Fly",
+        "Cavalry"
+      ],
       "factionKeywords": [
         "Grand Alliance Order",
         "Sylvaneth",
-        "The Evergreen Hunt"
+        "The Evergreen Hunt",
+        "Soulpod Guardians"
       ],
-      "referenceKeywords": "Cavalry, Champion, Musician (1/3), Standard Bearer (1/3), Fly, Order, Sylvaneth",
+      "referenceKeywords": "Cavalry, Champion, Musician (1/3), Standard Bearer (1/3), Fly, Order, Sylvaneth, Revenant",
       "stats": {
         "move": "12\"",
         "save": "4+",
@@ -1769,7 +1860,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 190,
+      "points": 220,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1785,45 +1876,33 @@
             "wound": "4+",
             "rend": "1",
             "damage": "1",
-            "abilities": ["Charge (+1 Damage)", "Anti-CAVALRY (+1 Rend)"]
+            "abilities": ["Charge (+1 Damage)", "Crit (2 Hits)"]
           },
           {
-            "name": "Sharp Mandibles",
+            "name": "Dragonspite's Mandibles",
             "type": "melee",
             "range": null,
             "attacks": "3",
             "hit": "4+",
             "wound": "3+",
             "rend": "1",
-            "damage": "1",
-            "abilities": ["Charge (+1 Damage)", "Companion"]
+            "damage": "2",
+            "abilities": ["Companion"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Thrumming with Life",
+          "name": "Strike and Fade",
           "phase": "endOfTurn",
-          "phaseDetails": "End of Any Turn",
-          "icon": "defensive",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "**Heal (3)** this unit."
-        },
-        {
-          "name": "Descent of the Spiteriders",
-          "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "If this unit charged this turn, roll a dice. On a 3+, this unit has **STRIKE-FIRST** for the rest of the turn."
+          "effect": "If this unit charged this turn, remove it from the battlefield and set it up again more than 9\" from all enemy units and wholly within the **creeping overgrowth**."
         },
         {
           "name": "Forest Fighters",
@@ -1858,7 +1937,7 @@
         "move": "-",
         "save": "6+",
         "control": "7+",
-        "health": "7",
+        "health": "6",
         "ward": "6+",
         "wizard": null,
         "priest": null
@@ -1868,25 +1947,52 @@
       "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
-      "weapons": {},
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Spiteswarm",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (2 Hits)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Spiteswarm",
+            "type": "melee",
+            "range": null,
+            "attacks": "10",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (2 Hits)"]
+          }
+        ]
+      },
       "abilities": [
         {
-          "name": "The Hive Nourishes",
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "special",
+          "name": "Anger the Hive",
+          "phase": "shootingPhase",
+          "phaseDetails": "Your Shooting Phase",
+          "icon": "shooting",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a visible friendly **SYLVANETH** unit within 3\" of this **MANIFESTATION** to be the target.",
-          "effect": "Roll a dice. On a 2+, pick 1 of the following effects to apply to the target for the rest of the turn:\n\n***Vital Venoms:*** Add 1 to run rolls and charge rolls for the target.\n\n***Shielding Swarm:*** The target has **WARD (6+)**."
+          "declare": null,
+          "effect": "If this **MANIFESTATION** was not set up this turn, add 10 to the Attacks characteristic of this **MANIFESTATION**’s ranged weapons for the rest of the phase, but all of the shooting attacks it makes this phase must target an enemy unit within 9\" of it."
         }
       ],
       "summonedBy": {
-        "spell": "Summon Spiteswarm Hive",
-        "lore": "Manifestations of the Deepwood",
-        "castingValue": 7
+        "spell": "Jade Winds",
+        "lore": "Soulpod Guardians Manifestation Lore",
+        "castingValue": 6
       },
       "loadout": null,
       "baseSize": "50mm",
@@ -1900,19 +2006,30 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Monster", "Wizard (2)", "Unique", "Warmaster", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (2), Order, Sylvaneth",
+      "keywords": [
+        "Ward (5+)",
+        "Monster",
+        "Wizard (2)",
+        "Forest Elder",
+        "Unique",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Lords of the Clan"
+      ],
+      "referenceKeywords": "Unique, Hero, Monster, Wizard (2), Ward (5+), Order, Sylvaneth, Forest Elder",
       "stats": {
-        "move": "8\"",
-        "save": "3+",
+        "move": "6\"",
+        "save": "4+",
         "control": "5",
-        "health": "8",
-        "ward": null,
+        "health": "10",
+        "ward": "5+",
         "wizard": "2",
         "priest": null
       },
-      "points": 210,
+      "points": 280,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1926,7 +2043,7 @@
             "attacks": "1",
             "hit": "2+",
             "wound": "2+",
-            "rend": "1",
+            "rend": "2",
             "damage": "D6",
             "abilities": []
           }
@@ -1947,7 +2064,7 @@
       },
       "abilities": [
         {
-          "name": "Aspect of the Everqueen",
+          "name": "Protection of the Everqueen",
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "defensive",
@@ -1955,34 +2072,34 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Make a casting roll of 2D6.",
+          "declare": "Make a casting roll of 2D6. Add 1 to the roll if this unit is wholly within the **creeping overgrowth**.",
           "effect": "Until the start of your next turn, friendly **SYLVANETH** units have **WARD (5+)** while they are wholly within 12\" of this unit.",
           "keywords": ["Spell"]
         },
         {
-          "name": "Writhing Vines",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "name": "Verdian Crown",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Battle, Any Hero Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 2+, pick 1 of the following effects to apply for the rest of the turn:\n\n***Barrier:*** Subtract 1 from hit rolls for the target’s attacks.\n\n***Ensnare:*** Add 1 to hit rolls for attacks made by friendly units that target that enemy unit.",
-          "keywords": ["Rampage"]
+          "declare": "Pick a terrain feature within 18\" of this unit that does not have a friendly **overgrown token** to be the target.",
+          "effect": "Give the target a friendly **overgrown token**."
         },
         {
-          "name": "Verdian Crown",
-          "phase": "startOfTurn",
-          "phaseDetails": "Passive",
+          "name": "Hand of the Everqueen",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "This unit counts as an **Awakened Wyldwood** for the purposes of the ‘Endless Growth’, ‘Walk the Hidden Paths’ and ‘Strike and Fade’ abilities."
+          "declare": "Pick a terrain feature within 18\" of this unit that has a friendly **overgrown token** to be the target.",
+          "effect": "Measure the range and visibility of the next **SPELL** ability used by this unit this phase from the target instead of from this unit, and your opponent can measure range and visibility to that terrain feature instead of this unit for the purposes of the ‘Unbind’ ability.",
+          "keywords": ["Rampage"]
         }
       ],
       "summonedBy": null,
@@ -1998,11 +2115,15 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Champion", "Infantry"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Infantry, Champion (1/8), Order, Sylvaneth",
+      "keywords": ["Champion", "Revenant", "Infantry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Soulpod Guardians"
+      ],
+      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Revenant",
       "stats": {
-        "move": "5\"",
+        "move": "6\"",
         "save": "5+",
         "control": "1",
         "health": "2",
@@ -2010,7 +2131,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 100,
+      "points": 120,
       "modelCount": 8,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2042,24 +2163,13 @@
         ],
         "melee": [
           {
-            "name": "Warden’s Blade",
-            "type": "melee",
-            "range": null,
-            "attacks": "2",
-            "hit": "3+",
-            "wound": "4+",
-            "rend": "1",
-            "damage": "2",
-            "abilities": []
-          },
-          {
-            "name": "Twistroot Talons",
+            "name": "Twistroot Weapons",
             "type": "melee",
             "range": null,
             "attacks": "3",
             "hit": "3+",
             "wound": "4+",
-            "rend": "-",
+            "rend": "1",
             "damage": "1",
             "abilities": []
           }
@@ -2067,20 +2177,32 @@
       },
       "abilities": [
         {
-          "name": "Eruption of Thorned Vines",
-          "phase": "movementPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Movement Phase",
+          "name": "Latching Paraspites",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit is more than 6\" from all other friendly **SYLVANETH** units, pick an enemy unit within 12\" of this unit to be the target.",
-          "effect": "Subtract D3 from charge rolls for the target for the rest of the turn."
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "The target has the **INFESTED** keyword for the rest of the battle. **INFESTED** enemy units cannot move more than 6\" when using non‑**CHARGE MOVE** abilities."
+        },
+        {
+          "name": "Pain-Induced Frenzy",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit’s melee weapons have **Crit (2 Hits)** if it charged in the same turn."
         }
       ],
       "summonedBy": null,
-      "loadout": "Each model in this unit is armed with Twistroot Talons.\n\n• The champion is a Swarmsage and is also armed with a Voracious Swarm.\n• 2/8 models are Twistroot Wardens and must replace their Twistroot Talons with a Warden’s Blade.\n• 1/2 Twistroot Wardens can replace their Warden’s Blade with a Warden’s Bow and Twistroot Talons.",
+      "loadout": "Each model in this unit is armed with Twistroot Weapons.\n\n• The champion is a Swarmsage and is also armed with a Voracious Swarm.\n• 2/8 models are Twistroot Wardens.\n• 1/2 Twistroot Wardens can also be armed with a Warden’s Bow.",
       "baseSize": "40mm [2], 32mm [3], 28.5mm [3] or 40mm [1], 32mm [4], 28.5mm [3]",
       "notes": "This unit cannot be reinforced."
     },
@@ -2092,9 +2214,19 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Champion", "Standard Bearer", "Musician", "Infantry"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Infantry, Champion, Musician (1/5), Standard Bearer (1/5), Order, Sylvaneth",
+      "keywords": [
+        "Champion",
+        "Standard Bearer",
+        "Revenant",
+        "Musician",
+        "Infantry"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Soulpod Guardians"
+      ],
+      "referenceKeywords": "Infantry, Champion, Musician (1/5), Standard Bearer (1/5), Order, Sylvaneth, Revenant",
       "stats": {
         "move": "6\"",
         "save": "5+",
@@ -2104,7 +2236,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 90,
+      "points": 110,
       "modelCount": 5,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2112,10 +2244,10 @@
       "weapons": {
         "melee": [
           {
-            "name": "Protector Glaive and Blade",
+            "name": "Revenant Blade",
             "type": "melee",
             "range": null,
-            "attacks": "2",
+            "attacks": "3",
             "hit": "3+",
             "wound": "4+",
             "rend": "1",
@@ -2126,17 +2258,16 @@
       },
       "abilities": [
         {
-          "name": "Waypiper's Dance",
-          "phase": "movementPhase",
-          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
-          "icon": "movement",
+          "name": "Warriors of the Woods",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If this unit is not in combat, remove it from the battlefield, and set it up again on the battlefield more than 9\" from all enemy units.",
-          "keywords": ["Core"]
+          "effect": "While this unit is in combat and has not charged this turn, add 1 to the Damage characteristic of this unit’s melee weapons."
         }
       ],
       "summonedBy": null,
@@ -2152,11 +2283,15 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Monster", "Forest Sentinel", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Hero, Monster, Order, Sylvaneth",
+      "keywords": ["Monster", "Forest Elder"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Lords of the Clan"
+      ],
+      "referenceKeywords": "Monster, Order, Sylvaneth, Forest Elder",
       "stats": {
-        "move": "5\"",
+        "move": "6\"",
         "save": "3+",
         "control": "5",
         "health": "14",
@@ -2164,7 +2299,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 210,
+      "points": 260,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2223,34 +2358,34 @@
         },
         {
           "name": "Lash and Tangle",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
           "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, subtract 1 from wound rolls for the target’s attacks for the rest of the turn.",
-          "keywords": ["Rampage"]
+          "declare": "Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit’s **Strangleroots** to be the target.",
+          "effect": "Roll a dice. Add 1 to the roll if the target is within the **creeping overgrowth**. On a 3+, subtract 1 from hit rolls for the target’s attacks until the start of your next turn."
         },
         {
-          "name": "Entangling Grasp",
-          "phase": "shootingPhase",
-          "phaseDetails": "Any Shooting Phase",
-          "icon": "movement",
+          "name": "Strangling Grasp",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit that had any damage points allocated to it this turn by attacks made with this unit’s **Strangleroots** to be the target.",
-          "effect": "Roll a dice. On a 3+, the target cannot use **RUN** or **RETREAT** abilities until the start of your next turn."
+          "declare": "Pick a visible enemy unit within 10\" of this unit to be the target.",
+          "effect": "Roll a dice. If the roll exceeds the target’s Health characteristic, 1 model in the target unit is slain.",
+          "keywords": ["Rampage"]
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "105 x 70mm",
-      "notes": "This HERO can join an eligible regiment as a Forest Sentinel."
+      "notes": null
     },
     {
       "id": "5a741a76-c342-50dd-bcd9-a44800c0270a",
@@ -2260,19 +2395,23 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Monster", "Wizard (1)", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Hero, Monster, Wizard (1), Order, Sylvaneth",
+      "keywords": ["Monster", "Wizard (2)", "Forest Elder", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Lords of the Clan"
+      ],
+      "referenceKeywords": "Hero, Monster, Wizard (2), Order, Sylvaneth, Forest Elder",
       "stats": {
-        "move": "5\"",
+        "move": "6\"",
         "save": "3+",
         "control": "5",
         "health": "14",
         "ward": null,
-        "wizard": "1",
+        "wizard": "2",
         "priest": null
       },
-      "points": 230,
+      "points": 280,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2285,7 +2424,7 @@
             "range": "18\"",
             "attacks": "4",
             "hit": "4+",
-            "wound": "3+",
+            "wound": "2+",
             "rend": "1",
             "damage": "D3",
             "abilities": []
@@ -2330,29 +2469,29 @@
           "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Sweeping Blows** is 3."
         },
         {
-          "name": "Groundshaker",
+          "name": "Eldest of Elders",
           "phase": "combatPhase",
           "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 4+, the target has **STRIKE-LAST** for the rest of the turn.",
-          "keywords": ["Rampage"]
-        },
-        {
-          "name": "Awakening the Wood",
-          "phase": "heroPhase",
-          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a visible friendly **Awakened Wyldwood** wholly within 18\" of this unit to be the target.",
-          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage equal to the roll on each enemy unit within the target’s combat range."
+          "declare": "Pick each friendly **FOREST ELDER** within this unit’s combat range to be the targets.",
+          "effect": "Roll a dice for each target. On a 3+, add 1 to hit rolls for that target’s combat attacks until the start of your next turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Awakening Slumbering Spirits",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible terrain feature that has a friendly **overgrown token** and is within 12\" of this unit. Then, pick a friendly non-**UNIQUE KURNOTHI** or **Treelord** unit that has been destroyed to be the target.",
+          "effect": "Set up a replacement unit with 1 model from the target unit wholly within 6\" of that terrain feature and more than 9\" from all enemy units. Then, remove the friendly **overgrown token** from that terrain feature. If the target was a **Treelord**, allocate 10 damage points to the replacement unit (ward rolls cannot be made for those damage points)."
         }
       ],
       "summonedBy": null,
@@ -2388,7 +2527,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Lumbering Bulk",
+            "name": "Writhing Roots",
             "type": "melee",
             "range": null,
             "attacks": "3",
@@ -2403,33 +2542,21 @@
       "abilities": [
         {
           "name": "Vengeful Terrors",
-          "phase": "endOfTurn",
-          "phaseDetails": "End of Any Turn",
-          "icon": "control",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit within 3\" of this **MANIFESTATION** to be the target.",
-          "effect": "For the rest of the turn, subtract an amount from the target’s control score equal to the number of friendly units that have been destroyed this battle (not including **MANIFESTATIONS** or **FACTION TERRAIN**)."
-        },
-        {
-          "name": "Creeping Willow",
-          "phase": "startOfTurn",
+          "phase": "defensive",
           "phaseDetails": "Passive",
-          "icon": "special",
+          "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "This **MANIFESTATION** counts as an **Awakened Wyldwood** for the purposes of the ‘Endless Growth’, ‘Walk the Hidden Paths’ and ‘Strike and Fade’ abilities."
+          "effect": "Subtract 1 from hit rolls for attacks made by enemy units while they are within 6\" of this **MANIFESTATION**."
         }
       ],
       "summonedBy": {
-        "spell": "Summon Vengeful Skullroot",
-        "lore": "Manifestations of the Deepwood",
-        "castingValue": 7
+        "spell": "Jade Winds",
+        "lore": "Soulpod Guardians Manifestation Lore",
+        "castingValue": 6
       },
       "loadout": null,
       "baseSize": "105 x 70mm",
@@ -2443,19 +2570,30 @@
       "source": "aos-4e",
       "faction_id": "SYLVANETH",
       "factions": ["Sylvaneth"],
-      "keywords": ["Wizard (2)", "Infantry", "Ward (6+)", "Fly", "Hero"],
-      "factionKeywords": ["Grand Alliance Order", "Sylvaneth"],
-      "referenceKeywords": "Hero, Wizard (2), Infantry, Fly, Ward (6+), Order, Sylvaneth",
+      "keywords": [
+        "Revenant",
+        "Priest (1)",
+        "Infantry",
+        "Ward (6+)",
+        "Fly",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Soulpod Guardians"
+      ],
+      "referenceKeywords": "Hero, Priest (1), Infantry, Fly, Ward (6+), Order, Sylvaneth, Revenant",
       "stats": {
         "move": "6\"",
         "save": "5+",
         "control": "2",
         "health": "7",
         "ward": "6+",
-        "wizard": "2",
-        "priest": null
+        "wizard": null,
+        "priest": "1"
       },
-      "points": 200,
+      "points": 150,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2463,7 +2601,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Spearing Vines and Spirit Falchion",
+            "name": "Spirit Falchion and Spearing Vines",
             "type": "melee",
             "range": null,
             "attacks": "5",
@@ -2478,9 +2616,9 @@
       "abilities": [
         {
           "name": "Alarielle's Song",
-          "phase": "defensive",
+          "phase": "startOfTurn",
           "phaseDetails": "Passive",
-          "icon": "defensive",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
@@ -2489,29 +2627,16 @@
           "effect": "Friendly **SYLVANETH** units have **WARD (6+)** while they are wholly within 12\" of this unit. Subtract 1 from ward rolls for enemy units while they are within 12\" of this unit."
         },
         {
-          "name": "Unleash Swarm of Spites",
+          "name": "Rousing Accompaniment",
           "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "offensive",
-          "castingValue": 7,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick a friendly **Awakened Wyldwood** wholly within 18\" of this unit, pick up to 3 visible enemy units within 9\" of that terrain feature to be the targets, then make a casting roll of 2D6.",
-          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
-          "keywords": ["Spell"]
-        },
-        {
-          "name": "Wyldwood Revenants",
-          "phase": "heroPhase",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You made an unmodified chanting roll of 1 for a **SYLVANETH PRIEST** wholly within 12\" of this unit",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
-          "isReaction": false,
+          "isReaction": true,
           "declare": null,
-          "effect": "Add 1 to unbinding rolls and banishment rolls for this unit while it is wholly within 6\" of any **Awakened Wyldwoods**."
+          "effect": "Re-roll that chanting roll."
         }
       ],
       "summonedBy": null,
@@ -2617,6 +2742,28 @@
   ],
   "battleFormations": [
     {
+      "id": "8cbcb2dc-5c6e-5f02-8ba7-cf0d07a989d5",
+      "name": "Glade Defenders",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Memories of the Fallen",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "offensive",
+          "declare": "For each friendly **SYLVANETH** unit or friendly **Awakened Wyldwood** that was destroyed in the previous turn, you can pick a friendly **SYLVANETH** unit to be a target.",
+          "effect": "Add 1 to the Attacks characteristic of each target’s melee weapons for the rest of the turn.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
       "id": "a24a3e4c-fc06-5260-87dc-69959fae33d0",
       "name": "Lords of the Clan",
       "cardType": "BattleFormation",
@@ -2627,12 +2774,12 @@
       "points": null,
       "rules": [
         {
-          "name": "Healing Song",
-          "phase": "defensive",
+          "name": "Nature's Titans",
+          "phase": "endOfTurn",
           "phaseDetails": "Passive",
           "icon": "defensive",
           "declare": null,
-          "effect": "When using the ‘Endless Growth’ ability, friendly **SYLVANETH MONSTERS** can **Heal (3)** instead of **Heal (D3)**.",
+          "effect": "When using the ‘Endless Growth’ ability, do not roll a D3 for **MONSTER** targets. Instead, **Heal (3)** each of those targets.",
           "cpCost": null,
           "isReaction": false
         }
@@ -2671,56 +2818,12 @@
       "points": null,
       "rules": [
         {
-          "name": "The Terror in the Eaves",
-          "phase": "endOfTurn",
+          "name": "Fear of the Deepwoods",
+          "phase": "startOfTurn",
           "phaseDetails": "Passive",
-          "icon": "control",
+          "icon": "special",
           "declare": null,
-          "effect": "Subtract 3 from the control scores of enemy units while they are in combat with friendly **SYLVANETH** units.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
-      "id": "83337894-4c23-5e2e-be22-d2e3abe11d87",
-      "name": "Free Spirits",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "SYLVANETH",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Fleet and Swift",
-          "phase": "chargePhase",
-          "phaseDetails": "Once Per Turn (Army), Your Charge Phase",
-          "icon": "movement",
-          "declare": "Pick a friendly **SYLVANETH CAVALRY** unit to use this ability.",
-          "effect": "This unit can use **CHARGE** abilities even if it used a **RUN** ability this turn.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
-      "id": "d78247a2-2f27-5a07-aff1-afbc815c7217",
-      "name": "Forest Folk",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "SYLVANETH",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Lacerating Strike",
-          "phase": "combatPhase",
-          "phaseDetails": "Passive",
-          "icon": "offensive",
-          "declare": null,
-          "effect": "Add 1 to the Rend characteristic of melee weapons used by friendly **SYLVANETH** non-**KURNOTHI INFANTRY** units that charged in the same turn.",
+          "effect": "In the ‘Creeping Dread’ ability, replace ‘while it is not wholly within 12\" of a **HERO** in their army’ with ‘while it is not wholly within 6\" of a **HERO** in their army’.",
           "cpCost": null,
           "isReaction": false
         }
@@ -2747,9 +2850,80 @@
           "isReaction": false
         }
       ]
+    },
+    {
+      "id": "17466051-d260-5f48-b961-e4f6369d06aa",
+      "name": "Followers of Kurnoth",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Sacred Quarry",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **SYLVANETH** unit to be the target.",
+          "effect": "Until the start of your next turn, add 1 to hit rolls for the target’s attacks while it is wholly within 12\" of the enemy general or an enemy **WARMASTER**.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
     }
   ],
   "lores": [
+    {
+      "id": "a80853d1-8441-5d9a-ae20-28aaa4852438",
+      "name": "Lore of the Spirit-Song",
+      "cardType": "Lore",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "restrictionText": null,
+      "spells": [
+        {
+          "id": "381804d1-4095-5c78-a17c-c900308202c5",
+          "name": "Song of the Lost",
+          "castingValue": 4,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **SYLVANETH PRIEST** to chant this prayer, pick a friendly **SYLVANETH** unit that is wholly within the **creeping overgrowth** or that is visible to them and wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "Until the start of your next turn, subtract 1 from wound rolls for attacks that target that friendly unit. In addition, if the chanting roll was 8+:\n• If the target is a **MONSTER**, **Heal (3)** the target.\n• If the target is not a **MONSTER**, ignore modifiers to save rolls for the target (positive and negative) until the start of your next turn.",
+          "keywords": ["Prayer", "Unlimited"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "65e7df04-565d-58a9-b408-6d6180829576",
+          "name": "Song of Dread",
+          "castingValue": 4,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **SYLVANETH PRIEST** to chant this prayer, pick an enemy unit that is wholly within the **creeping overgrowth** or that is visible to them and within 18\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "If the chanting roll was 8+, you can pick another eligible unit to be a second target. Until the start of your next turn, each time a target uses a **MOVE** ability and ends that move within the **creeping overgrowth**, inflict D3 mortal damage on that target after that **MOVE** ability has been resolved.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "3a2a3272-dc73-5b5a-b131-ca624341dfa6",
+          "name": "Song of War",
+          "castingValue": 5,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **SYLVANETH PRIEST** to chant this prayer, pick a friendly **SYLVANETH** unit that is wholly within the **creeping overgrowth** or that is visible to them and wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "If the chanting roll was 10+, you can pick another eligible unit to be a second target. Until the start of your next turn, add 1 to the Rend characteristic of the target(s) melee weapons.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        }
+      ]
+    },
     {
       "id": "abe51980-317f-5d65-a7da-4a30e90b440a",
       "name": "Lore of the Deepwood",
@@ -2759,41 +2933,41 @@
       "restrictionText": null,
       "spells": [
         {
-          "id": "018c921d-fc7b-5954-95d1-35eb1738face",
-          "name": "Wrathful Spirits",
+          "id": "daaa1762-81de-5019-984f-0193acd6f938",
+          "name": "Grasping Roots",
+          "castingValue": 5,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **SYLVANETH WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn:\n\n• The target cannot use **RUN** abilities.\n• Subtract 1 from charge rolls for the target.",
+          "keywords": ["Spell"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "4f963f59-653b-556d-9c31-ce3e693e4b57",
+          "name": "Zephyrspite Rush",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **SYLVANETH WIZARD** to cast this spell, pick a visible friendly **SYLVANETH** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "For the rest of the turn, the target can use **CHARGE** abilities even if it used a **RUN** ability in the same turn.",
+          "keywords": ["Spell"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "504c8d73-26d7-52c2-b8a1-634e6210d781",
+          "name": "Jade Thorns",
           "castingValue": 6,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "offensive",
-          "declare": "Pick a friendly **SYLVANETH WIZARD** to cast this spell, pick a friendly **Awakened Wyldwood** wholly within 18\" of the caster to be the target, then make a casting roll of 2D6.",
-          "effect": "Until the start of your next turn, add 1 to the Rend characteristic of melee weapons used by friendly **SYLVANETH** units while they are wholly within 6\" of the target.",
-          "keywords": ["Spell"],
-          "linkedWarscroll": null
-        },
-        {
-          "id": "5265ed79-a285-5bd9-b789-e717a59cfbb7",
-          "name": "The Dwellers Below",
-          "castingValue": 7,
-          "chantValue": null,
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "offensive",
-          "declare": "Pick a friendly **SYLVANETH WIZARD** to cast this spell, pick a visible enemy unit that is either within 12\" of this unit or within 6\" of an **Awakened** **Wyldwood** to be the target, then make a casting roll of 2D6.",
-          "effect": "Roll a number of dice equal to the number of models in the target unit. For each 5+, inflict 1 mortal damage on the target unit.",
-          "keywords": ["Spell"],
-          "linkedWarscroll": null
-        },
-        {
-          "id": "d8dcbc61-d63a-57c6-92aa-1db348d22512",
-          "name": "Treesong",
-          "castingValue": 6,
-          "chantValue": null,
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "special",
-          "declare": "Pick a friendly **SYLVANETH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "If there are fewer than 3 friendly **Awakened Wyldwoods** on the battlefield, you can set up an **Awakened Wyldwood** wholly within 24\" of the caster, more than 3\" from all objectives and more than 1\" from all enemy units and other terrain features. If there are already 3 friendly **Awakened** **Wyldwoods** on the battlefield, **Heal (3)** each friendly **Awakened Wyldwood**.",
+          "declare": "Pick a friendly **SYLVANETH WIZARD** to cast this spell, pick a visible friendly **SYLVANETH** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Add 1 to wound rolls for the target’s combat attacks for the rest of the turn, including attacks made with **Companion** weapons.",
           "keywords": ["Spell", "Unlimited"],
           "linkedWarscroll": null
         }
@@ -2812,39 +2986,39 @@
         {
           "id": "920ef642-f36c-5c21-887f-18d17b24ffb0",
           "name": "Summon Gladewyrm",
-          "castingValue": 7,
+          "castingValue": 6,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
           "declare": "If there is not a friendly **Gladewyrm** on the battlefield, pick a friendly **SYLVANETH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Gladewyrm** wholly within 12\" of and visible to the caster, and more than 9\" from all enemy units.",
+          "effect": "Set up a **Gladewyrm** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Gladewyrm"
         },
         {
           "id": "ef06922d-3bb7-5a4f-86e8-0d18130374d5",
           "name": "Summon Spiteswarm Hive",
-          "castingValue": 7,
+          "castingValue": 6,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
           "declare": "If there is not a friendly **Spiteswarm Hive** on the battlefield, pick a friendly **SYLVANETH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Spiteswarm Hive** wholly within 18\" of and visible to the caster, and more than 3\" from all enemy units.",
+          "effect": "Set up a **Spiteswarm Hive** wholly within 12\" of the caster and visible to them.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Spiteswarm Hive"
         },
         {
           "id": "ef52d60b-f065-52bb-9bf2-f5b12d03465c",
           "name": "Summon Vengeful Skullroot",
-          "castingValue": 7,
+          "castingValue": 6,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
-          "declare": "If there is not a friendly **Vengeful Skullroot** on the battlefield, pick a friendly **SYLVANETH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Vengeful Skullroot** wholly within 12\" of and visible to the caster, and more than 9\" from all enemy units.",
+          "declare": "If there is not a friendly **VENGEFUL SKULLROOT** on the battlefield, pick a friendly **SYLVANETH WIZARD** to cast this spell, then make a casting roll of 2D6.",
+          "effect": "Set up a **Vengeful Skullroot** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Vengeful Skullroot"
         }
@@ -2868,6 +3042,20 @@
         "cpCost": null
       },
       {
+        "id": "33412e5d-2a32-5309-acb0-e74ba69c3680",
+        "name": "Rejuvenating Companions",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "End of Any Turn",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "**Heal (3)** this unit.",
+        "cpCost": null
+      },
+      {
         "id": "72c631a0-9db4-5074-a688-423c4a41d849",
         "name": "Seed of Rebirth",
         "cardType": "Enhancement",
@@ -2878,35 +3066,35 @@
         "phaseDetails": "Passive",
         "icon": "defensive",
         "declare": null,
-        "effect": "If this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, **Heal (1)** this unit. This unit cannot use this ability again for the rest of the battle.",
+        "effect": "The first time this unit would be destroyed, before removing it from play, roll a dice. On a 3+, this unit is not destroyed and any remaining damage points inflicted on it have no effect. Then, **Heal (D3)** this unit.",
         "cpCost": null
       },
       {
-        "id": "a78bcfad-cf97-521c-b693-88321d6998f0",
-        "name": "Greenwood Gladius",
+        "id": "cac599ba-1f90-562e-8c45-a1ced9ea3e57",
+        "name": "Amberglade Nectar",
         "cardType": "Enhancement",
         "enhancementType": "artefactsOfPower",
         "source": "aos-4e",
         "points": null,
         "phase": "combatPhase",
-        "phaseDetails": "Any Combat Phase",
+        "phaseDetails": "Once Per Battle, Any Combat Phase",
         "icon": "offensive",
-        "declare": "Pick an enemy unit in combat with this unit to be the target.",
-        "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+        "declare": "Pick a visible enemy unit within 6\" of this unit to be the target.",
+        "effect": "For the rest of the turn, add 1 to the Damage characteristic of **Companion** weapons used by friendly **SYLVANETH** units for attacks that target that enemy unit.",
         "cpCost": null
       },
       {
-        "id": "af8a698e-ed13-5015-8183-d7ce7fd473e1",
-        "name": "Crown of Fell Bowers",
+        "id": "32984f06-9ace-5287-8eec-7f804ff6fbe8",
+        "name": "Wychwood Glaive",
         "cardType": "Enhancement",
         "enhancementType": "artefactsOfPower",
         "source": "aos-4e",
         "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Any Combat Phase",
+        "phase": "endOfTurn",
+        "phaseDetails": "End of Any Turn",
         "icon": "offensive",
-        "declare": "Pick an enemy unit in combat with this unit to be the target.",
-        "effect": "Roll a dice. On 3+, add 1 to wound rolls for combat attacks made by friendly **SYLVANETH** units that target that enemy unit this phase.",
+        "declare": "Pick an enemy unit that had any damage points allocated to it by this unit’s combat attacks this turn to be the target.",
+        "effect": "Subtract 1 from save rolls for the target for the rest of the battle. This unit can use this ability even if it has been destroyed.",
         "cpCost": null
       },
       {
@@ -2951,6 +3139,20 @@
         "effect": "Make an unbinding roll of 2D6. If the roll exceeds the casting roll for the spell, the spell is unbound and its effect is not resolved. Then, inflict an amount of mortal damage on the caster equal to the difference between the casting roll and the unbinding roll, to a maximum of 6.",
         "cpCost": null,
         "keywords": ["Unbind"]
+      },
+      {
+        "id": "414b22b7-2882-5591-a991-e13a01affabc",
+        "name": "Clarionbuds",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle, Your Movement Phase",
+        "icon": "movement",
+        "declare": "&#x20;If there is an enemy unit wholly within 12\" of your **Soulpod Grove**, pick up to 3 friendly **SOULPOD GUARDIANS** units to be the targets.",
+        "effect": "Remove the targets from the battlefield and set them up again wholly within 12\" of your **Soulpod Grove** and more than 6\" from all enemy units.",
+        "cpCost": null
       }
     ],
     "heroicTraits": [
@@ -2969,31 +3171,31 @@
         "cpCost": null
       },
       {
-        "id": "efdb3d7f-a670-5f2a-8634-540be6fd74a9",
-        "name": "Warsinger",
+        "id": "d6a965ba-344c-5284-b61b-fec088cc5ba8",
+        "name": "Ancient Might",
         "cardType": "Enhancement",
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
+        "phase": "chargePhase",
+        "phaseDetails": "Passive",
         "icon": "movement",
-        "declare": "Pick a friendly **SYLVANETH** unit wholly within 12\" of this unit to be the target.",
-        "effect": "Add 2\" to the Move characteristic of the target for the rest of the turn.",
+        "declare": null,
+        "effect": "This unit can use **CHARGE** abilities even if it is in combat. If the charge roll is 3 or less when it does so, it does not count as having charged.",
         "cpCost": null
       },
       {
-        "id": "c1a426d5-b04e-5922-8100-88eb7f586d7d",
-        "name": "Radiant Spirit",
+        "id": "a154750c-806d-5eaf-bbba-f15a1effe4b7",
+        "name": "Spirit of the Dark Forest",
         "cardType": "Enhancement",
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
         "phase": "heroPhase",
-        "phaseDetails": "Reaction: Opponent declared a SPELL or PRAYER ability",
-        "icon": "special",
-        "declare": null,
-        "effect": "Roll a dice. On a 3+, ignore the effect of that spell or prayer on that unit. This unit can use this ability more than once per phase but only once per **SPELL** or **PRAYER** ability.",
+        "phaseDetails": "Once Per Battle, Enemy Hero Phase",
+        "icon": "movement",
+        "declare": "Pick a visible enemy **HERO** to be the target.",
+        "effect": "Halve the target’s Move characteristic for the rest of the turn.",
         "cpCost": null
       },
       {
@@ -3007,7 +3209,35 @@
         "phaseDetails": "Passive",
         "icon": "special",
         "declare": null,
-        "effect": "While this unit is within the combat range of an **Awakened** **Wyldwood**:\n\nIf this unit is a **WIZARD**, add 1 to casting rolls for this unit.\n\nIf this unit is not a **WIZARD**, it has **WIZARD (1)** instead.",
+        "effect": "If this unit is a **WIZARD**, add 1 to casting rolls for this unit.\n\nIf this unit is not a **WIZARD**, it can use the ‘Unbind’ ability as if it had **WIZARD (1)**.",
+        "cpCost": null
+      },
+      {
+        "id": "e4b2d03b-966c-51d5-ad07-04fa4428f930",
+        "name": "Realmroot Guide",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle, Your Movement Phase",
+        "icon": "movement",
+        "declare": "This unit can only use this ability if it is wholly within the **creeping overgrowth**. Pick this unit and up to 1 other friendly **SYLVANETH** unit within this unit’s combat range to be the targets.",
+        "effect": "Remove the targets from the battlefield and set them up again wholly within the **creeping overgrowth** and more than 9\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "6c365c3f-baf3-54aa-a874-58325b757649",
+        "name": "Devoted Protector",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "If this unit is destroyed while it is wholly within 12\" of your **Soulpod Grove**, before removing this unit from the battlefield, **Heal (10)** your **Soulpod Grove**.",
         "cpCost": null
       }
     ],
@@ -3039,6 +3269,63 @@
         "declare": "Pick a unit in this Regiment of Renown that is not in combat to use this ability.",
         "effect": "That unit can use the ‘Normal Move’ ability as if it were your movement phase.",
         "cpCost": null
+      },
+      {
+        "id": "301063b3-140c-5f3d-beeb-c9936194245d",
+        "name": "Bitter Roots",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "If they do not otherwise have one, terrain features have a friendly **overgrown token** while they are contested by a **Spite-Revenants** unit in this Regiment of Renown.",
+        "cpCost": null
+      },
+      {
+        "id": "d8498255-0f07-53d7-a8f4-e231dd173322",
+        "name": "Concealed in the Shadows",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "While they are wholly within 3\" of a terrain feature, the **Spite-Revenants** units in this Regiment of Renown are not visible to enemy units more than 12\" away from them.",
+        "cpCost": null
+      },
+      {
+        "id": "b64f77a2-0208-51ff-bf37-86c88527e6f2",
+        "name": "Searching for Remedies",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Remove each unit in this Regiment of Renown from the battlefield and set them up again wholly within 6\" of a terrain feature and more than 9\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "3f86adf3-6507-5d99-802e-ac9e73d55f22",
+        "name": "Soothing Pulse",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "defensive",
+        "declare": "Pick the **Branchwych** in this Regiment of Renown to cast this spell, pick a visible friendly unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+        "effect": "**Heal (3)** the target.",
+        "cpCost": 7,
+        "keywords": ["Spell"]
       },
       {
         "id": "5b56b294-1f12-525e-acf3-849229add673",
@@ -3087,6 +3374,7 @@
     "Fjori's Flamebearers",
     "Gotrek Gurnisson",
     "Heroes of the Jade Abbey",
+    "Khinerai Death Flight",
     "Mask of the Deceiver",
     "Namarti Shore Raid",
     "Norgrimm's Rune Throng",
@@ -3096,42 +3384,19 @@
     "Sky-Port Profiteers",
     "Stumblefoot Gargant",
     "The Blacktalons",
+    "The Crimson Lash",
     "The Horizon Seekers",
     "Valnir's Stormwing"
   ],
   "rules": {
     "battleTraits": [
       {
-        "name": "Abundant Growth",
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
-        "icon": "defensive",
-        "declare": "Pick each friendly **EVERGREEN HUNT** unit that is wholly within 3\" of a terrain feature to be the targets.",
-        "effect": "**Heal (1)** each target."
-      },
-      {
-        "name": "Merciful Strike",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **EVERGREEN HUNT MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
-        "effect": "Roll a dice and add the number of damage points the target has. If the result exceeds the target’s Health characteristic, 1 model in the target unit is slain."
-      },
-      {
-        "name": "A Prize Quarry is Sighted",
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Battle (Army), Your Hero Phase",
-        "icon": "special",
-        "declare": "Pick an enemy unit within 9\" of a friendly **EVERGREEN HUNT** unit to be the target.",
-        "effect": "The target becomes the **quarry** for the rest of the battle. If there was already a **quarry** on the battlefield when you declared this ability, that unit is no longer the **quarry**."
-      },
-      {
-        "name": "Rhythm of the Chase",
+        "name": "Nature Aetheric",
         "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
         "icon": "special",
-        "declare": "If there is no **quarry** on the battlefield, pick an enemy unit on the battlefield to be the target.",
-        "effect": "The target is the **quarry** for the rest of the battle."
+        "declare": "Pick a terrain feature that is within friendly territory to be the target.",
+        "effect": "For the rest of the battle, friendly units are wholly within the **creeping overgrowth** while they are wholly within 6\" of the target."
       },
       {
         "name": "Opening Horn Blast",
@@ -3150,28 +3415,156 @@
         "effect": "The following cumulative effects apply to friendly **EVERGREEN HUNT** units depending on the number of **chords** you have:\n\n**1 chord – *Simple***: Add 1 to run rolls and charge rolls for friendly units wholly within the same quarter of the battlefield as the quarry.\n\n**2 chords – *Tuneful***: Add 1 to hit rolls and wound rolls for friendly units’ combat attacks that target an enemy unit wholly within the same quarter of the battlefield as the quarry.\n\n**3-5 chords – *Melodic***: Add 1 to the Attacks characteristic of melee weapons used by friendly units while they are in combat with the quarry.\n\n**6+ chords – *Mellifluous***: While a friendly unit is in combat with the quarry, the quarry has **STRIKE-LAST**."
       },
       {
+        "name": "Rhythm of the Chase",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+        "icon": "special",
+        "declare": "If there is no **quarry** on the battlefield, pick an enemy unit on the battlefield to be the target.",
+        "effect": "The target is the **quarry** for the rest of the battle."
+      },
+      {
+        "name": "Questing Tendrils",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Turn (Army), Start of Any Turn",
+        "icon": "special",
+        "declare": "Pick the terrain feature that is closest to the **quarry** to be the target.",
+        "effect": "For the rest of the turn, friendly units are wholly within the **creeping overgrowth** while they are wholly within 6\" of the target."
+      },
+      {
+        "name": "A Prize Quarry is Sighted",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle (Army), Your Hero Phase",
+        "icon": "special",
+        "declare": "Pick an enemy unit within 9\" of a friendly **EVERGREEN HUNT** unit to be the target.",
+        "effect": "The target becomes the **quarry** for the rest of the battle. If there was already a **quarry** on the battlefield when you declared this ability, that unit is no longer the **quarry**."
+      },
+      {
+        "name": "Merciful Strike",
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick a friendly **EVERGREEN HUNT MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
+        "effect": "Roll a dice and add the number of damage points the target has. If the result exceeds the target’s Health characteristic, 1 model in the target unit is slain."
+      },
+      {
+        "name": "Abundant Growth",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+        "icon": "defensive",
+        "declare": "Pick each friendly **EVERGREEN HUNT** unit that is wholly within 3\" of a terrain feature to be the targets.",
+        "effect": "**Heal (1)** each target."
+      },
+      {
+        "name": "Dormant Heroes",
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "special",
+        "declare": "If there are more friendly **LORDS OF THE CLAN** units on the battlefield than there are in reserve, pick a friendly **LORDS OF THE CLAN MONSTER** unit that has not been deployed.",
+        "effect": "Set up that unit in reserve as a **dormant forest spirit**. It has now been deployed."
+      },
+      {
+        "name": "Our Reach is Long",
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "The **creeping overgrowth** (referenced by other abilities) extends 6\" from each terrain feature that has a friendly **overgrown token**.\n\nIncrease this range by 1\" for each friendly **LORDS OF THE CLAN** unit that is wholly outside friendly territory."
+      },
+      {
+        "name": "Elder Authority",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Turn (Army), Deployment Phase",
+        "icon": "special",
+        "declare": "You can only use this ability if there is a friendly **Awakened Wyldwood** on the battlefield.",
+        "effect": "You can set up up to 2 additional **Awakened Wyldwoods** on the battlefield (an **Awakened Wyldwood** is a single tree miniature with a crescent- shaped base). The first can be set up anywhere on the battlefield more than 3\" from all units, objectives and other terrain features. The second can be set up anywhere on the battlefield wholly outside of enemy territory and more than 3\" from all units, objectives and other terrain features.\n\n**Designer’s Note:** *The original* **Awakened Wyldwood** *is set up in Step 1 of the deployment phase using the 'Deploy Faction Terrain’ ability. This ability allows you to set up a second and third such terrain feature and is used in Step 3 of the deployment phase, after armies have been deployed.*"
+      },
+      {
+        "name": "Roused to Fury",
+        "phase": "movementPhase",
+        "phaseDetails": "Enemy Movement Phase",
+        "icon": "special",
+        "declare": "Pick an enemy unit within 9\" of a friendly **Awakened Wyldwood** to be the target.",
+        "effect": "Pick 1 of the following units:\n\n• A friendly **LORDS OF THE CLAN** unit that is in reserve as a **dormant forest spirit**.\n• A friendly **LORDS OF THE CLAN MONSTER** that has been destroyed.\n\nSet up the unit you picked, or a replacement unit if you picked a destroyed unit, within 9\" of the target, wholly within 6\" of that friendly **Awakened Wyldwood** and not in combat. If you set up a replacement unit, allocate 6 damage points to it (ward rolls cannot be made for those damage points).\n\nThen, remove that friendly **Awakened Wyldwood** from the battlefield."
+      },
+      {
+        "name": "The Creeping Overgrowth",
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "The **creeping overgrowth** is measured from each terrain feature that has a friendly overgrown token. The range of the **creeping overgrowth** is based on the number of friendly **overgrown tokens** on the battlefield as shown:\n\nOvergrown Tokens - Creeping Overgrowth Range\n0-2 - 6\"\n3-5 - 9\"\n6-8 - 12\"\n9+ - Whole battlefield\n\n**Designer’s Note:** *Awakened Wyldwoods are your main way of generating overgrown tokens. Some unit abilities allow you to do so too.*"
+      },
+      {
+        "name": "Fury of the Forest",
+        "phase": "combatPhase",
+        "phaseDetails": "Enemy Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick a friendly **SYLVANETH** unit wholly within the **creeping overgrowth** and that is in combat with only 1 enemy unit to use this ability.",
+        "effect": "The unit using this ability has **STRIKE‑FIRST** for the rest of the turn."
+      },
+      {
+        "name": "The Land Awakens",
+        "phase": "endOfTurn",
+        "phaseDetails": "End of Your Turn",
+        "icon": "rallying",
+        "declare": "Pick a friendly non-**HERO REVENANT INFANTRY** unit or friendly **DRYADS** unit that has been destroyed to be the target.",
+        "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within the **creeping overgrowth** and more than 9\" from all enemy units."
+      },
+      {
         "name": "Endless Growth",
         "phase": "endOfTurn",
         "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "special",
+        "declare": "Pick each friendly **SYLVANETH** unit that is wholly within the creeping overgrowth to be the targets.",
+        "effect": "For each target, roll a D3 and pick 1 of the following effects:\n\n• **HEAL (X)** the target, where **X** is equal to the roll.\n• Return a number of slain models to it with a combined Health characteristic of up to the value of the roll."
+      },
+      {
+        "name": "Reclaimed by Nature",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "If there are fewer than 3 friendly **Awakened Wyldwoods** on the battlefield, you can set up an **Awakened Wyldwood** on the battlefield more than 3\" from all objectives and enemy units, more than 12\" from all other friendly **Awakened Wyldwoods** and more than 1\" from all other terrain features."
+      },
+      {
+        "name": "Creeping Dread",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Turn (Army), Start of Any Turn",
+        "icon": "special",
+        "declare": "Pick an enemy unit within the **creeping overgrowth** to be the target.",
+        "effect": "For the rest of the turn, the first time your opponent declares a command for the target while it is not wholly within 12\" of a **HERO** in their army, unless your opponent spends 1 additional command point to use that command, the command has no effect, it still counts as being used and the command points spent to use the command are still lost."
+      },
+      {
+        "name": "The Sacred Groves",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+        "icon": "special",
+        "declare": "You must use this ability.",
+        "effect": "Set up 3 **Awakened Wyldwoods** (an Awakened Wyldwood is a single tree miniature with a crescent-shaped base) wholly within friendly territory, more than 1\" from all other terrain features and more than 3\" from all objectives. The tips of each crescent-shaped base must touch, forming a circle.\n\nOnce you have done so, for the rest of the battle, the 3 tree miniatures join to form 1 **Soulpod Grove** terrain feature. The area inside the circle formed by the trees is part of the terrain feature"
+      },
+      {
+        "name": "Jade Haven",
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "The Health characteristic of your **Soulpod Grove** is 18. The **creeping overgrowth** extends 12\" from your **Soulpod Grove**."
+      },
+      {
+        "name": "Vengeance for the Lost",
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "If your **Soulpod Grove** has been destroyed this battle, add 2 to the Attacks characteristic of friendly **SOULPOD GUARDIANS** units’ melee weapons."
+      },
+      {
+        "name": "Heart of the Forest",
+        "phase": "defensive",
+        "phaseDetails": "Passive",
         "icon": "defensive",
-        "declare": "Pick any number of friendly **SYLVANETH** units wholly within 6\" of any friendly **Awakened Wyldwoods** to be the targets.",
-        "effect": "**Heal (D3)** each target."
-      },
-      {
-        "name": "Strike and Fade",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
-        "icon": "movement",
-        "declare": "Pick a friendly **SYLVANETH** unit that is in combat and is wholly within 6\"of a friendly **Awakened Wyldwood** to use this ability.",
-        "effect": "Remove that unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units and wholly within 6\" of a different friendly **Awakened Wyldwood**."
-      },
-      {
-        "name": "Walk the Hidden Paths",
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **SYLVANETH** unit that is not in combat and is wholly within 6\" of a friendly **Awakened Wyldwood** to use this ability.",
-        "effect": "Remove that unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units and wholly within 6\" of a different friendly **Awakened Wyldwood**."
+        "declare": null,
+        "effect": "You cannot allocate more than 10 damage points per phase to a friendly **SOULPOD GUARDIANS** unit while it is wholly within 12\" of your **Soulpod Grove** (remaining damage points inflicted on it in that phase have no effect)."
       }
     ]
   }
