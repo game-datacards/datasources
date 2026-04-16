@@ -4,7 +4,7 @@
     "banner": "#102824",
     "header": "#49584c"
   },
-  "compatibleDataVersion": 759,
+  "compatibleDataVersion": 766,
   "datasheets": [
     {
       "abilities": {
@@ -3453,6 +3453,10 @@
       "faction": "Chaos Knights"
     },
     {
+      "name": "Helhunt Lance",
+      "faction": "Chaos Knights"
+    },
+    {
       "name": "Houndpack Lance",
       "faction": "Chaos Knights"
     },
@@ -3747,6 +3751,58 @@
       "cardType": "enhancement",
       "detachment": "Houndpack Lance",
       "detachment_faction": "Chaos Knights"
+    },
+    {
+      "name": "Hunter’s Helm",
+      "id": "c9f61082-e6de-5c35-91f4-7dab4a20aa41",
+      "cost": "15",
+      "keywords": ["Chaos Knights"],
+      "excludes": [],
+      "description": "CHAOS KNIGHTS model only. You can re‑roll Advance and Charge rolls made for the bearer’s unit.",
+      "faction_id": "QT",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Helhunt Lance",
+      "detachment_faction": "Chaos Knights"
+    },
+    {
+      "name": "Octagram of Conjuration",
+      "id": "1a2c73cb-fa31-519f-9066-ba597e3fc6b5",
+      "cost": "40",
+      "keywords": ["Knight Abominant"],
+      "excludes": [],
+      "description": "KNIGHT ABOMINANT model only. The bearer has the following ability:\n\nOctagram of Conjuration (Aura): While a friendly WAR DOG model is within 9” of this model, after that WAR DOG model has shot, you can select one enemy unit hit by one or more of those attacks. That enemy unit must take a Battle‑shock test.",
+      "faction_id": "QT",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Helhunt Lance",
+      "detachment_faction": "Chaos Knights"
+    },
+    {
+      "name": "Aspect of the Beast",
+      "id": "34b3e2db-95a6-509f-a12b-0b0394236461",
+      "cost": "30",
+      "keywords": ["Chaos Knights"],
+      "excludes": [],
+      "description": "CHAOS KNIGHTS model only. At the start of your Command phase, select one Dread ability to be active for the bearer until the start of your next Command phase, in addition to the Dread abilities active for your army.",
+      "faction_id": "QT",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Helhunt Lance",
+      "detachment_faction": "Chaos Knights"
+    },
+    {
+      "name": "Throne Tyrannicus",
+      "id": "62ecf052-0987-5b9f-9e62-b07f111acd32",
+      "cost": "25",
+      "keywords": ["Titanic", "Chaos Knights"],
+      "excludes": [],
+      "description": "TITANIC CHAOS KNIGHTS model only. In your Command phase, select one other CHAOS KNIGHTS CHARACTER model within 9” of the bearer. If the bearer has one or more Aura abilities that affect friendly WAR DOG units, until the start of your next Command phase, the selected CHAOS KNIGHTS CHARACTER model is affected by those Aura abilities as well.",
+      "faction_id": "QT",
+      "source": "40k-10e",
+      "cardType": "enhancement",
+      "detachment": "Helhunt Lance",
+      "detachment_faction": "Chaos Knights"
     }
   ],
   "id": "QT",
@@ -3898,6 +3954,25 @@
         ]
       },
       {
+        "detachment": "Helhunt Lance",
+        "faction": "Chaos Knights",
+        "rules": [
+          {
+            "name": "Masters of the Pack",
+            "rules": [
+              {
+                "text": "If a **TITANIC CHAOS KNIGHTS** unit from your army has an Aura ability that affects friendly **WAR DOG** units, while two or more friendly **WAR DOG** models are within range of that **TITANIC CHAOS KNIGHTS** unit’s Aura ability, that **TITANIC CHAOS KNIGHTS** unit is affected by that Aura ability as well.\n\n**Example:** *Two friendly War Dog models are within 9” of a Knight Desecrator when it is selected to shoot. As a result, the Knight Desecrator’s Taskmaster ability also affects itself, even though it does not have the War Dog keyword, so each time that Knight Desecrator makes a ranged attack, Hit rolls of 1 are re‑rolled.*",
+                "order": 1,
+                "title": null,
+                "type": "text"
+              }
+            ],
+            "source": "40k-10e",
+            "cardType": "detachmentRule"
+          }
+        ]
+      },
+      {
         "detachment": "Houndpack Lance",
         "faction": "Chaos Knights",
         "rules": [
@@ -3984,6 +4059,54 @@
       "faction_id": "QT",
       "fluff": "Reinforced with warp-infused materials and warded through ritual blood sacrifice, these Chaos Knights can withstand unnatural levels of punishment.",
       "detachment": "Infernal Lance",
+      "detachment_faction": "Chaos Knights"
+    },
+    {
+      "name": "Merciless Fusillade",
+      "id": "90c6bea1-cc99-539e-bc65-d7d492f0e30e",
+      "cost": 1,
+      "turn": "either",
+      "target": "One TITANIC CHAOS KNIGHTS unit from your army, and up to two friendly WAR DOG units, that have not been selected to shoot or fight this phase.",
+      "when": "Start of your Shooting phase or the start of the Fight phase.",
+      "effect": "Select one enemy unit that is an eligible target for each of those CHAOS KNIGHTS units. Until the end of the phase, each time one of those CHAOS KNIGHTS units is selected to shoot or fight, if that enemy unit is an eligible target, you can only select that enemy unit as the target for all of those attacks and those attacks have the [SUSTAINED HITS 1] ability.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "QT",
+      "fluff": "The scion slaves their servants’ weapons to their own, forming an overwhelming firestorm.",
+      "detachment": "Helhunt Lance",
+      "detachment_faction": "Chaos Knights"
+    },
+    {
+      "name": "Beasthide Manifestation",
+      "id": "dc28dd29-5175-5a03-a4cf-7e429be551ab",
+      "cost": 1,
+      "turn": "either",
+      "target": "One CHAOS KNIGHTS unit from your army that was selected as the target of one or more of the attacking unit’s attacks.",
+      "when": "Your opponent’s Shooting phase or the Fight phase, just after an enemy unit has selected its targets.",
+      "effect": "Until the attacking unit has finished making its attacks, each time an attack targets your unit, worsen the Armour Penetration characteristic of that attack by 1.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["fight", "shooting"],
+      "faction_id": "QT",
+      "fluff": "The raw and bestial power of the Warp causes this Chaos Knight to sprout thick mutant scales and layered hide in response to incoming attacks.",
+      "detachment": "Helhunt Lance",
+      "detachment_faction": "Chaos Knights"
+    },
+    {
+      "name": "Flush the Quarry",
+      "id": "201bef25-178d-532a-a8c1-75791807c133",
+      "cost": 1,
+      "turn": "your",
+      "target": "One TITANIC CHAOS KNIGHTS unit from your army and up to three friendly WAR DOG units within 6\" of that TITANIC CHAOS KNIGHTS unit.",
+      "when": "Start of your Movement phase.",
+      "effect": "Until the end of the phase, each time one of those WAR DOG units makes a Normal, Advance or Fall Back move, its models can move through models and terrain features. When doing so, they can move within Engagement Range of such models but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+      "restrictions": "",
+      "type": "Battle Tactic",
+      "phase": ["movement"],
+      "faction_id": "QT",
+      "fluff": "Urged on by their masters, the War Dogs push hard through the densest terrain.",
+      "detachment": "Helhunt Lance",
       "detachment_faction": "Chaos Knights"
     },
     {
@@ -4259,6 +4382,54 @@
       "detachment_faction": "Chaos Knights"
     },
     {
+      "name": "Feral Arrogance",
+      "id": "e4fbb3f7-28a4-566c-bfd0-7751c61fd4c6",
+      "cost": 1,
+      "turn": "either",
+      "target": "That CHAOS KNIGHTS unit.",
+      "when": "Any phase, just after a mortal wound is allocated to a CHAOS KNIGHTS unit from your army.",
+      "effect": "Until the end of the phase, models in your unit have the Feel No Pain 5+ ability against mortal wounds.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["any"],
+      "faction_id": "QT",
+      "fluff": "This Chaos Knight shrugs off even the most dire hurts as though they are beneath such a mighty, warp‑empowered predator.",
+      "detachment": "Helhunt Lance",
+      "detachment_faction": "Chaos Knights"
+    },
+    {
+      "name": "Contemptuous Volleys",
+      "id": "f4ffb995-2858-5846-8bec-1ac962825daa",
+      "cost": 1,
+      "turn": "your",
+      "target": "That CHAOS KNIGHTS unit.",
+      "when": "Your Movement phase, just after a CHAOS KNIGHTS unit from your army Falls Back.",
+      "effect": "Until the end of the turn, your unit is eligible to shoot and declare a charge in a turn in which it Fell Back.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["movement"],
+      "faction_id": "QT",
+      "fluff": "No mere prey swirling about their steed’s feet will prevent this scion from focusing their fire.",
+      "detachment": "Helhunt Lance",
+      "detachment_faction": "Chaos Knights"
+    },
+    {
+      "name": "Goaded Beast",
+      "id": "c840888f-8845-5994-a381-e9064906ed7d",
+      "cost": 1,
+      "turn": "opponents",
+      "target": "One CHAOS KNIGHTS unit from your army that lost one or more wounds as a result of those attacks.",
+      "when": "Your opponent’s Shooting phase, just after an enemy unit has shot.",
+      "effect": "Your unit can make a Surge move. To do so, roll one D6: models in your unit move a number of inches up to the result, but your unit must end that move as close as possible to the closest enemy unit (excluding AIRCRAFT). When doing so, those models can be moved within Engagement Range of that enemy unit.",
+      "restrictions": "",
+      "type": "Strategic Ploy",
+      "phase": ["shooting"],
+      "faction_id": "QT",
+      "fluff": "Firing upon adamantine monsters only goads them to greater wrath and more ferocious bloodshed.",
+      "detachment": "Helhunt Lance",
+      "detachment_faction": "Chaos Knights"
+    },
+    {
       "name": "Cunning Hunter",
       "id": "64d0307f-0b0c-59d9-953b-7b535d5ea7b0",
       "cost": 1,
@@ -4419,5 +4590,5 @@
       "detachment_faction": "Chaos Knights"
     }
   ],
-  "updated": "2026-04-01T09:24:02.795Z"
+  "updated": "2026-04-16T10:33:40.771Z"
 }

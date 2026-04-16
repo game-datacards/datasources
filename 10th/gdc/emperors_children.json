@@ -4,7 +4,7 @@
     "banner": "#2E0B03",
     "header": "#1A3037"
   },
-  "compatibleDataVersion": 759,
+  "compatibleDataVersion": 766,
   "datasheets": [
     {
       "abilities": {
@@ -186,6 +186,278 @@
         "This model can be equipped with one of the following: ◦ 1 combi-bolter ◦ 1 combi-weapon"
       ],
       "baseSize": "Hull",
+      "chapter": null
+    },
+    {
+      "abilities": {
+        "core": ["Deadly Demise D6"],
+        "damaged": {
+          "range": "1-6 WOUNDS REMAINING",
+          "description": "While this model has 1-6 wounds remaining, each time this model makes an attack, subtract 1 from the Hit roll.",
+          "showDamagedAbility": true,
+          "showDescription": true
+        },
+        "faction": ["Thrill Seekers"],
+        "invul": {
+          "info": "",
+          "showAtTop": true,
+          "showInfo": false,
+          "showInvulnerableSave": true,
+          "value": "5+"
+        },
+        "other": [
+          {
+            "name": "Scuttling Walker",
+            "description": "Each time this unit makes a Normal, Advance or Fall Back move, it can move through models (excluding TITANIC models) and terrain features. When doing so, it can move within Engagement Range of enemy models, but cannot end that move within Engagement Range of them, and any Desperate Escape test is automatically passed.",
+            "showAbility": true,
+            "showDescription": true
+          },
+          {
+            "name": "Revel in Desecration",
+            "description": "Each time this model makes an attack that targets an enemy unit that is not below Half-strength, add 1 to the Hit roll",
+            "showAbility": true,
+            "showDescription": true
+          }
+        ],
+        "primarch": [],
+        "special": [],
+        "wargear": []
+      },
+      "cardType": "DataCard",
+      "composition": ["1 Defiler"],
+      "factions": ["Emperor’s Children"],
+      "faction_id": "LGEC",
+      "fluff": "Monstrous bio-mechanical Daemon Engines, Defilers are possessed of an insuppressible thirst for souls and lust for lurid slaughter. They are relentless in their pursuit of gratification, obliterating targets in tempests of gunfire and wading into enemy formations to rip warriors to shreds with their clanking claws.",
+      "id": "fa9a5ed6-8820-5755-9090-c577692e8e2e",
+      "keywords": [
+        "Vehicle",
+        "Walker",
+        "Chaos",
+        "Slaanesh",
+        "Daemon",
+        "Defiler"
+      ],
+      "leader": "",
+      "loadout": "This model is equipped with:  1 Hades battle cannon; 2 excruciator cannons; 1 heavy missile launcher; 1 heavy baleflamer; 1 shearing claws.",
+      "meleeWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "10",
+              "damage": "1",
+              "keywords": [],
+              "name": "Shearing Claws – Sweep",
+              "range": "Melee",
+              "skill": "63+",
+              "strength": "6"
+            },
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "5",
+              "damage": "D6+1",
+              "keywords": ["Precision"],
+              "name": "Shearing Claws – Strike",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "16"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "5",
+              "damage": "2",
+              "keywords": ["Sustained Hits 2", "Extra Attacks"],
+              "name": "Electroscourge",
+              "range": "Melee",
+              "skill": "3+",
+              "strength": "12"
+            }
+          ]
+        }
+      ],
+      "name": "Defiler",
+      "points": [
+        {
+          "cost": "250",
+          "keyword": null,
+          "models": "1",
+          "active": true,
+          "detachment": null
+        }
+      ],
+      "rangedWeapons": [
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "D6+3",
+              "damage": "3",
+              "keywords": ["Blast"],
+              "name": "Hades battle cannon",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "10"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "2D6",
+              "damage": "1",
+              "keywords": ["Blast"],
+              "name": "Heavy missile launcher – Frag",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "5"
+            },
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "2",
+              "damage": "D6+1",
+              "keywords": [],
+              "name": "Heavy missile launcher – Krak",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "10"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-2",
+              "attacks": "D6+3",
+              "damage": "2",
+              "keywords": ["Torrent", "Ignores Cover"],
+              "name": "Heavy baleflamer",
+              "range": "12\"",
+              "skill": "N/A",
+              "strength": "7"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "6",
+              "damage": "2",
+              "keywords": [],
+              "name": "Excruciator cannon",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "6"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "D6",
+              "damage": "3",
+              "keywords": ["Blast"],
+              "name": "Ectoplasma destructor",
+              "range": "36\"",
+              "skill": "3+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-4",
+              "attacks": "2",
+              "damage": "D6",
+              "keywords": ["Melta 2"],
+              "name": "Magma cutters",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-3",
+              "attacks": "2",
+              "damage": "D6+1",
+              "keywords": [],
+              "name": "Hades lascannon",
+              "range": "12\"",
+              "skill": "3+",
+              "strength": "12"
+            }
+          ]
+        },
+        {
+          "active": true,
+          "profiles": [
+            {
+              "active": true,
+              "ap": "-1",
+              "attacks": "4",
+              "damage": "3",
+              "keywords": ["Sustained Hits 1", "Devastating Wounds"],
+              "name": "Heavy reaper autocannon",
+              "range": "48\"",
+              "skill": "3+",
+              "strength": "9"
+            }
+          ]
+        }
+      ],
+      "source": "40k-10e",
+      "stats": [
+        {
+          "active": true,
+          "ld": "6+",
+          "m": "12\"",
+          "name": "Defiler",
+          "oc": "5",
+          "showDamagedMarker": true,
+          "showName": false,
+          "sv": "3+",
+          "t": "11",
+          "w": "18"
+        }
+      ],
+      "transport": "",
+      "wargear": [
+        "This model’s heavy missile launcher can be replaced with one of the following: ◦ 1 Hades lascannon ◦ 1 heavy reaper autocannon ◦ 1 electroscourge (a model cannot be equipped with more than one electroscourge",
+        "This model’s heavy baleflamer can be replaced with one of the following: ◦ 1 Hades lascannon ◦ 1 heavy reaper autocannon ◦ 1 electroscourge (a model cannot be equipped with more than one electroscourge",
+        "This model’s excruciator cannons can be replaced with 2 magma cutters.",
+        "This model’s Hades battle cannon can be replaced with 1 ectoplasma destructor."
+      ],
+      "baseSize": "160mm",
       "chapter": null
     },
     {
@@ -3980,5 +4252,5 @@
       "detachment_faction": "Emperor’s Children"
     }
   ],
-  "updated": "2026-04-01T09:24:19.212Z"
+  "updated": "2026-04-16T10:33:58.257Z"
 }
