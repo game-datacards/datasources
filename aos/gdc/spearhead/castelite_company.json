@@ -622,7 +622,7 @@
       "source": "aos-4e",
       "points": null,
       "phase": "shootingPhase",
-      "phaseDetails": "Once Per Battle, Enemy Shooting Phase",
+      "phaseDetails": "Once Per Turn, Enemy Shooting Phase",
       "icon": "shooting",
       "declare": "Pick your **Ironweld Great Cannon** to use this ability.",
       "effect": "Roll a dice. On a 3+, it can use the ‘Shoot’ ability as if it were your shooting phase.",
@@ -654,6 +654,34 @@
       "icon": "special",
       "declare": null,
       "effect": "Friendly **Wildercorps Hunters** units gain the **REINFORCEMENTS** keyword.",
+      "cpCost": null
+    },
+    {
+      "id": "350f895f-7f7f-5060-a18e-ef5625720e72",
+      "name": "Close-Quarters Drill",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "shootingPhase",
+      "phaseDetails": "Passive",
+      "icon": "shooting",
+      "declare": null,
+      "effect": "Friendly units’ ranged weapons have **Shoot in Combat** but you must subtract 1 from hit rolls for their shooting attacks while they are in combat.",
+      "cpCost": null
+    },
+    {
+      "id": "66a05056-9989-5726-88e0-7c0ba6627dbe",
+      "name": "Come and Take it, Blaggards!",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "endOfTurn",
+      "phaseDetails": "Passive",
+      "icon": "control",
+      "declare": null,
+      "effect": "Add 5 to the control scores of friendly non-**HERO** units while they are in combat with any enemy units that have 6 or more models or a Health characteristic of 3 or more.",
       "cpCost": null
     },
     {
@@ -767,6 +795,62 @@
       "declare": "Pick an enemy unit in combat with your general to be the target.",
       "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
       "cpCost": null
+    },
+    {
+      "id": "3a98b67d-8f40-5d28-ad21-3bdfb04295ce",
+      "name": "Throwing Knives",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "shootingPhase",
+      "phaseDetails": "Any Shooting Phase",
+      "icon": "shooting",
+      "declare": "Pick a visible enemy unit within 10\" of your general to be the target.",
+      "effect": "&#x20;Roll a dice. On a 3+, inflict 1 mortal damage on the target.",
+      "cpCost": null
+    },
+    {
+      "id": "7d0c9c95-084f-5547-ba52-1488bed597ad",
+      "name": "Trained Ranger",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "movementPhase",
+      "phaseDetails": "Once Per Battle, Your Movement Phase",
+      "icon": "movement",
+      "declare": "Pick a friendly unit wholly within 6\" of a battlefield edge to be the target.",
+      "effect": "Remove the target from the battlefield and set it up again wholly within 3\" of a battlefield edge and more than 6\" from all enemy units.",
+      "cpCost": null
+    },
+    {
+      "id": "fd6977f6-7ce7-5c2a-af60-0a86bb0646f4",
+      "name": "Hot-Blooded Endurance",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "chargePhase",
+      "phaseDetails": "Passive",
+      "icon": "movement",
+      "declare": null,
+      "effect": "Your general can use **CHARGE** abilities even if they used a **RUN** or **RETREAT** ability in the same turn and no mortal damage is inflicted on them by **RETREAT** abilities.",
+      "cpCost": null
+    },
+    {
+      "id": "a76d142f-f7df-51f9-86bc-dfa9977e9e6f",
+      "name": "Blade of the Kraken",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "combatPhase",
+      "phaseDetails": "Once Per Battle, Any Combat Phase",
+      "icon": "offensive",
+      "declare": null,
+      "effect": "Double the Attacks characteristic of your general’s melee weapons for the rest of the turn.",
+      "cpCost": null
     }
   ],
   "lores": [],
@@ -781,6 +865,14 @@
         "effect": "When you use the command on that card, it is not discarded but returns to your hand. Your opponent can check the information on it before it returns to your hand. The card goes back to being a normal battle tactic card, with the exception that you cannot use the command on it in the same phase it went back into your hand.\n\nIf you did not use the command on the card you separated, you can still score the battle tactic on it at the end of your turn as normal if you met its conditions. If you do so, discard it as normal. If you neither used the command nor scored the battle tactic on the card, it automatically returns to your hand at the end of your turn.\n\n**Designer’s Note:** *This ability essentially lets you use a command ‘for free’, but you have to choose the command at the start of the battle round, so it requires some planning ahead!*"
       },
       {
+        "name": "Ranger Doctrines",
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Reaction: You declared a **FIGHT** ability for your general or a friendly non-**HERO** unit wholly within 12\" of your general",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Immediately after that **FIGHT** ability has been resolved, pick a point on the battlefield within 6\" of your general. Remove the unit using this ability from the battlefield and set it up again within 1\" of that point and not in combat."
+      },
+      {
         "name": "Fortify Position",
         "phase": "defensive",
         "phaseDetails": "Passive",
@@ -790,6 +882,6 @@
       }
     ]
   },
-  "updated": "2026-04-08T11:18:52.305Z",
-  "compatibleDataVersion": 417
+  "updated": "2026-04-29T11:30:15.246Z",
+  "compatibleDataVersion": 422
 }
