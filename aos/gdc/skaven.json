@@ -8,8 +8,8 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-04-08T11:18:14.627Z",
-  "compatibleDataVersion": 417,
+  "updated": "2026-04-29T11:29:36.079Z",
+  "compatibleDataVersion": 422,
   "warscrolls": [
     {
       "id": "7f64eeb5-7422-591c-9c4b-71b56122e7f9",
@@ -678,6 +678,96 @@
       "notes": "This HERO can join an eligible regiment as a Skaven Overclaw."
     },
     {
+      "id": "ae0099b9-f1eb-54ce-95fe-99b4b8312245",
+      "name": "Deathmaster Crixxit",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SKAVEN",
+      "factions": ["Skaven"],
+      "keywords": [
+        "Ward (5+)",
+        "Skaven Overclaw",
+        "Unique",
+        "Eshin",
+        "Infantry",
+        "Hero"
+      ],
+      "factionKeywords": ["Grand Alliance Chaos", "Skaven"],
+      "referenceKeywords": "Unique, Infantry, Hero, Ward (5+), Chaos, Skaven, Eshin",
+      "stats": {
+        "move": "7\"",
+        "save": "5+",
+        "control": "2",
+        "health": "6",
+        "ward": "5+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 150,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "The Blades of Thirteen Cuts",
+            "type": "melee",
+            "range": null,
+            "attacks": "13",
+            "hit": "2+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Anti-HERO (+1 Rend)", "Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Shadowblood Cloak",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **ESHIN** unit that has 2 or more models and that is wholly within 18\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, remove this unit from the battlefield and set it up again wholly within 6\" of the target. This unit can be set up in combat."
+        },
+        {
+          "name": "Diversionary Assault",
+          "phase": "chargePhase",
+          "phaseDetails": "Your Charge Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **Gutter Runners** unit wholly within 13\" of this unit to be the target.",
+          "effect": "Add 2 to charge rolls for the target for the rest of the turn."
+        },
+        {
+          "name": "Master of Assassins",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Double the Damage characteristic of this unit’s melee weapons for attacks that target an enemy **HERO**."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "40mm",
+      "notes": "This Hero can join an eligible regiment as a Skaven Overclaw."
+    },
+    {
       "id": "a046774a-92e1-52b7-8d9d-87b1c25e594b",
       "name": "Doom-Flayers",
       "subname": null,
@@ -1162,6 +1252,90 @@
       "notes": null
     },
     {
+      "id": "c31be0ad-d4c0-5aa0-97d0-e8892fc8c346",
+      "name": "Gutter Runners",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SKAVEN",
+      "factions": ["Skaven"],
+      "keywords": ["Champion", "Eshin", "Infantry", "Ward (6+)"],
+      "factionKeywords": ["Grand Alliance Chaos", "Skaven"],
+      "referenceKeywords": "Infantry, Champion, Ward (6+), Chaos, Skaven, Eshin",
+      "stats": {
+        "move": "7\"",
+        "save": "6+",
+        "control": "1",
+        "health": "1",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 160,
+      "modelCount": 10,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Saboteur Bombs",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "-",
+            "damage": "D3",
+            "abilities": ["Anti-INFANTRY (+1 Rend)", "Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Punch Dagger and Blade",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Detonate",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "This unit can use this ability even if it has been destroyed Pick each enemy unit that has a friendly **Bomb Rat** token to be a target",
+          "effect": "Roll a D3 for each enemy unit within a target’s combat range On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll Then, remove the target’s **Bomb Rat**."
+        },
+        {
+          "name": "Bomb Rats",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "This unit’s **Bomb Rats** are tokens. If there are fewer than 2 friendly **Bomb Rats** next to enemy units, pick an enemy unit in combat with this unit that does not have a friendly **Bomb Rat** next to it to be the target.",
+          "effect": "Place this unit’s **Bomb Rat** next to the target."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": "Each model in this unit is armed with a Punch Dagger and Blade.\n1/10 models in this unit can be armed with Saboteur Bombs.\nThe champion cannot be armed with Saboteur Bombs.",
+      "baseSize": "32mm [1], 28.5mm [9]",
+      "notes": "This unit cannot be reinforced."
+    },
+    {
       "id": "1d905ce0-d788-54ff-8c46-94ef3f612c54",
       "name": "Hell Pit Abomination",
       "subname": null,
@@ -1554,21 +1728,21 @@
       "source": "aos-4e",
       "faction_id": "SKAVEN",
       "factions": ["Skaven"],
-      "keywords": ["Champion", "Eshin", "Infantry"],
+      "keywords": ["Champion", "Eshin", "Infantry", "Ward (6+)"],
       "factionKeywords": ["Grand Alliance Chaos", "Skaven"],
-      "referenceKeywords": "Infantry, Champion, Chaos, Skaven, Eshin",
+      "referenceKeywords": "Infantry, Champion, Ward (6+), Chaos, Skaven, Eshin",
       "stats": {
         "move": "7\"",
         "save": "6+",
         "control": "1",
         "health": "1",
-        "ward": null,
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 120,
+      "points": 130,
       "modelCount": 10,
-      "cannotBeReinforced": false,
+      "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
       "weapons": {
@@ -1601,34 +1775,35 @@
       },
       "abilities": [
         {
-          "name": "Sneaky Infiltrators",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "While each model in this unit is within 1\" of any terrain features, this unit cannot be targeted by shooting attacks unless the attacking model is within 9\" of it."
-        },
-        {
-          "name": "Slinking Advance",
-          "phase": "startOfTurn",
-          "phaseDetails": "Deployment Phase",
+          "name": "Smoke Bombs",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "This unit can use the ‘Normal Move’ ability as if it were your movement phase."
+          "declare": "If this unit is in combat or charged this turn, this unit can make a pile-in move Then, if this unit is in combat, you must pick 1 or more enemy units to be the target(s) of this unit’s attacks.",
+          "effect": "Resolve combat attacks against the target unit(s) Then, if this unit is in combat, roll a dice. On a 3+, this unit can move a distance up to its Move characteristic. It can pass through the combat ranges of enemy units but can only end that move in combat with units it was in combat with at the start of that move. It does not have to end the move in combat.",
+          "keywords": ["Core", "Attack", "Fight"]
+        },
+        {
+          "name": "Grappling Hooks",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit was not set up this turn, pick a terrain feature within 3\" of this unit to be the target.",
+          "effect": "Remove this unit from the battlefield and set it up again wholly within 3\" of the target and more than 3\" from all enemy units."
         }
       ],
       "summonedBy": null,
       "loadout": null,
-      "baseSize": "25mm",
-      "notes": null
+      "baseSize": "28.5mm [10]",
+      "notes": "This unit cannot be reinforced."
     },
     {
       "id": "a60f310b-61ef-53b2-b0c3-b523ccf4a41f",
@@ -4644,6 +4819,28 @@
           "icon": "offensive",
           "declare": "Pick up to 3 friendly **VERMINUS** units that charged this turn to be the targets.",
           "effect": "Add 1 to the Rend characteristic of the targets’ melee weapons for the rest of the turn.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "52300937-3370-5b19-9e7a-002f1aa15ad3",
+      "name": "Kill-Pack",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SKAVEN",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Kill-Kill! Scurry-Flee!",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Deployment Phase",
+          "icon": "movement",
+          "declare": "Pick an enemy **HERO** to be the target.",
+          "effect": "For the rest of the battle, if the target has been destroyed, add 2\" to the Move characteristic of friendly **ESHIN** units.",
           "cpCost": null,
           "isReaction": false
         }

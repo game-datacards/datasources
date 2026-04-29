@@ -8,8 +8,8 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-04-08T11:18:10.583Z",
-  "compatibleDataVersion": 417,
+  "updated": "2026-04-29T11:29:32.021Z",
+  "compatibleDataVersion": 422,
   "warscrolls": [
     {
       "id": "a6123b35-79ce-55c3-b385-b42531c5c0fc",
@@ -521,7 +521,7 @@
             "type": "melee",
             "range": null,
             "attacks": "2",
-            "hit": "4+",
+            "hit": "3+",
             "wound": "4+",
             "rend": "-",
             "damage": "1",
@@ -821,7 +821,8 @@
       "factionKeywords": [
         "Grand Alliance Order",
         "Sylvaneth",
-        "Soulpod Guardians"
+        "Soulpod Guardians",
+        "Lords of the Clan"
       ],
       "referenceKeywords": "Hero, Priest (2), Infantry, Order, Sylvaneth, Forest Elder",
       "stats": {
@@ -2796,12 +2797,12 @@
       "points": null,
       "rules": [
         {
-          "name": "Stirring Life",
+          "name": "Walk the Hidden Paths",
           "phase": "endOfTurn",
-          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
-          "icon": "special",
-          "declare": "Pick a friendly non-**HERO SYLVANETH** unit within 3\" of a terrain feature to be the target.",
-          "effect": "If the target has a Health characteristic of 1, return up to 3 slain models to the target. If the target has a Health characteristic of 2 or more, roll a dice, then pick 1 of the following:\n• **Heal (X)** the target, where **X** is equal to the roll.\n• Return a number of slain models to the target with a combined Health characteristic that is equal to or less than the roll.",
+          "phaseDetails": "Once Per Turn (Army), End of Your Turn",
+          "icon": "movement",
+          "declare": "Pick a friendly **SYLVANETH** unit within 12\" a friendly **Awakened Wyldwood** to be the target.",
+          "effect": "Remove the target from the battlefield and set it up again wholly within 12\" of another friendly **Awakened Wyldwood** and more than 9\" from all enemies.",
           "cpCost": null,
           "isReaction": false
         }
@@ -2840,12 +2841,12 @@
       "points": null,
       "rules": [
         {
-          "name": "Duskwalk",
-          "phase": "movementPhase",
+          "name": "Spiteful Dusk",
+          "phase": "startOfTurn",
           "phaseDetails": "Passive",
-          "icon": "movement",
+          "icon": "offensive",
           "declare": null,
-          "effect": "Friendly **SYLVANETH HEROES** can use the ‘Walk the Hidden Paths’ ability even if it has been used by another friendly unit in the same phase.",
+          "effect": "The first time each phase an enemy unit within the **creeping overgrowth** uses a command, inflict D3 mortal damage on that unit after that command has been resolved. If that command was a reaction, instead inflict D3 mortal damage on that unit after the ability that command was a reaction to has been resolved.",
           "cpCost": null,
           "isReaction": false
         }
@@ -3112,20 +3113,6 @@
         "cpCost": null
       },
       {
-        "id": "6f476d6c-3784-5e60-9725-6953409bbeb3",
-        "name": "Acorn of the Ages",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Battle, Your Hero Phase",
-        "icon": "special",
-        "declare": null,
-        "effect": "If there are fewer than 3 friendly **Awakened Wyldwoods** on the battlefield, set up an **Awakened Wyldwood** wholly within 12\" of this unit, more than 3\" from all objectives and more than 1\" from all enemy units and other terrain features.",
-        "cpCost": null
-      },
-      {
         "id": "4ddf608c-fa65-584b-80c9-6e777c2f3277",
         "name": "Ranu's Lamentiri",
         "cardType": "Enhancement",
@@ -3139,6 +3126,20 @@
         "effect": "Make an unbinding roll of 2D6. If the roll exceeds the casting roll for the spell, the spell is unbound and its effect is not resolved. Then, inflict an amount of mortal damage on the caster equal to the difference between the casting roll and the unbinding roll, to a maximum of 6.",
         "cpCost": null,
         "keywords": ["Unbind"]
+      },
+      {
+        "id": "6f476d6c-3784-5e60-9725-6953409bbeb3",
+        "name": "Acorn of the Ages",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle, Your Hero Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "While they are wholly within 12\" of this unit, friendly **Awakened Wyldwoods** have **WARD (5+).**",
+        "cpCost": null
       },
       {
         "id": "414b22b7-2882-5591-a991-e13a01affabc",
