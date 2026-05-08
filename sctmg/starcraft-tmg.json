@@ -22,14 +22,16 @@
             "allowMultipleProfiles": false,
             "fields": [
               {
-                "key": "speed",
-                "label": "Speed",
+                "key": "shield",
+                "label": "Shield",
                 "type": "string",
-                "displayOrder": 1
+                "displayOrder": 1,
+                "special": true,
+                "hideWhenEmpty": true
               },
               {
-                "key": "evade",
-                "label": "Evade",
+                "key": "speed",
+                "label": "Speed",
                 "type": "string",
                 "displayOrder": 2
               },
@@ -40,18 +42,16 @@
                 "displayOrder": 3
               },
               {
-                "key": "hitPoints",
-                "label": "Hit Points",
+                "key": "evade",
+                "label": "Evade",
                 "type": "string",
                 "displayOrder": 4
               },
               {
-                "key": "shield",
-                "label": "Shield",
+                "key": "hitPoints",
+                "label": "Hit Points",
                 "type": "string",
-                "displayOrder": 5,
-                "special": true,
-                "hideWhenEmpty": true
+                "displayOrder": 5
               },
               {
                 "key": "size",
@@ -2628,11 +2628,11 @@
           "cardType": "unit",
           "stats": [
             {
-              "speed": "5",
-              "evade": "5+",
+              "shield": "2",
+              "speed": "5/8",
               "armour": "5+",
-              "hitPoints": "5/8",
-              "shield": "3",
+              "evade": "5+",
+              "hitPoints": "3",
               "size": "2",
               "active": true
             }
@@ -2761,11 +2761,11 @@
           "cardType": "unit",
           "stats": [
             {
+              "shield": "4",
               "speed": "7",
-              "evade": "4+",
-              "armour": "5+",
+              "armour": "4+",
+              "evade": "5+",
               "hitPoints": "8",
-              "shield": "5",
               "size": "2",
               "active": true
             }
@@ -2876,11 +2876,11 @@
           "cardType": "unit",
           "stats": [
             {
-              "speed": "3",
-              "evade": "5+",
+              "shield": "3",
+              "speed": "4/7",
               "armour": "5+",
-              "hitPoints": "4/7",
-              "shield": "5",
+              "evade": "5+",
+              "hitPoints": "4",
               "size": "2",
               "active": true
             }
@@ -2995,12 +2995,12 @@
           "cardType": "unit",
           "stats": [
             {
+              "shield": "2",
               "speed": "-",
-              "evade": "5+",
-              "armour": "-",
+              "armour": "5+",
+              "evade": "-",
               "hitPoints": "8",
-              "shield": "3",
-              "size": "2",
+              "size": "3",
               "active": true
             }
           ],
@@ -3056,11 +3056,11 @@
           "cardType": "unit",
           "stats": [
             {
-              "speed": "4/7",
-              "evade": "5+",
-              "armour": "6+",
-              "hitPoints": "4",
               "shield": "2",
+              "speed": "4/7",
+              "armour": "5+",
+              "evade": "6+",
+              "hitPoints": "4",
               "size": "1",
               "active": true
             }
