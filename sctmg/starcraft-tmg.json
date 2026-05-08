@@ -341,7 +341,7 @@
                   },
                   {
                     "name": "Bayonet",
-                    "rng": "M",
+                    "rng": "E",
                     "roa": "2",
                     "hit": "5+",
                     "surge": "-",
@@ -371,14 +371,8 @@
             {
               "category": "movement",
               "name": "Combat Shield",
-              "type": "ACTIVE",
+              "type": "PASSIVE",
               "upgrade": true,
-              "costs": [
-                {
-                  "amount": "1",
-                  "unit": "CP"
-                }
-              ],
               "description": "This Unit is always eligible to make an Evade Roll against any Close Combat Attack targeting it and any Damage from an Enemy Special Ability."
             },
             {
@@ -1717,8 +1711,27 @@
               "category": "anyPhase",
               "name": "Psionic Link",
               "type": "PASSIVE",
-              "upgrade": true,
               "description": "Once per Round, if there are at least 7 Friendly models Within 6\" of this Unit, it may resolve its Special Ability with the BM cost reduced by 1."
+            },
+            {
+              "category": "anyPhase",
+              "name": "Creep Speed",
+              "type": "PASSIVE",
+              "upgrade": true,
+              "description": "While this Unit is On Creep, increase this Unit's Speed characteristic by 2."
+            },
+            {
+              "category": "movement",
+              "name": "Domineering Presence",
+              "type": "ACTIVE",
+              "upgrade": true,
+              "costs": [
+                {
+                  "amount": "1",
+                  "unit": "BM"
+                }
+              ],
+              "description": "Select another Friendly Unit Within 6\" (Line of Sight is not required). That Unit's Supply characteristic is increased by 1 for Controlling and Contesting Mission Markers and completing objectives."
             },
             {
               "category": "assault",
@@ -3144,7 +3157,6 @@
               "category": "movement",
               "name": "Guardian Shield",
               "type": "ACTIVE",
-              "upgrade": true,
               "costs": [
                 {
                   "amount": "1",
