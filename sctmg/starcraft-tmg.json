@@ -81,6 +81,11 @@
                     "type": "string"
                   },
                   {
+                    "key": "target",
+                    "label": "Target",
+                    "type": "string"
+                  },
+                  {
                     "key": "roa",
                     "label": "RoA",
                     "type": "string"
@@ -125,6 +130,11 @@
                   {
                     "key": "rng",
                     "label": "RNG",
+                    "type": "string"
+                  },
+                  {
+                    "key": "target",
+                    "label": "Target",
                     "type": "string"
                   },
                   {
@@ -289,20 +299,22 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (All)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "All"
                   },
                   {
                     "name": "AGG-12",
                     "rng": "12",
-                    "roa": "3",
+                    "roa": "2",
                     "hit": "3+",
                     "surge": "Armoured",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground), Long Range (18\"), Specialist",
+                    "keyword": "Long Range (18\"), Specialist",
                     "active": true,
-                    "upgrade": true
+                    "upgrade": true,
+                    "target": "Ground"
                   }
                 ]
               },
@@ -318,8 +330,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground), Indirect Fire, Long Range (18\"), Sidearm, Specialist",
-                    "active": true
+                    "keyword": "Indirect Fire, Long Range (18\"), Sidearm, Specialist",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -336,8 +349,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   },
                   {
                     "name": "Bayonet",
@@ -347,9 +361,10 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
+                    "keyword": "-",
                     "active": true,
-                    "upgrade": true
+                    "upgrade": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -371,9 +386,15 @@
             {
               "category": "movement",
               "name": "Combat Shield",
-              "type": "PASSIVE",
+              "type": "ACTIVE",
               "upgrade": true,
-              "description": "This Unit is always eligible to make an Evade Roll against any Close Combat Attack targeting it and any Damage from an Enemy Special Ability."
+              "description": "This Unit is always eligible to make an Evade Roll against any Close Combat Attack targeting it and any Damage from an Enemy Special Ability.",
+              "costs": [
+                {
+                  "amount": "1",
+                  "unit": "CP"
+                }
+              ]
             },
             {
               "category": "assault",
@@ -393,12 +414,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Damage Dealer",
-            "Light",
             "Biological",
-            "Ground",
-            "Terran"
+            "Light",
+            "Ground"
           ],
           "factionKeywords": [
             "Terran"
@@ -452,8 +470,9 @@
                     "surge": "Armoured",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground), Pierce Armoured (2)",
-                    "active": true
+                    "keyword": "Pierce Armoured (2)",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -470,8 +489,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -525,12 +545,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Tank",
             "Armoured",
             "Biological",
-            "Ground",
-            "Terran"
+            "Ground"
           ],
           "factionKeywords": [
             "Terran"
@@ -580,8 +597,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -653,12 +671,9 @@
             }
           ],
           "keywords": [
-            "Support",
-            "Lifesaver",
-            "Light",
             "Biological",
-            "Ground",
-            "Terran"
+            "Light",
+            "Ground"
           ],
           "factionKeywords": [
             "Terran"
@@ -702,8 +717,9 @@
                     "surge": "Armoured",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (All), Bulky, Pierce Armoured (3)",
-                    "active": true
+                    "keyword": "Bulky, Pierce Armoured (3)",
+                    "active": true,
+                    "target": "All"
                   },
                   {
                     "name": "C-14 Rifle",
@@ -713,9 +729,10 @@
                     "surge": "Light",
                     "sdice": "D3+1",
                     "dmg": "1",
-                    "keyword": "Target (All), Burst Fire 8\" (3)",
+                    "keyword": "Burst Fire 8\" (3)",
                     "active": true,
-                    "upgrade": true
+                    "upgrade": true,
+                    "target": "All"
                   }
                 ]
               },
@@ -730,8 +747,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "2",
-                    "keyword": "Target (Ground), Anti-Evade (2), Sidearm, Pinpoint",
-                    "active": true
+                    "keyword": "Anti-Evade (2), Sidearm, Pinpoint",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -748,8 +766,9 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -772,17 +791,12 @@
               "category": "movement",
               "name": "Orders",
               "type": "ACTIVE",
-              "description": "Repeatable. Select another Friendly Biological Unit Within 8\", spend CP and apply one of the following effects:\n• 1CP: That Unit's first used weapon gains Critical Hit (2).\n• 1CP: That Unit ignores the Disengage penalty for the remainder of the Round.\n• 2CP: Remove the Activation Marker from that Unit."
+              "description": "Repeatable. Select another Friendly Biological Unit Within 8\", spend CP and apply one of the following effects:\n\u2022 1CP: That Unit's first used weapon gains Critical Hit (2).\n\u2022 1CP: That Unit ignores the Disengage penalty for the remainder of the Round.\n\u2022 2CP: Remove the Activation Marker from that Unit."
             }
           ],
           "keywords": [
-            "Hero",
-            "Tactician",
-            "Unique",
-            "Light",
             "Biological",
-            "Ground",
-            "Terran"
+            "Ground"
           ],
           "factionKeywords": [
             "Terran"
@@ -838,18 +852,16 @@
             }
           ],
           "keywords": [
-            "Lifesaver",
             "Armoured",
             "Flying",
-            "Mechanical",
-            "Terran",
-            "Raynor's Raiders"
+            "Mechanical"
           ],
           "factionKeywords": [
             "Terran",
             "Raynor's Raiders"
           ],
-          "combatRole": "Lifesaver"
+          "combatRole": "Lifesaver",
+          "armySlot": "Other"
         },
         {
           "id": "raynors-raider-marine-001",
@@ -887,8 +899,9 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (All)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "All"
                   }
                 ]
               }
@@ -905,8 +918,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -957,13 +971,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Damage Dealer",
-            "Light",
             "Biological",
-            "Ground",
-            "Terran",
-            "Raynor's Raiders"
+            "Light",
+            "Ground"
           ],
           "factionKeywords": [
             "Terran",
@@ -1008,8 +1018,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground), Long Range (18\")",
-                    "active": true
+                    "keyword": "Long Range (18\")",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               },
@@ -1024,8 +1035,9 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground), Pinpoint, Sidearm",
-                    "active": true
+                    "keyword": "Pinpoint, Sidearm",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               },
@@ -1040,8 +1052,9 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Flying), Anti-Evade (1), Sidearm",
-                    "active": true
+                    "keyword": "Anti-Evade (1), Sidearm",
+                    "active": true,
+                    "target": "Flying"
                   },
                   {
                     "name": "Scatter Missiles",
@@ -1051,9 +1064,10 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground), Indirect Fire, Locked In (6), Long Range (24\"), Sidearm",
+                    "keyword": "Indirect Fire, Locked In (6), Long Range (24\"), Sidearm",
                     "active": true,
-                    "upgrade": true
+                    "upgrade": true,
+                    "target": "Ground"
                   },
                   {
                     "name": "Haywire Missiles",
@@ -1063,9 +1077,10 @@
                     "surge": "Armoured",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground), Pierce Armoured (3), Sidearm",
+                    "keyword": "Pierce Armoured (3), Sidearm",
                     "active": true,
-                    "upgrade": true
+                    "upgrade": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -1082,8 +1097,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -1123,12 +1139,9 @@
             }
           ],
           "keywords": [
-            "Elite",
-            "Damage Dealer",
             "Armoured",
             "Mechanical",
-            "Ground",
-            "Terran"
+            "Ground"
           ],
           "factionKeywords": [
             "Terran"
@@ -1193,8 +1206,9 @@
                     "surge": "Light, Armoured",
                     "sdice": "D3+1",
                     "dmg": "2",
-                    "keyword": "Target (All)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "All"
                   }
                 ]
               }
@@ -1211,8 +1225,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -1267,12 +1282,9 @@
             }
           ],
           "keywords": [
-            "Elite",
-            "Damage Dealer",
-            "Light",
             "Biological",
-            "Ground",
-            "Zerg"
+            "Light",
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
@@ -1316,8 +1328,9 @@
                     "surge": "Light, Armoured",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (All)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "All"
                   }
                 ]
               }
@@ -1334,8 +1347,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "2",
-                    "keyword": "Target (Ground), Critical Hit (2)",
-                    "active": true
+                    "keyword": "Critical Hit (2)",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -1393,13 +1407,9 @@
             }
           ],
           "keywords": [
-            "Hero",
-            "Damage Dealer",
-            "Unique",
             "Biological",
             "Psionic",
-            "Ground",
-            "Zerg"
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
@@ -1469,19 +1479,16 @@
             }
           ],
           "keywords": [
-            "Tactician",
-            "Unique",
             "Armoured",
             "Biological",
-            "Ground",
-            "Zerg",
-            "Kerrigan's Swarm"
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg",
             "Kerrigan's Swarm"
           ],
-          "combatRole": "Tactician"
+          "combatRole": "Tactician",
+          "armySlot": "Other"
         },
         {
           "id": "kerrigan-swarm-raptor-001",
@@ -1525,8 +1532,9 @@
                     "surge": "Light, Armoured",
                     "sdice": "D6",
                     "dmg": "1",
-                    "keyword": "Target (Ground), Instant",
-                    "active": true
+                    "keyword": "Instant",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -1577,14 +1585,9 @@
             }
           ],
           "keywords": [
-            "Elite",
-            "Damage Dealer",
-            "Unique",
-            "Light",
             "Biological",
-            "Ground",
-            "Zerg",
-            "Kerrigan's Swarm"
+            "Light",
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg",
@@ -1629,8 +1632,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               },
@@ -1645,8 +1649,9 @@
                     "surge": "Light, Armoured",
                     "sdice": "D3",
                     "dmg": "2",
-                    "keyword": "Target (Flying)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Flying"
                   }
                 ]
               }
@@ -1663,8 +1668,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -1741,12 +1747,10 @@
             }
           ],
           "keywords": [
-            "Support",
-            "Lifesaver",
             "Armoured",
             "Biological",
-            "Ground",
-            "Zerg"
+            "Psionic",
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
@@ -1795,8 +1799,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -1813,8 +1818,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -1881,12 +1887,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Tank",
             "Armoured",
             "Biological",
-            "Ground",
-            "Zerg"
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
@@ -1935,8 +1938,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -1950,11 +1954,12 @@
                     "rng": "E",
                     "roa": "3",
                     "hit": "4+",
-                    "surge": "Light, Armoured",
+                    "surge": "Light",
                     "sdice": "D3+1",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2033,12 +2038,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Tank",
             "Armoured",
             "Biological",
-            "Ground",
-            "Zerg"
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
@@ -2083,8 +2085,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2099,16 +2102,15 @@
             }
           ],
           "keywords": [
-            "Tank",
-            "Light",
             "Biological",
-            "Ground",
-            "Zerg"
+            "Light",
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
           ],
-          "combatRole": "Tank"
+          "combatRole": "Tank",
+          "armySlot": "Other"
         },
         {
           "id": "vile-roach-001",
@@ -2151,8 +2153,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2169,8 +2172,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2249,12 +2253,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Tank",
             "Armoured",
             "Biological",
-            "Ground",
-            "Zerg"
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
@@ -2309,8 +2310,9 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   },
                   {
                     "name": "Shredding Claws",
@@ -2320,9 +2322,10 @@
                     "surge": "Light, Armoured",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
+                    "keyword": "-",
                     "active": true,
-                    "upgrade": true
+                    "upgrade": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2369,12 +2372,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Damage Dealer",
-            "Light",
             "Biological",
-            "Ground",
-            "Zerg"
+            "Light",
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
@@ -2429,8 +2429,9 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   },
                   {
                     "name": "Shredding Claws",
@@ -2440,9 +2441,10 @@
                     "surge": "Light, Armoured",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
+                    "keyword": "-",
                     "active": true,
-                    "upgrade": true
+                    "upgrade": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2508,12 +2510,9 @@
             }
           ],
           "keywords": [
-            "Elite",
-            "Damage Dealer",
-            "Light",
             "Biological",
-            "Ground",
-            "Zerg"
+            "Light",
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
@@ -2563,8 +2562,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2609,12 +2609,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Damage Dealer",
-            "Light",
             "Biological",
-            "Ground",
-            "Zerg"
+            "Light",
+            "Ground"
           ],
           "factionKeywords": [
             "Zerg"
@@ -2675,8 +2672,9 @@
                     "surge": "Light",
                     "sdice": "D3+1",
                     "dmg": "1",
-                    "keyword": "Target (All), Anti-Evade (1)",
-                    "active": true
+                    "keyword": "Anti-Evade (1)",
+                    "active": true,
+                    "target": "All"
                   }
                 ]
               }
@@ -2693,8 +2691,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   },
                   {
                     "name": "Glaive Strike",
@@ -2704,9 +2703,10 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground), Pierce Light (2)",
+                    "keyword": "Pierce Light (2)",
                     "active": true,
-                    "upgrade": true
+                    "upgrade": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2753,12 +2753,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Damage Dealer",
             "Biological",
             "Light",
-            "Ground",
-            "Protoss"
+            "Ground"
           ],
           "factionKeywords": [
             "Protoss"
@@ -2804,8 +2801,9 @@
                     "surge": "Armoured",
                     "sdice": "D3",
                     "dmg": "3",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   },
                   {
                     "name": "Twilight Blades Sweep",
@@ -2815,8 +2813,9 @@
                     "surge": "Light",
                     "sdice": "D3+1",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2867,13 +2866,9 @@
             }
           ],
           "keywords": [
-            "Hero",
-            "Tank",
-            "Unique",
             "Biological",
             "Psionic",
-            "Ground",
-            "Protoss"
+            "Ground"
           ],
           "factionKeywords": [
             "Protoss"
@@ -2924,8 +2919,9 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -2984,14 +2980,9 @@
             }
           ],
           "keywords": [
-            "Elite",
-            "Damage Dealer",
-            "Unique",
             "Biological",
             "Light",
-            "Ground",
-            "Khalai",
-            "Protoss"
+            "Ground"
           ],
           "factionKeywords": [
             "Protoss",
@@ -3049,17 +3040,15 @@
             }
           ],
           "keywords": [
-            "Tactician",
-            "Armoured",
-            "Ground",
-            "Khalai",
-            "Protoss"
+            "Armored",
+            "Ground"
           ],
           "factionKeywords": [
             "Protoss",
             "Khalai"
           ],
-          "combatRole": "Tactician"
+          "combatRole": "Tactician",
+          "armySlot": "Other"
         },
         {
           "id": "sentry-001",
@@ -3103,8 +3092,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (All), Instant",
-                    "active": true
+                    "keyword": "Instant",
+                    "active": true,
+                    "target": "All"
                   }
                 ]
               }
@@ -3121,8 +3111,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -3193,13 +3184,10 @@
             }
           ],
           "keywords": [
-            "Support",
-            "Lifesaver",
-            "Mechanical",
             "Light",
+            "Mechanical",
             "Psionic",
-            "Ground",
-            "Protoss"
+            "Ground"
           ],
           "factionKeywords": [
             "Protoss"
@@ -3249,8 +3237,9 @@
                     "surge": "Armoured",
                     "sdice": "D3",
                     "dmg": "2",
-                    "keyword": "Target (All)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "All"
                   }
                 ]
               }
@@ -3267,8 +3256,9 @@
                     "surge": "-",
                     "sdice": "-",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -3315,12 +3305,9 @@
             }
           ],
           "keywords": [
-            "Elite",
-            "Damage Dealer",
             "Armoured",
             "Mechanical",
-            "Ground",
-            "Protoss"
+            "Ground"
           ],
           "factionKeywords": [
             "Protoss"
@@ -3371,8 +3358,9 @@
                     "surge": "Light",
                     "sdice": "D3",
                     "dmg": "1",
-                    "keyword": "Target (Ground)",
-                    "active": true
+                    "keyword": "-",
+                    "active": true,
+                    "target": "Ground"
                   }
                 ]
               }
@@ -3439,12 +3427,9 @@
             }
           ],
           "keywords": [
-            "Core",
-            "Damage Dealer",
             "Biological",
             "Light",
-            "Ground",
-            "Protoss"
+            "Ground"
           ],
           "factionKeywords": [
             "Protoss"
