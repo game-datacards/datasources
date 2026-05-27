@@ -8,8 +8,8 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-04-29T11:29:33.651Z",
-  "compatibleDataVersion": 422,
+  "updated": "2026-05-27T09:45:30.953Z",
+  "compatibleDataVersion": 432,
   "warscrolls": [
     {
       "id": "93b38365-2781-5078-9be9-f5e8c3b2de09",
@@ -140,7 +140,19 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Roll a dice for each Blue Horror model in this unit that is slain. On a 3+, you can add 1 Brimstone Horrors model to this unit.\n\n**Designer’s Note:** *You cannot have more than 10 Blue Horror models and 10 Brimstone Horrors models in a non-reinforced unit. You cannot have more than 20 Blue Horror models and 20 Brimstone Horrors models in a reinforced unit.*\n\n*Models that have been slain and returned to this unit do not count as being slain for the purposes of this ability.*"
+          "effect": "Roll a dice for each **Blue Horror** model in this unit that is slain. For each 3+, if there are fewer **Brimstone Horrors** models in this unit than its starting size, you can add 1 **Brimstone Horrors** model to this unit.&#x20;\n\n**Designer’s Note:** *Dice are only rolled for Blue Horror models that are currently slain – models that have been slain and returned to this unit do not count until they are slain once more. When adding Brimstone Horrors to this unit, do not count slain Brimstone Horrors towards the maximum.*"
+        },
+        {
+          "name": "Immolation",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Slain Brimstone Horrors cannot be returned to this unit. When setting up a replacement unit for this unit, Brimstone Horror models are ignored when determining the number of models in this unit, and you cannot pick them to be set up."
         }
       ],
       "summonedBy": null,
@@ -3766,6 +3778,7 @@
   ],
   "availableRegimentsOfRenown": [
     "Brand's Oathbound",
+    "Cogfort Raiders",
     "Diseased Revellers",
     "Godmarked Ascendant",
     "Hargax's Pit-Beasts",
@@ -3773,6 +3786,7 @@
     "Lord Skaldior's Chosen",
     "One-eyed Grunnock",
     "Phulgoth's Shudderhood",
+    "Rogue Engine",
     "Seeker of the Dread Dirge",
     "Snerk's Trogg-Fer-Hire",
     "Squires of the Everchosen",

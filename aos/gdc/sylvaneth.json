@@ -8,8 +8,8 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-04-29T11:29:32.021Z",
-  "compatibleDataVersion": 422,
+  "updated": "2026-05-27T09:45:29.335Z",
+  "compatibleDataVersion": 432,
   "warscrolls": [
     {
       "id": "a6123b35-79ce-55c3-b385-b42531c5c0fc",
@@ -869,14 +869,14 @@
         {
           "name": "Soulshriek",
           "phase": "combatPhase",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "Each time a model in a friendly non-**HERO REVENANT** unit wholly within 12\" of and visible to this unit is slain by a combat attack and that model was in combat with the attacking unit, roll a number of dice equal to the slain model’s Health characteristic. For each 5+, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved."
+          "declare": "Pick each friendly non-**HERO REVENANT** unit wholly within 12\" of and visible to this unit to be the targets.",
+          "effect": "For the rest of the phase, each time a model in a target unit is slain by a combat attack, roll a dice. On a 5+, inflict 1 mortal damage on the attacking unit."
         },
         {
           "name": "Regenesis",
@@ -888,7 +888,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Declare: Pick a friendly **SYLVANETH** unit that is wholly within the **creeping overgrowth** or that is visible to and wholly within 12\" of this unit to be the target, then make a chanting roll of D6.",
-          "effect": "If the chanting roll was 6+, you can pick another eligible unit to be a second target. If a target is a **REVENANT INFANTRY** or **DRYADS** unit, return up to D3 models to that target unit. Otherwise, **Heal (3)** that target.",
+          "effect": "If the chanting roll was 6+, you can pick another eligible unit to be a second target. If a target is a non-**HERO REVENANT INFANTRY** or **Dryads** unit, return up to D3 models to the target unit. Otherwise, **Heal (3)** that target.",
           "keywords": ["Prayer"]
         }
       ],
@@ -2099,7 +2099,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick a terrain feature within 18\" of this unit that has a friendly **overgrown token** to be the target.",
-          "effect": "Measure the range and visibility of the next **SPELL** ability used by this unit this phase from the target instead of from this unit, and your opponent can measure range and visibility to that terrain feature instead of this unit for the purposes of the ‘Unbind’ ability.",
+          "effect": "The next time this unit uses a non-**SUMMON SPELL** ability this phase, when picking targets for that spell, you can measure range and visibility from the target terrain feature instead of from this unit, and your opponent can measure range and visibility to the target terrain feature instead of to this unit for the purposes of the ‘Unbind’ ability.",
           "keywords": ["Rampage"]
         }
       ],
@@ -2893,7 +2893,7 @@
           "phaseDetails": "Your Hero Phase",
           "icon": "defensive",
           "declare": "Pick a friendly **SYLVANETH PRIEST** to chant this prayer, pick a friendly **SYLVANETH** unit that is wholly within the **creeping overgrowth** or that is visible to them and wholly within 12\" of them to be the target, then make a chanting roll of D6.",
-          "effect": "Until the start of your next turn, subtract 1 from wound rolls for attacks that target that friendly unit. In addition, if the chanting roll was 8+:\n• If the target is a **MONSTER**, **Heal (3)** the target.\n• If the target is not a **MONSTER**, ignore modifiers to save rolls for the target (positive and negative) until the start of your next turn.",
+          "effect": "Until the start of your next turn, subtract 1 from wound rolls for attacks that target that friendly unit. In addition, if the chanting roll was 8+, pick 1 of the following effects:\n• You can **Heal (3)** the target.\n• If the target is not a **MONSTER**, ignore modifiers to save rolls for the target (positive and negative) until the start of your next turn.",
           "keywords": ["Prayer", "Unlimited"],
           "linkedWarscroll": null
         },
@@ -3370,6 +3370,7 @@
   "availableRegimentsOfRenown": [
     "Bloodthirsty Shiver",
     "Bundo Whalebiter",
+    "Cogfort Raiders",
     "Dawnrider Lance",
     "Drekki's Privateers",
     "Fjori's Flamebearers",
@@ -3380,6 +3381,8 @@
     "Namarti Shore Raid",
     "Norgrimm's Rune Throng",
     "Nurgle's Gift",
+    "Reinholt's Sharpshooters",
+    "Rogue Engine",
     "Saviours of Cinderfall",
     "Sigil Convocation",
     "Sky-Port Profiteers",
@@ -3387,7 +3390,8 @@
     "The Blacktalons",
     "The Crimson Lash",
     "The Horizon Seekers",
-    "Valnir's Stormwing"
+    "Valnir's Stormwing",
+    "Ven Denst's Hounds"
   ],
   "rules": {
     "battleTraits": [
@@ -3557,7 +3561,7 @@
         "phaseDetails": "Passive",
         "icon": "offensive",
         "declare": null,
-        "effect": "If your **Soulpod Grove** has been destroyed this battle, add 2 to the Attacks characteristic of friendly **SOULPOD GUARDIANS** units’ melee weapons."
+        "effect": "If your **Soulpod Grove** has been demolished this battle, add 2 to the Attacks characteristic of friendly **SOULPOD GUARDIANS** units’ melee weapons."
       },
       {
         "name": "Heart of the Forest",

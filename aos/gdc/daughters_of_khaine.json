@@ -8,8 +8,8 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-04-29T11:29:27.418Z",
-  "compatibleDataVersion": 422,
+  "updated": "2026-05-27T09:45:24.722Z",
+  "compatibleDataVersion": 432,
   "warscrolls": [
     {
       "id": "80cc8882-41c6-50ac-ac20-21c896c07fbd",
@@ -1568,14 +1568,14 @@
         {
           "name": "Ironscale's Fury",
           "phase": "combatPhase",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "Each time a model in a friendly non-**HERO DAUGHTERS OF KHAINE** unit is slain by a combat attack, if that friendly unit is within this unit’s combat range and that model was in combat with the attacking unit, roll a dice. If that friendly unit is a **Blood Sisters** or a **Blood Stalkers** unit, roll 2 dice instead. For each 5+, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved.",
+          "declare": "Pick each friendly **DAUGHTERS OF KHAINE** unit within this unit's combat range to be the targets.",
+          "effect": "For the rest of the phase, each time a model in a target unit is slain by a combat attack, roll a dice. If that unit is a **Blood Sisters** or **Blood Stalkers** unit, roll 2 dice instead. For each 5+, inflict 1 mortal damage on the attacking unit.",
           "keywords": ["Exalted"]
         }
       ],
@@ -1672,7 +1672,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Each time you perform a blood rite, immediately after the ability that destroyed a unit has been resolved, pick 1 of the following effects:\n\n• Until the start of your next turn, this unit is only visible to enemy units while those units are within its combat range.\n• **Heal (D6)** this unit or a friendly Shadow Queen.&#x20;\n• A friendly **Shadow Queen** can immediately use the ‘Normal Move’ or ‘Retreat’ ability as if it was your movement phase.\n• Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.\n• For the rest of the turn, set this unit’s Control characteristic to 5 and a friendly **Shadow Queen’s** Control characteristic to 15."
+          "effect": "Each time you perform a blood rite, immediately after the ability that destroyed a unit has been resolved, pick 1 of the following effects:\n\n• Until the start of your next turn, this unit is only visible to enemy units while those units are within its combat range.\n• **Heal (D6)** this unit or a friendly Shadow Queen.\n• A friendly **Shadow Queen** can immediately use the ‘Normal Move’ or ‘Retreat’ ability as if it was your movement phase even if it has already used that ability or another **CORE** ability this phase.\n• Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.\n• For the rest of the turn, set this unit’s Control characteristic to 5 and a friendly **Shadow Queen’s** Control characteristic to 15.\n\n**Designer’s Note:** *If the Shadow Queen retreats with the ‘Iron Heart of Khaine’ ability, she cannot subsequently use the ‘Fight’ ability in the same combat phase.*"
         }
       ],
       "summonedBy": null,
@@ -3076,6 +3076,7 @@
   "availableRegimentsOfRenown": [
     "Bloodthirsty Shiver",
     "Bundo Whalebiter",
+    "Cogfort Raiders",
     "Dawnrider Lance",
     "Drekki's Privateers",
     "Drycha's Talons",
@@ -3089,6 +3090,8 @@
     "Namarti Shore Raid",
     "Norgrimm's Rune Throng",
     "Nurgle's Gift",
+    "Reinholt's Sharpshooters",
+    "Rogue Engine",
     "Saviours of Cinderfall",
     "Sigil Convocation",
     "Sky-Port Profiteers",
@@ -3097,7 +3100,8 @@
     "The Blacktalons",
     "The Horizon Seekers",
     "The Twisted Branch",
-    "Valnir's Stormwing"
+    "Valnir's Stormwing",
+    "Ven Denst's Hounds"
   ],
   "rules": {
     "battleTraits": [
@@ -3211,7 +3215,7 @@
         "phaseDetails": "Passive",
         "icon": "defensive",
         "declare": null,
-        "effect": "Effect: Friendly **CAULDRON OF BLOOD** units are either **empty** or **full**. They start the battle **empty**. While a friendly **CAULDRON OF BLOOD** unit is **full**:\n\n• That **CAULDRON OF BLOOD** has **WARD (4+)** against damage points inflicted by shooting attacks.\n• Subtract 1 from hit rolls for shooting attacks that target friendly **CRONESEER’S PARIAHS** units while they are wholly within 9\" of that **CAULDRON OF BLOOD**."
+        "effect": "Friendly **Slaughter Queen on Cauldron of Blood** or **Hag Queen on Cauldron of Blood unit** units are either **empty** or **full**. They start the battle **empty**. While a friendly **Slaughter Queen on Cauldron of Blood** or **Hag Queen on Cauldron of Blood unit** unit is **full**:\n\n• That **Slaughter Queen on Cauldron of Blood** or **Hag Queen on Cauldron of Blood unit** has **WARD (4+)** against damage points inflicted by shooting attacks.\n• Subtract 1 from hit rolls for shooting attacks that target friendly **CRONESEER’S PARIAHS** units while they are wholly within 9\" of that **Slaughter Queen on Cauldron of Blood** or **Hag Queen on Cauldron of Blood unit**."
       },
       {
         "name": "Skilled Skirmishers",
@@ -3234,16 +3238,16 @@
         "phase": "heroPhase",
         "phaseDetails": "Once Per Battle (Army), Your Hero Phase",
         "icon": "special",
-        "declare": "Pick a friendly **CRONESEER’S PARIAHS HERO** within the combat range of a friendly **empty** **CAULDRON OF BLOOD**. Then, pick another unit within the combat range of that **HERO** to be the target.",
-        "effect": "Roll a dice. Allocate a number of damage points to the target equal to the roll (ward rolls cannot be made for those damage points). Then, that **CAULDRON OF BLOOD** becomes **full**."
+        "declare": "Pick a friendly **CRONESEER’S PARIAHS HERO** within the combat range of a friendly **empty** **Slaughter Queen on Cauldron of Blood** or **Hag Queen on Cauldron of Blood unit**. Then, pick another unit within the combat range of that **HERO** to be the target.",
+        "effect": "Roll a dice. Allocate a number of damage points to the target equal to the roll (ward rolls cannot be made for those damage points). Then, that **Slaughter Queen on Cauldron of Blood** or **Hag Queen on Cauldron of Blood unit** becomes **full**."
       },
       {
         "name": "Laden with Prophecy",
         "phase": "endOfTurn",
         "phaseDetails": "End of Any Turn",
         "icon": "special",
-        "declare": "Pick a friendly **empty CAULDRON OF BLOOD**.",
-        "effect": "If any enemy models were slain this turn by that **CAULDRON OF BLOOD**’s combat attacks, it becomes **full**."
+        "declare": "Pick a friendly **empty Slaughter Queen on Cauldron of Blood** or **Hag Queen on Cauldron of Blood unit**.",
+        "effect": "If any enemy models were slain this turn by that **Slaughter Queen on Cauldron of Blood** or **Hag Queen on Cauldron of Blood unit'**&#x73; combat attacks, it becomes **full**."
       }
     ]
   }
