@@ -1,0 +1,1151 @@
+11th Edition launch — complete data for 29 factions
+
+**Dark Angels**
+- Asmodai: added
+- Azrael: added
+- Belial: added
+- Deathwing Knights: added
+- Deathwing Terminator Squad: added
+- Ezekiel: added
+- Inner Circle Companions: added
+- Land Speeder Vengeance: added
+- Lazarus: added
+- Lion El'Jonson: added
+- Nephilim Jetfighter: added
+- Ravenwing Black Knights: added
+- Ravenwing Command Squad: added
+- Ravenwing Dark Talon: added
+- Ravenwing Darkshroud: added
+- Sammael: added
+- Inner Circle Task Force, Darkflight Pursuit, Interrogation Conclave, Dark Age Arsenal, Unforgiven Task Force, The Vengeful Brethren, Lion's Blade Task Force, Company of Hunters, Wrath of the Rock (detachment): added with 36 stratagems and 26 enhancements
+- "Oath of Moment" (army rule): added
+- "Space Marine Chapters" (army rule): added
+- "The Unforgiven" (army rule): added
+- "The Ravenwing" (army rule): added
+- "The Deathwing" (army rule): added
+
+**Death Guard**
+- Biologus Putrifier: added
+- Blightlord Terminators: added
+- Chaos Land Raider: added
+- Chaos Predator Annihilator: added
+- Chaos Predator Destructor: added
+- Chaos Rhino: added
+- Chaos Spawn: added
+- Daemon Prince of Nurgle: added
+- Daemon Prince of Nurgle with Wings: added
+- Deathshroud Terminators: added
+- Defiler: added
+- Foetid Bloat-Drone: added
+- Foetid Bloat-Drone with Heavy Blight Launcher: added
+- Foul Blightspawn: added
+- Helbrute: added
+- Icon Bearer: added
+- Lord of Contagion: added
+- Lord of Poxes: added
+- Lord of Virulence: added
+- Malignant Plaguecaster: added
+- Miasmic Malignifier: added
+- Mortarion: added
+- Myphitic Blight-haulers: added
+- Noxious Blightbringer: added
+- Plague Marines: added
+- Plague Surgeon: added
+- Plagueburst Crawler: added
+- Poxwalkers: added
+- Tallyman: added
+- Typhus: added
+- Maggot Lords, Paragons of Putrescence, Virulent Vectorium, Tallyband Summoners, Contagion Engines, Flyblown Host, Champions of Contagion, Mortarion's Hammer, Shamblerot Vectorium, Death Lord's Chosen (detachment): added with 47 stratagems and 31 enhancements
+- "Nurgle's Gift (Aura)" (army rule): added
+- "Pact of Decay" (army rule): added
+
+**Tyranids**
+- Barbgaunts: added
+- Biovores: added
+- Broodlord: added
+- Carnifexes: added
+- Deathleaper: added
+- Exocrine: added
+- Gargoyles: added
+- Genestealers: added
+- Harpy: added
+- Harridan: added
+- Haruspex: added
+- Hierophant: added
+- Hive Crone: added
+- Hive Guard: added
+- Hive Tyrant: added
+- Hormagaunts: added
+- Hyperadapted Raveners: added
+- Lictor: added
+- Maleceptor: added
+- Mawloc: added
+- Mucolid Spores: added
+- Neurogaunts: added
+- Neurolictor: added
+- Neurotyrant: added
+- Norn Assimilator: added
+- Norn Emissary: added
+- Old One Eye: added
+- Parasite of Mortrex: added
+- Psychophage: added
+- Pyrovores: added
+- Raveners: added
+- Ripper Swarms: added
+- Screamer-Killer: added
+- Spore Mines: added
+- Sporocyst: added
+- Termagants: added
+- Tervigon: added
+- The Red Terror: added
+- The Swarmlord: added
+- Toxicrene: added
+- Trygon: added
+- Tyranid Prime with Lash Whip: added
+- Tyranid Warriors with Melee Bio-weapons: added
+- Tyranid Warriors with Ranged Bio-weapons: added
+- Tyrannocyte: added
+- Tyrannofex: added
+- Tyrant Guard: added
+- Venomthropes: added
+- Von Ryan's Leapers: added
+- Winged Hive Tyrant: added
+- Winged Tyranid Prime: added
+- Zoanthropes: added
+- Synaptic Nexus, Ambush Predators, Subterranean Assault, Crusher Stampede, Unending Swarm, Talons of the Norn Queen, Vanguard Onslaught, Warrior Bioform Onslaught, Invasion Fleet, Assimilation Swarm, The Vardenghast Swarm (detachment): added with 52 stratagems and 36 enhancements
+- "Synapse" (army rule): added
+- "Shadow in the Warp" (army rule): added
+
+**Adeptus Astartes**
+- Adrax Agatone: added
+- Aethon Shaan: added
+- Aggressor Squad: added
+- Ancient: added
+- Ancient in Terminator Armour: added
+- Apothecary: added
+- Apothecary Biologis: added
+- Assault Intercessor Squad: added
+- Assault Intercessors with Jump Packs: added
+- Astraeus: added
+- Ballistus Dreadnought: added
+- Bladeguard Ancient: added
+- Bladeguard Veteran Squad: added
+- Brutalis Dreadnought: added
+- Caanok Var: added
+- Captain: added
+- Captain in Gravis Armour: added
+- Captain in Phobos Armour: added
+- Captain in Terminator Armour: added
+- Captain Titus: added
+- Captain with Jump Pack: added
+- Cato Sicarius: added
+- Centurion Assault Squad: added
+- Centurion Devastator Squad: added
+- Chaplain: added
+- Chaplain in Terminator Armour: added
+- Chaplain on Bike: added
+- Chaplain with Jump Pack: added
+- Chief Librarian Tigurius: added
+- Company Heroes: added
+- Darnath Lysander: added
+- Desolation Squad: added
+- Devastator Squad: added
+- Dreadnought: added
+- Drop Pod: added
+- Eliminator Squad: added
+- Eradicator Squad: added
+- Eradicator Squad with Heavy Bolters: added
+- Firestrike Servo-turrets: added
+- Gladiator Lancer: added
+- Gladiator Reaper: added
+- Gladiator Valiant: added
+- Hammerfall Bunker: added
+- Heavy Intercessor Squad: added
+- Hellblaster Squad: added
+- Impulsor: added
+- Inceptor Squad: added
+- Incursor Squad: added
+- Infernus Squad: added
+- Infiltrator Squad: added
+- Intercessor Squad: added
+- Invader ATV: added
+- Invictor Tactical Warsuit: added
+- Iron Father Feirros: added
+- Judiciar: added
+- Kayvaan Shrike: added
+- Kor'sarro Khan: added
+- Land Raider: added
+- Land Raider Crusader: added
+- Land Raider Redeemer: added
+- Land Speeder: added
+- Librarian: added
+- Librarian in Phobos Armour: added
+- Librarian in Terminator Armour: added
+- Lieutenant: added
+- Lieutenant in Phobos Armour: added
+- Lieutenant in Reiver Armour: added
+- Lieutenant with Combi-weapon: added
+- Marneus Calgar in Armour of Antilochus: added
+- Outrider Squad: added
+- Pedro Kantor: added
+- Predator Annihilator: added
+- Predator Destructor: added
+- Razorback: added
+- Redemptor Dreadnought: added
+- Reiver Squad: added
+- Repulsor: added
+- Repulsor Executioner: added
+- Rhino: added
+- Roboute Guilliman: added
+- Scout Squad: added
+- Sternguard Veteran Squad: added
+- Storm Speeder Hailstrike: added
+- Storm Speeder Hammerstrike: added
+- Storm Speeder Thunderstrike: added
+- Stormhawk Interceptor: added
+- Stormraven Gunship: added
+- Stormtalon Gunship: added
+- Suboden Khan: added
+- Suppressor Squad: added
+- Tactical Squad: added
+- Techmarine: added
+- Terminator Assault Squad: added
+- Terminator Squad: added
+- Thunderhawk Gunship: added
+- Tor Garadon: added
+- Uriel Ventris: added
+- Vanguard Veteran Squad with Jump Packs: added
+- Victrix Honour Guard: added
+- Vindicator: added
+- Vulkan He'stan: added
+- Wardens of Ultramar: added
+- Whirlwind: added
+- 1st Company Task Force, Gladius Task Force, Stormlance Task Force, Blade of Ultramar, Hammer of Avernii, Armoured Speartip, Spearpoint Task Force, Ceramite Sentinels, Emperor's Shield, Vanguard Spearhead, Librarius Conclave, Forgefather's Seekers, Headhunter Task Force, Fulguris Task Force, Bastion Task Force, Subversion Assets, Shadowmark Talon, Assault Force, Orbital Assault Force, Anvil Siege Force, Reclamation Force, Firestorm Assault Force, Ironstorm Spearhead (detachment): added with 94 stratagems and 83 enhancements
+- "Oath of Moment" (army rule): added
+- "Space Marine Chapters" (army rule): added
+
+**Blood Angels**
+- Astorath: added
+- Baal Predator: added
+- Blood Angels Captain: added
+- Chief Librarian Mephiston: added
+- Commander Dante: added
+- Death Company Captain: added
+- Death Company Captain with Jump Pack: added
+- Death Company Dreadnought: added
+- Death Company Marines: added
+- Death Company Marines with Bolt Rifles: added
+- Death Company Marines with Jump Packs: added
+- Lemartes: added
+- Sanguinary Guard: added
+- Sanguinary Priest: added
+- The Sanguinor: added
+- The Lost Brethren, Angelic Inheritors, Sanguinary Spearhead, Liberator Assault Group, Legacy of Grace, The Angelic Host, Rage-cursed Onslaught, Wrath of the Doomed, Encarmine Speartip (detachment): added with 38 stratagems and 28 enhancements
+- "Oath of Moment" (army rule): added
+- "Space Marine Chapters" (army rule): added
+- "The Sons of Sanguinius" (army rule): added
+
+**Black Templars**
+- Castellan: added
+- Chaplain Grimaldus: added
+- Crusade Ancient: added
+- Crusader Squad: added
+- Emperor's Champion: added
+- Execrator: added
+- Gladiator Lancer: added
+- Gladiator Reaper: added
+- Gladiator Valiant: added
+- High Marshal Helbrecht: added
+- Impulsor: added
+- Land Raider Crusader: added
+- Marshal: added
+- Repulsor: added
+- Repulsor Executioner: added
+- Sternguard Veteran Squad: added
+- Sword Brethren Squad: added
+- Terminator Squad: added
+- The Living Miracle, Companions of Vehemence, Wrathful Procession, Vindication Task Force, Marshal's Household, Godhammer Assault Force, Vow-Sworn of Vedrenn (detachment): added with 27 stratagems and 19 enhancements
+- "Templar Vows" (army rule): added
+- "Space Marine Chapters" (army rule): added
+- "Heirs of Sigismund" (army rule): added
+
+**Space Wolves**
+- Arjac Rockfist: added
+- Bjorn the Fell-Handed: added
+- Blood Claws: added
+- Fenrisian Wolves: added
+- Grey Hunters: added
+- Iron Priest: added
+- Logan Grimnar: added
+- Murderfang: added
+- Njal Stormcaller: added
+- Ragnar Blackmane: added
+- Thunderwolf Cavalry: added
+- Ulrik the Slayer: added
+- Venerable Dreadnought: added
+- Wolf Guard Battle Leader: added
+- Wolf Guard Headtakers: added
+- Wolf Guard Terminators: added
+- Wolf Priest: added
+- Wolf Scouts: added
+- Wulfen: added
+- Wulfen Dreadnought: added
+- Wulfen with Storm Shields: added
+- Legends of Saga and Song, Saga of the Beastslayer, Veterans of the Fang, Askar's Wolfpack, Saga of the Hunter, Champions of Fenris, Saga of the Great Wolf, Saga of the Bold (detachment): added with 35 stratagems and 23 enhancements
+- "Oath of Moment" (army rule): added
+- "Curse of the Wulfen" (army rule): added
+- "Sagas" (army rule): added
+- "Sons of Russ" (army rule): added
+
+**Deathwatch**
+- Corvus Blackstar: added
+- Deathwatch Terminator Squad: added
+- Deathwatch Veterans: added
+- Decimus Kill Team: added
+- Fortis Kill Team: added
+- Indomitor Kill Team: added
+- Spectrus Kill Team: added
+- Talonstrike Kill Team: added
+- Watch Captain Artemis: added
+- Watch Master: added
+- Black Spear Task Force (detachment): added with 6 stratagems and 4 enhancements
+- "Kill Teams" (army rule): added
+- "Oath of Moment" (army rule): added
+- "Space Marine Chapters" (army rule): added
+
+**Thousand Sons**
+- Ahriman: added
+- Chaos Land Raider: added
+- Chaos Predator Annihilator: added
+- Chaos Predator Destructor: added
+- Chaos Rhino: added
+- Chaos Spawn: added
+- Chaos Vindicator: added
+- Daemon Prince of Tzeentch: added
+- Daemon Prince of Tzeentch with Wings: added
+- Defiler: added
+- Exalted Sorcerer: added
+- Exalted Sorcerer on Disc of Tzeentch: added
+- Forgefiend: added
+- Helbrute: added
+- Heldrake: added
+- Infernal Master: added
+- Magnus the Red: added
+- Maulerfiend: added
+- Mutalith Vortex Beast: added
+- Rubric Marines: added
+- Scarab Occult Terminators: added
+- Sekhetar Robots: added
+- Sorcerer: added
+- Sorcerer in Terminator Armour: added
+- Tzaangor Enlightened: added
+- Tzaangor Enlightened with Fatecaster Greatbows: added
+- Tzaangor Shaman: added
+- Tzaangors: added
+- Changehost of Deceit, Servants of Change, Prism of Zadophon, Ritual of Regeneration, Sekhetar Cohort, Warpforged Cabal, Hexwarp Thrallband, Grand Coven, Warpmeld Pact, Rubricae Phalanx (detachment): added with 46 stratagems and 31 enhancements
+- "Cabal of Sorcerers" (army rule): added
+- "Pact of Sorcery" (army rule): added
+
+**World Eaters**
+- Angron: added
+- Chaos Land Raider: added
+- Chaos Predator Annihilator: added
+- Chaos Predator Destructor: added
+- Chaos Rhino: added
+- Chaos Spawn: added
+- Chaos Terminators: added
+- Daemon Prince of Khorne: added
+- Daemon Prince of Khorne with Wings: added
+- Defiler: added
+- Eightbound: added
+- Exalted Eightbound: added
+- Forgefiend: added
+- Goremongers: added
+- Helbrute: added
+- Heldrake: added
+- Jakhals: added
+- Khârn the Betrayer: added
+- Khorne Berzerkers: added
+- Khorne Lord of Skulls: added
+- Lord Invocatus: added
+- Lord on Juggernaut: added
+- Master of Executions: added
+- Maulerfiend: added
+- Slaughterbound: added
+- Berzerker Warband, Possessed Slaughterband, Butchers of Khorne, Khorne Daemonkin, Cult of Blood, Frenzied Reavers, Goretrack Onslaught, Brazen Engines, Vessels of Wrath (detachment): added with 41 stratagems and 27 enhancements
+- "Blessings of Khorne" (army rule): added
+
+**Heretic Astartes**
+- Abaddon the Despoiler: added
+- Accursed Cultists: added
+- Chaos Bikers: added
+- Chaos Land Raider: added
+- Chaos Lord: added
+- Chaos Lord in Terminator Armour: added
+- Chaos Lord with Jump Pack: added
+- Chaos Predator Annihilator: added
+- Chaos Predator Destructor: added
+- Chaos Rhino: added
+- Chaos Spawn: added
+- Chaos Terminator Squad: added
+- Chaos Vindicator: added
+- Chosen: added
+- Cultist Firebrand: added
+- Cultist Mob: added
+- Cypher: added
+- Dark Apostle: added
+- Dark Commune: added
+- Defiler: added
+- Fabius Bile: added
+- Fellgor Beastmen: added
+- Forgefiend: added
+- Haarken Worldclaimer: added
+- Havocs: added
+- Helbrute: added
+- Heldrake: added
+- Heretic Astartes Daemon Prince: added
+- Heretic Astartes Daemon Prince with Wings: added
+- Huron Blackheart: added
+- Khorne Lord of Skulls: added
+- Kravek Morne: added
+- Legionaries: added
+- Lord Discordant on Helstalker: added
+- Master of Executions: added
+- Master of Possession: added
+- Masters of the Maelstrom: added
+- Maulerfiend: added
+- Mutilators: added
+- Nemesis Claw: added
+- Noctilith Crown: added
+- Obliterators: added
+- Possessed: added
+- Raptors: added
+- Red Corsairs Raiders: added
+- Red Corsairs Reave-Captain: added
+- Sorcerer: added
+- Sorcerer in Terminator Armour: added
+- Traitor Enforcer: added
+- Traitor Guardsmen Squad: added
+- Vashtorr the Arkifane: added
+- Venomcrawler: added
+- Warp Talons: added
+- Warpsmith: added
+- Huron's Marauders, Renegade Raiders, Fellhammer Siege-host, Deceptors, Murdertalon Raiders, Devotees of Destruction, Soulforged Warpack, Renegade Warband, Dread Talons, Chaos Cult, Veterans of the Long War, Nightmare Hunt, Warpstrike Champions, Pactbound Zealots, Cult of the Arkifane, Cabal of Chaos, Creations of Bile, Zarkan's Daemonkin (detachment): added with 89 stratagems and 64 enhancements
+- "Dark Pacts" (army rule): added
+- "Cults of the Dark Gods" (army rule): added
+
+**Legiones Daemonica**
+- Be'lakor: added
+- Beasts of Nurgle: added
+- Bloodcrushers: added
+- Bloodletters: added
+- Bloodmaster: added
+- Bloodthirster: added
+- Blue Horrors: added
+- Burning Chariot: added
+- Changecaster: added
+- Contorted Epitome: added
+- Daemon Prince of Chaos: added
+- Daemon Prince of Chaos with Wings: added
+- Daemonettes: added
+- Epidemius: added
+- Exalted Flamer: added
+- Fateskimmer: added
+- Feculent Gnarlmaw: added
+- Fiends: added
+- Flamers: added
+- Flesh Hounds: added
+- Fluxmaster: added
+- Great Unclean One: added
+- Hellflayers: added
+- Horticulous Slimux: added
+- Infernal Enrapturess: added
+- Kairos Fateweaver: added
+- Karanak: added
+- Keeper of Secrets: added
+- Lord of Change: added
+- Nurglings: added
+- Pink Horrors: added
+- Plague Drones: added
+- Plaguebearers: added
+- Poxbringer: added
+- Rendmaster on Blood Throne: added
+- Rotigus: added
+- Screamers: added
+- Seekers: added
+- Shalaxi Helbane: added
+- Skarbrand: added
+- Skull Altar: added
+- Skull Cannon: added
+- Skullmaster: added
+- Skulltaker: added
+- Sloppity Bilepiper: added
+- Soul Grinder: added
+- Spoilpox Scrivener: added
+- Syll'Esske: added
+- The Blue Scribes: added
+- The Changeling: added
+- The Masque of Slaanesh: added
+- Tormentbringer: added
+- Tranceweaver: added
+- Blood Legion, Daemonic Incursion, Plague Legion, Shadow Legion, Cavalcade of Chaos, Warptide, Scintillating Legion, Legion of Excess, Lords of the Warp (detachment): added with 43 stratagems and 28 enhancements
+- "The Shadow of Chaos" (army rule): added
+- "Daemonic Pact" (army rule): added
+
+**Chaos Knights**
+- Chaos Acastus Knight Asterius: added
+- Chaos Acastus Knight Porphyrion: added
+- Chaos Cerastus Knight Acheron: added
+- Chaos Cerastus Knight Atrapos: added
+- Chaos Cerastus Knight Castigator: added
+- Chaos Cerastus Knight Lancer: added
+- Chaos Questoris Knight Magaera: added
+- Chaos Questoris Knight Styrix: added
+- Knight Abominant: added
+- Knight Desecrator: added
+- Knight Despoiler: added
+- Knight Rampager: added
+- Knight Ruinator: added
+- Knight Tyrant: added
+- War Dog Brigand: added
+- War Dog Executioner: added
+- War Dog Huntsman: added
+- War Dog Karnivore: added
+- War Dog Moirax: added
+- War Dog Stalker: added
+- Lords of Dread, Infernal Lance, Bastions of Tyranny, Helhunt Lance, Houndpack Lance, Traitoris Lance, Iconoclast Fiefdom, Hunting Warpack (detachment): added with 38 stratagems and 28 enhancements
+- "Harbingers of Dread" (army rule): added
+- "Super-heavy Walker" (army rule): added
+- "Dreadblades" (army rule): added
+
+**Astra Militarum**
+- Aegis Defence Line: added
+- Armoured Sentinels: added
+- Artillery Team: added
+- Attilan Rough Riders: added
+- Avenger Strike Fighter: added
+- Baneblade: added
+- Banehammer: added
+- Banesword: added
+- Basilisk: added
+- Bullgryn Squad: added
+- Cadian Castellan: added
+- Cadian Command Squad: added
+- Cadian Heavy Weapons Squad: added
+- Cadian Recon Squad: added
+- Cadian Shock Troops: added
+- Catachan Command Squad: added
+- Catachan Heavy Weapons Squad: added
+- Catachan Jungle Fighters: added
+- Centaur RSV: added
+- Chimera: added
+- Commissar: added
+- Commissar Graves: added
+- Commissar Graves on Foot: added
+- Commissar Yarrick: added
+- Cyclops Demolition Vehicle: added
+- Death Korps of Krieg: added
+- Death Riders: added
+- Deathstrike: added
+- Doomhammer: added
+- Field Ordnance Battery: added
+- Gaunt's Ghosts: added
+- Hellhammer: added
+- Hellhound: added
+- Hippogriff AFV: added
+- Hydra: added
+- Kasrkin: added
+- Krieg Combat Engineers: added
+- Krieg Command Squad: added
+- Krieg Heavy Weapons Squad: added
+- Leman Russ Battle Tank: added
+- Leman Russ Commander: added
+- Leman Russ Demolisher: added
+- Leman Russ Eradicator: added
+- Leman Russ Executioner: added
+- Leman Russ Exterminator: added
+- Leman Russ Punisher: added
+- Leman Russ Vanquisher: added
+- Lord Marshal Dreir: added
+- Lord Solar Leontus: added
+- Manticore: added
+- Militarum Tempestus Command Squad: added
+- Ministorum Priest: added
+- Nork Deddog: added
+- Ogryn Bodyguard: added
+- Ogryn Squad: added
+- Primaris Psyker: added
+- Ratlings: added
+- Rogal Dorn Battle Tank: added
+- Rogal Dorn Commander: added
+- Scout Sentinels: added
+- Shadowsword: added
+- Sly Marbo: added
+- Stormlord: added
+- Stormsword: added
+- Taurox: added
+- Taurox Prime: added
+- Tech-Priest Enginseer: added
+- Tempestus Aquilons: added
+- Tempestus Scions: added
+- Ursula Creed: added
+- Valkyrie: added
+- Wyvern: added
+- Drayden's Lance, Armoured Infantry, Recon Element, Hammer of the Emperor, Steel Hammer, Combined Arms, Abhuman Auxiliaries, Designation Force, Grizzled Company, Bridgehead Strike, Mechanised Assault, Siege Regiment (detachment): added with 58 stratagems and 39 enhancements
+- "Voice of Command" (army rule): added
+
+**Imperial Knights**
+- Acastus Knight Asterius: added
+- Acastus Knight Porphyrion: added
+- Armiger Helverin: added
+- Armiger Moirax: added
+- Armiger Warglaive: added
+- Canis Rex: added
+- Cerastus Knight Acheron: added
+- Cerastus Knight Atrapos: added
+- Cerastus Knight Castigator: added
+- Cerastus Knight Lancer: added
+- Knight Castellan: added
+- Knight Crusader: added
+- Knight Defender: added
+- Knight Destrier: added
+- Knight Errant: added
+- Knight Gallant: added
+- Knight Paladin: added
+- Knight Preceptor: added
+- Knight Valiant: added
+- Knight Warden: added
+- Questoris Knight Magaera: added
+- Questoris Knight Styrix: added
+- Sir Hekhtur: added
+- Valourstrike Lance, Questor Forgepact, Gate Warden Lance, Spearhead-at-Arms, Questoris Companions, Throne-bonded Outriders, Dominus Foebreakers, Freeblade Company (detachment): added with 37 stratagems and 26 enhancements
+- "Code Chivalric" (army rule): added
+- "Bondsman" (army rule): added
+- "Super-heavy Walker" (army rule): added
+- "Freeblades" (army rule): added
+
+**Grey Knights**
+- Brother-Captain: added
+- Brotherhood Champion: added
+- Brotherhood Chaplain: added
+- Brotherhood Librarian: added
+- Brotherhood Techmarine: added
+- Brotherhood Terminator Squad: added
+- Castellan Crowe: added
+- Grand Master: added
+- Grand Master in Nemesis Dreadknight: added
+- Grand Master Voldus: added
+- Grey Knights Thunderhawk Gunship: added
+- Interceptor Squad: added
+- Land Raider: added
+- Land Raider Crusader: added
+- Land Raider Redeemer: added
+- Nemesis Dreadknight: added
+- Paladin Squad: added
+- Purgation Squad: added
+- Purifier Squad: added
+- Razorback: added
+- Rhino: added
+- Stormhawk Interceptor: added
+- Stormraven Gunship: added
+- Stormtalon Gunship: added
+- Strike Squad: added
+- Venerable Dreadnought: added
+- Augurium Task Force, Fires of Purgation, Banishers, Immaterial Interdiction, Warpbane Task Force, Brotherhood Strike, Hallowed Conclave, Crowe's Sanctifiers, Argent Assault, Sanctic Spearhead (detachment): added with 46 stratagems and 31 enhancements
+- "Gate of Infinity" (army rule): added
+
+**Adepta Sororitas**
+- Aestred Thurga and Agathae Dolan: added
+- Arco-flagellants: added
+- Battle Sisters Squad: added
+- Canoness: added
+- Canoness with Jump Pack: added
+- Castigator: added
+- Celestian Insidiants: added
+- Celestian Sacresants: added
+- Daemonifuge: added
+- Dialogus: added
+- Dogmata: added
+- Dominion Squad: added
+- Exorcist: added
+- Hospitaller: added
+- Imagifier: added
+- Immolator: added
+- Intranzia Fraye: added
+- Junith Eruita: added
+- Ministorum Priest: added
+- Mortifiers: added
+- Morvenn Vahl: added
+- Palatine: added
+- Paragon Warsuits: added
+- Penitent Engines: added
+- Repentia Squad: added
+- Retributor Squad: added
+- Saint Celestine: added
+- Sanctifiers: added
+- Seraphim Squad: added
+- Sisters Novitiate Squad: added
+- Sororitas Rhino: added
+- Triumph of Saint Katherine: added
+- Zephyrim Squad: added
+- Penitent Host, Hallowed Martyrs, Chorus of Condemnation, Sanctified Orators, Sanctuary Guardians, Bringers of Flame, Champions of Faith, Sacred Champions, Army of Faith (detachment): added with 37 stratagems and 27 enhancements
+- "Acts of Faith" (army rule): added
+
+**Adeptus Mechanicus**
+- Archaeopter Fusilave: added
+- Archaeopter Stratoraptor: added
+- Archaeopter Transvector: added
+- Belisarius Cawl: added
+- Corpuscarii Electro-Priests: added
+- Cybernetica Datasmith: added
+- Fulgurite Electro-Priests: added
+- Hastarii Exterminators: added
+- Hastarii Fusiliers: added
+- Ironstrider Ballistarii: added
+- Kastelan Robots: added
+- Kataphron Breachers: added
+- Kataphron Destroyers: added
+- Onager Dunecrawler: added
+- Pteraxii Skystalkers: added
+- Pteraxii Sterylizors: added
+- Serberys Raiders: added
+- Serberys Sulphurhounds: added
+- Servitor Battleclade: added
+- Sicarian Infiltrators: added
+- Sicarian Ruststalkers: added
+- Skitarii Marshal: added
+- Skitarii Rangers: added
+- Skitarii Vanguard: added
+- Skorpius Disintegrator: added
+- Skorpius Dunerider: added
+- Sydonian Dragoons with Radium Jezzails: added
+- Sydonian Dragoons with Taser Lances: added
+- Sydonian Skatros: added
+- Tech-Priest Dominus: added
+- Tech-Priest Enginseer: added
+- Tech-Priest Manipulus: added
+- Technoarcheologist: added
+- Thulia Ghuld: added
+- Purge Corps Deltic-9, Haloscreed Battle Clade, Luminen Auto-Choir, Lords of the Forge, Cohort Cybernetica, Skitarii Hunter Cohort, Data-psalm Conclave, Cohort Acquisitus, Explorator Maniple, Rad-Zone Corps, Eradication Cohort (detachment): added with 52 stratagems and 35 enhancements
+- "Doctrina Imperatives" (army rule): added
+
+**Adeptus Custodes**
+- Agamatus Custodians: added
+- Aleya: added
+- Allarus Custodians: added
+- Anathema Psykana Rhino: added
+- Aquilon Custodians: added
+- Ares Gunship: added
+- Blade Champion: added
+- Caladius Grav-tank: added
+- Contemptor-Achillus Dreadnought: added
+- Contemptor-Galatus Dreadnought: added
+- Coronus Grav-carrier: added
+- Custodian Guard: added
+- Custodian Guard with Adrasite and Pyrithite Spears: added
+- Custodian Wardens: added
+- Knight-Centura: added
+- Orion Assault Dropship: added
+- Pallas Grav-attack: added
+- Prosecutors: added
+- Sagittarum Custodians: added
+- Shield-Captain: added
+- Shield-Captain in Allarus Terminator Armour: added
+- Shield-Captain on Dawneagle Jetbike: added
+- Telemon Heavy Dreadnought: added
+- Trajann Valoris: added
+- Valerian: added
+- Venatari Custodians: added
+- Venerable Contemptor Dreadnought: added
+- Venerable Land Raider: added
+- Vertus Praetors: added
+- Vigilators: added
+- Witchseekers: added
+- Lions of the Emperor, Auric Champions, Solar Spearhead, Might of the Moritoi, Silent Hunters, Shield Host, Tharanatoi Hammerblow, Tristraen's Gilded Blades, Null Maiden Vigil, Talons of the Emperor (detachment): added with 44 stratagems and 32 enhancements
+- "Martial Ka'tah" (army rule): added
+
+**Agents of the Imperium**
+- Aquila Kill Team: added
+- Callidus Assassin: added
+- Corvus Blackstar: added
+- Culexus Assassin: added
+- Deathwatch Kill Team: added
+- Eversor Assassin: added
+- Exaction Squad: added
+- Grey Knights Terminator Squad: added
+- Imperial Navy Breachers: added
+- Imperial Rhino: added
+- Inquisitor: added
+- Inquisitor Coteaz: added
+- Inquisitor Draxus: added
+- Inquisitor Greyfax: added
+- Inquisitor Kroyle: added
+- Inquisitorial Agents: added
+- Inquisitorial Chimera: added
+- Ministorum Priest: added
+- Navigator: added
+- Rogue Trader Entourage: added
+- Sanctifiers: added
+- Sisters of Battle Immolator: added
+- Sisters of Battle Squad: added
+- Subductor Squad: added
+- Vigilant Squad: added
+- Vindicare Assassin: added
+- Voidsmen-at-Arms: added
+- Watch Captain Artemis: added
+- Watch Master: added
+- Imperialis Fleet, Ordo Hereticus Purgation Force, Inquisitor's Hand, Veiled Blade Elimination Force, Ordo Xenos Alien Hunters, Ordo Malleus Daemon Hunters (detachment): added with 32 stratagems and 22 enhancements
+- "Assigned Agents" (army rule): added
+
+**Orks**
+- Bannernob: added
+- Battlewagon: added
+- Beast Snagga Boyz: added
+- Beastboss: added
+- Beastboss on Squigosaur: added
+- Big Mek: added
+- Big Mek Dakkarig: added
+- Big Mek in Mega Armour: added
+- Big Mek with Shokk Attack Gun: added
+- Big'ed Bossbunka: added
+- Bigboss: added
+- Blitza-bommer: added
+- Boomdakka Snazzwagon: added
+- Boss Snikrot: added
+- Boyz: added
+- Breaka Boyz: added
+- Burna Boyz: added
+- Burna-bommer: added
+- Dakkajet: added
+- Deff Dread: added
+- Deffkilla Wartrike: added
+- Deffkoptas: added
+- Flash Gitz: added
+- Gargantuan Squiggoth: added
+- Ghazghkull Thraka: added
+- Gorkanaut: added
+- Gretchin: added
+- Hunta Rig: added
+- Kill Rig: added
+- Killa Kans: added
+- Kommandos: added
+- Kustom Boosta-blasta: added
+- Lootas: added
+- Meganobz: added
+- Megatrakk Scrapjet: added
+- Mek: added
+- Mek Gunz: added
+- Morkanaut: added
+- Mozrog Skragbad: added
+- Nobz: added
+- Painboss: added
+- Painboy: added
+- Rukkatrukk Squigbuggy: added
+- Shokkjump Dragsta: added
+- Squighog Boyz: added
+- Stompa: added
+- Stormboyz: added
+- Tankbustas: added
+- Trukk: added
+- Warbikers: added
+- Warboss: added
+- Warboss in Mega Armour: added
+- Wartrakk: added
+- Wazbom Blastajet: added
+- Wazdakka Gutsmek: added
+- Weirdboy: added
+- Wurrboy: added
+- Zodgrod Wortsnagga: added
+- Blitz Brigade, Kult of Speed, Da Big Hunt, Dread Mob, Taktikal Brigade, War Horde, More Dakka!, Speedwaaagh!, Bully Boyz, Green Tide, Freebooter Krew, Rollin' Deff, 'Ardmob (detachment): added with 63 stratagems and 44 enhancements
+- "Waaagh!" (army rule): added
+
+**Leagues of Votann**
+- Arkanyst Evaluator: added
+- Berehk Stornbröw: added
+- Brôkhyr Iron-master: added
+- Brôkhyr Thunderkyn: added
+- Buri Aegnirssen: added
+- Cthonian Beserks: added
+- Cthonian Earthshakers: added
+- Einhyr Champion: added
+- Einhyr Hearthguard: added
+- Grimnyr: added
+- Hearthkyn Warriors: added
+- Hekaton Land Fortress: added
+- Hernkyn Pioneers: added
+- Hernkyn Yaegirs: added
+- Ironkin Steeljacks with Heavy Volkanite Disintegrators: added
+- Ironkin Steeljacks with Melee Weapons: added
+- Kâhl: added
+- Kapricus Carrier: added
+- Kapricus Defenders: added
+- Memnyr Strategist: added
+- Sagitaur: added
+- Ûthar the Destined: added
+- Hearthfyre Arsenal, Persecution Prospect, Needgaârd Oathband, Dêlve Assault Shift, Farseekers, Hearthband, Hearthguard Covenant, Armoured Trailblazers, Mercenary Oathband, Brandfast Oathband, Bane-slayer's Bulwark (detachment): added with 49 stratagems and 33 enhancements
+- "Prioritised Efficiency" (army rule): added
+
+**T'au Empire**
+- AX-1-0 Tiger Shark: added
+- Breacher Team: added
+- Broadside Battlesuits: added
+- Cadre Fireblade: added
+- Commander Farsight: added
+- Commander in Coldstar Battlesuit: added
+- Commander in Enforcer Battlesuit: added
+- Commander Shadowsun: added
+- Crisis Fireknife Battlesuits: added
+- Crisis Starscythe Battlesuits: added
+- Crisis Sunforge Battlesuits: added
+- Darkstrider: added
+- Devilfish: added
+- Ethereal: added
+- Firesight Team: added
+- Ghostkeel Battlesuit: added
+- Hammerhead Gunship: added
+- Kroot Carnivores: added
+- Kroot Farstalkers: added
+- Kroot Flesh Shaper: added
+- Kroot Hounds: added
+- Kroot Lone-spear: added
+- Kroot Trail Shaper: added
+- Kroot War Shaper: added
+- Krootox Rampagers: added
+- Krootox Riders: added
+- Manta: added
+- Pathfinder Team: added
+- Piranhas: added
+- Razorshark Strike Fighter: added
+- Riptide Battlesuit: added
+- Sky Ray Gunship: added
+- Stealth Battlesuits: added
+- Stormsurge: added
+- Strike Team: added
+- Sun Shark Bomber: added
+- Ta'unar Supremacy Armour: added
+- The Twin Lance: added
+- Tidewall Droneport: added
+- Tidewall Gunrig: added
+- Tidewall Shieldline: added
+- Tiger Shark: added
+- Vespid Stingwings: added
+- Retaliation Cadre, Mont'ka, Sudden Dawn Cadre, Auxiliary Cadre, Kroot Hunting Pack, Advanced Acquisition Cadre, Experimental Prototype Cadre, Kauyon (detachment): added with 34 stratagems and 25 enhancements
+- "Drones" (army rule): added
+- "For the Greater Good" (army rule): added
+
+**Necrons**
+- Annihilation Barge: added
+- C'tan Shard of the Deceiver: added
+- C'tan Shard of the Nightbringer: added
+- C'tan Shard of the Void Dragon: added
+- Canoptek Doomstalker: added
+- Canoptek Macrocytes: added
+- Canoptek Reanimator: added
+- Canoptek Scarab Swarms: added
+- Canoptek Spyders: added
+- Canoptek Tomb Crawlers: added
+- Canoptek Wraiths: added
+- Catacomb Command Barge: added
+- Chronomancer: added
+- Convergence of Dominion: added
+- Cryptothralls: added
+- Deathmarks: added
+- Doom Scythe: added
+- Doomsday Ark: added
+- Flayed Ones: added
+- Geomancer: added
+- Ghost Ark: added
+- Hexmark Destroyer: added
+- Illuminor Szeras: added
+- Immortals: added
+- Imotekh the Stormlord: added
+- Lokhust Destroyers: added
+- Lokhust Heavy Destroyers: added
+- Lokhust Lord: added
+- Lychguard: added
+- Monolith: added
+- Necron Warriors: added
+- Nekrosor Ammentar: added
+- Night Scythe: added
+- Obelisk: added
+- Ophydian Destroyers: added
+- Orikan the Diviner: added
+- Overlord: added
+- Overlord with Translocation Shroud: added
+- Plasmancer: added
+- Psychomancer: added
+- Royal Warden: added
+- Seraptek Heavy Construct: added
+- Skorpekh Destroyers: added
+- Skorpekh Lord: added
+- Technomancer: added
+- Tesseract Vault: added
+- The Silent King: added
+- Tomb Blades: added
+- Transcendent C'tan: added
+- Trazyn the Infinite: added
+- Triarch Praetorians: added
+- Triarch Stalker: added
+- Cryptek Conclave, Starshatter Arsenal, The Phaeron's Armoury, Amonhotekh's Guard, Cursed Legion, Annihilation Legion, Hypercrypt Legion, Hand of the Dynasty, Pantheon of Woe, Skyshroud Spearhead, Obeisance Phalanx, Canoptek Court, Awakened Dynasty (detachment): added with 63 stratagems and 44 enhancements
+- "Reanimation Protocols" (army rule): added
+
+**Asuryani**
+- Asurmen: added
+- Autarch: added
+- Autarch Wayleaper: added
+- Avatar of Khaine: added
+- Baharroth: added
+- Corsair Skyreavers: added
+- Corsair Voidreavers: added
+- Corsair Voidscarred: added
+- Crimson Hunter: added
+- D-cannon Platform: added
+- Dark Reapers: added
+- Death Jester: added
+- Dire Avengers: added
+- Eldrad Ulthran: added
+- Falcon: added
+- Farseer: added
+- Farseer Skyrunner: added
+- Fire Dragons: added
+- Fire Prism: added
+- Fuegan: added
+- Guardian Defenders: added
+- Hemlock Wraithfighter: added
+- Howling Banshees: added
+- Jain Zar: added
+- Kharseth: added
+- Lhykhis: added
+- Maugan Ra: added
+- Night Spinner: added
+- Phantom Titan: added
+- Prince Yriel: added
+- Rangers: added
+- Revenant Titan: added
+- Shadow Weaver Platform: added
+- Shadowseer: added
+- Shining Spears: added
+- Shroud Runners: added
+- Skyweavers: added
+- Solitaire: added
+- Spiritseer: added
+- Starfangs: added
+- Starweaver: added
+- Storm Guardians: added
+- Striking Scorpions: added
+- Swooping Hawks: added
+- The Visarch: added
+- The Yncarne: added
+- Troupe: added
+- Troupe Master: added
+- Vibro Cannon Platform: added
+- Voidweaver: added
+- Vyper: added
+- War Walkers: added
+- Warlock: added
+- Warlock Conclave: added
+- Warlock Skyrunners: added
+- Warp Spiders: added
+- Wave Serpent: added
+- Windriders: added
+- Wraithblades: added
+- Wraithguard: added
+- Wraithknight: added
+- Wraithknight with Ghostglaive: added
+- Wraithlord: added
+- Ynnari Archon: added
+- Ynnari Incubi: added
+- Ynnari Kabalite Warriors: added
+- Ynnari Raider: added
+- Ynnari Reavers: added
+- Ynnari Succubus: added
+- Ynnari Venom: added
+- Ynnari Wyches: added
+- Yvraine: added
+- Ghosts of the Webway, Windrider Host, Serpent's Brood, Fateful Performance, Spirit Conclave, Twilight Flickers, Devoted of Ynnead, Guardian Battlehost, Corsair Coterie, Eldritch Raiders, Path of the Outcast, Armoured Warhost, Seer Council, Warhost, Aspect Host (detachment): added with 66 stratagems and 48 enhancements
+- "Battle Focus" (army rule): added
+
+**Drukhari**
+- Archon: added
+- Cronos: added
+- Drazhar: added
+- Haemonculus: added
+- Hand of the Archon: added
+- Hellions: added
+- Incubi: added
+- Kabalite Warriors: added
+- Lady Malys: added
+- Lelith Hesperax: added
+- Mandrakes: added
+- Raider: added
+- Ravager: added
+- Razorwing Jetfighter: added
+- Reavers: added
+- Scourges with Heavy Weapons: added
+- Scourges with Shardcarbines: added
+- Succubus: added
+- Talos: added
+- Venom: added
+- Voidraven Bomber: added
+- Wracks: added
+- Wyches: added
+- Spectacle of Spite, Kabalite Agonysts, Coven of Agonies, Kabalite Cartel, Skysplinter Assault, Reaper's Wager, Realspace Raiders, Tools of Torment, Covenite Coterie, Exhibition of Slaughter (detachment): added with 44 stratagems and 29 enhancements
+- "Power From Pain" (army rule): added
+- "Corsairs and Travelling Players" (army rule): added
+
+**Genestealer Cults**
+- Aberrants: added
+- Abominant: added
+- Achilles Ridgerunners: added
+- Acolyte Hybrids with Autopistols: added
+- Acolyte Hybrids with Hand Flamers: added
+- Acolyte Iconward: added
+- Atalan Jackals: added
+- Benefictus: added
+- Biophagus: added
+- Clamavus: added
+- Goliath Rockgrinder: added
+- Goliath Truck: added
+- Hybrid Metamorphs: added
+- Jackal Alphus: added
+- Kelermorph: added
+- Locus: added
+- Magus: added
+- Neophyte Hybrids: added
+- Nexos: added
+- Patriarch: added
+- Primus: added
+- Purestrain Genestealers: added
+- Reductus Saboteur: added
+- Sanctus: added
+- Brood Brothers Auxilia, Purestrain Broodswarm, Biosanctic Broodsurge, Outlander Claw, Final Day, Xenocreed Congregation, Claw of Ascension, Heroes of the Uprising, Xenocult Masses, Host of Ascension (detachment): added with 47 stratagems and 31 enhancements
+- "Cult Ambush" (army rule): added
+
+**Emperor's Children**
+- Chaos Land Raider: added
+- Chaos Rhino: added
+- Chaos Spawn: added
+- Chaos Terminators: added
+- Daemon Prince of Slaanesh: added
+- Daemon Prince of Slaanesh with Wings: added
+- Defiler: added
+- Flawless Blades: added
+- Fulgrim: added
+- Heldrake: added
+- Infractors: added
+- Lord Exultant: added
+- Lord Kakophonist: added
+- Lucius the Eternal: added
+- Maulerfiend: added
+- Noise Marines: added
+- Sorcerer: added
+- Tormentors: added
+- Slaanesh's Chosen, Frenzied Host, Spectacle of Slaughter, Carnival of Excess, Callous Blades, Elegant Brutes, Peerless Bladesmen, Rapid Evisceration, Mercurial Host, Court of the Phoenician, Coterie of the Conceited (detachment): added with 52 stratagems and 36 enhancements
+- "Thrill Seekers" (army rule): added
+- "Pact of Excess" (army rule): added
+
+**Adeptus Titanicus**
+- Reaver Titan: added
+- Warbringer Nemesis Titan: added
+- Warhound Titan: added
+- Warlord Titan: added
