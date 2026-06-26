@@ -1,5 +1,12 @@
-Internal keyword updates to enhancements across 18 factions
+Combat Patrol datasheets and detachments added for 24 factions
 
-Internal keyword tagging changes to 21 enhancements across 18 factions. Enhancement keywords were reorganized — typically replacing detachment/unit-specific keywords with faction-level keywords. No rules text, points, stats, or gameplay effects were changed.
+Combat Patrol content has been moved from main faction entries into dedicated Combat Patrol entries across 23 factions, each with new Combat Patrol-specific datasheets.
 
-Affected factions: Adepta Sororitas, Adeptus Custodes, Adeptus Mechanicus, Agents of the Imperium, Astra Militarum, Black Templars, Blood Angels, Dark Angels, Drukhari, Emperor's Children, Genestealer Cults, Heretic Astartes, Leagues of Votann, Necrons, Space Wolves, T'au Empire, Tyranids, World Eaters
+**23 Factions Updated**
+Dark Angels, Death Guard, Tyranids, Adeptus Astartes, Blood Angels, Black Templars, Space Wolves, Thousand Sons, World Eaters, Heretic Astartes, Astra Militarum, Grey Knights, Adepta Sororitas, Adeptus Mechanicus, Adeptus Custodes, Agents of the Imperium, Orks, Leagues of Votann, T'au Empire, Necrons, Drukhari, Genestealer Cults, Emperor's Children
+- Each main faction: removed 1 Combat Patrol detachment with 3 stratagems and 2 enhancements
+- Each Combat Patrol entry: added the detachment with 3 stratagems, 2 enhancements, and 3-5 new datasheets
+- ~98 new Combat Patrol datasheets added in total
+
+**Asuryani (Combat Patrol)**
+- added 4 new datasheets
