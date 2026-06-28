@@ -8,7 +8,7 @@
     "banner": "#2a2a1a",
     "header": "#2a2a1a"
   },
-  "updated": "2026-06-17T10:06:25.481Z",
+  "updated": "2026-06-28T12:32:35.048Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -4958,6 +4958,514 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "6ee9ad44-4414-5356-b858-ec6d471d6bcf",
+      "name": "Da King's Gitz",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "GLOOMSPITE_GITZ",
+      "parentFaction": "Gloomspite Gitz",
+      "isLegends": false,
+      "lore": "By far the most successful Loonboss to have lived is Skragrott. This cunning wizard bears a fungal crown whose roots burrow into his brain, and a rare, crescent-shaped Bossfungus caps his staff – a clear sign of the Bad Moon’s favour. Though his followers are many, his closest allies are the skraps known as the King’s Gitz. These loyal Moonclanners enabled Skragrott to conquer Skrappa Spill, his personal gloomy paradise in the Realm of Metal. Emboldened by the centuries of success enjoyed by their master, they are considerably less cowardly than their peers and much more willing to throw themselves into the thick of battle. However, not even they are above the temptation of personal gain – in fact, they are amongst the most ambitious due to the power they wield as the biggest bullies around. The leaders of these skraps are constantly changing because of their habitual backstabbing.\n\nWhen you pick the Gloomspite Gitz faction for your army, you can choose for it to be a Da King’s Gitz Army of Renown. If you do so, use thosee faction rules instead of the Gloomspite Gitz faction rules. Every unit in your army must be drawn from the units listed in the roster options box as described in Army of Renown: Da King's Gitz. All units in your army gain the King’s Gitz keyword.",
+      "rules": [
+        {
+          "name": "Da King's Guards",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "While a friendly **TROGGOTH** unit is within the combat range of a friendly **HERO**:\n\n• That **HERO** has **WARD (4+)**.\n• Each time you make a successful ward roll for that **HERO**, allocate 1 damage point to a friendly **TROGGOTH** unit within that **HERO**’s combat range after the damage sequence for that **HERO** has been resolved (ward rolls cannot be made for those damage points)."
+        },
+        {
+          "name": "Da Loonking's Court",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle, Deployment Phase",
+          "icon": "special",
+          "declare": "Pick up to D3 friendly non-**UNIQUE KING’S GITZ HEROES** that do not have an enhancement.",
+          "effect": "Give each **HERO** 1 enhancement from the ‘Da King’s Gitz’ Army of Renown rules.\n\n**Designer’s Note**: *These enhancements are given to the* **HEROES** *during the deployment phase, not during army composition.*"
+        },
+        {
+          "name": "The Moon and The Loon",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "While a friendly unit is wholly within 9\" of a friendly **Skragrott**, a friendly **Malevolent Moon** or a friendly **Bad Moon Loonshrine**:\n\n•  Add 5 to the control scores of friendly non-**SQUIG MOONCLAN** units.\n•  Instead of rolling the dice to determine the Move characteristic of a friendly **SQUIG** unit, you can use a value of 4."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "872bd780-4f9f-5092-88cc-5515a350a69a",
+            "name": "Loonstone Medallion",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "This unit has **WARD (6+)**. While this unit is contesting an objective that is not being contested by any other friendly units, it has **WARD (5+)**.",
+            "cpCost": null
+          },
+          {
+            "id": "382d277d-0b1a-5ec3-a720-9fdb6810a953",
+            "name": "Wotnot of Prestige",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "End of Any Turn",
+            "icon": "offensive",
+            "declare": "Pick a point on the battlefield within 9\" of this unit. Each visible enemy unit within 3\" of that point is a target.",
+            "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+            "cpCost": null
+          },
+          {
+            "id": "0ea48be0-4b64-5b06-8e9d-788ec57e867e",
+            "name": "Moonhoned Shiv",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "startOfTurn",
+            "phaseDetails": "Deployment Phase",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "Pick 1 of this unit’s non-**Companion** melee weapons. Add 1 to the Attacks characteristic of that weapon for the rest of the battle. In addition, each time this unit uses a **RETREAT** ability, add 1 to the Attacks characteristic of that weapon for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "5785bf2d-86b2-55e0-bdf6-9445a6633511",
+            "name": "Glarejester",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Your Movement Phase",
+            "icon": "movement",
+            "declare": "Pick a friendly **INFANTRY** unit within 3\" of this unit and that is not in combat to be the target.",
+            "effect": "Roll a D3. Add the roll to the distance the target can move when using **MOVE** abilities this phase. If the target ends a move in this phase within 3\" of this **HERO**, inflict an amount of mortal damage on this **HERO** equal to the roll.",
+            "cpCost": null
+          },
+          {
+            "id": "fd842c2c-906a-50eb-941e-4b43596b2f1a",
+            "name": "Da King's Adjutant",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "Once Per Battle (Army), End of Your Turn",
+            "icon": "rallying",
+            "declare": "You cannot use this ability and the **Bad Moon Loonshrine**’s ‘Moonclan Lairs’ ability in the same turn. If this unit is within 12\" of a friendly **Bad Moon Loonshrine**, pick a friendly non-reinforced, non-**HERO**, non-**MONSTER KING’S GITZ** unit that has been destroyed to be the target.",
+            "effect": "Set up a replacement unit wholly within 12\" of a friendly **Bad Moon Loonshrine** and more than 3\" from all enemy units.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "60ccc0af-f692-5e28-8b19-459c80807b26",
+          "name": "Da King's Gitz Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "GLOOMSPITE_GITZ",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "6d97e308-954f-5283-aa0a-dd5004b32d3c",
+              "name": "Right Gitz In Da Right Place",
+              "castingValue": 5,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **KING’S GITZ WIZARD** to cast this spell, pick a visible friendly unit wholly within 18\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "The target’s weapons have **Anti-HERO (+1 Rend)** until the start of your next turn.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "9ad559ae-19cd-5ee2-8b40-4186300b5f01",
+              "name": "Da Loonking's Command",
+              "castingValue": 5,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **KING’S GITZ WIZARD** to cast this spell, pick a visible friendly unit wholly within 18\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Until the start of your next turn:\n\n•  Add 1 to the Attacks characteristic of melee weapons used by champions in the target unit.\n•  If the target uses the ‘Rally’ command, you can make 1 additional rally roll of D6.\n•  Add 1 to the target’s control score.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "f65ac906-2c93-5769-b6f3-0697955e2b78",
+          "name": "Da King's Gitz Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "GLOOMSPITE_GITZ",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "af14ca7a-170f-54fa-96df-682fc537db23",
+              "name": "Summon Malevolent Moon",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "If there is not a friendly **Malevolent Moon** on the battlefield, pick a friendly **GLOOMSPITE GITZ WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Set up a **Malevolent Moon** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Malevolent Moon"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Squigboss with Gnasha-Squig",
+          "Sporesplatta Fanatics",
+          "Madcap Shaman",
+          "Scourge of Ghyran Sporesplatta Fanatics",
+          "Mangler Squigs",
+          "Moonclan Shootas",
+          "Fungoid Cave-Shaman",
+          "Grinkrak's Looncourt",
+          "Loonsmasha Fanatics",
+          "Rabble-Rowza",
+          "Boingrot Bounderz",
+          "Squig Herd",
+          "Loonboss on Giant Cave Squig",
+          "Moonclan Stabbas",
+          "Squig Hoppers",
+          "Skragrott, the Loonking",
+          "Zarbag's Gitz",
+          "Bad Moon Loonshrine",
+          "Loonboss",
+          "Loonboss with Giant Cave Squig",
+          "Gobbapalooza",
+          "Scourge of Ghyran Loonsmasha Fanatics",
+          "Sneaky Snufflers",
+          "Loonboss on Mangler Squigs",
+          "Fellwater Troggoths",
+          "Rockgut Troggoths",
+          "Dankhold Troggoth"
+        ],
+        "requiredWarscrolls": ["Skragrott, the Loonking"],
+        "requiredGeneralWarscrolls": ["Skragrott, the Loonking"],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Loonsmasha Fanatics",
+              "Scourge of Ghyran Loonsmasha Fanatics"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Sporesplatta Fanatics",
+              "Scourge of Ghyran Sporesplatta Fanatics"
+            ]
+          }
+        ],
+        "rosterOptions": [
+          {
+            "limitingInstances": null,
+            "limitedInstances": 2,
+            "limiting": {
+              "warscrolls": [],
+              "keywords": [],
+              "factionKeywords": []
+            },
+            "limited": {
+              "warscrolls": [],
+              "keywords": ["Troggoth"]
+            }
+          }
+        ],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "d053016c-b7fc-55c5-8565-baab296ebd90",
+      "name": "Droggz's Gitmob",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "GLOOMSPITE_GITZ",
+      "parentFaction": "Gloomspite Gitz",
+      "isLegends": false,
+      "lore": "The Snarlfang-riding grots of the Gitmobs do not fear the light of day. Rather, they covet the power that so obviously rivals the Bad Moon’s own. Upon defeating their enemies, they scavenge the equipment of the fallen, accruing metal that they can use to rob Hysh of its power. From their mountain dens, they ride each day, chasing the light and capturing it in scrap blessed by their shamans for this purpose.\n\nWhen you pick the Gloomspite Gitz faction for your army, you can choose for it to be a Droggz’s Gitmob Army of Renown. If you do so, use those faction rules instead of the Gloomspite Gitz faction rules. Every unit in your army must be drawn from the units listed in the roster options box as described in Army of Renown: Droggz's Gitmob. All units in your army gain the Droggz’s Gitmob keyword.",
+      "rules": [
+        {
+          "name": "Dis Fight's Not Fer Me",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Combat Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **DROGGZ'S GITMOB** unit that is in combat with any enemy units that charged this turn and is not in combat with any enemy units that did not charge this turn to be the target.",
+          "effect": "Roll a dice. On a 4+, the target can immediately use the 'Retreat' ability as if it were your movement phase."
+        },
+        {
+          "name": "Surprise, Ya Gitz!",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **DROGGZ’S GITMOB** unit that is **outflanking the enemy**.",
+          "effect": "Set up that unit on the battlefield wholly within 6\" of a battlefield edge and more than 9\" from all enemy units."
+        },
+        {
+          "name": "Glowering Light",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick an enemy unit in combat with a friendly **DROGGZ’S GITMOB** unit that has charged this turn to be the target.",
+          "effect": "Roll a dice. On a 3+, for the rest of the turn, the target cannot make a pile-in move when it is picked to use a **FIGHT** ability."
+        },
+        {
+          "name": "Get Around 'Em",
+          "phase": "startOfTurn",
+          "phaseDetails": "Deployment Phase",
+          "icon": "special",
+          "declare": "Pick a friendly **DROGGZ’S GITMOB** unit that has not been deployed.",
+          "effect": "Set up that unit in reserve **outflanking the enemy**. It has now been deployed."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "68ab6790-da75-5082-8db6-44c97d2bb42e",
+            "name": "Glareface's Grin",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "shootingPhase",
+            "phaseDetails": "Once Per Battle (Army), Your Shooting Phase",
+            "icon": "offensive",
+            "declare": "Pick a point on the battlefield within 9\" of this unit. Each visible enemy unit within 3\" of that point is a target.",
+            "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "97453a61-658f-59f4-a4ae-ec13cb85514b",
+            "name": "Plucky Git",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "While this unit has no damage points, friendly **DROGGZ'S** **GITMOB** units have **WARD (6+)** while they are wholly within 9\" of this unit.",
+            "cpCost": null
+          },
+          {
+            "id": "4b11d21c-6b5e-5c98-b635-162d75984eed",
+            "name": "Stick 'Em and Run",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "Each time this unit uses a **RETREAT** ability or the ‘Frazzlegit’s Flame Stream’ ability, before moving this unit, pick an enemy unit in combat with it and roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "94cad662-16ab-5259-bbc6-d592f24a6ac5",
+          "name": "Droggz's Gitmob Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "GLOOMSPITE_GITZ",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "d5f5a89d-342d-5c8a-84b3-4f5a73032801",
+              "name": "Frazzleblast",
+              "castingValue": 5,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **WIZARD** to cast this spell, pick a visible friendly **DROGGZ'S GITMOB** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Until the start of your next turn, the target's melee weapons have **Crit (2 Hits)**.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "857892cc-f2c3-54fc-b878-c0afc1a51680",
+          "name": "Droggz’s Gitmob Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "GLOOMSPITE_GITZ",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "fc228f59-aad1-5e4b-a215-ccf445f26c9b",
+              "name": "Summon Mork's Mighty Mushroom",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "If there is not a friendly **Mork's Mighty Mushroom** on the battlefield, pick a friendly **GLOOMSPITE GITZ WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Set up a **Mork's Mighty Mushroom** wholly within 12\" of the caster and visible to them.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Mork’s Mighty Mushroom"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Sunsteala Wheelas",
+          "Rippa's Snarlfangs",
+          "Snarlfang Riders",
+          "Frazzlegit Shaman on War-Wheela",
+          "Snarlboss on War-Wheela",
+          "Snarlboss",
+          "Wolfgit Retinue",
+          "Doom Diver Catapult",
+          "Snarlpack Cavalry",
+          "Droggz Da Sunchompa"
+        ],
+        "requiredWarscrolls": ["Droggz Da Sunchompa"],
+        "requiredGeneralWarscrolls": ["Droggz Da Sunchompa"],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "1ce83f76-4c65-5e21-b990-1ec4c6212d18",
+      "name": "Trugg's Troggherd",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "GLOOMSPITE_GITZ",
+      "parentFaction": "Gloomspite Gitz",
+      "isLegends": false,
+      "lore": "When Trugg stomps into battle, he does so at the head of a lumbering mass of troggoths, from river-dwelling Fellwaters to mighty Dankholds. Drawn from their foetid lairs by the imposing aura of the Troggoth King, these lumpen brutes pulverise anything in their path, never questioning their monarch’s apparently random course.\n\nWhen you pick the Gloomspite Gitz faction for your army, you can choose for it to be a Trugg’s Troggherd Army of Renown. If you do so, use the faction rules on these pages instead of the Gloomspite Gitz faction rules. Every unit in your army must be drawn from the units listed in the roster options, as described in Army of Renown: Trugg's Troggherd. All units in your army gain the Trugg’s Troggherd keyword.",
+      "rules": [
+        {
+          "name": "Herd Healing",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "Each time a friendly **TROGGOTH** unit uses a **FIGHT** ability, after that ability has been resolved, **Heal (D3)** that unit."
+        },
+        {
+          "name": "Moon-toughened Hide",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "In battle rounds 2 and 3, subtract 1 from the Rend characteristic of melee weapons used for attacks that target friendly **TRUGG’S TROGGHERD** units."
+        },
+        {
+          "name": "Broken Slumber",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **TRUGG’S TROGGHERD** unit that is a **living** **landmark**.",
+          "effect": "Set up that unit anywhere on the battlefield wholly within 3\" of a terrain feature and more than 9\" from all enemy units."
+        },
+        {
+          "name": "Living Landmark",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "special",
+          "declare": "Pick a friendly **TRUGG’S TROGGHERD** unit that has not been deployed.",
+          "effect": "Set up that unit in reserve as a **living landmark**. It has now been deployed."
+        },
+        {
+          "name": "Aura of Haywire Magic",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "The effects of a friendly **Trugg**’s ‘Malfunctioning Leystone’ ability affect friendly **TRUGG’S TROGGHERD** units anywhere on the battlefield instead of only those wholly within 12\" of that friendly **Trugg**."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "df568851-7def-5ef7-a582-718333236935",
+            "name": "Crunchy Shinies",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Once Per Battle, Any Movement Phase",
+            "icon": "movement",
+            "declare": null,
+            "effect": "For the rest of the turn, add 3 to run rolls and charge rolls for this unit.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "d56b52af-bffb-556d-b364-70294a6a4a80",
+            "name": "Loonstone Teef",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Once Per Battle, Any Combat Phase",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "This unit can use 2 **FIGHT** abilities this phase. After the first is used, however, this unit has **STRIKE‑LAST** for the rest of the turn.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Trugg, the Troggoth King",
+          "Fellwater Troggoths",
+          "Rockgut Troggoths",
+          "Dankhold Troggboss",
+          "Dankhold Troggoth"
+        ],
+        "requiredWarscrolls": ["Trugg, the Troggoth King"],
+        "requiredGeneralWarscrolls": ["Trugg, the Troggoth King"],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "13074a26-0ace-5a50-92ca-f5492767626e",
@@ -5125,76 +5633,6 @@
   "enhancements": {
     "artefacts": [
       {
-        "id": "872bd780-4f9f-5092-88cc-5515a350a69a",
-        "name": "Loonstone Medallion",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "This unit has **WARD (6+)**. While this unit is contesting an objective that is not being contested by any other friendly units, it has **WARD (5+)**.",
-        "cpCost": null
-      },
-      {
-        "id": "382d277d-0b1a-5ec3-a720-9fdb6810a953",
-        "name": "Wotnot of Prestige",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "endOfTurn",
-        "phaseDetails": "End of Any Turn",
-        "icon": "offensive",
-        "declare": "Pick a point on the battlefield within 9\" of this unit. Each visible enemy unit within 3\" of that point is a target.",
-        "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
-        "cpCost": null
-      },
-      {
-        "id": "0ea48be0-4b64-5b06-8e9d-788ec57e867e",
-        "name": "Moonhoned Shiv",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "startOfTurn",
-        "phaseDetails": "Deployment Phase",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Pick 1 of this unit’s non-**Companion** melee weapons. Add 1 to the Attacks characteristic of that weapon for the rest of the battle. In addition, each time this unit uses a **RETREAT** ability, add 1 to the Attacks characteristic of that weapon for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative.",
-        "cpCost": null
-      },
-      {
-        "id": "df568851-7def-5ef7-a582-718333236935",
-        "name": "Crunchy Shinies",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Battle, Any Movement Phase",
-        "icon": "movement",
-        "declare": null,
-        "effect": "For the rest of the turn, add 3 to run rolls and charge rolls for this unit.",
-        "cpCost": null
-      },
-      {
-        "id": "68ab6790-da75-5082-8db6-44c97d2bb42e",
-        "name": "Glareface's Grin",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "shootingPhase",
-        "phaseDetails": "Once Per Battle (Army), Your Shooting Phase",
-        "icon": "offensive",
-        "declare": "Pick a point on the battlefield within 9\" of this unit. Each visible enemy unit within 3\" of that point is a target.",
-        "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
-        "cpCost": null
-      },
-      {
         "id": "e3b6d0cc-bf83-589e-ad9a-0652d12a8134",
         "name": "The Clammy Cowl",
         "cardType": "Enhancement",
@@ -5238,76 +5676,6 @@
       }
     ],
     "heroicTraits": [
-      {
-        "id": "5785bf2d-86b2-55e0-bdf6-9445a6633511",
-        "name": "Glarejester",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **INFANTRY** unit within 3\" of this unit and that is not in combat to be the target.",
-        "effect": "Roll a D3. Add the roll to the distance the target can move when using **MOVE** abilities this phase. If the target ends a move in this phase within 3\" of this **HERO**, inflict an amount of mortal damage on this **HERO** equal to the roll.",
-        "cpCost": null
-      },
-      {
-        "id": "fd842c2c-906a-50eb-941e-4b43596b2f1a",
-        "name": "Da King's Adjutant",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Battle (Army), End of Your Turn",
-        "icon": "rallying",
-        "declare": "You cannot use this ability and the **Bad Moon Loonshrine**’s ‘Moonclan Lairs’ ability in the same turn. If this unit is within 12\" of a friendly **Bad Moon Loonshrine**, pick a friendly non-reinforced, non-**HERO**, non-**MONSTER KING’S GITZ** unit that has been destroyed to be the target.",
-        "effect": "Set up a replacement unit wholly within 12\" of a friendly **Bad Moon Loonshrine** and more than 3\" from all enemy units.",
-        "cpCost": null
-      },
-      {
-        "id": "d56b52af-bffb-556d-b364-70294a6a4a80",
-        "name": "Loonstone Teef",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Battle, Any Combat Phase",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "This unit can use 2 **FIGHT** abilities this phase. After the first is used, however, this unit has **STRIKE‑LAST** for the rest of the turn.",
-        "cpCost": null
-      },
-      {
-        "id": "97453a61-658f-59f4-a4ae-ec13cb85514b",
-        "name": "Plucky Git",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "While this unit has no damage points, friendly **DROGGZ'S** **GITMOB** units have **WARD (6+)** while they are wholly within 9\" of this unit.",
-        "cpCost": null
-      },
-      {
-        "id": "4b11d21c-6b5e-5c98-b635-162d75984eed",
-        "name": "Stick 'Em and Run",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Each time this unit uses a **RETREAT** ability or the ‘Frazzlegit’s Flame Stream’ ability, before moving this unit, pick an enemy unit in combat with it and roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
-        "cpCost": null
-      },
       {
         "id": "a85d2961-b43b-568b-b585-7c74b940324d",
         "name": "Fight Another Day",
@@ -5512,102 +5880,6 @@
         "icon": "special",
         "declare": null,
         "effect": "During the battle, the effects below apply to friendly **GLOOMSPITE GITZ** units based on the current face of the Bad Moon:\n\n***Frothing Zealots***: While the Bad Moon is **Cacklin’** or **Grinnin’**, add 5 to the control scores of friendly non-**SQUIG** **MOONCLAN** units.\n\n***Spiderfang Venom***: While the Bad Moon is **Cacklin’** or **Grinnin’**, combat attacks made by friendly **SPIDERFANG** units score critical hits on unmodified hit rolls of 5+. This also affects **Companion** weapons.\n\n***Moonlit Hide***: While the Bad Moon is **Grinnin’** or **Scowlin’**, subtract 1 from the Rend characteristic of combat attacks that target friendly **TROGGOTH** units.\n\n***Lunar Squigs***: While the Bad Moon is **Scowlin’** or **Sulkin’**, instead of rolling the dice to determine the Move characteristic of a friendly **SQUIG** unit, you can use a value of 4.\n\n***Sneaky Snarlfangs***: While the Bad Moon is **Sulkin’** or **Cacklin’**, friendly **GITMOB** units can use **CHARGE** and **SHOOT** abilities even if they used a **RETREAT** ability in the same turn."
-      },
-      {
-        "name": "Da King's Guards",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "While a friendly **TROGGOTH** unit is within the combat range of a friendly **HERO**:\n\n• That **HERO** has **WARD (4+)**.\n• Each time you make a successful ward roll for that **HERO**, allocate 1 damage point to a friendly **TROGGOTH** unit within that **HERO**’s combat range after the damage sequence for that **HERO** has been resolved (ward rolls cannot be made for those damage points)."
-      },
-      {
-        "name": "Da Loonking's Court",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle, Deployment Phase",
-        "icon": "special",
-        "declare": "Pick up to D3 friendly non-**UNIQUE KING’S GITZ HEROES** that do not have an enhancement.",
-        "effect": "Give each **HERO** 1 enhancement from the ‘Da King’s Gitz’ Army of Renown rules.\n\n**Designer’s Note**: *These enhancements are given to the* **HEROES** *during the deployment phase, not during army composition.*"
-      },
-      {
-        "name": "The Moon and The Loon",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "While a friendly unit is wholly within 9\" of a friendly **Skragrott**, a friendly **Malevolent Moon** or a friendly **Bad Moon Loonshrine**:\n\n•  Add 5 to the control scores of friendly non-**SQUIG MOONCLAN** units.\n•  Instead of rolling the dice to determine the Move characteristic of a friendly **SQUIG** unit, you can use a value of 4."
-      },
-      {
-        "name": "Herd Healing",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Each time a friendly **TROGGOTH** unit uses a **FIGHT** ability, after that ability has been resolved, **Heal (D3)** that unit."
-      },
-      {
-        "name": "Moon-toughened Hide",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "In battle rounds 2 and 3, subtract 1 from the Rend characteristic of melee weapons used for attacks that target friendly **TRUGG’S TROGGHERD** units."
-      },
-      {
-        "name": "Broken Slumber",
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **TRUGG’S TROGGHERD** unit that is a **living** **landmark**.",
-        "effect": "Set up that unit anywhere on the battlefield wholly within 3\" of a terrain feature and more than 9\" from all enemy units."
-      },
-      {
-        "name": "Living Landmark",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
-        "icon": "special",
-        "declare": "Pick a friendly **TRUGG’S TROGGHERD** unit that has not been deployed.",
-        "effect": "Set up that unit in reserve as a **living landmark**. It has now been deployed."
-      },
-      {
-        "name": "Aura of Haywire Magic",
-        "phase": "heroPhase",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "The effects of a friendly **Trugg**’s ‘Malfunctioning Leystone’ ability affect friendly **TRUGG’S TROGGHERD** units anywhere on the battlefield instead of only those wholly within 12\" of that friendly **Trugg**."
-      },
-      {
-        "name": "Dis Fight's Not Fer Me",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Enemy Combat Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **DROGGZ'S GITMOB** unit that is in combat with any enemy units that charged this turn and is not in combat with any enemy units that did not charge this turn to be the target.",
-        "effect": "Roll a dice. On a 4+, the target can immediately use the 'Retreat' ability as if it were your movement phase."
-      },
-      {
-        "name": "Surprise, Ya Gitz!",
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **DROGGZ’S GITMOB** unit that is **outflanking the enemy**.",
-        "effect": "Set up that unit on the battlefield wholly within 6\" of a battlefield edge and more than 9\" from all enemy units."
-      },
-      {
-        "name": "Glowering Light",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick an enemy unit in combat with a friendly **DROGGZ’S GITMOB** unit that has charged this turn to be the target.",
-        "effect": "Roll a dice. On a 3+, for the rest of the turn, the target cannot make a pile-in move when it is picked to use a **FIGHT** ability."
-      },
-      {
-        "name": "Get Around 'Em",
-        "phase": "startOfTurn",
-        "phaseDetails": "Deployment Phase",
-        "icon": "special",
-        "declare": "Pick a friendly **DROGGZ’S GITMOB** unit that has not been deployed.",
-        "effect": "Set up that unit in reserve **outflanking the enemy**. It has now been deployed."
       }
     ]
   }

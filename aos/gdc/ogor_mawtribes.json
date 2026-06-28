@@ -8,7 +8,7 @@
     "banner": "#2a2a1a",
     "header": "#2a2a1a"
   },
-  "updated": "2026-06-17T10:06:27.864Z",
+  "updated": "2026-06-28T12:32:37.193Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -3082,6 +3082,159 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "93b71165-0a7b-5077-b299-480a169a2e53",
+      "name": "The Roving Maw",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "parentFaction": "Ogor Mawtribes",
+      "isLegends": false,
+      "lore": "Where the ground itself groans with hunger and opens in undulating gullets, twisted, feral shapes slaughter errant warriors to feed to the grisly apertures. These are the Gorger Mawpacks, ogors afflicted with a terrible curse that keeps them in a permanent state of starvation. Ogor Butchers will often travel with these creatures in Roving Maws, testing new recipes upon them and opening Mawpits with gastromantic rituals.\n\nWhen you pick the Ogor Mawtribes faction for your army, you can choose for it to be a The Roving Maw Army of Renown. If you do so, use the faction rules on these pages instead of the Ogor Mawtribes faction rules. Every unit in your army must be drawn from the units listed in the roster options, as described in Army of Renown: The Roving Maw. All units in your army gain the Roving Maw keyword.",
+      "rules": [
+        {
+          "name": "Driven By Starvation",
+          "phase": "chargePhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Friendly **Gorger Mawpack** units can use **CHARGE** abilities even if they used a **RUN** ability in the same turn unless they are wholly within 3\" of a terrain feature."
+        },
+        {
+          "name": "Trampling Charge",
+          "phase": "chargePhase",
+          "phaseDetails": "Any Charge Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **ROVING MAW** unit that charged this turn to use this ability, then pick a visible enemy unit within 1\" of it to be the target.",
+          "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        },
+        {
+          "name": "Tasty Morsels",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "Each time a model is slain by a friendly **Mawpit**’s ‘Throat of Ghur’ ability, you gain 1 **tasty morsel**."
+        },
+        {
+          "name": "Mawpits of Ghur",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+          "icon": "special",
+          "declare": null,
+          "effect": "Roll 2D6 and add the number of **tasty morsels** you have to the roll. Apply the corresponding effect below for the rest of the battle round. Then, reset your **tasty morsels** to 0.\n\n**2-3 – *Subdued*:**\nNo effect.\n\n**4-5 – *Peckish*:**\nSubtract 3 from the control scores of units that are **vulnerable to Mawpits**.\n\n**6-8 – *Rumbling*:**\nRoll a dice for each unit that is **vulnerable to Mawpits**. On a 3+, inflict 1 mortal damage on that unit.\n\n**9-11 – *Famished*:**\nUnits that are **vulnerable to Mawpits** cannot use commands.\n\n**12+ – *Ravenous*:**\nRoll a D3 for each unit that is **vulnerable to Mawpits**. On a 2+, inflict an amount of mortal damage on that unit equal to the roll."
+        },
+        {
+          "name": "The Realm Hungers",
+          "phase": "chargePhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "Units and **MANIFESTATIONS** are **vulnerable** **to Mawpits** while they are on the battlefield unless they are wholly within 1\" of a terrain feature that is not a **Mawpit**. This ability has no effect on **ROVING MAW** units or units that have **FLY**."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "7bd8d297-00d1-5bec-982b-308e31b6c187",
+            "name": "Flasks of Congealed Maw-juices",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "Friendly **Mawpits** within this unit’s combat range have **WARD** **(5+)**.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "4b5a61c8-b0a4-54ff-9e0c-bdc24a7d7385",
+            "name": "Prime Gutserver",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "startOfTurn",
+            "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+            "icon": "special",
+            "declare": null,
+            "effect": "If this unit is a Head Butcher, gain 1 **tasty morsel**.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "fda40a52-3bef-5ca5-8829-e09014056fc4",
+          "name": "The Roving Maw Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "OGOR_MAWTRIBES",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "4d0c63ed-6384-52d9-a649-3b5f28dd2e39",
+              "name": "Mawmeat",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **ROVING MAW WIZARD** to cast this spell, pick a visible terrain feature within 18\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "For the rest of the battle, units on or within 1\" of the target are **vulnerable to Mawpits**. This ability had no effect on **ROVING MAW** units or units that have **FLY**.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "fc818a6a-7d87-5639-a481-ff1a19057c79",
+              "name": "Retcher",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **ROVING MAW WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Add 2 to the Rend characteristic of the caster’s melee weapons until the start of your next turn.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Leadbelchers",
+          "Ogor Gluttons",
+          "Scourge of Ghyran Ironblaster",
+          "Slaughtermaster",
+          "Ironguts",
+          "Ironblaster",
+          "Tyrant",
+          "Mawpit",
+          "Butcher",
+          "Bloodpelt Hunter",
+          "Gorger Mawpack"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": ["Scourge of Ghyran Ironblaster", "Ironblaster"]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "dcba3a5b-2995-53ab-a5dc-8ede05c50c66",
@@ -3226,20 +3379,6 @@
         "declare": "Pick an enemy unit in combat with this unit to be the target.",
         "effect": "Roll a dice. Inflict an amount of mortal damage on the target equal to the roll. Then, **Heal (X)** this unit, where **X** is an amount equal to the roll.",
         "cpCost": null
-      },
-      {
-        "id": "7bd8d297-00d1-5bec-982b-308e31b6c187",
-        "name": "Flasks of Congealed Maw-juices",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Friendly **Mawpits** within this unit’s combat range have **WARD** **(5+)**.",
-        "cpCost": null
       }
     ],
     "heroicTraits": [
@@ -3283,20 +3422,6 @@
         "icon": "special",
         "declare": null,
         "effect": "Ignore negative modifiers to this unit’s control score and to hit rolls and wound rolls for this unit’s attacks.",
-        "cpCost": null
-      },
-      {
-        "id": "4b5a61c8-b0a4-54ff-9e0c-bdc24a7d7385",
-        "name": "Prime Gutserver",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
-        "icon": "special",
-        "declare": null,
-        "effect": "If this unit is a Head Butcher, gain 1 **tasty morsel**.",
         "cpCost": null
       }
     ],
@@ -3409,46 +3534,6 @@
         "icon": "special",
         "declare": "Pick each friendly **OGOR** unit that is in combat or that used a **FIGHT** ability this turn to be the targets.",
         "effect": "Roll a D3 for each target. On a 2+:\n\n• **Heal (X)** the target, where **X** is an amount equal to the roll.\n• Pick an enemy unit in combat with the target. You cannot pick the same enemy unit more than once. Inflict an amount of mortal damage on that enemy unit equal to the roll."
-      },
-      {
-        "name": "Driven By Starvation",
-        "phase": "chargePhase",
-        "phaseDetails": "Passive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Friendly **Gorger Mawpack** units can use **CHARGE** abilities even if they used a **RUN** ability in the same turn unless they are wholly within 3\" of a terrain feature."
-      },
-      {
-        "name": "Trampling Charge",
-        "phase": "chargePhase",
-        "phaseDetails": "Any Charge Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **ROVING MAW** unit that charged this turn to use this ability, then pick a visible enemy unit within 1\" of it to be the target.",
-        "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
-      },
-      {
-        "name": "Tasty Morsels",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "Each time a model is slain by a friendly **Mawpit**’s ‘Throat of Ghur’ ability, you gain 1 **tasty morsel**."
-      },
-      {
-        "name": "Mawpits of Ghur",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
-        "icon": "special",
-        "declare": null,
-        "effect": "Roll 2D6 and add the number of **tasty morsels** you have to the roll. Apply the corresponding effect below for the rest of the battle round. Then, reset your **tasty morsels** to 0.\n\n**2-3 – *Subdued*:**\nNo effect.\n\n**4-5 – *Peckish*:**\nSubtract 3 from the control scores of units that are **vulnerable to Mawpits**.\n\n**6-8 – *Rumbling*:**\nRoll a dice for each unit that is **vulnerable to Mawpits**. On a 3+, inflict 1 mortal damage on that unit.\n\n**9-11 – *Famished*:**\nUnits that are **vulnerable to Mawpits** cannot use commands.\n\n**12+ – *Ravenous*:**\nRoll a D3 for each unit that is **vulnerable to Mawpits**. On a 2+, inflict an amount of mortal damage on that unit equal to the roll."
-      },
-      {
-        "name": "The Realm Hungers",
-        "phase": "chargePhase",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "Units and **MANIFESTATIONS** are **vulnerable** **to Mawpits** while they are on the battlefield unless they are wholly within 1\" of a terrain feature that is not a **Mawpit**. This ability has no effect on **ROVING MAW** units or units that have **FLY**."
       }
     ]
   }

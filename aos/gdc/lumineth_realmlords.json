@@ -8,7 +8,7 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-06-17T10:06:12.977Z",
+  "updated": "2026-06-28T12:32:23.920Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -2811,6 +2811,310 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "93dbab60-266d-5844-b638-c7c9600bc0e4",
+      "name": "Aelementiri Conclave",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "LUMINETH_REALM_LORDS",
+      "parentFaction": "Lumineth Realm-lords",
+      "isLegends": false,
+      "lore": "Aelementiri temples are focused on achieving oneness with the realms. They go to battle to protect the land and are often accompanied by the war-forms of elemental spirits, known as aelementors, who share their goal of vanquishing those who would bring corruption and ruin to nature.\n\nWhen you pick the Lumineth Realm-lords faction for your army, you can choose for it to be an Aelementiri Conclave Army of Renown. If you do so, use the faction rules on these pages instead of the Lumineth Realm-lords faction rules. Every unit in your army must be drawn from the units listed as described in Army of Renown: Aelementiri Conclave. All units in your army gain the **AELEMENTIRI CONCLAVE** keyword.",
+      "rules": [
+        {
+          "name": "World Runes",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "offensive",
+          "declare": null,
+          "effect": "Add 1 **Alaithi, Rune of the Mountain** to your **library** for each friendly **ALARITH** unit on the battlefield.\n\nAdd 1 **Oreali, Rune of the Wind** to your **library** for each friendly **HURAKAN** unit on the battlefield.\n\nAdd 1 **Ydriliqi, Rune of the River** to your **library** for each friendly **YDRILAN** unit on the battlefield.\n\nYou can have a maximum of 6 of each type of rune in your **library**."
+        },
+        {
+          "name": "Entreat Spirits",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "rallying",
+          "declare": "You can use this ability if you have 3 or more runes in your **library**. Pick a friendly non- **UNIQUE MONSTER** unit that has been destroyed to be the target.",
+          "effect": "Remove any 3 runes from your **library**. Then, set up a replacement unit identical to the target wholly within 6\" of a terrain feature and more than 9\" from all enemy units. Allocate 6 damage points to the replacement unit (ward rolls cannot be made for those damage points)."
+        },
+        {
+          "name": "Depict Rune",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+          "icon": "offensive",
+          "declare": "You must use this ability.",
+          "effect": "Remove all runes from your **battle scripture**. Then, pick any number of runes to remove from your **library** and depict them on your **battle scripture**. Runes removed from your library in this way are removed for the rest of the battle.\n\n**Designer’s Note:** *Runes are used to activate powerful abilities on your units’ warscrolls.*"
+        },
+        {
+          "name": "The Realms Fight Back",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "special",
+          "declare": "Pick a terrain feature. Then, pick an enemy unit within 6\" of that terrain feature to be the target.",
+          "effect": "Roll a D3 and apply the corresponding effect for the rest of the turn.\n\n**1.  Eruption of Earth:** Inflict 3 mortal damage on the target.\n**2.  Howling Winds:** Subtract 5 from the target’s control score.\n**3.  Flash Flood:** The target has **STRIKE-LAST**."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "be7d8edf-9ea8-5375-bc01-a7af140d6576",
+            "name": "Aelementor Focus",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Any Hero Phase",
+            "icon": "defensive",
+            "declare": "Pick a terrain feature to be the target.",
+            "effect": "Measure the range and visibility of the next **SPELL** ability used by this unit from the target instead of from this unit.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "1d77bbfa-09ae-5584-a92f-6b2b1ff65eb8",
+            "name": "World-Mage",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Passive",
+            "icon": "special",
+            "declare": null,
+            "effect": "Add 1 to casting rolls for this unit for each unique rune depicted on your **battle scripture**.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "e5c7fc9b-b7d4-5c6a-a444-845c6c1637e7",
+          "name": "Aelementiri Conclave Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "LUMINETH_REALM_LORDS",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "904bb77b-9476-5ebd-a8cc-1f2452ee03aa",
+              "name": "Vexing Spirits",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **AELEMENTIRI CONCLAVE WIZARD** to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "For the rest of the turn, the target cannot use commands.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "c0604c6a-6f65-5f3b-b2c4-58bcb6ff32f9",
+          "name": "Aelementiri Conclave Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "LUMINETH_REALM_LORDS",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "018d2720-a78c-5ed6-a104-55405be5f419",
+              "name": "Cycle Manifestation",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **AELEMENTIRI CONCLAVE WIZARD** to cast this spell, pick 1 of the friendly **MANIFESTATIONS** below that is not on the battlefield, then make a casting roll of 2D6.\n\n• **Sanctum of Amyntok**\n• **Hyshian Twinstones**\n• **Rune of Petrification**",
+              "effect": "If there is already a friendly **MANIFESTATION** from the list above on the battlefield, it is immediately banished. Then, set up the **MANIFESTATION** you picked within 1\" of the caster and visible to them. If that **MANIFESTATION** is a **Sanctum of Amyntok**, it must instead be set up wholly within 12\" of the caster, more than 3\" from all enemy units, and with its 3 parts touching each other so that they form a ring.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Hyshian Twinstones"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Hurakan Windmage",
+          "Avalenor, The Stoneheart King",
+          "Alarith Spirit of the Mountain",
+          "Sevireth, Lord of the Seventh Wind",
+          "Shrine Luminor",
+          "Alarith Stoneguard",
+          "Hurakan Spirit of the Wind",
+          "Myari's Purifiers",
+          "Hurakan Windchargers",
+          "Ydrilan Riverblades",
+          "Alarith Stonemage"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "7e6e6c51-8ca3-5ac6-9757-e6623109dc3d",
+      "name": "Vanari Paragons",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "LUMINETH_REALM_LORDS",
+      "parentFaction": "Lumineth Realm-lords",
+      "isLegends": false,
+      "lore": "In the Tyrionic nations of Hysh, decisive action, martial skill and bravery are valued above all. It is common for their Vanari to seek to emulate the Lord Phoenix by undertaking vows or labours inspired by his own quests in the prehistory of the realms. In so doing, they honour the Decree Tyrionic, to which they owe their existence.\n\nWhen you pick the Lumineth Realm-lords faction for your army, you can choose for it to be a Vanari Paragons Army of Renown. If you do so, use the faction rules on these pages instead of the Lumineth Realm-lords faction rules. Every unit in your army must be drawn from the units listed as described in Army of Renown: Vanari Paragons. All units in your army gain the Vanari Paragons keyword.",
+      "rules": [
+        {
+          "name": "Rewards of Valour",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "special",
+          "declare": "Pick a friendly non-**UNIQUE VANARI HERO** that does not have an artefact of power to be the target.",
+          "effect": "Give the target 1 artefact of power from the 'Vanari Paragons' Army of Renown rules.\n\n**Designer's Note:** *This artefact of power is given to the* **HERO** *during the deployment phase, not during army composition.*"
+        },
+        {
+          "name": "Labour of Might",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+          "icon": "offensive",
+          "declare": "You can only use this ability if 3 or more enemy units have been destroyed this battle.",
+          "effect": "Add 1 to the number of **labours** you have completed. For the rest of the battle, add 1 to wound rolls for combat attacks made by friendly **LUMINETH REALM-LORDS** units."
+        },
+        {
+          "name": "Labour of Control",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+          "icon": "movement",
+          "declare": "You can only use this ability if there is at least 1 different friendly unit within 6\" of each battlefield edge.",
+          "effect": "Add 1 to the number of **labours** you have completed. For the rest of the battle, add 2\" to the Move characteristic of friendly **LUMINETH REALM-LORDS** units."
+        },
+        {
+          "name": "Labour of Precision",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+          "icon": "control",
+          "declare": "You can only use this ability if there are no enemy units with an artefact of power on the battlefield.",
+          "effect": "Add 1 to the number of **labours** you have completed. For the rest of the battle, add 10 to the control scores of friendly **LUMINETH REALM‑LORDS** units."
+        },
+        {
+          "name": "Blessing of Tyrion",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+          "icon": "defensive",
+          "declare": "You can only use this ability if you have completed 3 **labours**.",
+          "effect": "For the rest of the battle, friendly **LUMINETH REALM-LORDS** units have **WARD (5+)**."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "33660aae-b06f-5a08-ae3e-1bfae61f8543",
+            "name": "Swiftfeather Talisman",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Your Movement Phase",
+            "icon": "movement",
+            "declare": "Pick a friendly **LUMINETH REALM-LORDS** unit wholly within 12\" of this unit to be the target.",
+            "effect": "Add 2\" to the target’s Move characteristic for the rest of the turn.",
+            "cpCost": null
+          },
+          {
+            "id": "b775180d-f4d5-526c-a6a2-2f25ada99833",
+            "name": "Phoenix Blade",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "This unit’s combat attacks score critical hits on unmodified hit rolls of 5+.",
+            "cpCost": null
+          },
+          {
+            "id": "68613127-c087-5175-8a91-d109955ce521",
+            "name": "Nullstone Beads",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Passive",
+            "icon": "special",
+            "declare": null,
+            "effect": "This unit can use the ‘Unbind’ ability as if it had **WIZARD (1)**.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "7beee037-2658-58b3-bcea-b082056b7122",
+            "name": "Master Duellist",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Any Combat Phase",
+            "icon": "special",
+            "declare": "Pick a visible enemy **HERO** in combat with this unit to be the target.",
+            "effect": "Roll a dice. On a 4+:\n• If the target has an artefact of power, it no longer has that artefact of power.\n• The target has **STRIKE‑LAST** for the rest of the turn.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "The Light of Eltharion",
+          "Vanari Dawnriders",
+          "Scourge of Ghyran Vanari Bannerblade",
+          "Vanari Bladelords",
+          "Vanari Lord Regent on Lightcourser",
+          "Vanari Starshard Ballista",
+          "Vanari Auralan Wardens",
+          "Vanari Bannerblade",
+          "Vanari Auralan Sentinels",
+          "Vanari Lord Regent",
+          "Scourge of Ghyran The Light of Eltharion",
+          "Shrine Luminor"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Ghyran Vanari Bannerblade",
+              "Vanari Bannerblade"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "The Light of Eltharion",
+              "Scourge of Ghyran The Light of Eltharion"
+            ]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "b6613d99-a5d9-5797-a7e3-5fb17d5023fd",
@@ -3014,48 +3318,6 @@
   "enhancements": {
     "artefacts": [
       {
-        "id": "33660aae-b06f-5a08-ae3e-1bfae61f8543",
-        "name": "Swiftfeather Talisman",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **LUMINETH REALM-LORDS** unit wholly within 12\" of this unit to be the target.",
-        "effect": "Add 2\" to the target’s Move characteristic for the rest of the turn.",
-        "cpCost": null
-      },
-      {
-        "id": "b775180d-f4d5-526c-a6a2-2f25ada99833",
-        "name": "Phoenix Blade",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "This unit’s combat attacks score critical hits on unmodified hit rolls of 5+.",
-        "cpCost": null
-      },
-      {
-        "id": "68613127-c087-5175-8a91-d109955ce521",
-        "name": "Nullstone Beads",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "This unit can use the ‘Unbind’ ability as if it had **WIZARD (1)**.",
-        "cpCost": null
-      },
-      {
         "id": "d42048a7-dc3e-55df-a8a8-247bebce385e",
         "name": "Phoenix Stone",
         "cardType": "Enhancement",
@@ -3096,37 +3358,9 @@
         "declare": null,
         "effect": "If this unit is not a **WIZARD**, it can use the ‘Unbind’ ability as if it had **WIZARD (1)**. Otherwise, add 1 to casting rolls for this unit.",
         "cpCost": null
-      },
-      {
-        "id": "be7d8edf-9ea8-5375-bc01-a7af140d6576",
-        "name": "Aelementor Focus",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Any Hero Phase",
-        "icon": "defensive",
-        "declare": "Pick a terrain feature to be the target.",
-        "effect": "Measure the range and visibility of the next **SPELL** ability used by this unit from the target instead of from this unit.",
-        "cpCost": null
       }
     ],
     "heroicTraits": [
-      {
-        "id": "7beee037-2658-58b3-bcea-b082056b7122",
-        "name": "Master Duellist",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Any Combat Phase",
-        "icon": "special",
-        "declare": "Pick a visible enemy **HERO** in combat with this unit to be the target.",
-        "effect": "Roll a dice. On a 4+:\n• If the target has an artefact of power, it no longer has that artefact of power.\n• The target has **STRIKE‑LAST** for the rest of the turn.",
-        "cpCost": null
-      },
       {
         "id": "e5fd2e9f-f304-5c5c-ba5f-1c5b11c2a044",
         "name": "Masterful Tactician",
@@ -3209,20 +3443,6 @@
         "icon": "offensive",
         "declare": "Pick a visible enemy unit within 12\" of this unit that is damaged or that had any models slain this turn to be the target.",
         "effect": "Roll a dice. On a 3+, add 1 to wound rolls for combat attacks made by friendly **LUMINETH REALM-LORDS INFANTRY** units that target that enemy unit for the rest of the turn.",
-        "cpCost": null
-      },
-      {
-        "id": "1d77bbfa-09ae-5584-a92f-6b2b1ff65eb8",
-        "name": "World-Mage",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "Add 1 to casting rolls for this unit for each unique rune depicted on your **battle scripture**.",
         "cpCost": null
       }
     ],
@@ -3341,84 +3561,12 @@
   "rules": {
     "battleTraits": [
       {
-        "name": "Rewards of Valour",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
-        "icon": "special",
-        "declare": "Pick a friendly non-**UNIQUE VANARI HERO** that does not have an artefact of power to be the target.",
-        "effect": "Give the target 1 artefact of power from the 'Vanari Paragons' Army of Renown rules.\n\n**Designer's Note:** *This artefact of power is given to the* **HERO** *during the deployment phase, not during army composition.*"
-      },
-      {
-        "name": "Labour of Might",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
-        "icon": "offensive",
-        "declare": "You can only use this ability if 3 or more enemy units have been destroyed this battle.",
-        "effect": "Add 1 to the number of **labours** you have completed. For the rest of the battle, add 1 to wound rolls for combat attacks made by friendly **LUMINETH REALM-LORDS** units."
-      },
-      {
-        "name": "Labour of Control",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
-        "icon": "movement",
-        "declare": "You can only use this ability if there is at least 1 different friendly unit within 6\" of each battlefield edge.",
-        "effect": "Add 1 to the number of **labours** you have completed. For the rest of the battle, add 2\" to the Move characteristic of friendly **LUMINETH REALM-LORDS** units."
-      },
-      {
-        "name": "Labour of Precision",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
-        "icon": "control",
-        "declare": "You can only use this ability if there are no enemy units with an artefact of power on the battlefield.",
-        "effect": "Add 1 to the number of **labours** you have completed. For the rest of the battle, add 10 to the control scores of friendly **LUMINETH REALM‑LORDS** units."
-      },
-      {
-        "name": "Blessing of Tyrion",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
-        "icon": "defensive",
-        "declare": "You can only use this ability if you have completed 3 **labours**.",
-        "effect": "For the rest of the battle, friendly **LUMINETH REALM-LORDS** units have **WARD (5+)**."
-      },
-      {
         "name": "Depict Rune",
         "phase": "startOfTurn",
         "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
         "icon": "special",
         "declare": null,
         "effect": "Pick 1 of the following runes to depict on your **battle scripture**. The effect and conditional enhanced effects of that rune last for the rest of the battle round. Each rune remains on your **battle scripture** for the rest of the battle or until it is removed or replaced by another ability.\n\n**Varinor, Rune of Strength:** Pick up to 2 friendly **LUMINETH REALM-LORDS** units for each instance of this rune depicted on your **battle scripture** to be the targets. Add 1 to run rolls and charge rolls for each target. In addition, the following enhanced effects apply:\n• While **Ydriliqi, Rune of the River** is depicted on your **battle scripture**, add 1 to wound rolls for each target’s combat attacks.\n• While **Oreali, Rune of the Wind** is depicted on your **battle scripture**, each target can use **SHOOT** and/or **CHARGE** abilities even if it used a **RETREAT** ability in the same turn.\n\n**Alaithi, Rune of the Mountain**: Pick up to 2 friendly **LUMINETH REALM-LORDS** units for each instance of this rune depicted on your **battle scripture** to be the targets. Each target has **WARD (5+)**. In addition, the following enhanced effects apply:\n• While **Varinor, Rune of Strength** is depicted on your **battle scripture**, the targets’ melee weapons have **Anti-charge (+1 Rend)**.\n• While **Ydriliqi, Rune of the River** is depicted on your **battle scripture**, subtract 1 from wound rolls for attacks made by enemy units while they are in combat with any of the targets.\n\n**Ydriliqi, Rune of the River**: Pick up to 2 friendly **LUMINETH REALM-LORDS** units for each instance of this rune depicted on your **battle scripture** to be the targets. Subtract 2 from charge rolls for enemy units while they are within 12\" of any of the targets. In addition, the following enhanced effects apply:\n• While **Alaithi, Rune of the Mountain** is depicted on your **battle scripture**, ignore negative modifiers to hit rolls and wound rolls for attacks made by the targets.\n• If **Oreali, Rune of the Wind** is depicted on your **battle scripture**, each target can immediately move up to 3\". They can pass through the combat ranges of enemy units and can end that move in combat.\n\n**Oreali, Rune of the Wind**: Pick up to 2 friendly **LUMINETH REALM-LORDS** units for each instance of this rune depicted on your **battle scripture** to be the targets. Subtract 1 from hit rolls for attacks made by enemy units while they are in combat with any of the targets. In addition, the following enhanced effects apply:\n• While **Varinor, Rune of Strength** is depicted on your battle scripture, add 4\" to each target’s Move characteristic.\n• While **Alaithi, Rune of the Mountain** is depicted on your **battle scripture**, add 5 to each target’s control score.\n\n**Thalari, Rune of the Zenith**: Add 2 to casting rolls for friendly **LUMINETH REALM-LORDS** units. In addition, if you have 4 or more unique runes depicted on your **battle scripture**, add 4\" to the Move characteristic of friendly **LUMINETH REALM-LORDS** units and friendly **LUMINETH REALM-LORDS** units’ attacks score critical hits on unmodified hit rolls of 5+.\n\n**Designer’s Note:** *We recommend noting the runes you have inscribed in each battle round on a piece of paper to keep track of which are currently depicted on your **battle scripture.** Feel free to note them by type (Strength, River, Mountain etc.), by initial (each has a different first letter) or, if you are feeling particularly adventurous, you can try your hand at aelven calligraphy and learn to draw each rune!*"
-      },
-      {
-        "name": "World Runes",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Add 1 **Alaithi, Rune of the Mountain** to your **library** for each friendly **ALARITH** unit on the battlefield.\n\nAdd 1 **Oreali, Rune of the Wind** to your **library** for each friendly **HURAKAN** unit on the battlefield.\n\nAdd 1 **Ydriliqi, Rune of the River** to your **library** for each friendly **YDRILAN** unit on the battlefield.\n\nYou can have a maximum of 6 of each type of rune in your **library**."
-      },
-      {
-        "name": "Entreat Spirits",
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
-        "icon": "rallying",
-        "declare": "You can use this ability if you have 3 or more runes in your **library**. Pick a friendly non- **UNIQUE MONSTER** unit that has been destroyed to be the target.",
-        "effect": "Remove any 3 runes from your **library**. Then, set up a replacement unit identical to the target wholly within 6\" of a terrain feature and more than 9\" from all enemy units. Allocate 6 damage points to the replacement unit (ward rolls cannot be made for those damage points)."
-      },
-      {
-        "name": "Depict Rune",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
-        "icon": "offensive",
-        "declare": "You must use this ability.",
-        "effect": "Remove all runes from your **battle scripture**. Then, pick any number of runes to remove from your **library** and depict them on your **battle scripture**. Runes removed from your library in this way are removed for the rest of the battle.\n\n**Designer’s Note:** *Runes are used to activate powerful abilities on your units’ warscrolls.*"
-      },
-      {
-        "name": "The Realms Fight Back",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "special",
-        "declare": "Pick a terrain feature. Then, pick an enemy unit within 6\" of that terrain feature to be the target.",
-        "effect": "Roll a D3 and apply the corresponding effect for the rest of the turn.\n\n**1.  Eruption of Earth:** Inflict 3 mortal damage on the target.\n**2.  Howling Winds:** Subtract 5 from the target’s control score.\n**3.  Flash Flood:** The target has **STRIKE-LAST**."
       }
     ]
   }

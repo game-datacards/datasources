@@ -8,7 +8,7 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-06-17T10:06:08.987Z",
+  "updated": "2026-06-28T12:32:20.323Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -6335,6 +6335,400 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "a636afad-7b51-53d3-b545-b9338410c375",
+      "name": "Allies of the Free Cities",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "CITIES_OF_SIGMAR",
+      "parentFaction": "Cities of Sigmar",
+      "isLegends": false,
+      "lore": "The free cities of the God-King stand as bulwarks against the brutality of the daemon, the gheist and the orruk. Founded in an era of rekindled hope, these vast, fortified strongholds are interspersed throughout the Mortal Realms, each home to a bustling population of faithful citizens.\n\nWhen you pick the Cities of Sigmar faction for your army, you can choose for it to be an Allies of the Free Cities Army of Renown. If you do so, use the faction rules on these pages instead of the Cities of Sigmar faction rules. Every unit in your army must be drawn from the units listed as described in Army of Renown: Allies of the Free Cities. All units in your army gain the **ALLIES OF THE FREE CITIES** keyword.",
+      "rules": [
+        {
+          "name": "Form up, Allies!",
+          "phase": "startOfTurn",
+          "phaseDetails": "Start of Battle Round",
+          "icon": "special",
+          "declare": "Pick a friendly **ALLIES OF THE FREE CITIES** unit to use this ability, then pick 2 other visible friendly **ALLIES OF THE FREE CITIES** units wholly within 12\" of it to be the targets.\n\nThe unit using this ability and the targets:\n• cannot be **under orders**.\n• must each be a different unit type.",
+          "effect": "For the rest of the battle round, the unit using this ability and the targets are **under orders**.\n\n**Designer’s Note:** *‘Unit type’ refers to the name of the warscroll (Core Rules, 4.0), e.g. ‘Freeguild Cavalier-Marshal’ or ‘Allies of the Free Cities Auric Hearthguard’.*"
+        },
+        {
+          "name": "Forces of Order",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "While 3 friendly **ALLIES OF THE FREE CITIES** units are wholly within 12\" of each other and 1 of those units has the **AELF** keyword, 1 of those units has the **DUARDIN** keyword and 1 of those units has the **SIGMARITE** keyword:\n\n• Those units have **WARD (5+)** against shooting attacks.\n• Add 3 to those units’ control scores.\n• Add 1 to wound rolls for those units’ combat attacks."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "edbafc11-6f40-5af0-8910-cb45112ae24d",
+            "name": "Signet of the City",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Once Per Battle (Army), Any Hero Phase",
+            "icon": "special",
+            "declare": "Pick this unit and each visible friendly **ALLIES OF THE FREE CITIES** unit wholly within 18\" of this unit to be the targets.",
+            "effect": "For the rest of the turn:\n\n• The targets are **under orders**.\n• The targets have **WARD (6+)**.\n• The targets have a maximum control score of 1.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "05274d74-8758-5402-96cb-56ef1965f17a",
+            "name": "Respected Commander",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Reaction: You declared the ‘Redeploy’ command for a visible **ALLIES OF THE FREE CITIES** unit wholly within 18\" of this unit",
+            "icon": "movement",
+            "declare": null,
+            "effect": "If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "1db8484b-eae8-57a2-a24c-9a398ff1c321",
+          "name": "Allies of the Free Cities Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "CITIES_OF_SIGMAR",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "1986f5ac-a9d5-5b19-966d-2a366f57b1e4",
+              "name": "These Realms are Ours",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **ALLIES OF THE FREE CITIES WIZARD** to cast this spell, pick an objective within 18\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "For the rest of the turn, melee weapons used by friendly **ALLIES OF THE FREE CITIES** units have **Charge (+1 Damage)** for attacks that target enemy units that are contesting the target objective.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        },
+        {
+          "id": "5fb33634-0aae-5f67-8c3b-99dbf24ec1a0",
+          "name": "Allies of the Free Cities Prayer Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "CITIES_OF_SIGMAR",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "c825f860-5037-58ee-ace7-4554803eb54f",
+              "name": "Divine Mandate",
+              "castingValue": 5,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "control",
+              "declare": "Pick a friendly **ALLIES OF THE FREE CITIES PRIEST** to chant this prayer, pick a visible friendly **ALLIES OF THE FREE CITIES** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+              "effect": "If the chanting roll was 10+, you can pick another eligible unit to be a second target. Until the start of your next turn, enemy units have a maximum control score of 1 while they are in combat with any of the targets.",
+              "keywords": ["Prayer", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Allies of the Free Cities Vanari Auralan Wardens",
+          "Allies of the Free Cities Vanari Auralan Sentinels",
+          "Alchemite Warforger",
+          "Freeguild Fusiliers",
+          "Gate Gargants",
+          "Fusil-Major on Ogor Warhulk",
+          "Freeguild Command Corps Adjutants",
+          "Freeguild Command Corps Auxiliaries",
+          "Aqshian Pyrocaster",
+          "Freeguild Command Corps Whisperblade",
+          "Allies of the Free Cities Auric Hearthguard",
+          "Freeguild Cavaliers",
+          "Freeguild Grenadiers",
+          "Freeguild Steelhelms",
+          "Ironweld Great Cannon",
+          "Wildercorps Hunters",
+          "Allies of the Free Cities Vulkyn Flameseekers",
+          "Amethyst Knellmage",
+          "Freeguild Cavalier-Marshal",
+          "Freeguild Marshal and Relic Envoy",
+          "Mallus Forgepriest",
+          "Cannonade Cogfort",
+          "Conqueror Cogfort",
+          "Freeguild Gallants"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [
+          {
+            "limitingInstances": 1,
+            "limitedInstances": 1,
+            "limiting": {
+              "warscrolls": [],
+              "keywords": ["Sigmarite"],
+              "factionKeywords": []
+            },
+            "limited": {
+              "warscrolls": [],
+              "keywords": ["Aelf"]
+            }
+          },
+          {
+            "limitingInstances": 1,
+            "limitedInstances": 1,
+            "limiting": {
+              "warscrolls": [],
+              "keywords": ["Sigmarite"],
+              "factionKeywords": []
+            },
+            "limited": {
+              "warscrolls": [],
+              "keywords": ["Duardin"]
+            }
+          }
+        ],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "12a82f0e-f97a-5997-a2c6-d3afdefae212",
+      "name": "The Iron March",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "CITIES_OF_SIGMAR",
+      "parentFaction": "Cities of Sigmar",
+      "isLegends": false,
+      "lore": "Cannons roar and the gun-studded walking castles known as Cogforts lumber forwards, their every step an earthquake and their every barrage gouging gaping holes in the enemy line. Once, these engines of war were used to anchor the ever-expanding borders of Sigmar’s empire. Now First Marshal Tahlia Vedra has ordered them forward en masse, risking her most precious assets to blunt the enemy’s surge and throw them back. Such bold actions might be humanity’s only chance to snatch triumph from the precipice of catastrophe.\n\nWhen you pick the Cities of Sigmar faction for your army, you can choose for it to be the Iron March Army of Renown. If you do so, use the faction rules on these pages instead of the Cities of Sigmar faction rules. Every unit in your army must be drawn from the units listed as described in Army of Renown: The Iron March. All units in your army gain the **IRON MARCH** keyword.",
+      "rules": [
+        {
+          "name": "Form Up, Iron March!",
+          "phase": "startOfTurn",
+          "phaseDetails": "Start of Battle Round",
+          "icon": "special",
+          "declare": "Pick a friendly **IRON MARCH** unit to use this ability, then pick either 1 or 2 other visible friendly **IRON MARCH** units wholly within 12\" of it to be the targets.\n\nThe unit using this ability and the targets:\n\n• cannot be **under orders**.\n• must each be a different unit type.",
+          "effect": "For the rest of the battle round, the unit using this ability and the targets are **under orders**.\n\n**Designer’s Note:** *‘Unit type’ refers to the name of the warscroll (Core Rules, 4.0), e.g. ‘Cannonade Cogfort’ or ‘Mallus Forgepriest’.*"
+        }
+      ],
+      "enhancements": {
+        "artefacts": [],
+        "heroicTraits": [],
+        "other": [
+          {
+            "id": "30f33a28-7a76-5d16-b704-6ac931735189",
+            "name": "Engineer Kirsta Loudren",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "If this unit is destroyed, before removing it from play, roll a dice for each visible unit (friendly and enemy) within its combat range. On a 3+, inflict an amount of mortal damage on that unit equal to the roll.",
+            "cpCost": null
+          },
+          {
+            "id": "9414802c-c596-5ca7-a4ce-2f433817e2f6",
+            "name": "Engineer Gurrn Ashbrow",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Passive",
+            "icon": "rallying",
+            "declare": null,
+            "effect": "Each time this unit uses the ‘Rally’ command, you can make 3 additional rally rolls of D6.",
+            "cpCost": null
+          },
+          {
+            "id": "fcb32655-b549-5fdd-abe5-62cf0c102df8",
+            "name": "Engineer Bartel Holst",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "This unit has **WARD (6+)** and **STRIKE-LAST**.",
+            "cpCost": null
+          },
+          {
+            "id": "78262df9-241f-51bb-860b-140a1a1de387",
+            "name": "Battle-Priest Solantra Whyl",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Passive",
+            "icon": "special",
+            "declare": null,
+            "effect": "This unit has **PRIEST (1)**.",
+            "cpCost": null
+          },
+          {
+            "id": "7383c9e0-303b-50d9-b374-65546fa47fde",
+            "name": "Broadmoore and Louse",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "startOfTurn",
+            "phaseDetails": "Passive",
+            "icon": "special",
+            "declare": null,
+            "effect": "Add 2 to the Attacks characteristic of this unit’s **Crew’s Leadshotters**. In addition, if this unit is destroyed, before removing it from play, roll a dice. On a 3+, you can set up a **Freeguild Marshal and Relic Envoy** wholly within 6\" of this unit and not in combat. That unit has the **IRON MARCH** keyword.",
+            "cpCost": null
+          },
+          {
+            "id": "cb80ee5e-6964-53e3-8b97-0c5ff9730fcd",
+            "name": "Master Sapper Gravelock Fiske",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "shootingPhase",
+            "phaseDetails": "Passive",
+            "icon": "shooting",
+            "declare": null,
+            "effect": "This unit’s ranged weapons have **Anti‑FACTION TERRAIN (+1 Rend)** and **Anti-WAR MACHINE (+1 Rend)**.",
+            "cpCost": null
+          },
+          {
+            "id": "ee1ffb86-6d00-5024-8ef4-5e21f681379f",
+            "name": "Castellan-Captain Vyan Philsin",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "Add 1 to wound rolls for combat attacks made by friendly **IRON MARCH INFANTRY** units while they are wholly within 12\" of this unit and **under orders**.",
+            "cpCost": null
+          },
+          {
+            "id": "2c68a73b-28e0-5eac-b136-e4933d6f0e34",
+            "name": "Commodore De Graçon",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "startOfTurn",
+            "phaseDetails": "Deployment Phase",
+            "icon": "movement",
+            "declare": null,
+            "effect": "This unit and up to 1 other friendly **IRON MARCH WAR MACHINE** within this unit’s combat range can use the ‘Normal Move’ ability as if it were your movement phase.",
+            "cpCost": null
+          },
+          {
+            "id": "405e7e52-e869-50e5-af10-53d64a0ea120",
+            "name": "Castellan-Captain Regan Vandercloud",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "chargePhase",
+            "phaseDetails": "Any Charge Phase",
+            "icon": "special",
+            "declare": "If this unit charged this turn, pick a visible enemy unit within 1\" of it to be the target.",
+            "effect": "Roll a D3. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• The target has a maximum control score of 1 for the rest of the turn.",
+            "cpCost": null
+          }
+        ]
+      },
+      "lores": [
+        {
+          "id": "3e46dc60-352f-5aae-afc2-6ef29d7315dd",
+          "name": "The Iron March Prayer Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "CITIES_OF_SIGMAR",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "5ca6249a-9d22-5f83-89d5-fec8d50cfac7",
+              "name": "The Chant of Iron",
+              "castingValue": 4,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **IRON MARCH PRIEST** to chant this prayer, pick either a visible enemy unit within 18\" of them or a visible friendly **IRON MARCH** unit that is wholly within 12\" of them and that has not been picked to be the target of this ability this turn to be the target, then make a chanting roll of D6.",
+              "effect": "If you picked an enemy unit:\n\n• If the chanting roll was 8+, you can pick another eligible enemy unit to be a second target.\n•Subtract 2\" from each target’s Move characteristic until the start of your next turn.\n\nIf you picked a friendly unit, **Heal (D3)** the target and the chanter. If the chanting roll was 8+, **Heal (D3)** each visible friendly **IRON MARCH** unit that is wholly 12\" of the chanter and that has not been healed by this ability this turn instead.",
+              "keywords": ["Prayer", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Mallus Forgepriest",
+          "Cannonade Cogfort",
+          "Linebreaker Cogfort",
+          "Conqueror Cogfort",
+          "Immolator Cogfort",
+          "Freeguild Gallants"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [
+          {
+            "limitingInstances": 1,
+            "limitedInstances": 1,
+            "limiting": {
+              "warscrolls": ["Linebreaker Cogfort", "Conqueror Cogfort"],
+              "keywords": [],
+              "factionKeywords": []
+            },
+            "limited": {
+              "warscrolls": ["Mallus Forgepriest"],
+              "keywords": []
+            }
+          },
+          {
+            "limitingInstances": 1,
+            "limitedInstances": 1,
+            "limiting": {
+              "warscrolls": ["Linebreaker Cogfort", "Conqueror Cogfort"],
+              "keywords": [],
+              "factionKeywords": []
+            },
+            "limited": {
+              "warscrolls": ["Freeguild Gallants"],
+              "keywords": []
+            }
+          }
+        ],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "d516cb36-3141-5141-8bc1-e0c23945a9e4",
@@ -6479,20 +6873,6 @@
         "declare": "If this unit is not in combat, pick a point on the battlefield more than 3\" from all units (friendly and enemy) and terrain features to be the target point. Then, pick another visible friendly **CITIES OF SIGMAR INFANTRY** or **CAVALRY HERO** that is wholly within 18\" of this unit and not in combat to be the target unit.",
         "effect": "Remove this unit from the battlefield and set it up again within 1\" of the target unit and not in combat. Then, remove the target unit from the battlefield and set it up again within 1\" of the target point and not in combat. This unit and the target unit can use **MOVE** abilities in the following movement phase (this is an exception to Core Rules, 24.0).",
         "cpCost": null
-      },
-      {
-        "id": "edbafc11-6f40-5af0-8910-cb45112ae24d",
-        "name": "Signet of the City",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Battle (Army), Any Hero Phase",
-        "icon": "special",
-        "declare": "Pick this unit and each visible friendly **ALLIES OF THE FREE CITIES** unit wholly within 18\" of this unit to be the targets.",
-        "effect": "For the rest of the turn:\n\n• The targets are **under orders**.\n• The targets have **WARD (6+)**.\n• The targets have a maximum control score of 1.",
-        "cpCost": null
       }
     ],
     "heroicTraits": [
@@ -6579,20 +6959,6 @@
         "declare": null,
         "effect": "Ignore negative modifiers to hit rolls and wound rolls applied by enemy abilities for attacks made by visible friendly units that are wholly within 12\" of this unit and **under orders**.",
         "cpCost": null
-      },
-      {
-        "id": "05274d74-8758-5402-96cb-56ef1965f17a",
-        "name": "Respected Commander",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Reaction: You declared the ‘Redeploy’ command for a visible **ALLIES OF THE FREE CITIES** unit wholly within 18\" of this unit",
-        "icon": "movement",
-        "declare": null,
-        "effect": "If you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.",
-        "cpCost": null
       }
     ],
     "other": [
@@ -6636,132 +7002,6 @@
         "icon": "special",
         "declare": null,
         "effect": "Remove 1 of this unit’s **heat tokens**.",
-        "cpCost": null
-      },
-      {
-        "id": "30f33a28-7a76-5d16-b704-6ac931735189",
-        "name": "Engineer Kirsta Loudren",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "If this unit is destroyed, before removing it from play, roll a dice for each visible unit (friendly and enemy) within its combat range. On a 3+, inflict an amount of mortal damage on that unit equal to the roll.",
-        "cpCost": null
-      },
-      {
-        "id": "9414802c-c596-5ca7-a4ce-2f433817e2f6",
-        "name": "Engineer Gurrn Ashbrow",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Passive",
-        "icon": "rallying",
-        "declare": null,
-        "effect": "Each time this unit uses the ‘Rally’ command, you can make 3 additional rally rolls of D6.",
-        "cpCost": null
-      },
-      {
-        "id": "fcb32655-b549-5fdd-abe5-62cf0c102df8",
-        "name": "Engineer Bartel Holst",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "This unit has **WARD (6+)** and **STRIKE-LAST**.",
-        "cpCost": null
-      },
-      {
-        "id": "78262df9-241f-51bb-860b-140a1a1de387",
-        "name": "Battle-Priest Solantra Whyl",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "This unit has **PRIEST (1)**.",
-        "cpCost": null
-      },
-      {
-        "id": "7383c9e0-303b-50d9-b374-65546fa47fde",
-        "name": "Broadmoore and Louse",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "Add 2 to the Attacks characteristic of this unit’s **Crew’s Leadshotters**. In addition, if this unit is destroyed, before removing it from play, roll a dice. On a 3+, you can set up a **Freeguild Marshal and Relic Envoy** wholly within 6\" of this unit and not in combat. That unit has the **IRON MARCH** keyword.",
-        "cpCost": null
-      },
-      {
-        "id": "cb80ee5e-6964-53e3-8b97-0c5ff9730fcd",
-        "name": "Master Sapper Gravelock Fiske",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "shootingPhase",
-        "phaseDetails": "Passive",
-        "icon": "shooting",
-        "declare": null,
-        "effect": "This unit’s ranged weapons have **Anti‑FACTION TERRAIN (+1 Rend)** and **Anti-WAR MACHINE (+1 Rend)**.",
-        "cpCost": null
-      },
-      {
-        "id": "ee1ffb86-6d00-5024-8ef4-5e21f681379f",
-        "name": "Castellan-Captain Vyan Philsin",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Add 1 to wound rolls for combat attacks made by friendly **IRON MARCH INFANTRY** units while they are wholly within 12\" of this unit and **under orders**.",
-        "cpCost": null
-      },
-      {
-        "id": "2c68a73b-28e0-5eac-b136-e4933d6f0e34",
-        "name": "Commodore De Graçon",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "startOfTurn",
-        "phaseDetails": "Deployment Phase",
-        "icon": "movement",
-        "declare": null,
-        "effect": "This unit and up to 1 other friendly **IRON MARCH WAR MACHINE** within this unit’s combat range can use the ‘Normal Move’ ability as if it were your movement phase.",
-        "cpCost": null
-      },
-      {
-        "id": "405e7e52-e869-50e5-af10-53d64a0ea120",
-        "name": "Castellan-Captain Regan Vandercloud",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "chargePhase",
-        "phaseDetails": "Any Charge Phase",
-        "icon": "special",
-        "declare": "If this unit charged this turn, pick a visible enemy unit within 1\" of it to be the target.",
-        "effect": "Roll a D3. On a 2+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• The target has a maximum control score of 1 for the rest of the turn.",
         "cpCost": null
       },
       {
@@ -6934,30 +7174,6 @@
         "icon": "offensive",
         "declare": "Pick a friendly unit that is **under orders** and in combat with an enemy unit that charged this turn to use this ability.",
         "effect": "For the rest of the turn, add 1 to the Rend characteristic of that unit’s melee weapons."
-      },
-      {
-        "name": "Form Up, Iron March!",
-        "phase": "startOfTurn",
-        "phaseDetails": "Start of Battle Round",
-        "icon": "special",
-        "declare": "Pick a friendly **IRON MARCH** unit to use this ability, then pick either 1 or 2 other visible friendly **IRON MARCH** units wholly within 12\" of it to be the targets.\n\nThe unit using this ability and the targets:\n\n• cannot be **under orders**.\n• must each be a different unit type.",
-        "effect": "For the rest of the battle round, the unit using this ability and the targets are **under orders**.\n\n**Designer’s Note:** *‘Unit type’ refers to the name of the warscroll (Core Rules, 4.0), e.g. ‘Cannonade Cogfort’ or ‘Mallus Forgepriest’.*"
-      },
-      {
-        "name": "Form up, Allies!",
-        "phase": "startOfTurn",
-        "phaseDetails": "Start of Battle Round",
-        "icon": "special",
-        "declare": "Pick a friendly **ALLIES OF THE FREE CITIES** unit to use this ability, then pick 2 other visible friendly **ALLIES OF THE FREE CITIES** units wholly within 12\" of it to be the targets.\n\nThe unit using this ability and the targets:\n• cannot be **under orders**.\n• must each be a different unit type.",
-        "effect": "For the rest of the battle round, the unit using this ability and the targets are **under orders**.\n\n**Designer’s Note:** *‘Unit type’ refers to the name of the warscroll (Core Rules, 4.0), e.g. ‘Freeguild Cavalier-Marshal’ or ‘Allies of the Free Cities Auric Hearthguard’.*"
-      },
-      {
-        "name": "Forces of Order",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "While 3 friendly **ALLIES OF THE FREE CITIES** units are wholly within 12\" of each other and 1 of those units has the **AELF** keyword, 1 of those units has the **DUARDIN** keyword and 1 of those units has the **SIGMARITE** keyword:\n\n• Those units have **WARD (5+)** against shooting attacks.\n• Add 3 to those units’ control scores.\n• Add 1 to wound rolls for those units’ combat attacks."
       }
     ]
   }

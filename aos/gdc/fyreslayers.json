@@ -8,7 +8,7 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-06-17T10:06:10.705Z",
+  "updated": "2026-06-28T12:32:21.886Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -2075,6 +2075,170 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "3a6d222c-0710-5f03-80c7-835ac5d938ae",
+      "name": "Lofnir Drothkeepers",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "FYRESLAYERS",
+      "parentFaction": "Fyreslayers",
+      "isLegends": false,
+      "lore": "The Lofnir lodge is said to be the most dedicated to Vulcatrix, the Ur-Salamander. Their fanaticism runs so deeply that even other Fyreslayers treat them warily. Masters of the art of beast-taming, Lofnir Drothkeepers search the length and breadth of the realms for the eggs of Magmadroths, said to be Vulcatrix’s spawn.\n\nWhen you pick the Fyreslayers faction for your army, you can choose for it to be a Lofnir Drothkeepers Army of Renown. If you do so, use the faction rules on these pages instead of the Fyreslayers faction rules. Every unit in your army must be drawn from the units listed in the roster options, as described in Army of Renown: Lofnir Drothkeepers. All units in your army gain the Drothkeepers keyword.",
+      "rules": [
+        {
+          "name": "Daring Tamers",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "Enemy **MONSTERS** have **STRIKE-LAST** while they are in combat with 2 or more friendly **DROTHKEEPERS Vulkyn Flameseekers** units."
+        },
+        {
+          "name": "Skilled Drothwranglers",
+          "phase": "movementPhase",
+          "phaseDetails": "Reaction: You declared a non-CHARGE MOVE ability for a friendly MAGMADROTH",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Pick a friendly **Vulkyn Flameseekers** unit and/or a friendly **DROTHKEEPERS INFANTRY HERO** that are not in combat and are wholly within 6\" of the **MAGMADROTH** to be the targets. Units that have **hitched a lift** this turn (see below) cannot be targets.\n\nRemove the targets from the battlefield. After the **MAGMADROTH** ends its move, you must set up each target on the battlefield, wholly within 6\" of the **MAGMADROTH** and not in combat. The targets have **hitched a lift**. Units that **hitched a lift** cannot use **CHARGE** abilities in the same turn."
+        },
+        {
+          "name": "Rearing Strike",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **DROTHKEEPERS MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
+          "effect": "Roll 2 dice. Add 2 to each roll if the target is a **MONSTER**. For each 5+, inflict D3 mortal damage on the target."
+        },
+        {
+          "name": "Searing Claws",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **DROTHKEEPERS MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
+          "effect": "Roll a dice. On a 3+, for the rest of the turn, add 1 to the Rend characteristic of melee weapons used for attacks that target that enemy unit."
+        },
+        {
+          "name": "Ferocious Heat",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **DROTHKEEPERS MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
+          "effect": "Roll a dice. On a 3+, ward rolls cannot be made for the target for the rest of the turn."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "1f1e9ba8-9bc7-5dd8-8c21-fae15999db8f",
+            "name": "Mastery Over Monsters",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "Passive",
+            "icon": "control",
+            "declare": null,
+            "effect": "While this unit is contesting an objective, enemy **MONSTERS** contesting that objective each have a maximum control score of 2.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "1d97c0fc-dd1e-5d46-8b7a-5365456d543b",
+            "name": "Raised Around Beasts",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "The melee weapons of friendly non-**MONSTER** units have **Anti-MONSTER (+1 Rend)** while they are wholly within 9\" of this unit.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "3530539a-4040-5a41-9669-d609533e4f69",
+          "name": "Lofnir Drothkeepers Prayer Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "FYRESLAYERS",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "d62656c8-7240-5250-ae8e-480ee278ef1f",
+              "name": "Breath of Vulcatrix",
+              "castingValue": 4,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **DROTHKEEPERS PRIEST** to chant this prayer, pick a visible friendly **DROTHKEEPERS MAGMADROTH** wholly within 12\" of them to be a target, then make a chanting roll of D6.",
+              "effect": "Until the start of your next turn, the Damage characteristic of the target’s **Roaring Fyrestream** is 3 instead of D3.",
+              "keywords": ["Prayer", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "a1567884-70b2-5929-bae4-53d4a9824c94",
+          "name": "Lofnir Drothkeepers Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "FYRESLAYERS",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "9566501d-a9ab-5ca8-9039-e4ae3c32a251",
+              "name": "Summon Molten Infernoth",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "If there is not a friendly **Molten Infernoth** on the battlefield, pick a friendly **DROTHKEEPERS PRIEST** to chant this prayer, then make a chanting roll of D6.",
+              "effect": "Set up a **Molten Infernoth** wholly within 12\" of the chanter, visible to them and more than 9\" from all enemy units.",
+              "keywords": ["Summon", "Prayer"],
+              "linkedWarscroll": "Molten Infernoth"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Auric Runesmiter",
+          "Auric Runeson on Magmadroth",
+          "Auric Runemaster",
+          "Scourge of Ghyran Auric Runeson on Magmadroth",
+          "Auric Runeson",
+          "Vulkyn Flameseekers",
+          "Auric Runefather on Magmadroth",
+          "Auric Runesmiter on Magmadroth"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Auric Runeson on Magmadroth",
+              "Scourge of Ghyran Auric Runeson on Magmadroth"
+            ]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "ddccd19c-ef10-523b-8606-4ca1c5c17406",
@@ -2229,20 +2393,6 @@
   "enhancements": {
     "artefacts": [
       {
-        "id": "1f1e9ba8-9bc7-5dd8-8c21-fae15999db8f",
-        "name": "Mastery Over Monsters",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "endOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "control",
-        "declare": null,
-        "effect": "While this unit is contesting an objective, enemy **MONSTERS** contesting that objective each have a maximum control score of 2.",
-        "cpCost": null
-      },
-      {
         "id": "6577cce0-631f-50e7-81a6-cb02eaeb4c0e",
         "name": "Droth-helm",
         "cardType": "Enhancement",
@@ -2286,20 +2436,6 @@
       }
     ],
     "heroicTraits": [
-      {
-        "id": "1d97c0fc-dd1e-5d46-8b7a-5365456d543b",
-        "name": "Raised Around Beasts",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "The melee weapons of friendly non-**MONSTER** units have **Anti-MONSTER (+1 Rend)** while they are wholly within 9\" of this unit.",
-        "cpCost": null
-      },
       {
         "id": "def697f7-bbd5-5168-87aa-00f3c9e8e987",
         "name": "Blood of the Berzerker",
@@ -2455,46 +2591,6 @@
   ],
   "rules": {
     "battleTraits": [
-      {
-        "name": "Daring Tamers",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Enemy **MONSTERS** have **STRIKE-LAST** while they are in combat with 2 or more friendly **DROTHKEEPERS Vulkyn Flameseekers** units."
-      },
-      {
-        "name": "Skilled Drothwranglers",
-        "phase": "movementPhase",
-        "phaseDetails": "Reaction: You declared a non-CHARGE MOVE ability for a friendly MAGMADROTH",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Pick a friendly **Vulkyn Flameseekers** unit and/or a friendly **DROTHKEEPERS INFANTRY HERO** that are not in combat and are wholly within 6\" of the **MAGMADROTH** to be the targets. Units that have **hitched a lift** this turn (see below) cannot be targets.\n\nRemove the targets from the battlefield. After the **MAGMADROTH** ends its move, you must set up each target on the battlefield, wholly within 6\" of the **MAGMADROTH** and not in combat. The targets have **hitched a lift**. Units that **hitched a lift** cannot use **CHARGE** abilities in the same turn."
-      },
-      {
-        "name": "Rearing Strike",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **DROTHKEEPERS MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
-        "effect": "Roll 2 dice. Add 2 to each roll if the target is a **MONSTER**. For each 5+, inflict D3 mortal damage on the target."
-      },
-      {
-        "name": "Searing Claws",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **DROTHKEEPERS MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
-        "effect": "Roll a dice. On a 3+, for the rest of the turn, add 1 to the Rend characteristic of melee weapons used for attacks that target that enemy unit."
-      },
-      {
-        "name": "Ferocious Heat",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **DROTHKEEPERS MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
-        "effect": "Roll a dice. On a 3+, ward rolls cannot be made for the target for the rest of the turn."
-      },
       {
         "name": "Rune of Fiery Determination",
         "phase": "heroPhase",

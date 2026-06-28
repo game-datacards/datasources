@@ -8,7 +8,7 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-06-17T10:06:14.607Z",
+  "updated": "2026-06-28T12:32:25.357Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -2875,6 +2875,490 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "a24a3e4c-fc06-5260-87dc-69959fae33d0",
+      "name": "Lords of the Clan",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "parentFaction": "Sylvaneth",
+      "isLegends": false,
+      "lore": "When the hour is dire, the leaders and elite of a Sylvaneth clan will suspend their duties of governance and guardianship to join their kin in battle, bringing their ancient wisdom and awesome strength to bear against the glade’s foes. Often towering over their followers, they are walking symbols of the forest’s soaring might.\n\nWhen you pick the Sylvaneth faction for your army, you can choose for it to be a Lords of the Clan Army of Renown. If you do so, use the faction rules on these pages instead of the Sylvaneth faction rules. Every unit in your army must be drawn from the units listed as described in Army of Renown: Lords of the Clan. All units in your army gain the **LORDS OF THE CLAN** keyword.",
+      "rules": [
+        {
+          "name": "Dormant Heroes",
+          "phase": "startOfTurn",
+          "phaseDetails": "Deployment Phase",
+          "icon": "special",
+          "declare": "If there are more friendly **LORDS OF THE CLAN** units on the battlefield than there are in reserve, pick a friendly **LORDS OF THE CLAN MONSTER** unit that has not been deployed.",
+          "effect": "Set up that unit in reserve as a **dormant forest spirit**. It has now been deployed."
+        },
+        {
+          "name": "Our Reach is Long",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "The **creeping overgrowth** (referenced by other abilities) extends 6\" from each terrain feature that has a friendly **overgrown token**.\n\nIncrease this range by 1\" for each friendly **LORDS OF THE CLAN** unit that is wholly outside friendly territory."
+        },
+        {
+          "name": "Elder Authority",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Deployment Phase",
+          "icon": "special",
+          "declare": "You can only use this ability if there is a friendly **Awakened Wyldwood** on the battlefield.",
+          "effect": "You can set up up to 2 additional **Awakened Wyldwoods** on the battlefield (an **Awakened Wyldwood** is a single tree miniature with a crescent- shaped base). The first can be set up anywhere on the battlefield more than 3\" from all units, objectives and other terrain features. The second can be set up anywhere on the battlefield wholly outside of enemy territory and more than 3\" from all units, objectives and other terrain features.\n\n**Designer’s Note:** *The original* **Awakened Wyldwood** *is set up in Step 1 of the deployment phase using the 'Deploy Faction Terrain’ ability. This ability allows you to set up a second and third such terrain feature and is used in Step 3 of the deployment phase, after armies have been deployed.*"
+        },
+        {
+          "name": "Roused to Fury",
+          "phase": "movementPhase",
+          "phaseDetails": "Enemy Movement Phase",
+          "icon": "special",
+          "declare": "Pick an enemy unit within 9\" of a friendly **Awakened Wyldwood** to be the target.",
+          "effect": "Pick 1 of the following units:\n\n• A friendly **LORDS OF THE CLAN** unit that is in reserve as a **dormant forest spirit**.\n• A friendly **LORDS OF THE CLAN MONSTER** that has been destroyed.\n\nSet up the unit you picked, or a replacement unit if you picked a destroyed unit, within 9\" of the target, wholly within 6\" of that friendly **Awakened Wyldwood** and not in combat. If you set up a replacement unit, allocate 6 damage points to it (ward rolls cannot be made for those damage points).\n\nThen, remove that friendly **Awakened Wyldwood** from the battlefield."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "33412e5d-2a32-5309-acb0-e74ba69c3680",
+            "name": "Rejuvenating Companions",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "End of Any Turn",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "**Heal (3)** this unit.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "d6a965ba-344c-5284-b61b-fec088cc5ba8",
+            "name": "Ancient Might",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "chargePhase",
+            "phaseDetails": "Passive",
+            "icon": "movement",
+            "declare": null,
+            "effect": "This unit can use **CHARGE** abilities even if it is in combat. If the charge roll is 3 or less when it does so, it does not count as having charged.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "62bea55d-f39d-5a33-ba0b-d59c9aade978",
+          "name": "Lords of the Clan Prayer Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "SYLVANETH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "d70edebd-0881-5d31-8d71-83cd6a20885c",
+              "name": "Song of Persistence",
+              "castingValue": 3,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **LORDS OF THE CLAN PRIEST** to chant this prayer, pick a friendly **LORDS OF THE CLAN MONSTER** that is wholly within the **creeping overgrowth** or that is visible to them and wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+              "effect": "Until the start of your next turn, ignore the effect of the ‘Battle Damaged’ ability on the target. In addition, if the chanting roll was 6+, the target has **WARD (6+)** until the start of your next turn.",
+              "keywords": ["Prayer", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        },
+        {
+          "id": "38fda3f5-d238-5c39-bf58-b8d01d6ddf44",
+          "name": "Lords of the Clan Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "SYLVANETH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "1fe0389a-41e3-537a-9b09-c0600c1bee8d",
+              "name": "Call Forth the Forest",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **LORDS OF THE CLAN WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "If there are fewer than 9 friendly **Awakened Wyldwoods** on the battlefield, you can set up an **Awakened Wyldwood** wholly within 24\" of the caster, more than 3\" from all objectives and more than 1\" from all enemy units and other terrain features. If there are 9 friendly **Awakened Wyldwoods** on the battlefield, **Heal (3)** each friendly **Awakened Wyldwood** instead.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "7a570c9e-4991-5d83-875c-639d50d195d3",
+          "name": "Lords of the Clan Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "SYLVANETH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "3da66026-5591-5fd4-ac27-65aeec1a881a",
+              "name": "Jade Winds",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **LORDS OF THE CLAN WIZARD** to cast this spell, pick 1 of the friendly **MANIFESTATIONS** below that is not on the battlefield, then make a casting roll of 2D6.\n\n• **Gladewyrm**\n• **Spiteswarm Hive**\n• **Vengeful Skullroot**",
+              "effect": "If you picked a **Gladewyrm** or **Vengeful Skullroot**, set it up wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. If you picked a **Spiteswarm Hive**, set it up wholly within 12\" of the caster and visible to them.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Spiteswarm Hive"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Treelord Ancient",
+          "Spirit of Durthu",
+          "Skaeth's Wild Hunt",
+          "Treelord",
+          "The Lady of Vines",
+          "Kurnoth Hunters with Greatswords",
+          "Grove Guardian",
+          "Awakened Wyldwood",
+          "Kurnoth Hunters with Greatscythes",
+          "Kurnoth Hunters with Greatbows"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "da6da3d7-9266-5d13-909c-a307d0225907",
+      "name": "Soulpod Guardians",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "parentFaction": "Sylvaneth",
+      "isLegends": false,
+      "lore": "The Sylvaneth’s soulpod groves can be found in forests throughout the Mortal Realms. Armies on the march may stumble upon and disturb them, if not attack them for their own ends. Should this happen, the wrath of the grove’s guardians is terrible indeed, for they fight to ensure their people’s very survival.\n\nWhen you pick the Sylvaneth faction for your army, you can choose for it to be a Soulpod Guardians Army of Renown. If you do so, use the faction rules on these pages instead of the Sylvaneth faction rules. Every unit in your army must be drawn from the units listed as described in Army of Renown: Soulpod Guardians. All units in your army gain the **SOULPOD GUARDIANS** keyword.",
+      "rules": [
+        {
+          "name": "The Sacred Groves",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "special",
+          "declare": "You must use this ability.",
+          "effect": "Set up 3 **Awakened Wyldwoods** (an Awakened Wyldwood is a single tree miniature with a crescent-shaped base) wholly within friendly territory, more than 1\" from all other terrain features and more than 3\" from all objectives. The tips of each crescent-shaped base must touch, forming a circle.\n\nOnce you have done so, for the rest of the battle, the 3 tree miniatures join to form 1 **Soulpod Grove** terrain feature. The area inside the circle formed by the trees is part of the terrain feature"
+        },
+        {
+          "name": "Jade Haven",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "The Health characteristic of your **Soulpod Grove** is 18. The **creeping overgrowth** extends 12\" from your **Soulpod Grove**."
+        },
+        {
+          "name": "Vengeance for the Lost",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "declare": null,
+          "effect": "If your **Soulpod Grove** has been demolished this battle, add 2 to the Attacks characteristic of friendly **SOULPOD GUARDIANS** units’ melee weapons."
+        },
+        {
+          "name": "Heart of the Forest",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "You cannot allocate more than 10 damage points per phase to a friendly **SOULPOD GUARDIANS** unit while it is wholly within 12\" of your **Soulpod Grove** (remaining damage points inflicted on it in that phase have no effect)."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "414b22b7-2882-5591-a991-e13a01affabc",
+            "name": "Clarionbuds",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Once Per Battle, Your Movement Phase",
+            "icon": "movement",
+            "declare": "&#x20;If there is an enemy unit wholly within 12\" of your **Soulpod Grove**, pick up to 3 friendly **SOULPOD GUARDIANS** units to be the targets.",
+            "effect": "Remove the targets from the battlefield and set them up again wholly within 12\" of your **Soulpod Grove** and more than 6\" from all enemy units.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "6c365c3f-baf3-54aa-a874-58325b757649",
+            "name": "Devoted Protector",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "If this unit is destroyed while it is wholly within 12\" of your **Soulpod Grove**, before removing this unit from the battlefield, **Heal (10)** your **Soulpod Grove**.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "d9c079fe-7296-5094-a297-39671b78cff2",
+          "name": "Soulpod Guardians Prayer Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "SYLVANETH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "cb699bde-e7c2-59fd-bdef-261b196ee91c",
+              "name": "Song of Vengeance",
+              "castingValue": 3,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "movement",
+              "declare": "Pick a friendly **SOULPOD GUARDIANS PRIEST** to chant this prayer, pick a visible friendly **SOULPOD GUARDIANS** unit that is wholly within 12\" of them and not in combat or that is wholly within 12\" of your **Soulpod Grove** to be the target, then make a chanting roll of D6.",
+              "effect": "If the chanting roll was 8+, you can pick another eligible unit to be a second target. The target(s) can move up to 5\" and can end that move in combat.",
+              "keywords": ["Prayer", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        },
+        {
+          "id": "86601278-d37e-59cb-93d5-f79f9cf899fc",
+          "name": "Soulpod Guardians Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "SYLVANETH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "e1760f08-6fa9-5db8-82cb-a266069778c5",
+              "name": "Cradling Vines",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **SOULPOD GUARDIANS WIZARD** to cast this spell, pick an objective within 18\" of them that has not been picked to be the target of this spell this turn to be the target, then make a casting roll of 2D6.",
+              "effect": "Until the start of your next turn, add 5 to the control scores of friendly units while they are contesting the target objective.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "07c80478-d80d-5de7-b034-c3320ad0b2c2",
+          "name": "Soulpod Guardians Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "SYLVANETH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "3da66026-5591-5fd4-ac27-65aeec1a881a",
+              "name": "Jade Winds",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **SOULPOD GUARDIANS WIZARD** to cast this spell, pick 1 of the friendly **MANIFESTATIONS** below that is not on the battlefield, then make a casting roll of 2D6.\n\n• **Gladewyrm**\n• **Spiteswarm Hive**\n• **Vengeful Skullroot**",
+              "effect": "If you picked a **Gladewyrm** or **Vengeful Skullroot**, set it up wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. If you picked a **Spiteswarm Hive**, set it up wholly within 12\" of the caster and visible to them.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Spiteswarm Hive"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "The Twistweald",
+          "Grove Guardian",
+          "Spite-Revenants",
+          "Gossamid Archers",
+          "Branchwych",
+          "Tree-Revenants",
+          "Warsong Revenant",
+          "Spiterider Lancers",
+          "Revenant Seekers",
+          "Arch-Revenant",
+          "Awakened Wyldwood"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "dded7376-cae1-5c26-99ff-39834d23a408",
+      "name": "The Evergreen Hunt",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "parentFaction": "Sylvaneth",
+      "isLegends": false,
+      "lore": "When flowers bloom in frost and cries fill the forest, shutter your windows and nail up your doors. For the summon of Kurnoth’s First Thorn is irresistible, and it beckons mortals forth to the hunt eternal. The Evergreen Hunt is sworn to slaughter any and all that would endanger their beloved Realm of Life. They are led by Belthanos, said to be a messenger of the Hunter-God Kurnoth himself.\n\nWhen you pick the Sylvaneth faction for your army, you can choose for it to be a The Evergreen Hunt Army of Renown. If you do so, use these faction rules instead of the Sylvaneth faction rules. Every unit in your army must be drawn from the units listed in the roster options, as described in Army of Renown: The Evergreen Hunt. All units in your army gain the Evergreen Hunt keyword.",
+      "rules": [
+        {
+          "name": "Nature Aetheric",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "special",
+          "declare": "Pick a terrain feature that is within friendly territory to be the target.",
+          "effect": "For the rest of the battle, friendly units are wholly within the **creeping overgrowth** while they are wholly within 6\" of the target."
+        },
+        {
+          "name": "Opening Horn Blast",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+          "icon": "special",
+          "declare": "You must use this ability at the start of the battle round.",
+          "effect": "Your chords are reset to 0. Then, you gain 1 **chord**:\n\n• If a friendly **Belthanos** is on the battlefield.\n• For each friendly **EVERGREEN HUNT** unit that is wholly within the same large quarter of the battlefield as the quarry.\n• For each quarry destroyed so far during the battle."
+        },
+        {
+          "name": "Song of the Hunt",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "The following cumulative effects apply to friendly **EVERGREEN HUNT** units depending on the number of **chords** you have:\n\n**1 chord – *Simple***: Add 1 to run rolls and charge rolls for friendly units wholly within the same quarter of the battlefield as the quarry.\n\n**2 chords – *Tuneful***: Add 1 to hit rolls and wound rolls for friendly units’ combat attacks that target an enemy unit wholly within the same quarter of the battlefield as the quarry.\n\n**3-5 chords – *Melodic***: Add 1 to the Attacks characteristic of melee weapons used by friendly units while they are in combat with the quarry.\n\n**6+ chords – *Mellifluous***: While a friendly unit is in combat with the quarry, the quarry has **STRIKE-LAST**."
+        },
+        {
+          "name": "Rhythm of the Chase",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+          "icon": "special",
+          "declare": "If there is no **quarry** on the battlefield, pick an enemy unit on the battlefield to be the target.",
+          "effect": "The target is the **quarry** for the rest of the battle."
+        },
+        {
+          "name": "Questing Tendrils",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Start of Any Turn",
+          "icon": "special",
+          "declare": "Pick the terrain feature that is closest to the **quarry** to be the target.",
+          "effect": "For the rest of the turn, friendly units are wholly within the **creeping overgrowth** while they are wholly within 6\" of the target."
+        },
+        {
+          "name": "A Prize Quarry is Sighted",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Battle (Army), Your Hero Phase",
+          "icon": "special",
+          "declare": "Pick an enemy unit within 9\" of a friendly **EVERGREEN HUNT** unit to be the target.",
+          "effect": "The target becomes the **quarry** for the rest of the battle. If there was already a **quarry** on the battlefield when you declared this ability, that unit is no longer the **quarry**."
+        },
+        {
+          "name": "Merciful Strike",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **EVERGREEN HUNT MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
+          "effect": "Roll a dice and add the number of damage points the target has. If the result exceeds the target’s Health characteristic, 1 model in the target unit is slain."
+        },
+        {
+          "name": "Abundant Growth",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick each friendly **EVERGREEN HUNT** unit that is wholly within 3\" of a terrain feature to be the targets.",
+          "effect": "**Heal (1)** each target."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "0a0851f9-74d7-595b-a967-3688190a86d9",
+            "name": "Heartwood Hunting Horn",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Once Per Battle (Army), Any Hero Phase",
+            "icon": "special",
+            "declare": null,
+            "effect": "You gain 1 **chord**.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "567c53f2-05b5-5f37-9cb5-ab6bb0b0c18a",
+            "name": "Sapwood Leader",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "If you pick this unit to be a target of the 'Abundant Growth’ ability, **Heal (3)** this unit instead of **Heal (1)**.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Kurnoth Hunters with Greatswords",
+          "Awakened Wyldwood",
+          "Scourge of Ghyran Revenant Seekers",
+          "Spiterider Lancers",
+          "Belthanos, First Thorn of Kurnoth",
+          "Revenant Seekers",
+          "Kurnoth Hunters with Greatscythes",
+          "Kurnoth Hunters with Greatbows",
+          "Arch-Revenant"
+        ],
+        "requiredWarscrolls": ["Belthanos, First Thorn of Kurnoth"],
+        "requiredGeneralWarscrolls": ["Belthanos, First Thorn of Kurnoth"],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Ghyran Revenant Seekers",
+              "Revenant Seekers"
+            ]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "a80853d1-8441-5d9a-ae20-28aaa4852438",
@@ -3029,34 +3513,6 @@
   "enhancements": {
     "artefacts": [
       {
-        "id": "0a0851f9-74d7-595b-a967-3688190a86d9",
-        "name": "Heartwood Hunting Horn",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Battle (Army), Any Hero Phase",
-        "icon": "special",
-        "declare": null,
-        "effect": "You gain 1 **chord**.",
-        "cpCost": null
-      },
-      {
-        "id": "33412e5d-2a32-5309-acb0-e74ba69c3680",
-        "name": "Rejuvenating Companions",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "endOfTurn",
-        "phaseDetails": "End of Any Turn",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "**Heal (3)** this unit.",
-        "cpCost": null
-      },
-      {
         "id": "72c631a0-9db4-5074-a688-423c4a41d849",
         "name": "Seed of Rebirth",
         "cardType": "Enhancement",
@@ -3140,51 +3596,9 @@
         "declare": null,
         "effect": "While they are wholly within 12\" of this unit, friendly **Awakened Wyldwoods** have **WARD (5+).**",
         "cpCost": null
-      },
-      {
-        "id": "414b22b7-2882-5591-a991-e13a01affabc",
-        "name": "Clarionbuds",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Battle, Your Movement Phase",
-        "icon": "movement",
-        "declare": "&#x20;If there is an enemy unit wholly within 12\" of your **Soulpod Grove**, pick up to 3 friendly **SOULPOD GUARDIANS** units to be the targets.",
-        "effect": "Remove the targets from the battlefield and set them up again wholly within 12\" of your **Soulpod Grove** and more than 6\" from all enemy units.",
-        "cpCost": null
       }
     ],
     "heroicTraits": [
-      {
-        "id": "567c53f2-05b5-5f37-9cb5-ab6bb0b0c18a",
-        "name": "Sapwood Leader",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "If you pick this unit to be a target of the 'Abundant Growth’ ability, **Heal (3)** this unit instead of **Heal (1)**.",
-        "cpCost": null
-      },
-      {
-        "id": "d6a965ba-344c-5284-b61b-fec088cc5ba8",
-        "name": "Ancient Might",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "chargePhase",
-        "phaseDetails": "Passive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "This unit can use **CHARGE** abilities even if it is in combat. If the charge roll is 3 or less when it does so, it does not count as having charged.",
-        "cpCost": null
-      },
       {
         "id": "a154750c-806d-5eaf-bbba-f15a1effe4b7",
         "name": "Spirit of the Dark Forest",
@@ -3225,20 +3639,6 @@
         "icon": "movement",
         "declare": "This unit can only use this ability if it is wholly within the **creeping overgrowth**. Pick this unit and up to 1 other friendly **SYLVANETH** unit within this unit’s combat range to be the targets.",
         "effect": "Remove the targets from the battlefield and set them up again wholly within the **creeping overgrowth** and more than 9\" from all enemy units.",
-        "cpCost": null
-      },
-      {
-        "id": "6c365c3f-baf3-54aa-a874-58325b757649",
-        "name": "Devoted Protector",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "If this unit is destroyed while it is wholly within 12\" of your **Soulpod Grove**, before removing this unit from the battlefield, **Heal (10)** your **Soulpod Grove**.",
         "cpCost": null
       }
     ],
@@ -3396,102 +3796,6 @@
   "rules": {
     "battleTraits": [
       {
-        "name": "Nature Aetheric",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
-        "icon": "special",
-        "declare": "Pick a terrain feature that is within friendly territory to be the target.",
-        "effect": "For the rest of the battle, friendly units are wholly within the **creeping overgrowth** while they are wholly within 6\" of the target."
-      },
-      {
-        "name": "Opening Horn Blast",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
-        "icon": "special",
-        "declare": "You must use this ability at the start of the battle round.",
-        "effect": "Your chords are reset to 0. Then, you gain 1 **chord**:\n\n• If a friendly **Belthanos** is on the battlefield.\n• For each friendly **EVERGREEN HUNT** unit that is wholly within the same large quarter of the battlefield as the quarry.\n• For each quarry destroyed so far during the battle."
-      },
-      {
-        "name": "Song of the Hunt",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "The following cumulative effects apply to friendly **EVERGREEN HUNT** units depending on the number of **chords** you have:\n\n**1 chord – *Simple***: Add 1 to run rolls and charge rolls for friendly units wholly within the same quarter of the battlefield as the quarry.\n\n**2 chords – *Tuneful***: Add 1 to hit rolls and wound rolls for friendly units’ combat attacks that target an enemy unit wholly within the same quarter of the battlefield as the quarry.\n\n**3-5 chords – *Melodic***: Add 1 to the Attacks characteristic of melee weapons used by friendly units while they are in combat with the quarry.\n\n**6+ chords – *Mellifluous***: While a friendly unit is in combat with the quarry, the quarry has **STRIKE-LAST**."
-      },
-      {
-        "name": "Rhythm of the Chase",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
-        "icon": "special",
-        "declare": "If there is no **quarry** on the battlefield, pick an enemy unit on the battlefield to be the target.",
-        "effect": "The target is the **quarry** for the rest of the battle."
-      },
-      {
-        "name": "Questing Tendrils",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Turn (Army), Start of Any Turn",
-        "icon": "special",
-        "declare": "Pick the terrain feature that is closest to the **quarry** to be the target.",
-        "effect": "For the rest of the turn, friendly units are wholly within the **creeping overgrowth** while they are wholly within 6\" of the target."
-      },
-      {
-        "name": "A Prize Quarry is Sighted",
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Battle (Army), Your Hero Phase",
-        "icon": "special",
-        "declare": "Pick an enemy unit within 9\" of a friendly **EVERGREEN HUNT** unit to be the target.",
-        "effect": "The target becomes the **quarry** for the rest of the battle. If there was already a **quarry** on the battlefield when you declared this ability, that unit is no longer the **quarry**."
-      },
-      {
-        "name": "Merciful Strike",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **EVERGREEN HUNT MONSTER** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
-        "effect": "Roll a dice and add the number of damage points the target has. If the result exceeds the target’s Health characteristic, 1 model in the target unit is slain."
-      },
-      {
-        "name": "Abundant Growth",
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
-        "icon": "defensive",
-        "declare": "Pick each friendly **EVERGREEN HUNT** unit that is wholly within 3\" of a terrain feature to be the targets.",
-        "effect": "**Heal (1)** each target."
-      },
-      {
-        "name": "Dormant Heroes",
-        "phase": "startOfTurn",
-        "phaseDetails": "Deployment Phase",
-        "icon": "special",
-        "declare": "If there are more friendly **LORDS OF THE CLAN** units on the battlefield than there are in reserve, pick a friendly **LORDS OF THE CLAN MONSTER** unit that has not been deployed.",
-        "effect": "Set up that unit in reserve as a **dormant forest spirit**. It has now been deployed."
-      },
-      {
-        "name": "Our Reach is Long",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "The **creeping overgrowth** (referenced by other abilities) extends 6\" from each terrain feature that has a friendly **overgrown token**.\n\nIncrease this range by 1\" for each friendly **LORDS OF THE CLAN** unit that is wholly outside friendly territory."
-      },
-      {
-        "name": "Elder Authority",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Turn (Army), Deployment Phase",
-        "icon": "special",
-        "declare": "You can only use this ability if there is a friendly **Awakened Wyldwood** on the battlefield.",
-        "effect": "You can set up up to 2 additional **Awakened Wyldwoods** on the battlefield (an **Awakened Wyldwood** is a single tree miniature with a crescent- shaped base). The first can be set up anywhere on the battlefield more than 3\" from all units, objectives and other terrain features. The second can be set up anywhere on the battlefield wholly outside of enemy territory and more than 3\" from all units, objectives and other terrain features.\n\n**Designer’s Note:** *The original* **Awakened Wyldwood** *is set up in Step 1 of the deployment phase using the 'Deploy Faction Terrain’ ability. This ability allows you to set up a second and third such terrain feature and is used in Step 3 of the deployment phase, after armies have been deployed.*"
-      },
-      {
-        "name": "Roused to Fury",
-        "phase": "movementPhase",
-        "phaseDetails": "Enemy Movement Phase",
-        "icon": "special",
-        "declare": "Pick an enemy unit within 9\" of a friendly **Awakened Wyldwood** to be the target.",
-        "effect": "Pick 1 of the following units:\n\n• A friendly **LORDS OF THE CLAN** unit that is in reserve as a **dormant forest spirit**.\n• A friendly **LORDS OF THE CLAN MONSTER** that has been destroyed.\n\nSet up the unit you picked, or a replacement unit if you picked a destroyed unit, within 9\" of the target, wholly within 6\" of that friendly **Awakened Wyldwood** and not in combat. If you set up a replacement unit, allocate 6 damage points to it (ward rolls cannot be made for those damage points).\n\nThen, remove that friendly **Awakened Wyldwood** from the battlefield."
-      },
-      {
         "name": "The Creeping Overgrowth",
         "phase": "startOfTurn",
         "phaseDetails": "Passive",
@@ -3538,38 +3842,6 @@
         "icon": "special",
         "declare": "Pick an enemy unit within the **creeping overgrowth** to be the target.",
         "effect": "For the rest of the turn, the first time your opponent declares a command for the target while it is not wholly within 12\" of a **HERO** in their army, unless your opponent spends 1 additional command point to use that command, the command has no effect, it still counts as being used and the command points spent to use the command are still lost."
-      },
-      {
-        "name": "The Sacred Groves",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
-        "icon": "special",
-        "declare": "You must use this ability.",
-        "effect": "Set up 3 **Awakened Wyldwoods** (an Awakened Wyldwood is a single tree miniature with a crescent-shaped base) wholly within friendly territory, more than 1\" from all other terrain features and more than 3\" from all objectives. The tips of each crescent-shaped base must touch, forming a circle.\n\nOnce you have done so, for the rest of the battle, the 3 tree miniatures join to form 1 **Soulpod Grove** terrain feature. The area inside the circle formed by the trees is part of the terrain feature"
-      },
-      {
-        "name": "Jade Haven",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "The Health characteristic of your **Soulpod Grove** is 18. The **creeping overgrowth** extends 12\" from your **Soulpod Grove**."
-      },
-      {
-        "name": "Vengeance for the Lost",
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "If your **Soulpod Grove** has been demolished this battle, add 2 to the Attacks characteristic of friendly **SOULPOD GUARDIANS** units’ melee weapons."
-      },
-      {
-        "name": "Heart of the Forest",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "You cannot allocate more than 10 damage points per phase to a friendly **SOULPOD GUARDIANS** unit while it is wholly within 12\" of your **Soulpod Grove** (remaining damage points inflicted on it in that phase have no effect)."
       }
     ]
   }

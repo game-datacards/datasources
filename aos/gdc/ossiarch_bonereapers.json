@@ -8,7 +8,7 @@
     "banner": "#1a1a2a",
     "header": "#1a1a2a"
   },
-  "updated": "2026-06-17T10:06:23.774Z",
+  "updated": "2026-06-28T12:32:33.508Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -2758,6 +2758,291 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "5e6f054b-d389-5300-a630-7975e027a636",
+      "name": "The Lance of Ossia",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "OSSIARCH_BONEREAPERS",
+      "parentFaction": "Ossiarch Bonereapers",
+      "isLegends": false,
+      "lore": "When you pick the Ossiarch Bonereapers faction for your army, you can choose for it to be the Lance of Ossia Army of Renown. If you do so, use the faction rules on these pages instead of the Ossiarch Bonereapers faction rules. Every unit in your army must be drawn from the units listed in the roster options box as described in Army of Renown: The Lance of Ossia. All units in your army gain the **LANCE OF OSSIA** keyword.",
+      "rules": [
+        {
+          "name": "Praetorian Elite",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+          "icon": "special",
+          "declare": "You must use this ability if there are any friendly **LANCE OF OSSIA HEROES** on the battlefield. Pick a friendly **LANCE OF OSSIA HERO** to be the target.",
+          "effect": "You gain a number of **relentless discipline** points equal to the number shown after the target's **RELENTLESS DISCIPLINE** keyword. At the end of the battle round, any unspent **relentless discipline** points are lost."
+        },
+        {
+          "name": "Kavalos Lance",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "When a friendly **LANCE OF OSSIA** unit uses the 'Power Through' command, the target does not have to have a lower Health characteristic than that friendly unit."
+        },
+        {
+          "name": "Vengeful Outriders",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **LANCE OF OSSIA** unit that has not used a **RELENTLESS DISCIPLINE** ability this phase to be the target",
+          "effect": "Spend 1 **relentless discipline** point. If the target is reinforced and has more than half of its starting models, spend 2 **relentless discipline** points instead. Add 2\" to the target's Move characteristic for the rest of the phase."
+        },
+        {
+          "name": "Silent Menace",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **LANCE OF OSSIA** unit that has not used a **RELENTLESS DISCIPLINE** ability this phase to use this ability, then pick a visible enemy unit within 12\" of it to be the target.",
+          "effect": "Spend 1 **relentless discipline** point. If the target is reinforced and has more than half of its starting models, spend 2 **relentless discipline** points instead. The target cannot use the 'Redeploy' command for the rest of the turn."
+        },
+        {
+          "name": "Fury of Zandtos",
+          "phase": "chargePhase",
+          "phaseDetails": "Any Charge Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **LANCE OF OSSIA** unit that charged this turn and that has not used a **RELENTLESS DISCIPLINE** ability this phase to be the target.",
+          "effect": "Spend 1 **relentless discipline** point. If the target is reinforced and has more than half of its starting models, spend 2 **relentless discipline** points instead. The target's melee weapons, including **Companion** weapons, have **Crit (2 Hits)** for the rest of the turn."
+        },
+        {
+          "name": "Blood-smeared Hooves",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **LANCE OF OSSIA** unit that charged this turn and has not used a **RELENTLESS DISCIPLINE** ability this phase to be the target.",
+          "effect": "Spend 1 **relentless discipline** point. If the target is reinforced and has more than half of its starting models, spend 2 **relentless discipline** points instead. Add 1 to the Rend characteristic of the target's weapons, including **Companion** weapons, for the rest of the turn."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "5adbe267-1619-5324-91de-94590e608496",
+            "name": "Helm of Tyranny",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "Passive",
+            "icon": "control",
+            "declare": null,
+            "effect": "Subtract 3 from the control scores of enemy units while they are within 12\" of this unit.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "9ab7e4f1-97fe-51a1-bc41-9a8b943ca2df",
+            "name": "Prevailing Tactician",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Your Hero Phase",
+            "icon": "special",
+            "declare": null,
+            "effect": "If a friendly **Arch-Kavalos Zandtos** is not wholly within 12\" of this unit, you gain 2 **relentless discipline** points.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Liege-Kavalos",
+          "Kavalos War Chariot",
+          "Liege-Kavalos on War Chariot",
+          "Kavalos Deathriders",
+          "Arch-Kavalos Zandtos"
+        ],
+        "requiredWarscrolls": ["Arch-Kavalos Zandtos"],
+        "requiredGeneralWarscrolls": ["Arch-Kavalos Zandtos"],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "fb28b12c-3b48-5536-85f3-5d244422dd1d",
+      "name": "The Null Myriad",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "OSSIARCH_BONEREAPERS",
+      "parentFaction": "Ossiarch Bonereapers",
+      "isLegends": false,
+      "lore": "When you pick the Ossiarch Bonereapers faction for your army, you can choose for it to be the Null Myriad Army of Renown. If you do so, use the faction rules on these pages instead of the Ossiarch Bonereapers faction rules. Every unit in your army must be drawn from the units listed in the roster options box as described in Army of Renown: The Null Myriad. All units in your army gain the **NULL MYRIAD** keyword.",
+      "rules": [
+        {
+          "name": "Arcane Immunity",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "Friendly **NULL MYRIAD** units have **WARD (4+)** against damage points inflicted by **SPELL** abilities, **PRAYER** abilities and abilities used by **MANIFESTATIONS.**"
+        },
+        {
+          "name": "First of the Mortarchs",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "Each time you make a casting roll for a friendly **Arkhan the Black,** if all the following are true, that spell cannot be unbound:\n\n• The unmodified casting roll contains 2 or more results of the same value.\n• The casting roll equals or exceeds the spell's casting value.\n• The spell is not miscast."
+        },
+        {
+          "name": "Supernatural Absorption",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
+          "declare": "Pick an enemy **MANIFESTATION** within a friendly **NULL MYRIAD** unit's combat range to be the target.",
+          "effect": "Roll a dice. On a 3+:\n\n• The target is banished and removed from play.\n• If that friendly unit is damaged, **Heal (X)** that friendly unit, where **X** is the target's Health characteristic.\n• If that friendly unit is not damaged, return a number of slain models to it with a combined Health characteristic of up to **X,** where **X** is the target's Health characteristic."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "21fb7ea6-0118-5e69-acf1-521ca6e7340b",
+            "name": "Gothizzar Cartouche",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Your Combat Phase",
+            "icon": "offensive",
+            "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+            "effect": "Roll a dice. On a 3+, add 1 to hit rolls for combat attacks made by friendly **NULL MYRIAD** units that target that unit for the rest of the turn.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "a6eba056-865e-58dd-8847-58a09956c495",
+            "name": "Aura of Enervation",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "Subtract 1 from wound rolls for shooting attacks that target friendly **NULL MYRIAD** units while they are wholly within 12\" of this unit.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "0aa54d7d-94bb-5e0f-ac11-31b01ce8e88f",
+          "name": "The Null Myriad Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "OSSIARCH_BONEREAPERS",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "4974748a-1cd7-5e51-9749-a88db38a7f1d",
+              "name": "Reinforce Construct",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "defensive",
+              "declare": "Pick a friendly **NULL MYRIAD WIZARD** to cast this spell, pick a visible friendly **NULL MYRIAD** unit wholly within 12\" of the caster to be the target, then make a casting roll of 2D6.",
+              "effect": "The target has **WARD (5+)** until the start of your next turn.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "b5b04c53-59bc-5fab-a146-20b4291f4a7f",
+              "name": "Unearthly Aura",
+              "castingValue": 5,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **NULL MYRIAD WIZARD** to cast this spell, pick a visible friendly **NULL MYRIAD** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Add 1 to wound rolls for the target's combat attacks until the start of your next turn.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "46c27edc-9f52-58d1-a67f-67c7cba03782",
+          "name": "The Null Myriad Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "OSSIARCH_BONEREAPERS",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "448d60c1-d3b8-59cc-84fa-651e542de921",
+              "name": "Summon Horror of the Necropolis",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **NULL MYRIAD WIZARD** to cast this spell, pick 1 of the friendly **MANIFESTATIONS** below that is not on the battlefield, then make a casting roll of 2D6.\n\n• **Soulstealer Carrion**\n• **Bone-tithe Shrieker**\n• **Nightmare Predator**",
+              "effect": "Set up the **MANIFESTATION** you picked wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+              "keywords": ["Summon", "Spell", "Unlimited"],
+              "linkedWarscroll": "Bone-tithe Shrieker"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Arkhan the Black, Mortarch of Sacrament",
+          "Mortek Guard",
+          "Morghast Archai",
+          "Mortek Triaxes",
+          "Mortisan Boneshaper",
+          "Bone-tithe Nexus",
+          "Mortisan Soulmason",
+          "Morghast Harbingers",
+          "Immortis Guard",
+          "Scourge of Ghyran Mortisan Boneshaper",
+          "Mortisan Ossifector",
+          "Mortis Reapers",
+          "Scourge of Ghyran Mortek Guard",
+          "Mortisan Soulreaper",
+          "Necropolis Stalkers"
+        ],
+        "requiredWarscrolls": ["Arkhan the Black, Mortarch of Sacrament"],
+        "requiredGeneralWarscrolls": [
+          "Arkhan the Black, Mortarch of Sacrament"
+        ],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Mortisan Boneshaper",
+              "Scourge of Ghyran Mortisan Boneshaper"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": ["Mortek Guard", "Scourge of Ghyran Mortek Guard"]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "5c0f0cdc-762d-5a34-8e71-02bb8b7ad6a1",
@@ -2912,20 +3197,6 @@
   "enhancements": {
     "artefacts": [
       {
-        "id": "21fb7ea6-0118-5e69-acf1-521ca6e7340b",
-        "name": "Gothizzar Cartouche",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Your Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
-        "effect": "Roll a dice. On a 3+, add 1 to hit rolls for combat attacks made by friendly **NULL MYRIAD** units that target that unit for the rest of the turn.",
-        "cpCost": null
-      },
-      {
         "id": "6165cc28-1ed3-5ac5-b6ee-002a2af103fa",
         "name": "Shard of Necris",
         "cardType": "Enhancement",
@@ -2966,37 +3237,9 @@
         "declare": null,
         "effect": "No mortal damage is inflicted on friendly **OSSIARCH B0NEREAPERS** units by **RETREAT** abilities while they are wholly within 12\" of this unit.",
         "cpCost": null
-      },
-      {
-        "id": "5adbe267-1619-5324-91de-94590e608496",
-        "name": "Helm of Tyranny",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "endOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "control",
-        "declare": null,
-        "effect": "Subtract 3 from the control scores of enemy units while they are within 12\" of this unit.",
-        "cpCost": null
       }
     ],
     "heroicTraits": [
-      {
-        "id": "a6eba056-865e-58dd-8847-58a09956c495",
-        "name": "Aura of Enervation",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Subtract 1 from wound rolls for shooting attacks that target friendly **NULL MYRIAD** units while they are wholly within 12\" of this unit.",
-        "cpCost": null
-      },
       {
         "id": "b60215a0-2855-56b9-af33-57215ad23dc8",
         "name": "Manufactured Mind",
@@ -3037,20 +3280,6 @@
         "icon": "offensive",
         "declare": null,
         "effect": "Pick an enemy unit in combat with that non-**HERO** unit and that did not charge this turn to be the target. Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll. This unit can use this ability more than once per phase but only once per **FIGHT** ability.",
-        "cpCost": null
-      },
-      {
-        "id": "9ab7e4f1-97fe-51a1-bc41-9a8b943ca2df",
-        "name": "Prevailing Tactician",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Your Hero Phase",
-        "icon": "special",
-        "declare": null,
-        "effect": "If a friendly **Arch-Kavalos Zandtos** is not wholly within 12\" of this unit, you gain 2 **relentless discipline** points.",
         "cpCost": null
       }
     ],
@@ -3208,30 +3437,6 @@
   "rules": {
     "battleTraits": [
       {
-        "name": "Arcane Immunity",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Friendly **NULL MYRIAD** units have **WARD (4+)** against damage points inflicted by **SPELL** abilities, **PRAYER** abilities and abilities used by **MANIFESTATIONS.**"
-      },
-      {
-        "name": "First of the Mortarchs",
-        "phase": "heroPhase",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "Each time you make a casting roll for a friendly **Arkhan the Black,** if all the following are true, that spell cannot be unbound:\n\n• The unmodified casting roll contains 2 or more results of the same value.\n• The casting roll equals or exceeds the spell's casting value.\n• The spell is not miscast."
-      },
-      {
-        "name": "Supernatural Absorption",
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
-        "icon": "special",
-        "declare": "Pick an enemy **MANIFESTATION** within a friendly **NULL MYRIAD** unit's combat range to be the target.",
-        "effect": "Roll a dice. On a 3+:\n\n• The target is banished and removed from play.\n• If that friendly unit is damaged, **Heal (X)** that friendly unit, where **X** is the target's Health characteristic.\n• If that friendly unit is not damaged, return a number of slain models to it with a combined Health characteristic of up to **X,** where **X** is the target's Health characteristic."
-      },
-      {
         "name": "Immortal Elite",
         "phase": "startOfTurn",
         "phaseDetails": "Per Battle Round (Army), Start of Battle Round",
@@ -3278,54 +3483,6 @@
         "icon": "defensive",
         "declare": null,
         "effect": "Spend 1 **relentless discipline** point. If that unit is reinforced and has more than half of its starting models, spend 2 **relentless discipline** points instead. That unit has **WARD (5+)** against damage points inflicted by attacks made as part of that **ATTACK** ability."
-      },
-      {
-        "name": "Praetorian Elite",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
-        "icon": "special",
-        "declare": "You must use this ability if there are any friendly **LANCE OF OSSIA HEROES** on the battlefield. Pick a friendly **LANCE OF OSSIA HERO** to be the target.",
-        "effect": "You gain a number of **relentless discipline** points equal to the number shown after the target's **RELENTLESS DISCIPLINE** keyword. At the end of the battle round, any unspent **relentless discipline** points are lost."
-      },
-      {
-        "name": "Kavalos Lance",
-        "phase": "endOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "When a friendly **LANCE OF OSSIA** unit uses the 'Power Through' command, the target does not have to have a lower Health characteristic than that friendly unit."
-      },
-      {
-        "name": "Vengeful Outriders",
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **LANCE OF OSSIA** unit that has not used a **RELENTLESS DISCIPLINE** ability this phase to be the target",
-        "effect": "Spend 1 **relentless discipline** point. If the target is reinforced and has more than half of its starting models, spend 2 **relentless discipline** points instead. Add 2\" to the target's Move characteristic for the rest of the phase."
-      },
-      {
-        "name": "Silent Menace",
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **LANCE OF OSSIA** unit that has not used a **RELENTLESS DISCIPLINE** ability this phase to use this ability, then pick a visible enemy unit within 12\" of it to be the target.",
-        "effect": "Spend 1 **relentless discipline** point. If the target is reinforced and has more than half of its starting models, spend 2 **relentless discipline** points instead. The target cannot use the 'Redeploy' command for the rest of the turn."
-      },
-      {
-        "name": "Fury of Zandtos",
-        "phase": "chargePhase",
-        "phaseDetails": "Any Charge Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **LANCE OF OSSIA** unit that charged this turn and that has not used a **RELENTLESS DISCIPLINE** ability this phase to be the target.",
-        "effect": "Spend 1 **relentless discipline** point. If the target is reinforced and has more than half of its starting models, spend 2 **relentless discipline** points instead. The target's melee weapons, including **Companion** weapons, have **Crit (2 Hits)** for the rest of the turn."
-      },
-      {
-        "name": "Blood-smeared Hooves",
-        "phase": "combatPhase",
-        "phaseDetails": "Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **LANCE OF OSSIA** unit that charged this turn and has not used a **RELENTLESS DISCIPLINE** ability this phase to be the target.",
-        "effect": "Spend 1 **relentless discipline** point. If the target is reinforced and has more than half of its starting models, spend 2 **relentless discipline** points instead. Add 1 to the Rend characteristic of the target's weapons, including **Companion** weapons, for the rest of the turn."
       }
     ]
   }

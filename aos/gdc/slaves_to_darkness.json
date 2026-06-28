@@ -8,7 +8,7 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-06-17T10:06:19.698Z",
+  "updated": "2026-06-28T12:32:29.882Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -5220,6 +5220,439 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "5701a010-3146-51b1-8029-195483cafa32",
+      "name": "Legion of the First Prince",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "SLAVES_TO_DARKNESS",
+      "parentFaction": "Slaves to Darkness",
+      "isLegends": false,
+      "lore": "Be’lakor, first of the Daemon Princes, is a being of boundless darkness. His titanic form was wrought aeons ago by all four of the Brothers in Darkness, each pouring a portion of their might into him. For centuries, he was their perfect instrument of destruction and harbinger\nof corruption, beckoning countless supplicants into the shadows of Chaos worship and bringing about the ruin of innumerable empires.\n\nThen came the Everchosen, and Be’lakor was cast aside.\n\nWhen you pick the Slaves to Darkness faction for your army, you can choose for it to be a Legion of the First Prince Army of Renown. If you do so, use the faction rules on these pages instead of the Slaves to Darkness faction rules. Every unit in your army must be drawn from the units listed in the roster options box opposite. All units in your army gain the Legion of the First Prince keyword except for those in a Regiment of Renown.",
+      "rules": [
+        {
+          "name": "First-Damned Prince",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "While a friendly **Be’lakor** is within the combat range of any friendly non-**HERO LEGION OF THE FIRST PRINCE DAEMON** units:\n\n• That friendly **Be’lakor** has **WARD (4+)**.\n\n• In addition, each time you make a successful ward roll for that friendly **Be’lakor**, allocate 1 damage point to a friendly non-**HERO LEGION OF THE FIRST PRINCE DAEMON** unit within **Be’lakor**’s combat range after the damage sequence for **Be’lakor** has been resolved (ward rolls cannot be made for those damage points)."
+        },
+        {
+          "name": "Storm of Blackened Blades",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Battle (Army), Your Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **Eternus** that is in combat and up to 2 friendly non-**HERO** non-**DAEMON LEGION OF THE FIRST PRINCE** units wholly within 12\" of that **Eternus** to be the targets.",
+          "effect": "Add 1 to the Attacks characteristic of the targets’ melee weapons for the rest of the turn."
+        },
+        {
+          "name": "Daemonic Reinforcements",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Movement Phase",
+          "icon": "rallying",
+          "declare": "Pick a friendly non-**HERO LEGION OF THE FIRST PRINCE DAEMON INFANTRY** or **CAVALRY** unit that has been destroyed to be the target.",
+          "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12\" of a friendly **Be’lakor** and more than 9\" from all enemy units."
+        },
+        {
+          "name": "Bestow Favour",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
+          "declare": "If a friendly **Be’lakor** is on the battlefield, pick a non-**HERO LEGION OF THE FIRST PRINCE** unit to be the target.",
+          "effect": "Until the start of your next turn:\n• Add 5 to the target’s control score.\n• If the target is a **DAEMON** unit, add 1 to save rolls for the target.\n• If the target is a non-**DAEMON** unit, it has **WARD (6+)**."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "8c95c1f6-b6a6-5652-b054-304e03500dcc",
+            "name": "Black Ritual Dagger",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Once Per Turn, Reaction: You declared a SPELL ability for a friendly unit wholly within 12\" of this unit",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "Allocate 1 damage point to this unit. Then, you can re-roll the casting roll.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "957968cb-b6bd-59b1-a2fd-dc32b469066b",
+            "name": "Dread Marshal",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "chargePhase",
+            "phaseDetails": "Any Charge Phase",
+            "icon": "movement",
+            "declare": "Pick up to 3 friendly units wholly within 12\" of this unit to be targets.",
+            "effect": "Add 1 to charge rolls for the targets for the rest of the turn.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "c342cbbb-63b4-504b-a1e3-cc970619f573",
+          "name": "Legion of the First Prince Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "SLAVES_TO_DARKNESS",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "cfc565b4-a82e-5073-adf5-daa371c1d64d",
+              "name": "Dark Cantrip",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **LEGION OF THE FIRST PRINCE WIZARD** to cast this spell, pick up to 3 visible enemy units within 18\" of them to be the targets, then make a casting roll of 2D6.",
+              "effect": "Inflict 1 mortal damage on each target.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "d8955d33-e85c-53e4-928e-bb15e6416156",
+              "name": "Shroud in Darkness",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **LEGION OF THE FIRST PRINCE WIZARD** to cast this spell, pick a visible friendly **LEGION OF THE FIRST PRINCE** unit that is not in combat and is wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "The target can move D6\". It cannot end that move in combat. In addition, until the start of your next turn, the target is not visible to enemy units while they are more than 12\" away.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "9f8ae3ff-5029-550b-b825-f5ec3fd848bd",
+          "name": "Legion of the First Prince Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "SLAVES_TO_DARKNESS",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "2640d73c-61cd-582d-b659-68bfadda487a",
+              "name": "Summon Eightfold Doom-Sigil",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "If there is not a friendly **Eightfold Doom-Sigil** on the battlefield, pick a friendly **LEGION OF THE FIRST PRINCE WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Set up an **Eightfold Doom-Sigil** wholly within 12\" of the caster and visible to them.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Eightfold Doom-Sigil"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Legion of the First Prince Bloodletters",
+          "Legion of the First Prince Beasts of Nurgle",
+          "Legion of the First Prince Screamers of Tzeentch",
+          "Legion of the First Prince Fiends",
+          "Legion of the First Prince Flamers of Tzeentch",
+          "Legion of the First Prince Plaguebearers",
+          "Legion of the First Prince Bloodcrushers",
+          "Legion of the First Prince Hellflayer",
+          "Be'lakor, the Dark Master",
+          "Eternus, Blade of the First Prince",
+          "Daemon Prince",
+          "Centaurion Marshal",
+          "Chaos Furies",
+          "Chaos Sorcerer Lord",
+          "Chaos Legionnaires",
+          "Varanguard",
+          "Nexus Chaotica"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "7d3c34f4-8879-5569-9a27-90dfff1a22f5",
+      "name": "The Swords of Chaos",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "SLAVES_TO_DARKNESS",
+      "parentFaction": "Slaves to Darkness",
+      "isLegends": false,
+      "lore": "Even amongst the Varanguard, the elite champions of the Everchosen, the Swords of Chaos possess a bleak renown. When a foe earns Archaon’s personal displeasure, it is they who are unleashed to render his pitiless judgement. Clad in heraldry of stark black and gold, these anointed knights of Chaos are sworn to their master’s vision of a blasted cosmos over which only his graven banners rise.\n\nWhen you pick the Slaves to Darkness faction for your army, you can choose for it to be a The Swords of Chaos Army of Renown. If you do so, use the faction rules on these pages instead of the Slaves to Darkness faction rules. Every unit in your army must be drawn from the units listed in the roster options, as described in Army of Renown: The Swords of Chaos. All units in your army gain the Swords of Chaos keyword.",
+      "rules": [
+        {
+          "name": "Descent From Ruinous Skies",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **SWORDS OF CHAOS** unit that is **in the Ruinous Skies**.",
+          "effect": "Set up that unit anywhere on the battlefield more than 9\" from all enemy units."
+        },
+        {
+          "name": "Knights of the First Circle",
+          "phase": "startOfTurn",
+          "phaseDetails": "Deployment Phase",
+          "icon": "special",
+          "declare": "If there are more friendly **SWORDS OF CHAOS** units on the battlefield than there are set up in reserve, pick a friendly **SWORDS OF CHAOS** unit that has not been deployed.",
+          "effect": "Set up that unit in reserve **in the Ruinous Skies**. It has now been deployed."
+        },
+        {
+          "name": "Demands of the Dark Gods",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Start of Battle Round",
+          "icon": "special",
+          "declare": null,
+          "effect": "Pick 1 of the following effects:\n\n***Demand of Khorne***: For the rest of the battle round, add 1 to the Rend characteristic of melee weapons used by friendly **SWORDS OF CHAOS** units.\n\n***Demand of Tzeentch***: Pick 1 visible enemy unit within 9\" of a friendly **SWORDS OF CHAOS** unit that is not in combat and roll a D6. On a 3+, inflict an amount of mortal damage on that enemy unit equal to the roll.\n\n***Demand of Nurgle***: **Heal (D3)** each friendly **SWORDS OF CHAOS** unit. Then pick a friendly **SWORDS OF CHAOS** unit that healed any damage points this turn. Until the start of the next battle round, that unit has **WARD (6+)**.\n\n***Demand of Slaanesh***: Add 2\" to the Move characteristic of friendly **SWORDS OF CHAOS** units until the start of the next battle round."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [],
+        "heroicTraits": [],
+        "other": [
+          {
+            "id": "e087de66-7ad0-5979-808f-445dd42aa323",
+            "name": "The Grimroot Order",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "Add 1 to this unit’s Health characteristic.",
+            "cpCost": null
+          },
+          {
+            "id": "1036655c-48d0-5fc9-98f8-50d6a00828ab",
+            "name": "Betrayers of the Anvilking",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "This unit has **WARD (6+)**.",
+            "cpCost": null
+          },
+          {
+            "id": "8929bda2-4119-5fc2-a798-c8466d9e157e",
+            "name": "The Blackstorm Apostates",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Passive",
+            "icon": "movement",
+            "declare": null,
+            "effect": "Add 3\" to this unit’s Move characteristic.",
+            "cpCost": null
+          },
+          {
+            "id": "452aab71-371d-551b-a867-076525442174",
+            "name": "Tamers of Haradh's Torment",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "Add 1 to the Damage characteristic of this unit’s **Companion** weapons.",
+            "cpCost": null
+          },
+          {
+            "id": "f4b24d2f-5cdb-59df-851b-f83189acf813",
+            "name": "The Hounds Apocalyptus",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "While this unit is wholly within enemy territory, add 1 to the Attacks characteristic of this unit’s melee weapons.",
+            "cpCost": null
+          }
+        ]
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Abraxia, Spear of the Everchosen",
+          "Varanguard",
+          "Scourge of Ghyran Abraxia, Spear of the Everchosen",
+          "Archaon, the Everchosen",
+          "Nexus Chaotica"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Abraxia, Spear of the Everchosen",
+              "Scourge of Ghyran Abraxia, Spear of the Everchosen"
+            ]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "4640ce06-d556-59f5-a9f0-322e60ed68d2",
+      "name": "Tribes of the Snow Peaks",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "SLAVES_TO_DARKNESS",
+      "parentFaction": "Slaves to Darkness",
+      "isLegends": false,
+      "lore": "Furious are the Darkoath tribes of the Snow Peaks, as their home has been shattered by verminous invaders. United under Chieftain Gunnar Brand and his kin, they now fight enemies on two fronts: the greedy Sigmarites to their backs and the perfidious Skaven of the Gnaw beyond. With every enemy slain, they come closer to fulfilling furious oaths avenging their fallen kin.\n\nWhen you pick the Slaves to Darkness faction for your army, you can choose for it to be a Tribes of the Snow Peaks Army of Renown. If you do so, use the faction rules on these pages instead of the Slaves to Darkness faction rules. Every unit in your army must be drawn from the units listed in the roster options, as described in Army of Renown: Tribes of the Snow Peaks. All units in your army gain the Snow Peaks keyword.",
+      "rules": [
+        {
+          "name": "Shroud of the Pale Elk",
+          "phase": "defensive",
+          "phaseDetails": "Once Per Phase (Army), Reaction: Opponent declared an ATTACK ability",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "If that friendly **SNOW PEAKS** unit has not used an **OATH** ability this turn, spend 1 **oath point**. For the rest of the turn, that friendly unit has **WARD (4+)**."
+        },
+        {
+          "name": "Hunger of Shesh'shan",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Phase (Army), Your Combat Phase",
+          "icon": "offensive",
+          "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS** unit that has not used an **OATH** ability this turn to be the target.",
+          "effect": "Spend 1 **oath point**. For the rest of the turn, add 1 to the Attacks characteristic of the target’s melee weapons."
+        },
+        {
+          "name": "Daemonfire Weapons",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Phase (Army), Your Combat Phase",
+          "icon": "offensive",
+          "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS** unit that has not used an **OATH** ability this turn to be the target.",
+          "effect": "Spend 1 **oath point**. For the rest of the turn, add 1 to the Rend characteristic of the target’s melee weapons."
+        },
+        {
+          "name": "Speed of the Blood Crow",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Phase (Army), Your Charge Phase",
+          "icon": "offensive",
+          "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS** unit that has not used an **OATH** ability this turn to be the target.",
+          "effect": "Spend 1 **oath point**. For the rest of the turn, the target can use **CHARGE** abilities even if it used a **RUN** ability in the same turn."
+        },
+        {
+          "name": "Rage of Arkhar",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Phase (Army), Your Combat Phase",
+          "icon": "offensive",
+          "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS** unit that has not used an **OATH** ability this turn to be the target.",
+          "effect": "Spend 2 **oath points**. The target can use 2 **FIGHT** abilities this phase. After the first is used, however, the target has **STRIKE‑LAST** for the rest of the turn."
+        },
+        {
+          "name": "Messengers of the Gods",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Phase (Army), End of Any Turn",
+          "icon": "rallying",
+          "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS Darkoath Marauders** or **Fellriders** unit that has been destroyed and has not used an **OATH** ability this turn to be the target.",
+          "effect": "Spend 2 **oath points**. Set up a replacement unit with half the number of models from the target unit (rounding up) on the battlefield, wholly within 6\" of a battlefield edge and more than 3\" from all enemy units."
+        },
+        {
+          "name": "Pledges to the Dark Gods",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "Each time a friendly **SNOW PEAKS** unit uses 1 of the following abilities and the effect of that ability is resolved, gain 1 **oath point**.\n\n• ‘Oath of Bloodshed’\n• ‘Oath of Murder’\n• ‘Oath of Supremacy’\n• ‘Oath of the Marauder’\n• ‘Oath of the Raider’\n• ‘Oath of Conquest’\n\n**Designer’s Note**: *The abilities listed above are abilities on* **DARKOATH** *warscrolls. By using those abilities (i.e. completing the oaths), the player gains* **oath points**, *which can then be spent to use the* **OATH** *abilities in these Army of Renown rules.*"
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "d4739132-0ba9-599a-9979-b7206f99685a",
+            "name": "Grand Offering",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Once Per Battle (Army), Any Movement Phase",
+            "icon": "special",
+            "declare": "Pick a friendly **SNOW PEAKS Wilderfiend** within 9\" of this unit to be the target.",
+            "effect": "Give the target D6 **sacrifice points**.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "a403b41f-d9d7-5001-8cfa-14b96b50aac2",
+            "name": "Oath of Kinship",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "While this unit is within the combat range of another friendly **SNOW PEAKS** unit, add 1 to hit rolls for this unit’s attacks.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Nexus Chaotica",
+          "Darkoath Chieftain",
+          "Singri Brand",
+          "The Gnarlspirit Pack",
+          "Gunnar Brand",
+          "Darkoath Marauders",
+          "Darkoath Chieftain on Warsteed",
+          "Darkoath Fellriders",
+          "Godsworn Hunt",
+          "Darkoath Wilderfiend",
+          "The Oathsworn Kin",
+          "Darkoath Warqueen",
+          "Darkoath Savagers"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "26939a3b-6431-51a4-b8c4-75f08d0ed08e",
@@ -5325,34 +5758,6 @@
   "enhancements": {
     "artefacts": [
       {
-        "id": "8c95c1f6-b6a6-5652-b054-304e03500dcc",
-        "name": "Black Ritual Dagger",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Turn, Reaction: You declared a SPELL ability for a friendly unit wholly within 12\" of this unit",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Allocate 1 damage point to this unit. Then, you can re-roll the casting roll.",
-        "cpCost": null
-      },
-      {
-        "id": "d4739132-0ba9-599a-9979-b7206f99685a",
-        "name": "Grand Offering",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Battle (Army), Any Movement Phase",
-        "icon": "special",
-        "declare": "Pick a friendly **SNOW PEAKS Wilderfiend** within 9\" of this unit to be the target.",
-        "effect": "Give the target D6 **sacrifice points**.",
-        "cpCost": null
-      },
-      {
         "id": "744e4d66-80a4-53bf-ac08-67b57f38d9e0",
         "name": "The Varanite Shackle",
         "cardType": "Enhancement",
@@ -5439,34 +5844,6 @@
     ],
     "heroicTraits": [
       {
-        "id": "957968cb-b6bd-59b1-a2fd-dc32b469066b",
-        "name": "Dread Marshal",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "chargePhase",
-        "phaseDetails": "Any Charge Phase",
-        "icon": "movement",
-        "declare": "Pick up to 3 friendly units wholly within 12\" of this unit to be targets.",
-        "effect": "Add 1 to charge rolls for the targets for the rest of the turn.",
-        "cpCost": null
-      },
-      {
-        "id": "a403b41f-d9d7-5001-8cfa-14b96b50aac2",
-        "name": "Oath of Kinship",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "While this unit is within the combat range of another friendly **SNOW PEAKS** unit, add 1 to hit rolls for this unit’s attacks.",
-        "cpCost": null
-      },
-      {
         "id": "e05a9e47-6112-5880-8539-0b031702253b",
         "name": "Radiance of Dark Glory",
         "cardType": "Enhancement",
@@ -5510,76 +5887,6 @@
       }
     ],
     "other": [
-      {
-        "id": "e087de66-7ad0-5979-808f-445dd42aa323",
-        "name": "The Grimroot Order",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Add 1 to this unit’s Health characteristic.",
-        "cpCost": null
-      },
-      {
-        "id": "1036655c-48d0-5fc9-98f8-50d6a00828ab",
-        "name": "Betrayers of the Anvilking",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "This unit has **WARD (6+)**.",
-        "cpCost": null
-      },
-      {
-        "id": "8929bda2-4119-5fc2-a798-c8466d9e157e",
-        "name": "The Blackstorm Apostates",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Passive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Add 3\" to this unit’s Move characteristic.",
-        "cpCost": null
-      },
-      {
-        "id": "452aab71-371d-551b-a867-076525442174",
-        "name": "Tamers of Haradh's Torment",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Add 1 to the Damage characteristic of this unit’s **Companion** weapons.",
-        "cpCost": null
-      },
-      {
-        "id": "f4b24d2f-5cdb-59df-851b-f83189acf813",
-        "name": "The Hounds Apocalyptus",
-        "cardType": "Enhancement",
-        "enhancementType": "otherEnhancements",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "While this unit is wholly within enemy territory, add 1 to the Attacks characteristic of this unit’s melee weapons.",
-        "cpCost": null
-      },
       {
         "id": "71c4028b-b1fe-5e53-8162-233e26f792f7",
         "name": "The Eroding Icon",
@@ -5790,118 +6097,6 @@
   ],
   "rules": {
     "battleTraits": [
-      {
-        "name": "First-Damned Prince",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "While a friendly **Be’lakor** is within the combat range of any friendly non-**HERO LEGION OF THE FIRST PRINCE DAEMON** units:\n\n• That friendly **Be’lakor** has **WARD (4+)**.\n\n• In addition, each time you make a successful ward roll for that friendly **Be’lakor**, allocate 1 damage point to a friendly non-**HERO LEGION OF THE FIRST PRINCE DAEMON** unit within **Be’lakor**’s combat range after the damage sequence for **Be’lakor** has been resolved (ward rolls cannot be made for those damage points)."
-      },
-      {
-        "name": "Storm of Blackened Blades",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Battle (Army), Your Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **Eternus** that is in combat and up to 2 friendly non-**HERO** non-**DAEMON LEGION OF THE FIRST PRINCE** units wholly within 12\" of that **Eternus** to be the targets.",
-        "effect": "Add 1 to the Attacks characteristic of the targets’ melee weapons for the rest of the turn."
-      },
-      {
-        "name": "Daemonic Reinforcements",
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Movement Phase",
-        "icon": "rallying",
-        "declare": "Pick a friendly non-**HERO LEGION OF THE FIRST PRINCE DAEMON INFANTRY** or **CAVALRY** unit that has been destroyed to be the target.",
-        "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12\" of a friendly **Be’lakor** and more than 9\" from all enemy units."
-      },
-      {
-        "name": "Bestow Favour",
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
-        "icon": "special",
-        "declare": "If a friendly **Be’lakor** is on the battlefield, pick a non-**HERO LEGION OF THE FIRST PRINCE** unit to be the target.",
-        "effect": "Until the start of your next turn:\n• Add 5 to the target’s control score.\n• If the target is a **DAEMON** unit, add 1 to save rolls for the target.\n• If the target is a non-**DAEMON** unit, it has **WARD (6+)**."
-      },
-      {
-        "name": "Shroud of the Pale Elk",
-        "phase": "defensive",
-        "phaseDetails": "Once Per Phase (Army), Reaction: Opponent declared an ATTACK ability",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "If that friendly **SNOW PEAKS** unit has not used an **OATH** ability this turn, spend 1 **oath point**. For the rest of the turn, that friendly unit has **WARD (4+)**."
-      },
-      {
-        "name": "Hunger of Shesh'shan",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Phase (Army), Your Combat Phase",
-        "icon": "offensive",
-        "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS** unit that has not used an **OATH** ability this turn to be the target.",
-        "effect": "Spend 1 **oath point**. For the rest of the turn, add 1 to the Attacks characteristic of the target’s melee weapons."
-      },
-      {
-        "name": "Daemonfire Weapons",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Phase (Army), Your Combat Phase",
-        "icon": "offensive",
-        "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS** unit that has not used an **OATH** ability this turn to be the target.",
-        "effect": "Spend 1 **oath point**. For the rest of the turn, add 1 to the Rend characteristic of the target’s melee weapons."
-      },
-      {
-        "name": "Speed of the Blood Crow",
-        "phase": "chargePhase",
-        "phaseDetails": "Once Per Phase (Army), Your Charge Phase",
-        "icon": "offensive",
-        "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS** unit that has not used an **OATH** ability this turn to be the target.",
-        "effect": "Spend 1 **oath point**. For the rest of the turn, the target can use **CHARGE** abilities even if it used a **RUN** ability in the same turn."
-      },
-      {
-        "name": "Rage of Arkhar",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Phase (Army), Your Combat Phase",
-        "icon": "offensive",
-        "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS** unit that has not used an **OATH** ability this turn to be the target.",
-        "effect": "Spend 2 **oath points**. The target can use 2 **FIGHT** abilities this phase. After the first is used, however, the target has **STRIKE‑LAST** for the rest of the turn."
-      },
-      {
-        "name": "Messengers of the Gods",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Phase (Army), End of Any Turn",
-        "icon": "rallying",
-        "declare": "If you have 1 or more **oath points**, pick a friendly **SNOW PEAKS Darkoath Marauders** or **Fellriders** unit that has been destroyed and has not used an **OATH** ability this turn to be the target.",
-        "effect": "Spend 2 **oath points**. Set up a replacement unit with half the number of models from the target unit (rounding up) on the battlefield, wholly within 6\" of a battlefield edge and more than 3\" from all enemy units."
-      },
-      {
-        "name": "Pledges to the Dark Gods",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "Each time a friendly **SNOW PEAKS** unit uses 1 of the following abilities and the effect of that ability is resolved, gain 1 **oath point**.\n\n• ‘Oath of Bloodshed’\n• ‘Oath of Murder’\n• ‘Oath of Supremacy’\n• ‘Oath of the Marauder’\n• ‘Oath of the Raider’\n• ‘Oath of Conquest’\n\n**Designer’s Note**: *The abilities listed above are abilities on* **DARKOATH** *warscrolls. By using those abilities (i.e. completing the oaths), the player gains* **oath points**, *which can then be spent to use the* **OATH** *abilities in these Army of Renown rules.*"
-      },
-      {
-        "name": "Descent From Ruinous Skies",
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **SWORDS OF CHAOS** unit that is **in the Ruinous Skies**.",
-        "effect": "Set up that unit anywhere on the battlefield more than 9\" from all enemy units."
-      },
-      {
-        "name": "Knights of the First Circle",
-        "phase": "startOfTurn",
-        "phaseDetails": "Deployment Phase",
-        "icon": "special",
-        "declare": "If there are more friendly **SWORDS OF CHAOS** units on the battlefield than there are set up in reserve, pick a friendly **SWORDS OF CHAOS** unit that has not been deployed.",
-        "effect": "Set up that unit in reserve **in the Ruinous Skies**. It has now been deployed."
-      },
-      {
-        "name": "Demands of the Dark Gods",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Turn (Army), Start of Battle Round",
-        "icon": "special",
-        "declare": null,
-        "effect": "Pick 1 of the following effects:\n\n***Demand of Khorne***: For the rest of the battle round, add 1 to the Rend characteristic of melee weapons used by friendly **SWORDS OF CHAOS** units.\n\n***Demand of Tzeentch***: Pick 1 visible enemy unit within 9\" of a friendly **SWORDS OF CHAOS** unit that is not in combat and roll a D6. On a 3+, inflict an amount of mortal damage on that enemy unit equal to the roll.\n\n***Demand of Nurgle***: **Heal (D3)** each friendly **SWORDS OF CHAOS** unit. Then pick a friendly **SWORDS OF CHAOS** unit that healed any damage points this turn. Until the start of the next battle round, that unit has **WARD (6+)**.\n\n***Demand of Slaanesh***: Add 2\" to the Move characteristic of friendly **SWORDS OF CHAOS** units until the start of the next battle round."
-      },
       {
         "name": "Pledged to Nurgle",
         "phase": "defensive",

@@ -8,7 +8,7 @@
     "banner": "#1a1a2a",
     "header": "#1a1a2a"
   },
-  "updated": "2026-06-17T10:06:22.950Z",
+  "updated": "2026-06-28T12:32:32.751Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -2900,6 +2900,399 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "bd5494e8-4e51-5b6b-b0f6-d7681b3e7245",
+      "name": "The Clattering Procession",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "parentFaction": "Nighthaunt",
+      "isLegends": false,
+      "lore": "Though ragged in appearance, the Nighthaunt are deadly foes. They are swift as a freezing gale, manifesting from thin air without warning, and their pitted swords and notched axes are sharp with pure spite. The Nighthaunt's most potent weapon, however, is the fear they evoke in the living. Few can resist it, and entire armies visibly baulk when the wailing and moaning of the eternally damned is carried to their ears on the chill wind.\n\nAmongst the most horrifying of the Nighthaunt lords is Reikenor the Grimhailer. A raggedly macabre creature, he rides a winged and incorporeal steed clad in patinated armour and trailing shreds of soul essence. Through the rusting maw of his dread mask, he proclaims the names of his victims in a condemning declaration.\n\nWhen you pick the Nighthaunt faction for your army, you can choose for it to be a Clattering Procession Army of Renown. If you do so, use the faction rules on these pages instead of the Nighthaunt faction rules. Every unit in your army must be drawn from the units listed in the roster options box as described in Army of Renown: The Clattering Procession. All units in your army gain the CLATTERING PROCESSION keyword.",
+      "rules": [
+        {
+          "name": "Ethereal",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "Ignore negative modifiers to save rolls for friendly **NIGHTHAUNT** units."
+        },
+        {
+          "name": "The Speed of Death",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Your Turn",
+          "icon": "movement",
+          "declare": "Pick a friendly **CLATTERING PROCESSION** unit that used a **CHARGE** or **RETREAT** ability this turn, is not in combat and is wholly within 9\" of a battlefield edge to use this ability.",
+          "effect": "Remove that unit from the battlefield and set it up again wholly within 9\" of a battlefield edge and more than 3\" from all enemy units."
+        },
+        {
+          "name": "Spectral Swiftness",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **CLATTERING PROCESSION** unit that is in combat to use this ability.",
+          "effect": "That unit can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat."
+        },
+        {
+          "name": "Pitiless Reapers",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **CLATTERING PROCESSION** unit that passed across any enemy units this phase to use this ability, then pick 1 of those enemy units to be the target.",
+          "effect": "Roll a dice for each model in the **CLATTERING PROCESSION** unit that passed across the target. Add 1 to the roll if any friendly **CLATTERING PROCESSION Black Coaches** passed across the target this phase. For each 6+, inflict 1 mortal damage on the target."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "2610bd0f-5586-5a36-9750-d190e3687adb",
+            "name": "Talisman of the Nadir",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Reaction: Opponent declared a SPELL ability",
+            "icon": "special",
+            "declare": null,
+            "effect": "If a friendly **CLATTERING PROCESSION** unit wholly within 12\" of this unit was picked to be the target of that spell, this unit can use the 'Unbind' ability as if it had **WIZARD (1).** Add 1 to the unbinding roll for that ability.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "cc0c39f7-f090-53b0-870e-9bf2417a6d59",
+            "name": "Silent Overseer",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "chargePhase",
+            "phaseDetails": "Your Charge Phase",
+            "icon": "movement",
+            "declare": "Pick up to 3 friendly **CLATTERING PROCESSION** units wholly within 12\" of this unit to be the targets.",
+            "effect": "For the rest of the turn, the targets can use **CHARGE** abilities even if they used a **RETREAT** ability in the same turn.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "5fb8e91d-a127-5694-a2f7-bd7bdbb1a78f",
+          "name": "The Clattering Procession Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "NIGHTHAUNT",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "e6488c80-2bd3-5bda-a113-2217cb2fe12c",
+              "name": "Spectral Lashes",
+              "castingValue": 4,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "movement",
+              "declare": "Pick a friendly **CLATTERING PROCESSION WIZARD** to cast this spell, pick a visible friendly **CLATTERING PROCESSION** unit wholly within 12\" of them and that has not been picked to be the target of this ability this turn to be the target, then make a casting roll of 2D6.",
+              "effect": "Add 2\" to the target's Move characteristic for the rest of the turn.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "69b6e62c-96ea-59c3-aa3a-92462ba9742e",
+              "name": "Fell Riders",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "movement",
+              "declare": "Pick a friendly **CLATTERING PROCESSION WIZARD** to cast this spell, pick the caster and up to 1 other visible friendly **CLATTERING PROCESSION** unit wholly within 12\" of them to be the targets, then make a casting roll of 2D6.",
+              "effect": "You can re-roll run rolls and charge rolls for the targets for the rest of the turn.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "a534e04c-b1ef-5b91-8210-2f5a8ce41d9e",
+          "name": "The Clattering Procession Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "NIGHTHAUNT",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "0742867b-b6ef-54f9-9cfc-0c3f64f2b93f",
+              "name": "Summon Shyish Reaper",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "If there is not a friendly **Shyish Reaper** on the battlefield, pick a friendly **CLATTERING PROCESSION WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Set up a **Shyish Reaper** wholly within 9\" of the caster, visible to them and more than 9\" from all enemy units.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Shyish Reaper"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Scourge of Ghyran Black Coach",
+          "Scourge of Ghyran Black Coach (Hero)",
+          "Hexwraiths",
+          "Black Coach (Hero)",
+          "Black Coach",
+          "Reikenor the Grimhailer",
+          "Dreadblade Harrows",
+          "Knight of Shrouds on Ethereal Steed"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": ["Scourge of Ghyran Black Coach (Hero)"]
+          },
+          {
+            "limit": 1,
+            "warscrolls": ["Black Coach (Hero)"]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Ghyran Black Coach",
+              "Black Coach (Hero)"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": ["Scourge of Ghyran Black Coach", "Black Coach"]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Ghyran Black Coach (Hero)",
+              "Black Coach (Hero)"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Ghyran Black Coach (Hero)",
+              "Black Coach"
+            ]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "da9899ac-9d96-5e6f-9a0d-c78ccc636125",
+      "name": "The Eternal Nightmare",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "NIGHTHAUNT",
+      "parentFaction": "Nighthaunt",
+      "isLegends": false,
+      "lore": "God of Death and ruler of Shyish, Nagash is one of the greatest sorcerers in existence. None can match his mastery of necromancy, and it was he who pioneered this fell art aeons ago in a land lost to history. He is known as the Undying King, for he is eternal. Despite the many attempts of his enemies to vanquish him, Nagash has always endured, returning from apparent destruction time and again to exact his vengeance. A figure of pure evil, his ego and vainglory are without equal. Few can withstand his baleful gaze and live, for within it is the very essence of unmaking.\n\nWhen you pick the Nighthaunt faction for your army, you can choose for it to be a The Eternal Nightmare Army of Renown. If you do so, use the faction rules on these pages instead of the Nighthaunt faction rules. Every unit in your army must be drawn from the units listed in the roster options box as described in Army of Renown: The Eternal Nightmare. All units in your army gain the ETERNAL NIGHTMARE keyword.",
+      "rules": [
+        {
+          "name": "Ethereal",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "Ignore negative modifiers to save rolls for friendly **NIGHTHAUNT** units, excluding **Nagash.**"
+        },
+        {
+          "name": "The Ritual Begins",
+          "phase": "startOfTurn",
+          "phaseDetails": "Deployment Phase",
+          "icon": "special",
+          "declare": "You must use this ability to set up the friendly **Nagash.** Pick a friendly **Nexus of Grief** wholly within friendly territory to be the **ritual site.**",
+          "effect": "Set up the friendly **Nagash** within 1\" of the **ritual site** and wholly within friendly territory. After you have done so, he has been **deployed.** That **Nexus of Grief** is the **ritual site** for the rest of the battle."
+        },
+        {
+          "name": "Gather Power",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "The following effects apply to the friendly **Nagash** during the first and second battle rounds, as shown:\n\n**Battle Round 1:**\n\n• His Move characteristic is'-' and he cannot make pile-in moves.\n• He has **WARD (3+).**\n• He has a Control characteristic of 1.\n• **Alakanash** and **Zefet-nebtar** each have an Attacks characteristic of 2 instead of 4.\n\n**Battle Round 2:**\n\n• His Move characteristic is 6\".\n• He cannot end a move more than 6\" from the **ritual site.**\n• He has **WARD (4+).**\n• He has a Control characteristic of 5.\n• **Alakanash** and **Zefet-nebtar** each have an Attacks characteristic of 2 instead of 4."
+        },
+        {
+          "name": "Unholy Vessel",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "The **ritual site** has **WARD (4+)** and cannot use the 'Hungry Crypts' ability."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "ca93f2d6-5f5f-5271-a25c-1b9541c30f34",
+            "name": "The Seal of Nagash",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Once Per Battle, Your Hero Phase",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "Allocate 3 damage points to this unit (ward rolls cannot be made for those damage points). Then, **Heal (3)** the friendly **Nagash.**",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "bdba8e43-216b-5edf-95fa-0133a8ddd467",
+            "name": "Damned Vessel",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Reaction: You declared a SPELL ability for a friendly Nagash within 18\" of this unit",
+            "icon": "special",
+            "declare": null,
+            "effect": "Measure the range and visibility of that **SPELL** ability from this unit instead of that **Nagash.**",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "0711e240-3da1-5e0a-9619-58b3da43d9fc",
+          "name": "The Eternal Nightmare Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "NIGHTHAUNT",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "6d569e81-bb44-5458-8161-83843aa49d07",
+              "name": "Divine Terror",
+              "castingValue": 5,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "control",
+              "declare": "Pick a friendly **ETERNAL NIGHTMARE WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Subtract 3 from the target's control score for the rest of the turn.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "45a37dfd-7163-5a56-98d2-3d8872607fb0",
+              "name": "The Will of Nagash",
+              "castingValue": 8,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "defensive",
+              "declare": "Pick a friendly **ETERNAL NIGHTMARE WIZARD** to cast this spell, pick a visible friendly **ETERNAL NIGHTMARE INFANTRY** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Until the start of your next turn, if the unmodified hit roll or unmodified wound roll for an attack that targets the target unit is 1-3, the attack fails and the attack sequence ends.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "6299a3e6-59fd-5ee1-87b6-5557244aa4e9",
+          "name": "The Eternal Nightmare Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "NIGHTHAUNT",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "90fa0470-33dc-5c5d-8a9d-691f2a4b01e5",
+              "name": "Summon Mortalis Terminexus",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "If there is not a friendly **Mortalis Terminexus** on the battlefield, pick a friendly **ETERNAL NIGHTMARE WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Set up a **Mortalis Terminexus** wholly within 18\" of the caster and visible to them.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Mortalis Terminexus"
+            },
+            {
+              "id": "0742867b-b6ef-54f9-9cfc-0c3f64f2b93f",
+              "name": "Summon Shyish Reaper",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "If there is not a friendly **Shyish Reaper** on the battlefield, pick a friendly **ETERNAL NIGHTMARE WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Set up a **Shyish Reaper** wholly within 9\" of the caster, visible to them and more than 9\" from all enemy units.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Shyish Reaper"
+            },
+            {
+              "id": "43fce5f9-8128-58b8-9407-39c2e116f1be",
+              "name": "Summon Vault of Souls",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "If there is not a friendly **Vault of Souls** on the battlefield, pick a friendly **ETERNAL NIGHTMARE WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Set up a **Vault of Souls** wholly within 18\" of the caster and visible to them.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Vault of Souls"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Guardian of Souls",
+          "Lord Executioner",
+          "Myrmourn Banshees",
+          "Krulghast Cruciator",
+          "Pyregheists",
+          "Bladegheist Revenants",
+          "Spirit Hosts",
+          "Lord Vitriolic",
+          "Craventhrone Guard",
+          "Nexus of Grief",
+          "Scriptor Mortis",
+          "Grimghast Reapers",
+          "Spirit Torment",
+          "Cairn Wraith",
+          "Dreadscythe Harridans",
+          "Glaivewraith Stalkers",
+          "Tomb Banshee",
+          "Knight of Shrouds",
+          "Nagash, Supreme Lord of the Undead",
+          "Chainrasps",
+          "Chainghasts"
+        ],
+        "requiredWarscrolls": ["Nagash, Supreme Lord of the Undead"],
+        "requiredGeneralWarscrolls": ["Nagash, Supreme Lord of the Undead"],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "3ca3ef73-5c00-59bc-b255-3b87775afc8b",
@@ -3087,34 +3480,6 @@
         "declare": "Pick each enemy **WIZARD** and **PRIEST** within 12\" of this unit to be the targets.",
         "effect": "Roll a D3. On a 2+, for the rest of the phase:\n\n• Subtract 1 from casting rolls and chanting rolls for the targets.\n• Each time any of the targets fails to cast a spell or chant a prayer, inflict 1 mortal damage on that target.",
         "cpCost": null
-      },
-      {
-        "id": "2610bd0f-5586-5a36-9750-d190e3687adb",
-        "name": "Talisman of the Nadir",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Reaction: Opponent declared a SPELL ability",
-        "icon": "special",
-        "declare": null,
-        "effect": "If a friendly **CLATTERING PROCESSION** unit wholly within 12\" of this unit was picked to be the target of that spell, this unit can use the 'Unbind' ability as if it had **WIZARD (1).** Add 1 to the unbinding roll for that ability.",
-        "cpCost": null
-      },
-      {
-        "id": "ca93f2d6-5f5f-5271-a25c-1b9541c30f34",
-        "name": "The Seal of Nagash",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Battle, Your Hero Phase",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Allocate 3 damage points to this unit (ward rolls cannot be made for those damage points). Then, **Heal (3)** the friendly **Nagash.**",
-        "cpCost": null
       }
     ],
     "heroicTraits": [
@@ -3158,34 +3523,6 @@
         "icon": "movement",
         "declare": null,
         "effect": "For the rest of the turn, subtract 1 from hit rolls for attacks that target this unit.",
-        "cpCost": null
-      },
-      {
-        "id": "cc0c39f7-f090-53b0-870e-9bf2417a6d59",
-        "name": "Silent Overseer",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "chargePhase",
-        "phaseDetails": "Your Charge Phase",
-        "icon": "movement",
-        "declare": "Pick up to 3 friendly **CLATTERING PROCESSION** units wholly within 12\" of this unit to be the targets.",
-        "effect": "For the rest of the turn, the targets can use **CHARGE** abilities even if they used a **RETREAT** ability in the same turn.",
-        "cpCost": null
-      },
-      {
-        "id": "bdba8e43-216b-5edf-95fa-0133a8ddd467",
-        "name": "Damned Vessel",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Reaction: You declared a SPELL ability for a friendly Nagash within 18\" of this unit",
-        "icon": "special",
-        "declare": null,
-        "effect": "Measure the range and visibility of that **SPELL** ability from this unit instead of that **Nagash.**",
         "cpCost": null
       }
     ],
@@ -3354,70 +3691,6 @@
         "icon": "control",
         "declare": null,
         "effect": "Subtract the current battle round number from the control scores of enemy units while they are in combat with any friendly **NIGHTHAUNT** units."
-      },
-      {
-        "name": "Ethereal",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Ignore negative modifiers to save rolls for friendly **NIGHTHAUNT** units."
-      },
-      {
-        "name": "The Speed of Death",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Turn (Army), End of Your Turn",
-        "icon": "movement",
-        "declare": "Pick a friendly **CLATTERING PROCESSION** unit that used a **CHARGE** or **RETREAT** ability this turn, is not in combat and is wholly within 9\" of a battlefield edge to use this ability.",
-        "effect": "Remove that unit from the battlefield and set it up again wholly within 9\" of a battlefield edge and more than 3\" from all enemy units."
-      },
-      {
-        "name": "Spectral Swiftness",
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick a friendly **CLATTERING PROCESSION** unit that is in combat to use this ability.",
-        "effect": "That unit can move a distance up to its Move characteristic. It can pass through other models and the combat ranges of enemy units, but it cannot end that move in combat."
-      },
-      {
-        "name": "Pitiless Reapers",
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **CLATTERING PROCESSION** unit that passed across any enemy units this phase to use this ability, then pick 1 of those enemy units to be the target.",
-        "effect": "Roll a dice for each model in the **CLATTERING PROCESSION** unit that passed across the target. Add 1 to the roll if any friendly **CLATTERING PROCESSION Black Coaches** passed across the target this phase. For each 6+, inflict 1 mortal damage on the target."
-      },
-      {
-        "name": "Ethereal",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Ignore negative modifiers to save rolls for friendly **NIGHTHAUNT** units, excluding **Nagash.**"
-      },
-      {
-        "name": "The Ritual Begins",
-        "phase": "startOfTurn",
-        "phaseDetails": "Deployment Phase",
-        "icon": "special",
-        "declare": "You must use this ability to set up the friendly **Nagash.** Pick a friendly **Nexus of Grief** wholly within friendly territory to be the **ritual site.**",
-        "effect": "Set up the friendly **Nagash** within 1\" of the **ritual site** and wholly within friendly territory. After you have done so, he has been **deployed.** That **Nexus of Grief** is the **ritual site** for the rest of the battle."
-      },
-      {
-        "name": "Gather Power",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "The following effects apply to the friendly **Nagash** during the first and second battle rounds, as shown:\n\n**Battle Round 1:**\n\n• His Move characteristic is'-' and he cannot make pile-in moves.\n• He has **WARD (3+).**\n• He has a Control characteristic of 1.\n• **Alakanash** and **Zefet-nebtar** each have an Attacks characteristic of 2 instead of 4.\n\n**Battle Round 2:**\n\n• His Move characteristic is 6\".\n• He cannot end a move more than 6\" from the **ritual site.**\n• He has **WARD (4+).**\n• He has a Control characteristic of 5.\n• **Alakanash** and **Zefet-nebtar** each have an Attacks characteristic of 2 instead of 4."
-      },
-      {
-        "name": "Unholy Vessel",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "The **ritual site** has **WARD (4+)** and cannot use the 'Hungry Crypts' ability."
       }
     ]
   }

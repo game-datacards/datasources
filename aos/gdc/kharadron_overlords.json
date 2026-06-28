@@ -8,7 +8,7 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-06-17T10:06:12.212Z",
+  "updated": "2026-06-28T12:32:23.224Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -2324,80 +2324,447 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "338fe866-696e-5286-8253-a60e9ac45069",
+      "name": "Grundstok Expeditionary Force",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "parentFaction": "Kharadron Overlords",
+      "isLegends": false,
+      "lore": "There is no more august body of the Kharadron military than the Grundcorps. These hardened mercenaries are contracted to the sky-fleets for missions of vital importance, and are often organised into Expeditionary Forces – vanguard companies designed to move swiftly and unleash devastating salvoes. Typically led by an Admiral, these potent formations focus the Grundcorps’ superior firepower on a specific target, utilising swift Gunhaulers to keep one step ahead.\n\nWhen you pick the Kharadron Overlords faction for your army, you can choose for it to be a Grundstok Expeditionary Force Army of Renown. If you do so, use these faction rules instead of the Kharadron Overlords faction rules. Every unit in your army must be drawn from the units listed in the roster options, as described in Army of Renown: Grundstok Expeditionary Force. All units in your army gain the Expeditionary Force keyword.",
+      "rules": [
+        {
+          "name": "No Safe Haven",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "control",
+          "declare": "Pick an enemy unit to be the target.",
+          "effect": "Subtract 1 from the control score of that unit for each damage point allocated to it this turn by a shooting attack made by a friendly **EXPEDITIONARY FORCE** unit, to a maximum of 10 damage points."
+        },
+        {
+          "name": "Transport Skyfarers",
+          "phase": "movementPhase",
+          "phaseDetails": "Reaction: You declared a non-CHARGE MOVE ability for a friendly SKYVESSEL",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Pick a number of units up to that **SKYVESSEL**’s Transport Capacity (see its warscroll) that are wholly within 6\" of it to be the targets. Units that have been transported this turn cannot be targets.\n\nRemove the targets from the battlefield. After the **SKYVESSEL** ends its move, you must set up each target unit on the battlefield, wholly within 6\" of that **SKYVESSEL** and not in combat. Those units have been transported. A unit cannot use **CHARGE** abilities if it was transported in the same turn."
+        },
+        {
+          "name": "Gun Butt Low Blow",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "declare": null,
+          "effect": "While a friendly **EXPEDITIONARY FORCE INFANTRY** unit is contesting an objective that you control, its melee weapons have **Crit (Mortal)**."
+        },
+        {
+          "name": "Grudgefire Rounds",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "shooting",
+          "declare": "Pick a friendly **EXPEDITIONARY FORCE INFANTRY** unit to be the target.",
+          "effect": "Roll a dice. On a 3+, pick 1 of the target’s ranged weapons. Add 1 to the Attacks characteristic of that weapon for the rest of the phase."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "769eddf9-c3a5-5dee-a7dd-1e03371e1b8c",
+            "name": "Aetheric Nullifier",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "startOfTurn",
+            "phaseDetails": "Reaction: Opponent declared a SHOOT or FIGHT ability for a MANIFESTATION within 9\" of the bearer",
+            "icon": "special",
+            "declare": null,
+            "effect": "Roll 2D6. If the roll equals or exceeds the banishment value listed on the **MANIFESTATION**’s warscroll, it is banished and removed from play. You cannot pick the same **MANIFESTATION** to be the target of this ability more than once per phase.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "951e5c17-dfea-5900-86cb-7e8653c458f5",
+            "name": "Entrenchment Expert",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Reaction: You declared the ‘All-out Defence’ command for a friendly unit wholly within 12\" of this HERO",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "That friendly unit has **WARD (5+)** for the rest of the turn.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Endrinmaster with Dirigible Suit",
+          "Aetheric Navigator",
+          "Arkanaut Admiral",
+          "Endrinmaster with Endrinharness",
+          "Codewright",
+          "Scourge of Ghyran Codewright",
+          "Aether-Khemist",
+          "Scourge of Ghyran Grundstok Gunhauler",
+          "Grundstok Gunhauler",
+          "Grundstok Thunderers",
+          "Auto-Endrin",
+          "Zontari Endrin Dock"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": ["Codewright", "Scourge of Ghyran Codewright"]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Ghyran Grundstok Gunhauler",
+              "Grundstok Gunhauler"
+            ]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "660bd303-70d2-5c27-9e41-684f41dd3b93",
+      "name": "Pioneer Outpost",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "parentFaction": "Kharadron Overlords",
+      "isLegends": false,
+      "lore": "The meritocratic society of the Kharadron builds up its armies not only during times of war but also to continue the eternal and dangerous hunt for aether‑gold, a legendary substance that glimmers like frost-laden clouds and is lighter than air. These doughty skyfarers are also renowned merchants amongst the rest of mortalkind, for the Kharadron’s never-ending ventures call for the backing of immense wealth.\n\nDue to the twin tenets of mercantile and martial prowess that hold Kharadron society aloft, an individual’s status is measured primarily by skill. Traders amongst the Kharadron who seek glory must be strong enough to weather any storm and intelligent enough to negotiate the best deals. This requires an encyclopaedic grasp of the Kharadron Code, the universal set of rules that governs every aspect of their society. Many Kharadron Captains and Admirals are so cunning that they can negotiate their way into or out of any situation, and an arsenal full of aethermatic weapons to deal with any threats to their profit margins.\n\nWhen you pick the Kharadron Overlords faction for your army, you can choose for it to be a Pioneer Outpost Army of Renown. If you do so, use the faction rules on these pages instead of the Kharadron Overlords faction rules. Every unit in your army must be drawn from the units listed in the roster options box as described in Army of Renown: Pioneer Outpost. All units in your army gain the Pioneer keyword.",
+      "rules": [
+        {
+          "name": "Initial Investment",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Each friendly **AUTO-ENDRIN** can move 2D6\" but cannot finish that move in combat."
+        },
+        {
+          "name": "Settling Accounts",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "offensive",
+          "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if a friendly **AUTO-ENDRIN** was destroyed this turn by an enemy unit.",
+          "effect": "For the rest of the battle, each time a friendly **AUTO-ENDRIN** is removed from the battlefield, before removing it, inflict D3 mortal damage on each enemy unit within 3\" of that **AUTO-ENDRIN**."
+        },
+        {
+          "name": "Aggressive Acquisitions",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "special",
+          "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if there is a friendly **PIONEER** unit in each large quarter of the battlefield. Each of those units must be more than 6\" from all other large quarters of the battlefield and not in combat.",
+          "effect": "For the rest of the battle, enemy units cannot be set up within your territory or within 9\" of an objective that you control."
+        },
+        {
+          "name": "Secure Investments",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "defensive",
+          "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if any enemy units that were within 3\" of your **Zontari Endrin Dock** this turn were destroyed this turn.",
+          "effect": "For the rest of the battle, ignore the Rend characteristic of combat attacks that target friendly non-**INFANTRY PIONEER** units or friendly faction terrain features."
+        },
+        {
+          "name": "Hostile Takeover",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "defensive",
+          "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if an enemy **HERO** was destroyed by shooting attacks made by a friendly **PIONEER** unit this turn.",
+          "effect": "For the rest of the battle, subtract 1 from hit rolls for shooting attacks that target friendly **PIONEER** units or friendly faction terrain features."
+        },
+        {
+          "name": "Market Dominance",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "rallying",
+          "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if you control every objective that is not wholly within enemy territory.",
+          "effect": "For the rest of the battle, each time you use your **Zontari Endrin Dock**’s ‘Endrinworks Outpost’ ability, you can set up a replacement **AUTO-ENDRIN** on a manufacturing roll of 3+ instead of 4+."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "5e15830c-484f-5fdc-8097-ba5c0b20115d",
+            "name": "Rockbuster Charges",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Your Movement Phase",
+            "icon": "offensive",
+            "declare": "Pick a terrain feature that this unit passed across this turn. Each enemy unit within 1\" of that terrain feature is a target.",
+            "effect": "Inflict D3 mortal damage on each target.",
+            "cpCost": null
+          },
+          {
+            "id": "331e697d-fadd-5866-91ee-a75e33681f8b",
+            "name": "Thorgsson's Universal Automaton Actuator",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "PAssive",
+            "icon": "movement",
+            "declare": null,
+            "effect": "Add 6\" to the Move characteristic of friendly **AUTO-ENDRINS** while they are wholly within 6\" of this unit.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "f864c1a6-c5a6-541f-84d0-978b26fb4fdf",
+            "name": "Copper Fingers",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Once Per Battle, Reaction: You declared the ‘Endrinworks Outpost’ ability for a Zontari Endrin Dock",
+            "icon": "special",
+            "declare": null,
+            "effect": "If this unit is wholly within 9\" of that **Zontari Endrin Dock**, instead of resolving the effect of the ‘Endrinworks Outpost’ ability, set up a replacement **AUTO-ENDRIN** on the battlefield, wholly within 6\" of that **Zontari Endrin Dock** and more than 3\" from all enemy units.",
+            "cpCost": null
+          },
+          {
+            "id": "b3d7013c-5481-5169-ad64-d979c061a7d9",
+            "name": "Territorial Trailblazer",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "Passive",
+            "icon": "control",
+            "declare": null,
+            "effect": "Subtract 3 from the control scores of enemy units while they are in combat with this unit.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Vongrim Harpoon Crew",
+          "Auto-Endrin",
+          "Endrinriggers",
+          "Zontari Endrin Dock",
+          "Thundrik's Profiteers",
+          "Arkanaut Company",
+          "Skywardens",
+          "Aetheric Navigator",
+          "Arkanaut Admiral",
+          "Endrinmaster with Endrinharness",
+          "Vongrim Salvagers",
+          "Scourge of Ghyran Grundstok Gunhauler",
+          "Grundstok Gunhauler",
+          "Grundstok Thunderers"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Ghyran Grundstok Gunhauler",
+              "Grundstok Gunhauler"
+            ]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "45618ca0-6676-5725-b786-f1758dd73f6c",
+      "name": "The Magnate's Crew",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "KHARADRON_OVERLORDS",
+      "parentFaction": "Kharadron Overlords",
+      "isLegends": false,
+      "lore": "When his profits are threatened and his people need a saviour, Brokk Grungsson takes the field, his iconic ‘zhaktopper’ helm glinting in Hysh’s light and a bellowed oath upon his lips. The Lord-Magnate of Barak-Nar is famed for having held that title for a record period of time, and it was earned through blood, sweat and cold-hearted business acumen.\n\nThough they were not the first sky-port to ascend into Chamon’s skies, Barak-Nar was the first to truly embrace the way of life that would later become Kharadron culture. It was their magnates who spearheaded the use of aether-gold as fuel, allowing their new customs to exist in perpetuity.\n\nWhen you pick the Kharadron Overlords faction for your army, you can choose for it to be a The Magnate’s Crew Army of Renown. If you do so, use the faction rules on these pages instead of the Kharadron Overlords faction rules. Every unit in your army must be drawn from the units listed in the roster options as described in Army of Renown: The Magnate's Crew. All units in your army gain the Magnate’s Crew keyword.",
+      "rules": [
+        {
+          "name": "Loyalty to the Magnate",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "While a friendly **Brokk Grungsson** is wholly within the combat range of another friendly **MAGNATE’S CREW INFANTRY** unit, both those units have **WARD (5+)**."
+        },
+        {
+          "name": "Pay Your Debts",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "offensive",
+          "declare": "Pick an enemy unit on the battlefield or in reserve to be **indebted**.",
+          "effect": "Add 1 to wound rolls for combat attacks made by friendly **MAGNATE’S CREW** units that target the **indebted** unit."
+        },
+        {
+          "name": "Bold Moves",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Battle (Army), Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick any number of friendly **MAGNATE’S CREW INFANTRY** units that are in combat to be the targets. Make an **emergency launch roll** of 3D6 for each target.",
+          "effect": "Each target can move a distance up to the value of its **emergency launch roll**. It **can** move through the combat ranges of any enemy units but **cannot** end that move in combat with an enemy unit that it was not in combat with at the start of the phase.\n\nThe target(s) cannot use **CHARGE** abilities for the rest of the turn."
+        },
+        {
+          "name": "Cutting-Edge Endrinpacks",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick up to 2 friendly **MAGNATE’S CREW INFANTRY** units that are wholly within 9\" of a friendly **MAGNATE’S CREW SKYVESSEL** to be the targets.",
+          "effect": "For the rest of the turn, each target can use **CHARGE** abilities even if it used a **RUN** ability in the same turn."
+        },
+        {
+          "name": "Invictunite-lined Hull",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Battle (Army), Enemy Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **MAGNATE’S CREW SKYVESSEL** to be the target.",
+          "effect": "Roll a D3. For the rest of the turn, subtract **X** from the Rend characteristic of weapons used for attacks that target that **SKYVESSEL**, where **X** is equal to the roll."
+        },
+        {
+          "name": "Constant Barrage",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+          "icon": "shooting",
+          "declare": "Pick an enemy unit that had any damage points allocated to it this phase by a friendly **MAGNATE’S CREW** unit’s attacks to be the target.",
+          "effect": "Until the start of your next turn, each time the target ends a move within 10\" of any friendly **MAGNATE’S CREW** units, roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "b32c0f9b-bc6f-599c-b7e7-5529ab81c52a",
+            "name": "Aerodynamism",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "If this unit moved this turn, subtract 1 from hit rolls for attacks that target this unit for the rest of the turn.",
+            "cpCost": null
+          },
+          {
+            "id": "d3b58037-5cfa-5f55-b1a2-dad073a65a50",
+            "name": "Guns For All Occasions",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "End of Your Turn",
+            "icon": "offensive",
+            "declare": "Pick an enemy unit in combat with this unit to be the target.",
+            "effect": "Inflict D3 mortal damage on the target.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "bfbe590d-0b51-55fe-9989-36381826df1a",
+            "name": "Master of Discipline",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Passive",
+            "icon": "movement",
+            "declare": null,
+            "effect": "Each time a friendly **MAGNATE’S CREW INFANTRY** unit wholly within 12\" of this unit uses the ‘Redeploy’ command, you can re-roll the dice.",
+            "cpCost": null
+          },
+          {
+            "id": "31dd719b-f1ae-57a6-b7b1-72c5193c9e45",
+            "name": "Flanking Fire",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "shootingPhase",
+            "phaseDetails": "Passive",
+            "icon": "shooting",
+            "declare": null,
+            "effect": "Add 1 to hit rolls for shooting attacks made by friendly **MAGNATE’S CREW SKYVESSELS** that target an enemy unit in combat with this unit.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Arkanaut Ironclad",
+          "Arkanaut Frigate",
+          "Arkanaut Ironclad (Hero)",
+          "Null-Khemist",
+          "Brokk Grungsson, Lord-Magnate of Barak-Nar",
+          "Vongrim Salvagers",
+          "Endrinmaster with Dirigible Suit",
+          "Vongrim Harpoon Crew",
+          "Endrinriggers",
+          "Skywardens",
+          "Scourge of Ghyran Grundstok Gunhauler",
+          "Grundstok Gunhauler"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": ["Arkanaut Ironclad (Hero)"],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": ["Arkanaut Ironclad (Hero)"]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Arkanaut Ironclad (Hero)",
+              "Brokk Grungsson, Lord-Magnate of Barak-Nar"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Ghyran Grundstok Gunhauler",
+              "Grundstok Gunhauler"
+            ]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [],
   "manifestationLores": [],
   "enhancements": {
     "artefacts": [
-      {
-        "id": "b32c0f9b-bc6f-599c-b7e7-5529ab81c52a",
-        "name": "Aerodynamism",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "If this unit moved this turn, subtract 1 from hit rolls for attacks that target this unit for the rest of the turn.",
-        "cpCost": null
-      },
-      {
-        "id": "d3b58037-5cfa-5f55-b1a2-dad073a65a50",
-        "name": "Guns For All Occasions",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "endOfTurn",
-        "phaseDetails": "End of Your Turn",
-        "icon": "offensive",
-        "declare": "Pick an enemy unit in combat with this unit to be the target.",
-        "effect": "Inflict D3 mortal damage on the target.",
-        "cpCost": null
-      },
-      {
-        "id": "769eddf9-c3a5-5dee-a7dd-1e03371e1b8c",
-        "name": "Aetheric Nullifier",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "startOfTurn",
-        "phaseDetails": "Reaction: Opponent declared a SHOOT or FIGHT ability for a MANIFESTATION within 9\" of the bearer",
-        "icon": "special",
-        "declare": null,
-        "effect": "Roll 2D6. If the roll equals or exceeds the banishment value listed on the **MANIFESTATION**’s warscroll, it is banished and removed from play. You cannot pick the same **MANIFESTATION** to be the target of this ability more than once per phase.",
-        "cpCost": null
-      },
-      {
-        "id": "5e15830c-484f-5fdc-8097-ba5c0b20115d",
-        "name": "Rockbuster Charges",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
-        "icon": "offensive",
-        "declare": "Pick a terrain feature that this unit passed across this turn. Each enemy unit within 1\" of that terrain feature is a target.",
-        "effect": "Inflict D3 mortal damage on each target.",
-        "cpCost": null
-      },
-      {
-        "id": "331e697d-fadd-5866-91ee-a75e33681f8b",
-        "name": "Thorgsson's Universal Automaton Actuator",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "PAssive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Add 6\" to the Move characteristic of friendly **AUTO-ENDRINS** while they are wholly within 6\" of this unit.",
-        "cpCost": null
-      },
       {
         "id": "f79957ee-1ce8-5974-bb85-7911c9f3eff4",
         "name": "Voidstone Orb",
@@ -2484,76 +2851,6 @@
       }
     ],
     "heroicTraits": [
-      {
-        "id": "bfbe590d-0b51-55fe-9989-36381826df1a",
-        "name": "Master of Discipline",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "movementPhase",
-        "phaseDetails": "Passive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Each time a friendly **MAGNATE’S CREW INFANTRY** unit wholly within 12\" of this unit uses the ‘Redeploy’ command, you can re-roll the dice.",
-        "cpCost": null
-      },
-      {
-        "id": "31dd719b-f1ae-57a6-b7b1-72c5193c9e45",
-        "name": "Flanking Fire",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "shootingPhase",
-        "phaseDetails": "Passive",
-        "icon": "shooting",
-        "declare": null,
-        "effect": "Add 1 to hit rolls for shooting attacks made by friendly **MAGNATE’S CREW SKYVESSELS** that target an enemy unit in combat with this unit.",
-        "cpCost": null
-      },
-      {
-        "id": "951e5c17-dfea-5900-86cb-7e8653c458f5",
-        "name": "Entrenchment Expert",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Reaction: You declared the ‘All-out Defence’ command for a friendly unit wholly within 12\" of this HERO",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "That friendly unit has **WARD (5+)** for the rest of the turn.",
-        "cpCost": null
-      },
-      {
-        "id": "f864c1a6-c5a6-541f-84d0-978b26fb4fdf",
-        "name": "Copper Fingers",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Battle, Reaction: You declared the ‘Endrinworks Outpost’ ability for a Zontari Endrin Dock",
-        "icon": "special",
-        "declare": null,
-        "effect": "If this unit is wholly within 9\" of that **Zontari Endrin Dock**, instead of resolving the effect of the ‘Endrinworks Outpost’ ability, set up a replacement **AUTO-ENDRIN** on the battlefield, wholly within 6\" of that **Zontari Endrin Dock** and more than 3\" from all enemy units.",
-        "cpCost": null
-      },
-      {
-        "id": "b3d7013c-5481-5169-ad64-d979c061a7d9",
-        "name": "Territorial Trailblazer",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "endOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "control",
-        "declare": null,
-        "effect": "Subtract 3 from the control scores of enemy units while they are in combat with this unit.",
-        "cpCost": null
-      },
       {
         "id": "0a4a47c6-34db-5dbb-9b7a-f493a842f678",
         "name": "Shrewd Opportunist",
@@ -2906,134 +3203,6 @@
   ],
   "rules": {
     "battleTraits": [
-      {
-        "name": "Loyalty to the Magnate",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "While a friendly **Brokk Grungsson** is wholly within the combat range of another friendly **MAGNATE’S CREW INFANTRY** unit, both those units have **WARD (5+)**."
-      },
-      {
-        "name": "Pay Your Debts",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
-        "icon": "offensive",
-        "declare": "Pick an enemy unit on the battlefield or in reserve to be **indebted**.",
-        "effect": "Add 1 to wound rolls for combat attacks made by friendly **MAGNATE’S CREW** units that target the **indebted** unit."
-      },
-      {
-        "name": "Bold Moves",
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Battle (Army), Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick any number of friendly **MAGNATE’S CREW INFANTRY** units that are in combat to be the targets. Make an **emergency launch roll** of 3D6 for each target.",
-        "effect": "Each target can move a distance up to the value of its **emergency launch roll**. It **can** move through the combat ranges of any enemy units but **cannot** end that move in combat with an enemy unit that it was not in combat with at the start of the phase.\n\nThe target(s) cannot use **CHARGE** abilities for the rest of the turn."
-      },
-      {
-        "name": "Cutting-Edge Endrinpacks",
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
-        "icon": "movement",
-        "declare": "Pick up to 2 friendly **MAGNATE’S CREW INFANTRY** units that are wholly within 9\" of a friendly **MAGNATE’S CREW SKYVESSEL** to be the targets.",
-        "effect": "For the rest of the turn, each target can use **CHARGE** abilities even if it used a **RUN** ability in the same turn."
-      },
-      {
-        "name": "Invictunite-lined Hull",
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Battle (Army), Enemy Hero Phase",
-        "icon": "defensive",
-        "declare": "Pick a friendly **MAGNATE’S CREW SKYVESSEL** to be the target.",
-        "effect": "Roll a D3. For the rest of the turn, subtract **X** from the Rend characteristic of weapons used for attacks that target that **SKYVESSEL**, where **X** is equal to the roll."
-      },
-      {
-        "name": "Constant Barrage",
-        "phase": "shootingPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
-        "icon": "shooting",
-        "declare": "Pick an enemy unit that had any damage points allocated to it this phase by a friendly **MAGNATE’S CREW** unit’s attacks to be the target.",
-        "effect": "Until the start of your next turn, each time the target ends a move within 10\" of any friendly **MAGNATE’S CREW** units, roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
-      },
-      {
-        "name": "No Safe Haven",
-        "phase": "endOfTurn",
-        "phaseDetails": "End of Any Turn",
-        "icon": "control",
-        "declare": "Pick an enemy unit to be the target.",
-        "effect": "Subtract 1 from the control score of that unit for each damage point allocated to it this turn by a shooting attack made by a friendly **EXPEDITIONARY FORCE** unit, to a maximum of 10 damage points."
-      },
-      {
-        "name": "Transport Skyfarers",
-        "phase": "movementPhase",
-        "phaseDetails": "Reaction: You declared a non-CHARGE MOVE ability for a friendly SKYVESSEL",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Pick a number of units up to that **SKYVESSEL**’s Transport Capacity (see its warscroll) that are wholly within 6\" of it to be the targets. Units that have been transported this turn cannot be targets.\n\nRemove the targets from the battlefield. After the **SKYVESSEL** ends its move, you must set up each target unit on the battlefield, wholly within 6\" of that **SKYVESSEL** and not in combat. Those units have been transported. A unit cannot use **CHARGE** abilities if it was transported in the same turn."
-      },
-      {
-        "name": "Gun Butt Low Blow",
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "While a friendly **EXPEDITIONARY FORCE INFANTRY** unit is contesting an objective that you control, its melee weapons have **Crit (Mortal)**."
-      },
-      {
-        "name": "Grudgefire Rounds",
-        "phase": "shootingPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
-        "icon": "shooting",
-        "declare": "Pick a friendly **EXPEDITIONARY FORCE INFANTRY** unit to be the target.",
-        "effect": "Roll a dice. On a 3+, pick 1 of the target’s ranged weapons. Add 1 to the Attacks characteristic of that weapon for the rest of the phase."
-      },
-      {
-        "name": "Initial Investment",
-        "phase": "heroPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Each friendly **AUTO-ENDRIN** can move 2D6\" but cannot finish that move in combat."
-      },
-      {
-        "name": "Settling Accounts",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
-        "icon": "offensive",
-        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if a friendly **AUTO-ENDRIN** was destroyed this turn by an enemy unit.",
-        "effect": "For the rest of the battle, each time a friendly **AUTO-ENDRIN** is removed from the battlefield, before removing it, inflict D3 mortal damage on each enemy unit within 3\" of that **AUTO-ENDRIN**."
-      },
-      {
-        "name": "Aggressive Acquisitions",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
-        "icon": "special",
-        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if there is a friendly **PIONEER** unit in each large quarter of the battlefield. Each of those units must be more than 6\" from all other large quarters of the battlefield and not in combat.",
-        "effect": "For the rest of the battle, enemy units cannot be set up within your territory or within 9\" of an objective that you control."
-      },
-      {
-        "name": "Secure Investments",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
-        "icon": "defensive",
-        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if any enemy units that were within 3\" of your **Zontari Endrin Dock** this turn were destroyed this turn.",
-        "effect": "For the rest of the battle, ignore the Rend characteristic of combat attacks that target friendly non-**INFANTRY PIONEER** units or friendly faction terrain features."
-      },
-      {
-        "name": "Hostile Takeover",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
-        "icon": "defensive",
-        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if an enemy **HERO** was destroyed by shooting attacks made by a friendly **PIONEER** unit this turn.",
-        "effect": "For the rest of the battle, subtract 1 from hit rolls for shooting attacks that target friendly **PIONEER** units or friendly faction terrain features."
-      },
-      {
-        "name": "Market Dominance",
-        "phase": "endOfTurn",
-        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
-        "icon": "rallying",
-        "declare": "You can only use this ability if you have not used any **CODE** abilities this turn and if you control every objective that is not wholly within enemy territory.",
-        "effect": "For the rest of the battle, each time you use your **Zontari Endrin Dock**’s ‘Endrinworks Outpost’ ability, you can set up a replacement **AUTO-ENDRIN** on a manufacturing roll of 3+ instead of 4+."
-      },
       {
         "name": "Skyvessel Cover",
         "phase": "defensive",

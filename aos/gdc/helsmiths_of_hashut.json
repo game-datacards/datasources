@@ -8,7 +8,7 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-06-17T10:06:21.384Z",
+  "updated": "2026-06-28T12:32:31.348Z",
   "compatibleDataVersion": 434,
   "warscrolls": [
     {
@@ -1831,6 +1831,327 @@
       ]
     }
   ],
+  "armiesOfRenown": [
+    {
+      "id": "7514c5ce-97bc-56a5-9ab6-acfb6e8dcf52",
+      "name": "Taar's Grand Forgehost",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "HELSMITHS_OF_HASHUT",
+      "parentFaction": "Helsmiths of Hashut",
+      "isLegends": false,
+      "lore": "The Forge Anathema dominates much of Aqshy’s Adamantine Chain – a monument to cruelty and grandeur, its armies filled with seemingly endless ranks of warriors and vast cohorts of daemon machines powered by all manner of esoteric fuels. Though not the first ziggurat, the Forge Anathema eagerly accepted Hashut’s offerings. Burning with greed, its overlords – led by Urak Taar, most ancient and malign of Daemonsmiths – reap bounties of smouldering realmstone and captured daemon-essences.\n\nWhen you pick the Helsmiths of Hashut faction for your army, you can choose for it to be a Taar’s Grand Forgehost Army of Renown. If you do so, use the faction rules in Army of Renown: Taar's Grand Forgehost instead of the Helsmiths of Hashut faction rules. Every unit in your army must be drawn from the units listed in the roster options box as described in Army of Renown: Taar's Grand Forgehost. All units in your army gain the GRAND FORGEHOST keyword.",
+      "rules": [
+        {
+          "name": "Rising Fire",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "The following cumulative effects apply to friendly **GRAND FORGEHOST** units in each battle round after the first.\n\n**Battle Round 2:**\n***Daemonic Weaponry:*** Those units’ weapons have **Crit (2 Hits)**.\n\n**Battle Round 3:**\n***Harnessed Sorcery:*** Add 1 to casting rolls and chanting rolls for those units.\n\n**Battle Round 4:**\n***Channelled Power:*** Attacks made by those units score critical hits on unmodified hit rolls of 5+.\n\n**Battle Round 5:**\n***Arcane Dominance:*** Add 1 to the power level of those units if they are a **WIZARD** or **PRIEST**."
+        },
+        {
+          "name": "Masterful Daemonworks",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "Friendly **GRAND FORGEHOST WAR MACHINES** have **WARD (6+)**."
+        },
+        {
+          "name": "Dread Ranks Unbroken",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "rallying",
+          "declare": "Pick a friendly non-**HERO GRAND FORGEHOST INFANTRY** unit that has been destroyed to be the target.",
+          "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up), wholly within 6\" of the battlefield edge and more than 9\" from all enemy units."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "b06507ba-f487-508f-b200-b393c5f6d6fc",
+            "name": "Talisman of Obsidian",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "Subtract 1 from hit rolls for attacks that target this unit.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "f9c2eb1e-cfb0-55e5-a322-ebee0354488f",
+            "name": "Ruthless Oversser",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Passive",
+            "icon": "rallying",
+            "declare": null,
+            "effect": "Each time a friendly **GRAND FORGEHOST** unit wholly within 12\" of this unit uses the ‘Rally’ command, you can make 3 additional rally rolls of D6.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "4279f827-679f-561f-9c29-add511776c82",
+          "name": "Taar's Grand Forgehost Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "HELSMITHS_OF_HASHUT",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "eaba6b8e-740b-5175-89a9-ebeacf496924",
+              "name": "Shackling Curse",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "defensive",
+              "declare": "Pick a friendly **GRAND FORGEHOST WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "For the rest of the turn, the target’s attacks cannot score critical hits (treat them as regular hits instead).",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "89217f43-e207-5afb-a472-0c6de30c03be",
+              "name": "Reinforce Daemonsteel",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "defensive",
+              "declare": "Pick a friendly **GRAND FORGEHOST WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Until the start of your next turn, ignore the first damage point allocated to each friendly **HELSMITHS OF HASHUT** unit in each phase while they are wholly within 12\" of the caster.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        },
+        {
+          "id": "74819ff3-dd3a-55df-9efd-56c2c32840c6",
+          "name": "Taar's Grand Forgehost Prayer Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "HELSMITHS_OF_HASHUT",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "0bbb75fe-7fde-591d-b1f1-f036b8adbe7c",
+              "name": "Grasp of Stone",
+              "castingValue": 4,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "defensive",
+              "declare": "Pick a friendly **GRAND FORGEHOST PRIEST** to chant this prayer, pick a visible enemy unit within 18\" of them to be the target, then make a chanting roll of D6.",
+              "effect": "Subtract 1 from the Attacks characteristic of the target’s melee weapons until the start of your next turn. If the chanting roll was 8+, the target also has **STRIKE-LAST** until the start of your next turn.",
+              "keywords": ["Prayer", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "76594ad7-5f87-5109-ae53-dc8c81bd5478",
+              "name": "Lava Storm",
+              "castingValue": 5,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **GRAND FORGEHOST PRIEST** to chant this prayer. Pick an enemy unit to be the target and roll 6 dice. For each 6, pick an additional enemy unit to be a target. Then make a chanting roll of D6.",
+              "effect": "If the chanting roll was 7+, pick an additional enemy unit to be a target. Inflict D3 mortal damage on each target.",
+              "keywords": ["Prayer"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Infernal Cohort with Hashutite Spears",
+          "Infernal Razers with Flamehurlers",
+          "War Despot",
+          "Deathshrieker Rocket Battery",
+          "Ashen Elder",
+          "Infernal Cohort with Hashutite Blades",
+          "Scourge of Ghyran War Despot",
+          "Dominator Engine with Bane Maces",
+          "Tormentor Bombard",
+          "Scourge of Ghyran Infernal Cohort with Hashutite Blades",
+          "Dominator Engine with Immolation Cannons",
+          "Infernal Razers with Blunderbusses",
+          "Daemonsmith",
+          "Urak Taar, the First Daemonsmith",
+          "The Blood of the Bull"
+        ],
+        "requiredWarscrolls": ["Urak Taar, the First Daemonsmith"],
+        "requiredGeneralWarscrolls": ["Urak Taar, the First Daemonsmith"],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Infernal Cohort with Hashutite Blades",
+              "Scourge of Ghyran Infernal Cohort with Hashutite Blades"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": ["War Despot", "Scourge of Ghyran War Despot"]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "ae4888fb-f961-5dac-b3b3-5fd756b78929",
+      "name": "Ziggurat Stampede",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "HELSMITHS_OF_HASHUT",
+      "parentFaction": "Helsmiths of Hashut",
+      "isLegends": false,
+      "lore": "Alongside the ruling sorcerers stand the Drazghar, or Scorched Sect – a religious order who speak their god’s burning hate and protect his mysteries. These priests wield influence over the bellicose Bull Centaurs, ‘sanctioned’ mutants who revel in violence and contempt. When an enemy has drawn the deepest ire of the duardin, it is these sacred warriors, as well as the daemon-constructs that share their god’s tauroid form, that are assembled as holy stampedes to crush those marked by the Bullfather’s wrath. Faced with the coming of the Helsmiths of Hashut, nothing stands. Not shieldwalls and battlelines. Neither crenellation nor fortress. Certainly not hope.\n\nWhen you pick the Helsmiths of Hashut faction for your army, you can choose for it to be a Ziggurat Stampede Army of Renown. If you do so, use the faction rules in Army of Renown: Ziggurat Stampede instead of the Helsmiths of Hashut faction rules. Every unit in your army must be drawn from the units listed in the roster options box as described in Army of Renown: Ziggurat Stampede. All units in your army gain the ZIGGURAT STAMPEDE keyword.",
+      "rules": [
+        {
+          "name": "Let The Realms Tremble",
+          "phase": "chargePhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Add **X** to charge rolls for friendly **ZIGGURAT STAMPEDE** units, where **X** is the number of friendly **ZIGGURAT STAMPEDE** units that have already charged this phase."
+        },
+        {
+          "name": "'Break Them, One and All...'",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Any number of friendly **ZIGGURAT STAMPEDE** units can use the ‘Power Through’ command in the same turn."
+        },
+        {
+          "name": "Run Roughshod",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "special",
+          "declare": "Pick a friendly **ZIGGURAT STAMPEDE** unit in combat to be the target.",
+          "effect": "For the rest of the turn:\n\n•  The target can use **SHOOT** and/or **CHARGE** abilities even if it used a **RETREAT** ability in the same turn.\n•  No mortal damage is inflicted on the target by **RETREAT** abilities."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "ea106fef-1522-5172-9934-a96f28274c16",
+            "name": "Visage of the Great Bull",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "chargePhase",
+            "phaseDetails": "Passive",
+            "icon": "movement",
+            "declare": null,
+            "effect": "In your charge phase, add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "9f33dbdd-6144-550e-8b9e-20eba8d551ab",
+            "name": "Raging Animus",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "Each time you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict D3 mortal damage on the attacking unit after the **FIGHT** ability has been resolved.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "edd06490-c472-5d16-b208-dd213c6eaedb",
+          "name": "Ziggurat Stampede Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "HELSMITHS_OF_HASHUT",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "3003332a-c4ac-5af7-8cc2-5e3daf663481",
+              "name": "Searing Detonation",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **ZIGGURAT STAMPEDE WIZARD** to cast this spell, pick each enemy unit in combat with them to be the targets, then make a casting roll of 2D6.",
+              "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "f37e60ef-9238-530c-9d94-a69d3f3a0255",
+              "name": "Flaming Weapons",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **ZIGGURAT STAMPEDE WIZARD** to cast this spell, pick a visible friendly **ZIGGURAT STAMPEDE** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Add 1 to the Rend characteristic of the target’s melee weapons until the start of your next turn.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "2f5a7745-d6d3-5652-8a6a-c7eda4d5d762",
+              "name": "Burn to Ash",
+              "castingValue": 8,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **ZIGGURAT STAMPEDE WIZARD** to cast this spell, pick a terrain feature within 18\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "If the target has a Health characteristic, inflict 2D3 mortal damage on it. Then, if the target was not destroyed or does not have a Health characteristic:\n\n• The target gains the ‘Obscuring’ terrain ability for the rest of the battle (Terrain, 1.2).\n• If the target is **FACTION TERRAIN**, until the start of your next turn, abilities on that terrain feature’s warscroll have no effect.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Anointed Sentinels",
+          "Bull Centaurs",
+          "Daemonsmith on Infernal Taurus",
+          "Dominator Engine with Bane Maces",
+          "Dominator Engine with Immolation Cannons"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    }
+  ],
   "lores": [
     {
       "id": "06f9d20c-7fa9-56df-92ec-ce201e7d3ac4",
@@ -1975,34 +2296,6 @@
         "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
         "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll.",
         "cpCost": null
-      },
-      {
-        "id": "b06507ba-f487-508f-b200-b393c5f6d6fc",
-        "name": "Talisman of Obsidian",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Subtract 1 from hit rolls for attacks that target this unit.",
-        "cpCost": null
-      },
-      {
-        "id": "ea106fef-1522-5172-9934-a96f28274c16",
-        "name": "Visage of the Great Bull",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "chargePhase",
-        "phaseDetails": "Passive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "In your charge phase, add 1 to the number of dice rolled when making charge rolls for this unit, to a maximum of 3.",
-        "cpCost": null
       }
     ],
     "heroicTraits": [
@@ -2046,34 +2339,6 @@
         "icon": "offensive",
         "declare": "Pick a visible enemy unit within 18\" of this unit to be the target.",
         "effect": "Until the start of your next turn, add 1 to wound rolls for combat attacks made by friendly **HELSMITHS OF HASHUT** units that target that enemy unit.",
-        "cpCost": null
-      },
-      {
-        "id": "f9c2eb1e-cfb0-55e5-a322-ebee0354488f",
-        "name": "Ruthless Oversser",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "heroPhase",
-        "phaseDetails": "Passive",
-        "icon": "rallying",
-        "declare": null,
-        "effect": "Each time a friendly **GRAND FORGEHOST** unit wholly within 12\" of this unit uses the ‘Rally’ command, you can make 3 additional rally rolls of D6.",
-        "cpCost": null
-      },
-      {
-        "id": "9f33dbdd-6144-550e-8b9e-20eba8d551ab",
-        "name": "Raging Animus",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Each time you make an unmodified save roll of 1 for a combat attack that targets this unit, inflict D3 mortal damage on the attacking unit after the **FIGHT** ability has been resolved.",
         "cpCost": null
       }
     ],
@@ -2224,54 +2489,6 @@
         "icon": "special",
         "declare": "Pick a terrain feature or objective that does not have a friendly **desolation token** and is contested by a friendly **HELSMITHS OF HASHUT** unit that is not in combat to be the target.",
         "effect": "Give the target a **desolation token**."
-      },
-      {
-        "name": "Rising Fire",
-        "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "The following cumulative effects apply to friendly **GRAND FORGEHOST** units in each battle round after the first.\n\n**Battle Round 2:**\n***Daemonic Weaponry:*** Those units’ weapons have **Crit (2 Hits)**.\n\n**Battle Round 3:**\n***Harnessed Sorcery:*** Add 1 to casting rolls and chanting rolls for those units.\n\n**Battle Round 4:**\n***Channelled Power:*** Attacks made by those units score critical hits on unmodified hit rolls of 5+.\n\n**Battle Round 5:**\n***Arcane Dominance:*** Add 1 to the power level of those units if they are a **WIZARD** or **PRIEST**."
-      },
-      {
-        "name": "Masterful Daemonworks",
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "Friendly **GRAND FORGEHOST WAR MACHINES** have **WARD (6+)**."
-      },
-      {
-        "name": "Dread Ranks Unbroken",
-        "phase": "movementPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
-        "icon": "rallying",
-        "declare": "Pick a friendly non-**HERO GRAND FORGEHOST INFANTRY** unit that has been destroyed to be the target.",
-        "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up), wholly within 6\" of the battlefield edge and more than 9\" from all enemy units."
-      },
-      {
-        "name": "Let The Realms Tremble",
-        "phase": "chargePhase",
-        "phaseDetails": "Passive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Add **X** to charge rolls for friendly **ZIGGURAT STAMPEDE** units, where **X** is the number of friendly **ZIGGURAT STAMPEDE** units that have already charged this phase."
-      },
-      {
-        "name": "'Break Them, One and All...'",
-        "phase": "endOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Any number of friendly **ZIGGURAT STAMPEDE** units can use the ‘Power Through’ command in the same turn."
-      },
-      {
-        "name": "Run Roughshod",
-        "phase": "movementPhase",
-        "phaseDetails": "Your Movement Phase",
-        "icon": "special",
-        "declare": "Pick a friendly **ZIGGURAT STAMPEDE** unit in combat to be the target.",
-        "effect": "For the rest of the turn:\n\n•  The target can use **SHOOT** and/or **CHARGE** abilities even if it used a **RETREAT** ability in the same turn.\n•  No mortal damage is inflicted on the target by **RETREAT** abilities."
       }
     ]
   }
