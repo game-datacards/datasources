@@ -1,12 +1,42 @@
-Combat Patrol datasheets and detachments added for 24 factions
+Additional selection costs added across all factions
 
-Combat Patrol content has been moved from main faction entries into dedicated Combat Patrol entries across 23 factions, each with new Combat Patrol-specific datasheets.
+**Tyranids**
+- Hierophant: added additional selection cost (+100 pts)
+- Harridan: added additional selection cost (+50 pts)
+- and 13 other datasheets (+10–20 pts each)
 
-**23 Factions Updated**
-Dark Angels, Death Guard, Tyranids, Adeptus Astartes, Blood Angels, Black Templars, Space Wolves, Thousand Sons, World Eaters, Heretic Astartes, Astra Militarum, Grey Knights, Adepta Sororitas, Adeptus Mechanicus, Adeptus Custodes, Agents of the Imperium, Orks, Leagues of Votann, T'au Empire, Necrons, Drukhari, Genestealer Cults, Emperor's Children
-- Each main faction: removed 1 Combat Patrol detachment with 3 stratagems and 2 enhancements
-- Each Combat Patrol entry: added the detachment with 3 stratagems, 2 enhancements, and 3-5 new datasheets
-- ~98 new Combat Patrol datasheets added in total
+**Orks**
+- Stompa: added additional selection cost (+100 pts)
+- Gargantuan Squiggoth: added additional selection cost (+50 pts)
+- and 13 other datasheets (+10–20 pts each)
 
-**Asuryani (Combat Patrol)**
-- added 4 new datasheets
+**T'au Empire**
+- Ta'unar Supremacy Armour: added additional selection cost (+100 pts)
+- AX-1-0 Tiger Shark: added additional selection cost (+60 pts)
+- Tiger Shark: added additional selection cost (+50 pts)
+- and 12 other datasheets (+10–30 pts each)
+
+**Imperial Knights**
+- Acastus Knight Asterius: added additional selection cost (+75 pts)
+- Acastus Knight Porphyrion: added additional selection cost (+75 pts)
+- and 17 other datasheets (+10–20 pts each)
+
+**Chaos Knights**
+- Chaos Acastus Knight Asterius: added additional selection cost (+75 pts)
+- Chaos Acastus Knight Porphyrion: added additional selection cost (+75 pts)
+- and 13 other datasheets (+10–20 pts each)
+
+**Adeptus Astartes**
+- Astraeus: added additional selection cost (+50 pts)
+- and 31 other datasheets (+10–30 pts each)
+
+**Grey Knights**
+- Grey Knights Thunderhawk Gunship: added additional selection cost (+50 pts)
+- and 13 other datasheets (+10–20 pts each)
+
+**Adeptus Custodes**
+- Orion Assault Dropship: added additional selection cost (+50 pts)
+- Ares Gunship: added additional selection cost (+30 pts)
+- and 11 other datasheets (+10–20 pts each)
+
+Additional selection costs also added across 19 other factions, with costs ranging from +5 to +40 pts per datasheet.

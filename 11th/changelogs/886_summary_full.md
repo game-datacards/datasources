@@ -1,238 +1,384 @@
-Combat Patrol datasheets and detachments added for 24 factions
+Additional selection costs added across all factions
 
 **Dark Angels**
-- "The Vengeful Brethren" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Dark Angels (Combat Patrol)**
-- Master Zacharial: added
-- Vengeful Brethren Bladeguard Veteran Squad: added
-- Vengeful Brethren Hellblaster Squad: added
-- Vengeful Brethren Intercessor Squad: added
-- "The Vengeful Brethren" (detachment): added with 3 stratagems and 2 enhancements
+- Deathwing Knights: added additional selection cost (+20 pts)
+- Inner Circle Companions: added additional selection cost (+10 pts)
+- Land Speeder Vengeance: added additional selection cost (+10 pts)
+- Ravenwing Black Knights: added additional selection cost (+10 pts)
+- Ravenwing Command Squad: added additional selection cost (+10 pts)
 
 **Death Guard**
-- "Maggot Lords" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Death Guard (Combat Patrol)**
-- Maggot Lords Chaos Rhino: added
-- Maggot Lords Deathshroud Terminators: added
-- Septimol Fulg, Maggot Lords Tallyman: added
-- Sholgor the Putrid: added
-- "Maggot Lords" (detachment): added with 3 stratagems and 2 enhancements
+- Chaos Land Raider: added additional selection cost (+20 pts)
+- Chaos Predator Annihilator: added additional selection cost (+10 pts)
+- Chaos Predator Destructor: added additional selection cost (+10 pts)
+- Deathshroud Terminators: added additional selection cost (+10 pts)
+- Defiler: added additional selection cost (+30 pts)
+- Foetid Bloat-Drone: added additional selection cost (+10 pts)
+- Foetid Bloat-Drone with Heavy Blight Launcher: added additional selection cost (+10 pts)
+- Plagueburst Crawler: added additional selection cost (+25 pts)
 
 **Tyranids**
-- "The Vardenghast Swarm" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Tyranids (Combat Patrol)**
-- Terror of Vardenghast: added
-- Vardenghast Swarm Barbgaunts: added
-- Vardenghast Swarm Psychophage: added
-- Vardenghast Swarm Termagants: added
-- Vardenghast Swarm Von Ryan's Leapers: added
-- "The Vardenghast Swarm" (detachment): added with 3 stratagems and 2 enhancements
+- Exocrine: added additional selection cost (+10 pts)
+- Genestealers: added additional selection cost (+10 pts)
+- Harridan: added additional selection cost (+50 pts)
+- Haruspex: added additional selection cost (+10 pts)
+- Hierophant: added additional selection cost (+100 pts)
+- Hive Guard: added additional selection cost (+10 pts)
+- Hyperadapted Raveners: added additional selection cost (+10 pts)
+- Maleceptor: added additional selection cost (+10 pts)
+- Neurolictor: added additional selection cost (+10 pts)
+- Norn Assimilator: added additional selection cost (+20 pts)
+- Norn Emissary: added additional selection cost (+20 pts)
+- Pyrovores: added additional selection cost (+10 pts)
+- Raveners: added additional selection cost (+10 pts)
+- Screamer-Killer: added additional selection cost (+10 pts)
+- Tyrannofex: added additional selection cost (+10 pts)
 
 **Adeptus Astartes**
-- "Assault Force" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Adeptus Astartes (Combat Patrol)**
-- Assault Force Captain: added
-- Assault Force Intercessor Squad: added
-- Assault Force Land Speeder: added
-- Assault Force Librarian: added
-- Assault Force Vanguard Veteran Squad With Jump Packs: added
-- "Assault Force" (detachment): added with 3 stratagems and 2 enhancements
+- Aggressor Squad: added additional selection cost (+10 pts)
+- Assault Intercessors with Jump Packs: added additional selection cost (+10 pts)
+- Astraeus: added additional selection cost (+50 pts)
+- Ballistus Dreadnought: added additional selection cost (+10 pts)
+- Bladeguard Veteran Squad: added additional selection cost (+10 pts)
+- Brutalis Dreadnought: added additional selection cost (+10 pts)
+- Desolation Squad: added additional selection cost (+30 pts)
+- Eradicator Squad: added additional selection cost (+10 pts)
+- Eradicator Squad with Heavy Bolters: added additional selection cost (+10 pts)
+- Gladiator Lancer: added additional selection cost (+10 pts)
+- Gladiator Reaper: added additional selection cost (+10 pts)
+- Gladiator Valiant: added additional selection cost (+10 pts)
+- Inceptor Squad: added additional selection cost (+15 pts)
+- Incursor Squad: added additional selection cost (+10 pts)
+- Infiltrator Squad: added additional selection cost (+10 pts)
+- Land Raider: added additional selection cost (+20 pts)
+- Land Raider Crusader: added additional selection cost (+20 pts)
+- Land Raider Redeemer: added additional selection cost (+20 pts)
+- Land Speeder: added additional selection cost (+10 pts)
+- Predator Annihilator: added additional selection cost (+10 pts)
+- Predator Destructor: added additional selection cost (+10 pts)
+- Redemptor Dreadnought: added additional selection cost (+15 pts)
+- Repulsor: added additional selection cost (+20 pts)
+- Repulsor Executioner: added additional selection cost (+20 pts)
+- Scout Squad: added additional selection cost (+10 pts)
+- Storm Speeder Hailstrike: added additional selection cost (+10 pts)
+- Storm Speeder Hammerstrike: added additional selection cost (+10 pts)
+- Storm Speeder Thunderstrike: added additional selection cost (+10 pts)
+- Stormraven Gunship: added additional selection cost (+20 pts)
+- Vanguard Veteran Squad with Jump Packs: added additional selection cost (+10 pts)
+- Victrix Honour Guard: added additional selection cost (+20 pts)
+- Vindicator: added additional selection cost (+15 pts)
+- Whirlwind: added additional selection cost (+20 pts)
 
 **Blood Angels**
-- "Sanguinary Spearhead" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Blood Angels (Combat Patrol)**
-- Captain Raldeo: added
-- Sanguinary Spearhead Assault Intercessor Squad: added
-- Sanguinary Spearhead Sanguinary Guard: added
-- "Sanguinary Spearhead" (detachment): added with 3 stratagems and 2 enhancements
+- Baal Predator: added additional selection cost (+10 pts)
+- Death Company Dreadnought: added additional selection cost (+10 pts)
+- Death Company Marines: added additional selection cost (+10 pts)
+- Death Company Marines with Bolt Rifles: added additional selection cost (+10 pts)
+- Death Company Marines with Jump Packs: added additional selection cost (+15 pts)
+- Sanguinary Guard: added additional selection cost (+20 pts)
+- Sanguinary Priest: added additional selection cost (+10 pts)
 
 **Black Templars**
-- "Vow-Sworn of Vedrenn" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Black Templars (Combat Patrol)**
-- Emperor's Champion Vedrenn: added
-- Vow-Sworn Bladeguard Veteran Squad: added
-- Vow-Sworn Crusader Squad: added
-- Vow-Sworn Sword Brethren Squad: added
-- "Vow-Sworn of Vedrenn" (detachment): added with 3 stratagems and 2 enhancements
+- Gladiator Lancer: added additional selection cost (+10 pts)
+- Gladiator Reaper: added additional selection cost (+10 pts)
+- Gladiator Valiant: added additional selection cost (+10 pts)
+- Land Raider Crusader: added additional selection cost (+20 pts)
+- Marshal: added additional selection cost (+10 pts)
+- Repulsor: added additional selection cost (+20 pts)
+- Repulsor Executioner: added additional selection cost (+20 pts)
+- Sword Brethren Squad: added additional selection cost (+15 pts)
 
 **Space Wolves**
-- "Askar's Wolfpack" (detachment): removed with 3 stratagems and 2 enhancements
+- Fenrisian Wolves: added additional selection cost (+5 pts)
+- Thunderwolf Cavalry: added additional selection cost (+10 pts)
+- Venerable Dreadnought: added additional selection cost (+10 pts)
+- Wolf Guard Headtakers: added additional selection cost (+10 pts)
+- Wolf Guard Terminators: added additional selection cost (+10 pts)
+- Wolf Scouts: added additional selection cost (+10 pts)
+- Wulfen: added additional selection cost (+10 pts)
+- Wulfen Dreadnought: added additional selection cost (+10 pts)
+- Wulfen with Storm Shields: added additional selection cost (+10 pts)
 
-**Space Wolves (Combat Patrol)**
-- Askar's Wolfpack Blood Claws: added
-- Askar's Wolfpack Wolf Guard Terminators: added
-- Askar's Wolfpack Wulfen: added
-- Fyrri Askar: added
-- "Askar's Wolfpack" (detachment): added with 3 stratagems and 2 enhancements
+**Deathwatch**
+- Fortis Kill Team: added additional selection cost (+15 pts)
+- Indomitor Kill Team: added additional selection cost (+15 pts)
+- Spectrus Kill Team: added additional selection cost (+10 pts)
+- Talonstrike Kill Team: added additional selection cost (+15 pts)
 
 **Thousand Sons**
-- "Prism of Zadophon" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Thousand Sons (Combat Patrol)**
-- Kaa'skrek: added
-- Prism of Zadophon Rubric Marines: added
-- Prism of Zadophon Tzaangor Enlightened: added
-- Zadophon the Soul Eater: added
-- "Prism of Zadophon" (detachment): added with 3 stratagems and 2 enhancements
+- Chaos Land Raider: added additional selection cost (+20 pts)
+- Chaos Predator Annihilator: added additional selection cost (+10 pts)
+- Chaos Predator Destructor: added additional selection cost (+10 pts)
+- Chaos Vindicator: added additional selection cost (+10 pts)
+- Daemon Prince of Tzeentch with Wings: added additional selection cost (+10 pts)
+- Defiler: added additional selection cost (+30 pts)
+- Forgefiend: added additional selection cost (+10 pts)
+- Maulerfiend: added additional selection cost (+10 pts)
+- Mutalith Vortex Beast: added additional selection cost (+20 pts)
+- Rubric Marines: added additional selection cost (+10 pts)
+- Scarab Occult Terminators: added additional selection cost (+15 pts)
+- Sorcerer in Terminator Armour: added additional selection cost (+10 pts)
 
 **World Eaters**
-- "Frenzied Reavers" (detachment): removed with 3 stratagems and 2 enhancements
-
-**World Eaters (Combat Patrol)**
-- Frenzied Reavers Jakhals: added
-- Frenzied Reavers Khorne Berzerkers: added
-- Frenzied Reavers Master of Executions: added
-- Vorrakh, Lord of the Frenzied Reavers: added
-- "Frenzied Reavers" (detachment): added with 3 stratagems and 2 enhancements
+- Chaos Land Raider: added additional selection cost (+20 pts)
+- Chaos Predator Annihilator: added additional selection cost (+10 pts)
+- Chaos Predator Destructor: added additional selection cost (+10 pts)
+- Chaos Terminators: added additional selection cost (+10 pts)
+- Defiler: added additional selection cost (+30 pts)
+- Eightbound: added additional selection cost (+10 pts)
+- Exalted Eightbound: added additional selection cost (+10 pts)
+- Forgefiend: added additional selection cost (+15 pts)
+- Khorne Lord of Skulls: added additional selection cost (+30 pts)
+- Maulerfiend: added additional selection cost (+10 pts)
 
 **Heretic Astartes**
-- "Zarkan's Daemonkin" (detachment): removed with 3 stratagems and 2 enhancements
+- Accursed Cultists: added additional selection cost (+20 pts)
+- Chaos Land Raider: added additional selection cost (+20 pts)
+- Chaos Predator Annihilator: added additional selection cost (+10 pts)
+- Chaos Predator Destructor: added additional selection cost (+10 pts)
+- Chaos Vindicator: added additional selection cost (+10 pts)
+- Chosen: added additional selection cost (+10 pts)
+- Cultist Firebrand: added additional selection cost (+5 pts)
+- Dark Commune: added additional selection cost (+10 pts)
+- Defiler: added additional selection cost (+30 pts)
+- Forgefiend: added additional selection cost (+10 pts)
+- Havocs: added additional selection cost (+10 pts)
+- Khorne Lord of Skulls: added additional selection cost (+25 pts)
+- Mutilators: added additional selection cost (+10 pts)
+- Obliterators: added additional selection cost (+10 pts)
+- Possessed: added additional selection cost (+10 pts)
+- Raptors: added additional selection cost (+10 pts)
+- Red Corsairs Raiders: added additional selection cost (+10 pts)
+- Venomcrawler: added additional selection cost (+10 pts)
+- Warp Talons: added additional selection cost (+10 pts)
 
-**Heretic Astartes (Combat Patrol)**
-- Aranis Zarkan: added
-- Zarkan's Daemonkin Cultist Mob: added
-- Zarkan's Daemonkin Legionaries: added
-- Zarkan's Daemonkin Possessed: added
-- "Zarkan's Daemonkin" (detachment): added with 3 stratagems and 2 enhancements
+**Legiones Daemonica**
+- Bloodcrushers: added additional selection cost (+10 pts)
+- Bloodthirster: added additional selection cost (+15 pts)
+- Great Unclean One: added additional selection cost (+15 pts)
+- Keeper of Secrets: added additional selection cost (+15 pts)
+- Lord of Change: added additional selection cost (+15 pts)
+- Rendmaster on Blood Throne: added additional selection cost (+20 pts)
+- Soul Grinder: added additional selection cost (+15 pts)
+
+**Chaos Knights**
+- Chaos Acastus Knight Asterius: added additional selection cost (+75 pts)
+- Chaos Acastus Knight Porphyrion: added additional selection cost (+75 pts)
+- Chaos Cerastus Knight Acheron: added additional selection cost (+15 pts)
+- Chaos Cerastus Knight Atrapos: added additional selection cost (+20 pts)
+- Chaos Cerastus Knight Castigator: added additional selection cost (+15 pts)
+- Chaos Cerastus Knight Lancer: added additional selection cost (+20 pts)
+- Chaos Questoris Knight Magaera: added additional selection cost (+15 pts)
+- Chaos Questoris Knight Styrix: added additional selection cost (+15 pts)
+- Knight Abominant: added additional selection cost (+15 pts)
+- Knight Desecrator: added additional selection cost (+15 pts)
+- Knight Despoiler: added additional selection cost (+20 pts)
+- Knight Rampager: added additional selection cost (+15 pts)
+- Knight Ruinator: added additional selection cost (+15 pts)
+- Knight Tyrant: added additional selection cost (+20 pts)
+- War Dog Moirax: added additional selection cost (+10 pts)
 
 **Astra Militarum**
-- "Drayden's Lance" (detachment): removed with 3 stratagems and 2 enhancements
+- Attilan Rough Riders: added additional selection cost (+5 pts)
+- Baneblade: added additional selection cost (+20 pts)
+- Banehammer: added additional selection cost (+20 pts)
+- Banesword: added additional selection cost (+20 pts)
+- Basilisk: added additional selection cost (+20 pts)
+- Bullgryn Squad: added additional selection cost (+15 pts)
+- Cyclops Demolition Vehicle: added additional selection cost (+5 pts)
+- Deathstrike: added additional selection cost (+10 pts)
+- Doomhammer: added additional selection cost (+20 pts)
+- Hellhammer: added additional selection cost (+20 pts)
+- Hellhound: added additional selection cost (+10 pts)
+- Kasrkin: added additional selection cost (+10 pts)
+- Krieg Combat Engineers: added additional selection cost (+10 pts)
+- Leman Russ Battle Tank: added additional selection cost (+10 pts)
+- Leman Russ Commander: added additional selection cost (+15 pts)
+- Leman Russ Demolisher: added additional selection cost (+10 pts)
+- Leman Russ Eradicator: added additional selection cost (+10 pts)
+- Leman Russ Executioner: added additional selection cost (+10 pts)
+- Leman Russ Exterminator: added additional selection cost (+10 pts)
+- Leman Russ Punisher: added additional selection cost (+10 pts)
+- Leman Russ Vanquisher: added additional selection cost (+10 pts)
+- Manticore: added additional selection cost (+20 pts)
+- Militarum Tempestus Command Squad: added additional selection cost (+10 pts)
+- Rogal Dorn Battle Tank: added additional selection cost (+15 pts)
+- Rogal Dorn Commander: added additional selection cost (+15 pts)
+- Shadowsword: added additional selection cost (+20 pts)
+- Stormlord: added additional selection cost (+20 pts)
+- Stormsword: added additional selection cost (+20 pts)
+- Tempestus Scions: added additional selection cost (+10 pts)
+- Valkyrie: added additional selection cost (+10 pts)
+- Wyvern: added additional selection cost (+20 pts)
 
-**Astra Militarum (Combat Patrol)**
-- Drayden's Lance Attilan Rough Riders: added
-- Drayden's Lance Command Squad: added
-- Drayden's Lance Kasrkin: added
-- "Drayden's Lance" (detachment): added with 3 stratagems and 2 enhancements
+**Imperial Knights**
+- Acastus Knight Asterius: added additional selection cost (+75 pts)
+- Acastus Knight Porphyrion: added additional selection cost (+75 pts)
+- Armiger Moirax: added additional selection cost (+10 pts)
+- Cerastus Knight Acheron: added additional selection cost (+15 pts)
+- Cerastus Knight Atrapos: added additional selection cost (+20 pts)
+- Cerastus Knight Castigator: added additional selection cost (+15 pts)
+- Cerastus Knight Lancer: added additional selection cost (+20 pts)
+- Knight Castellan: added additional selection cost (+20 pts)
+- Knight Crusader: added additional selection cost (+20 pts)
+- Knight Defender: added additional selection cost (+20 pts)
+- Knight Destrier: added additional selection cost (+15 pts)
+- Knight Errant: added additional selection cost (+15 pts)
+- Knight Gallant: added additional selection cost (+15 pts)
+- Knight Paladin: added additional selection cost (+15 pts)
+- Knight Preceptor: added additional selection cost (+15 pts)
+- Knight Valiant: added additional selection cost (+15 pts)
+- Knight Warden: added additional selection cost (+15 pts)
+- Questoris Knight Magaera: added additional selection cost (+15 pts)
+- Questoris Knight Styrix: added additional selection cost (+15 pts)
 
 **Grey Knights**
-- "Crowe's Sanctifiers" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Grey Knights (Combat Patrol)**
-- Crowe's Sanctifiers Brotherhood Terminator Squad: added
-- Crowe's Sanctifiers Strike Squad: added
-- Crowe's Sanctifiers Venerable Dreadnought: added
-- Sanctifiers Castellan Crowe: added
-- "Crowe's Sanctifiers" (detachment): added with 3 stratagems and 2 enhancements
+- Brotherhood Librarian: added additional selection cost (+10 pts)
+- Brotherhood Terminator Squad: added additional selection cost (+10 pts)
+- Grand Master in Nemesis Dreadknight: added additional selection cost (+15 pts)
+- Grey Knights Thunderhawk Gunship: added additional selection cost (+50 pts)
+- Interceptor Squad: added additional selection cost (+10 pts)
+- Land Raider: added additional selection cost (+20 pts)
+- Land Raider Crusader: added additional selection cost (+20 pts)
+- Land Raider Redeemer: added additional selection cost (+20 pts)
+- Nemesis Dreadknight: added additional selection cost (+15 pts)
+- Paladin Squad: added additional selection cost (+15 pts)
+- Purgation Squad: added additional selection cost (+10 pts)
+- Purifier Squad: added additional selection cost (+10 pts)
+- Stormraven Gunship: added additional selection cost (+20 pts)
+- Venerable Dreadnought: added additional selection cost (+10 pts)
 
 **Adepta Sororitas**
-- "Sanctuary Guardians" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Adepta Sororitas (Combat Patrol)**
-- Sanctuary Canoness Adalya: added
-- Sanctuary Guardians Arco-Flagellants: added
-- Sanctuary Guardians Battle Sisters Squad: added
-- Sanctuary Guardians Celestian Sacresants: added
-- "Sanctuary Guardians" (detachment): added with 3 stratagems and 2 enhancements
+- Castigator: added additional selection cost (+10 pts)
+- Celestian Sacresants: added additional selection cost (+15 pts)
+- Dominion Squad: added additional selection cost (+10 pts)
+- Exorcist: added additional selection cost (+40 pts)
+- Hospitaller: added additional selection cost (+10 pts)
+- Immolator: added additional selection cost (+10 pts)
+- Paragon Warsuits: added additional selection cost (+10 pts)
+- Retributor Squad: added additional selection cost (+10 pts)
+- Seraphim Squad: added additional selection cost (+10 pts)
 
 **Adeptus Mechanicus**
-- "Purge Corps Deltic-9" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Adeptus Mechanicus (Combat Patrol)**
-- Manipulus Skand: added
-- Purge Corps Pteraxii Sterylizors: added
-- Purge Corps Serberys Sulphurhounds: added
-- Purge Corps Skitarii Vanguard: added
-- "Purge Corps Deltic-9" (detachment): added with 3 stratagems and 2 enhancements
+- Hastarii Exterminators: added additional selection cost (+15 pts)
+- Hastarii Fusiliers: added additional selection cost (+15 pts)
+- Ironstrider Ballistarii: added additional selection cost (+15 pts)
+- Kastelan Robots: added additional selection cost (+20 pts)
+- Pteraxii Skystalkers: added additional selection cost (+10 pts)
+- Pteraxii Sterylizors: added additional selection cost (+10 pts)
+- Sicarian Infiltrators: added additional selection cost (+10 pts)
+- Sicarian Ruststalkers: added additional selection cost (+10 pts)
 
 **Adeptus Custodes**
-- "Tristraen's Gilded Blades" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Adeptus Custodes (Combat Patrol)**
-- Gilded Blades Allarus Custodians: added
-- Gilded Blades Custodian Guard: added
-- Gilded Blades Custodian Wardens: added
-- Tristraen of the Gilded Blades: added
-- "Tristraen's Gilded Blades" (detachment): added with 3 stratagems and 2 enhancements
-
-**Agents of the Imperium**
-- "Inquisitor's Hand" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Agents of the Imperium (Combat Patrol)**
-- Inquisitor's Hand Eversor Assassin: added
-- Inquisitor's Hand Inquisitorial Agents: added
-- Inquisitor's Hand Vigilant Squad: added
-- Preacher Teguen: added
-- "Inquisitor's Hand" (detachment): added with 3 stratagems and 2 enhancements
+- Ares Gunship: added additional selection cost (+30 pts)
+- Blade Champion: added additional selection cost (+15 pts)
+- Caladius Grav-tank: added additional selection cost (+15 pts)
+- Contemptor-Achillus Dreadnought: added additional selection cost (+15 pts)
+- Contemptor-Galatus Dreadnought: added additional selection cost (+15 pts)
+- Coronus Grav-carrier: added additional selection cost (+20 pts)
+- Custodian Guard: added additional selection cost (+10 pts)
+- Custodian Guard with Adrasite and Pyrithite Spears: added additional selection cost (+10 pts)
+- Custodian Wardens: added additional selection cost (+20 pts)
+- Orion Assault Dropship: added additional selection cost (+50 pts)
+- Telemon Heavy Dreadnought: added additional selection cost (+20 pts)
+- Venerable Contemptor Dreadnought: added additional selection cost (+15 pts)
+- Venerable Land Raider: added additional selection cost (+20 pts)
 
 **Orks**
-- "'Ardmob" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Orks (Combat Patrol)**
-- 'Ardmob Boyz: added
-- 'Ardmob Gretchin: added
-- 'Ardmob Warboss: added
-- 'Ardmob Wartrakk: added
-- 'Ardmob Weirdboy: added
-- "'Ardmob" (detachment): added with 3 stratagems and 2 enhancements
+- Big Mek Dakkarig: added additional selection cost (+10 pts)
+- Big Mek with Shokk Attack Gun: added additional selection cost (+10 pts)
+- Breaka Boyz: added additional selection cost (+10 pts)
+- Deff Dread: added additional selection cost (+10 pts)
+- Flash Gitz: added additional selection cost (+10 pts)
+- Gargantuan Squiggoth: added additional selection cost (+50 pts)
+- Gorkanaut: added additional selection cost (+20 pts)
+- Killa Kans: added additional selection cost (+10 pts)
+- Lootas: added additional selection cost (+10 pts)
+- Meganobz: added additional selection cost (+20 pts)
+- Mek Gunz: added additional selection cost (+10 pts)
+- Morkanaut: added additional selection cost (+20 pts)
+- Nobz: added additional selection cost (+10 pts)
+- Stompa: added additional selection cost (+100 pts)
+- Tankbustas: added additional selection cost (+10 pts)
 
 **Leagues of Votann**
-- "Bane-slayer's Bulwark" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Leagues of Votann (Combat Patrol)**
-- Bane Slayer's Bulwark Brokhyr Thunderkyn: added
-- Bane-Slayer's Bulwark Einhyr Hearthguard: added
-- Bane-Slayer's Bulwark Hearthkyn Warriors: added
-- Vynn Bane-Slayer: added
-- "Bane-slayer's Bulwark" (detachment): added with 3 stratagems and 2 enhancements
+- Brôkhyr Thunderkyn: added additional selection cost (+10 pts)
+- Einhyr Hearthguard: added additional selection cost (+10 pts)
+- Hekaton Land Fortress: added additional selection cost (+15 pts)
+- Hernkyn Pioneers: added additional selection cost (+10 pts)
+- Ironkin Steeljacks with Heavy Volkanite Disintegrators: added additional selection cost (+10 pts)
+- Ironkin Steeljacks with Melee Weapons: added additional selection cost (+10 pts)
 
 **T'au Empire**
-- "Sudden Dawn Cadre" (detachment): removed with 3 stratagems and 2 enhancements
-
-**T'au Empire (Combat Patrol)**
-- Commander Cloudspear: added
-- Sudden Dawn Cadre Breacher Team: added
-- Sudden Dawn Cadre Devilfish: added
-- Sudden Dawn Cadre Pathfinder Team: added
-- "Sudden Dawn Cadre" (detachment): added with 3 stratagems and 2 enhancements
+- AX-1-0 Tiger Shark: added additional selection cost (+60 pts)
+- Broadside Battlesuits: added additional selection cost (+20 pts)
+- Crisis Fireknife Battlesuits: added additional selection cost (+10 pts)
+- Crisis Starscythe Battlesuits: added additional selection cost (+10 pts)
+- Crisis Sunforge Battlesuits: added additional selection cost (+10 pts)
+- Ghostkeel Battlesuit: added additional selection cost (+10 pts)
+- Hammerhead Gunship: added additional selection cost (+10 pts)
+- Kroot Farstalkers: added additional selection cost (+10 pts)
+- Krootox Rampagers: added additional selection cost (+10 pts)
+- Piranhas: added additional selection cost (+10 pts)
+- Riptide Battlesuit: added additional selection cost (+30 pts)
+- Stealth Battlesuits: added additional selection cost (+10 pts)
+- Stormsurge: added additional selection cost (+25 pts)
+- Ta'unar Supremacy Armour: added additional selection cost (+100 pts)
+- Tiger Shark: added additional selection cost (+50 pts)
 
 **Necrons**
-- "Amonhotekh's Guard" (detachment): removed with 3 stratagems and 2 enhancements
+- Canoptek Wraiths: added additional selection cost (+20 pts)
+- Chronomancer: added additional selection cost (+10 pts)
+- Deathmarks: added additional selection cost (+10 pts)
+- Doomsday Ark: added additional selection cost (+20 pts)
+- Lokhust Destroyers: added additional selection cost (+10 pts)
+- Lokhust Heavy Destroyers: added additional selection cost (+10 pts)
+- Monolith: added additional selection cost (+20 pts)
+- Obelisk: added additional selection cost (+30 pts)
+- Ophydian Destroyers: added additional selection cost (+10 pts)
+- Seraptek Heavy Construct: added additional selection cost (+30 pts)
+- Skorpekh Destroyers: added additional selection cost (+10 pts)
+- Technomancer: added additional selection cost (+10 pts)
+- Tesseract Vault: added additional selection cost (+20 pts)
+- Tomb Blades: added additional selection cost (+10 pts)
+- Transcendent C'tan: added additional selection cost (+20 pts)
+- Triarch Stalker: added additional selection cost (+10 pts)
 
-**Necrons (Combat Patrol)**
-- Amonhotekh's Guard Canoptek Doomstalker: added
-- Amonhotekh's Guard Canoptek Scarab Swarms: added
-- Amonhotekh's Guard Necron Warriors: added
-- Amonhotekh's Guard Skorpekh Destroyers: added
-- Overlord Amonhotekh: added
-- "Amonhotekh's Guard" (detachment): added with 3 stratagems and 2 enhancements
-
-**Asuryani (Combat Patrol)**
-- Kygharil's Protectors Dire Avengers: added
-- Kygharil's Protectors Warp Spiders: added
-- Kygharil's Protectors Wraithblades: added
-- Spiritseer Kygharil: added
+**Asuryani**
+- Corsair Skyreavers: added additional selection cost (+10 pts)
+- D-cannon Platform: added additional selection cost (+15 pts)
+- Fire Dragons: added additional selection cost (+10 pts)
+- Night Spinner: added additional selection cost (+20 pts)
+- Swooping Hawks: added additional selection cost (+15 pts)
+- Warp Spiders: added additional selection cost (+15 pts)
+- Wraithknight: added additional selection cost (+20 pts)
+- Wraithknight with Ghostglaive: added additional selection cost (+20 pts)
+- Ynnari Incubi: added additional selection cost (+10 pts)
 
 **Drukhari**
-- "Coven of Agonies" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Drukhari (Combat Patrol)**
-- Coven of Agonies Cronos: added
-- Coven of Agonies Talos: added
-- Coven of Agonies Wracks: added
-- Xatrophos Nuul: added
-- "Coven of Agonies" (detachment): added with 3 stratagems and 2 enhancements
+- Hellions: added additional selection cost (+10 pts)
+- Incubi: added additional selection cost (+10 pts)
+- Mandrakes: added additional selection cost (+10 pts)
+- Ravager: added additional selection cost (+10 pts)
+- Reavers: added additional selection cost (+10 pts)
+- Scourges with Heavy Weapons: added additional selection cost (+10 pts)
+- Scourges with Shardcarbines: added additional selection cost (+10 pts)
+- Talos: added additional selection cost (+10 pts)
 
 **Genestealer Cults**
-- "Claw of Ascension" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Genestealer Cults (Combat Patrol)**
-- Claw of Ascension Achilles Ridgerunner: added
-- Claw of Ascension Atalan Jackals: added
-- Claw of Ascension Hybrid Metamorphs: added
-- Shanus Daskovian: added
-- "Claw of Ascension" (detachment): added with 3 stratagems and 2 enhancements
+- Aberrants: added additional selection cost (+10 pts)
+- Abominant: added additional selection cost (+10 pts)
+- Achilles Ridgerunners: added additional selection cost (+10 pts)
+- Atalan Jackals: added additional selection cost (+10 pts)
+- Goliath Rockgrinder: added additional selection cost (+10 pts)
+- Hybrid Metamorphs: added additional selection cost (+10 pts)
+- Purestrain Genestealers: added additional selection cost (+10 pts)
 
 **Emperor's Children**
-- "Callous Blades" (detachment): removed with 3 stratagems and 2 enhancements
-
-**Emperor's Children (Combat Patrol)**
-- Callous Blades Flawless Blades: added
-- Callous Blades Infractors: added
-- Lord Kaphrael of the Callous Blades: added
-- "Callous Blades" (detachment): added with 3 stratagems and 2 enhancements
+- Chaos Land Raider: added additional selection cost (+20 pts)
+- Daemon Prince of Slaanesh: added additional selection cost (+15 pts)
+- Daemon Prince of Slaanesh with Wings: added additional selection cost (+30 pts)
+- Defiler: added additional selection cost (+30 pts)
+- Lord Exultant: added additional selection cost (+10 pts)
+- Maulerfiend: added additional selection cost (+10 pts)
+- Noise Marines: added additional selection cost (+15 pts)
