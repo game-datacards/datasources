@@ -8,8 +8,8 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-06-17T10:06:17.112Z",
-  "compatibleDataVersion": 434,
+  "updated": "2026-07-01T09:45:02.541Z",
+  "compatibleDataVersion": 446,
   "warscrolls": [
     {
       "id": "7c3f2e23-51e8-5b6d-a8be-186b456d1bb0",
@@ -20,7 +20,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Daemon", "War Machine", "Wizard (1)", "Ward (6+)", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Hero, War Machine, Wizard (1), Ward (6+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "12\"",
@@ -84,14 +88,14 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick up to 3 friendly non‑**UNIQUE HEDONITES OF SLAANESH WAR MACHINES** wholly within 12\" of this unit to be the targets.",
+          "declare": "Pick up to 3 visible friendly non‑**UNIQUE HEDONITES OF SLAANESH WAR MACHINES** wholly within 12\" of this unit to be the targets.",
           "effect": "Add 1 to the Attacks characteristic of the targets’ melee weapons for the rest of the turn. This ability also affects **Companion** weapons."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "120 x 92mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "0e715625-0836-5486-9f68-5b4862af7841",
@@ -102,7 +106,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Daemon", "War Machine", "Wizard (1)", "Ward (6+)", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Hero, War Machine, Wizard (1), Ward (6+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "10\"",
@@ -207,7 +215,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Daemon", "War Machine", "Wizard (1)", "Ward (6+)", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Hero, War Machine, Wizard (1), Ward (6+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "12\"",
@@ -289,7 +301,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Champion", "Infantry", "Sybarite"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Infantry, Champion, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
         "move": "6\"",
@@ -300,7 +316,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 150,
+      "points": 140,
       "modelCount": 10,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -310,7 +326,7 @@
           {
             "name": "Blissbarb Bow",
             "type": "ranged",
-            "range": "18\"",
+            "range": "15\"",
             "attacks": "2",
             "hit": "3+",
             "wound": "4+",
@@ -344,7 +360,19 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "This unit’s **Blissbrew Homonculus** is a token. There is 1 **Blissbrew Homonculus** for every 10 models in this unit.\n\nSubtract 1 from hit rolls for shooting attacks that target this unit while it has a **Blissbrew Homonculus**. If you make an unmodified save roll of 1 for this unit, remove the **Blissbrew Homonculus** from the battlefield after the **ATTACK** ability has been resolved (the damage point is still inflicted)."
+          "effect": "This unit’s **Blissbrew Homonculi** are tokens. There is 1 **Blissbrew Homonculus** for every 10 models in this unit.\n\nThis unit has **WARD (6+)** while it has any **Blissbrew Homonculi**. If you make an unmodified ward roll of 1 for this unit, remove 1 of this unit’s **Blissbrew Homonculi** from the battlefield (the damage point is still inflicted)."
+        },
+        {
+          "name": "The Thrill of Combat",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit in combat to be the target.",
+          "effect": "For the rest of the turn, this unit’s ranged weapons have **Shoot in Combat** and they also have **Crit (Auto-wound)** for attacks that target that enemy unit."
         }
       ],
       "summonedBy": null,
@@ -361,10 +389,14 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Champion", "Sybarite", "Cavalry"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Cavalry, Champion, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
-        "move": "12\"",
+        "move": "14\"",
         "save": "5+",
         "control": "1",
         "health": "4",
@@ -418,16 +450,16 @@
       },
       "abilities": [
         {
-          "name": "Glory Shots",
-          "phase": "shootingPhase",
-          "phaseDetails": "Passive",
-          "icon": "shooting",
+          "name": "Adrenaline Archers",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to the Rend characteristic of this unit’s ranged weapons for attacks that target units contesting an objective you do not control."
+          "effect": "This unit can use **SHOOT** abilities this turn even if it used a **RETREAT** ability in the same turn. In addition, for the rest of the turn, no mortal damage is inflicted on this unit by **RETREAT** abilities."
         }
       ],
       "summonedBy": null,
@@ -444,7 +476,12 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Daemon", "Wizard (1)", "Infantry", "Ward (4+)", "Hero"],
-      "factionKeywords": ["Hedonites of Slaanesh", "Grand Alliance Chaos"],
+      "factionKeywords": [
+        "Hedonites of Slaanesh",
+        "Grand Alliance Chaos",
+        "Decadent Host",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Hero, Wizard (1), Infantry, Ward (4+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "9\"",
@@ -477,28 +514,29 @@
       },
       "abilities": [
         {
-          "name": "Horrible Fascination",
-          "phase": "startOfTurn",
-          "phaseDetails": "Reaction: Opponent declared a command or RETREAT ability for a unit in combat with this unit",
-          "icon": "offensive",
+          "name": "The Mirror's Depths",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Hero Phase",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
-          "isReaction": true,
-          "declare": null,
-          "effect": "Inflict D3 mortal damage on that enemy unit."
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit within 18\" of this unit to be the target.",
+          "effect": "If the target is within 6\" of this unit, the target is **gazing into eternity** until the start of your next turn. Otherwise, roll a dice. On a 3+, the target is **gazing into eternity** until the start of your next turn.&#x20;\n\nWhile the target is **gazing into eternity**, it must end all moves no further from this unit than it was at the start of the move and it cannot be removed from the battlefield by an ability that would allow it to be set up again on the battlefield.&#x20;\n\n**Designer’s Note:** *This includes pile-in moves.*"
         },
         {
           "name": "Swallow Energy",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "If you make a successful ward roll for this unit, add 1 to this unit’s power level until the end of your next turn."
+          "declare": "Pick a visible **MANIFESTATION** within 12\" of this unit and that was not summoned this turn to be the target, then make a banishment roll of 2D6.",
+          "effect": "If the banishment roll equals or exceeds the banishment value on the target’s warscroll, it is banished and removed from play.&#x20;\n\nThe next time a visible friendly unit wholly within 12\" of this unit uses a **SUMMON** ability, roll an additional D6, to a maximum of 3, when making the casting roll for that ability.",
+          "keywords": ["Banish"]
         }
       ],
       "summonedBy": null,
@@ -522,7 +560,12 @@
         "Infantry",
         "Ward (6+)"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Infantry, Champion, Musician (1/10), Standard Bearer (1/10), Ward (6+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "6\"",
@@ -533,7 +576,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 100,
+      "points": 110,
       "modelCount": 10,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -549,7 +592,7 @@
             "wound": "4+",
             "rend": "1",
             "damage": "1",
-            "abilities": []
+            "abilities": ["Anti-INFANTRY (+1 Rend)"]
           }
         ]
       },
@@ -557,14 +600,14 @@
         {
           "name": "Lithe and Swift",
           "phase": "combatPhase",
-          "phaseDetails": "Passive",
-          "icon": "offensive",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to the Attacks characteristic of this unit’s **Piercing Claws** for the rest of the turn if this unit charged in the same turn."
+          "effect": "If this unit charged this turn, it can move D3+3\". It can pass through enemy models and the combat ranges of enemy units but must end that move within ½\" of a visible enemy unit."
         }
       ],
       "summonedBy": null,
@@ -587,11 +630,14 @@
         "Dexcessa or Slaaneshi Beguiler",
         "Unique",
         "Fly",
-        "Warmaster",
         "Hero"
       ],
-      "factionKeywords": ["Hedonites of Slaanesh", "Grand Alliance Chaos"],
-      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Fly, Ward (5+), Chaos, Hedonites of Slaanesh, Daemon",
+      "factionKeywords": [
+        "Hedonites of Slaanesh",
+        "Grand Alliance Chaos",
+        "Court of the Godlings"
+      ],
+      "referenceKeywords": "Unique, Hero, Monster, Fly, Ward (5+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "12\"",
         "save": "5+",
@@ -601,7 +647,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 160,
+      "points": 280,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -612,31 +658,19 @@
             "name": "Impaling Talons",
             "type": "melee",
             "range": null,
-            "attacks": "7",
+            "attacks": "8",
             "hit": "3+",
             "wound": "3+",
             "rend": "2",
             "damage": "2",
-            "abilities": []
+            "abilities": ["Charge (+1 Damage)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Scion of Slaanesh",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "While a friendly **Synessa** is on the battlefield, subtract 1 from hit rolls for attacks that target this unit."
-        },
-        {
           "name": "Fleeting Dance of Death",
-          "phase": "movementPhase",
+          "phase": "chargePhase",
           "phaseDetails": "Passive",
           "icon": "movement",
           "castingValue": null,
@@ -644,19 +678,31 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "This unit can use **CHARGE** abilities even if it used a **RETREAT** ability in the same turn. In addition, no mortal damage is inflicted on this unit by **RETREAT** abilities."
+          "effect": "This unit can use **CHARGE** abilities even if it is in combat."
         },
         {
-          "name": "Redolence of Violence",
+          "name": "You! Amuse Us!",
           "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "phaseDetails": "Reaction: You declared a FIGHT ability for this unit",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "Pick a friendly **PARAGON** that has not used a **FIGHT** ability this turn and is within this unit’s combat range and visible to this unit to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved."
+        },
+        {
+          "name": "Redolence of Violence",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit charged this turn, pick up to D3 other friendly non-**HERO HEDONITES OF SLAANESH DAEMON** units wholly within 12\" of this unit to be the targets.",
-          "effect": "Add 1 to the Attacks characteristic of the targets’ melee weapons for the rest of the turn.",
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll 2D6. If this unit charged this turn, add 2 to the roll. If the roll exceeds the target’s Health characteristic, 1 model in the target is automatically slain. If the target is a **MANIFESTATION** and the roll exceeds its banishment value, it is banished.",
           "keywords": ["Rampage"]
         },
         {
@@ -669,7 +715,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If any enemy models were slain by this unit’s combat attacks this turn, **Heal (D3)** this unit, then place a **battle fury token** next to it.\n\nAdd 1 to the Attacks characteristic of this unit’s **Impaling Talons** for each **battle fury token** it has until the end of the next turn."
+          "effect": "If any enemy models were slain by this unit’s combat attacks this turn, **Heal (D3)** this unit and add 1 to the Attacks characteristic of this unit’s **Impaling Talons** for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative."
         }
       ],
       "summonedBy": null,
@@ -690,7 +736,7 @@
       "referenceKeywords": "Manifestation, Endless Spell, Fly, Ward (6+), Chaos, Hedonites of Slaanesh",
       "stats": {
         "move": "8\"",
-        "save": "6+",
+        "save": "5+",
         "control": "7+",
         "health": "6",
         "ward": "6+",
@@ -713,28 +759,28 @@
             "wound": "4+",
             "rend": "1",
             "damage": "1",
-            "abilities": []
+            "abilities": ["Crit (2 Hits)"]
           }
         ]
       },
       "abilities": [
         {
           "name": "Flensing Tongues",
-          "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
+          "phase": "heroPhase",
+          "phaseDetails": "Any Hero Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this **MANIFESTATION** to be the target.",
-          "effect": "Roll 6 dice. For each 4+, inflict 1 mortal damage on the target. If any models are slain by this ability, the target has **STRIKE-LAST** for the rest of the turn."
+          "declare": "Pick a visible enemy unit within 12\" of this **MANIFESTATION** to be the target.",
+          "effect": "Until this **MANIFESTATION** is banished or destroyed, the target is **tongue-tied** while it is within 12\" of this **MANIFESTATION**. While the target is **tongue-tied**:\n\n• It cannot use **RUN** abilities.\n• Your opponent must roll a D6 instead of a D3 when determining the amount of mortal damage inflicted on the target when it uses a **RETREAT** ability."
         }
       ],
       "summonedBy": {
-        "spell": "Summon Dreadful Visage",
-        "lore": "Manifestations of Depravity",
-        "castingValue": 7
+        "spell": "Summon Manifestations of Depravity",
+        "lore": "The Decadent Host Manifestation Lore",
+        "castingValue": 6
       },
       "loadout": null,
       "baseSize": "90 x 52mm",
@@ -819,7 +865,12 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Faction Terrain", "Ward (6+)"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Faction Terrain, Ward (6+), Chaos, Hedonites of Slaanesh",
       "stats": {
         "move": "-",
@@ -840,14 +891,14 @@
         {
           "name": "Damned Conduit",
           "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a friendly **HEDONITES OF SLAANESH** unit wholly within 12\" of this terrain feature to be the target.",
-          "effect": "Allocate D3 damage points to the target (ward rolls cannot be made for those damage points). Then, pick 1 of the following effects to apply until the start of your next turn:\n\n• Add 1 to wound rolls for the target’s combat attacks.\n• Add 1 to run rolls and charge rolls for the target.\n• Add 1 to casting rolls and unbinding rolls for the target."
+          "declare": "Pick a visible enemy unit within 18\" of this terrain feature to be the target.",
+          "effect": "Roll a dice. On a 3+, until the start of your next turn, while the target is within **X\"** of this terrain feature, the target’s weapons have the **Companion** weapon ability, where **X** is determined by the current battle round as follows:\n\n**Battle Round - X**\n1 - 9\"\n2 - 12\"\n3 - 15\"\n4 - 18\"\n5 - 21\""
         }
       ],
       "summonedBy": null,
@@ -864,7 +915,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Champion", "Daemon", "Beast", "Ward (6+)"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Beast, Champion, Ward (6+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "10\"",
@@ -883,7 +938,7 @@
       "weapons": {
         "melee": [
           {
-            "name": "Deadly Pincers and Barbed Stinger",
+            "name": "Pincers and Tail Stinger",
             "type": "melee",
             "range": null,
             "attacks": "4",
@@ -891,7 +946,7 @@
             "wound": "3+",
             "rend": "1",
             "damage": "D3",
-            "abilities": ["Anti-MONSTER (+1 Rend)", "Companion"]
+            "abilities": ["Anti-WIZARD (+1 Rend)"]
           }
         ]
       },
@@ -909,19 +964,19 @@
           "effect": "This unit has a maximum control score of 1."
         },
         {
-          "name": "Soporific Musk",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-          "icon": "defensive",
+          "name": "Disharmonious Song",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 4+, the target has **STRIKE-LAST** for the rest of the turn."
+          "declare": "Pick each visible enemy unit within 6\" of this unit that did not use a **CHARGE** or **FIGHT** ability this turn to be a target.",
+          "effect": "Roll a D3 for each target. You can re-roll the dice if the target is a **WIZARD** or **PRIEST**. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
         },
         {
-          "name": "Disruptive Song",
+          "name": "Arcane Disruption",
           "phase": "heroPhase",
           "phaseDetails": "Passive",
           "icon": "special",
@@ -950,23 +1005,24 @@
         "Ward (5+)",
         "War Machine",
         "Wizard (2)",
+        "Paragon",
         "Unique",
         "Sybarite",
         "Warmaster",
         "Hero"
       ],
       "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
-      "referenceKeywords": "Warmaster, Unique, Hero, War Machine, Wizard (2), Ward (5+), Chaos, Hedonites of Slaanesh, Sybarite",
+      "referenceKeywords": "Warmaster, Unique, Hero, War Machine, Wizard (2), Ward (6+), Chaos, Hedonites of Slaanesh, Sybarite, Paragon",
       "stats": {
         "move": "8\"",
-        "save": "4+",
+        "save": "3+",
         "control": "5",
         "health": "18",
-        "ward": "5+",
+        "ward": "6+",
         "wizard": "2",
         "priest": null
       },
-      "points": 440,
+      "points": 460,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -977,36 +1033,36 @@
             "name": "Leerstave of Loth’shar",
             "type": "ranged",
             "range": "12\"",
-            "attacks": "1",
-            "hit": "2+",
-            "wound": "2+",
-            "rend": "-",
-            "damage": "6",
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "3",
             "abilities": ["Shoot in Combat"]
           }
         ],
         "melee": [
           {
-            "name": "Scourge and Dagger",
+            "name": "Glutos's Choking Tentacles",
             "type": "melee",
             "range": null,
-            "attacks": "4",
-            "hit": "3+",
-            "wound": "4+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": ["Companion"]
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
           },
           {
-            "name": "Greatblade and Claws",
+            "name": "Kyazu's Greatblade and Mutants' Claws",
             "type": "melee",
             "range": null,
-            "attacks": "8",
+            "attacks": "6",
             "hit": "3+",
             "wound": "3+",
             "rend": "1",
             "damage": "3",
-            "abilities": ["Companion"]
+            "abilities": ["Crit (Mortal)", "Companion"]
           }
         ]
       },
@@ -1021,19 +1077,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Greatblade and Claws** is 6."
-        },
-        {
-          "name": "Gorge on Excess",
-          "phase": "endOfTurn",
-          "phaseDetails": "End of Any Turn",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick a friendly **SYBARITE** unit wholly within 12\" of this unit to be the target.",
-          "effect": "**Heal (6)** the target."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Kyazu’s Greatblade and Mutants’ Claws** is 4."
         },
         {
           "name": "Crippling Famishment",
@@ -1045,20 +1089,32 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
-          "effect": "Until the start of your next turn:\n\n• Halve the target’s Move characteristic.\n• Halve run rolls and charge rolls for the target.",
+          "effect": "Until the start of your next turn:\n• Halve the target’s Move characteristic.\n• Halve run rolls and charge rolls for the target.",
           "keywords": ["Spell"]
         },
         {
-          "name": "The Grand Gourmand",
+          "name": "Gorge on Excess",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Enemy Turn",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **SYBARITE** unit wholly within 12\" of this unit to be the target.",
+          "effect": "**Heal (6)** the target or return a number of slain models to the target with a combined Health characteristic of up to 3."
+        },
+        {
+          "name": "Paragon of Gluttony",
           "phase": "startOfTurn",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Start of Any Turn",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "A different effect applies to friendly **SYBARITE** units each battle round while they are wholly within 12\" of this unit, as shown below. The effects of all previous battle rounds also apply to those units while they are wholly within 12\" of this unit.\n\n**Battle Round 1:**\n***Starter:*** Add 1 to run rolls and charge rolls for those units.\n\n**Battle Round 2:**\n***Main:*** Add 3 to those units’ control scores.\n\n**Battle Round 3:**\n***Dessert:*** Add 1 to hit rolls for those unit’s attacks.\n\n**Battle Round 4+:**\n***Digestif:*** Add 1 to the Rend characteristic of those units’ melee weapons."
+          "effect": "Pick 1 of the following delicacies for Glutos to savour. You cannot pick a delicacy that you picked in the previous turn. The effect applies for the rest of the turn:\n\n***Heart of a Shadow Daemon***: While they are wholly within 12\" of this unit, friendly non-**MONSTER** **HEDONITES OF SLAANESH** units are not visible to enemy units more than 12\" from them.\n\n***Blood of an Aelven Princeling***: Each time a friendly **HEDONITES OF SLAANESH** unit wholly within 12\" of this unit uses a **RUN** ability, if you roll a 1-3 when determining the distance that unit can move, you can use a value of 4 instead.\n\n***Crushed Incarnate’s Core***: Add 1 to unbinding rolls and banishment rolls for this unit.\n\n***Unspeakable Viscera***: Inflict D6 mortal damage on each other unit (friendly and enemy) within this unit’s combat range."
         }
       ],
       "summonedBy": null,
@@ -1075,7 +1131,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Daemon", "War Machine", "Ward (6+)"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "War Machine, Ward (6+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "10\"",
@@ -1157,7 +1217,7 @@
       "summonedBy": null,
       "loadout": null,
       "baseSize": "120 x 92mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "9ad448e2-5e4a-55ac-9329-426dd332b777",
@@ -1174,7 +1234,11 @@
         "Sybarite",
         "Cavalry"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Cavalry, Champion, Musician (1/5), Standard Bearer (1/5), Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
         "move": "12\"",
@@ -1233,7 +1297,7 @@
       "summonedBy": null,
       "loadout": null,
       "baseSize": "60 x 35mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "231be20f-7a0e-52c2-a691-bc2bf8ec0ee3",
@@ -1253,7 +1317,11 @@
         "Ward (6+)",
         "Hero"
       ],
-      "factionKeywords": ["Hedonites of Slaanesh", "Grand Alliance Chaos"],
+      "factionKeywords": [
+        "Hedonites of Slaanesh",
+        "Grand Alliance Chaos",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Hero, Infantry, Ward (6+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "6\"",
@@ -1264,57 +1332,56 @@
         "wizard": null,
         "priest": null
       },
-      "points": 90,
+      "points": 100,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
       "weapons": {
-        "ranged": [
-          {
-            "name": "Heartstring Lyre",
-            "type": "ranged",
-            "range": "12\"",
-            "attacks": "2",
-            "hit": "2+",
-            "wound": "3+",
-            "rend": "2",
-            "damage": "D3",
-            "abilities": []
-          }
-        ],
         "melee": [
           {
             "name": "Piercing Claw",
             "type": "melee",
             "range": null,
-            "attacks": "3",
+            "attacks": "5",
             "hit": "3+",
             "wound": "4+",
             "rend": "1",
-            "damage": "1",
+            "damage": "2",
             "abilities": []
           }
         ]
       },
       "abilities": [
         {
-          "name": "Discordant Disruption",
+          "name": "Maestros of Discordance",
           "phase": "heroPhase",
-          "phaseDetails": "Once Per Turn (Army), Reaction: Opponent declared a SPELL ability for a WIZARD within 18\" of this unit",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
-          "isReaction": true,
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit within 18\" of this unit to be the enemy target. Then, you can pick another visible friendly **HEDONITES OF SLAANESH DAEMON** unit wholly within 12\" of this unit to be the friendly target.",
+          "effect": "Roll a number of dice equal to the number of models in the enemy target unit. For each 6, inflict 1 mortal damage on the enemy target.\n\nThen, you can pick 1 of the following effects:\n• **Heal (X)** the friendly target, where **X** is the number of enemy models slain by this ability this phase.\n• Return a number of slain models to the friendly target unit with a total Health characteristic equal to or less than the number of enemy models slain by this ability this phase."
+        },
+        {
+          "name": "Spell-Shredding Symphony",
+          "phase": "heroPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
           "declare": null,
-          "effect": "The casting roll for that spell must be re-rolled. If 2 or more dice in the re-rolled casting roll have the same value or if 1 of the dice is a 6, inflict D3 mortal damage on that **WIZARD** after the effect of that spell has been resolved."
+          "effect": "This unit can use **UNBIND** and **BANISH** abilities as if it had **WIZARD (1)**. In addition, each time this unit successfully unbinds a spell, inflict D3 mortal damage on the caster and each time this unit successfully banishes a **MANIFESTATION**, inflict D3 mortal damage on the unit that summoned that **MANIFESTATION**."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "60 x 35mm",
-      "notes": "This HERO can join an eligible  regiment as a Slaaneshi Beguiler."
+      "notes": "This HERO can join an eligible regiment as a Slaaneshi Beguiler."
     },
     {
       "id": "38a2d7e8-0ed2-5c51-9efe-a44acfcbd860",
@@ -1325,7 +1392,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Daemon", "Ward (5+)", "Monster", "Wizard (2)", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Hero, Monster, Wizard (2), Ward (5+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "12\"",
@@ -1336,7 +1407,7 @@
         "wizard": "2",
         "priest": null
       },
-      "points": 400,
+      "points": 420,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1358,11 +1429,11 @@
             "name": "Elegant Greatblade",
             "type": "melee",
             "range": null,
-            "attacks": "6",
+            "attacks": "5",
             "hit": "2+",
             "wound": "3+",
             "rend": "2",
-            "damage": "2",
+            "damage": "3",
             "abilities": []
           }
         ]
@@ -1378,19 +1449,19 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Elegant Greatblade** is 4."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Elegant Greatblade** is 3."
         },
         {
           "name": "Supernatural Grace",
-          "phase": "defensive",
+          "phase": "movementPhase",
           "phaseDetails": "Passive",
-          "icon": "defensive",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Subtract 1 from hit rolls for combat attacks that target this unit."
+          "effect": "This unit can use **CHARGE** abilities even if it used a **RETREAT** ability in the same turn. In addition, no mortal damage is inflicted on this unit by **RETREAT** abilities."
         },
         {
           "name": "Cacophonic Choir",
@@ -1401,22 +1472,9 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick up to 3 visible enemy units within 6\" of this unit to be the targets, then make a casting roll of 2D6.",
-          "effect": "Roll a dice for each target. If the roll exceeds the target’s Control characteristic, inflict D3 mortal damage on it.",
+          "declare": "Pick any number of visible enemy units within 12\" of this unit to be the targets, then make a casting roll of 2D6. Subtract 1 from the casting roll for each target you picked after the first.",
+          "effect": "Inflict D3 mortal damage on each target.",
           "keywords": ["Spell"]
-        },
-        {
-          "name": "Dark Temptations",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Pick 1 of the following effects:\n\n• Add 1 to hit rolls for the target’s attacks for the rest of the turn.\n• Add 1 to save rolls for the target for the rest of the turn.\n• If the target is damaged, **Heal (D3)** the target.\n\nThen, add 1 to the Damage characteristic of this unit’s **Elegant Greatblade** for attacks that target that enemy unit for the rest of the turn.",
-          "keywords": ["Rampage"]
         },
         {
           "name": "Locus of Slaanesh",
@@ -1427,8 +1485,21 @@
           "chantValue": null,
           "cpCost": 1,
           "isReaction": false,
-          "declare": "Pick a friendly **HEDONITES OF SLAANESH DAEMON** unit that started the battle with 3 or more models and has been destroyed to be the target.",
+          "declare": "Pick a friendly non-**HERO HEDONITES OF SLAANESH DAEMON** unit that started the battle with 3 or more models and has been destroyed to be the target.",
           "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12\" of this unit and more than 9\" from all enemy units."
+        },
+        {
+          "name": "Dark Temptations",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Pick 1 of the following musks. Its effects apply for the rest of the turn.\n\n***Alluring Musk***:\n• This unit’s weapons have **Crit (2 Hits)** for attacks that target that enemy unit.\n• Add 1 to hit rolls for attacks made by that enemy unit that target this unit.\n\n***Psychotropic Musk***:\n• Subtract 1 from wound rolls for attacks made by that enemy unit that target this unit.\n• Subtract 1 from the Rend characteristic of this unit’s melee weapons.",
+          "keywords": ["Rampage"]
         }
       ],
       "summonedBy": null,
@@ -1445,25 +1516,28 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": [
-        "Ward (5+)",
         "Slaaneshi Beguiler or Dark Egotist",
         "Dark Egotist",
         "Infantry",
         "Sybarite",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
-      "referenceKeywords": "Hero, Infantry, Ward (5+), Chaos, Hedonites of Slaanesh, Sybarite",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
+      "referenceKeywords": "Hero, Infantry, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
         "move": "6\"",
-        "save": "5+",
+        "save": "4+",
         "control": "2",
         "health": "5",
-        "ward": "5+",
+        "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 100,
+      "points": 110,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1485,28 +1559,105 @@
       },
       "abilities": [
         {
-          "name": "Only The Best Will Suffice",
+          "name": "Allow Me To Demonstrate",
           "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a **FIGHT** ability for this unit",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a friendly **Myrmidesh Painbringers** or **Symbaresh Twinsouls** unit that is in combat and is wholly within 12\" of this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, for the rest of the turn, each time a model in the target unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. For each 4+, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved."
+          "declare": null,
+          "effect": "Pick a friendly non-**HERO SYBARITE** unit that has not used a **FIGHT** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved. Add 1 to hit rolls for attacks made by this unit and the target for the rest of the turn."
         },
         {
-          "name": "'You First, I Insist...'",
+          "name": "You First, I Insist...",
           "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Your opponent must decide whether the target will accept or decline this unit’s challenge.\n\n***Accept:*** The target has **STRIKE-FIRST** for the rest of the turn. If this unit is in combat with the target when the target is picked to use a **FIGHT** ability, all of the target’s attacks must target this unit.\n\n***Decline:*** The target has **STRIKE-LAST** for the rest of the turn."
+          "declare": "If this unit has not used a **TEMPTATION** ability this turn, pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Your opponent must decide whether the target will **accept** or **decline** this unit’s challenge:\n\nIf they **accept**, for the rest of the turn, if this unit is in combat with the target when the target is picked to use a **FIGHT** ability, subtract 1 from hit rolls for the target’s attacks and all of the target’s attacks must target this unit.\n\nIf they **decline**, for the rest of the turn:\n• The target has **STRIKE-LAST**.\n• Add 1 to the Damage characteristic of this unit’s melee weapons for attacks that target that enemy unit.",
+          "keywords": ["Temptation"]
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "40mm",
+      "notes": "This HERO can join an eligible regiment as a Dark Egotist."
+    },
+    {
+      "id": "5afa45c7-4a3a-5556-8b6b-764e2744649b",
+      "name": "Lord of Hysteria",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "HEDONITES_OF_SLAANESH",
+      "factions": ["Hedonites of Slaanesh"],
+      "keywords": ["Dark Egotist", "Infantry", "Sybarite", "Hero"],
+      "factionKeywords": [
+        "Hedonites of Slaanesh",
+        "Grand Alliance Chaos",
+        "Decadent Host"
+      ],
+      "referenceKeywords": "Hero, Infantry, Chaos, Hedonites of Slaanesh, Sybarite",
+      "stats": {
+        "move": "6\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 120,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Ceremonial Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Master of the Revels",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit has not used a **TEMPTATION** ability this turn, pick a visible friendly **SYBARITE** unit wholly within 12\" of this unit to be the target.",
+          "effect": "If the target is a **PARAGON**, apply the following effect to the target. Otherwise, roll a dice. On a 3+, apply the following effect to the target:\n\n• For the rest of the turn, while the target is wholly within 12\" of this unit, add 1 to the Attacks characteristic of the target’s melee weapons.",
+          "keywords": ["Temptation"]
+        },
+        {
+          "name": "Slaughterous Celebrants",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While they are wholly within 12\" of and visible to this unit, melee weapons used by friendly **HEDONITES OF SLAANESH INFANTRY** units have **Anti-charge (+1 Rend)**."
         }
       ],
       "summonedBy": null,
@@ -1523,25 +1674,28 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": [
-        "Ward (5+)",
         "Slaaneshi Beguiler or Dark Egotist",
         "Dark Egotist",
         "Infantry",
         "Sybarite",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
-      "referenceKeywords": "Hero, Infantry, Ward (5+), Chaos, Hedonites of Slaanesh, Sybarite",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
+      "referenceKeywords": "Hero, Infantry, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
         "move": "6\"",
         "save": "4+",
         "control": "2",
         "health": "5",
-        "ward": "5+",
+        "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 110,
+      "points": 120,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1554,8 +1708,8 @@
             "range": null,
             "attacks": "5",
             "hit": "3+",
-            "wound": "3+",
-            "rend": "1",
+            "wound": "4+",
+            "rend": "2",
             "damage": "2",
             "abilities": []
           }
@@ -1563,28 +1717,28 @@
       },
       "abilities": [
         {
-          "name": "Share The Pain",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "offensive",
+          "name": "Atrocious Ministrations",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "Each time you make a successful ward roll for this unit for a damage point inflicted by a combat attack, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved."
+          "declare": "Pick a visible friendly **HEDONITES OF SLAANESH INFANTRY** unit wholly within 12\" of this unit to be the target.",
+          "effect": "You can allocate 1 damage point to the target (ward rolls cannot be made for that damage point). Then, roll a dice. On a 3+, until the start of your next turn, the target can use **CHARGE** abilities even if they used a **RUN** or **RETREAT** ability in the same turn."
         },
         {
-          "name": "Disciples In Torment",
-          "phase": "combatPhase",
+          "name": "Share The Pain",
+          "phase": "startOfTurn",
           "phaseDetails": "Passive",
-          "icon": "offensive",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit is contesting an objective, add 1 to wound rolls for combat attacks made by friendly **SYBARITE** units wholly within 12\" of this unit."
+          "effect": "This unit has **WARD (5+)** while it is in combat. In addition, each time you make a successful ward roll for this unit for a damage point inflicted by a combat attack, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved."
         }
       ],
       "summonedBy": null,
@@ -1620,28 +1774,16 @@
       "weapons": {},
       "abilities": [
         {
-          "name": "Gaze Not Into Its Depths",
-          "phase": "movementPhase",
-          "phaseDetails": "Any Movement Phase",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit within 6\" of this **MANIFESTATION** to be the target.",
-          "effect": "Inflict D3 mortal damage on the target. Then, add 1 to hit rolls for the target’s attacks for the rest of the turn."
-        },
-        {
           "name": "Irresistible Lure",
-          "phase": "movementPhase",
-          "phaseDetails": "Reaction: Opponent declared a MOVE ability for a unit wholly within 12\" of this MANIFESTATION",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Phase (Army), Reaction: Opponent declared a **MOVE** ability for a unit within 18\" of and visible to this **MANIFESTATION**",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": true,
           "declare": null,
-          "effect": "If that enemy unit does not end the move closer to this **MANIFESTATION** than it was at the start of the move, inflict D3 mortal damage on it after the **MOVE** ability has been resolved."
+          "effect": "If that enemy unit does not end that move closer to this **MANIFESTATION** than it was at the start of the move, inflict D6 mortal damage on that enemy unit after the **MOVE** ability has been resolved."
         }
       ],
       "summonedBy": {
@@ -1662,7 +1804,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Champion", "Infantry", "Sybarite"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Infantry, Champion, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
         "move": "6\"",
@@ -1673,7 +1819,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 100,
+      "points": 120,
       "modelCount": 5,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1686,7 +1832,7 @@
             "range": null,
             "attacks": "3",
             "hit": "3+",
-            "wound": "3+",
+            "wound": "4+",
             "rend": "1",
             "damage": "1",
             "abilities": []
@@ -1695,16 +1841,28 @@
       },
       "abilities": [
         {
-          "name": "Paragons of Battle",
-          "phase": "combatPhase",
+          "name": "False Serenity",
+          "phase": "defensive",
           "phaseDetails": "Passive",
-          "icon": "offensive",
+          "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to the Rend characteristic of this unit’s melee weapons while it is contesting an objective you do not control."
+          "effect": "While this unit has not charged this turn, it has **WARD (5+)**."
+        },
+        {
+          "name": "Dance of the Wailing Blade",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "For the rest of the turn, for each unmodified hit roll of 1 for a combat attack made by that enemy unit that targets this unit, inflict 1 mortal damage on the target after the **FIGHT** ability has been resolved."
         }
       ],
       "summonedBy": null,
@@ -1721,7 +1879,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Champion", "Infantry", "Sybarite"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Infantry, Champion, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
         "move": "6\"",
@@ -1813,7 +1975,11 @@
         "Sybarite",
         "Hero"
       ],
-      "factionKeywords": ["Hedonites of Slaanesh", "Grand Alliance Chaos"],
+      "factionKeywords": [
+        "Hedonites of Slaanesh",
+        "Grand Alliance Chaos",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Unique, Hero, Wizard (1), Infantry, Ward (5+), Chaos, Hedonites of Slaanesh, Daemon, Sybarite",
       "stats": {
         "move": "8\"",
@@ -1967,7 +2133,7 @@
       "summonedBy": null,
       "loadout": null,
       "baseSize": "120 x 92mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "65b70bb6-fbed-5343-9f1c-075e9a6244c3",
@@ -1985,18 +2151,22 @@
         "Ward (6+)",
         "Cavalry"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Cavalry, Champion, Musician (1/5), Standard Bearer (1/5), Ward (6+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
-        "move": "12\"",
-        "save": "5+",
+        "move": "14\"",
+        "save": "6+",
         "control": "1",
         "health": "3",
         "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 140,
+      "points": 130,
       "modelCount": 5,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2030,15 +2200,15 @@
       "abilities": [
         {
           "name": "Quicksilver Speed",
-          "phase": "movementPhase",
-          "phaseDetails": "Passive",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "When making run rolls for this unit, if you roll a 1-3, you can use a value of 4 instead."
+          "effect": "If this unit charged this turn and has not used the ‘Power Through’ command this turn, it can immediately use the ‘Normal Move’ ability as if it were your movement phase."
         }
       ],
       "summonedBy": null,
@@ -2059,14 +2229,15 @@
         "Ward (5+)",
         "Monster",
         "Wizard (2)",
+        "Paragon",
         "Unique",
         "Warmaster",
         "Hero"
       ],
       "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
-      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (2), Ward (5+), Chaos, Hedonites of Slaanesh, Daemon",
+      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (2), Ward (5+), Chaos, Hedonites of Slaanesh, Daemon, Paragon",
       "stats": {
-        "move": "14\"",
+        "move": "12\"",
         "save": "4+",
         "control": "5",
         "health": "16",
@@ -2074,7 +2245,7 @@
         "wizard": "2",
         "priest": null
       },
-      "points": 430,
+      "points": 410,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2119,53 +2290,53 @@
           "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Soulpiercer** is 4."
         },
         {
-          "name": "Supernatural Grace",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "Subtract 1 from hit rolls for combat attacks that target this unit."
-        },
-        {
           "name": "Paramount Hunter",
           "phase": "chargePhase",
-          "phaseDetails": "Once Per Turn (Army), Reaction: Opponent declared a CHARGE ability for a HERO within 9\" of this unit",
+          "phaseDetails": "Once Per Turn (Army), Reaction: Opponent declared a CHARGE ability for a HERO within 12\" of this unit",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": true,
           "declare": null,
-          "effect": "If this unit is not in combat, it can immediately move 2D6\". It can pass through the combat ranges of enemy units but it must end that move within ½\" of that **HERO**. If it does so, this unit has charged, and that **HERO**’s **CHARGE** ability has no effect.",
+          "effect": "If this unit is not in combat, it can immediately move up to 2D6\". It can pass through the combat ranges of enemy units but it must end that move within ½\" of that **HERO**. If it does so, this unit has charged, and that **HERO**’s **CHARGE** ability has no effect.",
           "keywords": ["Core", "Rampage", "Charge", "Move"]
         },
         {
-          "name": "Excess of Violence",
+          "name": "Supernatural Grace",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit can use **CHARGE** abilities even if it used a **RETREAT** ability in the same turn. In addition, no mortal damage is inflicted on this unit by **RETREAT** abilities.&#x20;"
+        },
+        {
+          "name": "An Exquisite Trophy",
           "phase": "combatPhase",
-          "phaseDetails": "Once Per Battle, Your Combat Phase",
+          "phaseDetails": "Any Combat Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a friendly non-**HERO HEDONITES OF SLAANESH** unit wholly within 12\" of this unit to be the target.",
-          "effect": "The target can use 2 **FIGHT** abilities this turn. After the first is used, however, the target has **STRIKE-LAST** for the rest of the turn."
+          "declare": "Pick an enemy **HERO** or **MONSTER** in combat with this unit to be the target.&#x20;",
+          "effect": "For the rest of the phase, the following effects apply:&#x20;\n\n• This unit's combat attacks that target that enemy unit have **Crit (2 Hits)** and score critical hits on unmodified hit roll of 5+.\n\n• If the target is destroyed by this unit's combat attacks this phase, add 1 to the Attacks characteristic of melee weapons used by other friendly **HEDONITES OF SLAANESH DAEMON** units while they are wholly within 12\" of and visible to this unit.&#x20;"
         },
         {
           "name": "Refine Senses",
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
-          "castingValue": 4,
+          "castingValue": 8,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Make a casting roll of 2D6.",
-          "effect": "For the rest of the turn:\n\n• Add 1 to wound rolls for this unit’s attacks that target enemy **HEROES**.\n• Add 1 to save rolls for attacks made by enemy **HEROES** that target this unit.",
+          "declare": "Pick a visible friendly **HEDONITES OF SLAANESH** unit wholly within 12\" of this unit to be the target, then make a casting roll of 2D6. Add 1 to the casting roll if this unit is the target.&#x20;",
+          "effect": "The target has **STRIKE-FIRST** for the rest of the turn.&#x20;",
           "keywords": ["Spell"]
         }
       ],
@@ -2182,15 +2353,19 @@
       "source": "aos-4e",
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
-      "keywords": ["Wizard (1)", "Infantry", "Ward (6+)", "Sybarite", "Hero"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
-      "referenceKeywords": "Hero, Wizard (1), Infantry, Ward (6+), Chaos, Hedonites of Slaanesh, Sybarite",
+      "keywords": ["Wizard (1)", "Infantry", "Sybarite", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
+      "referenceKeywords": "Hero, Wizard (1), Infantry, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
         "move": "6\"",
         "save": "5+",
         "control": "2",
         "health": "5",
-        "ward": "6+",
+        "ward": null,
         "wizard": "1",
         "priest": null
       },
@@ -2211,48 +2386,38 @@
             "rend": "1",
             "damage": "D3",
             "abilities": []
-          },
-          {
-            "name": "Shadow-cloaked Claws",
-            "type": "melee",
-            "range": null,
-            "attacks": "4",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "D3",
-            "abilities": ["Companion"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Mist Lurkers",
+          "name": "Truths of the Twisted Mirror",
           "phase": "heroPhase",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Your Hero Phase",
           "icon": "offensive",
-          "castingValue": null,
+          "castingValue": 7,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "If this unit successfully casts a spell, until the start of your next turn, it can attack with its **Shadow-cloaked Claws**."
+          "declare": "If this unit is a **PARAGON**, pick a visible enemy unit within 12\" of it to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, subtract 1 from save rolls for the target.",
+          "keywords": ["Spell"]
         },
         {
-          "name": "Twisted Mirror",
-          "phase": "shootingPhase",
-          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
-          "icon": "shooting",
+          "name": "Bargain with the Mist-Daemons",
+          "phase": "heroPhase",
+          "phaseDetails": "Once per Turn (Army), Reaction: You declared a **SPELL** ability for this unit&#x20;",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit within 8\" of this unit to be the target.",
-          "effect": "Roll a dice. On a 4+, subtract 1 from save rolls for the target until the start of your next turn."
+          "isReaction": true,
+          "declare": null,
+          "effect": "Roll a dice. On a 1, inflict 2 mortal damage on this unit. On a 3+, add 2 to the casting roll."
         }
       ],
       "summonedBy": null,
-      "loadout": "This unit is armed with a Haze Staff.\n\nIt can only attack with Shadow-cloaked Claws by using the ‘Mist Lurkers’ ability.",
+      "loadout": null,
       "baseSize": "32mm",
       "notes": null
     },
@@ -2267,6 +2432,7 @@
       "keywords": [
         "Slaaneshi Beguiler or Dark Egotist",
         "Dark Egotist",
+        "Paragon",
         "Unique",
         "Infantry",
         "Sybarite",
@@ -2274,8 +2440,12 @@
         "Ward (4+)",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
-      "referenceKeywords": "Warmaster, Unique, Hero, Infantry, Ward (4+), Chaos, Hedonites of Slaanesh, Sybarite",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
+      "referenceKeywords": "Warmaster, Unique, Hero, Infantry, Ward (4+), Chaos, Hedonites of Slaanesh, Sybarite, Paragon",
       "stats": {
         "move": "6\"",
         "save": "3+",
@@ -2285,7 +2455,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 190,
+      "points": 240,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2296,18 +2466,18 @@
             "name": "Shardslash",
             "type": "melee",
             "range": null,
-            "attacks": "5",
+            "attacks": "6",
             "hit": "2+",
             "wound": "3+",
             "rend": "2",
             "damage": "2",
-            "abilities": []
+            "abilities": ["Crit (2 Hits)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Powered By Vainglory",
+          "name": "Paragon of Vainglory",
           "phase": "combatPhase",
           "phaseDetails": "Passive",
           "icon": "offensive",
@@ -2316,19 +2486,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If this unit charged this turn and the unmodified charge roll was 6+, the Attacks characteristic of this unit’s **Shardslash** is equal to the unmodified charge roll."
-        },
-        {
-          "name": "The Glorious Reborn",
-          "phase": "combatPhase",
-          "phaseDetails": "Passive",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "This unit has **STRIKE-FIRST** if it charged in the same turn."
+          "effect": "If this unit charged this turn and the unmodified charge roll was 6+ , for the rest of the turn:\n\n• This unit has **STRIKE-FIRST**.\n• The Attacks characteristic of this unit’s **Shardslash** is equal to the unmodified charge roll.\n• Melee weapons, including **Companion** weapons, used by other friendly **HEDONITES OF SLAANESH** units have **Crit (2 Hits)** while they are wholly within 12\" of and visible to this unit."
         },
         {
           "name": "Shardslash",
@@ -2340,7 +2498,20 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Ward rolls cannot be made for damage points inflicted by this unit’s combat attacks."
+          "effect": "Subtract 1 from ward rolls for damage points inflicted by this unit’s combat attacks."
+        },
+        {
+          "name": "Gaze Upon My Magnificence and Weep",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit has not used a **TEMPTATION** ability this turn, pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Your opponent must decide whether the target will **adulate** or **reject** Sigvald.\n\n***Adulate:*** Until the start of your next turn, while the target is in combat with this unit, it must pick this unit to be the target of pile-in moves it makes.\n\n***Reject:*** Inflict D3+3 mortal damage on the target, then **Heal (X)** this unit, where **X** is the number of damage points inflicted on the target this turn by this ability.",
+          "keywords": ["Temptation"]
         }
       ],
       "summonedBy": null,
@@ -2357,10 +2528,14 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Champion", "Infantry", "Sybarite"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Infantry, Champion, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
-        "move": "6\"",
+        "move": "8\"",
         "save": "5+",
         "control": "1",
         "health": "3",
@@ -2368,7 +2543,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 110,
+      "points": 140,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2384,22 +2559,47 @@
             "wound": "3+",
             "rend": "1",
             "damage": "2",
-            "abilities": []
+            "abilities": ["Anti-INFANTRY (+1 Rend)"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Slaughter At Any Cost",
-          "phase": "shootingPhase",
-          "phaseDetails": "Enemy Shooting Phase",
+          "name": "Bestial Onslaught",
+          "phase": "movementPhase",
+          "phaseDetails": "Any Movement Phase",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
+          "declare": "Pick this unit if it is **waiting in ambush**.",
+          "effect": "Set up this unit on the battlefield wholly within 9\" of a battlefield edge and more than 9\" from all enemy units."
+        },
+        {
+          "name": "Instinctive Advance",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Reaction: Opponent declared a command for a unit within 12\" of this unit&#x20;",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
           "declare": null,
-          "effect": "If any damage points were allocated to this unit this turn, this unit can use the ‘Normal Move’ ability as if it were your movement phase."
+          "effect": "This unit can move 3\" immediately after that command has been resolved, unless that command is a reaction, in which case this unit can move after the ability that it was reacting to has been resolved. It can pass through the combat ranges of enemy units and can end that move in combat. If this unit was in combat at the start of the move, it must end that move in combat with the units it was already in combat with at the start of the move."
+        },
+        {
+          "name": "Veiled Threat",
+          "phase": "startOfTurn",
+          "phaseDetails": "Deployment Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Set up this unit in reserve **waiting in ambush**. It has now been deployed.",
+          "keywords": ["Deploy"]
         }
       ],
       "summonedBy": null,
@@ -2416,10 +2616,14 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Champion", "Sybarite", "Cavalry"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Cavalry, Champion, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
-        "move": "12\"",
+        "move": "14\"",
         "save": "5+",
         "control": "1",
         "health": "4",
@@ -2427,7 +2631,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 180,
+      "points": 170,
       "modelCount": 5,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2462,14 +2666,14 @@
         {
           "name": "Unrivalled Velocity",
           "phase": "chargePhase",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a **CHARGE** ability for this unit",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "You can re-roll charge rolls for this unit."
+          "effect": "You can re-roll the charge roll."
         }
       ],
       "summonedBy": null,
@@ -2487,25 +2691,24 @@
       "factions": ["Hedonites of Slaanesh"],
       "keywords": [
         "Daemon",
+        "Ward (5+)",
         "Wizard (1)",
         "Unique",
         "Infantry",
-        "Ward (6+)",
-        "Sybarite",
         "Hero"
       ],
       "factionKeywords": ["Hedonites of Slaanesh", "Grand Alliance Chaos"],
-      "referenceKeywords": "Unique, Hero, Wizard (1), Infantry, Ward (6+), Chaos, Hedonites of Slaanesh, Daemon, Sybarite",
+      "referenceKeywords": "Unique, Hero, Wizard (1), Infantry, Ward (5+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "8\"",
         "save": "4+",
         "control": "4",
         "health": "9",
-        "ward": "6+",
+        "ward": "5+",
         "wizard": "1",
         "priest": null
       },
-      "points": 180,
+      "points": 250,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2538,20 +2741,8 @@
       },
       "abilities": [
         {
-          "name": "Deadly Symbiosis",
+          "name": "Champions of the Gilded Throne",
           "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick a friendly non-**HERO SYBARITE** unit and a friendly non-**HERO HEDONITES OF SLAANESH DAEMON** unit to be the targets. Both units must be wholly within 12\" of this unit.",
-          "effect": "For the rest of the turn, if either target uses the ‘All-out Attack’ or ‘All-out Defence’ command, the other target can also use the same command in the same phase and no command points are spent to use the command a second time."
-        },
-        {
-          "name": "The Vengeful Allegiance",
-          "phase": "defensive",
           "phaseDetails": "Passive",
           "icon": "offensive",
           "castingValue": null,
@@ -2559,10 +2750,10 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved."
+          "effect": "When players are alternating picking units to use a **FIGHT** ability, when it is your turn to pick a unit, instead of picking 1 unit, you can pick a friendly non‑**HERO HEDONITES OF SLAANESH DAEMON** unit wholly within 18\" of this unit and a friendly non-**HERO** **SYBARITE** unit wholly within 18\" of this unit. Resolve the second **FIGHT** ability immediately after the first."
         },
         {
-          "name": "Subvert",
+          "name": "Unholy Symbiosis",
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
@@ -2570,9 +2761,21 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a visible enemy unit within 12\" of this unit to be the target, then make a casting roll of 2D6.",
-          "effect": "The target cannot use commands for the rest of the turn.",
+          "declare": "Pick up to 1 visible friendly **SYBARITE** unit and up to 1 visible friendly **HEDONITES OF SLAANESH DAEMON** unit to be the targets, then make a casting roll of 2D6.",
+          "effect": "If you picked a **SYBARITE** target, subtract 1 from ward rolls for damage points inflicted by its combat attacks until the start of your next turn. If you picked a **DAEMON** target, it has **WARD (5+)** until the start of your next turn.",
           "keywords": ["Spell"]
+        },
+        {
+          "name": "Violent Offerings",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If any damage points were allocated this turn by this unit’s combat attacks to an enemy **WIZARD**, **PRIEST**, **UNIQUE** unit or unit with an artefact of power, and that enemy unit has been destroyed, add 1 to this unit’s power level for the rest of the battle. This unit can be affected by this ability multiple times and the effects are cumulative."
         }
       ],
       "summonedBy": null,
@@ -2589,18 +2792,22 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Champion", "Infantry", "Sybarite"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Infantry, Champion, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
         "move": "6\"",
-        "save": "4+",
+        "save": "3+",
         "control": "1",
         "health": "2",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 130,
+      "points": 120,
       "modelCount": 5,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2611,7 +2818,7 @@
             "name": "Merciless Weapons",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "3",
             "hit": "3+",
             "wound": "4+",
             "rend": "1",
@@ -2622,28 +2829,28 @@
       },
       "abilities": [
         {
-          "name": "Fiendish Reflexes",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
+          "name": "Ego-Driven Excess",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Battle (Army), Any Combat Phase",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If this unit did not charge this turn, it has **WARD (5+)** while it is in combat."
+          "effect": "For the rest of the turn, add 1 to the Damage characteristic of this unit’s melee weapons for attacks that target an enemy unit that has a higher Control characteristic than this unit."
         },
         {
-          "name": "Ego-driven Excess",
-          "phase": "defensive",
+          "name": "Pah! Unworthy!",
+          "phase": "combatPhase",
           "phaseDetails": "Passive",
-          "icon": "defensive",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If this unit did not charge this turn, subtract 1 from the Attacks characteristic of melee weapons used by enemy units while they are in combat with this unit."
+          "effect": "While this unit is damaged or has fewer than half its starting models, add 1 to the Rend characteristic of its melee weapons."
         }
       ],
       "summonedBy": null,
@@ -2667,11 +2874,14 @@
         "Unique",
         "Synessa or Slaaneshi Beguiler",
         "Fly",
-        "Warmaster",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
-      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Wizard (1), Fly, Ward (5+), Chaos, Hedonites of Slaanesh, Daemon",
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
+      "referenceKeywords": "Unique, Hero, Monster, Wizard (1), Fly, Ward (5+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "12\"",
         "save": "5+",
@@ -2681,7 +2891,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 190,
+      "points": 250,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2716,18 +2926,6 @@
       },
       "abilities": [
         {
-          "name": "Voice of Slaanesh",
-          "phase": "endOfTurn",
-          "phaseDetails": "End of Any Turn",
-          "icon": "control",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick a visible unit within 18\" of this unit to be the target.",
-          "effect": "If the target is a friendly unit, add 5 to the target’s control score for the rest of the turn. If the target is an enemy unit, subtract 5 from the target’s control score for the rest of the turn."
-        },
-        {
           "name": "Enthralling Splendour",
           "phase": "combatPhase",
           "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
@@ -2736,12 +2934,12 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit that charged this turn and is in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, subtract 1 from wound rolls for the target’s attacks for the rest of the turn.",
+          "declare": "Pick an enemy unit with a lower Control characteristic than this unit, that charged this turn and is in combat with this unit to be the target.",
+          "effect": "Subtract 1 from wound rolls for the target’s attacks for the rest of the turn.",
           "keywords": ["Rampage"]
         },
         {
-          "name": "Whispers of Doubt",
+          "name": "Whispers of Desire",
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "offensive",
@@ -2749,21 +2947,21 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a visible enemy **HERO** within 18\" of this unit to be the target, then make a casting roll of 2D6.",
-          "effect": "Add 1 to hit rolls and wound rolls for combat attacks that target that enemy unit for the rest of the turn.",
+          "declare": "Pick a visible enemy unit within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "For the rest of the turn, subtract 1 from the Attacks characteristic of the target’s melee weapons.",
           "keywords": ["Spell"]
         },
         {
-          "name": "Progeny of Slaanesh",
-          "phase": "heroPhase",
-          "phaseDetails": "Passive",
+          "name": "Arcane Seductor",
+          "phase": "startOfTurn",
+          "phaseDetails": "Start of Battle Round",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "While a friendly **Dexcessa** is on the battlefield, add 1 to this unit’s power level."
+          "declare": "Pick a visible enemy **WIZARD** or **PRIEST** within 18\" of this unit to be the target.",
+          "effect": "Roll a dice. If the roll is higher than the target’s power level, for the rest of the battle round, while the target is within 18\" of this unit:\n• Subtract 1 from casting rolls and chanting rolls for enemy units while they are within 18\" of this unit.\n• Add 1 to this unit’s power level."
         }
       ],
       "summonedBy": null,
@@ -2780,7 +2978,11 @@
       "faction_id": "HEDONITES_OF_SLAANESH",
       "factions": ["Hedonites of Slaanesh"],
       "keywords": ["Champion", "Unique", "Infantry", "Sybarite"],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Decadent Host"
+      ],
       "referenceKeywords": "Unique, Infantry, Champion, Chaos, Hedonites of Slaanesh, Sybarite",
       "stats": {
         "move": "6\"",
@@ -2873,7 +3075,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 110,
+      "points": 120,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2895,28 +3097,28 @@
       },
       "abilities": [
         {
-          "name": "The Endless Dance",
-          "phase": "startOfTurn",
-          "phaseDetails": "Deployment Phase",
+          "name": "Captive Audience",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 3\" from all enemy units."
+          "effect": "Enemy units cannot use **RETREAT** abilities while they are in combat with this unit."
         },
         {
-          "name": "Staff of Masks",
-          "phase": "heroPhase",
-          "phaseDetails": "Any Hero Phase",
+          "name": "The Endless Dance",
+          "phase": "movementPhase",
+          "phaseDetails": "Any Movement Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Pick 1 of the following effects:\n\n• Add 3 to the Attacks characteristic of this unit’s **Razor-edged Claws** for the rest of the turn.\n• **Heal (3)** this unit."
+          "effect": "Pick 1 of the following effects:\n\n***The Dance of Dreaming***: Pick a visible enemy unit within 6\" of this unit to be the target. For the rest of the turn, if the unmodified hit roll for an attack made by that enemy unit that targets this unit is 1-4, the attack fails and the attack sequence ends.\n\n***The Pavane of Slaanesh***: This unit can move 2D3\". It can move through the combat ranges of enemy units and can end that move in combat.\n\n***The Waltz of Lethargy***: Pick a visible enemy unit within 6\" of this unit to be the target. For the rest of the turn, the target cannot use commands while it is in combat with this unit."
         }
       ],
       "summonedBy": null,
@@ -3003,6 +3205,82 @@
       "notes": "This unit cannot be reinforced."
     },
     {
+      "id": "79e6a3b2-d226-51ae-bc63-d9871d133fc7",
+      "name": "Thricefold Discord",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "HEDONITES_OF_SLAANESH",
+      "factions": ["Hedonites of Slaanesh"],
+      "keywords": ["Daemon", "Ward (5+)", "Wizard (1)", "Infantry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
+      "referenceKeywords": "Hero, Wizard (1), Infantry, Ward (5+), Chaos, Hedonites of Slaanesh, Daemon",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "3",
+        "ward": "5+",
+        "wizard": "1",
+        "priest": null
+      },
+      "points": 180,
+      "modelCount": 3,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Thricefold Arsenal",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (2 Hits)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Gifts of Pain and Pleasure",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick either a visible friendly **HEDONITES OF SLAANESH INFANTRY** unit wholly within 12\" of this unit or a visible enemy unit wholly within 12\" of this unit to be the target. Then, make a casting roll of 2D6.",
+          "effect": "If the target is a friendly unit, add 2\" to its Move characteristic until the start of your next turn. If the target is an enemy unit, inflict **X** mortal damage on it, then **Heal (X)** this unit. **X** is equal to the number of models in this unit.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Thricefold Court",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Start of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Pick 1 of the following effects that you did not pick in the previous turn. The effect applies for the rest of the turn:\n\n***Sins of Soul***: While an enemy **WIZARD** or **PRIEST** is visible to this unit, add 1 to this unit’s power level.\n\n***Sins of Flesh***: This unit’s attacks score critical hits on unmodifed hit rolls of 5+.\n\n***Sins of Mind***: Each time a visible friendly **HEDONITES OF SLAANESH** unit wholly within 12\" of this unit uses the ‘Rally’ command, you receive 3 additional rally points."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": "Each model in this unit is armed with Carnal Blades and Wicked Claws. The models in this unit are:\n\n• Vexmor, the Excessively Indolent (champion)\n• Vashtiss the Coiled\n• Lascivyr, the Bladed Blessing",
+      "baseSize": "40mm [1], 28.5mm [2]",
+      "notes": "This unit cannot be reinforced."
+    },
+    {
       "id": "4b069968-cd99-5705-8f60-ff2f6d9b5248",
       "name": "Viceleader, Herald of Slaanesh",
       "subname": null,
@@ -3022,7 +3300,11 @@
         "Fly",
         "Hero"
       ],
-      "factionKeywords": ["Grand Alliance Chaos", "Hedonites of Slaanesh"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Hedonites of Slaanesh",
+        "Court of the Godlings"
+      ],
       "referenceKeywords": "Hero, Wizard (1), Infantry, Fly, Ward (6+), Chaos, Hedonites of Slaanesh, Daemon",
       "stats": {
         "move": "6\"",
@@ -3115,32 +3397,32 @@
             "name": "Rending Wheels",
             "type": "melee",
             "range": null,
-            "attacks": "2D6",
+            "attacks": "6",
             "hit": "4+",
-            "wound": "4+",
-            "rend": "-",
+            "wound": "2+",
+            "rend": "2",
             "damage": "1",
-            "abilities": []
+            "abilities": ["Charge (+1 Damage)"]
           }
         ]
       },
       "abilities": [
         {
           "name": "Exquisite Agony",
-          "phase": "movementPhase",
-          "phaseDetails": "Your Movement Phase",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick up to 3 enemy units that this **MANIFESTATION** passed across this turn to be the targets.",
-          "effect": "Roll 6 dice for each target. For each roll that is less than the target’s Save characteristic, inflict 1 mortal damage on the target."
+          "declare": "Pick an enemy unit in combat with this **MANIFESTATION** to be the target.",
+          "effect": "Inflict D6 mortal damage on the target."
         }
       ],
       "summonedBy": {
-        "spell": "Summon Wheels of Excruciation",
-        "lore": "Manifestations of Depravity",
+        "spell": "Summon Manifestations of Depravity",
+        "lore": "The Decadent Host Manifestation Lore",
         "castingValue": 6
       },
       "loadout": null,
@@ -3160,12 +3442,34 @@
       "points": null,
       "rules": [
         {
-          "name": "The Ecstatic Throngs",
-          "phase": "combatPhase",
+          "name": "In Search of Sin",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "movement",
+          "declare": "Pick up to 3 friendly **HEDONITES OF SLAANESH INFANTRY** units to be the targets.",
+          "effect": "Each target can move D6\". It can only end that move in combat with units it was in combat with at the start of that move.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "a3de6e9b-5d51-5c2b-b849-99e055ba3ffc",
+      "name": "Godseeker Cavalcade",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "HEDONITES_OF_SLAANESH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Godly Spoor",
+          "phase": "movementPhase",
           "phaseDetails": "Passive",
-          "icon": "offensive",
+          "icon": "movement",
           "declare": null,
-          "effect": "Add 1 to hit rolls for friendly **SYBARITE INFANTRY** units while they are damaged or if they had any models slain in the same turn.",
+          "effect": "While they are wholly within 9\" of a battlefield edge, friendly **HEDONITES OF SLAANESH** units can use **CHARGE** abilities even if they used a **RUN** ability in the same turn.",
           "cpCost": null,
           "isReaction": false
         }
@@ -3194,8 +3498,8 @@
       ]
     },
     {
-      "id": "91e801a0-718a-543c-8134-21585d5fb564",
-      "name": "Epicurean Revellers",
+      "id": "cbbfa1be-fc3e-5bf2-9dcb-af9aa3d25b47",
+      "name": "Artisans of Torment",
       "cardType": "BattleFormation",
       "source": "aos-4e",
       "faction_id": "HEDONITES_OF_SLAANESH",
@@ -3204,57 +3508,13 @@
       "points": null,
       "rules": [
         {
-          "name": "Exquisite Palate",
-          "phase": "heroPhase",
-          "phaseDetails": "Passive",
-          "icon": "rallying",
-          "declare": null,
-          "effect": "Each time a friendly non-**HERO HEDONITES OF SLAANESH DAEMON** uses the ‘Rally’ command, you can make 3 additional rally rolls of D6.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
-      "id": "24fdbedb-1b56-5c50-8aad-e9a57372468f",
-      "name": "Supreme Sybarites",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "HEDONITES_OF_SLAANESH",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Godly Ambitions",
-          "phase": "endOfTurn",
-          "phaseDetails": "Passive",
-          "icon": "control",
-          "declare": null,
-          "effect": "Add 3 to the control scores of friendly non‑**HERO HEDONITES OF SLAANESH** units while they are within the combat ranges of any friendly **HEDONITES OF SLAANESH HEROES.**",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
-      "id": "17a74cc3-472a-5b08-bc1b-638b2ad27c93",
-      "name": "Seeker Cavalcade",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "HEDONITES_OF_SLAANESH",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Reckless Haste",
-          "phase": "movementPhase",
-          "phaseDetails": "Passive",
-          "icon": "movement",
-          "declare": null,
-          "effect": "Friendly **HEDONITES OF SLAANESH CAVALRY** units can use a **RETREAT** ability and still use **CHARGE** abilities later in the turn. In addition, no mortal damage is inflicted on **HEDONITES OF SLAANESH CAVALRY** units by **RETREAT** abilities.",
-          "cpCost": null,
+          "name": "Sadistic Tendencies",
+          "phase": "combatPhase",
+          "phaseDetails": "Your Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **HEDONITES OF SLAANESH** unit to use this ability, then pick an enemy unit in combat with that unit and that had any damage points allocated to it this turn to be the target.",
+          "effect": "For the rest of the turn:\n• All of the combat attacks made by that friendly unit must target that enemy unit.\n• Add 1 to the Attacks characteristic of that friendly unit’s melee weapons.",
+          "cpCost": 1,
           "isReaction": false
         }
       ]
@@ -3280,6 +3540,422 @@
           "isReaction": false
         }
       ]
+    },
+    {
+      "id": "986817e8-6200-5d21-91fe-530031345aad",
+      "name": "Lurid Dreamers",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "HEDONITES_OF_SLAANESH",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Amidst the Phantasmagoria",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Shooting Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **HEDONITES OF SLAANESH** unit that had any damage points allocated to it this turn by an enemy ability to be the target.",
+          "effect": "Remove the target from the battlefield, then set it up again on the battlefield more than 9\" from all enemy units.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    }
+  ],
+  "armiesOfRenown": [
+    {
+      "id": "7cb7e508-88c5-540f-94d4-0084284f1875",
+      "name": "Court of the Godlings",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "HEDONITES_OF_SLAANESH",
+      "parentFaction": "Hedonites of Slaanesh",
+      "isLegends": false,
+      "lore": "Dexcessa is an arrogant force of nature who cannot abide taking orders from another. They see themselves as Slaanesh’s chief warlord, often overthrowing lesser champions and ordering their warhosts to abandon long-fought campaigns and focus on new, bizarre objectives more pleasing to the Talon. Only Synessa’s wicked tongue can convince Dexcessa to listen – and even then the daemon rails at the patience advised by their despised sibling, ever liable to suddenly act.\nWhen you pick the Hedonites of Slaanesh faction for your army, you can choose for it to be a Court of the Godlings Army of Renown. If you do so, use the faction rules described in Army of Renown: Court of the Godlings instead of the Hedonites of Slaanesh faction rules. Every unit in your army must be drawn from the units listed in the roster options box opposite. All units in your army gain the **COURT OF THE GODLINGS** keyword.",
+      "rules": [
+        {
+          "name": "The Voice and the Talon",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "The friendly **Synessa** and **Dexcessa** have the **TWIN** keyword."
+        },
+        {
+          "name": "The More Glorious Slaughter",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn, Start of Any Turn",
+          "icon": "offensive",
+          "declare": "If a friendly **TWIN** destroyed an enemy unit in the previous turn and the other did not, pick the one that did not to use this ability.",
+          "effect": "For the rest of the turn, add 1 to hit rolls for combat attacks made by units in the regiment of the unit using this ability."
+        },
+        {
+          "name": "The Longer Shadow",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "control",
+          "declare": "If a friendly **TWIN** is contesting an objective you control and the other is not, pick the one that is not to use this ability.",
+          "effect": "Until the start of your next turn, while the unit using this ability is contesting an objective you control, add 5 to the control scores of units in its regiment."
+        },
+        {
+          "name": "The Grander Visage",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "defensive",
+          "declare": "If either friendly **TWIN** is damaged, pick the one with fewer or no damage points to use this ability.",
+          "effect": "For the rest of the turn, the unit using this ability has **WARD (4+)**."
+        },
+        {
+          "name": "The Swifter Surge",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "movement",
+          "declare": "If a friendly **TWIN** charged in the previous turn and the other did not, pick the one that did not to use this ability.",
+          "effect": "For the rest of the phase, when making charge rolls for units in the regiment of the unit using this ability, add 1 to the number of dice rolled, to a maximum of 3, then remove 1 dice of your choice and use the remaining dice as the charge roll."
+        },
+        {
+          "name": "The More Cunning Ruse",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "movement",
+          "declare": "If both friendly **TWINS** are within 12\" of and visible to each other, pick one of them to use this ability.",
+          "effect": "Remove the unit using this ability from the battlefield and set it up on the battlefield more than 9\" from all enemy units."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "e180cfed-7faf-56bc-992d-08eab189cbb7",
+            "name": "The Triplet Trinket",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "While a friendly **TWIN** is within 3\" of and visible to this unit, subtract 1 from hit rolls for attacks that target that **TWIN** and this unit.\nWhile 2 friendly **TWINS** are within 3\" of and visible to this unit, subtract 1 from hit rolls and wound rolls for attacks that target those **TWINS** and this unit instead.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "3efbdd4c-0ee2-5f6d-81e3-7ab7282a4147",
+            "name": "Tethered to the Twins",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Once Per Battle, Your Hero Phase",
+            "icon": "rallying",
+            "declare": "Pick a friendly **TWIN** that has been destroyed to be the target.",
+            "effect": "Set up a replacement unit identical to the target within 12\" of this unit and more than 9\" from all enemy units.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "c0f0643d-901c-550f-ba7a-cee64c814139",
+          "name": "Court of the Godlings Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "HEDONITES_OF_SLAANESH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "b11167fe-a174-5ce7-92d1-e469ce0d2ac3",
+              "name": "Sibilant Whispers",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "movement",
+              "declare": "Pick a friendly **COURT OF THE GODLINGS WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Until the start of your next turn, while a friendly **TWIN** is visible to the target, halve the target’s Move characteristic. In addition, while 2 friendly **TWINS** are visible to the target, your opponent must roll 1 fewer dice, to a minimum of 1, when making charge rolls for it.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "87d4a055-e1ef-5062-a3ee-d875e78026db",
+              "name": "Ecstatic Furore",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **COURT OF THE GODLINGS WIZARD** to cast this spell, pick a visible friendly **TWIN** wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Until the start of your next turn, add 1 to wound rolls for combat attacks made by friendly **COURT OF THE GODLINGS** units while they are wholly within 12\" of and visible to the target.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "0472e47c-98d4-5f87-b173-849317101bfa",
+              "name": "Essence Transfusion",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **COURT OF THE GODLINGS WIZARD** to cast this spell, pick a visible friendly **TWIN** to be the donor, pick another visible friendly **TWIN** to be the target, then make a casting roll of 2D6.",
+              "effect": "Allocate any number of damage points to the donor (ward rolls cannot be made for those damage points). Then, **Heal (X)** the target, where **X** is double the number of damage points allocated to the donor by this use of this ability.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "e7a94f51-093e-5401-b68e-9606b6bcba61",
+          "name": "Court of the Godlings Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "HEDONITES_OF_SLAANESH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "3e68c176-b110-5e1a-80c0-3bbed4739997",
+              "name": "Summon Manifestation of Depravity",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **COURT OF THE GODLINGS WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Pick a friendly **HEDONITES OF SLAANESH MANIFESTATION** that is not on the battlefield and that was not removed from play earlier in the same turn.\n\nIf you picked a **Dreadful Visage** or **Wheels of Excruciation**, set it up wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. If you picked a **Mesmerising Mirror**, set it up wholly within 12\" of the caster and visible to them.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Wheels of Excruciation"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Seekers",
+          "Thricefold Discord",
+          "Keeper of Secrets",
+          "Bladebringer, Herald on Hellflayer",
+          "Synessa, the Voice of Slaanesh",
+          "Infernal Enrapturess, Herald of Slaanesh",
+          "Fiends",
+          "Bladebringer, Herald on Exalted Chariot",
+          "Bladebringer, Herald on Seeker Chariot",
+          "Dexcessa, the Talon of Slaanesh",
+          "Viceleader, Herald of Slaanesh",
+          "Hellflayer",
+          "Contorted Epitome",
+          "Daemonettes",
+          "Fane of Slaanesh"
+        ],
+        "requiredWarscrolls": [
+          "Synessa, the Voice of Slaanesh",
+          "Dexcessa, the Talon of Slaanesh"
+        ],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "d54e15d8-d0ad-5f3e-a9f2-6953f6532d75",
+      "name": "Decadent Host",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "HEDONITES_OF_SLAANESH",
+      "parentFaction": "Hedonites of Slaanesh",
+      "isLegends": false,
+      "lore": "Sigvald’s sheer self-obsession is an elemental force that fills his followers with a need to offer him conquered lands as tribute. He delights in the adoration of ‘lesser’ mortals, and his volatile whim has spurred rampages across Ghur, the Ossiarch Empire and ravaged Hysh. Countless tales of atrocity surround the Decadent Host, and the Everchosen himself has called on them specifically to do his bidding. Sometimes, Sigvald even deigns to listen.\n\nWhen you pick the Hedonites of Slaanesh faction for your army, you can choose for it to be the Decadent Host Army of Renown. If you do so, use the faction rules described in Army of Renown the Decadent Host instead of the Hedonites of Slaanesh faction rules. Every unit in your army must be drawn from the units listed in the roster options box opposite. All units in your army gain the **DECADENT HOST** keyword.",
+      "rules": [
+        {
+          "name": "Perfection Made Manifest",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick the friendly **Sigvald** to use this ability then pick a visible unit (friendly or enemy) within 3\" of him to be the target.",
+          "effect": "Inflict D3 mortal damage on the target. For each model slain by this ability this turn, add 2 to the Attacks characteristic of the friendly **Sigvald**’s melee weapons for the rest of the turn."
+        },
+        {
+          "name": "The Prince in the Mirror",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "rallying",
+          "declare": "If the friendly **Sigvald** has been destroyed, pick him to be the target. He can be replaced any number of times.",
+          "effect": "Set up a replacement unit identical to the target wholly within 6\" of a friendly **Contorted Epitome** and not in combat."
+        },
+        {
+          "name": "Petulant Wrath",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "special",
+          "declare": "If the friendly **Sigvald** is not in combat and did not charge this turn, pick him to use this ability, then pick another friendly **DECADENT HOST** unit within 1\" of him to be the target.",
+          "effect": "Inflict D6 mortal damage on the target. Before removing any slain models from play, remove the friendly **Sigvald** from the battlefield then set him up again within 1\" of the target."
+        },
+        {
+          "name": "Infernal Handmaidens",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "declare": null,
+          "effect": "While the friendly **Sigvald** is within 3\" of and visible to any friendly **DECADENT HOST DAEMON** units, add 1 to wound rolls for combat attacks made by those **DAEMON** units."
+        },
+        {
+          "name": "All for the Prince",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "While the friendly **Sigvald** is within the combat range of another friendly **DECADENT HOST SYBARITE** unit:\n\n• He has **WARD (2+)**.\n• Each time you make a successful ward roll for him, allocate 1 damage point to another friendly **DECADENT HOST** unit within his combat range after the damage sequence for him has been resolved (ward rolls cannot be made for those damage points)."
+        },
+        {
+          "name": "Important People Have Important Places To Be",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "movement",
+          "declare": null,
+          "effect": "If the friendly **Sigvald** is not contesting an objective, he can move 2D6\" but must end that move contesting an objective. He can move through the combat ranges of enemy units but cannot end that move in combat."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "f19192b8-ee54-50a4-b1dc-c9e7f80f11d7",
+            "name": "Mirror-Plate",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "startOfTurn",
+            "phaseDetails": "Passive",
+            "icon": "special",
+            "declare": null,
+            "effect": "Weapons used by this unit have a maximum Attacks characteristic of 1.\n\nWhile this unit is within 3\" of and visible to the friendly **Sigvald**, add 20 to the friendly **Sigvald**’s control score.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "836379fe-9e4a-5ceb-b6e3-25709860d853",
+            "name": "Protégé",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Once Per Battle (Army), Reaction: You declared the 'The Prince in the Mirror' ability",
+            "icon": "rallying",
+            "declare": null,
+            "effect": "You can set up a replacement **Sigvald** within 1\" of this unit instead of within 6\" of a friendly **Contorted Epitome**. If you do so, after setting up that replacement unit, this unit is automatically destroyed.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "8eff3e44-32d7-540d-8b6c-e94b005fcd80",
+          "name": "The Decadent Host Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "HEDONITES_OF_SLAANESH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "6b350ec3-74de-5685-a084-693e264eead4",
+              "name": "Diverting Excruciation",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "defensive",
+              "declare": "Pick a friendly **DECADENT HOST WIZARD** to cast this spell, pick a visible friendly **Sigvald** wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "**Heal (D3)** the target.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "301d3f6a-1a04-5444-95e3-772c579f20da",
+              "name": "Visions of Eternal Bliss",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **DECADENT HOST WIZARD** to cast this spell, pick a visible friendly **Sigvald** wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Until the start of your next turn, the target scores critical hits on unmodified hit rolls of 5+.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [
+        {
+          "id": "cb4357e2-52c3-5237-8de1-c7b3afac6ea1",
+          "name": "The Decadent Host Manifestation Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "HEDONITES_OF_SLAANESH",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "45058bae-cfbd-5630-8811-c03a6a34c42d",
+              "name": "Summon Manifestations of Depravity",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **DECADENT HOST WIZARD** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Pick a friendly **HEDONITES OF SLAANESH MANIFESTATION** that is not on the battlefield and that was not removed from play earlier in the same turn.\n\nIf you picked a **Dreadful Visage** or **Wheels of Excruciation**, set it up wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. If you picked a **Mesmerising Mirror**, set it up wholly within 12\" of the caster and visible to them.",
+              "keywords": ["Summon", "Spell"],
+              "linkedWarscroll": "Wheels of Excruciation"
+            }
+          ]
+        }
+      ],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Symbaresh Twinsouls",
+          "Blissbarb Seekers",
+          "The Dread Pageant",
+          "Scourge of Ghyran Syll'Esske, the Vengeful Allegiance",
+          "Hellstriders",
+          "Myrmidesh Painbringers",
+          "Slickblade Seekers",
+          "Shardspeaker of Slaanesh",
+          "Contorted Epitome",
+          "Lord of Hysteria",
+          "Scourge of Ghyran Slaangor Fiendbloods",
+          "Slaangor Fiendbloods",
+          "Sigvald, Prince of Slaanesh",
+          "Lord of Pain",
+          "Lord of Hubris",
+          "Daemonettes",
+          "Fane of Slaanesh",
+          "Blissbarb Archers"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": ["Contorted Epitome"]
+          },
+          {
+            "limit": 1,
+            "warscrolls": ["Daemonettes"]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
     }
   ],
   "lores": [
@@ -3292,29 +3968,29 @@
       "restrictionText": null,
       "spells": [
         {
-          "id": "a77f240f-57b5-5f1e-8df9-1c62a78c48e2",
-          "name": "Phantasmagoria",
-          "castingValue": 5,
-          "chantValue": null,
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "movement",
-          "declare": "Pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6.",
-          "effect": "Until the start of your next turn, each time the target is picked to use a **FIGHT** ability, you can pick a friendly unit in combat with the target. That friendly unit can move 2D3\" after the **FIGHT** ability has been resolved. It can pass through the combat ranges of enemy units and can end that move in combat.",
-          "keywords": ["Spell"],
-          "linkedWarscroll": null
-        },
-        {
-          "id": "d92fb270-e960-544f-b20c-3504515978b2",
-          "name": "Sadistic Spite",
+          "id": "ecfac0a6-6b5e-5abd-9820-6514b93631e0",
+          "name": "Hysterical Frenzy",
           "castingValue": 6,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "offensive",
-          "declare": "Pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, pick a visible friendly **EUPHORIC** unit to be the target, then make a casting roll of 2D6.",
-          "effect": "The target’s melee weapons have **Crit (Mortal)** instead of **Crit (2 Hits)** for the rest of the battle round.",
+          "declare": "Pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, pick a visible friendly **HEDONITES OF SLAANESH** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Add 1 to wound rolls for the target’s combat attacks until the start of your next turn.",
           "keywords": ["Spell", "Unlimited"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "13f2edce-915e-5fd3-95b4-ca4ef89d79a5",
+          "name": "Last Ecstasy",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, pick a visible friendly **HEDONITES OF SLAANESH** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, each time a model in the target unit is slain by a combat attack and that model was in combat with the attacking unit, roll a dice. If the target unit is a **MONSTER**, roll 10 dice instead. For each 4+, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved.",
+          "keywords": ["Spell"],
           "linkedWarscroll": null
         },
         {
@@ -3325,8 +4001,8 @@
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "offensive",
-          "declare": "Pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
-          "effect": "Add 1 to wound rolls for attacks that target that enemy unit until the start of your next turn.",
+          "declare": "Pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, pick a visible enemy unit within 18\" of the caster to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, weapons used by friendly **HEDONITES OF SLAANESH** units for attacks that target that enemy unit, including **Companion** weapons, have **Crit (2 Hits)**.",
           "keywords": ["Spell"],
           "linkedWarscroll": null
         }
@@ -3343,6 +4019,19 @@
       "restrictionText": null,
       "spells": [
         {
+          "id": "46f1453e-2ecc-5f2a-bb70-ffae497c79f3",
+          "name": "Summon Dreadful Visage",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "declare": "If there is not a friendly **Dreadful Visage** on the battlefield, pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, then make a casting roll of 2D6.",
+          "effect": "Set up a **Dreadful Visage** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+          "keywords": ["Summon", "Spell"],
+          "linkedWarscroll": "Dreadful Visage"
+        },
+        {
           "id": "48b40070-09eb-59cd-8924-e0bd68835c2b",
           "name": "Summon Mesmerising Mirror",
           "castingValue": 6,
@@ -3351,7 +4040,7 @@
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
           "declare": "If there is not a friendly **Mesmerising Mirror** on the battlefield, pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Mesmerising Mirror** wholly within 18\" of the caster, visible to them and more than 3\" from all enemy units.",
+          "effect": "Set up a **Mesmerising Mirror** wholly within 12\" of the caster and visible to them.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Mesmerising Mirror"
         },
@@ -3363,23 +4052,10 @@
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "special",
-          "declare": "If there is not a friendly **Wheels of Excruciation** endless spell on the battlefield, pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Wheels of Excruciation** endless spell wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
+          "declare": "If there is not a friendly **Wheels of Excruciation** on the battlefield, pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, then make a casting roll of 2D6.",
+          "effect": "Set up a **Wheels of Excruciation** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
           "keywords": ["Summon", "Spell"],
           "linkedWarscroll": "Wheels of Excruciation"
-        },
-        {
-          "id": "46f1453e-2ecc-5f2a-bb70-ffae497c79f3",
-          "name": "Summon Dreadful Visage",
-          "castingValue": 7,
-          "chantValue": null,
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "special",
-          "declare": "If there is not a friendly **Dreadful Visage** on the battlefield, pick a friendly **HEDONITES OF SLAANESH WIZARD** to cast this spell, then make a casting roll of 2D6.",
-          "effect": "Set up a **Dreadful Visage** wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units.",
-          "keywords": ["Summon", "Spell"],
-          "linkedWarscroll": "Dreadful Visage"
         }
       ]
     }
@@ -3387,49 +4063,91 @@
   "enhancements": {
     "artefacts": [
       {
-        "id": "2813d991-b124-576c-9ce1-fc21f9c43194",
-        "name": "Threnody Voicebox",
+        "id": "8831783f-04c7-535f-ac85-cb628b0757e4",
+        "name": "Bashful Visage",
         "cardType": "Enhancement",
         "enhancementType": "artefactsOfPower",
         "source": "aos-4e",
         "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Battle, Any Combat Phase",
+        "phase": "defensive",
+        "phaseDetails": "Passive",
         "icon": "defensive",
         "declare": null,
-        "effect": "For the rest of the turn, subtract 1 from the Attacks characteristic of melee weapons used by enemy units while they are in combat with this unit.",
+        "effect": "While they are wholly within 6\" of this unit, friendly non-**MONSTER** non-**WAR MACHINE** **HEDONITES OF SLAANESH** units are not visible to enemy units more than 12\" from them.",
         "cpCost": null
       },
       {
-        "id": "9387e850-7425-55d5-8141-be281bb03086",
-        "name": "Pendant of Slaanesh",
+        "id": "81ff2955-3e1a-58a1-aa12-041ebb565c8a",
+        "name": "Crown of the Ur-Slaanesh",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle, Your Movement Phase&#x20;",
+        "icon": "rallying",
+        "declare": "Pick a friendly non-**HERO INFANTRY** **HEDONITES OF SLAANESH** unit that has been destroyed to be the target.",
+        "effect": "Set up a replacement unit with half the number of models from the target unit (rounding up) wholly within 12\" of this unit and more than 9\" from all enemy units.",
+        "cpCost": 1
+      },
+      {
+        "id": "a44346a2-ed9c-5f22-9a4d-1cba539b58d8",
+        "name": "The Rod of Misrule",
         "cardType": "Enhancement",
         "enhancementType": "artefactsOfPower",
         "source": "aos-4e",
         "points": 10,
         "phase": "endOfTurn",
         "phaseDetails": "End of Any Turn",
-        "icon": "defensive",
-        "declare": null,
-        "effect": "If any damage points were allocated to this unit this turn, **Heal (3)** this unit.",
-        "cpCost": null
-      },
-      {
-        "id": "9e19f3b9-4e5e-53fc-83a8-784b72911ec2",
-        "name": "Icon of Infinite Excess",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Battle, Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a non-**HERO HEDONITES OF SLAANESH** unit wholly within 12\" of this unit to be the target.",
-        "effect": "Add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn.",
+        "icon": "special",
+        "declare": "Pick another visible friendly **HEDONITES OF SLAANESH** unit wholly within 12\" of this unit to be the target.",
+        "effect": "For the rest of the turn, when the target uses the ‘Power Through’ command, you can pick an enemy target for that command that does not have a lower Health characteristic than the unit using that command.",
         "cpCost": null
       }
     ],
     "heroicTraits": [
+      {
+        "id": "d665c6df-aead-57b5-92b4-31d902d8f6b8",
+        "name": "Centre of Attention",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Any Hero Phase",
+        "icon": "special",
+        "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+        "effect": "Roll a dice. On a 3+, for the rest of the turn, while this unit is wholly within 12\" of the centre of the battlefield and visible to the target:\n\n• Subtract 1 from hit rolls for attacks made by that enemy unit that target other friendly **HEDONITES OF SLAANESH** units.\n• Add 1 to hit rolls for combat attacks made by other friendly **HEDONITES OF SLAANESH** units that target that enemy unit.",
+        "cpCost": null
+      },
+      {
+        "id": "2d615f65-e84a-57b5-823f-bad16e0d04f3",
+        "name": "Dilettante",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle, Your Movement Phase",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "b51acb61-fce5-5c1c-b39d-11cae80dccfd",
+        "name": "Unseemly Vitality",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "End of Any Turn",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "**Heal (D3)** this unit.",
+        "cpCost": null
+      },
       {
         "id": "8b540756-7674-5413-b07a-d6ba0cda8aa4",
         "name": "Celebrity Warlord",
@@ -3471,51 +4189,54 @@
         "declare": null,
         "effect": "The first time each turn that an unmodified charge roll, casting roll, unbinding roll or banishment roll for a friendly non-**EUPHORIC** unit wholly within 12\" of this unit is 5 or less, that unit has the **EUPHORIC** keyword for the rest of the turn.",
         "cpCost": null
-      },
+      }
+    ],
+    "other": [
       {
-        "id": "edf9ac3e-18b7-5add-901e-5c65b25c7770",
-        "name": "Strongest Alone",
+        "id": "dd0965ad-0879-58c3-bdd9-17fca265d0f7",
+        "name": "Lurking Threat",
         "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Add 1 to hit rolls and wound rolls for this unit’s attacks while it is more than 6\" from all other friendly units.",
-        "cpCost": null
-      },
-      {
-        "id": "0b67a8d6-628e-53ca-96c3-3dbf2c65daa0",
-        "name": "Into the Fray",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "If this unit charged this turn and the unmodified charge roll was 8+, this unit has **STRIKE-FIRST** for the rest of the turn.",
-        "cpCost": null
-      },
-      {
-        "id": "967b25ef-b098-5490-af22-17fd4c7ff635",
-        "name": "Glory Hog",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
+        "enhancementType": "regimentOfRenown",
         "source": "aos-4e",
         "points": null,
         "phase": "startOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "If an enemy **HERO** is destroyed by this unit, this unit has the **EUPHORIC** keyword for the rest of the battle.",
+        "phaseDetails": "Deployment Phase",
+        "icon": "movement",
+        "declare": "Pick each unit in this Regiment of Renown if none of those units have been deployed.",
+        "effect": "Set up those units in reserve **lurking in the mists**. They have now been deployed.",
+        "cpCost": null,
+        "keywords": ["Deploy"]
+      },
+      {
+        "id": "dcc88105-4c36-514c-ac1c-546b034f2551",
+        "name": "The Mists Part",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick each unit in this Regiment of Renown if they are **lurking in the mists**.",
+        "effect": "Set up the **Shardspeaker of Slaanesh** in this Regiment of Renown on the battlefield wholly within 9\" of a battlefield edge and more than 9\" from all enemy units. Then, set up the **Blissbarb Archers** unit in this Regiment of Renown on the battlefield wholly within 6\" of that **Shardspeaker of Slaanesh**, wholly within 9\" of a battlefield edge and more than 9\" from all enemy units.",
         "cpCost": null
+      },
+      {
+        "id": "cb358a69-1a21-52aa-8d54-9864c699aba2",
+        "name": "Spew Forth Sin",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "special",
+        "declare": "Pick the **Contorted Epitome** in this Regiment of Renown to cast this spell, then make a casting roll of 2D6.",
+        "effect": "Pick a friendly **HEDONITES OF SLAANESH MANIFESTATION** that is not on the battlefield and that was not removed from play earlier in the same turn.\n\nIf you picked a **Dreadful Visage** or **Wheels of Excruciation**, set it up wholly within 12\" of the caster, visible to them and more than 9\" from all enemy units. If you picked a **Mesmerising Mirror**, set it up wholly within 12\" of the caster and visible to them.",
+        "cpCost": 6,
+        "keywords": ["Summon", "Spell"]
       }
-    ],
-    "other": []
+    ]
   },
   "terrain": [
     {
@@ -3553,20 +4274,68 @@
   "rules": {
     "battleTraits": [
       {
-        "name": "An Excess of Depravity",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
+        "name": "Sensuous Arcana",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
         "icon": "special",
-        "declare": "Pick up to 3 friendly **HEDONITES OF SLAANESH** units to be the targets.",
-        "effect": "The targets have the **EUPHORIC** keyword for the rest of the battle round.\n\nIn addition, for each friendly unit you pick, give your opponent 1 **temptation dice**. During this battle round, instead of making a wound roll, save roll, ward roll or run roll, your opponent can use 1 temptation dice to replace the roll they would have made with a 6, or instead of making a charge roll they can use 2 temptation dice to replace 2 of the dice in a charge roll with two 6s (other dice could then be rolled normally). Rolls that have been replaced count as unmodified rolls and cannot be re-rolled. You cannot use temptation dice to replace a re-roll.\n\nEach time your opponent uses a **temptation dice**, they must roll it. On a 1-2, your opponent’s roll is replaced by that value instead of a 6, and you must allocate D3 damage points to the unit for which the roll was replaced immediately aer the ability used by that unit has been resolved (ward rolls cannot be made for those damage points).\n\nAt the end of the battle round, any **temptation dice** that have not been used are lost."
+        "declare": "Pick a friendly non-**UNIQUE PARAGON** that has successfully cast a spell this turn and has not used a **TEMPTATION** ability this turn to use this ability.",
+        "effect": "Until the start of your next turn, while the unit using this ability is a **PARAGON**, add 1 to casting rolls for visible friendly **HEDONITES OF SLAANESH** units while they are wholly within 12\" of the unit using this ability."
       },
       {
-        "name": "Euphoric Killers",
+        "name": "Paragons of Slaanesh",
+        "phase": "startOfTurn",
+        "phaseDetails": "Start of Your Turn",
+        "icon": "special",
+        "declare": "If there are fewer than 3 friendly **PARAGONS** on the battlefield, pick a friendly **HEDONITES OF SLAANESH** unit that does not have the **PARAGON** keyword and has not had the **PARAGON** keyword this battle to be the target.",
+        "effect": "The target gains the **PARAGON** keyword.\n\n**Designer’s Note:** *Friendly units with the **PARAGON*** *keyword on their warscroll count towards the* *number of friendly **PARAGONS** on the battlefield.* *If there are more than 3 friendly **PARAGONS** on the* *battlefield at the same time, you must immediately* *remove those units from the battlefield one at a time* *until there are only 3 friendly **PARAGONS** left on* *the battlefield.*"
+      },
+      {
+        "name": "Fall From Grace",
         "phase": "startOfTurn",
         "phaseDetails": "Passive",
         "icon": "special",
         "declare": null,
-        "effect": "While a friendly unit has the **EUPHORIC** keyword:\n\n• That unit’s weapons, including **Companion** weapons, have **Crit (2 Hits)**.\n• That unit can use a **RUN** ability and still use **SHOOT** and/or **CHARGE** abilities later in the turn.\n\n**Designer’s Note**: *Note that ‘Sadistic Spite’ does not affect **Companion** weapons.*"
+        "effect": "A friendly non-**UNIQUE PARAGON** immediately loses the **PARAGON** keyword when any of the following happen:\n\n• That **PARAGON** has 3 or more damage points allocated to it by the same use of a non‑**ATTACK** ability.\n• That **PARAGON** uses a **CHARGE** ability and the unmodified charge roll is 5 or less (after any re‑rolls).\n• A spell cast by that **PARAGON** is **miscast** (after any re-rolls)."
+      },
+      {
+        "name": "Cutting Barbs",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Movement Phase",
+        "icon": "special",
+        "declare": "Pick a friendly **HEDONITES OF SLAANESH HERO** that has not used a **TEMPTATION** ability this turn to use this ability. Then, pick an enemy unit in combat with that **HERO** to be the target.",
+        "effect": "If the unit using this ability is a **PARAGON**, pick 1 of the effects below. Otherwise, your opponent must pick 1 of the effects below.\n\n***Rise to the Insults***: For the rest of the turn, the target has a maximum control score of 1.\n\n***Turn Aside from the Insults***: For the rest of the turn, add 1 to hit rolls for attacks made by friendly **HEDONITES OF SLAANESH** units that target that enemy unit."
+      },
+      {
+        "name": "Beguiling Glance",
+        "phase": "shootingPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly **HEDONITES OF SLAANESH HERO** unit that has not used a **TEMPTATION** ability this turn to use this ability. Then, pick a visible enemy unit within 12\" of that **HERO** to be the target.",
+        "effect": "If the unit using this ability is a **PARAGON**, pick 1 of the effects below. Otherwise, your opponent must pick 1 of the effects below.&#x20;\n\n***Succumb***: For the rest of the turn, when the target is using a **CHARGE** ability, it must end that charge move no further from the **HERO** using this ability.\n\n***Resist***: For the rest of the turn, subtract 2 from charge rolls for the target."
+      },
+      {
+        "name": "Chief of Revels",
+        "phase": "chargePhase",
+        "phaseDetails": "Once Per Turn (Army), Your Charge Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly non-**UNIQUE PARAGON** that charged this turn and has not used a **TEMPTATION** ability this turn to use this ability.",
+        "effect": "Until the start of your next turn, while the unit using this ability is a **PARAGON**, add 2 to charge rolls for friendly **HEDONITES OF SLAANESH** units while they are wholly within 12\" of the unit using this ability."
+      },
+      {
+        "name": "Enthralling Vanity",
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "special",
+        "declare": "Pick a friendly **HEDONITES OF SLAANESH HERO** unit that has not used a **TEMPTATION** ability this turn to use this ability. Then, pick a visible enemy unit within 12\" of that **HERO** to be the target.",
+        "effect": "If the unit using this ability is a **PARAGON**, pick 1 of the effects below. Otherwise, your opponent must pick 1 of the effects below.\n\n***Mesmerised***: For the rest of the turn, weapons used by friendly **HEDONITES OF SLAANESH** units for attacks that target that unit, including **Companion** weapons, have **Crit (2 Hits)**.\n\n***Break their Gaze***: For the rest of the turn, other than the **Companion** ability, weapon abilities for combat attacks made by the target have no effect."
+      },
+      {
+        "name": "Excess of Agility",
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "defensive",
+        "declare": "Pick a friendly non-**UNIQUE PARAGON** that has not used a **TEMPTATION** ability this turn to use this ability.",
+        "effect": "For the rest of the turn, while the unit using this ability is a **PARAGON** and is in combat, subtract 1 from hit rolls for attacks that target visible friendly **HEDONITES OF SLAANESH** units while they are wholly within 12\" of the unit using this ability."
       }
     ]
   }

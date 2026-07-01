@@ -8,8 +8,8 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-06-28T12:32:29.051Z",
-  "compatibleDataVersion": 434,
+  "updated": "2026-07-01T09:45:04.283Z",
+  "compatibleDataVersion": 446,
   "warscrolls": [
     {
       "id": "7f64eeb5-7422-591c-9c4b-71b56122e7f9",
@@ -274,7 +274,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 230,
+      "points": 220,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -474,7 +474,7 @@
           "cpCost": null,
           "isReaction": true,
           "declare": null,
-          "effect": "Pick a friendly non-**HERO VERMINUS INFANTRY** unit that has not used a **FIGHT** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved."
+          "effect": "Pick a friendly non-**HERO VERMINUS INFANTRY** unit that has not used a **FIGHT** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target’s attacks for the rest of the turn."
         },
         {
           "name": "Cornered Rat",
@@ -601,19 +601,19 @@
       "source": "aos-4e",
       "faction_id": "SKAVEN",
       "factions": ["Skaven"],
-      "keywords": ["Skaven Overclaw", "Eshin", "Infantry", "Hero"],
+      "keywords": ["Skaven Overclaw", "Eshin", "Infantry", "Ward (6+)", "Hero"],
       "factionKeywords": ["Grand Alliance Chaos", "Skaven"],
-      "referenceKeywords": "Hero, Infantry, Chaos, Skaven, Eshin",
+      "referenceKeywords": "Hero, Infantry, Ward (6+), Chaos, Skaven, Eshin",
       "stats": {
         "move": "7\"",
         "save": "5+",
         "control": "2",
         "health": "5",
-        "ward": null,
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
-      "points": 130,
+      "points": 120,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1271,7 +1271,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 160,
+      "points": 150,
       "modelCount": 10,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2836,15 +2836,15 @@
       "source": "aos-4e",
       "faction_id": "SKAVEN",
       "factions": ["Skaven"],
-      "keywords": ["Unique", "Eshin", "Infantry"],
+      "keywords": ["Unique", "Eshin", "Infantry", "Ward (6+)"],
       "factionKeywords": ["Grand Alliance Chaos", "Skaven"],
-      "referenceKeywords": "Unique, Infantry, Chaos, Skaven, Eshin",
+      "referenceKeywords": "Unique, Infantry, Ward (6+), Chaos, Skaven, Eshin",
       "stats": {
         "move": "7\"",
         "save": "6+",
         "control": "1",
         "health": "2",
-        "ward": null,
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
@@ -3018,7 +3018,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 240,
+      "points": 230,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -3238,7 +3238,7 @@
         "wizard": "2",
         "priest": null
       },
-      "points": 330,
+      "points": 310,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -3378,7 +3378,7 @@
         "wizard": null,
         "priest": "1"
       },
-      "points": 280,
+      "points": 260,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -3553,7 +3553,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 280,
+      "points": 260,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -4346,7 +4346,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 120,
+      "points": 100,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -4387,8 +4387,8 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick this unit if it is **in the tunnels below**, then pick an enemy unit more than 6\" from all other enemy units to be the target.",
-          "effect": "Roll a dice. On a 4+, set up this unit within 3\" of the target and more than 6\" from all other enemy units. Then, set up the unit that was **in the** **tunnels below** with this unit within 3\" of the target and more than 6\" from all other enemy units."
+          "declare": "You can only use this ability if this unit is **in the tunnels below**.",
+          "effect": "Roll a dice and pick one of the following effects.\n\n•  On a 4+, pick an enemy unit that is more than 6\" from all other enemy units. You can set up this unit on the battlefield in combat with that enemy unit and not in combat with any other enemy units. Then, if another friendly unit was set up **in the tunnels below** with the ‘Tunnel Skulkers’ ability, you can set up that unit wholly within 6\" of this unit, in combat with that enemy unit, and not in combat with any other enemy units.\n\n•  You can set up this unit anywhere on the battlefield more than 9\" from all enemy units. Then, if another friendly unit was set up **in the tunnels below** with the ‘Tunnel Skulkers’ ability, you can set up that unit wholly within 6\" of this unit and more than 9\" from all enemy units."
         },
         {
           "name": "Tunnel Skulkers",
@@ -4433,7 +4433,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 130,
+      "points": 120,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -5640,6 +5640,7 @@
     "Hargax's Pit-Beasts",
     "Lord Skaldior's Chosen",
     "Mask of the Deceiver",
+    "Mist-Clad Revellers",
     "Nurgle's Gift",
     "One-eyed Grunnock",
     "Phulgoth's Shudderhood",
@@ -5648,6 +5649,7 @@
     "Seekers of Silver",
     "Snerk's Trogg-Fer-Hire",
     "Stumblefoot Gargant",
+    "The Accursed Reflection",
     "The Coven of Thryx",
     "The Curse-Steel Battery",
     "The Exiled One",

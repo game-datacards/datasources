@@ -8,8 +8,8 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-06-17T10:06:13.768Z",
-  "compatibleDataVersion": 434,
+  "updated": "2026-07-01T09:44:59.192Z",
+  "compatibleDataVersion": 446,
   "warscrolls": [
     {
       "id": "6c4a2e2e-278d-5915-921e-813bf0998745",
@@ -748,7 +748,7 @@
         "wizard": "3",
         "priest": null
       },
-      "points": 440,
+      "points": 410,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1367,7 +1367,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 120,
+      "points": 100,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1574,7 +1574,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 240,
+      "points": 220,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2076,7 +2076,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 210,
+      "points": 200,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2272,7 +2272,7 @@
         "wizard": "2",
         "priest": null
       },
-      "points": 160,
+      "points": 140,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -3511,7 +3511,7 @@
           "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
           "icon": "movement",
           "declare": "Pick a friendly **SERAPHON** unit wholly within 12\" of a friendly **SERAPHON WIZARD** to use this ability.",
-          "effect": "Roll a dice. On a 3+, remove that unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+          "effect": "Remove that unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
           "cpCost": null,
           "isReaction": false
         }
@@ -3540,6 +3540,7 @@
       ]
     }
   ],
+  "armiesOfRenown": [],
   "lores": [
     {
       "id": "22e4ef3a-3836-5507-96e8-3a761d58dac9",
@@ -3884,20 +3885,20 @@
         "effect": "**Companion** weapons used by friendly **SERAPHON** units have **Crit (2 Hits)**."
       },
       {
+        "name": "Further the Great Plan",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle Round",
+        "icon": "special",
+        "declare": "&#x20;You cannot use this ability in the first battle round. Pick an **ASTERISM** that you have prophesied. You cannot pick an **ASTERISM** that you have previously picked this battle. If you do not meet the condition below that corresponds to that Asterism, this ability has no effect.\n\n***Itzl the Tamer:*** 3 or more enemy units have been destroyed.\n\n***Quetzl the Preserver:*** There are no enemy units wholly within friendly territory.\n\n***Sotek the Deliverer:*** The enemy general is in combat or has been destroyed.\n\n***Tepok the Seer:*** There are any friendly **SLANN** units on the battlefield and no friendly **SLANN** units are in combat or have been destroyed.",
+        "effect": "Pick an **ASTERISM** ability to be prophesied. Its effects apply in addition to those of all other prophesied **ASTERISM** abilities."
+      },
+      {
         "name": "The Great Plan",
         "phase": "startOfTurn",
         "phaseDetails": "Once Per Battle, Deployment Phase",
         "icon": "special",
-        "declare": "Pick an **ASTERISM** ability.",
-        "effect": "That **ASTERISM** ability can be used for the rest of the battle, but the others cannot, unless allowed by the ‘Further the Great Plan’ ability."
-      },
-      {
-        "name": "Further the Great Plan",
-        "phase": "startOfTurn",
-        "phaseDetails": "Once Per Battle, Start of the Third Battle Round",
-        "icon": "special",
-        "declare": "You can use this ability if you meet the condition below that corresponds to the **ASTERISM** you picked in the deployment phase.\n\n***Itzl the Tamer:*** 3 or more enemy units have been destroyed.\n\n***Quetzl the Preserver:*** There are no enemy units wholly within friendly territory.\n\n***Sotek the Deliverer:*** The enemy general is in combat or has been destroyed.\n\n***Tepok the Seer:*** There are any friendly **SLANN** units on the battlefield and no friendly **SLANN** units are in combat or have been destroyed.",
-        "effect": "Pick a different **ASTERISM** ability. It can be used in addition to the one you picked in the deployment phase."
+        "declare": "You must use this ability. Pick an **ASTERISM** ability to be prophesied.",
+        "effect": "That **ASTERISM** ability can be used for the rest of the battle, but the others cannot, unless prophesied by the ‘Further the Great Plan’ ability."
       },
       {
         "name": "Tepok the Seer",

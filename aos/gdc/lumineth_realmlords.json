@@ -8,8 +8,8 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-06-28T12:32:23.920Z",
-  "compatibleDataVersion": 434,
+  "updated": "2026-07-01T09:44:58.385Z",
+  "compatibleDataVersion": 446,
   "warscrolls": [
     {
       "id": "970f68c9-63a0-5047-94f5-faa49de1e991",
@@ -35,7 +35,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 340,
+      "points": 310,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -205,7 +205,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 130,
+      "points": 120,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -422,7 +422,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 420,
+      "points": 400,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -540,7 +540,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 290,
+      "points": 310,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -754,7 +754,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 160,
+      "points": 170,
       "modelCount": 5,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1001,7 +1001,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 250,
+      "points": 260,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1097,7 +1097,7 @@
         "Lumineth Realm-lords",
         "Aelementiri Conclave"
       ],
-      "referenceKeywords": "Unique, Infantry, Champion, Order, Lumineth Realm-lords, Aelf, Vanari, Scinari, Alarith",
+      "referenceKeywords": "Unique, Infantry, Champion, Order, Lumineth Realm-lords, Aelf, Vanari, Alarith",
       "stats": {
         "move": "6\"",
         "save": "5+",
@@ -1270,7 +1270,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While a friendly unit with a Health characteristic of 10 or less is wholly inside the ring formed by this **MANIFESTATION**:\n\n•  That unit is not visible to enemy units.\n•  Enemy abilities that would target that unit must target this **MANIFESTATION** instead."
+          "effect": "While a friendly unit with a Health characteristic of 10 or less is wholly inside the ring formed by this **MANIFESTATION**:\n\n•  That unit is not visible to enemy units that are not within its combat range.\n•  Enemy abilities that would target that unit must target this **MANIFESTATION** instead."
         }
       ],
       "summonedBy": {
@@ -1505,7 +1505,7 @@
         "wizard": "1",
         "priest": null
       },
-      "points": 140,
+      "points": 130,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1762,7 +1762,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 340,
+      "points": 350,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2012,7 +2012,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "This unit cannot use this ability if it is in combat. Pick a friendly **LUMINETH REALM-LORDS** unit that is in combat to be the target.",
-          "effect": "Remove this unit from the battlefield and set it up again within 1\" of the target and in combat."
+          "effect": "Remove this unit from the battlefield and set it up again within 1\" of the target, within 1\" of an enemy unit and in combat. This unit has charged."
         },
         {
           "name": "Supreme Swordmaster",
@@ -2031,6 +2031,117 @@
       "loadout": null,
       "baseSize": "50mm",
       "notes": "This HERO can join an eligible regiment as a Lumineth Paragon."
+    },
+    {
+      "id": "d003396c-47ba-5c14-828e-670101f7e66d",
+      "name": "Thyrielle's Zephyrites",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "LUMINETH_REALM_LORDS",
+      "factions": ["Lumineth Realm-lords"],
+      "keywords": ["Champion", "Aelf", "Hurakan", "Unique", "Infantry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Lumineth Realm-lords",
+        "Aelementiri Conclave"
+      ],
+      "referenceKeywords": "Unique, Infantry, Champion, Order, Lumineth Realm-lords, Hurakan, Aelf",
+      "stats": {
+        "move": "7\"",
+        "save": "5+",
+        "control": "1",
+        "health": "3",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 190,
+      "modelCount": 4,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Windblast",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "1",
+            "hit": "2+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "D3",
+            "abilities": ["Shoot in Combat"]
+          },
+          {
+            "name": "Slipstream Bow",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Zephyrite Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "The Living Gale",
+          "phase": "shootingPhase",
+          "phaseDetails": "Any Shooting Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit with this unit’s **Tzul** next to it to be the target.",
+          "effect": "Place this unit’s **Tzul** next to this unit.\n• You can move the target up to D3\".\n• Then, if this unit is within 6\" of the target, you can move this unit up to D6\". It cannot end that move in combat.\n\nAdd 2\" to the distance each unit can move for each instance of **Oreali, Rune of the Wind** depicted on your battle scripture.\n\n**Designer’s Note:** *If your opponent would prefer to move their own models, pre-measure the distance and indicate where they should move their models to.*"
+        },
+        {
+          "name": "One With the Wind",
+          "phase": "movementPhase",
+          "phaseDetails": "Your Movement Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy **INFANTRY** or **CAVALRY** unit that this unit passed across this phase to be the target.",
+          "effect": "Place this unit’s **Tzul** next to the target."
+        },
+        {
+          "name": "Masters of the Zephyr",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit’s **Tzul** is a token. After setting up this unit on the battlefield for the first time, place its **Tzul** next to it.\n• While this unit’s **Tzul** is next to it, it has **FLY**.\n• While this unit’s **Thyrielle** is on the battlefield, it has **WIZARD (1)**."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": "Each model in this unit is armed with Zephyrite Weapons and a Slipstream Bow. The models in this unit are:\n• Thyrielle (champion, must replace their Slipstream Bow with a Windblast)\n• Orieth\n• Sirikith\n• Anara",
+      "baseSize": "28.5mm [4], 25mm [1]",
+      "notes": "This unit cannot be reinforced."
     },
     {
       "id": "f5ffd3df-0caa-54ce-8608-71deeb447707",
@@ -2056,7 +2167,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 140,
+      "points": 150,
       "modelCount": 10,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2195,7 +2306,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 140,
+      "points": 130,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2333,7 +2444,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 180,
+      "points": 200,
       "modelCount": 5,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -2568,7 +2679,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 120,
+      "points": 100,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2656,7 +2767,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 140,
+      "points": 150,
       "modelCount": 10,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2752,7 +2863,7 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factionTerrainLimit": 1,
       "isLegends": false,
-      "points": 20,
+      "points": null,
       "rules": [
         {
           "name": "Trick of the Light",
@@ -2774,7 +2885,7 @@
       "faction_id": "LUMINETH_REALM_LORDS",
       "factionTerrainLimit": 1,
       "isLegends": false,
-      "points": null,
+      "points": 20,
       "rules": [
         {
           "name": "Strike as One",
@@ -2933,7 +3044,7 @@
               "phaseDetails": "Your Hero Phase",
               "icon": "special",
               "declare": "Pick a friendly **AELEMENTIRI CONCLAVE WIZARD** to cast this spell, pick 1 of the friendly **MANIFESTATIONS** below that is not on the battlefield, then make a casting roll of 2D6.\n\n• **Sanctum of Amyntok**\n• **Hyshian Twinstones**\n• **Rune of Petrification**",
-              "effect": "If there is already a friendly **MANIFESTATION** from the list above on the battlefield, it is immediately banished. Then, set up the **MANIFESTATION** you picked within 1\" of the caster and visible to them. If that **MANIFESTATION** is a **Sanctum of Amyntok**, it must instead be set up wholly within 12\" of the caster, more than 3\" from all enemy units, and with its 3 parts touching each other so that they form a ring.",
+              "effect": "If there is already a friendly **MANIFESTATION** from the list above on the battlefield, it is immediately banished and removed from play. Then, set up the **MANIFESTATION** you picked within 1\" of the caster and visible to them. If that **MANIFESTATION** is a **Sanctum of Amyntok**, it must instead be set up wholly within 12\" of the caster, more than 3\" from all enemy units, and with its 3 parts touching each other so that they form a ring.",
               "keywords": ["Summon", "Spell"],
               "linkedWarscroll": "Hyshian Twinstones"
             }
@@ -2948,6 +3059,7 @@
           "Sevireth, Lord of the Seventh Wind",
           "Shrine Luminor",
           "Alarith Stoneguard",
+          "Thyrielle's Zephyrites",
           "Hurakan Spirit of the Wind",
           "Myari's Purifiers",
           "Hurakan Windchargers",
