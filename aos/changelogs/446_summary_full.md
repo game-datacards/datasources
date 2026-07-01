@@ -1,4 +1,4 @@
-Balance pass across 24 factions with Hedonites of Slaanesh overhaul
+Major Hedonites of Slaanesh overhaul, points updates across 24 factions
 
 **Stormcast Eternals**
 - Celestant-Prime, Hammer of Sigmar: decreased points (250→240)
@@ -15,16 +15,16 @@ Balance pass across 24 factions with Hedonites of Slaanesh overhaul
 - Vanguard-Palladors with Starstrike Javelins: increased points (250→260)
 
 **Cities of Sigmar**
-- Bren Tylis, the Renegade Saint: changed keyword "Human" to "Sigmarite"
-- Brethren of the Bolt: changed keyword "Human" to "Sigmarite"
+- Bren Tylis, the Renegade Saint: gained "Sigmarite" keyword, lost "Human" keyword
+- Brethren of the Bolt: gained "Sigmarite" keyword, lost "Human" keyword
 - Dawners Triumph: updated loadout
-- Drasher Vorn, the Rampaging Beast: changed keyword "Human" to "Sigmarite"
-- Edmark Valoran, the Manticore Knight: changed keyword "Human" to "Sigmarite"
+- Drasher Vorn, the Rampaging Beast: gained "Sigmarite" keyword, lost "Human" keyword
+- Edmark Valoran, the Manticore Knight: gained "Sigmarite" keyword, lost "Human" keyword
 - Erasmus Zonn, the Enlightened One: updated "Realmsphere Mastery" ability
 - Freeguild Gallants: updated "Not One Step Back" ability
-- Hexbane's Hunters: changed keyword "Human" to "Sigmarite"
-- Inara Sion, the Cleansing Blade: changed keyword "Human" to "Sigmarite"
-- Jacobus Vyne, the Jade Wizard: changed keyword "Human" to "Sigmarite"
+- Hexbane's Hunters: gained "Sigmarite" keyword, lost "Human" keyword
+- Inara Sion, the Cleansing Blade: gained "Sigmarite" keyword, lost "Human" keyword
+- Jacobus Vyne, the Jade Wizard: gained "Sigmarite" keyword, lost "Human" keyword
 - Allies of the Free Cities (army of renown): updated roster restrictions
 
 **Daughters of Khaine**
@@ -40,7 +40,7 @@ Balance pass across 24 factions with Hedonites of Slaanesh overhaul
 - Auric Hearthguard: decreased points (110→100)
 - Auric Runefather on Magmadroth: decreased points (330→320)
 - Auric Runemaster: decreased points (180→160)
-- Auric Runesmiter: decreased points (100→90); updated "Magmic Tunnelling" ability
+- Auric Runesmiter: decreased points (100→90), updated "Magmic Tunnelling" ability
 - Auric Runesmiter on Magmadroth: decreased points (300→280)
 - Auric Runeson on Magmadroth: decreased points (250→240)
 - Hearthguard Berzerkers with Berzerker Broadaxes: decreased points (110→100)
@@ -60,7 +60,7 @@ Balance pass across 24 factions with Hedonites of Slaanesh overhaul
 - Vongrim Salvagers: decreased points (120→110)
 
 **Lumineth Realm-lords**
-- Thyrielle's Zephyrites: added warscroll
+- Thyrielle's Zephyrites: added new warscroll
 - Alarith Spirit of the Mountain: decreased points (340→310)
 - Alarith Stonemage: decreased points (130→120)
 - Avalenor, The Stoneheart King: decreased points (420→400)
@@ -121,45 +121,45 @@ Balance pass across 24 factions with Hedonites of Slaanesh overhaul
 - The Changeling: decreased points (170→140)
 - Change-Cult Uprising (army of renown): updated manifestation lore
 - The Oracles of Fate (army of renown): updated manifestation lore
-- Gained access to "Mist-Clad Revellers" and "The Accursed Reflection" regiments of renown
+- Gained access to Mist-Clad Revellers and The Accursed Reflection regiments of renown
 
 **Hedonites of Slaanesh**
-- Lord of Hysteria: added warscroll
-- Thricefold Discord: added warscroll
+- Lord of Hysteria: added new warscroll
+- Thricefold Discord: added new warscroll
 - Bladebringer, Herald on Exalted Chariot: updated "Soulgorgers" ability
-- Blissbarb Archers: decreased points (150→140); "Blissbarb Bow" decreased Range (18"→15"); updated "Blissbrew Homonculus" ability; gained "The Thrill of Combat" ability
-- Blissbarb Seekers: increased Move (12"→14"); gained "Adrenaline Archers" ability; removed "Glory Shots" ability
-- Contorted Epitome: gained "The Mirror's Depths" ability; updated "Swallow Energy" ability; removed "Horrible Fascination" ability
-- Daemonettes: increased points (100→110); "Piercing Claws" gained Anti-INFANTRY (+1 Rend); updated "Lithe and Swift" ability
-- Dexcessa, the Talon of Slaanesh: increased points (160→280); "Impaling Talons" increased Attacks (7→8), gained Charge (+1 Damage); updated "Fleeting Dance of Death", "Redolence of Violence", and "Joyous Battle Fury" abilities; gained "You! Amuse Us!" ability; removed "Scion of Slaanesh" ability; lost "Warmaster" keyword
-- Dreadful Visage: increased Save (6+→5+); "Hooked Tongues" gained Crit (2 Hits); updated "Flensing Tongues" ability
+- Blissbarb Archers: decreased points (150→140), "Blissbarb Bow" decreased Range (18"→15"), updated "Blissbrew Homonculus" ability, gained "The Thrill of Combat" ability
+- Blissbarb Seekers: increased Move (12"→14"), gained "Adrenaline Archers" ability, lost "Glory Shots" ability
+- Contorted Epitome: gained "The Mirror's Depths" ability, updated "Swallow Energy" ability, lost "Horrible Fascination" ability
+- Daemonettes: increased points (100→110), "Piercing Claws" gained Anti-INFANTRY (+1 Rend), updated "Lithe and Swift" ability
+- Dexcessa, the Talon of Slaanesh: increased points (160→280), "Impaling Talons" increased Attacks (7→8) and gained Charge (+1 Damage), updated "Fleeting Dance of Death", "Redolence of Violence", and "Joyous Battle Fury" abilities, gained "You! Amuse Us!" ability, lost "Scion of Slaanesh" ability, lost "Warmaster" keyword
+- Dreadful Visage: changed Save (6+→5+), "Hooked Tongues" gained Crit (2 Hits), updated "Flensing Tongues" ability
 - Fane of Slaanesh: updated "Damned Conduit" ability
-- Fiends: replaced "Deadly Pincers and Barbed Stinger" weapon with "Pincers and Tail Stinger"; gained "Disharmonious Song" and "Arcane Disruption" abilities; removed "Soporific Musk" and "Disruptive Song" abilities
-- Glutos Orscollion, Lord of Gluttony: increased points (440→460); increased Save (4+→3+), decreased Ward (5+→6+); "Leerstave of Loth'shar" reworked (Attacks 1→3, Hit 2+→3+, Wound 2+→3+, Rend —→1, Damage 6→3); replaced "Scourge and Dagger" and "Greatblade and Claws" weapons with "Glutos's Choking Tentacles" and "Kyazu's Greatblade and Mutants' Claws"; updated "Battle Damaged" and "Gorge on Excess" abilities; gained "Paragon of Gluttony" ability; removed "The Grand Gourmand" ability; gained "Paragon" keyword
-- Infernal Enrapturess, Herald of Slaanesh: increased points (90→100); removed "Heartstring Lyre" ranged weapon; "Piercing Claw" increased Attacks (3→5) and Damage (1→2); gained "Maestros of Discordance" and "Spell-Shredding Symphony" abilities; removed "Discordant Disruption" ability
-- Keeper of Secrets: increased points (400→420); "Elegant Greatblade" decreased Attacks (6→5), increased Damage (2→3); updated "Battle Damaged", "Supernatural Grace", "Cacophonic Choir", "Locus of Slaanesh", and "Dark Temptations" abilities
-- Lord of Hubris: increased points (100→110); increased Save (5+→4+), lost Ward (5+); gained "Allow Me To Demonstrate" and "You First, I Insist..." abilities; removed "Only The Best Will Suffice" and "'You First, I Insist...'" abilities
-- Lord of Pain: increased points (110→120); lost Ward (5+); "Soulpiercer Mace" changed Wound (3+→4+), increased Rend (1→2); gained "Atrocious Ministrations" ability; updated "Share The Pain" ability; removed "Disciples In Torment" ability
-- Mesmerising Mirror: updated "Irresistible Lure" ability; removed "Gaze Not Into Its Depths" ability
-- Myrmidesh Painbringers: increased points (100→120); "Wicked Scimitar" changed Wound (3+→4+); gained "False Serenity" and "Dance of the Wailing Blade" abilities; removed "Paragons of Battle" ability
-- Seekers: decreased points (140→130); increased Move (12"→14"); decreased Save (5+→6+); updated "Quicksilver Speed" ability
-- Shalaxi Helbane: decreased points (430→410); decreased Move (14"→12"); updated "Paramount Hunter", "Supernatural Grace", and "Refine Senses" abilities; gained "An Exquisite Trophy" ability; removed "Excess of Violence" ability; gained "Paragon" keyword
-- Shardspeaker of Slaanesh: lost Ward (6+); removed "Shadow-cloaked Claws" weapon; gained "Truths of the Twisted Mirror" and "Bargain with the Mist-Daemons" abilities; removed "Mist Lurkers" and "Twisted Mirror" abilities; updated loadout
-- Sigvald, Prince of Slaanesh: increased points (190→240); "Shardslash" increased Attacks (5→6), gained Crit (2 Hits); gained "Paragon of Vainglory" and "Gaze Upon My Magnificence and Weep" abilities; updated "Shardslash" ability; removed "Powered By Vainglory" and "The Glorious Reborn" abilities; gained "Paragon" keyword
-- Slaangor Fiendbloods: increased points (110→140); increased Move (6"→8"); "Razor-sharp Claws and Gilded Weapons" gained Anti-INFANTRY (+1 Rend); gained "Bestial Onslaught", "Instinctive Advance", and "Veiled Threat" abilities; removed "Slaughter At Any Cost" ability
-- Slickblade Seekers: decreased points (180→170); increased Move (12"→14"); updated "Unrivalled Velocity" ability
-- Syll'Esske, the Vengeful Allegiance: increased points (180→250); increased Ward (6+→5+); gained "Champions of the Gilded Throne", "Unholy Symbiosis", and "Violent Offerings" abilities; removed "Deadly Symbiosis", "The Vengeful Allegiance", and "Subvert" abilities; lost "Sybarite" keyword
-- Symbaresh Twinsouls: decreased points (130→120); increased Save (4+→3+); "Merciless Weapons" decreased Attacks (4→3); gained "Ego-Driven Excess" and "Pah! Unworthy!" abilities; removed "Fiendish Reflexes" and "Ego-driven Excess" abilities
-- Synessa, the Voice of Slaanesh: increased points (190→250); updated "Enthralling Splendour" ability; gained "Whispers of Desire" and "Arcane Seductor" abilities; removed "Voice of Slaanesh", "Whispers of Doubt", and "Progeny of Slaanesh" abilities; lost "Warmaster" keyword
-- The Masque: increased points (110→120); gained "Captive Audience" ability; updated "The Endless Dance" ability; removed "Staff of Masks" ability
-- Wheels of Excruciation: "Rending Wheels" reworked (Attacks 2D6→6, Wound 4+→2+, Rend —→2, gained Charge (+1 Damage)); updated "Exquisite Agony" ability
+- Fiends: replaced "Deadly Pincers and Barbed Stinger" with "Pincers and Tail Stinger", gained "Disharmonious Song" and "Arcane Disruption" abilities, lost "Soporific Musk" and "Disruptive Song" abilities
+- Glutos Orscollion, Lord of Gluttony: increased points (440→460), changed Save (4+→3+), changed Ward (5+→6+), "Leerstave of Loth'shar" increased Attacks (1→3), changed Hit (2+→3+), changed Wound (2+→3+), gained Rend (1), decreased Damage (6→3), replaced "Scourge and Dagger" and "Greatblade and Claws" with "Glutos's Choking Tentacles" and "Kyazu's Greatblade and Mutants' Claws", updated "Battle Damaged" and "Gorge on Excess" abilities, gained "Paragon of Gluttony" ability, lost "The Grand Gourmand" ability, gained "Paragon" keyword
+- Infernal Enrapturess, Herald of Slaanesh: increased points (90→100), removed "Heartstring Lyre" ranged weapon, "Piercing Claw" increased Attacks (3→5) and Damage (1→2), gained "Maestros of Discordance" and "Spell-Shredding Symphony" abilities, lost "Discordant Disruption" ability
+- Keeper of Secrets: increased points (400→420), "Elegant Greatblade" decreased Attacks (6→5) and increased Damage (2→3), updated "Battle Damaged", "Supernatural Grace", "Cacophonic Choir", "Locus of Slaanesh", and "Dark Temptations" abilities
+- Lord of Hubris: increased points (100→110), changed Save (5+→4+), lost Ward (5+), gained "Allow Me To Demonstrate" ability, updated "You First, I Insist..." ability, lost "Only The Best Will Suffice" ability
+- Lord of Pain: increased points (110→120), lost Ward (5+), "Soulpiercer Mace" changed Wound (3+→4+) and increased Rend (1→2), gained "Atrocious Ministrations" ability, updated "Share The Pain" ability, lost "Disciples In Torment" ability
+- Mesmerising Mirror: updated "Irresistible Lure" ability, lost "Gaze Not Into Its Depths" ability
+- Myrmidesh Painbringers: increased points (100→120), "Wicked Scimitar" changed Wound (3+→4+), gained "False Serenity" and "Dance of the Wailing Blade" abilities, lost "Paragons of Battle" ability
+- Seekers: decreased points (140→130), increased Move (12"→14"), changed Save (5+→6+), updated "Quicksilver Speed" ability
+- Shalaxi Helbane: decreased points (430→410), decreased Move (14"→12"), updated "Paramount Hunter", "Supernatural Grace", and "Refine Senses" abilities, gained "An Exquisite Trophy" ability, lost "Excess of Violence" ability, gained "Paragon" keyword
+- Shardspeaker of Slaanesh: lost Ward (6+), removed "Shadow-cloaked Claws" melee weapon, gained "Truths of the Twisted Mirror" and "Bargain with the Mist-Daemons" abilities, lost "Mist Lurkers" and "Twisted Mirror" abilities, updated loadout
+- Sigvald, Prince of Slaanesh: increased points (190→240), "Shardslash" increased Attacks (5→6) and gained Crit (2 Hits), gained "Paragon of Vainglory" and "Gaze Upon My Magnificence and Weep" abilities, updated "Shardslash" ability, lost "Powered By Vainglory" and "The Glorious Reborn" abilities, gained "Paragon" keyword
+- Slaangor Fiendbloods: increased points (110→140), increased Move (6"→8"), "Razor-sharp Claws and Gilded Weapons" gained Anti-INFANTRY (+1 Rend), gained "Bestial Onslaught", "Instinctive Advance", and "Veiled Threat" abilities, lost "Slaughter At Any Cost" ability
+- Slickblade Seekers: decreased points (180→170), increased Move (12"→14"), updated "Unrivalled Velocity" ability
+- Syll'Esske, the Vengeful Allegiance: increased points (180→250), changed Ward (6+→5+), gained "Champions of the Gilded Throne", "Unholy Symbiosis", and "Violent Offerings" abilities, lost "Deadly Symbiosis", "The Vengeful Allegiance", and "Subvert" abilities, lost "Sybarite" keyword
+- Symbaresh Twinsouls: decreased points (130→120), changed Save (4+→3+), "Merciless Weapons" decreased Attacks (4→3), updated "Ego-Driven Excess" ability, gained "Pah! Unworthy!" ability, lost "Fiendish Reflexes" ability
+- Synessa, the Voice of Slaanesh: increased points (190→250), updated "Enthralling Splendour" ability, gained "Whispers of Desire" and "Arcane Seductor" abilities, lost "Voice of Slaanesh", "Whispers of Doubt", and "Progeny of Slaanesh" abilities, lost "Warmaster" keyword
+- The Masque: increased points (110→120), gained "Captive Audience" ability, updated "The Endless Dance" ability, lost "Staff of Masks" ability
+- Wheels of Excruciation: "Rending Wheels" changed Attacks (2D6→6), changed Wound (4+→2+), gained Rend (2), gained Charge (+1 Damage), updated "Exquisite Agony" ability
 - Godseeker Cavalcade (battle formation): added
 - Artisans of Torment (battle formation): added
 - Lurid Dreamers (battle formation): added
+- Depraved Carnival (battle formation): gained "In Search of Sin" rules, lost "The Ecstatic Throngs" rules
 - Epicurean Revellers (battle formation): removed
 - Supreme Sybarites (battle formation): removed
 - Seeker Cavalcade (battle formation): removed
-- Depraved Carnival (battle formation): added "In Search of Sin" rule; removed "The Ecstatic Throngs" rule
 - Court of the Godlings (army of renown): added
 - Decadent Host (army of renown): added
 - Lore of Extravagance (lore): updated spells
@@ -171,27 +171,27 @@ Balance pass across 24 factions with Hedonites of Slaanesh overhaul
 - Gelgus Pust: decreased points (220→200)
 - Great Unclean One: decreased points (400→380)
 - Gutrot Spume: decreased points (120→100)
-- Lord of Plagues: increased points (100→120); updated "Sevenfold Slaughter" ability
+- Lord of Plagues: increased points (100→120), updated "Sevenfold Slaughter" ability
 - Pestigors: increased points (130→140)
 - Pox-Wretches: increased points (100→110)
 - Pusgoyle Blightlords: decreased points (200→190)
-- Rotswords: increased points (200→210); updated "Sweat-Soaked and Reeking" ability
+- Rotswords: increased points (200→210), updated "Sweat-Soaked and Reeking" ability
 - Sloppity Bilepiper, Herald of Nurgle: decreased points (100→90)
-- Gained access to "Mist-Clad Revellers" and "The Accursed Reflection" regiments of renown
+- Gained access to Mist-Clad Revellers and The Accursed Reflection regiments of renown
 
 **Skaven**
 - Brood Terror: decreased points (230→220)
 - Clawlord: updated "Gnash-gnaw On Their Bones!" ability
-- Deathmaster: decreased points (130→120); gained Ward (6+)
+- Deathmaster: decreased points (130→120), gained Ward (6+)
 - Gutter Runners: decreased points (160→150)
 - Skittershank's Clawpack: gained Ward (6+)
 - Stormfiends: decreased points (240→230)
 - Thanquol on Boneripper: decreased points (330→310)
 - Verminlord Corruptor: decreased points (280→260)
 - Verminlord Warbringer: decreased points (280→260)
-- Warp-Grinder: decreased points (120→100); updated "Warp-ambush" ability
+- Warp-Grinder: decreased points (120→100), updated "Warp-ambush" ability
 - Warpfire Throwers: decreased points (130→120)
-- Gained access to "Mist-Clad Revellers" and "The Accursed Reflection" regiments of renown
+- Gained access to Mist-Clad Revellers and The Accursed Reflection regiments of renown
 
 **Slaves to Darkness**
 - Chaos Chosen: decreased points (270→250)
@@ -205,7 +205,7 @@ Balance pass across 24 factions with Hedonites of Slaanesh overhaul
 - Ogroid Myrmidon: increased points (120→150)
 - Varanguard: decreased points (310→300)
 - Despoilers (battle formation): updated "Feral Ruin" rules
-- Gained access to "Mist-Clad Revellers" and "The Accursed Reflection" regiments of renown
+- Gained access to Mist-Clad Revellers and The Accursed Reflection regiments of renown
 
 **Helsmiths of Hashut**
 - Daemonsmith: decreased points (100→80)
@@ -213,7 +213,7 @@ Balance pass across 24 factions with Hedonites of Slaanesh overhaul
 - Dominator Engine with Immolation Cannons: decreased points (170→160)
 - Infernal Cohort with Hashutite Spears: decreased points (100→90)
 - War Despot: decreased points (90→80)
-- Gained access to "Mist-Clad Revellers" and "The Accursed Reflection" regiments of renown
+- Gained access to Mist-Clad Revellers and The Accursed Reflection regiments of renown
 
 **Flesh-eater Courts**
 - Abhorrant Ghoul King: decreased points (120→110)
@@ -240,7 +240,7 @@ Balance pass across 24 factions with Hedonites of Slaanesh overhaul
 
 **Ossiarch Bonereapers**
 - Katakros, Mortarch of the Necropolis: decreased points (500→470)
-- Kavalos War Chariot: decreased points (170→150); updated "Pinning Attacks" ability
+- Kavalos War Chariot: decreased points (170→150), updated "Pinning Attacks" ability
 - Liege-Kavalos on War Chariot: decreased points (230→210)
 - Liege-Mortek: updated "Clinical Efficiency" ability
 - Morghast Archai: decreased points (260→250)
