@@ -1,37 +1,25 @@
-Major Hedonites of Slaanesh overhaul, points updates across 24 factions
+Formatting-only text encoding fixes across 7 factions
 
-**Hedonites of Slaanesh**
-- Lord of Hysteria: added new warscroll
-- Thricefold Discord: added new warscroll
-- Dexcessa, the Talon of Slaanesh: increased points (160→280), reworked weapons and abilities
-- Sigvald, Prince of Slaanesh: increased points (190→240), gained "Paragon" keyword
-- Syll'Esske, the Vengeful Allegiance: increased points (180→250), reworked abilities
-- Synessa, the Voice of Slaanesh: increased points (190→250)
-- Glutos Orscollion, Lord of Gluttony: reworked weapons, gained "Paragon" keyword
-- Shalaxi Helbane: decreased points (430→410), gained "Paragon" keyword
-- Keeper of Secrets: increased points (400→420)
-- Godseeker Cavalcade (battle formation): added
-- Artisans of Torment (battle formation): added
-- Lurid Dreamers (battle formation): added
-- Court of the Godlings (army of renown): added
-- Decadent Host (army of renown): added
-- and 26 other changes
+No gameplay changes detected. All modifications are whitespace and character encoding fixes with no impact on rules or stats.
+
+**Cities of Sigmar**
+- 8 warscrolls: updated ability text formatting (encoding only, no rules changes)
+
+**Daughters of Khaine**
+- Bladewind: updated "Unnatural Edge" text encoding (no rules change)
+- The Croneseer's Pariahs (army of renown): updated "Laden with Prophecy" text encoding (no rules change)
+
+**Idoneth Deepkin**
+- Wardens of the Chorrileum (army of renown): updated spell lore text formatting (no rules change)
 
 **Lumineth Realm-lords**
-- Thyrielle's Zephyrites: added new warscroll
+- 2 warscrolls: updated ability text encoding (no rules changes)
 
-**Flesh-eater Courts**
-- Nagash, Supreme Lord of the Undead: decreased points (830→750)
+**Sylvaneth**
+- Soulpod Guardians (army of renown): updated "Clarionbuds" text formatting (no rules change)
 
-**Nighthaunt**
-- Nagash, Supreme Lord of the Undead: decreased points (840→750)
+**Disciples of Tzeentch**
+- 4 warscrolls: updated ability text formatting (no rules changes)
 
-**Soulblight Gravelords**
-- Nagash, Supreme Lord of the Undead: decreased points (780→750)
-- Legions of Ulfenkarn (battle formation): removed
-
-**Skaven**
-- Deathmaster: decreased points (130→120), gained Ward (6+)
-- Skittershank's Clawpack: gained Ward (6+)
-
-Broad points adjustments across Stormcast Eternals, Fyreslayers, Kharadron Overlords, Gloomspite Gitz (14 warscrolls), and 13 other factions.
+**Hedonites of Slaanesh**
+- 4 warscrolls: updated ability text formatting (no rules changes)
