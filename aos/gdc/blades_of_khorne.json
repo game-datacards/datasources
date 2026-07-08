@@ -8,8 +8,8 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-07-01T13:09:11.509Z",
-  "compatibleDataVersion": 446,
+  "updated": "2026-07-08T09:17:17.384Z",
+  "compatibleDataVersion": 459,
   "warscrolls": [
     {
       "id": "8ad6054a-ef96-59a9-8346-62f67a208685",
@@ -1825,6 +1825,131 @@
       "notes": null
     },
     {
+      "id": "cc94819b-18b8-5d47-a5e5-a4c79b974ba8",
+      "name": "Scourge of Aqshy: Blood Warriors",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "BLADES_OF_KHORNE",
+      "factions": ["Blades of Khorne"],
+      "keywords": ["Champion", "Standard Bearer", "Bloodbound", "Infantry"],
+      "factionKeywords": ["Grand Alliance Chaos", "Blades of Khorne"],
+      "referenceKeywords": "Infantry, Champion, Standard Bearer (1/10), Chaos, Blades of Khorne, Bloodbound",
+      "stats": {
+        "move": "5\"",
+        "save": "3+",
+        "control": "1",
+        "health": "2",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 190,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Goreweapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Blood-hungry", "Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Only The Worthy",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "The following cumulative effects apply depending on the number of models in this unit that are slain.\n\n**1+** Add 1 to charge rolls for this unit.\n**4+** Add 1 to hit rolls for this unit’s combat attacks.\n**8+** Add 1 to wound rolls for this unit’s combat attacks.\n**16+** Double the Attacks characteristic of this unit’s melee weapons and this unit’s combat attacks score critical hits on unmodified hit rolls of 5+."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "32mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
+      "id": "d6fbbf21-d2ad-5b08-803f-bad612629235",
+      "name": "Scourge of Aqshy: Bloodletters",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "BLADES_OF_KHORNE",
+      "factions": ["Blades of Khorne"],
+      "keywords": [
+        "Champion",
+        "Daemon",
+        "Standard Bearer",
+        "Musician",
+        "Infantry",
+        "Ward (6+)"
+      ],
+      "factionKeywords": ["Grand Alliance Chaos", "Blades of Khorne"],
+      "referenceKeywords": "Infantry, Champion, Musician (1/10), Standard Bearer (1/10), Ward (6+), Chaos, Blades of Khorne, Daemon",
+      "stats": {
+        "move": "5\"",
+        "save": "5+",
+        "control": "1",
+        "health": "2",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 150,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Hellblade",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Blood-hungry", "Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Drawn to Slaughter",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You or your opponent declared the 'Eruption of Fury' ability for a unit within 12\" of this unit",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "Return 1 slain model to this unit. If your opponent declared that ‘Eruption of Fury’ ability and the unit using the ability is in combat with this unit, return 3 slain models to this unit instead."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "32mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
       "id": "55aea2a5-63e2-560e-8394-94db89d00519",
       "name": "Scourge of Ghyran Bloodcrushers",
       "subname": null,
@@ -3607,6 +3732,55 @@
   ],
   "lores": [
     {
+      "id": "5db1adad-2cb0-5dd4-9439-512588371ebc",
+      "name": "Proclamations of Murder",
+      "cardType": "Lore",
+      "source": "aos-4e",
+      "faction_id": "BLADES_OF_KHORNE",
+      "restrictionText": null,
+      "spells": [
+        {
+          "id": "04ca1473-189f-5bee-b895-29d367713c7b",
+          "name": "Fetters of Blood",
+          "castingValue": 4,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **BLADES OF KHORNE PRIEST** to chant this prayer, pick a visible enemy unit within 18\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "If the chanting roll was 8+, you can pick another eligible unit to be a second target. Until the start of your next turn:\n• The targets cannot use **RETREAT** or **RUN** abilities.\n• The targets cannot be removed from the battlefield by an ability that would allow them to be set up elsewhere on the battlefield or in reserve.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "e07403ec-3ad6-589f-ae2b-3ec2be229686",
+          "name": "Gift of Apoplexy",
+          "castingValue": 3,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **BLADES OF KHORNE PRIEST** to chant this prayer, pick a visible enemy unit within 18\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "Until the start of your next turn, each time the target uses an ability that is not a **MOVE** or **FIGHT** ability, after that ability has been resolved, inflict D3 mortal damage o the target. If the chanting roll was 8+, inflict 3 mortal damage instead of D3.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "a2ada408-c38d-5228-9d15-c82ee3db82fa",
+          "name": "Stoke The Flames",
+          "castingValue": 3,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "declare": "Pick a friendly **BLADES OF KHORNE PRIEST** to chant this prayer, pick a visible friendly **BLADES OF KHORNE** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "Until the start of your next turn:\n• When resolving the damage sequence for enemy units in combat with the target, your opponent cannot spend **rage dice** as part of the ‘Fight Through the Pain’ ability.\n• If the target is destroyed, you gain 1 **rage dice**. If the chanting roll was 6+, you gain 2 **rage dice** instead.",
+          "keywords": ["Prayer", "Unlimited"],
+          "linkedWarscroll": null
+        }
+      ]
+    },
+    {
       "id": "38b5ae22-6c99-5cb5-9d0f-540d7f90be67",
       "name": "Blood Blesssings of Khorne",
       "cardType": "Lore",
@@ -3846,6 +4020,48 @@
       }
     ],
     "other": [
+      {
+        "id": "b0ffe8af-14fe-52bf-b9a6-e3915c2c01ee",
+        "name": "Brass Flesh",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Unmodified save rolls of 5+ for this unit cannot fail.",
+        "cpCost": null
+      },
+      {
+        "id": "c17131ea-03e6-50c7-bbe8-1623300a74c2",
+        "name": "Blade-Limbs",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "endOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "Each time this unit is picked to use the ‘Eruption of Fury’ ability, for each unmodified hit roll of 6 for the attacks made as part of that ability, inflict an additional 3 mortal damage on each enemy unit in combat with this unit instead of D3.",
+        "cpCost": null
+      },
+      {
+        "id": "7f735695-cb7a-5c75-b62c-d4aa27eb05c9",
+        "name": "Scorpion Tails",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "special",
+        "declare": "Pick an enemy unit in combat with this unit to be the target.",
+        "effect": "• Inflict D3 mortal damage on the target.\n• If the target unit’s starting size was 1, subtract 1 from wound rolls for its combat attacks for the rest of the turn.",
+        "cpCost": null
+      },
       {
         "id": "8d70d9d1-504f-5c8d-abd2-cd2514b444fc",
         "name": "Hatred For All",

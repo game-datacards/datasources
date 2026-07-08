@@ -8,8 +8,8 @@
     "banner": "#1a1a2a",
     "header": "#1a1a2a"
   },
-  "updated": "2026-07-01T13:09:19.790Z",
-  "compatibleDataVersion": 446,
+  "updated": "2026-07-08T09:17:23.533Z",
+  "compatibleDataVersion": 459,
   "warscrolls": [
     {
       "id": "bf7fb407-d0cc-596a-a71e-c234f24424e8",
@@ -2171,6 +2171,173 @@
       "notes": null
     },
     {
+      "id": "13f73569-fe65-5231-b339-4755ac1ecbaa",
+      "name": "Scourge of Aqshy: Mortis Reapers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OSSIARCH_BONEREAPERS",
+      "factions": ["Ossiarch Bonereapers"],
+      "keywords": ["Champion", "Infantry", "Ward (6+)"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Ossiarch Bonereapers",
+        "The Null Myriad"
+      ],
+      "referenceKeywords": "Infantry, Champion, Ward (6+), Death, Ossiarch Bonereapers",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "1",
+        "health": "2",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 90,
+      "modelCount": 5,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Reaper's Blades",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Anti-HERO (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Terminate Their Command",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit is in combat, pick a visible enemy **HERO** within 12\" of this unit to be the target.",
+          "effect": "If the target is more than 3\" from all other enemy units, apply the effect below. Otherwise, roll a dice. On a 3+, apply the effect below.\n\nRemove this unit from the battlefield and set it up again within 1\" of the target."
+        },
+        {
+          "name": "The Coldness of Death",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If an enemy **HERO** was destroyed by this unit’s combat attacks this turn, your opponent must reduce their **fury level** to 0."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "32mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
+      "id": "3dbb2cfd-e413-514c-8d2b-cfafa22af031",
+      "name": "Scourge of Aqshy: Vokmortian, Master of the Bone-tithe",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OSSIARCH_BONEREAPERS",
+      "factions": ["Ossiarch Bonereapers"],
+      "keywords": [
+        "Wizard (2)",
+        "Relentless Discipline",
+        "Unique",
+        "Infantry",
+        "Ward (6+)",
+        "Hero"
+      ],
+      "factionKeywords": ["Grand Alliance Death", "Ossiarch Bonereapers"],
+      "referenceKeywords": "Unique, Hero, Wizard (2), Infantry, Ward (6+), Relentless Discipline (2), Death, Ossiarch Bonereapers",
+      "stats": {
+        "move": "5\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": "6+",
+        "wizard": "2",
+        "priest": null
+      },
+      "points": 180,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Gaze of Death",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "1",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "D6",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Staff of Retribution",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Cowed Into Inaction",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy **HERO** within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, each time an enemy unit within the target’s combat range uses a command, unless your opponent spends 1 **rage dice** to use that command, the command has no effect, it still counts as having been used and the command points spent to use it are lost.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Master of the Bone-Tithe",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Your opponent must pick 1 of the following effects:\n\n***Pay the Tithe:*** Your opponent must pick a unit in their army on the battlefield to be the target. They cannot pick a **MANIFESTATION** Or terrain feature. Then:\n• Inflict D6 mortal damage on the target.\n• Until the start of your next turn, the target cannot be healed, have slain models returned to it or be replaced.\n\n***Deny the Ossiarchs their Rightful Due:*** Pick 1 of the following effects:\n• You gain 4 **relentless discipline** points.\n• Pick an objective you do not control. For the rest of the turn, add 5 to the control scores of friendly **OSSIARCH BONEREAPERS** units while they are contesting that objective.\n• For the rest of the turn, add 2 to the Attacks characteristic and add 6\" to the Range characteristic of this unit's **Gaze of Death**."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "40mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
       "id": "a77356a7-13d6-5e49-9845-a67ec5a0b70b",
       "name": "Scourge of Ghyran Mortek Guard",
       "subname": null,
@@ -3005,6 +3172,7 @@
       ],
       "rosterRestrictions": {
         "unitPool": [
+          "Scourge of Aqshy: Mortis Reapers",
           "Arkhan the Black, Mortarch of Sacrament",
           "Mortek Guard",
           "Morghast Archai",
@@ -3036,6 +3204,10 @@
           {
             "limit": 1,
             "warscrolls": ["Mortek Guard", "Scourge of Ghyran Mortek Guard"]
+          },
+          {
+            "limit": 1,
+            "warscrolls": ["Scourge of Aqshy: Mortis Reapers", "Mortis Reapers"]
           }
         ],
         "rosterOptions": [],
@@ -3197,6 +3369,48 @@
   "enhancements": {
     "artefacts": [
       {
+        "id": "d047a177-df59-5bcf-b4a3-e3b8585c9f04",
+        "name": "Banner of Old Ossia",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: You declared the ‘Rally’ command for a visible **OSSIARCH BONEREAPERS** unit wholly within 12\" of this unit",
+        "icon": "special",
+        "declare": null,
+        "effect": "When resolving that command, you can spend rally points in the following additional ways:\n\n•  For each rally point spent, **Heal (1)** another visible friendly non-**HERO OSSIARCH BONEREAPERS** unit wholly within 12\" of this unit.\n•  You can spend a number of rally points equal to the Health characteristic of that unit to return a slain model to a visible friendly **OSSIARCH BONEREAPERS** unit wholly within 12\" of this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "141c61be-2e24-5469-a846-34ded7ebaf32",
+        "name": "Scarabaean Cloak",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle, Your Movement Phase",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Remove this unit from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+        "cpCost": null
+      },
+      {
+        "id": "32f88dd0-8726-5f08-9f6d-c7968f67870c",
+        "name": "Soulweb Gem",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Battle, End of Any Turn",
+        "icon": "rallying",
+        "declare": "This unit can only use this ability if it was destroyed this turn.",
+        "effect": "Set up a replacement unit identical to this unit on the battlefield wholly within friendly territory and not in combat. Then, allocate a number of damage points to the replacement unit equal to its Health characteristic minus 1 (ward rolls cannot be made for those damage points).",
+        "cpCost": null
+      },
+      {
         "id": "6165cc28-1ed3-5ac5-b6ee-002a2af103fa",
         "name": "Shard of Necris",
         "cardType": "Enhancement",
@@ -3284,6 +3498,48 @@
       }
     ],
     "other": [
+      {
+        "id": "7064f66d-f206-56fe-bf31-c5ada3f0b98e",
+        "name": "Perpetually Empowered Weapons",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "This unit’s melee weapons, including **Companion** weapons, have **Crit (2 Hits)**.",
+        "cpCost": null
+      },
+      {
+        "id": "7c491993-2268-5fbd-a3cb-a35d3b78cd6e",
+        "name": "Elongated Tibias",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "chargePhase",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Add 1 to charge rolls for this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "d17565e3-ebb3-5ca1-a44c-1fd7baa88a50",
+        "name": "Utterly Unquestioning",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "Each time this unit uses a **RELENTLESS DISCIPLINE** ability, roll a dice as a reaction. On a 5+, subtract 1 from the number of **relentless discipline** points that must be spent to use that ability.",
+        "cpCost": null
+      },
       {
         "id": "bebef94f-b7ea-58e2-a86a-61fbc4ef2b3d",
         "name": "Collect the Tithe",

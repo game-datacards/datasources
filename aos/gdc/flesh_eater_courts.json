@@ -8,8 +8,8 @@
     "banner": "#1a1a2a",
     "header": "#1a1a2a"
   },
-  "updated": "2026-07-01T13:09:18.130Z",
-  "compatibleDataVersion": 446,
+  "updated": "2026-07-08T09:17:22.308Z",
+  "compatibleDataVersion": 459,
   "warscrolls": [
     {
       "id": "fc1d79c2-e79b-5b70-87b1-f578f4337f14",
@@ -2369,6 +2369,168 @@
       "notes": null
     },
     {
+      "id": "5e5b3f9d-f274-52de-a043-6585992d2aaa",
+      "name": "Scourge of Aqshy: Royal Decapitator",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "FLESH_EATER_COURTS",
+      "factions": ["Flesh-eater Courts"],
+      "keywords": ["Noble", "Royal Attendant", "Infantry", "Ward (6+)", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Flesh-eater Courts",
+        "The Equinox Feast",
+        "The Knights of New Summercourt"
+      ],
+      "referenceKeywords": "Hero, Infantry, Ward (6+), Death, Flesh-eater Courts, Noble",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "5",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 100,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Headsman’s Axe",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Heads on Pikes",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If any damage points were allocated to an enemy **HERO** by this unit’s combat attacks this turn and that enemy **HERO** has been destroyed, pick an objective or terrain feature within 6\" of this unit to be the target.",
+          "effect": "Spend 1 **rage dice**. If your opponent’s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, for the rest of the turn, subtract 5 from the control scores of enemy units while they are contesting the target objective or terrain feature."
+        },
+        {
+          "name": "Executioner and Enforcer",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick another friendly **FLESH-EATER COURTS INFANTRY** unit within this unit’s combat range to be the target.",
+          "effect": "1 model in the target unit is automatically slain. Then, until the start of your next turn, ignore the first damage point that would be allocated to each visible friendly **FLESH-EATER COURTS** unit in each phase while it is wholly within 12\" of this unit."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "32mm",
+      "notes": "This HERO can join an eligible regiment as a Royal Attendant.\n\nThis unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
+      "id": "f8bf2ff7-0818-5740-b33a-f1c889fb9477",
+      "name": "Scourge of Aqshy: Varghulf Courtier",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "FLESH_EATER_COURTS",
+      "factions": ["Flesh-eater Courts"],
+      "keywords": ["Beast", "Ward (6+)"],
+      "factionKeywords": [
+        "Grand Alliance Death",
+        "Flesh-eater Courts",
+        "The Knights of New Summercourt"
+      ],
+      "referenceKeywords": "Beast, Ward (6+), Death, Flesh-eater Courts",
+      "stats": {
+        "move": "10\"",
+        "save": "5+",
+        "control": "1",
+        "health": "8",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 110,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Dagger-like Fangs",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+          },
+          {
+            "name": "Immense Claws",
+            "type": "melee",
+            "range": null,
+            "attacks": "7",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Beast",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit has a maximum control score of 1."
+        },
+        {
+          "name": "The Howling Saint",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **FLESH-EATER COURTS PRIEST** wholly within 18\" of this unit to be the target.",
+          "effect": "The next time the target uses a **PRAYER** ability this phase:\n\n• When picking targets for that prayer, you can measure range and visibility from this unit instead of from the chanter.\n• Add 1 to the chanting roll for that prayer."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "90 × 52mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
       "id": "af479088-6be9-5f80-ad24-a46a0a311530",
       "name": "Scourge of Ghyran Abhorrant Ghoul King",
       "subname": null,
@@ -3203,6 +3365,7 @@
           "Abhorrant Ghoul King",
           "Royal Beastflayers",
           "Crypt Ghouls",
+          "Scourge of Aqshy: Royal Decapitator",
           "The Grymwatch",
           "Charnel Throne"
         ],
@@ -3409,17 +3572,34 @@
           "Morbheg Knights",
           "Ushoran, Mortarch of Delusion",
           "Crypt Horrors (2 models)",
+          "Scourge of Aqshy: Varghulf Courtier",
           "Abhorrant Cardinal",
           "Royal Decapitator",
           "Scourge of Ghyran Abhorrant Gorewarden",
           "Abhorrant Archregent",
           "Marrowscroll Herald",
           "Abhorrant Gorewarden",
-          "Abhorrant Ghoul King"
+          "Abhorrant Ghoul King",
+          "Scourge of Aqshy: Royal Decapitator"
         ],
         "requiredWarscrolls": ["Ushoran, Mortarch of Delusion"],
         "requiredGeneralWarscrolls": [],
-        "restrictionGroups": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Varghulf Courtier",
+              "Scourge of Aqshy: Varghulf Courtier"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Royal Decapitator",
+              "Scourge of Aqshy: Royal Decapitator"
+            ]
+          }
+        ],
         "rosterOptions": [],
         "regimentRestrictions": []
       }
@@ -3579,6 +3759,48 @@
   "enhancements": {
     "artefacts": [
       {
+        "id": "5d80b46b-e2f6-598b-8875-1a9f9a91eabe",
+        "name": "Fool's Cap",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Any Movement Phase",
+        "icon": "special",
+        "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+        "effect": "Spend 1 **rage dice**. If your opponent’s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.\n\nThen, for the rest of the turn:\n• Add 1 to charge rolls for the target.\n• Each time the target uses a **CHARGE** ability, if possible, it must end the charge move within 1/2\" of this unit.\n• While the target is in combat with this unit, subtract 1 from hit rolls for the target’s combat attacks that do not target this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "f2146ef7-1863-53ee-a2a3-92a7009935be",
+        "name": "Flayed Flags",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "special",
+        "declare": "Pick an objective you do not control within 18\" of this unit to be the target.",
+        "effect": "Until the start of your next turn, when resolving the damage sequence for enemy units contesting the target objective, your opponent cannot spend **rage dice** as part of the ‘Fight Through the Pain’ ability.",
+        "cpCost": null
+      },
+      {
+        "id": "095780a4-9068-5234-9ba2-bb4f567675d3",
+        "name": "Ring of Nightmarish Visions",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick an enemy unit in combat with this unit to be the target.",
+        "effect": "Roll a number of dice equal to your **fury level**. Add 1 to each roll if this unit charged this turn. For each 4+, inflict 1 mortal damage on the target.",
+        "cpCost": null
+      },
+      {
         "id": "b485ab80-b8c1-5f09-944b-50f79b143697",
         "name": "Charnel Vestments",
         "cardType": "Enhancement",
@@ -3666,6 +3888,48 @@
       }
     ],
     "other": [
+      {
+        "id": "ef5265b1-2af0-5657-be9d-72abdd7e7762",
+        "name": "Homage and Fealty",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "defensive",
+        "declare": "If this unit is a **KNIGHT**, pick a friendly **SERF** unit wholly within 12\" of it to be the target. If this unit is a **SERF**, pick a friendly **KNIGHT** unit wholly within 12\" of it to be the target.",
+        "effect": "For the rest of the battle, add 1 to save rolls for this unit and the target while they are within 3\" of and visible to each other.",
+        "cpCost": null
+      },
+      {
+        "id": "2cc0f576-cc62-55d1-b98f-40b50befb421",
+        "name": "Defenders of Chivalry",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "While your **fury level** is 7, add 1 to the Rend characteristic of this unit’s melee weapons.",
+        "cpCost": null
+      },
+      {
+        "id": "f1b1ac3b-fb83-56d4-a2ec-d517e9d70358",
+        "name": "Loyal Squires",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "chargePhase",
+        "phaseDetails": "Any Charge Phase",
+        "icon": "offensive",
+        "declare": "Pick an enemy unit in combat with a friendly **Varghulf Courtier** to be the target.",
+        "effect": "For the rest of the phase:\n• Add 2 to charge rolls for this unit.\n• If this unit uses a **CHARGE** ability, it must end the charge move in combat with the target.",
+        "cpCost": null
+      },
       {
         "id": "cc348e13-90e6-50f3-89b1-fd94cea104fa",
         "name": "Horribly Resilient",

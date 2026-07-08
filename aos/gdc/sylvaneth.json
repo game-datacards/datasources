@@ -8,8 +8,8 @@
     "banner": "#0f2b38",
     "header": "#0f2b38"
   },
-  "updated": "2026-07-05T12:25:03.923Z",
-  "compatibleDataVersion": 446,
+  "updated": "2026-07-08T09:17:16.785Z",
+  "compatibleDataVersion": 459,
   "warscrolls": [
     {
       "id": "a6123b35-79ce-55c3-b385-b42531c5c0fc",
@@ -1387,6 +1387,195 @@
       "loadout": null,
       "baseSize": "60mm",
       "notes": null
+    },
+    {
+      "id": "a3d9491b-9a9c-54cc-b06a-05aaa4c4c1e4",
+      "name": "Scourge of Aqshy: Kurnoth Hunters with Greatswords",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Champion", "Kurnothi", "Infantry"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "The Evergreen Hunt",
+        "Lords of the Clan"
+      ],
+      "referenceKeywords": "Infantry, Champion, Order, Sylvaneth, Kurnothi",
+      "stats": {
+        "move": "6\"",
+        "save": "4+",
+        "control": "2",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 240,
+      "modelCount": 3,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Kurnoth Greatsword",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Hunter's Endurance",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Subtract 1 from the Rend characteristic of weapons used for attacks that target this unit while it is wholly within the **creeping overgrowth**."
+        },
+        {
+          "name": "Vital Rangers",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Your Turn",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit is not in combat, it can move a distance up to its Move characteristic. It must end that move within the **creeping overgrowth** and not in combat.",
+          "keywords": ["Move"]
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "50mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
+      "id": "ab2e5334-7c1b-504b-a930-a2570c1df782",
+      "name": "Scourge of Aqshy: Treelord Ancient",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SYLVANETH",
+      "factions": ["Sylvaneth"],
+      "keywords": ["Monster", "Wizard (2)", "Forest Elder", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Order",
+        "Sylvaneth",
+        "Lords of the Clan"
+      ],
+      "referenceKeywords": "Hero, Monster, Wizard (2), Order, Sylvaneth, Forest Elder",
+      "stats": {
+        "move": "6\"",
+        "save": "3+",
+        "control": "5",
+        "health": "14",
+        "ward": null,
+        "wizard": "2",
+        "priest": null
+      },
+      "points": 290,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Doom Tendril Staff",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Massive Impaling Talons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Crit (Mortal)"]
+          },
+          {
+            "name": "Sweeping Blows",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Anti-charge (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Sweeping Blows** is 3."
+        },
+        {
+          "name": "Jade Abjuration",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick this unit or a visible friendly **Awakened Wyldwood** wholly within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn:\n\n•  Ignore the effects of enemy **SPELL** abilities on units (friendly and enemy) while they are within 6\" of the target.\n•  Weapons used by enemy **MANIFESTATIONS** have a maximum Attacks characteristic of 1 while they are within 6\" of the target",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "Arcane Osmosis",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "For the rest of the turn:\n\n• Each time you make a casting roll for this unit, add D3 to the roll.\n•  This unit cannot move or be removed from the battlefield by an ability that would allow it to be set up elsewhere on the battlefield or in reserve.&#x20;"
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "105 x 70mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
     },
     {
       "id": "41eab626-8ebb-5dae-84e6-0d3711753778",
@@ -3031,18 +3220,35 @@
         "unitPool": [
           "Treelord Ancient",
           "Spirit of Durthu",
+          "Scourge of Aqshy: Treelord Ancient",
           "Skaeth's Wild Hunt",
           "Treelord",
           "The Lady of Vines",
           "Kurnoth Hunters with Greatswords",
           "Grove Guardian",
           "Awakened Wyldwood",
+          "Scourge of Aqshy: Kurnoth Hunters with Greatswords",
           "Kurnoth Hunters with Greatscythes",
           "Kurnoth Hunters with Greatbows"
         ],
         "requiredWarscrolls": [],
         "requiredGeneralWarscrolls": [],
-        "restrictionGroups": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Treelord Ancient",
+              "Scourge of Aqshy: Treelord Ancient"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Kurnoth Hunters with Greatswords",
+              "Scourge of Aqshy: Kurnoth Hunters with Greatswords"
+            ]
+          }
+        ],
         "rosterOptions": [],
         "regimentRestrictions": []
       }
@@ -3336,6 +3542,7 @@
           "Kurnoth Hunters with Greatswords",
           "Awakened Wyldwood",
           "Scourge of Ghyran Revenant Seekers",
+          "Scourge of Aqshy: Kurnoth Hunters with Greatswords",
           "Spiterider Lancers",
           "Belthanos, First Thorn of Kurnoth",
           "Revenant Seekers",
@@ -3351,6 +3558,13 @@
             "warscrolls": [
               "Scourge of Ghyran Revenant Seekers",
               "Revenant Seekers"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Kurnoth Hunters with Greatswords",
+              "Scourge of Aqshy: Kurnoth Hunters with Greatswords"
             ]
           }
         ],
@@ -3596,6 +3810,48 @@
         "declare": null,
         "effect": "While they are wholly within 12\" of this unit, friendly **Awakened Wyldwoods** have **WARD (5+).**",
         "cpCost": null
+      },
+      {
+        "id": "491d9161-3c9d-569d-b7ec-970fe002832a",
+        "name": "Dancing Mystflies",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: Opponent declared a **SPELL** ability for an unit within 30\" of this unit",
+        "icon": "special",
+        "declare": null,
+        "effect": "• If this unit is not a **WIZARD**, it can use the\n'Unbind' ability as if it had **WIZARD (1)**.\nOtherwise, it can use the 'Unbind' ability an additional time each phase.\n\n• If this unit successfully unbinds the spell being reacted to and the caster is within the **creeping overgrowth**, inflict an amount of mortal damage on the caster equal to the difference between the casting roll and the unbinding roll, to a maximum of 6.",
+        "cpCost": null
+      },
+      {
+        "id": "a205102f-8e96-55d5-b497-d0c1ac844e9d",
+        "name": "Glamourweave",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "Each phase, you can re-roll 1 hit roll, 1 wound roll and 1 save roll for this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "79aa5496-cfc6-5349-a57c-44e475b97289",
+        "name": "Amulet of Resonance",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "endOfTurn",
+        "phaseDetails": "End of Any Turn",
+        "icon": "special",
+        "declare": null,
+        "effect": "If this unit used the ‘Eruption of Fury’ ability this turn or you spent **rage dice** as part of the ‘Fight Through the Pain’ ability when resolving the damage sequence for this unit this turn, give 1 ritual point to each visible friendly **SYLVANETH PRIEST** wholly within 12\" of this unit.",
+        "cpCost": null
       }
     ],
     "heroicTraits": [
@@ -3643,6 +3899,48 @@
       }
     ],
     "other": [
+      {
+        "id": "1f8a0307-75a5-5274-9387-7035c9277545",
+        "name": "Aspect of Harvestboon",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "movementPhase",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Add 2\" to this unit’s Move characteristic while it is wholly within the **creeping overgrowth.**",
+        "cpCost": null
+      },
+      {
+        "id": "1f0f0db2-dcdd-5a26-84a9-d70972f63f62",
+        "name": "Aspect of Ironbark",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "When resolving the damage sequence for this unit, if you spend **rage dice** as part of the ‘Fight Through the Pain’ ability, you can re-roll any of the dice that determine whether damage points are removed from this unit’s damage pool.\n\nAfter the damage sequence has been resolved, if you rolled a total of 10+ on those re-rolls, this ability has no effect for the rest of the battle",
+        "cpCost": null
+      },
+      {
+        "id": "1cbf19a2-d3d3-51ac-9872-90a45a1585ac",
+        "name": "Aspect of Heartwood",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Battle, Reaction: You declared the ‘Endless Growth’ ability",
+        "icon": "special",
+        "declare": null,
+        "effect": "If this unit is wholly within the **creeping overgrowth**, for each target of that ability that is wholly within 12\" of this unit, you can pick 1 of the following effects:\n\n•  When resolving that ability, roll a D6 for the target instead of a D3. If, as a result of another ability, you would **Heal (3)** the target instead of rolling a dice, **Heal (6)** the target instead.\n•  If the target is **KURNOTHI**, instead of rolling a D3 and picking 1 of the effects of that ability to apply to it, you can return 1 slain model to the target unit.",
+        "cpCost": null
+      },
       {
         "id": "01e5601a-6289-505e-9097-3c65b04e3bf8",
         "name": "Ominous Fog",

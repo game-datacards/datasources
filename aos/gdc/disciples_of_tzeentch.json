@@ -8,8 +8,8 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-07-05T12:25:05.148Z",
-  "compatibleDataVersion": 446,
+  "updated": "2026-07-08T09:17:18.000Z",
+  "compatibleDataVersion": 459,
   "warscrolls": [
     {
       "id": "93b38365-2781-5078-9be9-f5e8c3b2de09",
@@ -2325,6 +2325,177 @@
       "notes": null
     },
     {
+      "id": "63e0c9a1-e610-55f8-9fd7-84c5e8c0f381",
+      "name": "Scourge of Aqshy: Ogroid Thaumaturge",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "DISCIPLES_OF_TZEENTCH",
+      "factions": ["Disciples of Tzeentch"],
+      "keywords": [
+        "Wizard (1)",
+        "Arcanite Cabalist",
+        "Infantry",
+        "Ward (6+)",
+        "Arcanite",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Disciples of Tzeentch",
+        "Change-Cult Uprising"
+      ],
+      "referenceKeywords": "Hero, Wizard (1), Infantry, Ward (6+), Chaos, Disciples of Tzeentch, Arcanite",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "8",
+        "ward": "6+",
+        "wizard": "1",
+        "priest": null
+      },
+      "points": 210,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Thaumaturge Staff",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "3",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "D3",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Great Horns and Cloven Hooves",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Wrath of the Thaumaturge",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit is not in combat, pick a friendly **ARCANITE** unit in combat to be the target.",
+          "effect": "Remove this unit from the battlefield and set it up again within 1\" of the target and in combat. This unit has charged.",
+          "keywords": ["Core", "Charge"]
+        },
+        {
+          "name": "Soul-Deep Devotion",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit is within a friendly non‐**HERO ARCANITE** unit’s combat range:\n\n• This unit has **WARD (4+)**.\n• Each time you make a successful ward roll for this unit, allocate 1 damage point to a friendly non-**HERO ARCANITE** unit within this unit’s combat range after the damage sequence for this unit has been resolved (ward rolls cannot be made for those damage points)."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "50mm",
+      "notes": "This HERO can join an eligible regiment as an Arcanite Cabalist.\n\nThis unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
+      "id": "de2a92c9-4845-5c04-969d-af9c7b48a91a",
+      "name": "Scourge of Aqshy: Screamers of Tzeentch",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "DISCIPLES_OF_TZEENTCH",
+      "factions": ["Disciples of Tzeentch"],
+      "keywords": ["Daemon", "Beast", "Ward (6+)", "Fly"],
+      "factionKeywords": [
+        "Grand Alliance Chaos",
+        "Disciples of Tzeentch",
+        "The Oracles of Fate"
+      ],
+      "referenceKeywords": "Beast, Fly, Ward (6+), Chaos, Disciples of Tzeentch, Daemon",
+      "stats": {
+        "move": "14\"",
+        "save": "5+",
+        "control": "1",
+        "health": "3",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 110,
+      "modelCount": 3,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Lamprey Bite",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Beast",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit has a maximum control score of 1."
+        },
+        {
+          "name": "Imperilling Slashes",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
+          "effect": "Subtract 1 from save rolls for the target for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "32mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
       "id": "1e5a4770-d941-5ac9-9878-385ba3f66aeb",
       "name": "Scourge of Ghyran Kairic Acolytes",
       "subname": null,
@@ -3479,6 +3650,7 @@
       "rosterRestrictions": {
         "unitPool": [
           "Magister on Disc of Tzeentch",
+          "Scourge of Aqshy: Ogroid Thaumaturge",
           "Scourge of Ghyran Kairic Acolytes",
           "Fatemaster",
           "Curseling, Eye of Tzeentch",
@@ -3498,6 +3670,13 @@
             "limit": 1,
             "warscrolls": [
               "Scourge of Ghyran Ogroid Thaumaturge",
+              "Ogroid Thaumaturge"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Aqshy: Ogroid Thaumaturge",
               "Ogroid Thaumaturge"
             ]
           },
@@ -3636,6 +3815,7 @@
           "Exalted Flamer of Tzeentch",
           "The Changeling",
           "Lord of Change",
+          "Scourge of Aqshy: Screamers of Tzeentch",
           "Screamers of Tzeentch",
           "Ephilim's Pandaemonium",
           "Burning Chariot of Tzeentch",
@@ -3646,7 +3826,15 @@
         ],
         "requiredWarscrolls": [],
         "requiredGeneralWarscrolls": [],
-        "restrictionGroups": [],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Aqshy: Screamers of Tzeentch",
+              "Screamers of Tzeentch"
+            ]
+          }
+        ],
         "rosterOptions": [],
         "regimentRestrictions": []
       }
@@ -3888,6 +4076,48 @@
         "declare": "This unit can use this ability if any enemy **MANIFESTATIONS** were banished this phase.",
         "effect": "This unit can use a **SUMMON** ability from the manifestation lore you picked during army composition. That **SUMMON** ability does not count towards the total number of **SPELL** or **BANISH** abilities this unit can use this phase.",
         "cpCost": null
+      },
+      {
+        "id": "d283a7e3-90c4-5c59-9954-e7e4f315f037",
+        "name": "Tome of Scorched Insight",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: You declared a non-SUMMON SPELL ability for this unit",
+        "icon": "special",
+        "declare": null,
+        "effect": "Change the casting roll for that spell to a value of 12 that cannot be modified. That spell cannot be unbound and this unit cannot use that **SPELL** ability again for the rest of the battle.",
+        "cpCost": null
+      },
+      {
+        "id": "2f6f98fe-cd8c-5a9b-8b1f-a96155df0df7",
+        "name": "The Five Verses of Volarian",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "This unit has a Move characteristic of 14\" and has **FLY**.",
+        "cpCost": null
+      },
+      {
+        "id": "15b3d0c6-30e2-5a11-b820-a747ee7ab1fa",
+        "name": "The Searing Eye",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: You declared a SPELL ability for a DISCIPLES OF TZEENTCH unit wholly within 12\" of this unit&#x20;",
+        "icon": "special",
+        "declare": null,
+        "effect": "Spend 1 **rage dice**. If your opponent’s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.\n\nThen, roll a dice. If the roll is the same as any of the dice in the casting roll, that spell is miscast. Otherwise, add the roll to the casting roll.",
+        "cpCost": null
       }
     ],
     "heroicTraits": [
@@ -3935,6 +4165,48 @@
       }
     ],
     "other": [
+      {
+        "id": "6b972f3d-4824-5af2-a46b-e10e2cf7a81d",
+        "name": "Vision of Defiant Supremacy",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle, Any Hero Phase",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "If you won the priority roll this battle round and chose for your opponent to take the first turn or if your opponent seized the initiative this battle round, this unit has **STRIKE-FIRST** for the rest of the turn.",
+        "cpCost": null
+      },
+      {
+        "id": "796ea880-8dba-551a-991b-d0fc55cdab69",
+        "name": "Vision of Destined Conquest",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 30,
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle, Start of Your Turn",
+        "icon": "special",
+        "declare": null,
+        "effect": "If this unit is contesting an objective that you control that is wholly outside friendly territory:\n\n• If you are the **underdog**, gain 1 **fate point** for each command point you have.\n• If you are not the **underdog**, roll a dice for each command point you have. For each 3+, gain 1 **fate point**.",
+        "cpCost": null
+      },
+      {
+        "id": "8cfdd57a-963b-5bf9-b4e8-9487ab9a0935",
+        "name": "Vision of Arcane Sacrifice",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "heroPhase",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "While units (friendly or enemy) are within 6\" of this unit:\n\n• Add 1 to unbinding rolls for those units.\n• Spells cast by those units are miscast on an unmodified casting roll of 4 or less.\n\nThe first time this unit is destroyed, gain D6 **fate points**.",
+        "cpCost": null
+      },
       {
         "id": "aeaddef3-b691-5c9a-94f9-589ae5998eda",
         "name": "Splinters of Sorcery",

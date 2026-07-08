@@ -8,8 +8,8 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-07-01T13:09:14.852Z",
-  "compatibleDataVersion": 446,
+  "updated": "2026-07-08T09:17:19.858Z",
+  "compatibleDataVersion": 459,
   "warscrolls": [
     {
       "id": "7f64eeb5-7422-591c-9c4b-71b56122e7f9",
@@ -2516,6 +2516,226 @@
       "loadout": null,
       "baseSize": "105 x 70mm",
       "notes": "You cannot include more than 1 SKRYRE WAR MACHINE in a regiment led by a non-SKRYRE HERO."
+    },
+    {
+      "id": "06870ec2-173f-59c0-a752-ad9711a43095",
+      "name": "Scourge of Aqshy: Grey Seer on Screaming Bell",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SKAVEN",
+      "factions": ["Skaven"],
+      "keywords": [
+        "Ward (5+)",
+        "War Machine",
+        "Wizard (2)",
+        "Masterclan",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Skaven",
+        "Grand Alliance Chaos",
+        "The Great-Grand Gnawhorde"
+      ],
+      "referenceKeywords": "Hero, War Machine, Wizard (2), Ward (5+), Chaos, Skaven, Masterclan",
+      "stats": {
+        "move": "6\"",
+        "save": "4+",
+        "control": "5",
+        "health": "15",
+        "ward": "5+",
+        "wizard": "2",
+        "priest": null
+      },
+      "points": 330,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Warpstone Staff",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "4+",
+            "rend": "1",
+            "damage": "D3",
+            "abilities": []
+          },
+          {
+            "name": "Rat Ogor’s Tearing Claws",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          },
+          {
+            "name": "Crushing Bulk",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Companion", "Charge (+1 Damage)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Crushing Bulk** is 4."
+        },
+        {
+          "name": "Echoes of the Vermindoom",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick up to 3 visible friendly **SKAVEN** units wholly within 13\" of this unit to be the targets.",
+          "effect": "**Heal (D3)** each target."
+        },
+        {
+          "name": "Pealing Portal",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 6,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, this unit counts as a friendly **Gnawhole** for the purposes of the ‘Gnawhole Ambush’, ‘Tunnels Through Reality’ and ‘The Endless Vermintide’ abilities.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "The Bell Tolls",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If the current battle round number is odd, add 2\" to the Move characteristic of friendly **SKAVEN** units while they are wholly within 13\" of this unit. If the current battle round number is even, subtract 1 from hit rolls for attacks made by enemy units that target a friendly **SKAVEN** unit while it is wholly within 13\" of this unit."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "120 x 92mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
+      "id": "6214c55a-eb4c-5555-b0f8-35211eb95d05",
+      "name": "Scourge of Aqshy: Verminlord Corruptor",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SKAVEN",
+      "factions": ["Skaven"],
+      "keywords": [
+        "Daemon",
+        "Ward (5+)",
+        "Pestilens",
+        "Priest (1)",
+        "Monster",
+        "Hero"
+      ],
+      "factionKeywords": ["Grand Alliance Chaos", "Skaven"],
+      "referenceKeywords": "Hero, Monster, Priest (1), Ward (5+), Chaos, Skaven, Daemon, Pestilens",
+      "stats": {
+        "move": "10\"",
+        "save": "4+",
+        "control": "5",
+        "health": "13",
+        "ward": "5+",
+        "wizard": null,
+        "priest": "1"
+      },
+      "points": 310,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Plague Breath",
+            "type": "ranged",
+            "range": "10\"",
+            "attacks": "6",
+            "hit": "2+",
+            "wound": "4+",
+            "rend": "2",
+            "damage": "1",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Plaguereapers",
+            "type": "melee",
+            "range": null,
+            "attacks": "8",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Seething Blight",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Spend 1 **rage dice**. If your opponent’s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7. Then, pick a visible unit (friendly or enemy) wholly within 13\" of this unit to be the target.",
+          "effect": "For the rest of the battle:\n\n• Add 1 to the Attacks characteristic of the target’s melee weapons.\n\n• If an ability would heal or return any slain models to the target unit, that ability does not heal any damage points or return any slain models to it.\n\n• If the target is replaced and the replacement unit has 1 model, allocate damage points to that replacement unit equal to half **X** (rounding up), where **X** is its Health characteristic minus the number of damage points allocated to it (if any).\n\n• If the target is replaced and the replacement unit has more than 1 model, half the models in that replacement unit (rounding up) are automatically slain.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Foetid Features",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Pick 1 of the following effects to apply for the rest of the battle:\n\n***Noisome Halitosis***: Add 1 to the Damage characteristic of this unit’s **Plague Breath**.\n\n***Pestilential Seepage***: While this unit is damaged, you can re-roll chanting rolls for friendly **PESTILENS PRIESTS** while they are wholly within 13\" of this unit.\n\n***Curdled Miasma***: While they are within 6\" of this unit, enemy units are not visible to other enemy units more than 3\" from them."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "120 x 92mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
     },
     {
       "id": "e4d98f27-63cb-581f-bb21-6dad1093e1dd",
@@ -5246,7 +5466,8 @@
           "Stormfiends",
           "Warlock Galvaneer",
           "Vizzik Skour, Prophet of the Horned Rat",
-          "Warpfire Throwers"
+          "Warpfire Throwers",
+          "Scourge of Aqshy: Grey Seer on Screaming Bell"
         ],
         "requiredWarscrolls": [],
         "requiredGeneralWarscrolls": [],
@@ -5254,6 +5475,13 @@
           {
             "limit": 1,
             "warscrolls": ["Brood Terror", "Scourge of Ghyran Brood Terror"]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Grey Seer on Screaming Bell",
+              "Scourge of Aqshy: Grey Seer on Screaming Bell"
+            ]
           },
           {
             "limit": 1,
@@ -5548,9 +5776,93 @@
         "declare": null,
         "effect": "You can re-roll the random characteristic rolls for the Move characteristic of friendly **SKRYRE WAR MACHINES** while they are wholly within 13\" of this unit. In addition, each time a friendly **SKRYRE WAR MACHINE** wholly within 18\" of this unit uses the ‘Rolling Doom’ or ‘Whirling Doom’ ability, add 1 to the amount of mortal damage inflicted, if any.",
         "cpCost": null
+      },
+      {
+        "id": "57d66ccd-2fb9-50ae-9f74-3cfac18ac795",
+        "name": "Masterclan Connections",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Reaction: You declared a **SPELL** or **UNBIND** ability for a visible **SKAVEN** unit wholly within 13\" of this unit",
+        "icon": "special",
+        "declare": null,
+        "effect": "Add D3 to that casting roll or unbinding roll.",
+        "cpCost": null
+      },
+      {
+        "id": "4586f373-c049-56a7-bce0-ede776f59714",
+        "name": "Master of the Swarm",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "rallying",
+        "declare": null,
+        "effect": "Each time an ability returns 1 or more slain models to a friendly **SKAVEN** unit wholly within 13\" of this unit, after that ability has been resolved, you can return 1 additional slain model to it.",
+        "cpCost": null
+      },
+      {
+        "id": "f0035271-3d89-5a6a-a3dd-03932fd3a5ff",
+        "name": "Essence of the Gnaw",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick another visible **SKAVEN** unit wholly within 13\" of this unit and in combat to be the target.",
+        "effect": "For the rest of the turn, this unit has **STRIKE-FIRST** and the target has **STRIKE-LAST**.",
+        "cpCost": null
       }
     ],
     "other": [
+      {
+        "id": "31864ecb-e673-57be-9e93-7ddfec0a0c10",
+        "name": "Transplanted Brains",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "Pick 1 of the following brains. Its effects apply for the rest of the turn:\n\n***Warpstone Addict’s Brain***:\n• Add 1 to hit rolls for this unit’s combat attacks.\n• This unit has a maximum control score of 1.\n\n***Warlock Whelp’s Brain***: Add 10 to this unit’s control score.",
+        "cpCost": null
+      },
+      {
+        "id": "bbcc5fc2-a041-51b4-8f00-bb2922ebaaf9",
+        "name": "Anabolic Accelerators",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "chargePhase",
+        "phaseDetails": "Your Charge Phase",
+        "icon": "movement",
+        "declare": null,
+        "effect": "If this unit was set up this turn, when making charge rolls for this unit, add 1 to the number of dice rolled, to a maximum of 3, then remove 1 dice of your choice and use the remaining dice as the charge roll.",
+        "cpCost": null
+      },
+      {
+        "id": "a154be25-1336-5fc0-88dc-37ea1c85b788",
+        "name": "Serrated Bone Protrusions",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "For each unmodified hit roll of 1 for a combat attack made by an enemy unit that targets this unit, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved.",
+        "cpCost": null
+      },
       {
         "id": "ef66305d-8a06-5330-a6ca-2390f5ae1482",
         "name": "Hide-shelter!",

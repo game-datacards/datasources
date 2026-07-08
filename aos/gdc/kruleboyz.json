@@ -8,8 +8,8 @@
     "banner": "#2a2a1a",
     "header": "#2a2a1a"
   },
-  "updated": "2026-07-01T13:09:23.171Z",
-  "compatibleDataVersion": 446,
+  "updated": "2026-07-08T09:17:26.087Z",
+  "compatibleDataVersion": 459,
   "warscrolls": [
     {
       "id": "44183494-f094-5749-85d5-de3a83ab0e1f",
@@ -1652,6 +1652,167 @@
       "loadout": null,
       "baseSize": "40mm",
       "notes": "This HERO can join an eligible regiment as a Mob Wrangler."
+    },
+    {
+      "id": "1e5075dd-8470-5a02-8a75-a01c365a70d4",
+      "name": "Scourge of Aqshy: Killaboss on Great Gnashtoof",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KRULEBOYZ",
+      "factions": ["Kruleboyz"],
+      "keywords": ["Swamp Beast", "Cavalry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Kruleboyz",
+        "Big Waaagh!"
+      ],
+      "referenceKeywords": "Hero, Cavalry, Destruction, Kruleboyz",
+      "stats": {
+        "move": "10\"",
+        "save": "3+",
+        "control": "2",
+        "health": "10",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 230,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Great Gnashtoof’s Jaws",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Companion"]
+          },
+          {
+            "name": "Boss-skewa",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)", "Anti-HERO (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Drag 'Em Out",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Combat Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy **INFANTRY HERO** in combat with this unit to be the target.",
+          "effect": "Roll 2D6. This unit can move a distance in inches up to the value of the roll. Then, if possible, your opponent must remove the target from the battlefield and set it up again within 1\" of this unit."
+        },
+        {
+          "name": "Prowling the Flanks",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit is wholly within 6\" of the battlefield edge, remove it from the battlefield and set it up again wholly within 6\" of the battlefield edge and more than 9\" from all enemy units."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "105 x 70mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
+      "id": "4019b77b-daa3-51bd-8f77-3e6f4a7526a5",
+      "name": "Scourge of Aqshy: Killaboss with Stab-grot",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KRULEBOYZ",
+      "factions": ["Kruleboyz"],
+      "keywords": ["Mob Wrangler", "Infantry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Kruleboyz",
+        "Big Waaagh!"
+      ],
+      "referenceKeywords": "Hero, Infantry, Destruction, Kruleboyz",
+      "stats": {
+        "move": "5\"",
+        "save": "4+",
+        "control": "2",
+        "health": "6",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 130,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Boss-hacka",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Just Keep Stabbin'",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a number of dice equal to your **fury level**. You can spend 1 **rage dice**. If you do:\n\n• Add 1 to each roll.\n• If your opponent’s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7.\n\nThen, for each 3+, inflict 1 mortal damage on the target."
+        },
+        {
+          "name": "Jump 'Em, Ladz, Or Else!",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a FIGHT ability for this unit",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "Pick a friendly **Gutrippaz** or **Hobgrot Slittaz** unit that has not used a **FIGHT** ability this turn and is within this unit’s combat range to be the target.\n\nThe target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved. If it is picked to do so, add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "40mm [1], 25mm [1]",
+      "notes": "This HERO can join an eligible regiment as a Mob Wrangler.\n\nThis unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
     },
     {
       "id": "0dc9873c-2ae5-570e-b96d-401caaa3d546",

@@ -8,8 +8,8 @@
     "banner": "#2a2a1a",
     "header": "#2a2a1a"
   },
-  "updated": "2026-07-01T13:09:24.730Z",
-  "compatibleDataVersion": 446,
+  "updated": "2026-07-08T09:17:27.243Z",
+  "compatibleDataVersion": 459,
   "warscrolls": [
     {
       "id": "e058b796-c604-5049-aef7-daf69cb091c8",
@@ -942,6 +942,251 @@
       "notes": "This unit cannot be reinforced."
     },
     {
+      "id": "16cd9ac5-941a-5cfe-b536-6e1e9cea73a2",
+      "name": "Scourge of Aqshy: Gatebreaker Mega-Gargant",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "factions": ["Sons of Behemat"],
+      "keywords": ["Mega-Gargant", "Monster", "Eager Lout", "Hero"],
+      "factionKeywords": [
+        "Sons of Behemat",
+        "Grand Alliance Destruction",
+        "King Brodd's Stomp"
+      ],
+      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Mega-Gargant",
+      "stats": {
+        "move": "10\"",
+        "save": "4+",
+        "control": "20",
+        "health": "35",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 490,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Hurled Boulder",
+            "type": "ranged",
+            "range": "18\"",
+            "attacks": "1",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "3",
+            "damage": "4",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Death Grip",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "D6",
+            "abilities": ["Anti-HERO (+1 Rend)"]
+          },
+          {
+            "name": "Almighty Stomp",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "D3",
+            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+          },
+          {
+            "name": "Fortcrusha Flail",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "4",
+            "abilities": ["Anti-FACTION TERRAIN (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 4 and this unit has a Control characteristic of 10."
+        },
+        {
+          "name": "Son of Behemat",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points)."
+        },
+        {
+          "name": "Longshanks",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit can pass through models in non-**MONSTER** units and parts of terrain features that are less than 4\" tall."
+        },
+        {
+          "name": "Off in a Huff",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "You and your opponent must roll off. Each player adds their **fury level** to their roll. Then, this unit can move a distance up to its Move characteristic. It can move through the combat ranges of enemy units, but it cannot end that move in combat unless you won the roll-off.",
+          "keywords": ["Core", "Move"]
+        },
+        {
+          "name": "It's Goin' Down",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Battle, Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Until the start of your next turn:\n\n• This unit has a Move characteristic of 4D6\".\n• While this unit is within 1\" of a terrain feature, the Attacks characteristic of its **Hurled Boulder** is D6 instead of 1."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "130mm",
+      "notes": "This HERO can join an eligible regiment as an Eager Lout. This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
+      "id": "1389d255-54ad-5775-a9fb-4663e9ea6764",
+      "name": "Scourge of Aqshy: Mancrusher Gargant",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "factions": ["Sons of Behemat"],
+      "keywords": ["Gargant", "Monster"],
+      "factionKeywords": [
+        "Sons of Behemat",
+        "Grand Alliance Destruction",
+        "King Brodd's Stomp"
+      ],
+      "referenceKeywords": "Monster, Destruction, Sons of Behemat, Gargant",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "10",
+        "health": "12",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 120,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Throwin’ Rocks",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "1",
+            "hit": "5+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "D3",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "’Eadbutt",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "4",
+            "abilities": []
+          },
+          {
+            "name": "Mighty Kick",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "D3",
+            "abilities": []
+          },
+          {
+            "name": "Massive Club",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Statue Tossing",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "For the rest of the turn, the Damage characteristic of this unit’s **Throwin’ Rocks** is 3 instead of D3.\n\nThen, you can spend up to 3 **rage dice**. If you do:\n\n•  For each **rage dice** spent, add 2 to the Attacks characteristic of this unit’s **Throwin’ Rocks** for the rest of the turn.\n•  If your opponent’s **fury level** is lower than yours, they must increase their **fury level** by 1, to a maximum of 7."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "90 x 52mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General’s Handbook 2026-27 battlepack."
+    },
+    {
       "id": "4ce0de27-4814-5e4f-8140-1146fe4ea611",
       "name": "Scourge of Ghyran Kraken-eater Mega-Gargant",
       "subname": null,
@@ -1489,15 +1734,31 @@
           "Gatebreaker Mega-Gargant",
           "Mancrusher Gargant",
           "Warstomper Mega-Gargant",
+          "Scourge of Aqshy: Mancrusher Gargant",
           "Kraken-eater Mega-Gargant",
           "Scourge of Ghyran Kraken-eater Mega-Gargant",
           "Mancrusher Mob",
           "Beast-smasher Mega-Gargant",
+          "Scourge of Aqshy: Gatebreaker Mega-Gargant",
           "King Brodd"
         ],
         "requiredWarscrolls": ["King Brodd"],
         "requiredGeneralWarscrolls": ["King Brodd"],
         "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Gatebreaker Mega-Gargant",
+              "Scourge of Aqshy: Gatebreaker Mega-Gargant"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Mancrusher Gargant",
+              "Scourge of Aqshy: Mancrusher Gargant"
+            ]
+          },
           {
             "limit": 1,
             "warscrolls": [
@@ -1511,7 +1772,57 @@
       }
     }
   ],
-  "lores": [],
+  "lores": [
+    {
+      "id": "6511ce4e-4849-51cd-869d-28d69106993b",
+      "name": "Brodd's Bellows",
+      "cardType": "Lore",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "restrictionText": null,
+      "spells": [
+        {
+          "id": "43b37b7e-30ae-5871-a2af-cc0b43e495b1",
+          "name": "Rock Bottom",
+          "castingValue": 3,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **SONS OF BEHEMAT PRIEST** to chant this prayer, pick a visible friendly **SONS OF BEHEMAT** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "If the chanting roll was 6+, you can pick another eligible unit to be a second target. Until the start of your next turn:\n\n•  Ignore the effects of the ‘Battle Damaged’ ability on each target.\n•  Each target has **WARD (6+)**.",
+          "keywords": ["Prayer", "Unlimited"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "cb1187bf-c2d2-56eb-a084-4f3d2635fb36",
+          "name": "The Terrible Toes",
+          "castingValue": 4,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "declare": "Pick a friendly **SONS OF BEHEMAT PRIEST** to chant this prayer, pick a visible enemy unit within 18\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "Roll a dice for each model in the target unit. If the chanting roll was 8+, add 1 to the roll. For each 6+, inflict 1 mortal damage on the target. Then, if any enemy models are slain by this ability, halve the target’s Move characteristic until the start of your next turn.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "f3819aed-829a-5fe3-9503-eed234bea8c5",
+          "name": "Vocal Tectonics",
+          "castingValue": 5,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "declare": "Pick a friendly **SONS OF BEHEMAT PRIEST** to chant this prayer, pick a visible enemy unit within 12\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "If the chanting roll was 10+, you can pick another eligible unit to be a second target. Until the start of your next turn, each target has **STRIKE-LAST**.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        }
+      ]
+    }
+  ],
   "manifestationLores": [],
   "enhancements": {
     "artefacts": [
@@ -1687,6 +1998,48 @@
       }
     ],
     "other": [
+      {
+        "id": "111deb87-2e9d-5bdd-88a9-e02dcee9253c",
+        "name": "That Boy's not Right",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "Roll a dice. On a 5+, this unit can use a Prayer ability from the prayer lore you picked during army composition as if it had **PRIEST (1)**. Instead of making a chanting roll for that prayer, the chanting roll is 5 and cannot be modified.",
+        "cpCost": null
+      },
+      {
+        "id": "e51a1e4e-0990-5a75-b24d-d948b57e6ef7",
+        "name": "Up For It",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "This unit’s melee weapons have **Charge (+1 Damage)**.",
+        "cpCost": null
+      },
+      {
+        "id": "88783892-554d-55e6-b17e-07312f9b0ba5",
+        "name": "Always on Guard",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "This unit has **WARD (5+)** while it is wholly within 12\" of and visible to a friendly **MEGA-GARGANT**.",
+        "cpCost": null
+      },
       {
         "id": "571fa5cc-9dec-59ab-b031-690c51153ac6",
         "name": "Bellowing Mockery",

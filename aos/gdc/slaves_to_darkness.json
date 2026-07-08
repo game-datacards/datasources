@@ -8,8 +8,8 @@
     "banner": "#2a1a1a",
     "header": "#2a1a1a"
   },
-  "updated": "2026-07-01T13:09:15.764Z",
-  "compatibleDataVersion": 446,
+  "updated": "2026-07-08T09:17:20.534Z",
+  "compatibleDataVersion": 459,
   "warscrolls": [
     {
       "id": "17552ca5-639a-5aae-81b4-bff21b37f99c",
@@ -3704,7 +3704,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 150,
+      "points": 120,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -3788,7 +3788,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 160,
+      "points": 150,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -4032,6 +4032,159 @@
       "loadout": null,
       "baseSize": "32mm [3], 28.5mm [3], 25mm [2]",
       "notes": "This unit cannot be reinforced."
+    },
+    {
+      "id": "ac4dd3e3-2486-5c6c-ae7c-056d81bdedfa",
+      "name": "Scourge of Aqshy: Chaos Lord on Karkadrak",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SLAVES_TO_DARKNESS",
+      "factions": ["Slaves to Darkness"],
+      "keywords": [
+        "Warriors of Chaos",
+        "Ruinous Champion",
+        "Eternus or Ruinous Champion",
+        "Cavalry",
+        "Hero"
+      ],
+      "factionKeywords": ["Grand Alliance Chaos", "Slaves to Darkness"],
+      "referenceKeywords": "Hero, Cavalry, Chaos, Slaves to Darkness, Warriors of Chaos",
+      "stats": {
+        "move": "9\"",
+        "save": "3+",
+        "control": "2",
+        "health": "10",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 230,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Karkadrak’s Claws and Horn",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Companion"]
+          },
+          {
+            "name": "Hexed Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "5",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)", "Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Wrathful Abandon",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit charged this turn, pick this unit and a friendly non-**HERO WARRIORS OF CHAOS** unit that charged this turn and is wholly within 12\" of this unit to be the targets.",
+          "effect": "Each target can move a number of inches equal to your **fury level**. If a target was in combat at the start of the move, it must end that move in combat with all of the units it was already in combat with at the start of the move. It cannot move into combat with units it was not already in combat with at the start of that move."
+        },
+        {
+          "name": "Ferocious Influence",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "You can only use this ability if this unit charged this turn. Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "For the rest of the turn:\n\n• Add 1 to the Damage characteristic of this unit’s **Companion** weapons for attacks that target that enemy unit.\n• Add 1 to hit rolls for attacks made with **Companion** weapons used by friendly **SLAVES TO DARKNESS CAVALRY** and **WAR MACHINE** units while they are wholly within 12\" of and visible to this unit."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "90 x 52mm",
+      "notes": "This HERO can join an eligible regiment as a Ruinous Champion.\n\nThis unit is legal for Matched Play for battles fought using the General's Handbook 2026-27 battlepack."
+    },
+    {
+      "id": "5dfe16bf-1289-5d3b-8b39-1f228c6b76b8",
+      "name": "Scourge of Aqshy: Chaos Warriors",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SLAVES_TO_DARKNESS",
+      "factions": ["Slaves to Darkness"],
+      "keywords": [
+        "Champion",
+        "Standard Bearer",
+        "Musician",
+        "Warriors of Chaos",
+        "Infantry"
+      ],
+      "factionKeywords": ["Grand Alliance Chaos", "Slaves to Darkness"],
+      "referenceKeywords": "Infantry, Champion, Musician (1/10), Standard Bearer (1/10), Chaos, Slaves to Darkness, Warriors of Chaos",
+      "stats": {
+        "move": "5\"",
+        "save": "3+",
+        "control": "1",
+        "health": "2",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 200,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Rune-etched Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "For the Glory of the Dark Gods",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Until the start of your next turn, the following cumulative effects apply depending on your **fury level**.\n\n***1+ Riled***: This unit has **WARD (6+)**.\n\n***4+ Seething***: This unit’s melee weapons have **Anti‐charge (+1 Rend)**.\n\n***7 Enraged***: This unit has **STRIKE-FIRST** while it has not charged in the same turn."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "32mm",
+      "notes": "This unit is legal for Matched Play for battles fought using the General's Handbook 2026-27 battlepack."
     },
     {
       "id": "510eac4f-a0c6-5c65-a0f2-e5974e3898e2",
@@ -5758,6 +5911,48 @@
   "enhancements": {
     "artefacts": [
       {
+        "id": "218e19d0-112d-5cc1-9cb5-28abf05b361e",
+        "name": "Aelfskin Scroll",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle, Reaction: Opponent declared a SPELL ability for a WIZARD within 18\" of this unit",
+        "icon": "special",
+        "declare": null,
+        "effect": "Pick a visible friendly **SLAVES TO DARKNESS WIZARD** within 18\" of this unit. After that **SPELL** ability has been resolved, that friendly **WIZARD** can use a **SPELL** ability as if it were your hero phase, and the casting roll for that spell is equal to the casting roll for that enemy spell. Do not count that spell towards the number of **SPELL** abilities that friendly **WIZARD** can use this phase.",
+        "cpCost": null
+      },
+      {
+        "id": "f14c9cb5-cbbd-5ca4-b097-d3004e2a5d8e",
+        "name": "Darkflame Pendant",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Weapons used for attacks that target this unit have a maximum Damage characteristic of 1.",
+        "cpCost": null
+      },
+      {
+        "id": "fc1e902b-4b26-5548-88be-023069ebbf6f",
+        "name": "Rune of Murder",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Battle, Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick 1 of this unit’s melee weapons to be the target.",
+        "effect": "Pick 1 of the following effects:\n\n• Inflict 3 mortal damage on this unit. Then, double the target weapon’s Attacks characteristic for the rest of the turn.\n• Add D6 to the target weapon’s Attacks characteristic for the rest of the turn.",
+        "cpCost": null
+      },
+      {
         "id": "744e4d66-80a4-53bf-ac08-67b57f38d9e0",
         "name": "The Varanite Shackle",
         "cardType": "Enhancement",
@@ -5887,6 +6082,48 @@
       }
     ],
     "other": [
+      {
+        "id": "79b7e092-5915-5719-b075-5fe5fbc87118",
+        "name": "Brand of Unbreakable Bonds",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle, Your Movement Phase",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Remove this unit from the battlefield and set it up again wholly within 3\" of an objective you control and not in combat. This unit cannot use **CHARGE** abilities for the rest of the turn.",
+        "cpCost": null
+      },
+      {
+        "id": "1c933812-0d27-5c21-a736-d75694654a78",
+        "name": "Brand of Apoplexy",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "While your **fury level** is 7, add 1 to the Damage characteristic of this unit’s weapons.",
+        "cpCost": null
+      },
+      {
+        "id": "6e685671-d0f6-5bb0-be6f-21876128ffe1",
+        "name": "Brand of the Unaligned",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "Remove all of this unit’s **Pledge to Chaos** keywords. Then, pick 1 of the following **Pledge to Chaos** keywords. You cannot pick a keyword you picked for this unit earlier in the battle.\n\n**• Pledged to Khorne**\n**• Pledged to Tzeentch**\n**• Pledged to Nurgle**\n**• Pledged to Slaanesh**\n\nThis unit has that keyword for the rest of the battle.",
+        "cpCost": null
+      },
       {
         "id": "71c4028b-b1fe-5e53-8162-233e26f792f7",
         "name": "The Eroding Icon",
