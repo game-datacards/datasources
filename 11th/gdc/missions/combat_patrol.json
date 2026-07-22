@@ -11,8 +11,8 @@
     "zh": "战斗巡逻队"
   },
   "source": "40k-11e",
-  "compatibleDataVersion": 895,
-  "updated": "2026-07-15T17:49:33.094Z",
+  "compatibleDataVersion": 909,
+  "updated": "2026-07-22T11:08:13.417Z",
   "isCombatPatrol": true,
   "primaryMissionScoreGameLimit": 45,
   "primaryMissionScoreBattleRoundLimit": 15,
@@ -2015,7 +2015,7 @@
               }
             }
           ],
-          "scorablePeriods": []
+          "scorablePeriods": ["fifthBattleRound", "fourthBattleRound"]
         }
       ],
       "actions": [],
@@ -3717,27 +3717,34 @@
     {
       "id": "57e9d975-2a53-4f77-869b-1034cbf964b8",
       "name": {
-        "en": "Combat Patrol Deployment 1"
+        "en": "Combat Patrol Deployment A"
       }
     },
     {
       "id": "76a6ed0b-2773-43f7-9369-fc252313dacf",
       "name": {
-        "en": "Combat Patrol Deployment 2"
+        "en": "Combat Patrol Deployment B"
       }
     },
     {
       "id": "b2d38b5d-df60-44c8-be6c-a43e78c4f71f",
       "name": {
-        "en": "Combat Patrol Deployment 3"
+        "en": "Combat Patrol Deployment C"
       }
     }
   ],
   "layouts": [
     {
+      "id": "2e6b29a2-f760-4406-8472-250ec785fcc4",
+      "name": {
+        "en": "Mission Layout B"
+      },
+      "deployments": ["Combat Patrol Deployment B"]
+    },
+    {
       "id": "5e042844-41e5-4086-8296-e5564c64f0d6",
       "name": {
-        "en": "Mission Layout",
+        "en": "Mission Layout A",
         "de": "Mission Anordnung",
         "es": "Mission Diseňo",
         "fr": "Mission Agencement",
@@ -3746,33 +3753,40 @@
         "ko": "Mission 배치도",
         "zh": "Mission 布局"
       },
-      "deployments": []
+      "deployments": ["Combat Patrol Deployment A"]
+    },
+    {
+      "id": "b8a59dce-0e79-4fdf-8a0b-37f02f488cf5",
+      "name": {
+        "en": "Mission Layout C"
+      },
+      "deployments": ["Combat Patrol Deployment C"]
     }
   ],
   "presets": [
     {
       "id": "000e4929-ff91-4a6c-8131-ec4729175dc7",
       "name": {
-        "en": "Map 2"
+        "en": "Layout B"
       },
-      "layout": "Mission Layout",
-      "deployment": "Combat Patrol Deployment 2"
+      "layout": "Mission Layout B",
+      "deployment": "Combat Patrol Deployment B"
     },
     {
       "id": "15556a79-9cb1-4cda-842a-e62ee0103672",
       "name": {
-        "en": "Map 3"
+        "en": "Layout C"
       },
-      "layout": "Mission Layout",
-      "deployment": "Combat Patrol Deployment 3"
+      "layout": "Mission Layout C",
+      "deployment": "Combat Patrol Deployment C"
     },
     {
       "id": "c27c6e49-9cfc-4c8c-a7cf-ede3d12ccb24",
       "name": {
-        "en": "Map 1"
+        "en": "Layout A"
       },
-      "layout": "Mission Layout",
-      "deployment": "Combat Patrol Deployment 1"
+      "layout": "Mission Layout A",
+      "deployment": "Combat Patrol Deployment A"
     }
   ],
   "missionTwists": []
