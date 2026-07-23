@@ -6,8 +6,8 @@
     "banner": "#202224",
     "header": "#393940"
   },
-  "compatibleDataVersion": 895,
-  "updated": "2026-07-23T15:54:52.136Z",
+  "compatibleDataVersion": 909,
+  "updated": "2026-07-23T15:56:34.663Z",
   "parent_id": null,
   "parent_name": null,
   "rules": {
@@ -35,7 +35,7 @@
             "order": 3,
             "type": "text",
             "text": {
-              "en": "While a **LEGIONES DAEMONICA** unit from your army is within your army’s Shadow of Chaos, each time that unit takes a Battle-shock test, add 1 to that test and, if that test is passed, one model in that unit regains up to D3 lost wounds (if that unit is a **BATTLELINE** unit and that test is passed, up to D3 destroyed models can be returned to that unit instead)."
+              "en": "While a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead)."
             }
           },
           {
@@ -626,16 +626,16 @@
       "faction": "Legiones Daemonica",
       "detachmentPoints": 1,
       "forceDisposition": {
-        "id": "c9572fd5-d8cd-41b6-b613-13265ac1c04f",
+        "id": "27b26ab3-d5e3-450c-af69-829ca3229f7f",
         "name": {
-          "en": "Purge the Foe",
-          "de": "Lösche den Feind aus",
-          "es": "Purgar al enemigo",
-          "fr": "Éliminez l’Adversaire",
-          "it": "Annienta il nemico",
-          "ja": "敵を浄化せよ",
-          "ko": "적군 격멸",
-          "zh": "肃清敌人"
+          "en": "Take and Hold",
+          "de": "Einnehmen und halten",
+          "es": "Ocupar y mantener",
+          "fr": "Prendre et Tenir",
+          "it": "Conquista e Difendi",
+          "ja": "奪取と確保",
+          "ko": "점령과 유지",
+          "zh": "占领与坚守"
         }
       }
     }
@@ -711,7 +711,7 @@
         "en": "End of your opponent’s turn."
       },
       "effect": {
-        "en": "Remove the targeted units from the battlefield and place them into Strategic Reserves. They will arrive back on the battlefield in the Reinforcements step of your next Movement phase using the Deep Strike ability."
+        "en": "• Place your unit in **strategic reserves**.\n• Your unit must make an **ingress move** in your next Movement phase (including in your first turn)."
       },
       "restrictions": {
         "en": "You cannot target units that are within Engagement Range of one or more enemy units with this Stratagem."
@@ -1494,7 +1494,7 @@
         "en": "That **LEGIONES DAEMONICA SLAANESH** unit."
       },
       "when": {
-        "en": "Any phase, just after an attack or mortal wound is allocated to a model in a **LEGIONES DAEMONICA SLAANESH** unit from your army (excluding **MONSTERS** and **VEHICLES**)."
+        "en": "Any phase, when an enemy unit targets a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTER/VEHICLE** units), or when a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTER/VEHICLE** units) suffers a **mortal wound**."
       },
       "effect": {
         "en": "Select one other friendly **LEGIONES DAEMONICA SLAANESH** unit that is within 9\" of and visible to your unit. Until the end of the phase, while the selected unit is on the battlefield, each time a model in your unit would lose a wound, inflict 1 mortal wound on the selected unit instead."
@@ -1605,7 +1605,7 @@
         "en": "Your Command phase."
       },
       "effect": {
-        "en": "Return up to 1 destroyed model to your unit, or up to D3 destroyed models instead if your unit is a **BATTLELINE** unit, with their full wounds remaining. If it is a **MONSTER** unit, one model in your unit regains up to D3+1 lost wounds instead."
+        "en": "Return up to 1 **destroyed** model to your unit (excluding **CHARACTER** models) or up to D3 **destroyed** models instead (excluding **CHARACTER** models) if your unit is a **BATTLELINE** unit, with their full wounds remaining. If your unit is a **MONSTER** unit, one model in your unit regains up to D3+1 lost wounds instead."
       },
       "fluff": {
         "en": "As the power of the Plague God saturates the battlefield, fresh daemonic life blooms from the septic corpse mulch that bubbles underfoot."
@@ -2547,7 +2547,7 @@
       "name": {
         "en": "Inescapable Eye"
       },
-      "cost": "10",
+      "cost": "15",
       "keywords": ["Tzeentch", "Legiones Daemonica"],
       "excludes": [],
       "description": {
@@ -2565,11 +2565,11 @@
       "name": {
         "en": "Infernal Puppeteer"
       },
-      "cost": "25",
+      "cost": "20",
       "keywords": ["Tzeentch", "Monster", "Legiones Daemonica"],
       "excludes": [],
       "description": {
-        "en": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. In your Shooting phase, the bearer can use this Enhancement. If it does, until the end of the phase, you can select one other friendly visible **LEGIONES DAEMONICA TZEENTCH** unit within 9\" of the bearer. If you do, when selecting targets for ranged weapons equipped by the bearer, you can measure range and determine visibility from one model of your choice in the selected unit instead.\n\n**Designer’s Note:** *When determining if a unit with the Lone Operative ability can be selected as the target, the range is determined from the model of your choice in the selected unit.*"
+        "en": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only**.** In your Shooting phase, when this unit is **selected to shoot**, while an enemy unit is visible to a friendly **LEGIONES DAEMONICA TZEENTCH** unit, that enemy unit has +9\" **detection range** until this unit has shot."
       },
       "faction_id": "40a70c91-675a-4ac5-aa97-daedb9cb6f11",
       "detachment": "Scintillating Legion",
@@ -2583,7 +2583,7 @@
       "name": {
         "en": "Neverblade"
       },
-      "cost": "20",
+      "cost": "25",
       "keywords": ["Tzeentch", "Monster", "Legiones Daemonica"],
       "excludes": [],
       "description": {
@@ -3223,7 +3223,7 @@
           "detachment": null
         },
         {
-          "cost": "70",
+          "cost": "75",
           "models": "1",
           "keyword": null,
           "detachment": null
@@ -3393,7 +3393,7 @@
       },
       "points": [
         {
-          "cost": "180",
+          "cost": "190",
           "models": "6",
           "keyword": null,
           "detachment": null
@@ -3472,7 +3472,7 @@
         }
       ],
       "additionalCost": {
-        "cost": "10",
+        "cost": "20",
         "afterSelections": 2
       }
     },
@@ -6911,7 +6911,7 @@
               "en": "Fluxmaster"
             },
             "description": {
-              "en": "While this model is leading a unit, each time an attack is made against that unit, subtract 1 from the Hit roll."
+              "en": "• This unit has **Stealth**.\n• Melee attacks that target this unit have -1 to **hit rolls**."
             }
           },
           {
@@ -6949,7 +6949,7 @@
       },
       "points": [
         {
-          "cost": "80",
+          "cost": "70",
           "models": "1",
           "keyword": null,
           "detachment": null
@@ -8050,7 +8050,7 @@
       },
       "points": [
         {
-          "cost": "295",
+          "cost": "305",
           "models": "1",
           "keyword": null,
           "detachment": null
@@ -8794,7 +8794,7 @@
       },
       "points": [
         {
-          "cost": "300",
+          "cost": "320",
           "models": "1",
           "keyword": null,
           "detachment": null
@@ -8841,7 +8841,7 @@
         }
       ],
       "additionalCost": {
-        "cost": "15",
+        "cost": "20",
         "afterSelections": 2
       }
     },
@@ -10372,9 +10372,6 @@
         },
         {
           "en": "Screamers"
-        },
-        {
-          "en": "Frame"
         }
       ],
       "stats": [
@@ -10939,7 +10936,7 @@
       },
       "points": [
         {
-          "cost": "340",
+          "cost": "315",
           "models": "1",
           "keyword": null,
           "detachment": null
