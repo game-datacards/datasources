@@ -6,8 +6,8 @@
     "banner": "#283743",
     "header": "#435d63"
   },
-  "compatibleDataVersion": 912,
-  "updated": "2026-07-23T10:45:17.724Z",
+  "compatibleDataVersion": 895,
+  "updated": "2026-07-23T15:54:51.153Z",
   "parent_id": "01623188-9470-4441-96b0-e06eb2572bb5",
   "parent_name": "Adeptus Astartes",
   "rules": {
@@ -462,16 +462,16 @@
       "faction": "Space Wolves",
       "detachmentPoints": 1,
       "forceDisposition": {
-        "id": "8989bd9e-4bd5-49f8-b4d9-7acb47fccf41",
+        "id": "c9572fd5-d8cd-41b6-b613-13265ac1c04f",
         "name": {
-          "en": "Priority Assets",
-          "de": "Prioritätsziele",
-          "es": "Activos prioritarios",
-          "fr": "Atouts Prioritaires",
-          "it": "Risorse prioritarie",
-          "ja": "優先資産",
-          "ko": "최우선 자산",
-          "zh": "重要资产"
+          "en": "Purge the Foe",
+          "de": "Lösche den Feind aus",
+          "es": "Purgar al enemigo",
+          "fr": "Éliminez l’Adversaire",
+          "it": "Annienta il nemico",
+          "ja": "敵を浄化せよ",
+          "ko": "적군 격멸",
+          "zh": "肃清敌人"
         }
       }
     },
@@ -907,10 +907,10 @@
       "type": "Strategic Ploy",
       "phase": ["shooting"],
       "target": {
-        "en": "That **WULFEN INFANTRY**/**BLOOD CLAWS** unit."
+        "en": "One **WULFEN INFANTRY** or **BLOOD CLAWS** unit from your army that was selected as the target of one or more of the attacking unit’s attacks."
       },
       "when": {
-        "en": "Your opponent's Shooting phase, when an enemy unit that targeted a friendly unengaged **WULFEN INFANTRY**/**BLOOD CLAWS** unit this phase has shot."
+        "en": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets."
       },
       "effect": {
         "en": "Your unit can make a **surge move** of up to D6\"."
@@ -2054,7 +2054,7 @@
       "keywords": ["Adeptus Astartes"],
       "excludes": [],
       "description": {
-        "en": "**ADEPTUS ASTARTES** model only. (Once per battle, per army) When this model is **destroyed**, at the end of the phase, roll one D6:\n▪ On a 2+, set up this model on the battlefield, **unengaged** and as close as possible to where it was **destroyed**. This model is not part of an **attached** unit and its unit has a **starting strength** of 1. This model has 3 wounds remaining."
+        "en": "**ADEPTUS ASTARTES** model only. The first time the bearer is destroyed, remove it from play, then, at the end of the phase, roll one D6: on a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of one or more enemy units, with 3 wounds remaining."
       },
       "faction_id": "bc367514-36b7-47c6-bd3f-ffbf85f5cfd9",
       "detachment": "Saga of the Bold",
@@ -2072,7 +2072,7 @@
       "keywords": ["Space Wolves"],
       "excludes": [],
       "description": {
-        "en": "**SPACE WOLVES** model only. Add 2\" to the Move characteristic of the bearer."
+        "en": "**SPACE WOLVES** model only. Add 2\" to the Move characteristic of the bearer. In the Declare Battle Formations step, the bearer can be attached to a **WULFEN INFANTRY** unit."
       },
       "faction_id": "bc367514-36b7-47c6-bd3f-ffbf85f5cfd9",
       "detachment": "Saga of the Beastslayer",
@@ -2356,10 +2356,25 @@
       },
       "points": [
         {
-          "cost": "95",
+          "cost": "105",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Foehammer"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -2584,6 +2599,52 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Assault cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Heavy flamer"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Trueclaw"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s assault cannon can be replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Helfrost cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Multi-melta"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -2772,6 +2833,72 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Astartes chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "The Blood Claw Pack Leader’s bolt pistol can be replaced with 1 plasma pistol."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasma pistol"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "The Blood Claw Pack Leader’s Astartes chainsword can be replaced with 1 power weapon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Power weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Astartes chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -2883,6 +3010,21 @@
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Teeth and claws"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -3102,6 +3244,90 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Bolt carbine"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Astartes chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "The Grey Hunter Pack Leader’s Astartes chainsword can be replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Power fist"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Power weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "The Grey Hunter Pack Leader’s bolt carbine can be replaced with 1 plasma pistol."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasma pistol"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Bolt carbine"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Astartes chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3260,10 +3486,31 @@
       },
       "points": [
         {
-          "cost": "50",
+          "cost": "55",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Helfrost pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Tempest hammer and servo-arm"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -3459,10 +3706,37 @@
       },
       "points": [
         {
-          "cost": "100",
+          "cost": "110",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Tyrnak and Fenrir"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Axe Morkai"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -3655,6 +3929,33 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heavy flamer"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Murderclaws"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3832,10 +4133,37 @@
       },
       "points": [
         {
-          "cost": "75",
+          "cost": "85",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Living Lightning"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Staff of the Stormcaller"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -3990,10 +4318,31 @@
       },
       "points": [
         {
-          "cost": "90",
+          "cost": "100",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt Pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Frostfang"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -4200,6 +4549,122 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Teeth and Claws"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Wolf Guard weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their bolt pistol replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Boltgun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Storm Shield"
+              },
+              "cost": "5"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 3 models in this unit, one model’s bolt pistol can be replaced with 1 plasma pistol."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasma pistol"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Teeth and Claws"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Wolf Guard weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their bolt pistol replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Boltgun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Storm Shield"
+              },
+              "cost": "5"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 3 models in this unit, one model’s bolt pistol can be replaced with 1 plasma pistol."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasma pistol"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "10",
         "afterSelections": 2
@@ -4371,6 +4836,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasma pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Artificer crozius arcanum"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -4628,6 +5114,96 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Assault cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Dreadnought combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s assault cannon can be replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Helfrost cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Multi-melta"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s storm bolter can be replaced with 1 heavy flamer."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heavy flamer"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s assault cannon, storm bolter and Dreadnought combat weapon can be replaced with one of the following:\n\n◦ 1 Fenrisian great axe, 1 blizzard shield and 1 storm bolter\n◦ 1 Fenrisian great axe, 1 blizzard shield and 1 heavy flamer"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Fenrisian great axe"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Blizzard Shield"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Heavy flamer"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "10",
         "afterSelections": 2
@@ -4854,6 +5430,65 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Master-crafted power weapon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Storm Shield"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s master‑crafted power weapon can be replaced with 1 thunder hammer."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Thunder hammer"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s storm shield can be replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Master‑crafted bolt carbine"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Master‑crafted heavy bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plasma pistol"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **BLOOD CLAWS** ■ **GREY HUNTERS** ■ **WOLF GUARD HEADTAKERS**"
       }
@@ -5074,6 +5709,59 @@
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heavy bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Master-crafted power weapon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Storm Shield"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Teeth and claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "All of the models in this unit can each have their master‑crafted power weapon and storm shield replaced with 1 paired master‑crafted power weapons."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Paired master‑crafted power weapons"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -5301,9 +5989,113 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Master-crafted power weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their storm bolter replaced with 1 storm shield."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Storm Shield"
+              },
+              "cost": "5"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "The Wolf Guard Terminator Pack Leader’s storm bolter and master‑crafted power weapon can be replaced with 1 of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Relic greataxe"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin lightning claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Master-crafted power weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their storm bolter replaced with 1 storm shield."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Storm Shield"
+              },
+              "cost": "5"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 5 models in this unit, 1 Wolf Guard Terminator can replace its storm bolter and master‑crafted power weapon with 1 assault cannon and 1 power fist."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Power fist"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Assault cannon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
-        "cost": "15",
-        "afterSelections": 2
+        "cost": "10",
+        "afterSelections": 1
       }
     },
     {
@@ -5449,6 +6241,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Absolvor bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Crozius arcanum"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -5766,18 +6579,139 @@
       },
       "points": [
         {
-          "cost": "180",
+          "cost": "190",
           "models": "12",
           "keyword": null,
           "detachment": null
         },
         {
-          "cost": "90",
+          "cost": "95",
           "models": "6",
           "keyword": null,
           "detachment": null
         }
-      ]
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasma pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Power weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasma pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Combat blade"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Wolf Scout’s plasma pistol can be replaced with 1 plasma gun."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasma gun"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Wolf Scout equipped with a plasma pistol can be equipped with 1 haywire mine (That model’s plasma pistol cannot be replaced)."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Haywire Mine"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Wolf Scout’s plasma pistol and combat blade can be replaced with 1 bolt pistol, 1 Thunderclap and 1 runic stave."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Thunderclap"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Runic stave"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "If this unit contains 12 models, 1 Wolf Scout’s plasma pistol can be replaced with 1 instigator bolt carbine."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Instigator bolt carbine"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Teeth and claws"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
+      "additionalCost": {
+        "cost": "10",
+        "afterSelections": 2
+      }
     },
     {
       "id": "6f5e1517-b22e-544e-bf10-b3b3a2d66daf",
@@ -5912,6 +6846,40 @@
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Death Totem"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Wulfen weapons"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their death totem replaced with 1 stormfrag auto‑launcher."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Stormfrag auto-launcher"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -6121,6 +7089,65 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Fenrisian great axe"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Great wolf claw"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s Fenrisian great axe or great wolf claw and storm bolter can be replaced with 1 blizzard shield and 1 heavy flamer."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Blizzard Shield"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Heavy flamer"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "If this model is not equipped with a storm bolter, its heavy flamer can be replaced with 1 storm bolter."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "10",
         "afterSelections": 2
@@ -6265,6 +7292,40 @@
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Death Totem"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Thunder hammer"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their death totem replaced with 1 stormfrag auto‑launcher."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Stormfrag auto-launcher"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {

@@ -6,8 +6,8 @@
     "banner": "#202224",
     "header": "#393940"
   },
-  "compatibleDataVersion": 912,
-  "updated": "2026-07-23T10:45:18.821Z",
+  "compatibleDataVersion": 895,
+  "updated": "2026-07-23T15:54:52.136Z",
   "parent_id": null,
   "parent_name": null,
   "rules": {
@@ -35,7 +35,7 @@
             "order": 3,
             "type": "text",
             "text": {
-              "en": "While a friendly **LEGIONES DAEMONICA** unit is within your army’s Shadow of Chaos, each time that unit makes a **battle-shock roll**, that unit has +1 to that battle-shock roll and, if that roll is successful, one model in that unit **heals** D3 wounds (if that unit is a **BATTLELINE** unit and that roll is successful, up to D3 **destroyed** models (excluding **CHARACTER** models) can be returned to that unit instead)."
+              "en": "While a **LEGIONES DAEMONICA** unit from your army is within your army’s Shadow of Chaos, each time that unit takes a Battle-shock test, add 1 to that test and, if that test is passed, one model in that unit regains up to D3 lost wounds (if that unit is a **BATTLELINE** unit and that test is passed, up to D3 destroyed models can be returned to that unit instead)."
             }
           },
           {
@@ -626,16 +626,16 @@
       "faction": "Legiones Daemonica",
       "detachmentPoints": 1,
       "forceDisposition": {
-        "id": "27b26ab3-d5e3-450c-af69-829ca3229f7f",
+        "id": "c9572fd5-d8cd-41b6-b613-13265ac1c04f",
         "name": {
-          "en": "Take and Hold",
-          "de": "Einnehmen und halten",
-          "es": "Ocupar y mantener",
-          "fr": "Prendre et Tenir",
-          "it": "Conquista e Difendi",
-          "ja": "奪取と確保",
-          "ko": "점령과 유지",
-          "zh": "占领与坚守"
+          "en": "Purge the Foe",
+          "de": "Lösche den Feind aus",
+          "es": "Purgar al enemigo",
+          "fr": "Éliminez l’Adversaire",
+          "it": "Annienta il nemico",
+          "ja": "敵を浄化せよ",
+          "ko": "적군 격멸",
+          "zh": "肃清敌人"
         }
       }
     }
@@ -711,7 +711,7 @@
         "en": "End of your opponent’s turn."
       },
       "effect": {
-        "en": "• Place your unit in **strategic reserves**.\n• Your unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+        "en": "Remove the targeted units from the battlefield and place them into Strategic Reserves. They will arrive back on the battlefield in the Reinforcements step of your next Movement phase using the Deep Strike ability."
       },
       "restrictions": {
         "en": "You cannot target units that are within Engagement Range of one or more enemy units with this Stratagem."
@@ -1494,7 +1494,7 @@
         "en": "That **LEGIONES DAEMONICA SLAANESH** unit."
       },
       "when": {
-        "en": "Any phase, when an enemy unit targets a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTER/VEHICLE** units), or when a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTER/VEHICLE** units) suffers a **mortal wound**."
+        "en": "Any phase, just after an attack or mortal wound is allocated to a model in a **LEGIONES DAEMONICA SLAANESH** unit from your army (excluding **MONSTERS** and **VEHICLES**)."
       },
       "effect": {
         "en": "Select one other friendly **LEGIONES DAEMONICA SLAANESH** unit that is within 9\" of and visible to your unit. Until the end of the phase, while the selected unit is on the battlefield, each time a model in your unit would lose a wound, inflict 1 mortal wound on the selected unit instead."
@@ -1605,7 +1605,7 @@
         "en": "Your Command phase."
       },
       "effect": {
-        "en": "Return up to 1 **destroyed** model to your unit (excluding **CHARACTER** models) or up to D3 **destroyed** models instead (excluding **CHARACTER** models) if your unit is a **BATTLELINE** unit, with their full wounds remaining. If your unit is a **MONSTER** unit, one model in your unit regains up to D3+1 lost wounds instead."
+        "en": "Return up to 1 destroyed model to your unit, or up to D3 destroyed models instead if your unit is a **BATTLELINE** unit, with their full wounds remaining. If it is a **MONSTER** unit, one model in your unit regains up to D3+1 lost wounds instead."
       },
       "fluff": {
         "en": "As the power of the Plague God saturates the battlefield, fresh daemonic life blooms from the septic corpse mulch that bubbles underfoot."
@@ -2547,7 +2547,7 @@
       "name": {
         "en": "Inescapable Eye"
       },
-      "cost": "15",
+      "cost": "10",
       "keywords": ["Tzeentch", "Legiones Daemonica"],
       "excludes": [],
       "description": {
@@ -2565,11 +2565,11 @@
       "name": {
         "en": "Infernal Puppeteer"
       },
-      "cost": "20",
+      "cost": "25",
       "keywords": ["Tzeentch", "Monster", "Legiones Daemonica"],
       "excludes": [],
       "description": {
-        "en": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only**.** In your Shooting phase, when this unit is **selected to shoot**, while an enemy unit is visible to a friendly **LEGIONES DAEMONICA TZEENTCH** unit, that enemy unit has +9\" **detection range** until this unit has shot."
+        "en": "**LEGIONES DAEMONICA TZEENTCH MONSTER** model only. In your Shooting phase, the bearer can use this Enhancement. If it does, until the end of the phase, you can select one other friendly visible **LEGIONES DAEMONICA TZEENTCH** unit within 9\" of the bearer. If you do, when selecting targets for ranged weapons equipped by the bearer, you can measure range and determine visibility from one model of your choice in the selected unit instead.\n\n**Designer’s Note:** *When determining if a unit with the Lone Operative ability can be selected as the target, the range is determined from the model of your choice in the selected unit.*"
       },
       "faction_id": "40a70c91-675a-4ac5-aa97-daedb9cb6f11",
       "detachment": "Scintillating Legion",
@@ -2583,7 +2583,7 @@
       "name": {
         "en": "Neverblade"
       },
-      "cost": "25",
+      "cost": "20",
       "keywords": ["Tzeentch", "Monster", "Legiones Daemonica"],
       "excludes": [],
       "description": {
@@ -3077,6 +3077,27 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Betraying Shades"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "The Blade of Shadows"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3202,10 +3223,25 @@
           "detachment": null
         },
         {
-          "cost": "75",
+          "cost": "70",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Putrid appendages"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -3357,7 +3393,7 @@
       },
       "points": [
         {
-          "cost": "190",
+          "cost": "180",
           "models": "6",
           "keyword": null,
           "detachment": null
@@ -3369,8 +3405,74 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hellblade"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Juggernaut’s bladed horn"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hellblade"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Juggernaut’s bladed horn"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Bloodcrusher that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Instrument of Chaos"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Bloodcrusher that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Daemonic Icon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
-        "cost": "20",
+        "cost": "10",
         "afterSelections": 2
       }
     },
@@ -3521,6 +3623,60 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hellblade"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hellblade"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Bloodletter that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Instrument of Chaos"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Bloodletter that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Daemonic Icon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3657,6 +3813,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Blade of blood"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -3910,6 +4081,52 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hellfire breath"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Great axe of Khorne"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s great axe of Khorne can be replaced with 1 axe of Khorne and one of the following: \n◦ 1 bloodflail\n◦ 1 lash of Khorne"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Axe of Khorne"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Bloodflail"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Lash of Khorne"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "15",
         "afterSelections": 2
@@ -4112,6 +4329,46 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Coruscating blue flames"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Blue claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Coruscating yellow flames"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Yellow claws"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4278,6 +4535,33 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Fire of Tzeentch"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Flamer mouths"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Screamer bites"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -4450,6 +4734,27 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Arcane Fireball"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Herald combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **BLUE HORRORS** ■ **PINK HORRORS**"
       }
@@ -4611,6 +4916,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Coiled tentacles"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Ravaging claws"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -4797,6 +5123,27 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Infernal cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Hellforged weapons"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4973,6 +5320,27 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Infernal cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Hellforged weapons"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5127,6 +5495,60 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Slashing claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Slashing claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Daemonette that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Instrument of Chaos"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Daemonette that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Daemonic Icon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5266,6 +5688,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Balesword and Nurgling attendants"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -5450,6 +5887,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Fire of Tzeentch"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Flamer mouths"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -5645,6 +6103,33 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Arcane Fireball"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Herald combat weapon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Screamer bites"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -5887,6 +6372,34 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Barbed tail and dissecting claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Barbed tail and dissecting claws"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6030,6 +6543,46 @@
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Flickering flames"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Flamer mouths"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Flickering flames"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Flamer mouths"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -6182,6 +6735,52 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Burning roar"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Gore-drenched fangs"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Collar of Khorne"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gore-drenched fangs"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Collar of Khorne"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6312,7 +6911,7 @@
               "en": "Fluxmaster"
             },
             "description": {
-              "en": "• This unit has **Stealth**.\n• Melee attacks that target this unit have -1 to **hit rolls**."
+              "en": "While this model is leading a unit, each time an attack is made against that unit, subtract 1 from the Hit roll."
             }
           },
           {
@@ -6350,10 +6949,31 @@
       },
       "points": [
         {
-          "cost": "70",
+          "cost": "80",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Arcane Fireball"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Herald combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -6614,6 +7234,59 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plague flail"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Putrid vomit"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Bilesword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s plague flail can be replaced with 1 bileblade."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bileblade"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s bilesword can be replaced with 1 doomsday bell."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Doomsday bell"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "15",
         "afterSelections": 2
@@ -6786,6 +7459,33 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lashes of torment"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Seeker tongues"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Slashing claws"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6941,6 +7641,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Acidic maw"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Lopping shears"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -7116,6 +7837,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heartstring lyre"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Ravaging claws"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -7308,10 +8050,31 @@
       },
       "points": [
         {
-          "cost": "305",
+          "cost": "295",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Infernal Gateway"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Staff of Tomorrow"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -7479,6 +8242,33 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Scalding roar"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Soul-rending fangs"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Brass Collar of Bloody Vengeance"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -7730,6 +8520,58 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Phantasmagoria"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Snapping claws"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Witstealer sword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Living whip"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Ritual knife"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Shining Aegis"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "15",
         "afterSelections": 2
@@ -7952,14 +8794,54 @@
       },
       "points": [
         {
-          "cost": "320",
+          "cost": "300",
           "models": "1",
           "keyword": null,
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt of Change"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Staff of Tzeentch"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Rod of sorcery"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Baleful sword"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
-        "cost": "20",
+        "cost": "15",
         "afterSelections": 2
       }
     },
@@ -8095,6 +8977,21 @@
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Diseased claws and teeth"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -8351,6 +9248,91 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Coruscating pink flames"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Pink claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Pink Horror that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Instrument of Chaos"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Pink Horror that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Daemonic Icon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Coruscating blue flames"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Blue claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Coruscating yellow flames"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Yellow claws"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8532,6 +9514,84 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Death’s heads"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Foul mouthparts"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plaguesword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Death’s heads"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Foul mouthparts"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plaguesword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Plague Drone that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Instrument of Chaos"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Plague Drone that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Daemonic Icon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8681,6 +9741,60 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plaguesword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plaguesword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Plaguebearer that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Instrument of Chaos"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Plaguebearer that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Daemonic Icon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -8820,6 +9934,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Foul balesword"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -8971,6 +10100,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Attendants’ hellblades"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Blade of blood"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -9173,6 +10323,27 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Streams of brackish filth"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Gnarlrod"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -9201,6 +10372,9 @@
         },
         {
           "en": "Screamers"
+        },
+        {
+          "en": "Frame"
         }
       ],
       "stats": [
@@ -9295,6 +10469,21 @@
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lamprey bite"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -9461,6 +10650,72 @@
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lashing tongue"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Slashing claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lashing tongue"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Slashing claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Seeker that is not equipped with a daemonic icon can be equipped with 1 instrument of Chaos."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Instrument of Chaos"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 Seeker that is not equipped with an instrument of Chaos can be equipped with 1 daemonic icon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Daemonic Icon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -9684,10 +10939,43 @@
       },
       "points": [
         {
-          "cost": "315",
+          "cost": "340",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lash of Slaanesh"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Pavane of Slaanesh"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Snapping claws"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Soulpiercer"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -9876,6 +11164,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bellow of endless fury"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Slaughter and Carnage"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -10138,6 +11447,33 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Skull cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Attendants’ hellblades"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Biting maw"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -10292,6 +11628,27 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Blade of blood"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Juggernaut’s bladed horn"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **BLOODCRUSHERS**"
       }
@@ -10435,6 +11792,21 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "The Slayer Sword"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **BLOODLETTERS**"
       }
@@ -10574,6 +11946,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Marotter"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -10830,6 +12217,77 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Harvester cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Iron claw"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Warpsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s warpsword can be replaced with 1 warpclaw."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Warpclaw"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Daemonic Allegiance Additional Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Torrent of burning blood"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Warp gaze"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Phlegm bombardment"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Scream of despair"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "15",
         "afterSelections": 2
@@ -10986,6 +12444,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Disgusting sneezes"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plaguesword and distended maw"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -11206,6 +12685,33 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Cacophonic choir"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Scourging whip"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Axe of Dominion"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **DAEMONETTES**"
       }
@@ -11352,6 +12858,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Sharp quills"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -11530,6 +13051,27 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Infernal Flames"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "The Trickster’s Staff"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -11677,6 +13219,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Serrated claws"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -11869,6 +13426,33 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lashes of torment"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Seeker tongues"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Slashing claws"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **HELLFLAYERS**"
       }
@@ -12016,6 +13600,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Ravaging claws"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {

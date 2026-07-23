@@ -6,8 +6,8 @@
     "banner": "#122d42",
     "header": "#023e58"
   },
-  "compatibleDataVersion": 912,
-  "updated": "2026-07-23T10:45:19.464Z",
+  "compatibleDataVersion": 895,
+  "updated": "2026-07-23T15:54:52.859Z",
   "parent_id": null,
   "parent_name": null,
   "rules": {
@@ -244,7 +244,7 @@
                 "order": 1,
                 "type": "text",
                 "text": {
-                  "en": "At the start of the first battle round, select two objectives to be your foundations. Place a circular foundation marker in each one. When you draw a line from the closest part of one foundation marker to the closest part of the other, if any part of a model’s base (or any part of a model’s hull, for a model without a base) crosses that line, that model’s unit is said to be on your defensive line.\n\nWhile an **IMPERIAL KNIGHTS** unit from your army is on your defensive line, that unit has the following ability:\n\n**Against the Horde:** Each time a model in this unit makes an attack that targets a visible enemy unit, you can ignore any or all modifiers to the Hit roll, and weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability."
+                  "en": "At the start of the first battle round, select two objective markers on the battlefield to be your foundations. When you draw a line from any part of one of your foundations to the other, if any part of a model’s base (or any part of a model’s hull, for a model without a base) crosses that line, that model’s unit is said to be on your defensive line.\n\nWhile an **IMPERIAL KNIGHTS** unit from your army is on your defensive line, that unit has the following ability:\n\n**Against the Horde**: Each time a model in this unit makes an attack that targets a visible enemy unit, you can ignore any or all modifiers to the Hit roll, and weapons equipped by models in this unit have the **[SUSTAINED HITS 1]** ability. \n\nEach time one of your foundations is removed from the battlefield (e.g. by a Primary Mission rule), just after it is removed, select a new objective marker on the battlefield to be one of your foundations."
                 }
               }
             ],
@@ -472,16 +472,16 @@
       "faction": "Imperial Knights",
       "detachmentPoints": 2,
       "forceDisposition": {
-        "id": "27b26ab3-d5e3-450c-af69-829ca3229f7f",
+        "id": "8989bd9e-4bd5-49f8-b4d9-7acb47fccf41",
         "name": {
-          "en": "Take and Hold",
-          "de": "Einnehmen und halten",
-          "es": "Ocupar y mantener",
-          "fr": "Prendre et Tenir",
-          "it": "Conquista e Difendi",
-          "ja": "奪取と確保",
-          "ko": "점령과 유지",
-          "zh": "占领与坚守"
+          "en": "Priority Assets",
+          "de": "Prioritätsziele",
+          "es": "Activos prioritarios",
+          "fr": "Atouts Prioritaires",
+          "it": "Risorse prioritarie",
+          "ja": "優先資産",
+          "ko": "최우선 자산",
+          "zh": "重要资产"
         }
       }
     },
@@ -570,16 +570,16 @@
       "faction": "Imperial Knights",
       "detachmentPoints": 1,
       "forceDisposition": {
-        "id": "8989bd9e-4bd5-49f8-b4d9-7acb47fccf41",
+        "id": "c9572fd5-d8cd-41b6-b613-13265ac1c04f",
         "name": {
-          "en": "Priority Assets",
-          "de": "Prioritätsziele",
-          "es": "Activos prioritarios",
-          "fr": "Atouts Prioritaires",
-          "it": "Risorse prioritarie",
-          "ja": "優先資産",
-          "ko": "최우선 자산",
-          "zh": "重要资产"
+          "en": "Purge the Foe",
+          "de": "Lösche den Feind aus",
+          "es": "Purgar al enemigo",
+          "fr": "Éliminez l’Adversaire",
+          "it": "Annienta il nemico",
+          "ja": "敵を浄化せよ",
+          "ko": "적군 격멸",
+          "zh": "肃清敌人"
         }
       }
     },
@@ -591,16 +591,16 @@
       "faction": "Imperial Knights",
       "detachmentPoints": 3,
       "forceDisposition": {
-        "id": "8989bd9e-4bd5-49f8-b4d9-7acb47fccf41",
+        "id": "c9572fd5-d8cd-41b6-b613-13265ac1c04f",
         "name": {
-          "en": "Priority Assets",
-          "de": "Prioritätsziele",
-          "es": "Activos prioritarios",
-          "fr": "Atouts Prioritaires",
-          "it": "Risorse prioritarie",
-          "ja": "優先資産",
-          "ko": "최우선 자산",
-          "zh": "重要资产"
+          "en": "Purge the Foe",
+          "de": "Lösche den Feind aus",
+          "es": "Purgar al enemigo",
+          "fr": "Éliminez l’Adversaire",
+          "it": "Annienta il nemico",
+          "ja": "敵を浄化せよ",
+          "ko": "적군 격멸",
+          "zh": "肃清敌人"
         }
       }
     }
@@ -2465,7 +2465,7 @@
       "keywords": ["Imperial Knights"],
       "excludes": [],
       "description": {
-        "en": "**IMPERIAL KNIGHTS** model only. (Once per battle, per army) At the end of your opponent’s turn, if this unit is unengaged, you can use this ability. If you do:\n▪Place this unit in **strategic reserves**.\n▪This unit has **Deep Strike** until the start of your next Shooting phase.\n▪This unit must make an ingress move in your next Movement phase (including in your first turn).’"
+        "en": "**IMPERIAL KNIGHTS** model only. The bearer has the Deep Strike ability. Once per battle, at the end of your opponent’s turn, if the bearer is not within Engagement Range of one or more enemy units, it can use this Enhancement. If it does, remove the bearer from the battlefield. In the Reinforcements step of your subsequent Movement phase, set the bearer up anywhere on the battlefield that is more than 9” horizontally away from all enemy units. If the battle ends and the bearer is not on the battlefield, it is destroyed."
       },
       "faction_id": "5737b3b6-1c33-4cb3-828c-08b6909197aa",
       "detachment": "Freeblade Company",
@@ -2733,6 +2733,39 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Asterius volkite culverin"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Karacnos mortar battery"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin conversion beam cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Titanic feet"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "75",
         "afterSelections": 1
@@ -2962,6 +2995,71 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Acastus autocannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Acastus ironstorm missile pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin magna lascannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Titanic feet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s 2 Acastus autocannons can be replaced with one of the following:\n◦ 2 lascannons\n◦ 1 Acastus autocannon and 1 lascannon"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lascannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Acastus autocannon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s Acastus ironstorm missile pod can be replaced with 1 helios defence missiles."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Helios defence missiles"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "75",
         "afterSelections": 1
@@ -3140,6 +3238,46 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Armiger autocannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured feet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s Questoris heavy stubber can be replaced with 1 meltagun."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Meltagun"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -3378,6 +3516,107 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Graviton pulsar"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Volkite veuglaire"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured feet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s volkite veuglaire can be replaced with one of the following:\n◦ 1 siege claw and 1 rad cleanser\n◦ 1 graviton pulsar\n◦ 1 lightning lock\n◦ 1 conversion beam cannon"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Siege claw"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Rad cleanser"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Graviton pulsar"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Lightning lock"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Conversion beam cannon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s graviton pulsar can be replaced with one of the following;\n◦ 1 siege claw and 1 rad cleanser\n◦ 1 lightning lock\n◦ 1 conversion beam cannon\n◦ 1 volkite veuglaire"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Siege claw"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Rad cleanser"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Lightning lock"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Conversion beam cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Volkite veuglaire"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "10",
         "afterSelections": 2
@@ -3568,6 +3807,46 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Thermal spear"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reaper chain-cleaver"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s Questoris heavy stubber can be replaced with 1 meltagun."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Meltagun"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -3794,6 +4073,33 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Las-impulsor"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Questoris multi-laser"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Freedom’s Hand"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3994,6 +4300,33 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Acheron flame cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin heavy bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reaper chainfist"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -4223,6 +4556,27 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Atrapos lascutter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Graviton singularity cannon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "20",
         "afterSelections": 1
@@ -4413,6 +4767,27 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Castigator bolt cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Tempest warblade"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "15",
         "afterSelections": 1
@@ -4598,6 +4973,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Cerastus shock lance"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -4848,14 +5238,78 @@
       },
       "points": [
         {
-          "cost": "425",
+          "cost": "400",
           "models": "1",
           "keyword": null,
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasma decimator"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Shieldbreaker missile launcher"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin meltagun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin siegebreaker cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Volcano lance"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Titanic feet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with 1 shieldbreaker missile launcher and 2 twin siegebreaker cannons"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Shieldbreaker missile launcher"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin siegebreaker cannon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
-        "cost": "25",
+        "cost": "20",
         "afterSelections": 1
       }
     },
@@ -5165,6 +5619,102 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Avenger gatling cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Heavy flamer"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Meltagun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Thermal cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Titanic feet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s meltagun can be replaced with 1 Questoris heavy stubber."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s thermal cannon can be replaced with 1 rapid-fire battle cannon and 1 Questoris heavy stubber"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Rapid-fire battle cannon"
+              },
+              "cost": "15"
+            },
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Ironstorm missile pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stormspear rocket pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin Icarus autocannon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "20",
         "afterSelections": 1
@@ -5410,6 +5960,45 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Conversion beam obliterator"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plasma executor"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin incendine combustor"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Phosphor blaster"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Titanic feet"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -5685,6 +6274,77 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Chastiser gatling cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Frag bombard"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Titanic feet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s chastiser gatling cannon can be replaced with one of the following:\n◦ 1 bellatus reaper chainsword*\n◦ 1 thundershock spear*\n\n* *A model cannot be equipped with more than one bellatus reaper chainsword or more than one thundershock spear.*"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bellatus reaper chainsword"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Thundershock spear"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s frag bombard can be replaced with one of the following:\n◦ 1 bellatus reaper chainsword*\n◦ 1 thundershock spear*\n\n* *A model cannot be equipped with more than one bellatus reaper chainsword or more than one thundershock spear.*"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bellatus reaper chainsword"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Thundershock spear"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -5990,6 +6650,84 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Meltagun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Thermal cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reaper chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s meltagun can be replaced with 1 Questoris heavy stubber."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Thunderstrike gauntlet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Ironstorm missile pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stormspear rocket pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin Icarus autocannon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "15",
         "afterSelections": 2
@@ -6272,6 +7010,71 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Meltagun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Thunderstrike gauntlet"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reaper chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s meltagun can be replaced with 1 Questoris heavy stubber."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Ironstorm missile pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stormspear rocket pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin Icarus autocannon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -6575,6 +7378,90 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Meltagun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Rapid-fire battle cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reaper chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s meltagun can be replaced with 1 Questoris heavy stubber."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Thunderstrike gauntlet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Ironstorm missile pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stormspear rocket pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin Icarus autocannon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -6908,6 +7795,90 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Las-impulsor"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Questoris multi-laser"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reaper chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s Questoris multi-laser can be replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Meltagun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Thunderstrike gauntlet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Ironstorm missile pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stormspear rocket pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin Icarus autocannon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "15",
         "afterSelections": 2
@@ -7147,6 +8118,70 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Conflagration cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Shieldbreaker missile launcher"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Thundercoil harpoon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin meltagun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin siegebreaker cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Titanic feet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s 2 shieldbreaker missile launchers and twin siegebreaker cannon can be replaced with 1 shieldbreaker missile launcher and 2 twin siegebreaker cannons"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Shieldbreaker missile launcher"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin siegebreaker cannon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -7468,6 +8503,90 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Avenger gatling cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Heavy flamer"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Meltagun"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reaper chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s meltagun can be replaced with 1 Questoris heavy stubber."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Questoris heavy stubber"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s reaper chainsword can be replaced with 1 thunderstrike gauntlet."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Thunderstrike gauntlet"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Ironstorm missile pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stormspear rocket pod"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin Icarus autocannon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "15",
         "afterSelections": 2
@@ -7717,6 +8836,52 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lightning cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Phased plasma-fusil"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reaper chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hekaton siege claw"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin rad cleanser"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -7971,6 +9136,52 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Graviton crusher"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Volkite chierovile"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reaper chainsword"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s reaper chainsword can be replaced with 1 hekaton siege claw and 1 twin rad cleanser."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hekaton siege claw"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin rad cleanser"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "15",
         "afterSelections": 1
@@ -8096,7 +9307,28 @@
       "baseSize": {
         "en": "25mm"
       },
-      "points": []
+      "points": [],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hekhtur’s pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

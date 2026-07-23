@@ -6,8 +6,8 @@
     "banner": "#16291a",
     "header": "#013a17"
   },
-  "compatibleDataVersion": 912,
-  "updated": "2026-07-23T10:45:16.383Z",
+  "compatibleDataVersion": 895,
+  "updated": "2026-07-23T15:54:49.694Z",
   "parent_id": "01623188-9470-4441-96b0-e06eb2572bb5",
   "parent_name": "Adeptus Astartes",
   "rules": {
@@ -288,7 +288,7 @@
                 "order": 1,
                 "type": "text",
                 "text": {
-                  "en": "Friendly **ADEPTUS ASTARTES** have:\n▪ This unit’s ranged attacks have **[ASSAULT]**.\n▪ When this unit is selected to make a **fall‐back move**, that **fall‐back move** does not prevent this unit from being **eligible to shoot**.\n\nFriendly **ADEPTUS ASTARTES MOUNTED** have:\n▪ This unit’s ranged attacks have **[ASSAULT]**.\n▪ When this unit is selected to make an **advance move**, that **advance move** does not prevent this unit from being **eligible to declare a charge**.\n▪ When this unit is selected to make a **fall‐back move**, that **fall‐back move** does not prevent this unit from being **eligible to shoot** and **eligible to declare a charge.**"
+                  "en": "**ADEPTUS ASTARTES** units from your army are eligible to shoot in a turn in which they Advanced or Fell Back.\n\n**ADEPTUS ASTARTES MOUNTED** units from your army are eligible to shoot and declare a charge in a turn in which they Advanced or Fell Back."
                 }
               }
             ],
@@ -387,16 +387,16 @@
       "faction": "Dark Angels",
       "detachmentPoints": 1,
       "forceDisposition": {
-        "id": "27b26ab3-d5e3-450c-af69-829ca3229f7f",
+        "id": "c9572fd5-d8cd-41b6-b613-13265ac1c04f",
         "name": {
-          "en": "Take and Hold",
-          "de": "Einnehmen und halten",
-          "es": "Ocupar y mantener",
-          "fr": "Prendre et Tenir",
-          "it": "Conquista e Difendi",
-          "ja": "奪取と確保",
-          "ko": "점령과 유지",
-          "zh": "占领与坚守"
+          "en": "Purge the Foe",
+          "de": "Lösche den Feind aus",
+          "es": "Purgar al enemigo",
+          "fr": "Éliminez l’Adversaire",
+          "it": "Annienta il nemico",
+          "ja": "敵を浄化せよ",
+          "ko": "적군 격멸",
+          "zh": "肃清敌人"
         }
       }
     },
@@ -770,13 +770,13 @@
       "type": "Battle Tactic",
       "phase": ["shooting"],
       "target": {
-        "en": "That **ADEPTUS ASTARTES** unit."
+        "en": "One **RAVENWING** unit from your army that has just shot."
       },
       "when": {
-        "en": "Your Movement phase, when a friendly **ADEPTUS ASTARTES** unit ends an **advance move**."
+        "en": "Your Shooting phase."
       },
       "effect": {
-        "en": "That **advance move** does not prevent your unit from being **eligible to declare a charge**."
+        "en": "Select one enemy unit that was hit by one or more of those attacks. That unit must take a Battle-shock test. When doing so, if one or more **RAVENWING** units from your army are within 6\" of that enemy unit, subtract 1 from the test."
       },
       "fluff": {
         "en": "The Ravenwing employ shock tactics and focussed firepower to tear bloody paths through the enemy ranks, shattering resistance and clearing the way to their true quarry."
@@ -1208,13 +1208,13 @@
       "type": "Strategic Ploy",
       "phase": ["fight", "shooting"],
       "target": {
-        "en": "That **ADEPTUS ASTARTES** unit."
+        "en": "One **RAVENWING MOUNTED** unit from your army that has not been selected to shoot or fight this phase."
       },
       "when": {
-        "en": "Fight phase, when a friendly **ADEPTUS ASTARTES** unit is **selected to fight**."
+        "en": "Your Shooting phase or the Fight phase."
       },
       "effect": {
-        "en": "Your unit's melee attacks have **[LANCE]**."
+        "en": "Until the end of the phase, each time a model in your unit makes an attack that targets an **INFANTRY CHARACTER** or **MOUNTED CHARACTER** unit, add 1 to the Wound roll."
       },
       "fluff": {
         "en": "Be it their true quarry or simply one who possesses knowledge that will lead them to their apprehension, when the Ravenwing strike at a priority target they do so with unmerciful surety."
@@ -2100,7 +2100,7 @@
       "keywords": ["Adeptus Astartes"],
       "excludes": [],
       "description": {
-        "en": "**ADEPTUS ASTARTES** model only. (Once per battle, per army) When this model is **destroyed**, at the end of the phase, roll one D6:\n▪ On a 2+, set up this model on the battlefield, **unengaged** and as close as possible to where it was **destroyed**. This model is not part of an **attached** unit and its unit has a **starting strength** of 1. This model has 3 wounds remaining, or its full wounds remaining if this model was **battle-shocked** when it was **destroyed**."
+        "en": "**ADEPTUS ASTARTES** model only. The first time the bearer is destroyed, roll one D6 at the end of the phase. On a 2+, set the bearer back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with 3 wounds remaining (if the bearer was Battle-shocked when it was destroyed, it is instead returned with its full wounds remaining)."
       },
       "faction_id": "fa0e86ef-b5da-4510-9a9f-8cd86267bb6a",
       "detachment": "Unforgiven Task Force",
@@ -2348,7 +2348,7 @@
       "name": {
         "en": "Stalwart Champion"
       },
-      "cost": "15",
+      "cost": "25",
       "keywords": ["Captain", "Lieutenant", "Chaplain"],
       "excludes": [],
       "description": {
@@ -2622,6 +2622,27 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heavy bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Crozius arcanum and power weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **ASSAULT INTERCESSOR SQUAD** ■ **BLADEGUARD VETERAN SQUAD** ■ **HELLBLASTER SQUAD** ■ **INFERNUS SQUAD** ■ **INNER CIRCLE COMPANIONS** ■ **INTERCESSOR SQUAD** ■ **STERNGUARD VETERAN SQUAD** ■ **TACTICAL SQUAD**"
       }
@@ -2797,6 +2818,33 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lion’s Wrath"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "The Sword of Secrets"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "The Lion Helm"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **ASSAULT INTERCESSOR SQUAD** ■ **BLADEGUARD VETERAN SQUAD** ■ **HELLBLASTER SQUAD** ■ **INFERNUS SQUAD** ■ **INNER CIRCLE COMPANIONS** ■ **INTERCESSOR SQUAD** ■ **STERNGUARD VETERAN SQUAD** ■ **TACTICAL SQUAD**"
       }
@@ -2958,6 +3006,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Master-crafted storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "The Sword of Silence"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -3163,9 +3232,76 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "This unit can be equipped with 1 Watcher in the Dark."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Watcher in the Dark"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Great weapon of the Unforgiven"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Mace of absolution"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "The Knight Master’s great weapon of the Unforgiven can be replaced with 1 relic weapon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Relic weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "All Deathwing Knights in this unit can each have their mace of absolution replaced with 1 power weapon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Power weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "20",
-        "afterSelections": 2
+        "afterSelections": 1
       }
     },
     {
@@ -3461,6 +3597,109 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "This unit can be equipped with 1 Watcher in the Dark."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Watcher in the Dark"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Power weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Power fist"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of Deathwing Terminators can each have their power fist replaced with 1 chainfist"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Chainfist"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 5 models in the unit, 1 Deathwing Terminator can replace its storm bolter with one of the following: \n◦ 1 assault cannon \n◦ 1 heavy flamer \n◦ 1 plasma cannon \n◦ 1 storm bolter and 1 cyclone missile launcher (this model’s storm bolter cannot be replaced)"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Assault cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Heavy flamer"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plasma cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Cyclone missile launcher"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -3665,6 +3904,39 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "The Deliverer"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Mind Wipe"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Traitor’s Bane"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Book of Salvation"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **ASSAULT INTERCESSOR SQUAD** ■ **BLADEGUARD VETERAN SQUAD** ■ **HELLBLASTER SQUAD** ■ **INFERNUS SQUAD** ■ **INNER CIRCLE COMPANIONS** ■ **INTERCESSOR SQUAD** ■ **STERNGUARD VETERAN SQUAD** ■ **TACTICAL SQUAD**"
       }
@@ -3769,7 +4041,7 @@
               "en": "Braziers of Judgement"
             },
             "description": {
-              "en": "• This unit has **Stealth**.\n• Melee attacks that target this unit have -1 to **hit rolls**."
+              "en": "While a **CHARACTER** model is leading this unit, each time an attack targets this unit, subtract 1 from the Hit roll."
             }
           },
           {
@@ -3813,7 +4085,7 @@
       },
       "points": [
         {
-          "cost": "160",
+          "cost": "170",
           "models": "6",
           "keyword": null,
           "detachment": null
@@ -3823,6 +4095,27 @@
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heavy bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Calibanite greatsword"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -4001,10 +4294,50 @@
       },
       "points": [
         {
-          "cost": "130",
+          "cost": "120",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heavy bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plasma storm battery"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s heavy bolter can be replaced with 1 assault cannon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Assault cannon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -4169,6 +4502,27 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt Pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Enmity’s Edge"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **ASSAULT INTERCESSOR SQUAD** ■ **BLADEGUARD VETERAN SQUAD** ■ **INFERNUS SQUAD** ■ **INNER CIRCLE COMPANIONS** ■ **INTERCESSOR SQUAD** ■ **STERNGUARD VETERAN SQUAD** ■ **TACTICAL SQUAD**"
       }
@@ -4206,9 +4560,6 @@
         },
         {
           "en": "Lion El’Jonson"
-        },
-        {
-          "en": "Mobile"
         }
       ],
       "stats": [
@@ -4341,7 +4692,7 @@
                   "en": "Mist-wreathed Shadow Realms"
                 },
                 "description": {
-                  "en": "At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n• Place this unit in **strategic reserves**.\n• This unit can make an **ingress move** in your next Movement phase (including in your first turn)."
+                  "en": "In your Command phase, if this unit is not within Engagement Range of one or more enemy units, you can remove it from the battlefield and place it into Strategic Reserves."
                 }
               },
               {
@@ -4398,10 +4749,31 @@
       },
       "points": [
         {
-          "cost": "265",
+          "cost": "285",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Arma Luminis"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Fealty"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -4552,7 +4924,7 @@
               "en": "Lightning-fast Manoeuvres"
             },
             "description": {
-              "en": "Ranged attacks that target this unit have -1 to **wound rolls**."
+              "en": "Each time a ranged attack targets this model, subtract 1 from the Hit roll. If that attack was made by a model that can **FLY**, subtract 1 from the Wound roll as well."
             }
           }
         ],
@@ -4589,10 +4961,56 @@
       },
       "points": [
         {
-          "cost": "180",
+          "cost": "195",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Avenger mega bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Blacksword missiles"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin heavy bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured hull"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s avenger mega bolter can be replaced with 1 Nephilim lascannons."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Nephilim lascannons"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -4794,7 +5212,89 @@
           "keyword": null,
           "detachment": null
         }
-      ]
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plasma talon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Black Knight combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 3 models in this unit, 1 model’s plasma talon can be replaced with 1 Astartes grenade."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Astartes grenade launcher"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plasma talon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Black Knight combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 3 models in this unit, 1 model’s plasma talon can be replaced with 1 Astartes grenade."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Astartes grenade launcher"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
+      "additionalCost": {
+        "cost": "10",
+        "afterSelections": 2
+      }
     },
     {
       "id": "65697143-7593-5759-a841-ef1aaddef7f6",
@@ -4964,14 +5464,7 @@
         "core": [
           {
             "name": {
-              "en": "Support",
-              "de": "Unterstützung",
-              "es": "Apoyo",
-              "fr": "Appui",
-              "it": "Supporto",
-              "ja": "支援",
-              "ko": "서포트",
-              "zh": "辅助"
+              "en": "Leader"
             }
           }
         ],
@@ -5032,10 +5525,126 @@
       },
       "points": [
         {
-          "cost": "105",
+          "cost": "115",
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plasma talon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Master-crafted power weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 3 models in this unit, 1 model’s plasma talon can be replaced with 1 Astartes grenade."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Astartes grenade launcher"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plasma talon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Black Knight combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 3 models in this unit, 1 model’s plasma talon can be replaced with 1 Astartes grenade."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Astartes grenade launcher"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Plasma talon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Black Knight combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 3 models in this unit, 1 model’s plasma talon can be replaced with 1 Astartes grenade."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Astartes grenade launcher"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -5161,7 +5770,7 @@
               "en": "Stasis Bomb"
             },
             "description": {
-              "en": "At the end of your opponent’s Fight phase, select one **visible** enemy unit (excluding **AIRCRAFT**/**Lone Operative** units) within 24\" of this unit. That enemy unit is **slowed** until the end of your opponent’s next Movement phase:\n• While a unit is **slowed**, in your opponent’s Movement phase, when that unit is **selected to move**, unless that unit **remains stationary**, roll one D6:\n• On a 1-4, that unit suffers D3 **mortal wounds** and that unit has -2\" **M**.\n• On a 5-6, that unit suffers 2D3 **mortal wounds** and that unit has -3\" **M**.’"
+              "en": "Once per turn, one model from your army with this ability can use it after it ends a Normal move. If it does, you can select one enemy unit (excluding **AIRCRAFT**) that model moved over this phase. That unit suffers D3 mortal wounds and you must roll one D6: on a 1-3, that unit cannot Advance or Fall Back in your opponent’s next Movement phase; on a 4-6, that unit must Remain Stationary in your opponent’s next Movement phase. Each model can only use this ability once per battle."
             }
           }
         ],
@@ -5202,6 +5811,33 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Rift cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Hurricane bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured hull"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -5320,7 +5956,7 @@
             },
             "isAura": true,
             "description": {
-              "en": "Friendly **ADEPTUS ASTARTES** units within 6\" of this unit have **Stealth**."
+              "en": "While a friendly **ADEPTUS ASTARTES** unit is within 6\" of this model, models in that unit have the Stealth ability and each time a ranged attack targets that unit, that unit has the Benefit of Cover against that attack."
             }
           }
         ],
@@ -5349,10 +5985,44 @@
       },
       "points": [
         {
-          "cost": "70",
+          "cost": "80",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heavy bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s heavy bolter can be replaced with 1 assault cannon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Assault cannon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -5505,7 +6175,7 @@
               "en": "Grand Master of the Ravenwing"
             },
             "description": {
-              "en": "▪ This unit’s ranged attacks have **[ASSAULT]**.\n▪ When this unit is selected to make an **advance move**, that **advance** **move** does not prevent this unit from being **eligible to declare a charge**.\n▪ This unit has **MOBILE**."
+              "en": "While this model is leading a unit, that unit is eligible to shoot and declare a charge in a turn in which it Advanced. If that unit is already eligible to shoot and declare a charge in a turn in which it Advanced, add 1 to Advance and Charge rolls made for that unit instead."
             }
           },
           {
@@ -5542,10 +6212,43 @@
       },
       "points": [
         {
-          "cost": "95",
+          "cost": "105",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Bolt Pistol"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Master-crafted plasma cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin storm bolter"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "The Raven Sword"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {

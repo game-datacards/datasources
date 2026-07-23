@@ -6,8 +6,8 @@
     "banner": "#291221",
     "header": "#391625"
   },
-  "compatibleDataVersion": 912,
-  "updated": "2026-07-23T10:45:21.773Z",
+  "compatibleDataVersion": 895,
+  "updated": "2026-07-23T15:54:55.854Z",
   "parent_id": null,
   "parent_name": null,
   "isCombatPatrol": true,
@@ -405,7 +405,31 @@
           "oc": "3"
         }
       ],
-      "rangedWeapons": [
+      "rangedWeapons": [],
+      "meleeWeapons": [
+        {
+          "profiles": [
+            {
+              "name": {
+                "en": "Armoured Hull",
+                "de": "Gepanzerter Rumpf",
+                "es": "Casco blindado",
+                "fr": "Coque Blindée",
+                "it": "Scafo corazzato",
+                "ja": "機体装甲",
+                "ko": "장갑 동체",
+                "zh": "装甲外壳"
+              },
+              "range": "Melee",
+              "attacks": "3",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "0",
+              "damage": "1",
+              "keywords": []
+            }
+          ]
+        },
         {
           "profiles": [
             {
@@ -419,7 +443,7 @@
                 "ko": "이중 중형 스터버",
                 "zh": "双联重机枪"
               },
-              "range": "36\"",
+              "range": "Melee",
               "attacks": "3",
               "skill": "4+",
               "strength": "4",
@@ -442,37 +466,12 @@
                 "ko": "미사일 발사기",
                 "zh": "导弹发射器"
               },
-              "range": "36\"",
+              "range": "Melee",
               "attacks": "3",
               "skill": "4+",
               "strength": "9",
               "ap": "-2",
               "damage": "3",
-              "keywords": []
-            }
-          ]
-        }
-      ],
-      "meleeWeapons": [
-        {
-          "profiles": [
-            {
-              "name": {
-                "en": "Armoured Hull",
-                "de": "Gepanzerter Rumpf",
-                "es": "Casco blindado",
-                "fr": "Coque Blindée",
-                "it": "Scafo corazzato",
-                "ja": "機体装甲",
-                "ko": "장갑 동체",
-                "zh": "装甲外壳"
-              },
-              "range": "Melee",
-              "attacks": "3",
-              "skill": "4+",
-              "strength": "5",
-              "ap": "0",
-              "damage": "1",
               "keywords": []
             }
           ]
@@ -579,10 +578,58 @@
       },
       "points": [
         {
-          "cost": "null",
+          "cost": "0",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Armoured Hull",
+                "de": "Gepanzerter Rumpf",
+                "es": "Casco blindado",
+                "fr": "Coque Blindée",
+                "it": "Scafo corazzato",
+                "ja": "機体装甲",
+                "ko": "장갑 동체",
+                "zh": "装甲外壳"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Missile Launcher",
+                "de": "Raketenwerfer",
+                "es": "Lanzamisiles",
+                "fr": "Lance-missiles",
+                "it": "Lanciamissili",
+                "ja": "ミサイルランチャー",
+                "ko": "미사일 발사기",
+                "zh": "导弹发射器"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin Heavy Stubber",
+                "de": "Zwillingsmaschinengewehr",
+                "es": "Ametralladora pesada doble",
+                "fr": "Mitrailleuse Jumelée",
+                "it": "Doppio mitragliatore pesante",
+                "ja": "ツイン・ヘヴィスタバー",
+                "ko": "이중 중형 스터버",
+                "zh": "双联重机枪"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -897,10 +944,124 @@
       },
       "points": [
         {
-          "cost": "null",
+          "cost": "0",
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Power Weapon",
+                "de": "Energiewaffe",
+                "es": "Arma de energía",
+                "fr": "Arme Énergétique",
+                "it": "Arma potenziata",
+                "ja": "パワーウェポン",
+                "ko": "역장 무기",
+                "zh": "动力武器"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stolen Firearms",
+                "de": "Erbeutete Feuerwaffen",
+                "es": "Armas robadas",
+                "fr": "Armes à Feu Volées",
+                "it": "Armi da fuoco trafugate",
+                "ja": "鹵獲刀",
+                "ko": "빼돌린 화기",
+                "zh": "窃得枪械"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Mining Laser",
+                "de": "Bergbaulaser",
+                "es": "Láser de minería",
+                "fr": "Laser Minier",
+                "it": "Laser minatore",
+                "ja": "マイニングレーザー",
+                "ko": "채굴용 레이저",
+                "zh": "采矿激光炮"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stolen Blade",
+                "de": "Erbeutete Klinge",
+                "es": "Filo robado",
+                "fr": "Lame Volée",
+                "it": "Lama trafugata",
+                "ja": "盗み取った刃",
+                "ko": "빼돌린 날붙이",
+                "zh": "窃得之刃"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stolen Firearms",
+                "de": "Erbeutete Feuerwaffen",
+                "es": "Armas robadas",
+                "fr": "Armes à Feu Volées",
+                "it": "Armi da fuoco trafugate",
+                "ja": "鹵獲刀",
+                "ko": "빼돌린 화기",
+                "zh": "窃得枪械"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Stolen Blade",
+                "de": "Erbeutete Klinge",
+                "es": "Filo robado",
+                "fr": "Lame Volée",
+                "it": "Lama trafugata",
+                "ja": "盗み取った刃",
+                "ko": "빼돌린 날붙이",
+                "zh": "窃得之刃"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stolen Firearms",
+                "de": "Erbeutete Feuerwaffen",
+                "es": "Armas robadas",
+                "fr": "Armes à Feu Volées",
+                "it": "Armi da fuoco trafugate",
+                "ja": "鹵獲刀",
+                "ko": "빼돌린 화기",
+                "zh": "窃得枪械"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -1059,7 +1220,7 @@
               },
               "range": "12\"",
               "attacks": "D6",
-              "skill": "-",
+              "skill": "6+",
               "strength": "3",
               "ap": "0",
               "damage": "1",
@@ -1234,10 +1395,98 @@
       },
       "points": [
         {
-          "cost": "null",
+          "cost": "0",
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Metamorph Mutations",
+                "de": "Metamorph-Mutationen",
+                "es": "Mutaciones de Metamorfo",
+                "fr": "Métamorphe Mutations",
+                "it": "Mutazioni metamorfiche – fendente",
+                "ja": "メタモーフの変異（強打）",
+                "ko": "탈피체 변이",
+                "zh": "超态变异"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Autopistol",
+                "de": "Maschinenpistole",
+                "es": "Pistola automática",
+                "fr": "Pistolet-mitrailleur",
+                "it": "Pistola automatica",
+                "ja": "オートピストル",
+                "ko": "기관권총",
+                "zh": "自动手枪"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Leader’s Weapon Symbiote",
+                "de": "Anführer-Waffensymbiont",
+                "es": "Armas simbiontes de Líder",
+                "fr": "Arme Symbiotique de Leader",
+                "it": "Simbionte arma del Leader",
+                "ja": "カルト指導者の生体武器",
+                "ko": "리더의 무기 공생체",
+                "zh": "队长活体武器"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hand Flamer",
+                "de": "Flammenpistole",
+                "es": "Pistola lanzallamas",
+                "fr": "Lance-flammes Léger",
+                "it": "Pistola lanciafiamme",
+                "ja": "ハンドフレイマー",
+                "ko": "한손 화염방사기",
+                "zh": "喷火手枪"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Metamorph Mutations",
+                "de": "Metamorph-Mutationen",
+                "es": "Mutaciones de Metamorfo",
+                "fr": "Métamorphe Mutations",
+                "it": "Mutazioni metamorfiche – fendente",
+                "ja": "メタモーフの変異（強打）",
+                "ko": "탈피체 변이",
+                "zh": "超态变异"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -1373,7 +1622,7 @@
               },
               "range": "12\"",
               "attacks": "D6",
-              "skill": "-",
+              "skill": "6+",
               "strength": "3",
               "ap": "0",
               "damage": "1",
@@ -1571,10 +1820,98 @@
       },
       "points": [
         {
-          "cost": "null",
+          "cost": "0",
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Metamorph Mutations",
+                "de": "Metamorph-Mutationen",
+                "es": "Mutaciones de Metamorfo",
+                "fr": "Mutations Métamorphes",
+                "it": "Mutazioni metamorfiche",
+                "ja": "メタモーフの変異（強打）",
+                "ko": "탈피체 변이",
+                "zh": "超态变异"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Autopistol",
+                "de": "Maschinenpistole",
+                "es": "Pistola automática",
+                "fr": "Pistolet-mitrailleur",
+                "it": "Pistola automatica",
+                "ja": "オートピストル",
+                "ko": "기관권총",
+                "zh": "自动手枪"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Leader’s Weapon Symbiote",
+                "de": "Anführer-Waffensymbiont",
+                "es": "Armas simbiontes de Líder",
+                "fr": "Arme Symbiotique de Leader",
+                "it": "Simbionte arma del Leader",
+                "ja": "カルト指導者の生体武器",
+                "ko": "리더의 무기 공생체",
+                "zh": "队长活体武器"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hand Flamer",
+                "de": "Flammenpistole",
+                "es": "Pistola lanzallamas",
+                "fr": "Lance-flammes Léger",
+                "it": "Pistola lanciafiamme",
+                "ja": "ハンドフレイマー",
+                "ko": "한손 화염방사기",
+                "zh": "喷火手枪"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Metamorph Mutations",
+                "de": "Metamorph-Mutationen",
+                "es": "Mutaciones de Metamorfo",
+                "fr": "Mutations Métamorphes",
+                "it": "Mutazioni metamorfiche",
+                "ja": "メタモーフの変異（強打）",
+                "ko": "탈피체 변이",
+                "zh": "超态变异"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -1849,10 +2186,58 @@
       },
       "points": [
         {
-          "cost": "null",
+          "cost": "0",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Autopistol",
+                "de": "Maschinenpistole",
+                "es": "Pistola automática",
+                "fr": "Pistolet-mitrailleur",
+                "it": "Pistola automatica",
+                "ja": "オートピストル",
+                "ko": "기관권총",
+                "zh": "自动手枪"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Cult Sniper Rifle",
+                "de": "Kult-Scharfschützengewehr",
+                "es": "Rifle francotirador del culto",
+                "fr": "Fusil de Sniper de Cultiste",
+                "it": "Fucile di precisione del culto",
+                "ja": "カルト・スナイパーライフル",
+                "ko": "교단 저격소총",
+                "zh": "教派狙击步枪"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stolen Blade",
+                "de": "Erbeutete Klinge",
+                "es": "Filo robado",
+                "fr": "Lame Volée",
+                "it": "Lama trafugata",
+                "ja": "盗み取った刃",
+                "ko": "빼돌린 날붙이",
+                "zh": "窃得之刃"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {

@@ -6,8 +6,8 @@
     "banner": "#032b16",
     "header": "#04532a"
   },
-  "compatibleDataVersion": 912,
-  "updated": "2026-07-23T10:45:21.147Z",
+  "compatibleDataVersion": 895,
+  "updated": "2026-07-23T15:54:55.170Z",
   "parent_id": null,
   "parent_name": null,
   "rules": {
@@ -21,7 +21,7 @@
             "order": 1,
             "type": "text",
             "text": {
-              "en": "If your Army Faction is **NECRONS**, at the end of your Command phase, each friendly unit with this ability that is on the battlefield activates its Reanimation Protocols:\n▪ When a unit’s Reanimation Protocols activate, that unit **heals** D3 wounds."
+              "en": "If your Army Faction is **NECRONS**, at the end of your Command phase, each unit from your army with this ability that is on the battlefield activates its Reanimation Protocols and reanimates D3 wounds. Each time such a unit reanimates a wound:\n\n■ If that unit contains one or more models with fewer than their starting number of wounds remaining, select one of those models; that model regains one lost wound.\n■ If all models in that unit have their starting number of wounds, but that unit is not at its Starting Strength, one destroyed model is returned to that unit with one wound remaining.\n\nOnce such a unit is at its Starting Strength and all of its models have their starting number of wounds, nothing further happens."
             }
           },
           {
@@ -293,7 +293,7 @@
                 "order": 6,
                 "type": "accordion",
                 "text": {
-                  "en": "*This binding uses atomic resonance magnetism to compel the shard into the midst of the foe.*\n\n**TRANSCENDENT C’TAN** model only. In your turn, when this unit makes an **ingress/advance** move using its Transdimensional Displacement ability, this unit can end that move more than 6\" horizontally from all enemy units (instead of more than 8\"). When this unit ends that move within 8\" of an enemy unit, this unit is not **eligible to declare a charge** until the end of the turn."
+                  "en": "*This binding uses atomic resonance magnetism to compel the shard into the midst of the foe.*\n\n**TRANSCENDENT C’TAN** model only. In your turn, each time this model is set up on the battlefield using the Deep Strike or Transdimensional Displacement abilities, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units. When doing so, if this model is set up within 9\" of one or more enemy units, until the end of the turn, it is not eligible to declare a charge."
                 },
                 "title": {
                   "en": "Reletavistic Tether"
@@ -586,16 +586,16 @@
       "faction": "Necrons",
       "detachmentPoints": 2,
       "forceDisposition": {
-        "id": "6a24433b-0910-4386-8169-ac2b2ef9e377",
+        "id": "c9572fd5-d8cd-41b6-b613-13265ac1c04f",
         "name": {
-          "en": "Disruption",
-          "de": "Störangriff",
-          "es": "Disrupción",
-          "fr": "Perturbation",
-          "it": "Intralcio",
-          "ja": "撹乱",
-          "ko": "방해 작전",
-          "zh": "干扰"
+          "en": "Purge the Foe",
+          "de": "Lösche den Feind aus",
+          "es": "Purgar al enemigo",
+          "fr": "Éliminez l’Adversaire",
+          "it": "Annienta il nemico",
+          "ja": "敵を浄化せよ",
+          "ko": "적군 격멸",
+          "zh": "肃清敌人"
         }
       }
     },
@@ -1359,7 +1359,7 @@
         "en": "Any phase."
       },
       "effect": {
-        "en": "At the end of the phase, set up the **destroyed** model on the battlefield, **unengaged** and as close as possible to where it was **destroyed**. That model is not part of an **attached** unit and its unit has a **starting strength** of 1. That model has half of its starting number of wounds remaining."
+        "en": "At the end of the phase, set your model back up on the battlefield as close as possible to where it was destroyed and not within Engagement Range of any enemy units, with half of its starting number of wounds remaining."
       },
       "restrictions": {
         "en": "Each model can only be targeted with this Stratagem once per battle."
@@ -1602,13 +1602,13 @@
       "type": "Strategic Ploy",
       "phase": ["shooting"],
       "target": {
-        "en": "That **DESTROYER CULT**/**FLAYED ONES** unit."
+        "en": "One **DESTROYER CULT** or **FLAYED ONES** unit from your army that had one or more of its models destroyed by the attacking unit’s attacks."
       },
       "when": {
-        "en": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly **unengaged DESTROYER CULT**/**FLAYED ONES** unit this phase has shot."
+        "en": "Your opponent’s Shooting phase, just after an enemy unit has shot."
       },
       "effect": {
-        "en": "Your unit can make a **surge move** of up to D6\"."
+        "en": "Your unit can make a Normal move, but must end that move as close as possible to that enemy unit."
       },
       "fluff": {
         "en": "To strike down one horror is merely to draw the rest of the pack’s insane and murderous focus."
@@ -2926,7 +2926,7 @@
       "keywords": ["Necrons"],
       "excludes": [],
       "description": {
-        "en": "**(Once per battle, per army) A**t the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n▪ Place this unit in **strategic reserves**.\n▪ This unit has **Deep Strike** until the start of your next Shooting phase.\n▪ This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+        "en": "**NECRONS** model only. Once per battle, at the end of your opponent’s turn, if the bearer’s unit is not within Engagement Range of one or more enemy units, the bearer can use this Enhancement. If it does, remove that unit from the battlefield. Then, in the Reinforcements step of your next Movement phase, set up that unit anywhere on the battlefield that is more than 9\" horizontally away from all enemy models."
       },
       "faction_id": "47670bc3-64b8-4c2d-9154-7391f132688b",
       "detachment": "Awakened Dynasty",
@@ -3376,7 +3376,7 @@
       "keywords": ["Cryptek"],
       "excludes": [],
       "description": {
-        "en": "**CRYPTEK** model only. The bearer has the **DESTROYER CULT** keyword. Add 3\" to the Move characteristic of the bearer."
+        "en": "**CRYPTEK** model only. The bearer has the **DESTROYER CULT** keyword and during the Declare Battle Formations step, the bearer can be attached to a **DESTROYER CULT** unit (excluding **CHARACTER** units). If you do, the bearer’s unit cannot contain any models without the **DESTROYER CULT** keyword. Add 3\" to the Move characteristic of the bearer."
       },
       "faction_id": "47670bc3-64b8-4c2d-9154-7391f132688b",
       "detachment": "Cursed Legion",
@@ -3556,7 +3556,7 @@
       "keywords": ["DNU", "Necrons"],
       "excludes": [],
       "description": {
-        "en": "**TRANSCENDENT C’TAN** model only. In your turn, when this unit makes an **ingress/advance move** using its **Transdimensional Displacement** ability, this unit can end that move more than 6\" horizontally from all enemy units (instead of more than 8\"). When this unit ends that move within 8\" of an enemy unit, this unit is not **eligible to declare a charge** until the end of the turn"
+        "en": "**TRANSCENDENT C'TAN** model only. In your turn, each time this model is set up on the battlefield using the Deep Strike or Transdimensional Displacement abilities, it can be set up anywhere on the battlefield that is more than 6\" horizontally away from all enemy units. When doing so, if this model is set up within 9\" of one or more enemy units, until the end of the turn, it is not eligible to declare a charge."
       },
       "faction_id": "47670bc3-64b8-4c2d-9154-7391f132688b",
       "detachment": "Pantheon of Woe",
@@ -3724,6 +3724,46 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin tesla destructor"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured bulk"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s gauss cannon can be replaced with 1 tesla cannon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Tesla cannon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -3907,6 +3947,27 @@
           "detachment": {
             "en": "Pantheon of Woe"
           }
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Cosmic insanity"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Golden fists"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -4093,6 +4154,27 @@
           "detachment": {
             "en": "Pantheon of Woe"
           }
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gaze of death"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Scythe of the Nightbringer"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -4312,6 +4394,33 @@
             "en": "Pantheon of Woe"
           }
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Spear of the Void Dragon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Voltaic storm"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Canoptek tail blades"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4464,6 +4573,33 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Doomsday blaster"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin gauss flayer"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Doomstalker limbs"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -4647,6 +4783,72 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss scalpel"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "All models in this unit can each have their gauss scalpel replaced with 1 tesla caster."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Tesla caster"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 model’s gauss scalpel or tesla caster can be replaced with 1 atomiser beam and 1 nanoscarab projector."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Atomiser beam"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Nanoscarab Projector"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 model’s gauss scalpel or tesla caster can be replaced with 1 accelerator mandible."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Accelerator Mandible"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -4742,7 +4944,7 @@
             },
             "isAura": true,
             "description": {
-              "en": "While a friendly **NECRONS** unit is within 3\" of this model, each time that unit’s Reanimation Protocols activate, that unit heals an additional D3 wounds."
+              "en": "While a friendly **NECRONS** unit is within 3\" of this model, each time that unit’s Reanimation Protocols activate, that unit reanimates an additional D3 wounds."
             }
           }
         ]
@@ -4768,10 +4970,31 @@
       },
       "points": [
         {
-          "cost": "75",
+          "cost": "70",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Atomiser beam"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Reanimator’s claws"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -4887,6 +5110,21 @@
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Feeder mandibles"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -5043,6 +5281,60 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Automaton claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each be equipped with 2 particle beamers."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Particle beamer"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each be equipped with 1 fabricator claw array."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Fabricator Claw Array (Aura)"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each be equipped with 1 gloom prism."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gloom Prism (Aura)"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -5183,6 +5475,40 @@
           "models": "2",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Twin gauss reaper"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "1 model’s twin gauss reaper can be replaced with 1 transdimensional isolator."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Transdimensional isolator"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -5347,6 +5673,53 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Vicious claws"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Particle caster"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Transdimensional beamer"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their vicious claws replaced with whip coils."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Whip coils"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "20",
         "afterSelections": 1
@@ -5382,16 +5755,6 @@
         },
         {
           "en": "Frame"
-        },
-        {
-          "en": "Noble",
-          "de": "Adliger",
-          "es": "Noble",
-          "fr": "Noble",
-          "it": "Nobile",
-          "ja": "貴族",
-          "ko": "귀족",
-          "zh": "贵族"
         }
       ],
       "stats": [
@@ -5531,7 +5894,7 @@
               "en": "Resurrection Orb"
             },
             "description": {
-              "en": "(Once per battle, per unit) At the end of any phase, you can use this ability. If you do, select up to one friendly **NECRONS INFANTRY**/**NECRONS MOUNTED** unit within 6\" of this unit. That unit **resurrects**:\n▪ When a unit **resurrects**, that unit’s Reanimation Protocols activate, but that unit **heals** D6 wounds (instead of D3 wounds). You cannot **resurrect** more than one unit per turn."
+              "en": "Once per battle, at the end of any phase, select one friendly **NECRONS INFANTRY** or **NECRONS MOUNTED** unit within 6\" of the bearer and resurrect that unit. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn."
             }
           }
         ],
@@ -5570,6 +5933,66 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Staff of light"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s gauss cannon can be replaced with 1 tesla cannon."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Tesla cannon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s staff of light can be replaced with 1 Overlord’s blade."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Overlord’s blade"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with 1 resurrection orb."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Resurrection Orb"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -5679,7 +6102,7 @@
               "en": "Timesplinter Mantle"
             },
             "description": {
-              "en": "▪ This unit has **Stealth**.\n▪ Melee attacks that target this unit have ‐1 to **hit rolls**."
+              "en": "While this model is leading a unit, each time an attack targets that unit, subtract 1 from the Hit roll."
             }
           },
           {
@@ -5726,10 +6149,25 @@
       },
       "points": [
         {
-          "cost": "70",
+          "cost": "80",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Chronomancer’s stave"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -5875,6 +6313,21 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Transdimensional abductor"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6005,6 +6458,27 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Scouring eye"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Scythed limbs"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6129,6 +6603,27 @@
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Synaptic disintegrator"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -6284,6 +6779,33 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heavy death ray"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin tesla destructor"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured bulk"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6297,9 +6819,6 @@
       "keywords": [
         {
           "en": "Vehicle"
-        },
-        {
-          "en": "Frame"
         },
         {
           "en": "Fly"
@@ -6432,10 +6951,37 @@
       },
       "points": [
         {
-          "cost": "210",
+          "cost": "200",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Doomsday cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Gauss flayer array"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured bulk"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -6553,6 +7099,21 @@
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Flayer claws"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -6731,6 +7292,21 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Tremorglaive"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -6864,6 +7440,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss flayer array"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured bulk"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "transport": {
@@ -7012,6 +7609,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Enmitic disintegrator pistols"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -7184,6 +7802,27 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Eldritch Lance"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Impaling legs"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -7327,6 +7966,40 @@
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss blaster"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "All models in this unit can each have their gauss blaster replaced with 1 tesla carbine."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Tesla carbine"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -7491,6 +8164,27 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauntlet of Fire"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Staff of the Destroyer"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **IMMORTALS** ■ **LYCHGUARD** ■ **NECRON WARRIORS**"
       }
@@ -7606,7 +8300,7 @@
       },
       "points": [
         {
-          "cost": "170",
+          "cost": "160",
           "models": "6",
           "keyword": null,
           "detachment": null
@@ -7628,6 +8322,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss cannon"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -7762,7 +8477,7 @@
       },
       "points": [
         {
-          "cost": "160",
+          "cost": "150",
           "models": "3",
           "keyword": null,
           "detachment": null
@@ -7778,6 +8493,40 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss destructor"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their gauss destructor replaced with 1 enmitic exterminator."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Enmitic exterminator"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -7921,7 +8670,7 @@
               "en": "Resurrection Orb"
             },
             "description": {
-              "en": "(Once per battle, per unit) At the end of any phase, you can use this ability. If you do, this unit **resurrects**:\n▪ When a unit **resurrects**, that unit’s Reanimation Protocols activate, but that unit **heals** D6 wounds (instead of D3 wounds). You cannot **resurrect** more than one unit per turn.’"
+              "en": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn."
             }
           },
           {
@@ -7965,6 +8714,53 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Staff of light"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s staff of light can be replaced with 1 Lord’s blade."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Lord’s blade"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model can be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Nanoscarab Amulet"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Resurrection Orb"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -8095,6 +8891,40 @@
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Warscythe"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "All models in this unit can each have their warscythe replaced with 1 hyperphase sword and 1 dispersion shield."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Hyperphase sword"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Dispersion Shield"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -8274,6 +9104,46 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss flux arc"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Particle whip"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Portal of exile"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s 4 gauss flux arcs can be replaced with 4 death rays."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Death ray"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "20",
         "afterSelections": 1
@@ -8420,6 +9290,40 @@
           "models": "10",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss flayer"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their gauss flayer replaced with 1 gauss reaper."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Gauss reaper"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -8602,10 +9506,43 @@
       },
       "points": [
         {
-          "cost": "185",
+          "cost": "175",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Enmitic disintegrators"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Unmaker Gauntlet"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Blade tail and whip coils"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Nullstone Field Generator (Aura)"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -8763,6 +9700,27 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Twin tesla destructor"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured bulk"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "transport": {
         "en": "This model has a transport capacity of 1 **NECRONS INFANTRY** unit."
       }
@@ -8911,6 +9869,27 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Tesla sphere"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured bulk"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "30",
         "afterSelections": 1
@@ -8988,7 +9967,7 @@
               "en": "Tunnelling Horrors"
             },
             "description": {
-              "en": "At the end of your opponent’s turn, if this unit is **unengaged**, you can use this ability. If you do:\n▪ Place this unit in **strategic reserves**.\n▪ This unit must make an **ingress move** in your next Movement phase (including in your first turn)."
+              "en": "At the end of your opponent’s turn, if this unit is not within Engagement Range of one or more enemy units, you can remove this unit from the battlefield. In the Reinforcements step of your next Movement phase, set it up anywhere on the battlefield that is more than 8\" horizontally away from all enemy models."
             }
           }
         ],
@@ -9034,6 +10013,34 @@
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Ophydian hyperphase weapons"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 3 models in this unit, this unit can have 1 Plasmacyte."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasmacyte"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -9187,6 +10194,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Staff of Tomorrow"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -9355,7 +10377,7 @@
               "en": "Resurrection Orb"
             },
             "description": {
-              "en": "(Once per battle, per unit) At the end of any phase, you can use this ability. If you do, this unit **resurrects**:\n▪ When a unit **resurrects**, that unit’s Reanimation Protocols activate, but that unit **heals** D6 wounds (instead of D3 wounds). You cannot **resurrect** more than one unit per turn.’"
+              "en": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn."
             }
           }
         ],
@@ -9391,6 +10413,59 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Tachyon arrow"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Overlord’s blade"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s tachyon arrow and Overlord’s blade can be replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Staff of light"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Voidscythe"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "If this model is not equipped with a tachyon arrow, it can be equipped with 1 resurrection orb."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Resurrection Orb"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -9500,7 +10575,7 @@
               "en": "Resurrection Orb"
             },
             "description": {
-              "en": "(Once per battle, per unit) At the end of any phase, you can use this ability. If you do, this unit **resurrects**:\n▪ When a unit **resurrects**, that unit’s Reanimation Protocols activate, but that unit **heals** D6 wounds (instead of D3 wounds). You cannot **resurrect** more than one unit per turn.’"
+              "en": "Once per battle, while the bearer is leading a unit, at the end of any phase, it can resurrect that unit if it is on the battlefield. When you do, that unit’s Reanimation Protocols are activated, reanimating D6 wounds rather than D3 when doing so. You cannot resurrect more than one unit per turn."
             }
           }
         ],
@@ -9533,6 +10608,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Overlord’s blade"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Resurrection Orb"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -9694,6 +10790,21 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasmic lance"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -9852,6 +10963,21 @@
           "keyword": null,
           "detachment": null
         }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Abyssal lance"
+              },
+              "cost": "0"
+            }
+          ]
+        }
       ]
     },
     {
@@ -9988,6 +11114,27 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Relic gauss blaster"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -10192,6 +11339,46 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Singularity generator"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Titanic forelimbs"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s 2 singularity generators can be replaced with 2 synaptic obliterators and 2 transdimensional projectors."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Synaptic obliterator"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Transdimensional projector"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "30",
         "afterSelections": 1
@@ -10309,6 +11496,34 @@
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Skorpekh hyperphase weapons"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "For every 3 models in this unit, this unit can have 1 Plasmacyte."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Plasmacyte"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -10474,10 +11689,33 @@
           "detachment": null
         }
       ],
-      "additionalCost": {
-        "cost": "10",
-        "afterSelections": 2
-      },
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Enmitic annihilator"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Flensing claw"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Hyperphase harvester"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "leader": {
         "en": "This model can be attached to the following units:  ■ **SKORPEKH DESTROYERS**"
       }
@@ -10641,6 +11879,21 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Staff of light"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "10",
         "afterSelections": 1
@@ -10782,10 +12035,56 @@
       },
       "points": [
         {
-          "cost": "465",
+          "cost": "445",
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Tesla sphere"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured bulk"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Powers of the C’tan"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Antimatter Meteor"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Cosmic Fire"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Time’s Arrow"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -11060,10 +12359,56 @@
       },
       "points": [
         {
-          "cost": "420",
+          "cost": "400",
           "models": "3",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Sceptre of Eternal Glory"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Staff of Stars"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Weapons of the Final Triarch"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Annihilator beam"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Armoured bulk"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -11258,6 +12603,78 @@
           "detachment": null
         }
       ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Twin gauss blaster"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Close combat weapon"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each have their twin gauss blaster replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Particle beamer"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Twin tesla carbine"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each be equipped with 1 shieldvanes."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Shieldvanes"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "Any number of models can each be equipped with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Nebuloscope"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Shadowloom"
+              },
+              "cost": "0"
+            }
+          ]
+        }
+      ],
       "additionalCost": {
         "cost": "10",
         "afterSelections": 2
@@ -11372,7 +12789,7 @@
               "en": "Transdimensional Displacement"
             },
             "description": {
-              "en": "In your Movement phase, when this unit is selected to make an **advance move**, you can use this ability. If you do:\n▪ That **advance move** has no **maximum distance**.\n▪ This unit can move through all types of model (including enemy models and **MONSTER**/**VEHICLE** models).\n▪ After moving, this unit must be more than 8\" horizontally from all enemy units."
+              "en": "Each time this model is selected to Advance, you can remove it from the battlefield and set it up again anywhere on the battlefield that is more than 8\" horizontally away from all enemy units."
             }
           },
           {
@@ -11439,6 +12856,27 @@
           "detachment": {
             "en": "Pantheon of Woe"
           }
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Seismic assault"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Crackling tendrils"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
@@ -11572,6 +13010,21 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Empathic Obliterator"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "leader": {
@@ -11738,6 +13191,40 @@
           "models": "5",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Rod of covenant"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "All models in this unit can each have their rod of covenant replaced with 1 particle caster and 1 voidblade."
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Particle caster"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Voidblade"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ]
     },
@@ -11918,6 +13405,46 @@
           "models": "1",
           "keyword": null,
           "detachment": null
+        }
+      ],
+      "wargearOptions": [
+        {
+          "instruction": {
+            "en": "Default Wargear"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Heat ray"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Stalker’s forelimbs"
+              },
+              "cost": "0"
+            }
+          ]
+        },
+        {
+          "instruction": {
+            "en": "This model’s heat ray can be replaced with one of the following:"
+          },
+          "options": [
+            {
+              "name": {
+                "en": "Particle shredder"
+              },
+              "cost": "0"
+            },
+            {
+              "name": {
+                "en": "Heavy gauss cannon array"
+              },
+              "cost": "0"
+            }
+          ]
         }
       ],
       "additionalCost": {
