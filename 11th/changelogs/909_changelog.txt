@@ -12,7 +12,7 @@ FACTION: Dark Angels
   DATASHEETS:
     Modified (10):
       ~ Deathwing Knights
-        - additionalCost: Additional selection cost: +20 -> +20 pts
+        - additionalCost: Additional selection cost of +20 pts now applies after 2 selections (previously after 1 selection)
       ~ Inner Circle Companions
         - points: 6 models: 170 -> 160 pts
         - abilities.other: modified: Braziers of Judgement
@@ -63,6 +63,11 @@ FACTION: Dark Angels
       ~ Interrogation Conclave
         - forceDisposition: Purge the Foe -> Take and Hold
 
+  DETACHMENT RULES:
+    Modified (1):
+      ~ Company of Hunters
+        - rules: Masters of Manoeuvre: paragraph 1 text updated
+
 ------------------------------------------------------------
 FACTION: Dark Angels (Combat Patrol)
 ------------------------------------------------------------
@@ -70,17 +75,17 @@ FACTION: Dark Angels (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Master Zacharial
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
       ~ Vengeful Brethren Bladeguard Veteran Squad
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
         - abilities.other: modified: Bladeguard (Once per turn per unit)
       ~ Vengeful Brethren Hellblaster Squad
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
       ~ Vengeful Brethren Intercessor Squad
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
 
 ------------------------------------------------------------
@@ -111,6 +116,11 @@ FACTION: Death Guard
       ~ Contagion Engines
         - forceDisposition: Purge the Foe -> Reconnaissance
 
+  DETACHMENT RULES:
+    Modified (1):
+      ~ Virulent Vectorium
+        - rules: Worldblight: paragraph 1 text updated
+
 ------------------------------------------------------------
 FACTION: Death Guard (Combat Patrol)
 ------------------------------------------------------------
@@ -118,15 +128,15 @@ FACTION: Death Guard (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Maggot Lords Chaos Rhino
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Maggot Lords Deathshroud Terminators
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Plaguespurt Gauntlet: BS/WS: 6+ -> -
         - meleeWeapons: Manreaper – Sweep: A: 4 -> 8
       ~ Septimol Fulg, Maggot Lords Tallyman
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Sholgor the Putrid
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Twin Plague Spewer: BS/WS: 6+ -> -
 
 ------------------------------------------------------------
@@ -171,18 +181,21 @@ FACTION: Tyranids (Combat Patrol)
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (5):
+    Modified (6):
       ~ Terror of Vardenghast
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Vardenghast Swarm Barbgaunts
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
       ~ Vardenghast Swarm Psychophage
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Vardenghast Swarm Termagants
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
+        - abilities.other: modified: Skulking Horrors (Once per phase per unit)
+      ~ Vardenghast Swarm Termagants
+        - points: 10 models: Removed explicit points value (was 0 pts)
         - abilities.other: modified: Skulking Horrors (Once per phase per unit)
       ~ Vardenghast Swarm Von Ryan's Leapers
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
         - abilities.other: modified: Pouncing Leap (Once per turn per unit)
 
 ------------------------------------------------------------
@@ -190,10 +203,14 @@ FACTION: Adeptus Astartes
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (33):
+    Modified (37):
       ~ Aggressor Squad
         - points: 6 models: 180 -> 165 pts
         - points: 3 models: 90 -> 80 pts
+      ~ Apothecary Biologis
+        - attachesTo: Can no longer be attached to Eradicator Squad with Heavy Bolters (Support)
+      ~ Captain in Gravis Armour
+        - attachesTo: Can no longer be attached to Eradicator Squad with Heavy Bolters (Leader)
       ~ Captain Titus
         - points: 1 models: 90 -> 100 pts
       ~ Cato Sicarius
@@ -225,6 +242,8 @@ FACTION: Adeptus Astartes
       ~ Intercessor Squad
         - abilities.other: added: Hail of Bolts
         - abilities.other: removed: Target Elimination
+      ~ Iron Father Feirros
+        - attachesTo: Can no longer be attached to Eradicator Squad with Heavy Bolters (Leader)
       ~ Land Speeder
         - points: 1 models: 95 -> 105 pts
         - additionalCost: Removed additional selection cost (+10 pts)
@@ -264,8 +283,11 @@ FACTION: Adeptus Astartes
       ~ Thunderhawk Gunship
         - keywords: removed: Aircraft
         - keywords: removed: Frame
+      ~ Tor Garadon
+        - attachesTo: Can no longer be attached to Eradicator Squad with Heavy Bolters (Leader)
       ~ Uriel Ventris
         - points: 1 models: 95 -> 105 pts
+        - attachesTo: Can now be attached to Victrix Honour Guard (Leader)
         - leader: Changed
       ~ Vanguard Veteran Squad with Jump Packs
         - points: 10 models: 210 -> 220 pts
@@ -337,6 +359,10 @@ FACTION: Adeptus Astartes
       ~ Ironstorm Spearhead
         - forceDisposition: Purge the Foe -> Take and Hold
 
+  DETACHMENT RULES:
+    Added (1):
+      + Vengeful Hosts
+
   ARMY RULES:
     Modified (1):
       ~ Oath of Moment
@@ -349,26 +375,26 @@ FACTION: Adeptus Astartes (Combat Patrol)
   DATASHEETS:
     Modified (5):
       ~ Assault Force Captain
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
         - abilities.faction: removed: Space Marine Chapters
       ~ Assault Force Intercessor Squad
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Bolt Pistol: A: 2 -> 1; AP: -1 -> 0
         - abilities.faction: removed: Oath of Moment
         - abilities.faction: removed: Space Marine Chapters
       ~ Assault Force Land Speeder
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
         - abilities.faction: removed: Space Marine Chapters
         - loadout: Changed
       ~ Assault Force Librarian
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Bolt Pistol: AP: -1 -> 0
         - abilities.faction: removed: Oath of Moment
         - abilities.faction: removed: Space Marine Chapters
       ~ Assault Force Vanguard Veteran Squad With Jump Packs
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
         - abilities.faction: removed: Space Marine Chapters
 
@@ -386,20 +412,28 @@ FACTION: Blood Angels
       ~ Ordained Sacrifice
         - description: Changed
 
+  DETACHMENT RULES:
+    Modified (1):
+      ~ The Angelic Host
+        - rules: Upon Wings of Fire: paragraph 3 text updated
+
 ------------------------------------------------------------
 FACTION: Blood Angels (Combat Patrol)
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (3):
+    Modified (4):
       ~ Captain Raldeo
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
       ~ Sanguinary Spearhead Assault Intercessor Squad
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
       ~ Sanguinary Spearhead Sanguinary Guard
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
+        - abilities.faction: removed: Oath of Moment
+      ~ Sanguinary Spearhead Sanguinary Guard
+        - points: 3 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
 
 ------------------------------------------------------------
@@ -423,7 +457,7 @@ FACTION: Black Templars
         - points: 1 models: 85 -> 70 pts
         - additionalCost: Added additional selection cost (+10 pts)
       ~ Marshal
-        - additionalCost: Additional selection cost: +10 -> +10 pts
+        - additionalCost: Additional selection cost of +10 pts now applies after 2 selections (previously after 1 selection)
       ~ Repulsor Executioner
         - points: 1 models: 245 -> 255 pts
         - wargearOptions: Heavy laser destroyer: 0 -> 10 pts
@@ -447,14 +481,14 @@ FACTION: Black Templars (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Emperor's Champion Vedrenn
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Vow-Sworn Bladeguard Veteran Squad
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
       ~ Vow-Sworn Crusader Squad
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Pyreblaster: BS/WS: 3+ -> -
       ~ Vow-Sworn Sword Brethren Squad
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Pyre Pistol: BS/WS: 3+ -> -
 
 ------------------------------------------------------------
@@ -474,7 +508,7 @@ FACTION: Space Wolves
       ~ Ragnar Blackmane
         - points: 1 models: 100 -> 90 pts
       ~ Wolf Guard Terminators
-        - additionalCost: Additional selection cost: +10 -> +15 pts
+        - additionalCost: Additional selection cost: +10 -> +15 pts; applies after 1 selection -> 2 selections
       ~ Wolf Scouts
         - points: 12 models: 190 -> 180 pts
         - points: 6 models: 95 -> 90 pts
@@ -505,18 +539,18 @@ FACTION: Space Wolves (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Askar's Wolfpack Blood Claws
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
       ~ Askar's Wolfpack Wolf Guard Terminators
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
       ~ Askar's Wolfpack Wulfen
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
         - wargearOptions: Added Frost Blades and Feral Claws at 0 pts
         - wargearOptions: Removed Feral Claws
         - abilities.faction: removed: Oath of Moment
       ~ Fyrri Askar
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - abilities.faction: removed: Oath of Moment
 
 ------------------------------------------------------------
@@ -603,13 +637,13 @@ FACTION: Thousand Sons (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Kaa'skrek
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Prism of Zadophon Rubric Marines
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ Prism of Zadophon Tzaangor Enlightened
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
       ~ Zadophon the Soul Eater
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: World Eaters
@@ -679,14 +713,14 @@ FACTION: World Eaters (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Frenzied Reavers Jakhals
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ Frenzied Reavers Khorne Berzerkers
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Bolt Pistol: S: 3 -> 4
       ~ Frenzied Reavers Master of Executions
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Vorrakh, Lord of the Frenzied Reavers
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Heretic Astartes
@@ -697,7 +731,7 @@ FACTION: Heretic Astartes
       ~ Abaddon the Despoiler
         - points: 1 models: 285 -> 295 pts
       ~ Accursed Cultists
-        - additionalCost: Additional selection cost: +20 -> +20 pts
+        - additionalCost: Additional selection cost of +20 pts now applies after 2 selections (previously after 1 selection)
       ~ Chaos Lord with Jump Pack
         - points: 1 models: 90 -> 80 pts
       ~ Chaos Predator Annihilator
@@ -713,9 +747,9 @@ FACTION: Heretic Astartes
       ~ Chosen
         - points: 10 models: 250 -> 270 pts
         - points: 5 models: 125 -> 135 pts
-        - additionalCost: Additional selection cost: +10 -> +10 pts
+        - additionalCost: Additional selection cost of +10 pts now applies after 2 selections (previously after 1 selection)
       ~ Dark Commune
-        - additionalCost: Additional selection cost: +10 -> +10 pts
+        - additionalCost: Additional selection cost of +10 pts now applies after 2 selections (previously after 1 selection)
       ~ Defiler
         - additionalCost: Additional selection cost: +30 -> +40 pts
         - wargearOptions: Hades lascannon: 10 -> 15 pts
@@ -750,6 +784,11 @@ FACTION: Heretic Astartes
       ~ Soulforged Warpack
         - forceDisposition: Purge the Foe -> Take and Hold
 
+  DETACHMENT RULES:
+    Modified (1):
+      ~ Cabal of Chaos
+        - rules: Empyric Wellspring: paragraph 1 text updated
+
 ------------------------------------------------------------
 FACTION: Heretic Astartes (Combat Patrol)
 ------------------------------------------------------------
@@ -757,13 +796,13 @@ FACTION: Heretic Astartes (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Aranis Zarkan
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Zarkan's Daemonkin Cultist Mob
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ Zarkan's Daemonkin Legionaries
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ Zarkan's Daemonkin Possessed
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Legiones Daemonica
@@ -897,7 +936,7 @@ FACTION: Astra Militarum
       ~ Leman Russ Demolisher
         - points: 1 models: 190 -> 180 pts
       ~ Militarum Tempestus Command Squad
-        - additionalCost: Additional selection cost: +10 -> +10 pts
+        - additionalCost: Additional selection cost of +10 pts now applies after 2 selections (previously after 1 selection)
       ~ Shadowsword
         - points: 1 models: 410 -> 375 pts
         - additionalCost: Additional selection cost: +20 -> +30 pts
@@ -937,20 +976,27 @@ FACTION: Astra Militarum
       ~ Mechanised Assault
         - forceDisposition: Purge the Foe -> Reconnaissance
 
+  DETACHMENT RULES:
+    Modified (1):
+      ~ Recon Element
+        - rules: Masters of Camouflage: paragraph 1 text updated
+
 ------------------------------------------------------------
 FACTION: Astra Militarum (Combat Patrol)
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (3):
+    Modified (4):
       ~ Drayden's Lance Attilan Rough Riders
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
+      ~ Drayden's Lance Attilan Rough Riders
+        - points: 5 models: Removed explicit points value (was 0 pts)
       ~ Drayden's Lance Command Squad
-        - points: 4 models: 0 -> null pts
+        - points: 4 models: Removed explicit points value (was 0 pts)
         - keywords: added: Officer
         - loadout: Changed
       ~ Drayden's Lance Kasrkin
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Flamer: BS/WS: 6+ -> -
         - abilities.other: modified: Melta Mine (Once per battle, per unit)
 
@@ -984,6 +1030,11 @@ FACTION: Imperial Knights
         - forceDisposition: Purge the Foe -> Priority Assets
       ~ Freeblade Company
         - forceDisposition: Purge the Foe -> Priority Assets
+
+  DETACHMENT RULES:
+    Modified (1):
+      ~ Gate Warden Lance
+        - rules: Dauntless Defenders: paragraph 1 text updated
 
 ------------------------------------------------------------
 FACTION: Grey Knights
@@ -1040,6 +1091,11 @@ FACTION: Grey Knights
       ~ Argent Assault
         - forceDisposition: Purge the Foe -> Priority Assets
 
+  DETACHMENT RULES:
+    Modified (1):
+      ~ Immaterial Interdiction
+        - rules: Echojump: paragraph 1 text updated
+
   ARMY RULES:
     Modified (1):
       ~ Gate of Infinity
@@ -1052,14 +1108,14 @@ FACTION: Grey Knights (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Crowe's Sanctifiers Brotherhood Terminator Squad
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
       ~ Crowe's Sanctifiers Strike Squad
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Incinerator: BS/WS: 3+ -> -
       ~ Crowe's Sanctifiers Venerable Dreadnought
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Sanctifiers Castellan Crowe
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Adepta Sororitas
@@ -1068,7 +1124,7 @@ FACTION: Adepta Sororitas
   DATASHEETS:
     Modified (13):
       ~ Celestian Sacresants
-        - additionalCost: Additional selection cost: +15 -> +10 pts
+        - additionalCost: Additional selection cost: +15 -> +10 pts; applies after 1 selection -> 2 selections
       ~ Dominion Squad
         - points: 10 models: 100 -> 90 pts
       ~ Hospitaller
@@ -1141,15 +1197,15 @@ FACTION: Adepta Sororitas (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Sanctuary Canoness Adalya
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Sanctuary Guardians Arco-Flagellants
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ Sanctuary Guardians Battle Sisters Squad
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Ministorum Flamer: BS/WS: 6+ -> -
         - rangedWeapons: Ministorum Heavy Flamer: BS/WS: 6+ -> -
       ~ Sanctuary Guardians Celestian Sacresants
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Adeptus Mechanicus
@@ -1189,6 +1245,13 @@ FACTION: Adeptus Mechanicus
       ~ Haloscreed Battle Clade
         - forceDisposition: Purge the Foe -> Priority Assets
 
+  DETACHMENT RULES:
+    Modified (2):
+      ~ Skitarii Hunter Cohort
+        - rules: Stealth Optimisation: paragraph 1 text updated
+      ~ Rad-Zone Corps
+        - rules: Rad-Bombardment: paragraph 3 text updated
+
 ------------------------------------------------------------
 FACTION: Adeptus Mechanicus (Combat Patrol)
 ------------------------------------------------------------
@@ -1196,16 +1259,16 @@ FACTION: Adeptus Mechanicus (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Manipulus Skand
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Transonic Cannon: BS/WS: 6+ -> -
       ~ Purge Corps Pteraxii Sterylizors
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Phosphor Torch: BS/WS: 6+ -> -
       ~ Purge Corps Serberys Sulphurhounds
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Sulphur breath: BS/WS: 6+ -> -
       ~ Purge Corps Skitarii Vanguard
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
 
   ENHANCEMENTS:
     Modified (1):
@@ -1262,16 +1325,16 @@ FACTION: Adeptus Custodes (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Gilded Blades Allarus Custodians
-        - points: 2 models: 0 -> null pts
+        - points: 2 models: Removed explicit points value (was 0 pts)
       ~ Gilded Blades Custodian Guard
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Sentinel Blade – Ranged: Added
         - meleeWeapons: Sentinel Blade – Melee: Added
         - meleeWeapons: Sentinel Blade: Removed
       ~ Gilded Blades Custodian Wardens
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
       ~ Tristraen of the Gilded Blades
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Agents of the Imperium
@@ -1341,18 +1404,20 @@ FACTION: Agents of the Imperium (Combat Patrol)
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (4):
+    Modified (5):
       ~ Inquisitor's Hand Eversor Assassin
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Inquisitor's Hand Inquisitorial Agents
-        - points: 6 models: 0 -> null pts
+        - points: 6 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Plasma Pistol – Standard: AP: -1 -> -2
         - rangedWeapons: Plasma Pistol – Supercharge: AP: -2 -> -3
         - abilities.other: modified: Tome Skull (Once per battle per unit)
       ~ Inquisitor's Hand Vigilant Squad
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
+      ~ Inquisitor's Hand Vigilant Squad
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ Preacher Teguen
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Zealot's Vindictor: BS/WS: 3+ -> -
 
 ------------------------------------------------------------
@@ -1365,7 +1430,7 @@ FACTION: Orks
         - points: 1 models: 100 -> 115 pts
         - additionalCost: Removed additional selection cost (+10 pts)
       ~ Big Mek with Shokk Attack Gun
-        - additionalCost: Additional selection cost: +10 -> +10 pts
+        - additionalCost: Additional selection cost of +10 pts now applies after 1 selection (previously after 2 selections)
       ~ Blitza-bommer
         - keywords: removed: Frame
       ~ Boomdakka Snazzwagon
@@ -1453,22 +1518,28 @@ FACTION: Orks
       ~ Green Tide
         - detachmentPoints: 2 -> 3
 
+  DETACHMENT RULES:
+    Added (1):
+      + Equatorial Hordes
+
 ------------------------------------------------------------
 FACTION: Orks (Combat Patrol)
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (5):
+    Modified (6):
       ~ ’Ardmob Boyz
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
+      ~ ’Ardmob Boyz
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ ’Ardmob Gretchin
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ ’Ardmob Warboss
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ ’Ardmob Wartrakk
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ 'Ardmob Weirdboy
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Leagues of Votann
@@ -1507,13 +1578,13 @@ FACTION: Leagues of Votann (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Bane Slayer's Bulwark Brokhyr Thunderkyn
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
       ~ Bane-Slayer's Bulwark Einhyr Hearthguard
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
       ~ Bane-Slayer's Bulwark Hearthkyn Warriors
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ Vynn Bane-Slayer
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: T’au Empire
@@ -1574,13 +1645,13 @@ FACTION: T’au Empire (Combat Patrol)
   DATASHEETS:
     Modified (4):
       ~ Commander Cloudspear
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Sudden Dawn Cadre Breacher Team
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ Sudden Dawn Cadre Devilfish
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Sudden Dawn Cadre Pathfinder Team
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Necrons
@@ -1646,6 +1717,11 @@ FACTION: Necrons
       ~ Pantheon of Woe
         - forceDisposition: Purge the Foe -> Disruption
 
+  DETACHMENT RULES:
+    Modified (1):
+      ~ Pantheon of Woe
+        - rules: Cosmic Distortion: "Reletavistic Tether" text updated
+
   ARMY RULES:
     Modified (1):
       ~ Reanimation Protocols
@@ -1658,15 +1734,15 @@ FACTION: Necrons (Combat Patrol)
   DATASHEETS:
     Modified (5):
       ~ Amonhotekh's Guard Canoptek Doomstalker
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
       ~ Amonhotekh's Guard Canoptek Scarab Swarms
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
       ~ Amonhotekh's Guard Necron Warriors
-        - points: 10 models: 0 -> null pts
+        - points: 10 models: Removed explicit points value (was 0 pts)
       ~ Amonhotekh's Guard Skorpekh Destroyers
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
       ~ Overlord Amonhotekh
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Asuryani
@@ -1779,17 +1855,19 @@ FACTION: Asuryani (Combat Patrol)
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (4):
+    Modified (5):
       ~ Kygharil's Protectors Dire Avengers
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
+      ~ Kygharil's Protectors Dire Avengers
+        - points: 5 models: Removed explicit points value (was 0 pts)
       ~ Kygharil's Protectors Warp Spiders
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Death Spinner: BS/WS: 6+ -> -
         - rangedWeapons: Death Weavers: BS/WS: 6+ -> -
       ~ Kygharil's Protectors Wraithblades
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
       ~ Spiritseer Kygharil
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - abilities.other: modified: Tears of Isha (Psychic)
 
 ------------------------------------------------------------
@@ -1835,17 +1913,19 @@ FACTION: Drukhari (Combat Patrol)
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (4):
+    Modified (5):
       ~ Coven of Agonies Cronos
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Spirit Syphon: BS/WS: 6+ -> -
       ~ Coven of Agonies Talos
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Twin Liquifier Gun: BS/WS: 3+ -> -
       ~ Coven of Agonies Wracks
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
+      ~ Coven of Agonies Wracks
+        - points: 5 models: Removed explicit points value (was 0 pts)
       ~ Xatrophos Nuul
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Genestealer Cults
@@ -1902,20 +1982,23 @@ FACTION: Genestealer Cults (Combat Patrol)
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (4):
+    Modified (5):
       ~ Claw of Ascension Achilles Ridgerunner
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Twin Heavy Stubber: Added
         - rangedWeapons: Missile Launcher: Added
         - meleeWeapons: Twin Heavy Stubber: Removed
         - meleeWeapons: Missile Launcher: Removed
       ~ Claw of Ascension Atalan Jackals
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
       ~ Claw of Ascension Hybrid Metamorphs
-        - points: 5 models: 0 -> null pts
+        - points: 5 models: Removed explicit points value (was 0 pts)
+        - rangedWeapons: Hand Flamer: BS/WS: 6+ -> -
+      ~ Claw of Ascension Hybrid Metamorphs
+        - points: 5 models: Removed explicit points value (was 0 pts)
         - rangedWeapons: Hand Flamer: BS/WS: 6+ -> -
       ~ Shanus Daskovian
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ------------------------------------------------------------
 FACTION: Emperor’s Children
@@ -1968,25 +2051,28 @@ FACTION: Emperor’s Children (Combat Patrol)
 ------------------------------------------------------------
 
   DATASHEETS:
-    Modified (3):
+    Modified (4):
       ~ Callous Blades Flawless Blades
-        - points: 3 models: 0 -> null pts
+        - points: 3 models: Removed explicit points value (was 0 pts)
+      ~ Callous Blades Flawless Blades
+        - points: 3 models: Removed explicit points value (was 0 pts)
       ~ Callous Blades Infractors
         - points: Added 10 models option at null pts
       ~ Lord Kaphrael of the Callous Blades
-        - points: 1 models: 0 -> null pts
+        - points: 1 models: Removed explicit points value (was 0 pts)
 
 ================================================================================
 STATISTICS
 ================================================================================
-Total factions processed: 53
+Total factions processed: 54
 Factions with changes: 52
-Factions without changes: 1
+Factions without changes: 2
 
-Datasheets:    +0 added, -0 removed, ~404 modified
+Datasheets:    +0 added, -0 removed, ~417 modified
 Stratagems:    +7 added, -1 removed, ~31 modified
 Enhancements:  +4 added, -0 removed, ~47 modified
 Detachments:   +2 added, -0 removed, ~63 modified
+Detach. Rules: +2 added, -0 removed, ~10 modified
 Army Rules:    +0 added, -0 removed, ~6 modified
 ================================================================================
 
