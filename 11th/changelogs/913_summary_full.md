@@ -6,7 +6,7 @@ Points updates to Agents of the Imperium and minor datasheet changes
 **Agents of the Imperium**
 - Callidus Assassin: decreased points (140→115)
 - Culexus Assassin: decreased points (125→95)
-- Eversor Assassin: added 1 models (Veiled Blade Elimination Force) option at 115 pts
+- Eversor Assassin: added 1 model (Veiled Blade Elimination Force) option at 115 pts
 - Vindicare Assassin: decreased points (155→130)
 
 **Necrons**
