@@ -6,8 +6,8 @@
     "banner": "#561113",
     "header": "#570c0c"
   },
-  "compatibleDataVersion": 925,
-  "updated": "2026-08-05T10:09:29.217Z",
+  "compatibleDataVersion": 931,
+  "updated": "2026-08-26T09:28:57.483Z",
   "parent_id": null,
   "parent_name": null,
   "rules": {
@@ -35,7 +35,7 @@
             "order": 3,
             "type": "text",
             "text": {
-              "en": "If your Army Faction is **ADEPTA SORORITAS**, you gain 1 Miracle dice:\n\n■ At the start of each battle round.\n■ Each time an **ADEPTA SORORITAS** unit from your army is destroyed.\n\nEach time you gain a Miracle dice, roll one D6. The number you roll is the value of that Miracle dice. This value cannot be changed or re‐rolled, unless a rule specifically states otherwise. Keep your Miracle dice to one side – this is your Miracle dice pool."
+              "en": "If your Army Faction is **ADEPTA SORORITAS**, you gain 1 Miracle dice:\n\n■ At the start of each turn.\n■ Each time an **ADEPTA SORORITAS** unit from your army is destroyed.\n\nEach time you gain a Miracle dice, roll one D6. The number you roll is the value of that Miracle dice. This value cannot be changed or re‐rolled, unless a rule specifically states otherwise. Keep your Miracle dice to one side – this is your Miracle dice pool."
             }
           },
           {
@@ -264,7 +264,7 @@
                 "order": 1,
                 "type": "text",
                 "text": {
-                  "en": "In your Command phase, you can select up to 3 **ADEPTA SORORITAS** units from your army (including units that are embarked within **TRANSPORTS**), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\n\n■ Add 1\" to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by **BATTLE SISTERS SQUAD**, **CELESTIAN SACRESANTS** and **PARAGON WARSUITS** models in that unit by 1."
+                  "en": "In your Command phase, you can select up to 3 **ADEPTA SORORITAS** units from your army (including units that are embarked within **TRANSPORTS**), until the start of your next Command phase, those units are Righteous. While a unit is Righteous:\n\n■ Add 1\" to the Move characteristic of models in that unit.\n■ Improve the Leadership characteristic of models in that unit by 1.\n■ Improve the Weapon Skill and Ballistic Skill characteristics of weapons equipped by **BATTLE SISTERS SQUAD**, **CELESTIAN INSIDIANTS**, **CELESTIAN SACRESANTS** and **PARAGON WARSUITS** models in that unit by 1."
                 }
               }
             ],
@@ -294,7 +294,7 @@
                 "order": 1,
                 "type": "text",
                 "text": {
-                  "en": "Friendly <k>Celestian Sacresants</k> units’ attacks have +1 <b>BS</b> and <b>WS</b>.\rThis <b>detachment</b> has the <k>REVEREND</k> tag and cannot be taken with another <k>REVEREND</k> <b>detachment</b>.",
+                  "en": "Friendly <k>Celestian</k> units’ attacks have +1 <b>BS</b> and <b>WS</b>.\nThis <b>detachment</b> has the <k>REVEREND</k> tag and cannot be taken with another <k>REVEREND</k> <b>detachment</b>.",
                   "de": "Die Attacken befreundeter <k>Celestia-Sacresantis</k>-Einheiten haben +1 <b>BF</b> und <b>KG</b>.\rDieses <b>Kontingent</b> hat die Kennzeichnung <k>Ehrwürden</k> und kann nicht zusammen mit einem anderen <b>Kontingent</b> mit der Kennzeichnung <k>Ehrwürden</k> gewählt werden.",
                   "es": "Los ataques de las unidades <k>Celestes Sacrosantas</k> amigas tienen +1 a <b>HP</b> y +1 a <b>HA</b>.\nEste <b>destacamento</b> tiene la etiqueta <k>REVERENDO</k> y no puede incluirse junto a otro <b>destacamento</b> <k>REVERENDO</k>.",
                   "fr": "Les attaques des unités de <k>Célestes Sacro-saintes</k> amies ont +1 en <b>CT</b> et <b>CC</b>.\nCe <b>détachement</b> a l’étiquette <k>Révérend</k> et ne peut pas être pris avec un autre <b>détachement</b> <k>Révérend</k>",
@@ -1023,13 +1023,13 @@
       "type": "Epic Deed",
       "phase": ["any"],
       "target": {
-        "en": "One **ADEPTA SORORITAS CHARACTER** unit from your army that was just destroyed. You can use this Stratagem on that unit even though it was just destroyed."
+        "en": "One **ADEPTA SORORITAS CHARACTER** model from your army that was just **destroyed**. You can use this Stratagem on that model even though it was just **destroyed**."
       },
       "when": {
         "en": "Any phase."
       },
       "effect": {
-        "en": "You can discard 1-3 Miracle dice. At the end of the phase, set up one **destroyed CHARACTER** model from your unit on the battlefield, **unengaged** and as close as possible to where it was **destroyed**. That model is not part of an **attached** unit and its unit has a **starting strength** of 1. Roll one D3, adding 1 to the result for each Miracle dice you discarded. That model has that number of wounds remaining (up to its starting number of wounds)."
+        "en": "You can discard 1-3 Miracle dice. At the end of the phase, set up that model on the battlefield, **unengaged** and as close as possible to where it was **destroyed**. That model is not part of an **attached** unit and its unit has a **starting strength** of 1. Roll one D3, adding 1 to the result for each Miracle dice you discarded. That model has that number of wounds remaining (up to its starting number of wounds)."
       },
       "restrictions": {
         "en": "You cannot select **SAINT CELESTINE** as the target of this Stratagem. You cannot select the same **CHARACTER** as the target of this Stratagem more than once per battle."
@@ -4229,6 +4229,9 @@
         },
         {
           "en": "Celestian Insidiants"
+        },
+        {
+          "en": "Celestian"
         }
       ],
       "stats": [
@@ -5059,7 +5062,7 @@
               "en": "Mysterious Saviours"
             },
             "description": {
-              "en": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do:\n\n▪ That use is -1 CP.\n▪ That use does not prevent any uses of that stratagem on other units this phase."
+              "en": "You can target this unit with the Heroic Intervention stratagem, regardless of any other uses of that stratagem this phase. If you do:\n\n■ That use is -1 CP.\n■ That use does not prevent any uses of that stratagem on other units this phase."
             }
           }
         ],
@@ -7479,7 +7482,7 @@
         }
       ],
       "leader": {
-        "en": "This model can be attached to the following units:  ■ **CRUSADERS** ■ **BATTLE SISTERS SQUAD** ■ **CELESTIAN INSIDIANTS** ■ **CELESTIAN SACRESANTS** ■ **DOMINION SQUAD** ■ **RETRIBUTOR SQUAD** ■ **SISTERS NOVITIATE SQUAD**"
+        "en": "This model can be attached to the following units:  ■ ***CRUSADERS** ■ **BATTLE SISTERS SQUAD** ■ **CELESTIAN INSIDIANTS** ■ **CELESTIAN SACRESANTS** ■ **DOMINION SQUAD** ■ **RETRIBUTOR SQUAD** ■ **SISTERS NOVITIATE SQUAD**"
       },
       "attachesTo": [
         {
@@ -10027,7 +10030,7 @@
               "en": "Healing Tears"
             },
             "description": {
-              "en": "While this unit contains a Celestine model, in your Command phase, if this unit is below its Starting Strength, either one destroyed Geminae Superia model or up to D3 other Bodyguard models are returned to this unit."
+              "en": "While this unit contains a Celestine model, in your Command phase, you can return 1 destroyed Geminae Superia model to this unit."
             }
           },
           {
