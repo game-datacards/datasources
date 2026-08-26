@@ -8,8 +8,8 @@
     "banner": "#2a2a1a",
     "header": "#2a2a1a"
   },
-  "updated": "2026-07-29T09:25:27.207Z",
-  "compatibleDataVersion": 466,
+  "updated": "2026-08-26T11:17:21.194Z",
+  "compatibleDataVersion": 476,
   "warscrolls": [
     {
       "id": "587d5b55-d2a2-5941-9fd3-c5ec85ef464a",
@@ -19,23 +19,23 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Ogor", "Gutbusters", "Infantry", "Hero"],
+      "keywords": ["Beastclaw", "Maw Nomad", "Ogor", "Infantry", "Hero"],
       "factionKeywords": [
         "Ogor Mawtribes",
         "Grand Alliance Destruction",
-        "The Roving Maw"
+        "Beastclaw Alfrostun"
       ],
-      "referenceKeywords": "Hero, Infantry, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "referenceKeywords": "Hero, Infantry, Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "6\"",
         "save": "5+",
-        "control": "5",
+        "control": "3",
         "health": "8",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 110,
+      "points": 130,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -43,26 +43,15 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Impaling Spear",
+            "name": "Skullshatter Crossbow and Impaling Spear",
             "type": "ranged",
-            "range": "12\"",
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "1",
-            "damage": "D6",
-            "abilities": ["Anti-MONSTER (+1 Rend)"]
-          },
-          {
-            "name": "Skullshatter Crossbow",
-            "type": "ranged",
-            "range": "18\"",
-            "attacks": "2",
+            "range": "15\"",
+            "attacks": "4",
             "hit": "4+",
             "wound": "3+",
             "rend": "1",
-            "damage": "D3",
-            "abilities": []
+            "damage": "D3+1",
+            "abilities": ["Anti-MONSTER (+1 Rend)"]
           }
         ],
         "melee": [
@@ -81,19 +70,19 @@
       },
       "abilities": [
         {
-          "name": "Unrelenting Hunter",
-          "phase": "movementPhase",
-          "phaseDetails": "Once Per Turn (Army), Enemy Movement Phase",
-          "icon": "movement",
+          "name": "The First Shot's Mine",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+          "icon": "shooting",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "If this unit is more than 9\" from all enemy units, it can use the ‘Normal Move’ ability as if it were your movement phase."
+          "declare": "Pick an enemy unit that had any damage points allocated to it this turn by this unit’s shooting attacks to be the target.",
+          "effect": "For the rest of the phase, add 1 to hit rolls for shooting attacks made by friendly **BEASTCLAW** units that target that enemy unit."
         },
         {
-          "name": "Beast-breaker",
+          "name": "Biggest-Game Hunter",
           "phase": "shootingPhase",
           "phaseDetails": "Passive",
           "icon": "shooting",
@@ -102,13 +91,13 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If the target is a **MONSTER**, the Damage characteristic of this unit’s **Skullshatter** **Crossbow** is 3 and the **Damage** characteristic of its **Impaling** **Spear** is 6."
+          "effect": "The Damage characteristic of this unit’s **Skullshatter Crossbow and Impaling Spear** is 4 if the target is a **MONSTER**."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "40mm",
-      "notes": "This HERO can join a Tyrant’s regiment."
+      "notes": "This HERO can join an eligible regiment as a Maw Nomad."
     },
     {
       "id": "d43728f4-7c1e-5ef5-a9fc-0e94ea0fe24c",
@@ -118,23 +107,31 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Wizard (1)", "Ogor", "Gutbusters", "Infantry", "Hero"],
+      "keywords": [
+        "Mawseekers",
+        "Wizard (1)",
+        "Ogor",
+        "Infantry",
+        "Ward (6+)",
+        "Hero"
+      ],
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Ogor Mawtribes",
-        "The Roving Maw"
+        "The Roving Maw",
+        "Mawseeker Gollop"
       ],
-      "referenceKeywords": "Hero, Wizard (1), Infantry, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "referenceKeywords": "Hero, Wizard (1), Infantry, Ward (6+), Destruction, Ogor Mawtribes, Ogor, Mawseekers",
       "stats": {
         "move": "6\"",
         "save": "5+",
-        "control": "5",
-        "health": "7",
-        "ward": null,
+        "control": "3",
+        "health": "8",
+        "ward": "6+",
         "wizard": "1",
         "priest": null
       },
-      "points": 150,
+      "points": 170,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -145,10 +142,10 @@
             "name": "Butcher's Tools",
             "type": "melee",
             "range": null,
-            "attacks": "3",
+            "attacks": "4",
             "hit": "4+",
             "wound": "2+",
-            "rend": "1",
+            "rend": "2",
             "damage": "3",
             "abilities": []
           }
@@ -156,21 +153,97 @@
       },
       "abilities": [
         {
-          "name": "Savage Hunger",
-          "phase": "chargePhase",
-          "phaseDetails": "Passive",
-          "icon": "movement",
+          "name": "Trogg-Guts",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Movement Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **OGOR MAWTRIBES** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, the target has **WARD (6+)** until the start of your next turn. If you picked a **MAWSEEKERS** unit, it has **WARD (5+)** until the start of your next turn instead."
+        },
+        {
+          "name": "More Meat for the Pot",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While they are wholly within 12\" of this unit, friendly **GUTBUSTERS** units can use **CHARGE** abilities even if they used a **RUN** ability in the same turn."
+          "effect": "If any damage points were allocated to an enemy unit this turn by this unit’s combat attacks or by combat attacks made by a **MANIFESTATION** summoned by this unit, and that enemy unit has been destroyed, add 1 to this unit’s power level for the rest of the battle."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "50mm",
+      "notes": null
+    },
+    {
+      "id": "a8412faa-3b5e-52b1-a7fd-bf608e85446d",
+      "name": "Cleavers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factions": ["Ogor Mawtribes"],
+      "keywords": ["Champion", "Mawseekers", "Ogor", "Infantry", "Ward (6+)"],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Mawseeker Gollop",
+        "The Roving Maw"
+      ],
+      "referenceKeywords": "Infantry, Champion, Ward (6+), Destruction, Ogor Mawtribes, Ogor, Mawseekers",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "4",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 220,
+      "modelCount": 3,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Cleaver's Tools",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "A Taste for the Arcane",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If a friendly or enemy **WIZARD** or **PRIEST** is within 6\" of this unit, roll a dice. On a 3+, pick 1 of the following effects to apply for the rest of the turn:\n\n• This unit’s melee weapons have **Crit (2 Hits)**.\n\n• If this unit’s melee weapons already have **Crit (2 Hits)**, they have **Crit (Mortal)**."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "40mm",
       "notes": null
     },
     {
@@ -181,19 +254,24 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Wizard (1)", "Ogor", "Infantry", "Hero"],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Hero, Wizard (1), Infantry, Destruction, Ogor Mawtribes, Ogor",
+      "keywords": ["Wizard (1)", "Ogor", "Gutbusters", "Infantry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Meatfist Mawtribe",
+        "The Roving Maw"
+      ],
+      "referenceKeywords": "Hero, Wizard (1), Infantry, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
       "stats": {
         "move": "6\"",
         "save": "5+",
-        "control": "5",
+        "control": "3",
         "health": "7",
         "ward": null,
         "wizard": "1",
         "priest": null
       },
-      "points": 140,
+      "points": 150,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -237,13 +315,13 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to the Damage characteristic of this unit’s **Fire Breath** for attacks that target **INFANTRY**."
+          "effect": "Add 1 to the Damage characteristic of this unit’s **Fire Breath** if the target is **INFANTRY**."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "50mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "ba90a7e7-7d5f-56d3-be5a-543eac7f7f9b",
@@ -253,9 +331,13 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Beastclaw Raiders", "Beast"],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Beast, Destruction, Ogor Mawtribes, Beastclaw Raiders",
+      "keywords": ["Beastclaw", "Beast"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
+      ],
+      "referenceKeywords": "Beast, Destruction, Ogor Mawtribes, Beastclaw",
       "stats": {
         "move": "9\"",
         "save": "6+",
@@ -281,11 +363,23 @@
             "wound": "3+",
             "rend": "1",
             "damage": "1",
-            "abilities": []
+            "abilities": ["Companion"]
           }
         ]
       },
       "abilities": [
+        {
+          "name": "Gutless",
+          "phase": "chargePhase",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit cannot use the ‘Bull Charge’ ability."
+        },
         {
           "name": "Beast",
           "phase": "endOfTurn",
@@ -314,7 +408,7 @@
       "summonedBy": null,
       "loadout": null,
       "baseSize": "60 x 35mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "110ef953-5645-5885-bf17-7b6e5980e065",
@@ -324,9 +418,13 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Monster", "Beastclaw Raiders", "Ogor", "Hero"],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Hero, Monster, Destruction, Ogor Mawtribes, Ogor, Beastclaw Raiders",
+      "keywords": ["Monster", "Beastclaw", "Ogor", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
+      ],
+      "referenceKeywords": "Hero, Monster, Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "10\"",
         "save": "4+",
@@ -336,7 +434,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 320,
+      "points": 340,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -355,26 +453,15 @@
             "abilities": ["Charge (+1 Damage)"]
           },
           {
-            "name": "Stonehorn’s Rock-hard Horns",
+            "name": "Stonehorn’s Rock-hard Horns and Hooves",
             "type": "melee",
             "range": null,
-            "attacks": "6",
+            "attacks": "7",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "3",
             "abilities": ["Charge (+1 Damage)", "Companion"]
-          },
-          {
-            "name": "Stonehorn's Hooves",
-            "type": "melee",
-            "range": null,
-            "attacks": "D6",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "1",
-            "damage": "D3",
-            "abilities": ["Companion"]
           }
         ]
       },
@@ -389,19 +476,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Stonehorn’s Rock-hard Horns** is 4."
-        },
-        {
-          "name": "Frost Spear",
-          "phase": "combatPhase",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "If any damage points are allocated to an enemy **HERO** or **MONSTER** by attacks made with this unit’s **Frost Spear**, subtract 1 from the Attacks characteristic of that enemy unit’s melee weapons until the start of your next turn."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Stonehorn’s Rock-hard Horns** **and Hooves** is 4."
         },
         {
           "name": "Stone Skeleton",
@@ -416,16 +491,28 @@
           "effect": "Ignore the first damage point that would be allocated to this unit in each phase."
         },
         {
-          "name": "Earth-shattering Charge",
-          "phase": "chargePhase",
-          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "name": "Enraged Roar",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this unit charged this phase, pick an enemy unit within 1\" of it to be the target.",
-          "effect": "Inflict D3 mortal damage on the target. Then, roll 2D6. This unit can move a distance up to the value of the roll. During that move, it can pass through models in the target unit but must end that move in combat.",
+          "declare": null,
+          "effect": "While this unit is damaged, add 1 to the Attacks characteristic of **Companion** weapons used by other friendly **OGOR MAWTRIBES** units while they are within this unit’s combat range."
+        },
+        {
+          "name": "Earth-shattering Charge",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit charged this turn and has not used the ‘Bull Charge’ ability this turn, pick a visible enemy unit within 1\" of it to be the target.",
+          "effect": "Inflict D3 mortal damage on the target and then roll 2D6. This unit can move a distance in inches up to the value of the roll. It can pass through models in the target unit but must end that move in combat.",
           "keywords": ["Rampage"]
         }
       ],
@@ -442,9 +529,13 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Monster", "Beastclaw Raiders", "Ogor", "Hero"],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Hero, Monster, Destruction, Ogor Mawtribes, Ogor, Beastclaw Raiders",
+      "keywords": ["Monster", "Beastclaw", "Ogor", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
+      ],
+      "referenceKeywords": "Hero, Monster, Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "10\"",
         "save": "4+",
@@ -454,7 +545,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 230,
+      "points": 280,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -521,25 +612,89 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. On a 3+, roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.",
+          "effect": "Roll a dice for each model in the target unit. For each 5+, inflict 1 mortal damage on the target.",
           "keywords": ["Rampage"]
         },
         {
-          "name": "Bellowing Voice",
-          "phase": "chargePhase",
-          "phaseDetails": "Once Per Battle (Army), Your Charge Phase",
-          "icon": "offensive",
+          "name": "Blessed of the Old Ice",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick any number of friendly **BEASTCLAW RAIDERS** units wholly within 12\" of this unit to be the targets.",
-          "effect": "Each target can add 1 to the D3 roll made if that unit uses the ‘Trampling Charge’ ability this turn."
+          "declare": "Pick a visible friendly **OGOR MAWTRIBES** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. On a 3+, for the rest of the turn, the target can still use **SHOOT** and/or **CHARGE** abilities even if it used a **RETREAT** or **RUN** ability in the same turn."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "120 x 92mm",
+      "notes": null
+    },
+    {
+      "id": "b7b2ecb9-b010-5cbe-b981-0f0db7e92f54",
+      "name": "Gluttons",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factions": ["Ogor Mawtribes"],
+      "keywords": ["Champion", "Musician", "Ogor", "Gutbusters", "Infantry"],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Meatfist Mawtribe",
+        "The Roving Maw"
+      ],
+      "referenceKeywords": "Infantry, Champion, Musician (1/5), Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "4",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 200,
+      "modelCount": 5,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Glutton Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Wall of Meat",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Add 1 to save rolls for this unit if it has not charged this turn."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "40mm",
       "notes": null
     },
     {
@@ -550,9 +705,9 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["War Machine", "Rhinox"],
+      "keywords": ["War Machine"],
       "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "War Machine, Destruction, Ogor Mawtribes, Rhinox",
+      "referenceKeywords": "War Machine, Destruction, Ogor Mawtribes",
       "stats": {
         "move": "9\"",
         "save": "4+",
@@ -562,7 +717,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 120,
+      "points": 160,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -572,37 +727,26 @@
           {
             "name": "Piles of Old Scrap",
             "type": "ranged",
-            "range": "24\"",
-            "attacks": "3D6",
+            "range": "18\"",
+            "attacks": "12",
             "hit": "4+",
-            "wound": "4+",
-            "rend": "-",
+            "wound": "2+",
+            "rend": "1",
             "damage": "1",
-            "abilities": ["Anti-INFANTRY (+1 Rend)", "Crit (Auto-wound)"]
+            "abilities": ["Crit (2 Hits)"]
           }
         ],
         "melee": [
           {
-            "name": "Rhinox’s Sharp Horns",
+            "name": "Rhinox’s Sharp Horns and Crew's Weapons",
             "type": "melee",
             "range": null,
-            "attacks": "2",
+            "attacks": "3",
             "hit": "4+",
             "wound": "2+",
             "rend": "1",
             "damage": "D3",
             "abilities": ["Companion"]
-          },
-          {
-            "name": "Scrappers’ Stabbers",
-            "type": "melee",
-            "range": null,
-            "attacks": "7",
-            "hit": "5+",
-            "wound": "5+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": []
           }
         ]
       },
@@ -610,26 +754,14 @@
         {
           "name": "Rain of Scrap",
           "phase": "shootingPhase",
-          "phaseDetails": "Your Shooting Phase",
-          "icon": "defensive",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit that had any models slain this turn by this unit’s shooting attacks to be the target.",
-          "effect": "Subtract 1 from hit rolls for the target’s attacks for the rest of the turn."
-        },
-        {
-          "name": "Load It Up!",
-          "phase": "shootingPhase",
-          "phaseDetails": "Your Shooting Phase",
-          "icon": "shooting",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "If this unit is within the combat range of a friendly **Gnoblars** unit, this unit’s shooting attacks score critical hits on unmodified hit rolls of 5+ until the start of your next turn."
+          "declare": "Pick an enemy unit that had any damage points allocated to it this phase by this unit’s shooting attacks to be the target.",
+          "effect": "Until the start of your next turn, subtract **X**\" from the target’s Move characteristic (to a minimum Move characteristic of 1\"), where **X** is the number of damage points allocated to the target this phase by this unit’s shooting attacks.\n\nThen, roll a dice. On a 3+, until the start of your next turn, the target cannot use **RUN** or **RETREAT** abilities and cannot use or be picked to be the target of abilities that would allow it to be set up on the battlefield."
         }
       ],
       "summonedBy": null,
@@ -692,22 +824,34 @@
       },
       "abilities": [
         {
+          "name": "Gutless",
+          "phase": "chargePhase",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit cannot use the ‘Bull Charge’ ability."
+        },
+        {
           "name": "Nasty Traps And Tricks",
           "phase": "chargePhase",
-          "phaseDetails": "Any Charge Phase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit within 6\" of this unit and that used a **MOVE** ability this turn to be the target. You cannot pick the same unit to be the target of this ability more than once per turn.",
+          "declare": "Pick an enemy unit in combat with this unit and that charged this turn to be the target.",
           "effect": "Roll a D3. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "25mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "dbe30ec5-be98-5e49-8be6-764c4b319f6c",
@@ -717,19 +861,27 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Champion", "Musician", "Ogor", "Infantry"],
+      "keywords": [
+        "Champion",
+        "Mawseekers",
+        "Musician",
+        "Ogor",
+        "Infantry",
+        "Ward (6+)"
+      ],
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Ogor Mawtribes",
-        "The Roving Maw"
+        "The Roving Maw",
+        "Mawseeker Gollop"
       ],
-      "referenceKeywords": "Infantry, Champion (1/5), Musician (1/5), Destruction, Ogor Mawtribes, Ogor",
+      "referenceKeywords": "Infantry, Champion (1/5), Musician (1/5), Ward (6+), Destruction, Ogor Mawtribes, Ogor, Mawseekers",
       "stats": {
         "move": "6\"",
         "save": "6+",
         "control": "2",
         "health": "5",
-        "ward": null,
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
@@ -878,7 +1030,13 @@
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
       "keywords": ["Faction Terrain"],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Meatfist Mawtribe",
+        "Mawseeker Gollop",
+        "Beastclaw Alfrostun"
+      ],
       "referenceKeywords": "Faction Terrain, Destruction, Ogor Mawtribes",
       "stats": {
         "move": "-",
@@ -889,7 +1047,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": null,
+      "points": 20,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -906,7 +1064,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If the **Great Mawpot** is full, **Heal (D3)** each friendly unit wholly within 18\" of it. After you have done so, the **Great Mawpot** is **empty**."
+          "effect": "If the **Great Mawpot** is full, **Heal (D3)** each visible friendly unit wholly within 18\" of it. After you have done so, the **Great Mawpot** is **empty**."
         },
         {
           "name": "Vessel of the Gulping God",
@@ -917,8 +1075,8 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If the **Great Mawpot** is **full**, pick a friendly **OGOR WIZARD** within 3\" of it to be the target.",
-          "effect": "Add 1 to the power level of the target for the rest of the turn."
+          "declare": "If the **Great Mawpot** is **full**, pick a visible friendly **OGOR MAWTRIBES WIZARD** within 3\" of it to be the target.",
+          "effect": "Add 1 to casting rolls for the target for the rest of the turn."
         },
         {
           "name": "Throw 'Em In",
@@ -930,11 +1088,182 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If an enemy model is slain within 6\" of the **Great Mawpot** when it is **empty**, it becomes **full**."
+          "effect": "This Great Mawpot is either **full** or **empty**. It starts the battle **full**.\n\nIf an enemy model is slain within 12\" of this **Great Mawpot** while it is **empty**, it becomes **full**."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": "The following universal terrain abilities apply to this terrain feature (Terrain, 1.2):\n\nCover, Impassable",
+      "baseSize": "Use Model",
+      "notes": "This terrain feature will move to Warhammer Legends on 1 June 2027."
+    },
+    {
+      "id": "323972cb-bf7d-5504-9225-91d63c266de9",
+      "name": "Grell Firefist",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factions": ["Ogor Mawtribes"],
+      "keywords": [
+        "Maw Nomad",
+        "Ogor",
+        "Unique",
+        "Gutbusters",
+        "Infantry",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Meatfist Mawtribe"
+      ],
+      "referenceKeywords": "Unique, Hero, Infantry, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "stats": {
+        "move": "6\"",
+        "save": "4+",
+        "control": "3",
+        "health": "8",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 150,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Blastbelch",
+            "type": "ranged",
+            "range": "12\"",
+            "attacks": "D3+2",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": []
+          }
+        ],
+        "melee": [
+          {
+            "name": "Maneater Cleaver",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Thunderous Diversion",
+          "phase": "shootingPhase",
+          "phaseDetails": "Your Shooting Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a friendly **OGOR MAWTRIBES** unit that is in combat with an enemy unit that had any damage inflicted on it this turn by this unit’s shooting attacks to be the target.",
+          "effect": "The target can immediately use a **RETREAT** ability as if it were your movement phase and can still use **CHARGE** abilities later in the turn. No mortal damage is inflicted on the target by that **RETREAT** ability."
         },
         {
-          "name": "Great Mawpot",
+          "name": "Ogor-Made Ammunition",
+          "phase": "shootingPhase",
+          "phaseDetails": "Any Shooting Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit within 6\" of this unit to be the target.",
+          "effect": "For the rest of the phase:\n•  All of this unit’s shooting attacks must target that enemy unit.\n•  The Attacks characteristic of this unit’s **Blastbelch** is D6+2 instead of D3+2."
+        },
+        {
+          "name": "Oi! Pay Attention, Slobs!",
           "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Reaction: Opponent declared a command for a visible enemy unit within 6\" of this unit",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "You must allocate D3 damage points to another visible friendly **OGOR MAWTRIBES** unit within 3\" of this unit (ward rolls cannot be made for those damage points). Then, that command has no effect and still counts as having been used, but the command points spent to use it are regained by your opponent."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "50mm",
+      "notes": "This HERO can join an eligible regiment as a Maw Nomad."
+    },
+    {
+      "id": "04e8fe2d-6676-5c22-b97a-3f35412addcf",
+      "name": "Gutseers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factions": ["Ogor Mawtribes"],
+      "keywords": ["Champion", "Mawseekers", "Ogor", "Infantry", "Ward (6+)"],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Mawseeker Gollop",
+        "The Roving Maw"
+      ],
+      "referenceKeywords": "Infantry, Champion, Ward (6+), Destruction, Ogor Mawtribes, Ogor, Mawseekers",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "4",
+        "ward": "6+",
+        "wizard": null,
+        "priest": null
+      },
+      "points": 200,
+      "modelCount": 3,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Gutseer's Tools",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Conduits of Gut Magic",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Measure the range and visibility of the next **SPELL** ability used by a friendly **OGOR MAWTRIBES WIZARD** that is wholly within 12\" of and visible to this unit from this unit instead of that **WIZARD**. This unit is treated as the caster for the purpose of other abilities or spell effects, such as ‘Unbind’."
+        },
+        {
+          "name": "Arcane Contortions",
+          "phase": "heroPhase",
           "phaseDetails": "Passive",
           "icon": "special",
           "castingValue": null,
@@ -942,12 +1271,12 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "The **Great Mawpot** is either **full** or **empty**. It starts the battle **full**."
+          "effect": "Subtract 1 from casting rolls and chanting rolls for visible enemy units while they are within 12\" of this unit.\n\nAdd 1 to casting rolls for visible friendly **MAWSEEKERS WIZARDS** while they are wholly within 12\" of this unit."
         }
       ],
       "summonedBy": null,
-      "loadout": "The following universal terrain abilities apply to this terrain feature (Terrain, 1.2):\n\nCover, Impassable",
-      "baseSize": "Use Model",
+      "loadout": null,
+      "baseSize": "40mm",
       "notes": null
     },
     {
@@ -1059,6 +1388,105 @@
       "notes": null
     },
     {
+      "id": "28d0238d-9e81-51d7-87ec-60c0c1a2b73e",
+      "name": "Hunters with Sabrefangs",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factions": ["Ogor Mawtribes"],
+      "keywords": ["Champion", "Beastclaw", "Ogor", "Infantry"],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Beastclaw Alfrostun"
+      ],
+      "referenceKeywords": "Infantry, Champion, Destruction, Ogor Mawtribes, Ogor, Beastclaw",
+      "stats": {
+        "move": "6\"",
+        "save": "5+",
+        "control": "2",
+        "health": "4",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 160,
+      "modelCount": 5,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Hunter's Crossbow",
+            "type": "ranged",
+            "range": "15\"",
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Anti-MONSTER (+1 Rend)"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Skinning Blades",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Anti-CAVALRY (+1 Rend)", "Anti-MONSTER (+1 Rend)"]
+          },
+          {
+            "name": "Sabrefang's Tusks and Claws",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Through the Frosts",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Remove this unit from the battlefield and set it up again wholly within 3\" of a terrain feature and more than 9\" from all enemy units. This unit cannot use **MOVE** abilities in the first turn of the first battle round."
+        },
+        {
+          "name": "Ferocious Sabrefangs",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy unit in combat with this unit and that charged this turn to be the target.",
+          "effect": "Roll 2 dice for each **Sabrefang** in this unit. For each 3+, inflict 1 mortal damage on the target."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": "3/5 models in this unit are Hunters and are armed with a Hunter’s Crossbow and Skinning Blades.\n2/5 models in this unit are Sabrefangs and are armed with Sabrefang’s Tusks and Claws.\nA Sabrefang cannot be the unit champion.",
+      "baseSize": "40mm [3], 60 x 35mm [2]",
+      "notes": null
+    },
+    {
       "id": "ab3004c9-444e-5534-8650-ddbde226a307",
       "name": "Huskard on Stonehorn",
       "subname": null,
@@ -1066,16 +1494,13 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": [
-        "Priest (1)",
-        "Voice of the Everwinter",
-        "Monster",
-        "Beastclaw Raiders",
-        "Ogor",
-        "Hero"
+      "keywords": ["Priest (1)", "Monster", "Beastclaw", "Ogor", "Hero"],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Beastclaw Alfrostun"
       ],
-      "factionKeywords": ["Ogor Mawtribes", "Grand Alliance Destruction"],
-      "referenceKeywords": "Hero, Monster, Priest (1), Destruction, Ogor Mawtribes, Ogor, Beastclaw Raiders",
+      "referenceKeywords": "Hero, Monster, Priest (1), Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "10\"",
         "save": "4+",
@@ -1085,7 +1510,7 @@
         "wizard": null,
         "priest": "1"
       },
-      "points": 290,
+      "points": 300,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1093,72 +1518,39 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Blood Vulture",
+            "name": "Chaintrap, Harpoon Launcher or Blood Vulture",
             "type": "ranged",
-            "range": "24\"",
-            "attacks": "1",
-            "hit": "2+",
-            "wound": "3+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": []
-          },
-          {
-            "name": "Chaintrap",
-            "type": "ranged",
-            "range": "12\"",
+            "range": "15\"",
             "attacks": "1",
             "hit": "4+",
             "wound": "3+",
             "rend": "1",
             "damage": "3",
-            "abilities": ["Anti-MONSTER (+1 Rend)"]
-          },
-          {
-            "name": "Harpoon Launcher",
-            "type": "ranged",
-            "range": "18\"",
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "D3",
             "abilities": []
           }
         ],
         "melee": [
           {
-            "name": "Punches and Kicks",
+            "name": "Huskard's Punches and Kicks",
             "type": "melee",
             "range": null,
-            "attacks": "3",
+            "attacks": "4",
             "hit": "4+",
             "wound": "2+",
-            "rend": "-",
+            "rend": "1",
             "damage": "1",
             "abilities": []
           },
           {
-            "name": "Stonehorn's Rock-hard horns",
+            "name": "Stonehorn's Rock-hard Horns and Hooves",
             "type": "melee",
             "range": null,
-            "attacks": "6",
+            "attacks": "7",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "3",
             "abilities": ["Charge (+1 Damage)", "Companion"]
-          },
-          {
-            "name": "Stonehorn's Hooves",
-            "type": "melee",
-            "range": null,
-            "attacks": "D6",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "1",
-            "damage": "D3",
-            "abilities": ["Companion"]
           }
         ]
       },
@@ -1173,7 +1565,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Stonehorn’s Rock-hard Horns** is 4."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Stonehorn’s Rock-hard Horns and Hooves** is 4."
         },
         {
           "name": "Stone Skeleton",
@@ -1188,7 +1580,7 @@
           "effect": "Ignore the first damage point that would be allocated to this unit in each phase."
         },
         {
-          "name": "Everwinter's Goad",
+          "name": "Primal Bellow",
           "phase": "combatPhase",
           "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "special",
@@ -1196,15 +1588,15 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick each friendly and enemy **MONSTER** within this unit’s combat range to be the targets.",
-          "effect": "Roll a dice for each target. On a 3+:\n\n• If the target is a friendly **OGOR MAWTRIBES** unit, its **Companion** weapons have **Crit (2 Hits)** for the rest of the turn.\n• If the target is an enemy unit, subtract 1 from hit rolls for attacks made with its **Companion** weapons for the rest of the turn.",
+          "declare": "Pick a friendly **OGOR MAWTRIBES** unit within this unit’s combat range to be the target or pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. Add 2 to the roll if this unit charged this turn. On a 4+:\n\n•  If the target is a friendly unit, its **Companion** weapons have **Crit (2 Hits)** for the rest of the turn.\n\n•  If the target is an enemy unit, subtract 1 from hit rolls for the target’s attacks for the rest of the turn.",
           "keywords": ["Rampage"]
         }
       ],
       "summonedBy": null,
-      "loadout": "This unit is armed with Punches and Kicks, Stonehorn’s Rock-hard Horns, Stonehorn’s Hooves and 1 of the following options:\n\n• Chaintrap\n• Harpoon Launcher\n• Blood Vulture",
+      "loadout": null,
       "baseSize": "120 x 92mm",
-      "notes": "This HERO can join an eligible regiment as a Voice of the Everwinter."
+      "notes": null
     },
     {
       "id": "b5c2d72f-2e1e-5e3b-addf-d73f12dacd26",
@@ -1214,16 +1606,13 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": [
-        "Priest (1)",
-        "Voice of the Everwinter",
-        "Monster",
-        "Beastclaw Raiders",
-        "Ogor",
-        "Hero"
+      "keywords": ["Priest (1)", "Monster", "Beastclaw", "Ogor", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
       ],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Hero, Monster, Priest (1), Destruction, Ogor Mawtribes, Ogor, Beastclaw Raiders",
+      "referenceKeywords": "Hero, Monster, Priest (1), Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "10\"",
         "save": "4+",
@@ -1233,7 +1622,7 @@
         "wizard": null,
         "priest": "1"
       },
-      "points": 220,
+      "points": 280,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1241,36 +1630,14 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Blood Vulture",
+            "name": "Chaintrap, Harpoon Launcher or Blood Vulture",
             "type": "ranged",
-            "range": "24\"",
-            "attacks": "1",
-            "hit": "2+",
-            "wound": "3+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": []
-          },
-          {
-            "name": "Chaintrap",
-            "type": "ranged",
-            "range": "12\"",
+            "range": "15\"",
             "attacks": "1",
             "hit": "4+",
             "wound": "3+",
             "rend": "1",
             "damage": "3",
-            "abilities": ["Anti-MONSTER (+1 Rend)"]
-          },
-          {
-            "name": "Harpoon Launcher",
-            "type": "ranged",
-            "range": "18\"",
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "D3",
             "abilities": []
           },
           {
@@ -1287,17 +1654,6 @@
         ],
         "melee": [
           {
-            "name": "Punches and Kicks",
-            "type": "melee",
-            "range": null,
-            "attacks": "3",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": []
-          },
-          {
             "name": "Thundertusk’s Colossal Tusks",
             "type": "melee",
             "range": null,
@@ -1307,6 +1663,17 @@
             "rend": "1",
             "damage": "5",
             "abilities": ["Anti-INFANTRY (+1 Rend)", "Companion"]
+          },
+          {
+            "name": "Huskard's Punches and Kicks",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
           }
         ]
       },
@@ -1332,15 +1699,27 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy **INFANTRY** unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. Add 1 to the roll if the target had **STRIKE‑LAST** as a result of this ability in the previous turn. On a 4+, the target has **STRIKE‑LAST** for the rest of the turn.",
+          "declare": "If this unit did not charge this turn, pick an enemy unit in combat with it to be the target.",
+          "effect": "Roll a dice. On a 3+, subtract 1 from the Attacks characteristic of the target’s melee weapons for the rest of the turn.",
           "keywords": ["Rampage"]
+        },
+        {
+          "name": "Winter's Cruelty",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible enemy unit to be the target.",
+          "effect": "Roll a dice. If the roll is equal to or less than the number of damage points allocated to the target by attacks made with this unit’s **Ice Blast** this phase, subtract 1 from the Damage characteristic of the target’s weapons until the start of your next turn."
         }
       ],
       "summonedBy": null,
-      "loadout": "This unit is armed with an Ice Blast, Punches and Kicks, Thundertusk’s Colossal Tusks, and 1 of the following options:\n\n• Chaintrap\n• Harpoon Launcher\n• Blood Vulture",
+      "loadout": null,
       "baseSize": "120 x 92mm",
-      "notes": "This HERO can join an eligible regiment as a Voice of the Everwinter."
+      "notes": null
     },
     {
       "id": "9294439a-f8ec-5a2b-8c73-28e31c3cd7fc",
@@ -1350,25 +1729,23 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": [
-        "Voice of the Everwinter",
-        "Beastclaw Raiders",
-        "Ogor",
-        "Infantry",
-        "Hero"
+      "keywords": ["Beastclaw", "Maw Nomad", "Ogor", "Infantry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
       ],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Hero, Infantry, Destruction, Ogor Mawtribes, Ogor, Beastclaw Raiders",
+      "referenceKeywords": "Hero, Infantry, Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "6\"",
         "save": "5+",
-        "control": "5",
+        "control": "3",
         "health": "7",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 100,
+      "points": 130,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1376,24 +1753,13 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Hunter’s Crossbow",
+            "name": "Great Throwing Spear and Crossbow",
             "type": "ranged",
             "range": "12\"",
-            "attacks": "1",
+            "attacks": "2",
             "hit": "4+",
             "wound": "3+",
             "rend": "-",
-            "damage": "D3",
-            "abilities": ["Anti-MONSTER (+1 Rend)"]
-          },
-          {
-            "name": "Great Throwing Spear",
-            "type": "ranged",
-            "range": "10\"",
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
             "damage": "D3",
             "abilities": ["Anti-MONSTER (+1 Rend)"]
           }
@@ -1442,7 +1808,7 @@
       "summonedBy": null,
       "loadout": null,
       "baseSize": "50mm",
-      "notes": "This HERO can join an eligible regiment as a Voice of the Everwinter."
+      "notes": "This HERO can join an eligible regiment as a Maw Nomad. This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "4486cda2-91a1-58d9-ae55-e09494ef26ae",
@@ -1452,19 +1818,23 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Beastclaw Raiders", "Infantry", "Ward (6+)"],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Infantry, Ward (6+), Destruction, Ogor Mawtribes, Beastclaw Raiders",
+      "keywords": ["Beastclaw", "Infantry"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
+      ],
+      "referenceKeywords": "Infantry, Destruction, Ogor Mawtribes, Beastclaw",
       "stats": {
         "move": "6\"",
         "save": "6+",
         "control": "1",
         "health": "4",
-        "ward": "6+",
+        "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 100,
+      "points": 120,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1488,20 +1858,20 @@
         {
           "name": "Bounding Leaps",
           "phase": "combatPhase",
-          "phaseDetails": "Enemy Combat Phase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Combat Phase",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "This unit can move up to 3\". It can move into combat."
+          "effect": "This unit can move up to 3\". It can move through the combat ranges of enemy units and end that move in combat."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "50mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "bd14b371-2268-55de-bce8-c485ace110dc",
@@ -1511,13 +1881,14 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["War Machine", "Ogor", "Rhinox", "Gutbusters"],
+      "keywords": ["War Machine", "Ogor", "Gutbusters"],
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Ogor Mawtribes",
-        "The Roving Maw"
+        "The Roving Maw",
+        "Meatfist Mawtribe"
       ],
-      "referenceKeywords": "War Machine, Destruction, Ogor Mawtribes, Ogor, Rhinox, Gutbusters",
+      "referenceKeywords": "War Machine, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
       "stats": {
         "move": "9\"",
         "save": "4+",
@@ -1527,7 +1898,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 160,
+      "points": 180,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1535,45 +1906,34 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Ironblaster Cannon: Big Shot",
+            "name": "Ironblaster Cannon Shot",
             "type": "ranged",
             "range": "18\"",
             "attacks": "2",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
-            "damage": "D3+3",
-            "abilities": []
-          },
-          {
-            "name": "Ironblaster Cannon: Hail Shot",
-            "type": "ranged",
-            "range": "12\"",
-            "attacks": "8",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "2",
+            "damage": "5",
             "abilities": []
           }
         ],
         "melee": [
           {
-            "name": "Clubber",
+            "name": "Clubbers",
             "type": "melee",
             "range": null,
             "attacks": "2",
             "hit": "4+",
             "wound": "2+",
-            "rend": "-",
+            "rend": "1",
             "damage": "2",
             "abilities": []
           },
           {
-            "name": "Rhinox’s Sharp Horns",
+            "name": "Rhinox's Sharp Horns",
             "type": "melee",
             "range": null,
-            "attacks": "2",
+            "attacks": "4",
             "hit": "4+",
             "wound": "2+",
             "rend": "1",
@@ -1584,16 +1944,17 @@
       },
       "abilities": [
         {
-          "name": "Lethal Payload",
+          "name": "Obliterating Blast",
           "phase": "shootingPhase",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
           "icon": "shooting",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "Each time this unit uses a **SHOOT** ability, pick either the **Big Shot** or **Hail Shot** weapon characteristics for all the attacks it makes with its **Ironblaster** **Cannon**."
+          "declare": "If this unit has not used a **RUN** or **RETREAT** ability this turn, pick a visible enemy unit within 18\" of it to be the target. Then, draw a straight line between the closest points on the bases of this unit and the target. Each other unit (friendly and enemy) that the line passes across is a **collateral damage target**.",
+          "effect": "Roll a dice. On a 3+:\n• Inflict an amount of mortal damage on the target equal to the roll.\n• Inflict D3 mortal damage on each **collateral damage target**.",
+          "keywords": ["Core", "Attack", "Shoot"]
         }
       ],
       "summonedBy": null,
@@ -1609,31 +1970,25 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": [
-        "Champion",
-        "Standard Bearer",
-        "Musician",
-        "Ogor",
-        "Gutbusters",
-        "Infantry"
-      ],
+      "keywords": ["Champion", "Ogor", "Gutbusters", "Infantry"],
       "factionKeywords": [
         "Ogor Mawtribes",
         "Grand Alliance Destruction",
+        "Meatfist Mawtribe",
         "The Roving Maw"
       ],
-      "referenceKeywords": "Infantry, Champion, Musician (1/4), Standard Bearer (1/4), Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "referenceKeywords": "Infantry, Champion, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
       "stats": {
         "move": "6\"",
-        "save": "5+",
+        "save": "4+",
         "control": "2",
         "health": "4",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 210,
-      "modelCount": 4,
+      "points": 200,
+      "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
       "isLegends": false,
@@ -1654,7 +2009,7 @@
       },
       "abilities": [
         {
-          "name": "Protect the Tyrant",
+          "name": "Personal Enforcers",
           "phase": "defensive",
           "phaseDetails": "Passive",
           "icon": "defensive",
@@ -1663,19 +2018,19 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit is within the combat ranges of any friendly **Tyrants**, both this unit and those **Tyrants** have **WARD (6+)**."
+          "effect": "While this unit is within the combat ranges of any friendly **OGOR MAWTRIBES INFANTRY HEROES**, both this unit and those **HEROES** have **WARD (5+)**."
         },
         {
-          "name": "Down to the Ironguts",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Battle, Any Combat Phase",
+          "name": "Displays of Might",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "This unit can use 2 **FIGHT** abilities this phase. After the first is used, however, this unit has **STRIKE-LAST** for the rest of the turn."
+          "effect": "This unit can use the ‘Bull Charge’ ability even if another friendly unit has used it this turn."
         }
       ],
       "summonedBy": null,
@@ -1785,7 +2140,7 @@
         {
           "name": "The End of Empires",
           "phase": "chargePhase",
-          "phaseDetails": "Your Charge Phase.",
+          "phaseDetails": "Your Charge Phase",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
@@ -1825,7 +2180,8 @@
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Ogor Mawtribes",
-        "The Roving Maw"
+        "The Roving Maw",
+        "Meatfist Mawtribe"
       ],
       "referenceKeywords": "Infantry, Champion, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
       "stats": {
@@ -1837,7 +2193,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 120,
+      "points": 140,
       "modelCount": 4,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1848,7 +2204,7 @@
             "name": "Leadbelcher Gun",
             "type": "ranged",
             "range": "15\"",
-            "attacks": "D3",
+            "attacks": "2",
             "hit": "4+",
             "wound": "3+",
             "rend": "1",
@@ -1874,7 +2230,7 @@
         {
           "name": "Firing from the Belly",
           "phase": "shootingPhase",
-          "phaseDetails": "Your Shooting Phase",
+          "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
           "icon": "shooting",
           "castingValue": null,
           "chantValue": null,
@@ -1893,13 +2249,13 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "This unit has up to 2 **Powder Gnoblar** tokens. Each time this unit uses a **SHOOT** ability, for each of this unit’s **Powder Gnoblars** that are on the battlefield, you can re-roll 1 random characteristic roll for this unit’s Attacks characteristic. If a random characteristic roll re-rolled in this manner is 1, remove 1 of this unit’s **Powder Gnoblars** from the battlefield."
+          "effect": "This unit’s **Powder Gnoblars** are tokens. There are 2 **Powder Gnoblars** for every 4 models in this unit.\n\nEach time this unit uses a **SHOOT** ability, for each of this unit’s **Powder Gnoblars** that are on the battlefield, you can re-roll 1 hit roll of 1 but if that attack misses, remove 1 of this unit’s **Powder Gnoblars** from the battlefield after that **SHOOT** ability has been resolved."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "40mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "7d0bacc1-4e00-5909-8a80-5c52de233065",
@@ -1909,9 +2265,14 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Ogor", "Infantry"],
-      "factionKeywords": ["Ogor Mawtribes", "Grand Alliance Destruction"],
-      "referenceKeywords": "Infantry, Destruction, Ogor Mawtribes, Ogor",
+      "keywords": ["Ogor", "Gutbusters", "Infantry"],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Meatfist Mawtribe",
+        "The Roving Maw"
+      ],
+      "referenceKeywords": "Infantry, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
       "stats": {
         "move": "6\"",
         "save": "5+",
@@ -1921,7 +2282,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 160,
+      "points": 180,
       "modelCount": 3,
       "cannotBeReinforced": false,
       "isSpearhead": false,
@@ -1971,7 +2332,7 @@
       "summonedBy": null,
       "loadout": null,
       "baseSize": "50mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "4f5fc9ac-1285-5762-882b-18db9fbada16",
@@ -1981,15 +2342,13 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": [
-        "Voice of the Everwinter",
-        "Beastclaw Raiders",
-        "Ogor",
-        "Infantry",
-        "Hero"
+      "keywords": ["Beastclaw", "Maw Nomad", "Ogor", "Infantry", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
       ],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Hero, Infantry, Destruction, Ogor Mawtribes, Ogor, Beastclaw Raiders",
+      "referenceKeywords": "Hero, Infantry, Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "6\"",
         "save": "5+",
@@ -2007,7 +2366,7 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Mantrapper Launcher",
+            "name": "Mantrap Launcher",
             "type": "ranged",
             "range": "15\"",
             "attacks": "4",
@@ -2055,7 +2414,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": "Pick an enemy unit that had any damage points allocated to it this turn by this unit’s shooting attacks to be the target.",
-          "effect": "Make a **trapped roll** of D6. Subtract 1 from the roll for each friendly **Mantrapper accomplice** next to the target.\n\nIf the roll is less than the target’s Save characteristic, until the start of your next turn:\n\n• Subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.\n• The target does not have **FLY**."
+          "effect": "Make a **trapped roll** of D6. Subtract 1 from the roll for each friendly **Mantrapper accomplice** next to the target. If the roll is less than the target’s Save characteristic, until the start of your next turn:\n\n• Subtract 1 from the number of dice rolled when making charge rolls for the target, to a minimum of 1.\n\n• The target does not have **FLY**."
         },
         {
           "name": "Mantrapper's Accomplices",
@@ -2072,8 +2431,182 @@
       ],
       "summonedBy": null,
       "loadout": null,
-      "baseSize": "40mm [1] 50 x 25mm [1], 25mm [3]",
-      "notes": "This HERO can join an eligible regiment as a Voice of the Everwinter"
+      "baseSize": "40mm",
+      "notes": "This Hero can join an eligible regiment as a Maw Nomad."
+    },
+    {
+      "id": "51ce86cc-c8ed-588c-996e-6cb0ae35b00f",
+      "name": "Maulbeast Cavalry",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factions": ["Ogor Mawtribes"],
+      "keywords": ["Champion", "Ogor", "Gutbusters", "Cavalry"],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Meatfist Mawtribe",
+        "The Roving Maw"
+      ],
+      "referenceKeywords": "Cavalry, Champion, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "stats": {
+        "move": "10\"",
+        "save": "3+",
+        "control": "3",
+        "health": "7",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 280,
+      "modelCount": 2,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Gutbiter Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          },
+          {
+            "name": "Maulbeast's Horns and Fangs",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Shock and Gore",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
+          "effect": "Roll a dice. On a 3+, for the rest of the turn, subtract 1 from wound rolls for the target’s attacks."
+        },
+        {
+          "name": "Ravenous Counter-Attack",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Enemy units do not count as having charged while they are in combat with this unit."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "90 x 52mm",
+      "notes": null
+    },
+    {
+      "id": "9c377268-9650-5edb-8cfb-a296f8060072",
+      "name": "Maulbeast Raiders",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factions": ["Ogor Mawtribes"],
+      "keywords": ["Champion", "Beastclaw", "Ogor", "Cavalry"],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Beastclaw Alfrostun"
+      ],
+      "referenceKeywords": "Cavalry, Champion, Destruction, Ogor Mawtribes, Ogor, Beastclaw",
+      "stats": {
+        "move": "10\"",
+        "save": "4+",
+        "control": "3",
+        "health": "7",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 230,
+      "modelCount": 2,
+      "cannotBeReinforced": false,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "ranged": [
+          {
+            "name": "Hunter Crossbow and Blood Vulture",
+            "type": "ranged",
+            "range": "15\"",
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Shoot in Combat"]
+          }
+        ],
+        "melee": [
+          {
+            "name": "Punches and Kicks",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": []
+          },
+          {
+            "name": "Maulbeast's Horns and Fangs",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Relentless Predators",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Enemy Movement Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "If this unit is more than 9\" from all enemy units, it can move up to D6\". It cannot move into combat during any part of that move."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "90 x 52mm",
+      "notes": null
     },
     {
       "id": "430f1a59-3f7b-530c-b8b8-2fc5a82a8d22",
@@ -2083,19 +2616,22 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Faction Terrain"],
+      "keywords": ["Faction Terrain", "Ward (6+)"],
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Ogor Mawtribes",
-        "The Roving Maw"
+        "The Roving Maw",
+        "Mawseeker Gollop",
+        "Meatfist Mawtribe",
+        "Beastclaw Alfrostun"
       ],
-      "referenceKeywords": "Faction Terrain, Destruction, Ogor Mawtribes",
+      "referenceKeywords": "Faction Terrain, Ward (6+), Destruction, Ogor Mawtribes",
       "stats": {
         "move": "-",
-        "save": "5+",
+        "save": "4+",
         "control": "-",
-        "health": "10",
-        "ward": null,
+        "health": "12",
+        "ward": "6+",
         "wizard": null,
         "priest": null
       },
@@ -2104,7 +2640,21 @@
       "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
-      "weapons": {},
+      "weapons": {
+        "melee": [
+          {
+            "name": "Ever-hungry Pit",
+            "type": "melee",
+            "range": null,
+            "attacks": "2D6",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
       "abilities": [
         {
           "name": "Feed the Maw",
@@ -2115,8 +2665,8 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "If this terrain feature does not have a Head Butcher, pick a friendly **Butcher** or **Slaughtermaster** within 3\" of it and not in combat to be the target.",
-          "effect": "Place the target on this terrain feature. The target is now a Head Butcher (see ‘Altar of the Gulping God’)."
+          "declare": "If this terrain feature does not have a **Head Butcher**, pick a friendly **Butcher** within 3\" of it and not in combat to be the target.",
+          "effect": "Place the target on this terrain feature. The target is now a **Head Butcher** (see 'Hungry Sinkhole').\n\nIf this terrain feature is demolished, before removing it from the battlefield, inflict D3 mortal damage on the **Head Butcher**. Then, set up the **Head Butcher** on the battlefield wholly within 3\" of this terrain feature and not in combat. That unit is no longer a **Head Butcher**. If it is not possible to set up the **Head Butcher**, it is slain."
         },
         {
           "name": "Step Away From The Maw",
@@ -2128,22 +2678,140 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If this terrain feature has a Head Butcher that was not placed on it this turn, set up the Head Butcher on the battlefield wholly within 3\" of this terrain feature and not in combat. That unit is no longer a Head Butcher."
+          "effect": "If this terrain feature has a **Head Butcher** that was not placed on it this turn, set up the **Head Butcher** on the battlefield wholly within 3\" of this terrain feature and not in combat. That unit is no longer a **Head Butcher**."
         },
         {
-          "name": "Throat of Ghur",
-          "phase": "heroPhase",
-          "phaseDetails": "Any Hero Phase",
+          "name": "Hungry Sinkhole",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick this **Mawpit** to be a **sinkhole**. Then, you can pick another terrain feature within 12\" of this **Mawpit** and that you have not already picked to be a **sinkhole** this battle to be a **sinkhole** for the rest of the turn.\n\nThen, pick each enemy unit within 3\" of the **sinkhole(s)** to be the targets.\n\nFrom the second battle round onwards, increase the range at which another terrain feature can be picked to be a **sinkhole** by 3\" for each previous battle round. If this terrain feature has a **Head Butcher**, increase the range at which another terrain feature can be picked to be a **sinkhole** by 6\" for each previous battle round instead of 3\".",
+          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": "The following universal terrain abilities apply to this terrain feature (Terrain, 1.2):\n\nCover, Impassable",
+      "baseSize": "Use Model",
+      "notes": null
+    },
+    {
+      "id": "7a385a35-16c7-58bd-8bcc-bf43ba05f5d2",
+      "name": "Morga The Mighty, Overtyrant",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factions": ["Ogor Mawtribes"],
+      "keywords": [
+        "Monster",
+        "Ogor",
+        "Unique",
+        "Gutbusters",
+        "Warmaster",
+        "Hero"
+      ],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Meatfist Mawtribe"
+      ],
+      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "stats": {
+        "move": "10\"",
+        "save": "3+",
+        "control": "10",
+        "health": "16",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 430,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "The Meatfist Masher",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "3+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Crit (Mortal)"]
+          },
+          {
+            "name": "Grutta's Horn and Hooves",
+            "type": "melee",
+            "range": null,
+            "attacks": "8",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of **Grutta's Horn and Hooves** is 5"
+        },
+        {
+          "name": "The Right Motivation",
+          "phase": "combatPhase",
+          "phaseDetails": "Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": 1,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **OGOR MAWTRIBES INFANTRY** unit wholly within 12\" of this unit to be the target.",
+          "effect": "For the rest of the turn, the following effects apply:\n\n•  While the target has not had any damage points allocated to it this phase, each time the unmodified hit roll for a combat attack that targets it is 1, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved.\n\n•  If the target has had any damage points allocated to it this phase, add 1 to the Attacks characteristic of the target’s melee weapons."
+        },
+        {
+          "name": "A Light Snack",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick up to 3 enemy units within 12\" of this terrain feature, or within 18\" if it has a Head Butcher, to be the targets.",
-          "effect": "Roll a D3 for each target. Add 1 to the roll if the target is more than 3\" from all other enemy units. On a 2+, inflict an amount of mortal damage on that unit equal to the roll."
+          "declare": "Pick an enemy unit in combat with this unit to be the target.",
+          "effect": "Roll a dice. If the roll exceeds the target’s Health characteristic, 1 model in the target unit is automatically slain.",
+          "keywords": ["Rampage"]
         },
         {
-          "name": "Altar of the Gulping God",
+          "name": "Been There, Ate That",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "rallying",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Pick 1 of the following effects:\n\n• If any enemy non-**MONSTER** models were slain by this unit’s combat attacks this turn, **Heal (D3)** this unit.\n\n• If any damage points were allocated to an enemy **MONSTER** unit by this unit’s combat attacks this turn and that enemy **MONSTER** has been destroyed, **Heal (D3+3)** this unit."
+        },
+        {
+          "name": "An Ogor's Ogor",
           "phase": "startOfTurn",
           "phaseDetails": "Passive",
           "icon": "special",
@@ -2152,12 +2820,12 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this terrain feature has a Head Butcher:\n\n• The Head Butcher cannot use **MOVE** abilities.\n• Instead of measuring range or visibility to the Head Butcher, measure to this terrain feature instead.\n• All attacks that would target the Head Butcher target this terrain feature instead.\n• If this terrain feature is destroyed, before removing it from the battlefield, inflict D3 mortal damage on the Head Butcher. Then, set up the Head Butcher on the battlefield wholly within 3\" of this terrain feature and not in combat. That unit is no longer a Head Butcher. If it is not possible to set up the Head Butcher, it is slain."
+          "effect": "More than 1 effect of the ‘Eat ’Em Alive’ ability can apply to this unit at the same time; however, each effect can only be applied to this unit once."
         }
       ],
       "summonedBy": null,
-      "loadout": "The following universal terrain abilities apply to this terrain feature (Terrain, 1.2):\n\nCover, Impassable",
-      "baseSize": "Use Model",
+      "loadout": null,
+      "baseSize": "120 x 92mm",
       "notes": null
     },
     {
@@ -2171,13 +2839,17 @@
       "keywords": [
         "Champion",
         "Standard Bearer",
+        "Beastclaw",
         "Musician",
-        "Beastclaw Raiders",
         "Ogor",
         "Cavalry"
       ],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Cavalry, Champion, Musician (1/4), Standard Bearer (1/4), Destruction, Ogor Mawtribes, Ogor, Beastclaw Raiders",
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
+      ],
+      "referenceKeywords": "Cavalry, Champion, Musician (1/4), Standard Bearer (1/4), Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "9\"",
         "save": "4+",
@@ -2187,25 +2859,12 @@
         "wizard": null,
         "priest": null
       },
-      "points": 150,
+      "points": 200,
       "modelCount": 2,
       "cannotBeReinforced": false,
       "isSpearhead": false,
       "isLegends": false,
       "weapons": {
-        "ranged": [
-          {
-            "name": "Ironlock Pistol",
-            "type": "ranged",
-            "range": "10\"",
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "D3",
-            "abilities": ["Shoot in Combat"]
-          }
-        ],
         "melee": [
           {
             "name": "Mournfang Rider Weapon",
@@ -2226,29 +2885,17 @@
             "hit": "4+",
             "wound": "2+",
             "rend": "1",
-            "damage": "2",
-            "abilities": ["Companion"]
+            "damage": "1",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
           }
         ]
       },
       "abilities": [
         {
-          "name": "Lumpen Wall of Flesh",
+          "name": "Alpha Cavalry",
           "phase": "defensive",
           "phaseDetails": "Passive",
           "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "Subtract 1 from wound rolls for shooting attacks that target friendly **BEASTCLAW RAIDERS** units while they are within this unit’s combat range."
-        },
-        {
-          "name": "Alpha Cavalry",
-          "phase": "startOfTurn",
-          "phaseDetails": "Passive",
-          "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
@@ -2258,56 +2905,69 @@
         }
       ],
       "summonedBy": null,
-      "loadout": "Each model in this unit is armed with a Mournfang Rider Weapon and Mournfang’s Tusks.\n\n• The champion is armed with an Ironlock Pistol in addition to their other weapons.",
+      "loadout": null,
       "baseSize": "90 x 52mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
-      "id": "d066dccb-5fef-59b1-9736-98903fe8f065",
-      "name": "Ogor Gluttons",
+      "id": "81a63dec-6b4e-5f6c-b396-3e46fea2bc79",
+      "name": "Redd the Maw, High Slaughtermaster",
       "subname": null,
       "cardType": "Warscroll",
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
       "keywords": [
-        "Champion",
-        "Standard Bearer",
-        "Musician",
+        "Ward (5+)",
+        "Mawseekers",
+        "War Machine",
+        "Wizard (2)",
         "Ogor",
-        "Gutbusters",
-        "Infantry"
+        "Unique",
+        "Warmaster",
+        "Hero"
       ],
       "factionKeywords": [
         "Ogor Mawtribes",
         "Grand Alliance Destruction",
-        "The Roving Maw"
+        "Mawseeker Gollop"
       ],
-      "referenceKeywords": "Infantry, Champion, Musician (1/6), Standard Bearer (1/6), Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "referenceKeywords": "Warmaster, Unique, Hero, War Machine, Wizard (2), Ward (5+), Destruction, Ogor Mawtribes, Ogor, Mawseekers",
       "stats": {
         "move": "6\"",
-        "save": "5+",
-        "control": "2",
-        "health": "4",
-        "ward": null,
-        "wizard": null,
+        "save": "4+",
+        "control": "10",
+        "health": "18",
+        "ward": "5+",
+        "wizard": "2",
         "priest": null
       },
-      "points": 220,
-      "modelCount": 6,
-      "cannotBeReinforced": false,
+      "points": 400,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
       "weapons": {
         "melee": [
           {
-            "name": "Glutton Weapons",
+            "name": "Redd's Ladle",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "5",
             "hit": "4+",
             "wound": "2+",
-            "rend": "1",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          },
+          {
+            "name": "Mawseeker Acolytes' Blades and Gorger's Claws",
+            "type": "melee",
+            "range": null,
+            "attacks": "8",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
             "damage": "2",
             "abilities": []
           }
@@ -2315,21 +2975,58 @@
       },
       "abilities": [
         {
-          "name": "Insatiable Gluttony",
-          "phase": "endOfTurn",
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
           "phaseDetails": "Passive",
-          "icon": "control",
+          "icon": "battleDamaged",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If you have used the ‘Feast on Flesh’ ability this battle, add 1 to the control score of this unit for each model in this unit."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Mawseeker Acolytes' Blades and Gorger's Claws** is 5."
+        },
+        {
+          "name": "Son of the Hungering One",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While they are wholly within 12\" of this unit:\n\n•  Friendly non-**MAWSEEKERS OGOR MAWTRIBES INFANTRY** units have **WARD (6+)**.\n\n•  Friendly **MAWSEEKERS** units have **WARD (5+)**."
+        },
+        {
+          "name": "The Maw Opens",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 7,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **OGOR MAWTRIBES** unit wholly within 12\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "If the target is not in combat, it can move up to D3+3\" but must end that move no further from the nearest enemy unit that is visible to it. It cannot move into combat during any part of that move.\n\nIf the target is in combat, inflict D3 mortal damage on each enemy unit in combat with the target, then **Heal (D3)** the target. If the target is a **MAWSEEKERS** unit, instead inflict 3 mortal damage on each enemy unit in combat with the target, then **Heal (3)** the target.",
+          "keywords": ["Spell"]
+        },
+        {
+          "name": "From the Depths of the Cauldron",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": 1,
+          "isReaction": false,
+          "declare": "Pick a visible friendly non-**HERO OGOR MAWTRIBES** unit wholly within 12\" of this unit to be the target.",
+          "effect": "The target can immediately use the ‘Eat ’Em Alive’ ability as if it were the end of the turn and it were eligible to do so."
         }
       ],
       "summonedBy": null,
       "loadout": null,
-      "baseSize": "40mm",
+      "baseSize": "160mm",
       "notes": null
     },
     {
@@ -2672,7 +3369,8 @@
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Ogor Mawtribes",
-        "The Roving Maw"
+        "The Roving Maw",
+        "Meatfist Mawtribe"
       ],
       "referenceKeywords": "War Machine, Destruction, Ogor Mawtribes, Ogor, Rhinox, Gutbusters",
       "stats": {
@@ -2755,23 +3453,31 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Wizard (1)", "Ogor", "Gutbusters", "Infantry", "Hero"],
+      "keywords": [
+        "Mawseekers",
+        "Wizard (1)",
+        "Ogor",
+        "Infantry",
+        "Ward (6+)",
+        "Hero"
+      ],
       "factionKeywords": [
         "Ogor Mawtribes",
         "Grand Alliance Destruction",
-        "The Roving Maw"
+        "The Roving Maw",
+        "Mawseeker Gollop"
       ],
-      "referenceKeywords": "Hero, Wizard (1), Infantry, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "referenceKeywords": "Hero, Wizard (1), Infantry, Ward (6+),Destruction, Ogor Mawtribes, Ogor, Mawseekers",
       "stats": {
         "move": "6\"",
         "save": "5+",
-        "control": "5",
+        "control": "3",
         "health": "8",
-        "ward": null,
+        "ward": "6+",
         "wizard": "1",
         "priest": null
       },
-      "points": 150,
+      "points": 160,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2788,24 +3494,25 @@
             "rend": "1",
             "damage": "1",
             "abilities": []
-          },
-          {
-            "name": "Gnoblar's Implements",
-            "type": "melee",
-            "range": null,
-            "attacks": "3",
-            "hit": "5+",
-            "wound": "5+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": ["Companion"]
           }
         ]
       },
       "abilities": [
         {
+          "name": "Great Cauldron",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit’s cauldron is **filled with grisly remains**, pick a visible friendly **MAWSEEKERS** unit wholly within 12\" of this unit to be the target.&#x20;",
+          "effect": "This unit’s cauldron is now **empty**. Pick 1 of the following effects:\n***Bloodgruel***: The target has **WARD (5+)** for the rest of the turn.\n***Spinemarrow***: Add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn."
+        },
+        {
           "name": "Fill the Pot",
-          "phase": "combatPhase",
+          "phase": "startOfTurn",
           "phaseDetails": "Passive",
           "icon": "special",
           "castingValue": null,
@@ -2813,25 +3520,13 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Each time an enemy unit is destroyed by a combat attack made by a friendly **OGOR MAWTRIBES** unit wholly within 18\" of this unit, give this unit a **grisly remains point**, to a maximum of 3."
-        },
-        {
-          "name": "Great Cauldron",
-          "phase": "heroPhase",
-          "phaseDetails": "Any Hero Phase",
-          "icon": "special",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "You can spend 1 or more of this unit’s **grisly remains points**. For each point spent, pick a friendly **GUTBUSTERS** unit wholly within 12\" of this unit to be the target, then pick 1 of the following effects:\n\n***Bloodgruel:*** The target has **WARD (5+)** for the rest of the turn.\n\n***Spinemarrow:*** Add 1 to the Attacks characteristic of the target’s melee weapons for the rest of the turn."
+          "effect": "&#x20;This unit’s cauldron is either **filled with grisly remains** or **empty**. It starts the battle **empty**. If an enemy unit that was in combat with this unit this turn is destroyed and this unit’s cauldron is **empty**, it becomes **filled with grisly remains**."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "105 x 70mm",
-      "notes": null
+      "notes": "This unit will move to Warhammer Legends on 1 June 2027."
     },
     {
       "id": "000f2ebb-ebdf-56ff-8e4c-0c9d42ce04d6",
@@ -2841,9 +3536,13 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Monster", "Beastclaw Raiders", "Ogor"],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Monster, Destruction, Ogor Mawtribes, Ogor, Beastclaw Raiders",
+      "keywords": ["Monster", "Beastclaw", "Ogor"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
+      ],
+      "referenceKeywords": "Monster, Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "10\"",
         "save": "4+",
@@ -2853,7 +3552,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 260,
+      "points": 280,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2861,36 +3560,14 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Blood Vulture",
+            "name": "Chaintrap, Harpoon Launcher or Blood Vulture",
             "type": "ranged",
-            "range": "24\"",
-            "attacks": "1",
-            "hit": "2+",
-            "wound": "3+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": []
-          },
-          {
-            "name": "Chaintrap",
-            "type": "ranged",
-            "range": "12\"",
+            "range": "15\"",
             "attacks": "1",
             "hit": "4+",
             "wound": "3+",
             "rend": "1",
             "damage": "3",
-            "abilities": ["Anti-MONSTER (+1 Rend)"]
-          },
-          {
-            "name": "Harpoon Launcher",
-            "type": "ranged",
-            "range": "18\"",
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "D3",
             "abilities": []
           }
         ],
@@ -2899,34 +3576,23 @@
             "name": "Punches and Kicks",
             "type": "melee",
             "range": null,
-            "attacks": "6",
+            "attacks": "4",
             "hit": "4+",
             "wound": "2+",
-            "rend": "-",
+            "rend": "1",
             "damage": "1",
             "abilities": []
           },
           {
-            "name": "Stonehorn’s Rock-hard Horns",
+            "name": "Stonehorn’s Rock-hard Horns and Hooves",
             "type": "melee",
             "range": null,
-            "attacks": "6",
+            "attacks": "7",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "3",
             "abilities": ["Charge (+1 Damage)", "Companion"]
-          },
-          {
-            "name": "Stonehorn’s Hooves",
-            "type": "melee",
-            "range": null,
-            "attacks": "D6",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "1",
-            "damage": "D3",
-            "abilities": ["Companion"]
           }
         ]
       },
@@ -2941,7 +3607,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Stonehorn’s Rock-hard Horns** is 4."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Stonehorn’s Rock-hard Horns and Hooves** is 4."
         },
         {
           "name": "Stone Skeleton",
@@ -2957,20 +3623,20 @@
         },
         {
           "name": "Stonehorn Avalanche",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-          "icon": "movement",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "If this unit charged this turn, roll a dice. On a 3+, when this unit makes a pile-in move this phase, add D6\" to the distance it can move.",
+          "declare": "If this unit charged this turn and has not used the ‘Bull Charge’ ability this turn, pick an enemy unit in combat with this unit or an enemy faction terrain feature within this unit’s combat range to be the target.",
+          "effect": "Roll a dice. On a 3+:\n• If the target is a unit, inflict 3 mortal damage on it.\n• If the target is a faction terrain feature, inflict 6 mortal damage on it.",
           "keywords": ["Rampage"]
         }
       ],
       "summonedBy": null,
-      "loadout": "This unit is armed with a Harpoon Launcher, Punches and Kicks, Stonehorn’s Rock‑hard Horns, Stonehorn’s Hooves and 1 of the following options:\n\n• Chaintrap\n• Blood Vulture",
+      "loadout": null,
       "baseSize": "120 x 92mm",
       "notes": null
     },
@@ -2982,9 +3648,13 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Monster", "Beastclaw Raiders", "Ogor"],
-      "factionKeywords": ["Grand Alliance Destruction", "Ogor Mawtribes"],
-      "referenceKeywords": "Monster, Destruction, Ogor Mawtribes, Ogor, Beastclaw Raiders",
+      "keywords": ["Monster", "Beastclaw", "Ogor"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Ogor Mawtribes",
+        "Beastclaw Alfrostun"
+      ],
+      "referenceKeywords": "Monster, Destruction, Ogor Mawtribes, Ogor, Beastclaw",
       "stats": {
         "move": "10\"",
         "save": "4+",
@@ -2994,7 +3664,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 180,
+      "points": 240,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -3002,36 +3672,14 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Blood Vulture",
+            "name": "Chaintrap, Harpoon Launcher or Blood Vulture",
             "type": "ranged",
-            "range": "24\"",
-            "attacks": "1",
-            "hit": "2+",
-            "wound": "3+",
-            "rend": "-",
-            "damage": "1",
-            "abilities": []
-          },
-          {
-            "name": "Chaintrap",
-            "type": "ranged",
-            "range": "12\"",
+            "range": "15\"",
             "attacks": "1",
             "hit": "4+",
             "wound": "3+",
             "rend": "1",
             "damage": "3",
-            "abilities": ["Anti-MONSTER (+1 Rend)"]
-          },
-          {
-            "name": "Harpoon Launcher",
-            "type": "ranged",
-            "range": "18\"",
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "D3",
             "abilities": []
           },
           {
@@ -3062,10 +3710,10 @@
             "name": "Punches and Kicks",
             "type": "melee",
             "range": null,
-            "attacks": "6",
+            "attacks": "4",
             "hit": "4+",
             "wound": "2+",
-            "rend": "-",
+            "rend": "1",
             "damage": "1",
             "abilities": []
           }
@@ -3085,21 +3733,33 @@
           "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Thundertusk’s Colossal Tusks** is 2."
         },
         {
-          "name": "Everwinter's Assault",
-          "phase": "endOfTurn",
-          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
-          "icon": "control",
+          "name": "Chilling Onslaught",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
-          "effect": "Roll a dice. On a 3+, for the rest of the turn:\n\n• If the target is a **MONSTER**, subtract 3 from its control score.\n• If the target is a non-**MONSTER** unit, subtract 5 from its control score.",
+          "effect": "Roll a dice. On a 4+, for the rest of the turn, subtract 1 from hit rolls for the target’s attacks.",
           "keywords": ["Rampage"]
+        },
+        {
+          "name": "Plough the Icepath",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a non-**CHARGE MOVE** ability for this unit in your movement phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Pick a friendly **OGOR MAWTRIBES INFANTRY** unit that has not been reinforced, is wholly within 6\" of this unit and has not been set up this turn to be the target. Remove the target from the battlefield. After this unit ends its move, you must set up the target unit wholly within 6\" of this unit and not in combat. The target cannot use **CHARGE** abilities for the rest of the turn."
         }
       ],
       "summonedBy": null,
-      "loadout": "This unit is armed with an Ice Blast, Harpoon Launcher, Punches and Kicks, Thundertusk’s Colossal Tusks, and 1 of the following options:\n\n• Chaintrap\n• Blood Vulture",
+      "loadout": null,
       "baseSize": "120 x 92mm",
       "notes": null
     },
@@ -3111,58 +3771,35 @@
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "factions": ["Ogor Mawtribes"],
-      "keywords": ["Ogor", "Gutbusters", "Infantry", "Hero"],
+      "keywords": ["Maw Nomad", "Ogor", "Gutbusters", "Infantry", "Hero"],
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Ogor Mawtribes",
-        "The Roving Maw"
+        "The Roving Maw",
+        "Meatfist Mawtribe"
       ],
       "referenceKeywords": "Hero, Infantry, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
       "stats": {
         "move": "6\"",
         "save": "4+",
-        "control": "5",
+        "control": "3",
         "health": "8",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 130,
+      "points": 150,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
       "weapons": {
-        "ranged": [
-          {
-            "name": "Ogor Pistols",
-            "type": "ranged",
-            "range": "10\"",
-            "attacks": "2",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "D3",
-            "abilities": ["Shoot in Combat"]
-          }
-        ],
         "melee": [
           {
-            "name": "Beastskewer Glaive",
+            "name": "Tyrant's Meatcleavers",
             "type": "melee",
             "range": null,
-            "attacks": "2",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "1",
-            "damage": "2",
-            "abilities": ["Anti-MONSTER (+1 Rend)"]
-          },
-          {
-            "name": "Thundermace",
-            "type": "melee",
-            "range": null,
-            "attacks": "3",
+            "attacks": "4",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
@@ -3173,40 +3810,140 @@
       },
       "abilities": [
         {
-          "name": "Bully of the First Degree",
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "control",
+          "name": "Brawlerguts",
+          "phase": "combatPhase",
+          "phaseDetails": "Reaction: You delcared a **FIGHT** ability for this unit",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick another friendly **OGOR MAWTRIBES** unit wholly within 12\" of this unit to be the target.",
-          "effect": "Add 3 to the target’s control score until the start of your next turn."
+          "declare": null,
+          "effect": "Pick a visible friendly non-**HERO OGOR MAWTRIBES INFANTRY** unit that has not used a **FIGHT** ability this turn and is within this unit’s combat range to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved. If it is picked to do so, add 1 to hit rolls for the target’s combat attacks for the rest of the turn."
         },
         {
-          "name": "Brawlerguts",
-          "phase": "chargePhase",
-          "phaseDetails": "Passive",
+          "name": "Big Name",
+          "phase": "startOfTurn",
+          "phaseDetails": "Deployment Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "Add 1 to the D3 roll made when this unit uses the ‘Trampling Charge’ ability."
+          "effect": "Pick 1 of the following effects to apply for the rest of the battle. You cannot pick an effect that has already been picked for another friendly **Tyrant**.\n\n• ***Neck-wringer***: Enemy **INFANTRY** units that have a Health characteristic of 1 or 2 cannot contest objectives while they are in combat with this unit.\n\n• ***Steed-eater***: Enemy **CAVALRY** units cannot use **RETREAT** abilities while they are in combat with this unit.\n\n• ***Giant-wrestler***: Enemy **MONSTERS** cannot use **RAMPAGE** abilities while they are in combat with this unit."
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "50mm",
+      "notes": "This Hero can join an eligible regiment as a Maw Nomad."
+    },
+    {
+      "id": "afb5ef02-00b1-564e-91f6-ca7293d1dffc",
+      "name": "Tyrant on Glutthorn",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factions": ["Ogor Mawtribes"],
+      "keywords": ["Monster", "Ogor", "Gutbusters", "Hero"],
+      "factionKeywords": [
+        "Ogor Mawtribes",
+        "Grand Alliance Destruction",
+        "Meatfist Mawtribe",
+        "The Roving Maw"
+      ],
+      "referenceKeywords": "Hero, Monster, Destruction, Ogor Mawtribes, Ogor, Gutbusters",
+      "stats": {
+        "move": "10\"",
+        "save": "3+",
+        "control": "10",
+        "health": "16",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 400,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Tyrant's Meatcleavers",
+            "type": "melee",
+            "range": null,
+            "attacks": "4",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Crit (Mortal)"]
+          },
+          {
+            "name": "Glutthorn's Horn and Hooves",
+            "type": "melee",
+            "range": null,
+            "attacks": "7",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Glutthorn’s Horn and Hooves** is 5."
+        },
+        {
+          "name": "Glutthorn Stampede",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
+          "effect": "Roll a dice. Add 1 to the roll if the target is **INFANTRY**. On a 4+, the target has **STRIKE-LAST** for the rest of the turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Pitiless Warlord",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a **CHARGE** ability for an **OGOR MAWTRIBES** unit wholly within 12\" of this unit",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Re-roll 1 dice in that charge roll."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "120 x 92mm",
       "notes": null
     }
   ],
   "battleFormations": [
     {
-      "id": "34228721-77ac-55bb-bf28-a6a5de6cb8d4",
-      "name": "Blackpowder Fanatics",
+      "id": "17820e7f-a28b-5260-bd1c-551e37827623",
+      "name": "Maw-Cult Fanatics",
       "cardType": "BattleFormation",
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
@@ -3215,12 +3952,34 @@
       "points": null,
       "rules": [
         {
-          "name": "Feed Yer Cannons!",
-          "phase": "shootingPhase",
-          "phaseDetails": "Passive",
-          "icon": "shooting",
-          "declare": null,
-          "effect": "Ranged weapons used by friendly **Leadbelchers** and **Ironblaster** units have **Shoot in Combat** while they are within the combat range of a friendly **OGOR MAWTRIBES HERO.**",
+          "name": "Grub's Up, Mateys!",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "defensive",
+          "declare": "Pick each friendly **OGOR MAWTRIBES** unit that has used the ‘Eat ’Em Alive’ ability this battle to be the targets.",
+          "effect": "**Heal** (**D3**) each target.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "ed547ff3-a170-5d3e-95ec-d6a1d91102ba",
+      "name": "Vanguard of the Mawpath",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Smash and Grab",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "movement",
+          "declare": "Pick each friendly **OGOR MAWTRIBES** unit that charged this turn and for which the unmodified charge roll was 8+ to be the targets.",
+          "effect": "Each target can move up to 3\". It can move through the combat ranges of enemy units but must end that move in combat with the units it was in combat with at the start of the move.",
           "cpCost": null,
           "isReaction": false
         }
@@ -3249,8 +4008,8 @@
       ]
     },
     {
-      "id": "28741ffd-ff08-52ce-acc8-0b200dee04a1",
-      "name": "Heralds of the Everwinter",
+      "id": "2eb3760d-db5b-5885-95a3-b3f82f73723e",
+      "name": "Hunger-Filled Tribe",
       "cardType": "BattleFormation",
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
@@ -3259,14 +4018,15 @@
       "points": null,
       "rules": [
         {
-          "name": "Eyes of the Storm",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "declare": null,
-          "effect": "Subtract 1 from hit rolls for shooting attacks that target friendly **OGOR MAWTRIBES INFANTRY** units while they are wholly within 12\" of any friendly **BEASTCLAW RAIDERS HEROES**.",
+          "name": "Feast of Bloodshed",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "special",
+          "declare": "For each enemy unit that was destroyed this turn, pick a friendly **OGOR MAWTRIBES** unit that is not in combat and has not used the ‘Power Through’ command this turn to be the target.",
+          "effect": "Each target can move up to 3\". It can move through the combat ranges of enemy units and can end that move in combat.",
           "cpCost": null,
-          "isReaction": false
+          "isReaction": false,
+          "keywords": ["Move"]
         }
       ]
     },
@@ -3294,8 +4054,8 @@
       ]
     },
     {
-      "id": "060daf11-73d0-5bb9-a5d4-aca6dcce0965",
-      "name": "Prophets of the Gulping God",
+      "id": "aa3e2be4-dcd4-58cf-b4c5-d822139ddd85",
+      "name": "Hinterland Hunters",
       "cardType": "BattleFormation",
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
@@ -3304,34 +4064,12 @@
       "points": null,
       "rules": [
         {
-          "name": "Master Butchers",
-          "phase": "heroPhase",
+          "name": "Prowling Predators",
+          "phase": "defensive",
           "phaseDetails": "Passive",
-          "icon": "special",
+          "icon": "defensive",
           "declare": null,
-          "effect": "Add 1 to casting rolls for friendly **OGOR MAWTRIBES WIZARDS**.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
-      "id": "62d473bc-15b4-5014-8675-1980cf25193e",
-      "name": "Beast Handlers",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "OGOR_MAWTRIBES",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Brutal Stock",
-          "phase": "chargePhase",
-          "phaseDetails": "Passive",
-          "icon": "offensive",
-          "declare": null,
-          "effect": "Each time a friendly **BEASTCLAW RAIDERS MONSTER** uses the ‘Trampling Charge’ ability, add 1 to the amount of mortal damage inflicted, if any.",
+          "effect": "Subtract 1 from hit rolls for attacks that target friendly **OGOR MAWTRIBES** units while they are wholly within 9\" of a battlefield edge and have not charged this turn.",
           "cpCost": null,
           "isReaction": false
         }
@@ -3339,6 +4077,534 @@
     }
   ],
   "armiesOfRenown": [
+    {
+      "id": "38aad8cd-019b-59e6-a7cd-ed179e4214fa",
+      "name": "Beastclaw Alfrostun",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "parentFaction": "Ogor Mawtribes",
+      "isLegends": false,
+      "lore": "The Beastclaw Raiders are ogors who follow the old ways with thuggish devotion. In their eyes, everything ‘modern’ ogors value – prestige and infamy amongst the thinlings, strongholds stacked high with plunder, the ‘Great Secret’ of mercenary work – is a corruption. Theirs was the way long before other ogors began willingly embracing atavism.\n\nWhen you pick the Ogor Mawtribes faction for your army, you can choose for it to be a Beastclaw Alfrostun Army of Renown. If you do so, use the faction rules on these pages instead of the Ogor Mawtribes faction rules. Every unit in your army must be drawn from the units listed as described in Army of Renown: Beastclaw Alfrostun. All units in your army gain the **ALFROSTUN** keyword.",
+      "rules": [
+        {
+          "name": "Masked by the Endless White",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "Friendly **ALFROSTUN** units are not visible to enemy units more than 12\" away."
+        },
+        {
+          "name": "A Clan of Hunters",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **Hunters with Sabrefangs** unit to be the target.",
+          "effect": "The target can use the ‘Through the Frosts’ ability even if another friendly **Hunters with Sabrefangs** unit has used that ability this battle."
+        },
+        {
+          "name": "Grasp of the Everwinter",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick each enemy unit in combat with any friendly **ALFROSTUN** units to be the targets.",
+          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll."
+        },
+        {
+          "name": "Run 'Em Down",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "declare": null,
+          "effect": "Each time an enemy unit in combat with a friendly **ALFROSTUN** unit uses a **RETREAT** ability, after that ability has been resolved, inflict D3 mortal damage on that enemy unit.\n\n**Designer’s Note:** *This mortal damage is in addition to any mortal damage inflicted on that enemy unit by that* **RETREAT** *ability.*"
+        },
+        {
+          "name": "Fearsome Breed",
+          "phase": "chargePhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Subtract 1 from charge rolls for enemy units while they are within 12\" of a friendly **ALFROSTUN MONSTER**. Subtract 2 from charge rolls for enemy units while they are within 6\" of a friendly **ALFROSTUN MONSTER** instead."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "f3c0d6d1-5735-5a6b-876e-a454d130b43d",
+            "name": "Alvagr Rune-Tokens",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Once Per Battle (Army), Your Hero Phase",
+            "icon": "special",
+            "declare": null,
+            "effect": "Until the start of your next turn, add 2 to chanting rolls for friendly **ALFROSTUN** units while they are wholly within 12\" of this unit.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "fcb13a45-bf39-573d-8003-04d8419bd494",
+            "name": "Hard-Bitten Chieftain",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "Other than the **Companion** ability, weapon abilities for attacks that target this unit made by enemy units that charged in the same turn have no effect.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "8fd1c5e7-3112-5c75-9233-2fa6c349a488",
+          "name": "Beastclaw Alfrostun Prayer Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "OGOR_MAWTRIBES",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "f5f8f76a-3af3-5530-942b-2a35bcad20bc",
+              "name": "Terrors of the Old Ice",
+              "castingValue": 4,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "control",
+              "declare": "Pick a friendly **ALFROSTUN PRIEST** to chant this prayer, pick an objective or terrain feature wholly within 18\" of them to be the target, then make a chanting roll of D6.",
+              "effect": "Until the start of your next turn, subtract 10 from the control scores of enemy units while they are contesting the target. If the chanting roll was 8+, until the start of your next turn, enemy units have a maximum control score of 1 while they are contesting the target.",
+              "keywords": ["Prayer"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "45b0ec47-3146-507d-8956-8668d2f32746",
+              "name": "Keening Gale",
+              "castingValue": 3,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "movement",
+              "declare": "Pick a friendly **ALFROSTUN PRIEST** to chant this prayer, pick a visible friendly **ALFROSTUN** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+              "effect": "Until the start of your next turn, add 2 to run rolls for the target. In addition, if the chanting roll was 6+, until the start of your next turn, add 2 to charge rolls for the target.",
+              "keywords": ["Prayer", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "5d1674d3-c683-55ee-82ab-72976c6ca19d",
+              "name": "Avalanche Voice",
+              "castingValue": 4,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **ALFROSTUN PRIEST** to chant this prayer, pick a visible enemy unit within 18\" of them to be the target, then make a chanting roll of D6.",
+              "effect": "Until the start of your next turn, each time your opponent declares a command for the target, as a reaction, make a tremor roll of D6 for the target. On a 5+, unless they spend 1 additional command point to use that command, the command has no effect, it still counts as having been used and the command points spent to use it are still lost. In addition, if the chanting roll was 8+, until the start of your next turn, add 2 to tremor rolls for the target.",
+              "keywords": ["Prayer"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Stonehorn Beastriders",
+          "Hunters with Sabrefangs",
+          "Huskard on Thundertusk",
+          "Frostlord on Stonehorn",
+          "Thundertusk Beastriders",
+          "Maulbeast Raiders",
+          "Frostlord on Thundertusk",
+          "Mantrapper",
+          "Frost Sabres",
+          "Icefall Yhetees",
+          "Huskard on Stonehorn",
+          "Mournfang Pack",
+          "Icebrow Hunter",
+          "Bloodpelt Hunter",
+          "Great Mawpot",
+          "Mawpit"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "dc617646-3b84-574a-a306-767b2fc670fe",
+      "name": "Mawseeker Gollop",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "parentFaction": "Ogor Mawtribes",
+      "isLegends": false,
+      "lore": "Coated with gore and the heady stink of fanaticism, the Mawseekers most completely embody the ogor god’s brute creed: that existence itself is meat to be feasted upon. Yet if there is something apocalyptic in their beliefs, the ogors do not seem to notice. They exude what can only be described as a monstrous bonhomie as they go about their gluttonous atrocities, for they see the current era of woe as a time of plenty: a gift from their god and a challenge that they – and by extension the ogor race in its entirety – must rise to meet.\n\nWhen you pick the Ogor Mawtribes faction for your army, you can choose for it to be a Mawseeker Gollop Army of Renown. If you do so, use the faction rules on these pages instead of the Ogor Mawtribes faction rules. Every unit in your army must be drawn from the units listed as described in Army of Renown: Mawseeker Gollop. All units in your army gain the **GOLLOP** keyword.",
+      "rules": [
+        {
+          "name": "Prepare the Feast",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Start of Any Turn",
+          "icon": "special",
+          "declare": null,
+          "effect": "If there is no friendly **Feastmaster** on the battlefield, pick a friendly **GOLLOP HERO** to be the **Feastmaster** for the rest of the battle."
+        },
+        {
+          "name": "Ooh, That Looks Tasty...",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "special",
+          "declare": null,
+          "effect": "Each time an enemy unit is destroyed, you gain a number of **raw ingredients**.\n\nThe number of **raw ingredients** yielded by a destroyed unit is the Health characteristic of that unit multiplied by the number of starting models in that unit.\n\n**Designer’s Note:** *If a destroyed enemy unit had a Health characteristic of 2 and its starting size was 10 models, it would yield 20 raw ingredients when it was destroyed.*"
+        },
+        {
+          "name": "Gland Goulash",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Hero Phase",
+          "icon": "special",
+          "declare": "Spend 10 **raw ingredients**.",
+          "effect": "For the rest of the phase, add 1 to the number of dice rolled, to a maximum of 3, when making casting rolls and unbinding rolls for friendly **GOLLOP** units while they are wholly within 12\" of and visible to a friendly **Feastmaster**."
+        },
+        {
+          "name": "Bone-Slurry Soup",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "defensive",
+          "declare": "Spend 5 **raw ingredients**.",
+          "effect": "**HEAL (D6)** each friendly **GOLLOP** unit that is wholly within 12\" of and visible to a friendly **Feastmaster**."
+        },
+        {
+          "name": "The Organ Platter",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "declare": "Spend 20 **raw ingredients**.",
+          "effect": "For the rest of the phase, while they are wholly within 12\" of a friendly **Feastmaster**, melee weapons used by friendly **GOLLOP** units have **Crit (Mortal)**."
+        },
+        {
+          "name": "Gore-Offal Dumplings",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "movement",
+          "declare": "Spend 10 **raw ingredients**.",
+          "effect": "Each friendly **GOLLOP** unit that is wholly within 12\" of and visible to a friendly **Feastmaster** can immediately use a **CHARGE** ability as if it were your charge phase, but subtract 1 from the number of dice rolled when making the charge roll for that unit."
+        },
+        {
+          "name": "Unwashed Innards",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Movement Phase",
+          "icon": "offensive",
+          "declare": "Spend 5 **raw ingredients**.",
+          "effect": "For the rest of the phase, add 4 to run rolls for friendly **GOLLOP** units while they are wholly within 12\" of and visible to a friendly **Feastmaster**."
+        },
+        {
+          "name": "Fried Limbs",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "movement",
+          "declare": "Spend 10 **raw ingredients**.",
+          "effect": "For the rest of the phase, add 3 to charge rolls for friendly **GOLLOP** units while they are wholly within 12\" of and visible to a friendly **Feastmaster**."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "22a9fae5-56dc-5961-8c3e-ebf734667de1",
+            "name": "Overflowing Larder",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "heroPhase",
+            "phaseDetails": "Once Per Battle, Your Hero Phase",
+            "icon": "special",
+            "declare": null,
+            "effect": "Gain D6 **raw ingredients**. If this unit is a **Feastmaster**, gain D3+3 **raw ingredients** instead.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "05108a63-2275-5416-bd5f-0da444c000e4",
+            "name": "Indomitable Guts",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "Add 1 to ward rolls for this unit.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [
+        {
+          "id": "e8239976-6fab-574e-a4d5-d885847be6ad",
+          "name": "Mawseeker Gollop Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "OGOR_MAWTRIBES",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "026ab66c-057d-54f3-b3c3-e049322330be",
+              "name": "The Cosmos Writhes",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "movement",
+              "declare": "Pick a friendly **GOLLOP WIZARD** to cast this spell, pick a visible friendly **GOLLOP** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Remove the target from the battlefield and set it up again on the battlefield more than 9\" from all enemy units.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "8101bb2a-c225-569f-ab94-3d904ce7acb5",
+              "name": "Bonecruncher",
+              "castingValue": 5,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick a friendly **GOLLOP WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them that has not been picked to be the target of this ability this turn to be the target, then make a casting roll of 2D6.",
+              "effect": "Inflict D3 mortal damage on the target. Gain a number of **raw ingredients** equal to the number of those damage points that are allocated to the target.",
+              "keywords": ["Spell", "Unlimited"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "816ae416-d269-50e9-944c-accf95e6fe02",
+              "name": "Bloodgruel",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "special",
+              "declare": "Pick a friendly **GOLLOP WIZARD** to cast this spell, pick a visible friendly **GOLLOP** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+              "effect": "Pick 1 of the following effects:\n• Return 1 slain model to the target.\n• **Heal (D6)** the target.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Redd the Maw, High Slaughtermaster",
+          "Gutseers",
+          "Cleavers",
+          "Slaughtermaster",
+          "Great Mawpot",
+          "Mawpit",
+          "Butcher",
+          "Gorger Mawpack"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "7999206f-f452-5c0b-ba88-1efb71735d36",
+      "name": "Meatfist Mawtribe",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "OGOR_MAWTRIBES",
+      "parentFaction": "Ogor Mawtribes",
+      "isLegends": false,
+      "lore": "The Meatfist mawtribe take their position at the apex of the ogors’ crude hierarchy very seriously; any who question it can come and say it to their face, if they dare. Conquerors and crushers, they are a landslide of unwashed flesh that rolls over anything in their path and relishes feasting on what remains.\n\nWhen you pick the Ogor Mawtribes faction for your army, you can choose for it to be a Meatfist Mawtribe Army of Renown. If you do so, use the faction rules on these pages instead of the Ogor Mawtribes faction rules. Every unit in your army must be drawn from the units listed in Army of Renown: Meatfist Mawtribe. All units in your army gain the **MEATFIST** keyword.",
+      "rules": [
+        {
+          "name": "Bloodthirsty Arrogance",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "declare": null,
+          "effect": "Each time you make an unmodified save roll of 1 for a combat attack that targets a friendly **MEATFIST INFANTRY** unit that did not charge in the same turn, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved."
+        },
+        {
+          "name": "Fleshy Stampede",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Add 2 to run rolls for friendly **MEATFIST** units."
+        },
+        {
+          "name": "Meaty Charge",
+          "phase": "chargePhase",
+          "phaseDetails": "Any Charge Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **MEATFIST** unit that charged this turn to use this ability, then pick a visible enemy unit within 1\" of it and that has not been picked to be the target of this ability this phase to be the target.",
+          "effect": "Make a meaty charge roll by rolling a number of dice equal to the unmodified charge roll made this turn for the unit using this ability. Add 1 to the roll if the unit using this ability has more models than the target unit. For each 5+, inflict 1 mortal damage on the target."
+        },
+        {
+          "name": "The Unstoppable Feast",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Your Charge Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **MEATFIST** unit that has not used a **FIGHT** ability this battle to be the target.",
+          "effect": "For the rest of the turn, the target can use **CHARGE** abilities even if it used a **RUN** or **RETREAT** ability earlier in the same turn."
+        },
+        {
+          "name": "Gluttonous Conquerors",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "control",
+          "declare": null,
+          "effect": "Add 1 to the Control characteristic of friendly **MEATFIST** units while they are in combat."
+        },
+        {
+          "name": "Greedy Chompers",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Your Turn",
+          "icon": "defensive",
+          "declare": "Pick up to 3 friendly **MEATFIST** units that are in combat to be the targets.",
+          "effect": "Roll a D3 for each target. On a 2+, **Heal (X)** the target where **X** is equal to the roll."
+        },
+        {
+          "name": "Gruesome Devourers",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+          "icon": "movement",
+          "declare": "Pick an enemy unit that had any damage points allocated to it this turn by a friendly **MEATFIST** unit’s combat attacks to be the target.",
+          "effect": "Roll a dice. On a 3+, until the start of your next turn, the target cannot use **RETREAT** abilities."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "6e83dc72-6246-5d1e-a97c-1688114e5632",
+            "name": "Snott, Gnoblar Thief",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "startOfTurn",
+            "phaseDetails": "Start of Any Turn",
+            "icon": "special",
+            "declare": "Pick a visible enemy **HERO** that has any artefacts of power to be the target.",
+            "effect": "Roll a dice. If the roll is equal to or lower than the current battle round number, the target no longer has any artefacts of power.",
+            "cpCost": null
+          },
+          {
+            "id": "c35ea771-9175-5bb0-99eb-76fdb817cdbb",
+            "name": "Trapper's Arsenal",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Once Per Battle, Any Combat Phase",
+            "icon": "defensive",
+            "declare": "Pick an enemy unit in combat with this unit and that charged this turn to be the target.",
+            "effect": "Roll a dice. On a 4+, the target has **STRIKE‑LAST** for the rest of the turn.",
+            "cpCost": null
+          },
+          {
+            "id": "d7e470ca-6e21-58a2-bd20-737e3a2bbb56",
+            "name": "Rusty Leadbelcher Gun",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "shootingPhase",
+            "phaseDetails": "Once Per Battle, Your Shooting Phase",
+            "icon": "special",
+            "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+            "effect": "Pick to load the gun with **Jagged Shrapnel** or **Lumpen Metal** **Scrap**, then apply the corresponding effect below:\n\n***Jagged Shrapnel:*** Inflict D3 mortal damage on the target. If any models were slain by that mortal damage, halve the target’s Move characteristic until the start of your next turn.\n\n***Lumpen Metal Scrap:*** Inflict D6 mortal damage on the target.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "81185fd0-cab2-5215-8e1e-fcbf19e24bb1",
+            "name": "Thick Blubber",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "defensive",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "Subtract 1 from wound rolls for shooting attacks that target this unit.",
+            "cpCost": null
+          },
+          {
+            "id": "c707a749-e4a5-5086-b531-57afb8105916",
+            "name": "Overpowering Mass",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "chargePhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "When making meaty charge rolls for this unit, you can re-roll unmodified rolls of 1.",
+            "cpCost": null
+          },
+          {
+            "id": "676bd227-1bd1-5117-aa1a-1912642ad0fb",
+            "name": "Force of Savage Personality",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "startOfTurn",
+            "phaseDetails": "Passive",
+            "icon": "special",
+            "declare": null,
+            "effect": "Enemy units and enemy **MANIFESTATIONS** cannot be set up within 12\" of this unit.",
+            "cpCost": null
+          }
+        ],
+        "other": []
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Great Mawpot",
+          "Ironguts",
+          "Morga The Mighty, Overtyrant",
+          "Maulbeast Cavalry",
+          "Firebelly",
+          "Tyrant on Glutthorn",
+          "Maneaters",
+          "Grell Firefist",
+          "Leadbelchers",
+          "Gluttons",
+          "Scourge of Ghyran Ironblaster",
+          "Ironblaster",
+          "Tyrant",
+          "Mawpit"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
     {
       "id": "93b71165-0a7b-5077-b299-480a169a2e53",
       "name": "The Roving Maw",
@@ -3371,7 +4637,7 @@
           "phaseDetails": "Passive",
           "icon": "special",
           "declare": null,
-          "effect": "Each time a model is slain by a friendly **Mawpit**’s ‘Throat of Ghur’ ability, you gain 1 **tasty morsel**."
+          "effect": "Each time a model is slain by a friendly **Mawpit**’s ‘Hungry Sinkhole’ ability, you gain 1 **tasty morsel**."
         },
         {
           "name": "Mawpits of Ghur",
@@ -3419,7 +4685,7 @@
             "phaseDetails": "Once Per Battle Round (Army), Start of Battle Round",
             "icon": "special",
             "declare": null,
-            "effect": "If this unit is a Head Butcher, gain 1 **tasty morsel**.",
+            "effect": "If this unit is within 1\" of a friendly **Mawpit**, gain 1 **tasty morsel**.",
             "cpCost": null
           }
         ],
@@ -3443,7 +4709,7 @@
               "phaseDetails": "Your Hero Phase",
               "icon": "offensive",
               "declare": "Pick a friendly **ROVING MAW WIZARD** to cast this spell, pick a visible terrain feature within 18\" of them to be the target, then make a casting roll of 2D6.",
-              "effect": "For the rest of the battle, units on or within 1\" of the target are **vulnerable to Mawpits**. This ability had no effect on **ROVING MAW** units or units that have **FLY**.",
+              "effect": "For the rest of the battle, units on or within 1\" of the target are **vulnerable to Mawpits**. This ability has no effect on **ROVING MAW** units or units that have **FLY**.",
               "keywords": ["Spell", "Unlimited"],
               "linkedWarscroll": null
             },
@@ -3467,16 +4733,21 @@
       "rosterRestrictions": {
         "unitPool": [
           "Leadbelchers",
-          "Ogor Gluttons",
           "Scourge of Ghyran Ironblaster",
           "Slaughtermaster",
-          "Ironguts",
           "Ironblaster",
           "Tyrant",
           "Mawpit",
           "Butcher",
-          "Bloodpelt Hunter",
-          "Gorger Mawpack"
+          "Gorger Mawpack",
+          "Ironguts",
+          "Maulbeast Cavalry",
+          "Firebelly",
+          "Tyrant on Glutthorn",
+          "Maneaters",
+          "Gutseers",
+          "Cleavers",
+          "Gluttons"
         ],
         "requiredWarscrolls": [],
         "requiredGeneralWarscrolls": [],
@@ -3493,37 +4764,37 @@
   ],
   "lores": [
     {
-      "id": "dcba3a5b-2995-53ab-a5dc-8ede05c50c66",
-      "name": "Everwinter Prayers",
+      "id": "fe90ad87-a205-5132-964a-c7b94c3b640d",
+      "name": "Lore of the Everwinter",
       "cardType": "Lore",
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "restrictionText": null,
       "spells": [
         {
-          "id": "4bdf3f67-e8b6-5dc7-aabc-4115b8f8e1e3",
-          "name": "Call of the Blizzard",
+          "id": "c02624e9-af58-50d2-bb4e-a6051511b9ca",
+          "name": "Fortifying Hoarfrost",
           "castingValue": 4,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "defensive",
-          "declare": "Pick a friendly **OGOR MAWTRIBES PRIEST** to chant this prayer, pick a terrain feature within 18\" of them to be the target, then make a chanting roll of D6.",
-          "effect": "Place a **blizzard token** next to the target. Terrain features that have a **blizzard token** gain the ‘Obscuring’ terrain ability. In addition, if the chanting roll was 8+, until the start of your next turn, friendly **BEASTCLAW RAIDERS** units have **WARD (5+)** while they are within 3\" of any terrain features that have **blizzard tokens**.",
-          "keywords": ["Prayer", "Unlimited"],
+          "declare": "Pick a friendly **OGOR MAWTRIBES PRIEST** to chant this prayer, pick a visible friendly **OGOR MAWTRIBES** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "Until the start of your next turn, subtract 1 from wound rolls for attacks that target that friendly unit. In addition, if the chanting roll was 8+, until the start of your next turn, subtract 1 from the Rend characteristic of weapons used for attacks that target that friendly unit.",
+          "keywords": ["Prayer"],
           "linkedWarscroll": null
         },
         {
-          "id": "45b0ec47-3146-507d-8956-8668d2f32746",
-          "name": "Keening Gale",
-          "castingValue": 4,
+          "id": "fb939679-84cc-5c4d-ae32-3f95973aef8d",
+          "name": "Freezing Tailwinds",
+          "castingValue": 3,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "movement",
-          "declare": "Pick a friendly **OGOR MAWTRIBES PRIEST** to chant this prayer, pick a visible friendly **OGOR MAWTRIBES MONSTER** or **Mournfang Pack** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
-          "effect": "For the rest of the turn, the target can use a **RUN** ability and still use **CHARGE** abilities later in the turn. In addition, if the chanting roll was 8+, you can re-roll run rolls and charge rolls for the target for the rest of the turn.",
-          "keywords": ["Prayer"],
+          "declare": "Pick a friendly **OGOR MAWTRIBES PRIEST** to chant this prayer, pick a visible friendly **OGOR MAWTRIBES** unit wholly within 12\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "Until the start of your next turn, add 1 to run rolls and charge rolls for the target. Add 2 instead if the chanting roll was 6+.",
+          "keywords": ["Prayer", "Unlimited"],
           "linkedWarscroll": null
         },
         {
@@ -3534,58 +4805,58 @@
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "offensive",
-          "declare": "Pick a friendly **OGOR MAWTRIBES PRIEST** to chant this prayer, pick a point on the battlefield within 12\" of them, then pick each visible enemy unit within 3\" of that point to be the targets. Then, make a chanting roll of D6.",
-          "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on the target equal to the roll. If the chanting roll was 8+, double the amount of mortal damage inflicted.",
+          "declare": "Pick a friendly **OGOR MAWTRIBES PRIEST** to chant this prayer, pick a visible enemy unit within 12\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "If the chanting roll was 8+, you can pick another eligible unit to be a second target. Then, inflict 3 mortal damage on the target(s).",
           "keywords": ["Prayer"],
           "linkedWarscroll": null
         }
       ]
     },
     {
-      "id": "1cf3ba66-14b9-5b43-987e-cec7240be567",
-      "name": "Lore of Maw-magic",
+      "id": "fe4bc6fd-ca4a-57e2-bfad-40e328876b83",
+      "name": "Lore of Gut Magic",
       "cardType": "Lore",
       "source": "aos-4e",
       "faction_id": "OGOR_MAWTRIBES",
       "restrictionText": null,
       "spells": [
         {
-          "id": "2c608aaa-95f0-540f-b64c-813ac4ff325b",
-          "name": "Greasy Deluge",
-          "castingValue": 6,
+          "id": "56c0f5d5-5f27-5f02-97a6-a859f98b6446",
+          "name": "Tallowflage",
+          "castingValue": 7,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "defensive",
-          "declare": "Pick a friendly **OGOR MAWTRIBES WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
-          "effect": "Subtract 1 from hit rolls for the target’s attacks until the start of your next turn.",
+          "declare": "Pick a friendly **OGOR MAWTRIBES WIZARD** to cast this spell, pick a visible friendly **OGOR MAWTRIBES** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, the target is not visible to enemy units more than 12\" away from it.",
           "keywords": ["Spell"],
           "linkedWarscroll": null
         },
         {
           "id": "1f3b3b2c-75c4-5da5-bd6d-feaa4afeaffd",
           "name": "Blood Feast",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **OGOR MAWTRIBES WIZARD** to cast this spell, pick a visible friendly **OGOR MAWTRIBES** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, add 1 to hit rolls for the target’s combat attacks.",
+          "keywords": ["Spell", "Unlimited"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "d6d6e5b1-f9ca-5eed-b3c4-3e07b4e57da5",
+          "name": "Shincruncher",
           "castingValue": 7,
           "chantValue": null,
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
           "icon": "offensive",
-          "declare": "Pick a friendly **OGOR MAWTRIBES WIZARD** to cast this spell, pick a visible friendly **OGOR INFANTRY** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
-          "effect": "Add 1 to the Attacks characteristic of the target’s melee weapons until the start of your next turn.",
+          "declare": "Pick a friendly **OGOR MAWTRIBES WIZARD** to cast this spell, pick a visible enemy unit within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, each time the target ends a move or is set up on the battlefield, inflict D3 mortal damage on the target after the ability has been resolved.\n\n**Designer’s Note**: *The ‘Bull Charge’ ability in the battle traits forces an enemy unit to move.*",
           "keywords": ["Spell"],
-          "linkedWarscroll": null
-        },
-        {
-          "id": "b5c910b1-2a6f-5913-9411-e0423e39ced5",
-          "name": "Troggoth Guts",
-          "castingValue": 5,
-          "chantValue": null,
-          "phase": "heroPhase",
-          "phaseDetails": "Your Hero Phase",
-          "icon": "special",
-          "declare": "Pick a friendly **OGOR MAWTRIBES WIZARD** to cast this spell, pick a visible friendly **OGOR MAWTRIBES** unit within 12\" of them that has not been picked to be the target of this ability this turn to be the target, then make a casting roll of 2D6.",
-          "effect": "**Heal (D3)** the target and add 3 to the target’s control score for the rest of the turn.",
-          "keywords": ["Spell", "Unlimited"],
           "linkedWarscroll": null
         }
       ]
@@ -3595,45 +4866,45 @@
   "enhancements": {
     "artefacts": [
       {
-        "id": "c05854af-0b6d-59cb-9591-bd590556e10d",
-        "name": "The Fang of Ghur",
+        "id": "12e5d181-c116-57fb-8bc8-547a995a2b95",
+        "name": "Trophy Rack",
         "cardType": "Enhancement",
         "enhancementType": "artefactsOfPower",
         "source": "aos-4e",
         "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Battle, Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick an enemy unit in combat with this unit to be the target.",
-        "effect": "Ward rolls cannot be made for the target for the rest of the turn.",
-        "cpCost": null
-      },
-      {
-        "id": "39cb6606-1fb5-52b9-aaf1-98555686dd93",
-        "name": "Gruesome Trophies",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Add 1 to hit rolls for combat attacks that target **HEROES** or **MONSTERS** made by friendly **OGOR MAWTRIBES** units while they are wholly within 12\" of this unit.",
-        "cpCost": null
-      },
-      {
-        "id": "318ee0bf-a334-5866-bfb3-91d3316a00b1",
-        "name": "Elixir of the Frostwyrm",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "shootingPhase",
-        "phaseDetails": "Once Per Battle, Any Shooting Phase",
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
         "icon": "special",
-        "declare": "Pick an enemy unit in combat with this unit to be the target.",
-        "effect": "Roll a dice. Inflict an amount of mortal damage on the target equal to the roll. Then, **Heal (X)** this unit, where **X** is an amount equal to the roll.",
+        "declare": null,
+        "effect": "Pick 1 of the following trophies. For the rest of the battle, melee weapons used by other friendly **OGOR MAWTRIBES** units have the corresponding weapon ability while they are wholly within 6\" of and visible to this unit:\n\n• ***Squeezed Head***: **Anti‑MONSTER (+1 Rend)**\n\n• ***Smashed City Rubble***: **Anti‑WAR MACHINE (+1 Rend)**\n\n• ***Torn Appendages***: **Anti‑CAVALRY (+1 Rend)**",
+        "cpCost": null
+      },
+      {
+        "id": "16622b3c-62a3-5867-9139-dde04309a48a",
+        "name": "Carvalox Hide",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "This unit has **WARD (6+)**. It also has **WARD (4+)** against damage points inflicted by **SPELL** abilities, **PRAYER** abilities and abilities used by **MANIFESTATIONS**.",
+        "cpCost": null
+      },
+      {
+        "id": "994968dc-f6ac-5c26-8300-215beaae060c",
+        "name": "Mantle of Entrails",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Battle (Army), Any Hero Phase",
+        "icon": "special",
+        "declare": "Pick a visible enemy unit within 12\" of this unit to be the target.",
+        "effect": "Until the start of your next turn, each time the target uses a command, roll a dice as a reaction. On a 3+, that command has no effect, it still counts as having been used and the command points spent to use the command are still lost.",
         "cpCost": null
       },
       {
@@ -3681,36 +4952,8 @@
     ],
     "heroicTraits": [
       {
-        "id": "ec9639bc-dcc6-553a-a873-75a72a1ae70d",
-        "name": "Booming Roar",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "endOfTurn",
-        "phaseDetails": "Passive",
-        "icon": "control",
-        "declare": null,
-        "effect": "Subtract 5 from the control scores of enemy **INFANTRY** units while they are in combat with this unit.",
-        "cpCost": null
-      },
-      {
-        "id": "cd4ba4ad-7fa1-53ab-8346-5ace5fc6b0c8",
-        "name": "Touched by the Everwinter",
-        "cardType": "Enhancement",
-        "enhancementType": "heroicTraits",
-        "source": "aos-4e",
-        "points": 20,
-        "phase": "heroPhase",
-        "phaseDetails": "Passive",
-        "icon": "special",
-        "declare": null,
-        "effect": "If this unit is not a **PRIEST**, it has **PRIEST (1)**. If this unit is already a **PRIEST**, you can re-roll chanting rolls of 1 for it instead. If this unit is a **WIZARD**, it cannot use **SPELL** abilities and **PRAYER** abilities in the same phase.",
-        "cpCost": null
-      },
-      {
-        "id": "9b325cea-e109-5088-bc85-4fa3fda9472c",
-        "name": "Great Gutlord",
+        "id": "142f1ec9-c5e6-5cfa-943e-112082a3440c",
+        "name": "Leave Not a Morsel",
         "cardType": "Enhancement",
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
@@ -3719,7 +4962,35 @@
         "phaseDetails": "Passive",
         "icon": "special",
         "declare": null,
-        "effect": "Ignore negative modifiers to this unit’s control score and to hit rolls and wound rolls for this unit’s attacks.",
+        "effect": "While they are within 6\" of and visible to this unit, enemy units cannot be healed or have slain models returned to them.",
+        "cpCost": null
+      },
+      {
+        "id": "7d8f5e1d-682b-5bde-957e-7d0d418c1db7",
+        "name": "Dreaded Far and Wide",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Passive",
+        "icon": "special",
+        "declare": null,
+        "effect": "Ignore negative modifiers to:\n\n• This unit’s control score.\n• Hit rolls and wound rolls for this unit’s non‑**Companion** attacks.\n• Charge rolls for this unit.\n• The number of dice rolled when making charge rolls for this unit.",
+        "cpCost": null
+      },
+      {
+        "id": "58a3d1af-2727-5052-af6d-5a18360f60ef",
+        "name": "The Crusherguts",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "special",
+        "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
+        "effect": "Roll a dice. If the roll exceeds the target’s Health characteristic, 1 model in the target unit is automatically slain and the target cannot make pile-in moves for the rest of the turn.",
         "cpCost": null
       }
     ],
@@ -3809,6 +5080,64 @@
         "declare": null,
         "effect": "Subtract 1 from ward rolls for enemy units while they are within 6\" of this unit.",
         "cpCost": null
+      },
+      {
+        "id": "fb701560-5a08-53ff-afdd-e2a6190a1f26",
+        "name": "Along the Icepaths",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "heroPhase",
+        "phaseDetails": "Your Hero Phase",
+        "icon": "special",
+        "declare": "Pick the **Huskard on Stonehorn** in this Regiment of Renown to chant this prayer, pick up to 3 visible friendly units wholly within 12\" of them to be the targets, then make a chanting roll of D6. Add 1 to the roll if the friendly **Thundertusk Beastriders** unit in this Regiment of Renown is wholly within 12\" of this unit.",
+        "effect": "Until the start of your next turn:\n•  Add 3 to run rolls for each target.\n•  Each target can use **CHARGE** abilities even if it used a **RETREAT** ability in the same turn.\n•  Each time a target uses a **RETREAT** ability, no mortal damage is inflicted on it.",
+        "cpCost": 4,
+        "keywords": ["Prayer"]
+      },
+      {
+        "id": "54a16901-b7d3-55d9-9f4e-2a60c07969d9",
+        "name": "Cling on Tight",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Passive",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Each time the **Thundertusk Beastriders** unit in this Regiment of Renown uses the ‘Plough the Icepath’ ability, you can pick a friendly **INFANTRY** unit that has not been reinforced, is wholly within 6\" of that **Thundertusk Beastriders** unit and has not been set up this turn to be the target instead of a friendly **OGOR MAWTRIBES INFANTRY** unit.",
+        "cpCost": null
+      },
+      {
+        "id": "29dbea8a-43b1-57df-859a-a7c41994ad52",
+        "name": "We'll Be There - If The Pay's Right",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+        "icon": "special",
+        "declare": "Pick each unit in this Regiment of Renown to be the targets if none of them have been deployed.",
+        "effect": "Set up the targets in reserve **preparing a flank attack**. They have now been deployed.",
+        "cpCost": null,
+        "keywords": ["Deploy"]
+      },
+      {
+        "id": "441ad49e-16aa-5f9c-8239-076e49dd1707",
+        "name": "The Horns Hit Home",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Battle (Army), Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick each friendly unit that is **preparing a flank attack** to be the targets.",
+        "effect": "Set up the targets on the battlefield, wholly within 6\" of each other, wholly within 9\" of a battlefield edge and more than 9\" from all enemy units.",
+        "cpCost": null
       }
     ]
   },
@@ -3854,28 +5183,36 @@
   "rules": {
     "battleTraits": [
       {
-        "name": "Ravenous Brutes",
-        "phase": "movementPhase",
-        "phaseDetails": "Passive",
-        "icon": "movement",
-        "declare": null,
-        "effect": "Add 2 to run rolls for friendly **OGOR** units while you have not used the ‘Feast on Flesh’ ability this battle."
-      },
-      {
-        "name": "Trampling Charge",
-        "phase": "chargePhase",
-        "phaseDetails": "Any Charge Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **OGOR** or **RHINOX** unit that charged this turn to use this ability, then pick a visible enemy unit within 1\" of it to be the target.",
-        "effect": "Roll a D3. Add 2 to the roll if this unit is a **MONSTER.** On a 2+, inflict an amount of mortal damage on the target equal to the roll."
-      },
-      {
-        "name": "Feast on Flesh",
+        "name": "Eat 'Em Alive",
         "phase": "endOfTurn",
-        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+        "phaseDetails": "End of Any Turn",
         "icon": "special",
-        "declare": "Pick each friendly **OGOR** unit that is in combat or that used a **FIGHT** ability this turn to be the targets.",
-        "effect": "Roll a D3 for each target. On a 2+:\n\n• **Heal (X)** the target, where **X** is an amount equal to the roll.\n• Pick an enemy unit in combat with the target. You cannot pick the same enemy unit more than once. Inflict an amount of mortal damage on that enemy unit equal to the roll."
+        "declare": "Pick a friendly **OGOR** unit that used a **FIGHT** ability that targeted a unit, excluding **FACTION TERRAIN**, this turn to use this ability. Then, you can pick an enemy unit in combat with it to be the target. The same enemy unit cannot be picked to be the target of this ability more than once per turn.",
+        "effect": "Inflict D3 mortal damage on the target (if any). Then, pick 1 of the following effects to apply to that friendly **OGOR** unit for the rest of the battle. If any of these effects already apply to it, you can pick a different effect to replace the current effect.\n\n• ***Raw and Bloody Flesh***: Subtract 1 from the Rend characteristic of weapons used for attacks that target that unit.\n\n• ***Exotic Giblets***: Subtract 1 from ward rolls for damage points inflicted by that unit’s combat attacks made with non‑**Companion** weapons.\n\n• ***Steaming Brains***: Add 2 to that unit’s Control characteristic.\n\n• ***Crunchy Bones***: That unit’s melee weapons have **Crit (2 Hits)**. If that unit’s melee weapons already have **Crit (2 Hits)**, they have **Crit (Mortal)** instead.\n\n• ***Slick Innards***: That unit can use **CHARGE** abilities even if it used a **RUN** ability in the same turn.\n\n• ***Mystery Meat***: Subtract 1 from the power level of enemy units while they are in combat with that unit, to a minimum of 0.\n\n**Designer’s Note**: *Only 1 of these effects can apply to the same unit at the same time unless specified otherwise. Also note that Steaming Brains affects the Control characteristic, not the control score.*"
+      },
+      {
+        "name": "Bull Charge",
+        "phase": "chargePhase",
+        "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+        "icon": "special",
+        "declare": "Pick a friendly **OGOR MAWTRIBES** unit that charged this turn and has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
+        "effect": "Your opponent must move the target up to 3\". It can move through the combat ranges of your units and can end that move in combat.\n\nAfter your opponent has done so, roll a dice for each model in the unit using this ability that is within 3\" of the target. Add 1 to the roll if the unit using this ability is a **GUTBUSTERS** unit. For each 3+, inflict 1 mortal damage on the target.\n\nThen, the unit using this ability can make a pile-in move. If the target of this ability is still in combat with the unit using this ability, then the target of this ability must be picked as the target of the pile‑in move.\n\n**Designer’s Note**: *Your opponent may not be able to move the models in the target unit (or may choose to leave them where they are) but the target still counts as having moved for rules purposes.*"
+      },
+      {
+        "name": "Jaws of the Beast",
+        "phase": "startOfTurn",
+        "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+        "icon": "special",
+        "declare": "Pick a friendly **BEASTCLAW HERO** that is leading a regiment and that has not been deployed, then pick a non-**HERO** unit in that **HERO**'s regiment that has not been deployed.",
+        "effect": "Set up those units in reserve **tracking the prey**. They have now been deployed."
+      },
+      {
+        "name": "Closing the Jaws",
+        "phase": "movementPhase",
+        "phaseDetails": "Your Movement Phase",
+        "icon": "movement",
+        "declare": "Pick a friendly **BEASTCLAW HERO** that is **tracking the prey**.",
+        "effect": "Set up that **HERO** wholly within 9\" of a battlefield edge and more than 9\" from all enemy units. Then, set up the other friendly unit that is **tracking the prey** wholly within 9\" of a battlefield edge, wholly within 9\" of that **HERO** and more than 9\" from all enemy units."
       }
     ]
   }
