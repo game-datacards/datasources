@@ -12,8 +12,8 @@
   },
   "source": "40k-11e",
   "cardType": "coreRules",
-  "compatibleDataVersion": 931,
-  "updated": "2026-09-01T14:55:25.178Z",
+  "compatibleDataVersion": 946,
+  "updated": "2026-09-02T09:15:45.184Z",
   "isCombatPatrol": false,
   "sections": [
     {
@@ -9317,7 +9317,7 @@
         {
           "id": "a31a997c-15a6-4b78-b981-790a1462f3fe",
           "type": "introduction",
-          "order": 0,
+          "order": 1,
           "title": {
             "en": "Transports",
             "de": "Transporter",
@@ -9358,7 +9358,7 @@
         {
           "id": "6764f19f-da02-4e00-80cf-b5c97610a3f7",
           "type": "standard",
-          "order": 1,
+          "order": 2,
           "title": {
             "en": "Transport Capacity",
             "de": "Transportkapazität",
@@ -9399,7 +9399,7 @@
         {
           "id": "0f54a305-a3fa-4357-a21b-24a63a5040fb",
           "type": "standard",
-          "order": 2,
+          "order": 3,
           "title": {
             "en": "Embarking",
             "de": "Einsteigen",
@@ -9464,7 +9464,7 @@
         {
           "id": "f099499c-78e6-4cc1-8881-b67566b2b4f4",
           "type": "standard",
-          "order": 3,
+          "order": 4,
           "title": {
             "en": "Disembarking",
             "de": "Aussteigen",
@@ -9505,7 +9505,7 @@
         {
           "id": "dc0ba27c-4a12-41e4-ac26-4b1d612896d0",
           "type": "behaviourType",
-          "order": 4,
+          "order": 5,
           "title": {
             "en": "Disembark Move",
             "de": "Ausstiegsbewegung",
@@ -9612,9 +9612,50 @@
           "components": []
         },
         {
+          "id": "438e261f-0729-401b-a836-1b7f66a24f93",
+          "type": "standard",
+          "order": 6,
+          "title": {
+            "en": "Rapid Disembark And Limitations",
+            "de": "Schneller Ausstieg und Beschränkungen",
+            "es": "Desembarco rápido y limitaciones",
+            "fr": "Débarquement Rapide et Limites",
+            "it": "Sbarco Rapido e limitazioni",
+            "ja": "高速降車と制限",
+            "ko": "신속 하차와 제한사항",
+            "zh": "迅速撤离与限制"
+          },
+          "subTitle": {
+            "en": "18.04.01",
+            "de": "18.04.01",
+            "es": "18.04.01",
+            "fr": "18.04.01",
+            "it": "18.04.01",
+            "ja": "18.04.01",
+            "ko": "18.04.01",
+            "zh": "18.04.01"
+          },
+          "components": [
+            {
+              "order": 1,
+              "type": "text",
+              "text": {
+                "en": "When a unit uses the <b>rapid disembark</b> mode after its <k>TRANSPORT</k> makes an <b>ingress move</b>, the models must follow the same rules and restrictions as that <k>TRANSPORT</k> did. For example, if that <k>TRANSPORT</k> had to be set up more than 8\" from all enemy units and not within your opponent’s deployment zone, the same applies to the disembarking unit.",
+                "de": "Wenn eine Einheit den Modus <b>schneller Ausstieg</b> verwendet, nachdem ihr <k>TRANSPORTER</k> eine Einsatzbewegung ausführt, müssen die Modelle denselben Regeln und Beschränkungen folgen, wie es jener <k>TRANSPORTER</k> getan hat. Wenn beispielsweise jener <k>TRANSPORTER</k> weiter als 8\" von allen feindlichen Einheiten und nicht in der Aufstellungszone deines Gegners platziert werden musste, gilt für die aussteigende Einheit dasselbe.",
+                "es": "Cuando una unidad usa el modo <b>desembarco rápido</b> después de que su <k>TRANSPORTE</k> haga un <b>movimiento de inserción</b>, las miniaturas deben seguir las mismas reglas y restricciones que siguió ese <k>TRANSPORTE</k>. P. ej., si ese <k>TRANSPORTE</k> tuvo que desplegarse a más de 8\" de toda unidad enemiga y fuera de la zona de despliegue del oponente, lo mismo se aplica a la unidad que desembarca.",
+                "fr": "Quand une unité utilise le mode <b>débarquement rapide</b> après que son <k>TRANSPORT</k> a fait un <b>mouvement d'arrivée</b>, les figurines doivent suivre les mêmes règles et restrictions que suivait ce <k>TRANSPORT</k>. Par exemple, si ce <k>TRANSPORT</k> devait être placé à plus de 8\" des unités ennemies et hors de la zone de déploiement adverse, la même chose s'applique à l'unité qui débarque.",
+                "it": "Quando un’unità usa la modalità <b>sbarco rapido</b> dopo che il suo <k>TRASPORTO</k> ha effettuato un <b>movimento di inserzione</b>, i modelli devono seguire le stesse regole e restrizioni di quel <k>TRASPORTO</k>. Ad esempio, se quel <k>TRASPORTO</k> deve essere schierato a più di 8\" da tutte le unità nemiche e non entro la zona di dispiegamento dell’avversario, lo stesso vale per l’unità che sbarca.",
+                "ja": "<k>兵員輸送</k>が<b>突入移動</b>を実行した後で、そこから<b>高速降車</b>するユニット内の各兵は、その<k>兵員輸送</k>が従っていたルールと制限に同様に従わなければならない。たとえば、その<k>兵員輸送</k>を「あらゆる敵ユニットから8mvより遠く離れており、敵軍初期配置ゾーン内に一部でも入らないように」配置しなければならなかった場合、降車するユニットも同じ指示に従う。",
+                "ko": "<k>수송</k> 모델의 <b>진입 이동</b> 후 탑승한 유닛이 <b>신속 하차</b>할 경우, <k>수송</k> 모델에 적용된 규칙과 제한사항을 반드시 하차한 모델에도 동일하게 적용해야 합니다. 예를 들어 <k>수송</k> 모델을 적 유닛으로부터 8\" 넘게 떨어진 상대의 배치 구역 바깥인 위치에 놓아야 했다면, 하차하는 유닛에도 동일한 제약이 적용됩니다.",
+                "zh": "在一个单位搭乘的<k>运输工具</k>进行了一次<b>入场移动</b>后，并且这个单位使用<b>迅速脱离</b>模式进行脱离时，那个模型必须遵循那个<k>运输工具</k>需要满足的规则和限制。例如，如果那个 <k>运输工具</k>必须被部署在所有敌方单位的 8\" 外以及对手的部署区外，那么这些脱离的单位也必须遵循这些限制。"
+              }
+            }
+          ]
+        },
+        {
           "id": "8a48df7f-0a4d-4954-89cf-209c5430a9d3",
           "type": "behaviourType",
-          "order": 5,
+          "order": 8,
           "title": {
             "en": "Emergency Disembark Move",
             "de": "Notausstiegsbewegung",
@@ -9723,7 +9764,7 @@
         {
           "id": "c284c9ea-ddad-4aa0-a3af-d78b695cee18",
           "type": "behaviourType",
-          "order": 6,
+          "order": 9,
           "title": {
             "en": "Assault Disembark Move",
             "de": "Sturmausstiegsbewegung",
@@ -9812,7 +9853,7 @@
         {
           "id": "bec2f04b-2ac7-4738-afd1-3dffcf50f901",
           "type": "behaviourType",
-          "order": 7,
+          "order": 10,
           "title": {
             "en": "Shock Disembark Move",
             "de": "Schockausstiegsbewegung",
