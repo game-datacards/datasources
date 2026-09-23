@@ -8,9 +8,84 @@
     "banner": "#2a2a1a",
     "header": "#2a2a1a"
   },
-  "updated": "2026-08-26T11:17:21.805Z",
-  "compatibleDataVersion": 476,
+  "updated": "2026-09-23T10:20:11.309Z",
+  "compatibleDataVersion": 483,
   "warscrolls": [
+    {
+      "id": "f640b6fc-2465-5102-8c0e-263b84b659a9",
+      "name": "Ancient Ghyrochs",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "factions": ["Sons of Behemat"],
+      "keywords": ["Beast", "Unique"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Sons of Behemat",
+        "Matriarch's Mob"
+      ],
+      "referenceKeywords": "Unique, Beast, Destruction, Sons of Behemat",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "1",
+        "health": "7",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 0,
+      "modelCount": 2,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Mighty Horns and Hooves",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Charge (+1 Damage)", "Companion"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Beast",
+          "phase": "endOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "control",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "This unit has a maximum control score of 1."
+        },
+        {
+          "name": "Wellspring of Life Energy",
+          "phase": "endOfTurn",
+          "phaseDetails": "End of Any Turn",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "**Heal (3)** this unit."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "105 x 70mm",
+      "notes": "This unit can only be taken in Ma Maegran’s regiment.\nThis unit cannot be reinforced."
+    },
     {
       "id": "e058b796-c604-5049-aef7-daf69cb091c8",
       "name": "Beast-smasher Mega-Gargant",
@@ -19,23 +94,23 @@
       "source": "aos-4e",
       "faction_id": "SONS_OF_BEHEMAT",
       "factions": ["Sons of Behemat"],
-      "keywords": ["Mega-Gargant", "Monster", "Eager Lout", "Hero"],
+      "keywords": ["Monster", "Big", "Eager Lout", "Hero"],
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Sons of Behemat",
         "King Brodd's Stomp"
       ],
-      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Mega-Gargant",
+      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Big",
       "stats": {
         "move": "10\"",
         "save": "4+",
-        "control": "20",
-        "health": "35",
+        "control": "10",
+        "health": "25",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 470,
+      "points": 380,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -43,37 +118,37 @@
       "weapons": {
         "melee": [
           {
-            "name": "Death Grip",
+            "name": "Menhir Club: Calamitous Sweep",
             "type": "melee",
             "range": null,
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "2",
-            "damage": "D6",
-            "abilities": ["Anti-HERO (+1 Rend)"]
+            "attacks": "16",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
           },
           {
             "name": "Almighty Stomp",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "3",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "D3",
-            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+            "abilities": []
           },
           {
-            "name": "Menhir Club",
+            "name": "Menhir Club: Crushing Blow",
             "type": "melee",
             "range": null,
-            "attacks": "5",
+            "attacks": "6",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
-            "damage": "5",
-            "abilities": ["Anti-MONSTER (+1 Rend)"]
+            "damage": "4",
+            "abilities": []
           }
         ]
       },
@@ -88,62 +163,128 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Menhir Club** is 3 and this unit has a Control characteristic of 10."
+          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Menhir Club** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**."
         },
         {
-          "name": "Son of Behemat",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points)."
-        },
-        {
-          "name": "Behemoth Brawler",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "Subtract 1 from the Attacks characteristic of enemy **MONSTERS** while they are in combat with this unit."
-        },
-        {
-          "name": "Longshanks",
-          "phase": "movementPhase",
-          "phaseDetails": "Passive",
-          "icon": "movement",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "This unit can pass through models in non-**MONSTER** units and parts of terrain features that are less than 4\" tall."
-        },
-        {
-          "name": "Beast-breaking Strike",
+          "name": "Menhir Club",
           "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
+          "phaseDetails": "Passive",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy **MONSTER** in combat with this unit to be the target.",
-          "effect": "This unit can make a pile-in move. Then, roll a dice. On a 4+, inflict 5D6 mortal damage on the target.",
-          "keywords": ["Core", "Attack", "Fight"]
+          "declare": null,
+          "effect": "Each time this unit uses a **FIGHT** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Menhir Club**."
+        },
+        {
+          "name": "Primal Aura",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Make a rampage roll of D6. Add 1 to the roll for each other friendly **BIG** or **LITTLE** unit that is in combat and within this unit's combat range. On a 3+, subtract 1 from ward rolls for damage points inflicted by abilities used by this unit for the rest of the turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Leader of the Pack",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a FIGHT ability for this unit",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": true,
+          "declare": null,
+          "effect": "Pick another visible friendly **SONS OF BEHEMAT** unit wholly within 12\" of this unit to be the target and make a rampage roll of D6. Add 1 to the roll if the target is **LITTLE**. On a 3+, the target's melee weapons have **Crit (2 Hits)** for the rest of the turn.",
+          "keywords": ["Rampage"]
         }
       ],
       "summonedBy": null,
       "loadout": null,
       "baseSize": "130mm",
       "notes": "This HERO can join an eligible regiment as an Eager Lout."
+    },
+    {
+      "id": "15d5716c-d47b-575d-b8ea-d1a55d95abb0",
+      "name": "Boss-Stompers",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "factions": ["Sons of Behemat"],
+      "keywords": ["Champion", "Monster", "Little"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Sons of Behemat",
+        "Stomper Tribe",
+        "Matriarch's Mob",
+        "King Brodd's Stomp"
+      ],
+      "referenceKeywords": "Monster, Champion, Destruction, Sons of Behemat, Little",
+      "stats": {
+        "move": "8\"",
+        "save": "5+",
+        "control": "5",
+        "health": "12",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": 370,
+      "modelCount": 3,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "'Eadbutt",
+            "type": "melee",
+            "range": null,
+            "attacks": "1",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "3",
+            "abilities": []
+          },
+          {
+            "name": "Stomper's Clubs",
+            "type": "melee",
+            "range": null,
+            "attacks": "7",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "1",
+            "damage": "2",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Quit Hogging Da Fun!",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a FIGHT ability for this unit in the enemy combat phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Pick a visible friendly **BIG** unit that has not used a **FIGHT** ability this turn and is wholly within 12\" of this unit to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved.",
+          "keywords": ["Rampage"]
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "90mm",
+      "notes": "This unit cannot be reinforced."
     },
     {
       "id": "10f32420-cca8-56c6-ac57-5762eb699705",
@@ -153,23 +294,23 @@
       "source": "aos-4e",
       "faction_id": "SONS_OF_BEHEMAT",
       "factions": ["Sons of Behemat"],
-      "keywords": ["Mega-Gargant", "Monster", "Eager Lout", "Hero"],
+      "keywords": ["Monster", "Big", "Eager Lout", "Hero"],
       "factionKeywords": [
         "Sons of Behemat",
         "Grand Alliance Destruction",
         "King Brodd's Stomp"
       ],
-      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Mega-Gargant",
+      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Big",
       "stats": {
         "move": "10\"",
         "save": "4+",
-        "control": "20",
-        "health": "35",
+        "control": "10",
+        "health": "25",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 490,
+      "points": 400,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -183,36 +324,36 @@
             "attacks": "1",
             "hit": "3+",
             "wound": "2+",
-            "rend": "3",
+            "rend": "2",
             "damage": "4",
             "abilities": []
           }
         ],
         "melee": [
           {
-            "name": "Death Grip",
+            "name": "Fortcrusha Flail: Calamitous Sweep",
             "type": "melee",
             "range": null,
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "2",
-            "damage": "D6",
-            "abilities": ["Anti-HERO (+1 Rend)"]
+            "attacks": "16",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
           },
           {
             "name": "Almighty Stomp",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "3",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "D3",
-            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+            "abilities": []
           },
           {
-            "name": "Fortcrusha Flail",
+            "name": "Fortcrusha Flail: Crushing Blow",
             "type": "melee",
             "range": null,
             "attacks": "6",
@@ -220,7 +361,7 @@
             "wound": "2+",
             "rend": "2",
             "damage": "4",
-            "abilities": ["Anti-FACTION TERRAIN (+1 Rend)"]
+            "abilities": []
           }
         ]
       },
@@ -235,56 +376,44 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 4 and this unit has a Control characteristic of 10."
+          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**."
         },
         {
-          "name": "Son of Behemat",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points)."
-        },
-        {
-          "name": "Longshanks",
-          "phase": "movementPhase",
-          "phaseDetails": "Passive",
-          "icon": "movement",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "This unit can pass through models in non-**MONSTER** units and parts of terrain features that are less than 4\" tall."
-        },
-        {
-          "name": "Smash Down",
+          "name": "Fortcrusha Flail",
           "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "phaseDetails": "Passive",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick a terrain feature within 3\" of this unit to be the target.",
-          "effect": "If the target is **FACTION TERRAIN**, inflict D3+3 mortal damage on it. Then, roll a D3 for each non-**MONSTER** unit (friendly and enemy) within 3\" of the target. On a 2+, inflict an amount of mortal damage on that unit equal to the roll."
+          "declare": null,
+          "effect": "Each time this unit uses a **FIGHT** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Fortcrusha Flail**."
         },
         {
-          "name": "Pulverising Strike",
+          "name": "Primal Reckoning",
           "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
+          "phaseDetails": "Once Per Battle (Army), Any Combat Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "This unit can make a pile-in move. Then, roll a dice. On a 4+, inflict 4D6 mortal damage on the target.",
-          "keywords": ["Core", "Attack", "Fight"]
+          "declare": null,
+          "effect": "For the rest of the turn, add 1 to the Attacks characteristic of this unit's **Fortcrusha Flail: Crushing Blow** for each friendly **SONS OF BEHEMAT** unit that has been destroyed this battle, to a maximum of 10."
+        },
+        {
+          "name": "Rip It Up and Chuck It",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "shooting",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a terrain feature within 3\" of this unit that is not **uprooted**, then pick a friendly **SONS OF BEHEMAT** unit within 3\" of that terrain feature to be the target.",
+          "effect": "Make a rampage roll of D6. On a 3+:\n\n• If the target is another **BIG** unit, excluding **Gatebreaker Mega-Gargants**, it is armed with a **Hurled Boulder** for the rest of the turn (see the weapon profile on this unit's warscroll. Modifiers to this unit's ranged weapons or shooting attacks do not apply to the target).\n\n• If the target is a **Gatebreaker Mega-Gargant** or a **LITTLE** unit, add 1 to the Attacks characteristic of its ranged weapons for the rest of the turn.\n\n• That terrain feature is **uprooted** for the rest of the battle. If it is **FACTION TERRAIN**, inflict an amount of mortal damage on it equal to the rampage roll.",
+          "keywords": ["Rampage"]
         }
       ],
       "summonedBy": null,
@@ -301,9 +430,9 @@
       "faction_id": "SONS_OF_BEHEMAT",
       "factions": ["Sons of Behemat"],
       "keywords": [
-        "Mega-Gargant",
         "Priest (1)",
         "Monster",
+        "Big",
         "Unique",
         "Warmaster",
         "Hero"
@@ -313,17 +442,17 @@
         "Sons of Behemat",
         "King Brodd's Stomp"
       ],
-      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Priest (1), Destruction, Sons of Behemat, Mega-Gargant",
+      "referenceKeywords": "Warmaster, Unique, Hero, Monster, Priest (1), Destruction, Sons of Behemat, Big",
       "stats": {
         "move": "10\"",
         "save": "4+",
-        "control": "20",
-        "health": "40",
+        "control": "10",
+        "health": "28",
         "ward": null,
         "wizard": null,
         "priest": "1"
       },
-      "points": 520,
+      "points": 430,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -331,29 +460,29 @@
       "weapons": {
         "melee": [
           {
-            "name": "Death Grip",
+            "name": "Obelisk of Tor Crania: Calamitous Sweep",
             "type": "melee",
             "range": null,
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "2",
-            "damage": "D6",
-            "abilities": ["Anti-HERO (+1 Rend)"]
+            "attacks": "20",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
           },
           {
             "name": "Almighty Stomp",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "3",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "D3",
-            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+            "abilities": []
           },
           {
-            "name": "Obelisk of Tor Crania",
+            "name": "Obelisk of Tor Crania: Crushing Blow",
             "type": "melee",
             "range": null,
             "attacks": "6",
@@ -376,56 +505,57 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Obelisk of Tor Crania** is 4 and this unit has a Control characteristic of 10."
+          "effect": "While this unit has 15 or more damage points, the Attacks characteristic o f this unit's **Obelisk of Tor Crania** is 13 for **Calamitous Sweep** and 4 for **Crushing Blow**."
         },
         {
-          "name": "Son of Behemat",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
+          "name": "Set 'Em Up, Then Knock 'Em Down",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
           "icon": "defensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points)."
-        },
-        {
-          "name": "Creepers",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "This unit cannot be picked to be the target of enemy **RAMPAGE** abilities."
+          "declare": "Pick a visible enemy unit within 18\" of this unit to be the target.",
+          "effect": "If there are 3 or more friendly **BIG** or **LITTLE** models in combat with the target, apply the effect below. Otherwise, make a rampage roll of D6. On a 3+, apply the effect below.\n\nFor the rest of the turn, subtract 1 from hit rolls for the target's combat attacks while it is in combat with 2 or more friendly **BIG** or **LITTLE** models.",
+          "keywords": ["Rampage"]
         },
         {
           "name": "Power of Behemat",
           "phase": "heroPhase",
           "phaseDetails": "Your Hero Phase",
-          "icon": "movement",
-          "castingValue": 5,
+          "icon": "offensive",
+          "castingValue": 4,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Make a chanting roll of D6.",
-          "effect": "Pick 1 of the following effects. If the chanting roll was 10+, pick 2 instead:\n\n***Shatter the Mountains:*** Add 2\" to the Move characteristic of friendly **SONS OF BEHEMAT** units for the rest of the turn.\n\n***Might of the Earth:*** **Heal (D3)** each friendly **SONS OF BEHEMAT** unit.\n\n***Pummel All to Dust:*** For the rest of the turn, add 1 to the Rend characteristic of the **Obelisk of Tor Crania**, **Menhir Club**, **Fortcrusha Flail**, **Shipwrecka Warclub**, **Titanic Boulderclub** and **Massive Club** used by friendly **SONS OF BEHEMAT** units.",
+          "declare": "Pick a visible friendly **SONS OF BEHEMAT MONSTER** unit wholly within 12\" of this unit to be the target, then make a chanting roll of D6.",
+          "effect": "If the chanting roll was 7+, you can pick another eligible unit to be a second target. Add 1 to the Rend characteristic of each target's melee weapons for the rest of the turn.",
           "keywords": ["Prayer"]
         },
         {
-          "name": "Longshanks",
-          "phase": "movementPhase",
+          "name": "Obelisk of Tor Crania",
+          "phase": "combatPhase",
           "phaseDetails": "Passive",
-          "icon": "movement",
+          "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "This unit can pass through models in non-**MONSTER** units and parts of terrain features that are less than 4\" tall."
+          "effect": "Each time this unit uses a **FIGHT** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Obelisk of Tor Crania**."
+        },
+        {
+          "name": "Court of Creepers",
+          "phase": "chargePhase",
+          "phaseDetails": "Any Charge Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an enemy **HERO** or **MONSTER** in combat with this unit to be the target.",
+          "effect": "Roll a dice. Add 1 to the roll if this unit charged this turn. On a 3+:\n\n• Add 1 to hit rolls for this unit's combat attacks that target that enemy unit for the rest of the turn.\n• The target cannot use **RAMPAGE** abilities for the rest of the turn.\n• The target no longer has any artefacts of power."
         }
       ],
       "summonedBy": null,
@@ -453,7 +583,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 590,
+      "points": 580,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -571,66 +701,153 @@
       "source": "aos-4e",
       "faction_id": "SONS_OF_BEHEMAT",
       "factions": ["Sons of Behemat"],
-      "keywords": ["Mega-Gargant", "Monster", "Eager Lout", "Hero"],
+      "keywords": ["Mega-Gargant", "Monster", "Big", "Eager Lout", "Hero"],
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Sons of Behemat",
         "King Brodd's Stomp"
       ],
-      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Mega-Gargant",
+      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Big",
       "stats": {
         "move": "10\"",
         "save": "4+",
-        "control": "20",
-        "health": "35",
+        "control": "10",
+        "health": "25",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 410,
+      "points": 370,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
       "isLegends": false,
       "weapons": {
-        "ranged": [
-          {
-            "name": "Hurled Debris",
-            "type": "ranged",
-            "range": "24\"",
-            "attacks": "3",
-            "hit": "4+",
-            "wound": "3+",
-            "rend": "1",
-            "damage": "D3",
-            "abilities": []
-          }
-        ],
         "melee": [
           {
-            "name": "Death Grip",
+            "name": "Shipwrecka Warclub: Calamitous Sweep",
             "type": "melee",
             "range": null,
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "2",
-            "damage": "D6",
-            "abilities": ["Anti-HERO (+1 Rend)"]
+            "attacks": "16",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
           },
           {
             "name": "Almighty Stomp",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "3",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "D3",
-            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+            "abilities": []
           },
           {
-            "name": "Shipwrecka Warclub",
+            "name": "Shipwrecka Warclub: Crushing Blow",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "4+",
+            "wound": "2+",
+            "rend": "2",
+            "damage": "4",
+            "abilities": []
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Battle Damaged",
+          "phase": "startOfTurn",
+          "phaseDetails": "Passive",
+          "icon": "battleDamaged",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Shipwrecka Warclub** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**."
+        },
+        {
+          "name": "Greedy Show-Offs",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "movement",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick another visible friendly **BIG** or **LITTLE** unit wholly within 12\" of this unit to be the target.",
+          "effect": "If this unit is contesting its **loot hoard**, apply the effect below. Otherwise, make a rampage roll of D6. On a 3+, apply the effect below.\n\nAdd 1 to charge rolls for the target for the rest of the turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Shipwrecka Warclub",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time this unit uses a **FIGHT** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Shipwrecka Warclub**."
+        },
+        {
+          "name": "Get Orf Me Land!",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Turn (Army), Deployment Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick an objective or terrain feature on the battlefield to be the target.",
+          "effect": "For the rest of the battle, the target is this unit's **loot hoard**. While the unit that used this ability is contesting its **loot hoard**, add 10 to its control score. While the unit that used this ability is not contesting its **loot hoard**, add 2 to the Attacks characteristic of its **Almighty Stomp.**"
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "130mm",
+      "notes": "This HERO can join an eligible regiment as an Eager Lout."
+    },
+    {
+      "id": "50daad2d-1b4c-5a32-b042-fba9b51283ad",
+      "name": "Ma Maegran, Chooser Of The Mighty",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "factions": ["Sons of Behemat"],
+      "keywords": ["Monster", "Wizard (1)", "Little", "Unique", "Hero"],
+      "factionKeywords": [
+        "Grand Alliance Destruction",
+        "Sons of Behemat",
+        "Matriarch's Mob"
+      ],
+      "referenceKeywords": "Unique, Hero, Monster, Wizard (1), Destruction, Sons of Behemat, Little",
+      "stats": {
+        "move": "8\"",
+        "save": "4+",
+        "control": "10",
+        "health": "15",
+        "ward": null,
+        "wizard": "1",
+        "priest": null
+      },
+      "points": 370,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": false,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Spear of Krum Kalda",
             "type": "melee",
             "range": null,
             "attacks": "4",
@@ -653,10 +870,10 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Shipwrecka Warclub** is 3 and this unit has a Control characteristic of 10."
+          "effect": "While this unit has 10 or more damage points, the Attacks characteristic of its **Spear of Krum Kalda** is 3."
         },
         {
-          "name": "Son of Behemat",
+          "name": "The Wandering Witch",
           "phase": "defensive",
           "phaseDetails": "Passive",
           "icon": "defensive",
@@ -665,34 +882,23 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points)."
+          "effect": "While this unit is wholly within 12\" of another friendly **SONS OF BEHEMAT MONSTER** unit, this unit is not visible to enemy units more than 12\" away from it."
         },
         {
-          "name": "Longshanks",
-          "phase": "movementPhase",
-          "phaseDetails": "Passive",
-          "icon": "movement",
-          "castingValue": null,
+          "name": "Creepy Cantrips",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "castingValue": 6,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "This unit can pass through models in non-**MONSTER** units and parts of terrain features that are less than 4\" tall."
+          "declare": "Pick a visible friendly **SONS OF BEHEMAT MONSTER** unit wholly within 18\" of this unit to be the target, then make a casting roll of 2D6.",
+          "effect": "Until the start of your next turn, add 1 to rampage rolls for the target and add 1 to hit rolls for the target's combat attacks.",
+          "keywords": ["Spell"]
         },
         {
-          "name": "Stuff 'Em In Me Net",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn, Any Combat Phase",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll 3 dice. For each roll that is at least double the target’s Health characteristic, 1 model in the target unit is slain."
-        },
-        {
-          "name": "Get Orf Me Land!",
+          "name": "Shepherdess",
           "phase": "heroPhase",
           "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
           "icon": "special",
@@ -700,14 +906,27 @@
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an objective within 1\" of this unit to be the target.",
-          "effect": "Roll a dice. On a 2+, move the target 2D6\" to a new position on the battlefield more than 1\" from all models, terrain features and other objectives. That objective is treated as if it were in the same territories as it was when it was first set up on the battlefield for the purposes of the battleplan."
+          "declare": "Pick a visible friendly **Ancient Ghyrochs** unit wholly within 12\" of this unit to be the target.",
+          "effect": "If the target is within this unit's combat range, pick 1 of the effects below. Otherwise, make a rampage roll of D6. On a 3+, pick 1 of the effects below.\n\n***Gore their Guts!***: If the target is in combat, add 1 to the Damage characteristic of the target's **Mighty Horns and Hooves** for the rest of the turn.\n\n***Ghyroch Rush***: If the target is not in combat, it can move 3\". It can move into combat.\n\n***Reservoirs of Jade Energy***: Add 1 to this unit's casting power level until the start of your next turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Chooser of the Mighty",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Battle, Any Movement Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick another visible friendly **LITTLE** unit wholly within 12\" of this unit to be mighty.",
+          "effect": "Pick 1 of the following effects:\n\n• For the rest of the turn, each time you make an unmodified wound roll of 6 for a combat attack made by the mighty unit, inflict 1 mortal damage on the target of the attack after the **FIGHT** ability has been resolved.\n\n• Pick a point on the battlefield within 1\" of the **mighty** unit, then pick a friendly non-**UNIQUE BIG** unit that has been destroyed to be the target. Set up a replacement unit identical to the target within 1\" of that point, then allocate 10 damage points to it (ward rolls cannot be made for those damage points). The replacement unit can only be set up in combat with units that the **mighty** unit was in combat with when it was picked to be **mighty**. Then, 1 model in the **mighty** unit is slain."
         }
       ],
       "summonedBy": null,
       "loadout": null,
-      "baseSize": "130mm",
-      "notes": "This HERO can join an eligible regiment as an Eager Lout."
+      "baseSize": "90mm",
+      "notes": null
     },
     {
       "id": "9f4fc50d-d747-5071-92bf-703050605e1b",
@@ -717,23 +936,25 @@
       "source": "aos-4e",
       "faction_id": "SONS_OF_BEHEMAT",
       "factions": ["Sons of Behemat"],
-      "keywords": ["Gargant", "Monster"],
+      "keywords": ["Monster", "Little"],
       "factionKeywords": [
         "Sons of Behemat",
         "Grand Alliance Destruction",
-        "King Brodd's Stomp"
+        "King Brodd's Stomp",
+        "Stomper Tribe",
+        "Matriarch's Mob"
       ],
-      "referenceKeywords": "Monster, Destruction, Sons of Behemat, Gargant",
+      "referenceKeywords": "Monster, Destruction, Sons of Behemat, Little",
       "stats": {
         "move": "8\"",
         "save": "5+",
-        "control": "10",
+        "control": "5",
         "health": "12",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 120,
+      "points": 140,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -741,13 +962,13 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Throwin’ Rocks",
+            "name": "Throwin' Rocks",
             "type": "ranged",
             "range": "12\"",
             "attacks": "1",
-            "hit": "5+",
+            "hit": "4+",
             "wound": "2+",
-            "rend": "2",
+            "rend": "1",
             "damage": "D3",
             "abilities": []
           }
@@ -761,25 +982,14 @@
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
-            "damage": "4",
+            "damage": "3",
             "abilities": []
           },
           {
-            "name": "Mighty Kick",
+            "name": "Gigantic Weapon",
             "type": "melee",
             "range": null,
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "2",
-            "damage": "D3",
-            "abilities": []
-          },
-          {
-            "name": "Massive Club",
-            "type": "melee",
-            "range": null,
-            "attacks": "4",
+            "attacks": "5",
             "hit": "4+",
             "wound": "2+",
             "rend": "1",
@@ -790,28 +1000,29 @@
       },
       "abilities": [
         {
-          "name": "Keep Up!",
-          "phase": "chargePhase",
-          "phaseDetails": "Passive",
-          "icon": "movement",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "While this unit is wholly within 12\" of a friendly **MEGA-GARGANT**, this unit can use **CHARGE** abilities even if it used a **RUN** ability in the same turn."
-        },
-        {
-          "name": "Stuff 'Em In Me Bag",
+          "name": "Excitable Followers",
           "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn, Any Combat Phase",
+          "phaseDetails": "Any Combat Phase",
           "icon": "offensive",
           "castingValue": null,
           "chantValue": null,
+          "cpCost": 1,
+          "isReaction": false,
+          "declare": null,
+          "effect": "While this unit is wholly within 12\" of a visible friendly **SONS OF BEHEMAT HERO**, this unit can use 2 **FIGHT** abilities this phase. After the first is used, however, this unit has **STRIKE-LAST** for the rest of the turn.",
+          "keywords": ["Rampage"]
+        },
+        {
+          "name": "Bet You Can't...",
+          "phase": "startOfTurn",
+          "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. If the roll is at least double the target’s Health characteristic, 1 model in the target unit is slain."
+          "declare": "Pick each friendly Mancrusher Gargant on the battlefield to be the targets.",
+          "effect": "Pick 1 of the following effects:\n***...Kill the Big Eads***: For the rest of the battle, add 1 to the Attacks characteristic of each target's melee weapons while they are in combat with any enemy **HEROES** or **MONSTERS**.\n\n***...Get There Before Me!***: Up to 3 of the targets can each use the Normal Move' ability as if it were your movement phase.\n\n***...Grab That!***: Add 5 to each target's control score for the rest of the battle."
         }
       ],
       "summonedBy": null,
@@ -820,30 +1031,32 @@
       "notes": null
     },
     {
-      "id": "ad249d6e-2286-5890-bdaf-95e3dbceadf3",
-      "name": "Mancrusher Mob",
+      "id": "efd0453b-466c-5bd1-ba79-24e68075a354",
+      "name": "Rock-hurlers",
       "subname": null,
       "cardType": "Warscroll",
       "source": "aos-4e",
       "faction_id": "SONS_OF_BEHEMAT",
       "factions": ["Sons of Behemat"],
-      "keywords": ["Gargant", "Monster"],
+      "keywords": ["Champion", "Monster", "Little"],
       "factionKeywords": [
-        "Sons of Behemat",
         "Grand Alliance Destruction",
+        "Sons of Behemat",
+        "Stomper Tribe",
+        "Matriarch's Mob",
         "King Brodd's Stomp"
       ],
-      "referenceKeywords": "Monster, Destruction, Sons of Behemat, Gargant",
+      "referenceKeywords": "Monster, Champion, Destruction, Sons of Behemat, Little",
       "stats": {
         "move": "8\"",
         "save": "5+",
-        "control": "10",
+        "control": "5",
         "health": "12",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 350,
+      "points": 380,
       "modelCount": 3,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -851,42 +1064,31 @@
       "weapons": {
         "ranged": [
           {
-            "name": "Throwin’ Rocks",
+            "name": "Hurlin' Rocks",
             "type": "ranged",
             "range": "12\"",
-            "attacks": "1",
-            "hit": "5+",
+            "attacks": "3",
+            "hit": "4+",
             "wound": "2+",
-            "rend": "2",
+            "rend": "1",
             "damage": "D3",
             "abilities": []
           }
         ],
         "melee": [
           {
-            "name": "’Eadbutt",
+            "name": "'Eadbutt",
             "type": "melee",
             "range": null,
             "attacks": "1",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
-            "damage": "4",
+            "damage": "3",
             "abilities": []
           },
           {
-            "name": "Mighty Kick",
-            "type": "melee",
-            "range": null,
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "2",
-            "damage": "D3",
-            "abilities": []
-          },
-          {
-            "name": "Massive Club",
+            "name": "Massive Clubs and Rocks",
             "type": "melee",
             "range": null,
             "attacks": "4",
@@ -900,45 +1102,22 @@
       },
       "abilities": [
         {
-          "name": "Keep Up!",
-          "phase": "chargePhase",
-          "phaseDetails": "Passive",
-          "icon": "movement",
+          "name": "Drop, Toss or Roll",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
+          "icon": "shooting",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit is wholly within 12\" of a friendly **MEGA-GARGANT**, this unit can use **CHARGE** abilities even if it used a **RUN** ability in the same turn."
-        },
-        {
-          "name": "Stuff 'Em In Me Bag",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn, Any Combat Phase",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. If the roll is at least double the target’s Health characteristic, 1 model in the target unit is slain."
-        },
-        {
-          "name": "'Oo's Under The Heel Now?",
-          "phase": "chargePhase",
-          "phaseDetails": "Passive",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "Each time this unit uses the ‘Gargant Charge’ ability, add 1 to the amount of mortal damage inflicted, if any, for each model in this unit."
+          "effect": "Pick 1 of the following effects to apply for the rest of the turn:\n\n***Drop***: This unit's ranged weapons have **Shoot in Combat** and this unit can use the Covering Fire command even if it is in combat.\n\n***Toss***: Add 6\" to the Range characteristic of this unit's ranged weapons.\n\n***Roll***: Add 1 to hit rolls for this unit's shooting attacks.",
+          "keywords": ["Rampage"]
         }
       ],
       "summonedBy": null,
       "loadout": null,
-      "baseSize": "90 x 52mm",
+      "baseSize": "90mm",
       "notes": "This unit cannot be reinforced."
     },
     {
@@ -949,18 +1128,18 @@
       "source": "aos-4e",
       "faction_id": "SONS_OF_BEHEMAT",
       "factions": ["Sons of Behemat"],
-      "keywords": ["Mega-Gargant", "Monster", "Eager Lout", "Hero"],
+      "keywords": ["Monster", "Big", "Eager Lout", "Hero"],
       "factionKeywords": [
         "Sons of Behemat",
         "Grand Alliance Destruction",
         "King Brodd's Stomp"
       ],
-      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Mega-Gargant",
+      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Big",
       "stats": {
         "move": "10\"",
         "save": "4+",
-        "control": "20",
-        "health": "35",
+        "control": "10",
+        "health": "25",
         "ward": null,
         "wizard": null,
         "priest": null
@@ -979,36 +1158,36 @@
             "attacks": "1",
             "hit": "3+",
             "wound": "2+",
-            "rend": "3",
+            "rend": "2",
             "damage": "4",
             "abilities": []
           }
         ],
         "melee": [
           {
-            "name": "Death Grip",
+            "name": "Fortcrusha Flail: Calamitous Sweep",
             "type": "melee",
             "range": null,
-            "attacks": "1",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "2",
-            "damage": "D6",
-            "abilities": ["Anti-HERO (+1 Rend)"]
+            "attacks": "16",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
           },
           {
             "name": "Almighty Stomp",
             "type": "melee",
             "range": null,
-            "attacks": "4",
+            "attacks": "3",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
             "damage": "D3",
-            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+            "abilities": []
           },
           {
-            "name": "Fortcrusha Flail",
+            "name": "Fortcrusha Flail: Crushing Blow",
             "type": "melee",
             "range": null,
             "attacks": "6",
@@ -1016,7 +1195,7 @@
             "wound": "2+",
             "rend": "2",
             "damage": "4",
-            "abilities": ["Anti-FACTION TERRAIN (+1 Rend)"]
+            "abilities": []
           }
         ]
       },
@@ -1031,31 +1210,7 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 4 and this unit has a Control characteristic of 10."
-        },
-        {
-          "name": "Son of Behemat",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points)."
-        },
-        {
-          "name": "Longshanks",
-          "phase": "movementPhase",
-          "phaseDetails": "Passive",
-          "icon": "movement",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "This unit can pass through models in non-**MONSTER** units and parts of terrain features that are less than 4\" tall."
+          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Fortcrusha Flail** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow**."
         },
         {
           "name": "Off in a Huff",
@@ -1071,9 +1226,21 @@
           "keywords": ["Core", "Move"]
         },
         {
+          "name": "Fortcrusha Flail",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Each time this unit uses a **FIGHT** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Fortcrusha Flail**."
+        },
+        {
           "name": "It's Goin' Down",
           "phase": "heroPhase",
-          "phaseDetails": "Once Per Battle, Your Hero Phase",
+          "phaseDetails": "Once Per Battle (Army), Your Hero Phase",
           "icon": "special",
           "castingValue": null,
           "chantValue": null,
@@ -1096,13 +1263,13 @@
       "source": "aos-4e",
       "faction_id": "SONS_OF_BEHEMAT",
       "factions": ["Sons of Behemat"],
-      "keywords": ["Gargant", "Monster"],
+      "keywords": ["Gargant", "Monster", "Little"],
       "factionKeywords": [
         "Sons of Behemat",
         "Grand Alliance Destruction",
         "King Brodd's Stomp"
       ],
-      "referenceKeywords": "Monster, Destruction, Sons of Behemat, Gargant",
+      "referenceKeywords": "Monster, Destruction, Sons of Behemat, Little",
       "stats": {
         "move": "8\"",
         "save": "5+",
@@ -1340,23 +1507,24 @@
       "source": "aos-4e",
       "faction_id": "SONS_OF_BEHEMAT",
       "factions": ["Sons of Behemat"],
-      "keywords": ["Mega-Gargant", "Monster", "Eager Lout", "Hero"],
+      "keywords": ["Monster", "Big", "Eager Lout", "Hero"],
       "factionKeywords": [
         "Grand Alliance Destruction",
         "Sons of Behemat",
-        "King Brodd's Stomp"
+        "King Brodd's Stomp",
+        "Stomper Tribe"
       ],
-      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Mega-Gargant",
+      "referenceKeywords": "Hero, Monster, Destruction, Sons of Behemat, Big",
       "stats": {
         "move": "10\"",
         "save": "4+",
-        "control": "20",
-        "health": "35",
+        "control": "10",
+        "health": "25",
         "ward": null,
         "wizard": null,
         "priest": null
       },
-      "points": 450,
+      "points": 390,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1364,37 +1532,37 @@
       "weapons": {
         "melee": [
           {
-            "name": "Death Grip",
+            "name": "Titanic Boulderclub: Calamitous Sweep",
             "type": "melee",
             "range": null,
-            "attacks": "1",
+            "attacks": "16",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "1",
+            "damage": "1",
+            "abilities": ["Crit (Auto-wound)"]
+          },
+          {
+            "name": "Almighty Stomp",
+            "type": "melee",
+            "range": null,
+            "attacks": "3",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
-            "damage": "D6",
-            "abilities": ["Anti-HERO (+1 Rend)"]
+            "damage": "D3",
+            "abilities": []
           },
           {
-            "name": "Titanic Boulderclub",
-            "type": "melee",
-            "range": null,
-            "attacks": "4",
-            "hit": "4+",
-            "wound": "2+",
-            "rend": "2",
-            "damage": "2",
-            "abilities": ["Anti-INFANTRY (+1 Rend)"]
-          },
-          {
-            "name": "Almightier Stomp",
+            "name": "Titanic Boulderclub: Crushing Blow",
             "type": "melee",
             "range": null,
             "attacks": "6",
             "hit": "4+",
             "wound": "2+",
             "rend": "2",
-            "damage": "D3",
-            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+            "damage": "4",
+            "abilities": []
           }
         ]
       },
@@ -1409,43 +1577,19 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Titanic Boulderclub** is 3 and this unit has a Control characteristic of 10."
+          "effect": "While this unit has 15 or more damage points, the Attacks characteristic of its **Titanic Boulderclub** is 11 for **Calamitous Sweep** and 4 for **Crushing Blow.**"
         },
         {
-          "name": "Son of Behemat",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": null,
-          "effect": "If this unit would be automatically destroyed, it is not automatically destroyed. Instead, allocate 6 damage points to it (ward rolls cannot be made for those damage points)."
-        },
-        {
-          "name": "Longshanks",
+          "name": "Don't Stomp Those, Stomp Them!",
           "phase": "movementPhase",
-          "phaseDetails": "Passive",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
           "icon": "movement",
           "castingValue": null,
           "chantValue": null,
           "cpCost": null,
           "isReaction": false,
-          "declare": null,
-          "effect": "This unit can pass through models in non-**MONSTER** units and parts of terrain features that are less than 4\" tall."
-        },
-        {
-          "name": "Hurled Body",
-          "phase": "combatPhase",
-          "phaseDetails": "Any Combat Phase",
-          "icon": "offensive",
-          "castingValue": null,
-          "chantValue": null,
-          "cpCost": null,
-          "isReaction": false,
-          "declare": "Pick an enemy unit in combat with this unit to be the target.",
-          "effect": "Roll a dice. If the roll is at least double the target’s Health characteristic, 1 model in that unit is slain and you can pick a visible enemy unit within 12\" of this unit. Inflict an amount of mortal damage on that unit equal to the target’s Health characteristic."
+          "declare": "Pick another visible friendly **BIG** or **LITTLE** unit wholly within 12\" of this unit and that has not been set up this turn to be the target.",
+          "effect": "The target can move 2D6\". It can pass through and end that move within the combat ranges of enemy units that it was in combat with at the start of the move, but not those of other enemy units. It does not have to end the move in combat."
         },
         {
           "name": "Titanic Boulderclub",
@@ -1457,7 +1601,20 @@
           "cpCost": null,
           "isReaction": false,
           "declare": null,
-          "effect": "If all of the attacks made with this unit’s **Titanic Boulderclub** target the same enemy unit, for every 5 models in the target unit, add 2 to its Attacks characteristic for the rest of the phase."
+          "effect": "Each time this unit uses a **FIGHT** ability, pick either the **Calamitous Sweep** or **Crushing Blow** weapon characteristics for all the attacks it makes with its **Titanic Boulderclub**."
+        },
+        {
+          "name": "Almightier Stompin'",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Combat Phase",
+          "icon": "special",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "If this unit charged this turn, pick an enemy unit in combat with it to be the target.",
+          "effect": "Make a rampage roll of D3. For the rest of the turn, add the roll to the Attacks characteristic of this unit's **Almighty Stomp**, but all of this unit's attacks made with that weapon must target the target unit.\n\nIf any models are slain by those attacks, for the rest of the turn, enemy units have a maximum control score of 1 while they are in combat with this unit.",
+          "keywords": ["Rampage"]
         }
       ],
       "summonedBy": null,
@@ -1467,72 +1624,6 @@
     }
   ],
   "battleFormations": [
-    {
-      "id": "d643e1b0-c123-5bb4-aa79-1a0467549248",
-      "name": "Boss Tribe",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "SONS_OF_BEHEMAT",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Big Mouth",
-          "phase": "combatPhase",
-          "phaseDetails": "Once Per Turn (Army), Reaction: You declared a FIGHT ability for a friendly MEGA-GARGANT",
-          "icon": "offensive",
-          "declare": null,
-          "effect": "Pick a friendly **GARGANT** unit that has not used a **FIGHT** ability this turn and is wholly within 12\" of this unit to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved.",
-          "cpCost": null,
-          "isReaction": true
-        }
-      ]
-    },
-    {
-      "id": "730fd8ec-9de9-59cf-a3a9-ec35c5d132ec",
-      "name": "Stomper Tribe",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "SONS_OF_BEHEMAT",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Revel in War",
-          "phase": "combatPhase",
-          "phaseDetails": "Passive",
-          "icon": "offensive",
-          "declare": null,
-          "effect": "You can pick 2 friendly **MEGA‑GARGANTS** or **GARGANT** units that have not used a **RAMPAGE** ability this turn to use the ‘Jump Up and Down’ ability instead of 1.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
-    {
-      "id": "f321b878-456f-5749-a46f-d059078a5324",
-      "name": "Breaker Tribe",
-      "cardType": "BattleFormation",
-      "source": "aos-4e",
-      "faction_id": "SONS_OF_BEHEMAT",
-      "factionTerrainLimit": 1,
-      "isLegends": false,
-      "points": null,
-      "rules": [
-        {
-          "name": "Besieging Bulk",
-          "phase": "defensive",
-          "phaseDetails": "Passive",
-          "icon": "defensive",
-          "declare": null,
-          "effect": "Friendly **MEGA-GARGANTS** have **WARD (6+)** while they are within the combat ranges of any other friendly **MEGA-GARGANTS**.",
-          "cpCost": null,
-          "isReaction": false
-        }
-      ]
-    },
     {
       "id": "8bfc2f4f-6775-5ef9-bc28-ce5ae522e7a6",
       "name": "Big Toes",
@@ -1550,6 +1641,73 @@
           "icon": "offensive",
           "declare": "Pick a friendly **Mancrusher Gargant** unit to be the target.",
           "effect": "For the rest of the battle, add 1 to hit rolls for combat attacks made by friendly **GARGANT** units while they are wholly within 12\" of the target and not wholly within 12\" of any friendly **MEGA-GARGANT** units.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "bef4aa04-d0ef-5826-814f-c5d5c426e0e7",
+      "name": "Heirs of the Old Ways",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Brute Spirituality",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
+          "declare": "Pick a friendly **BIG** or **LITTLE** unit to use this ability, then pick an enemy **WIZARD** or **PRIEST** within 18\" of it to be the target.",
+          "effect": "Make a rampage roll of D6. If the roll equals or exceeds the target's Control characteristic:\n\n• The target has a maximum power level of 1 until the start of your next turn.\n• All **MANIFESTATIONS** that were summoned by the target are banished and removed from play.",
+          "cpCost": null,
+          "isReaction": false,
+          "keywords": ["Rampage"]
+        }
+      ]
+    },
+    {
+      "id": "8b204b39-b015-5a49-81ca-c66885783bfa",
+      "name": "Conquering Stomp",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Arrogant Big 'Uns",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "In the first battle round, subtract 1 from hit rolls for combat attacks that target friendly **BIG** and **LITTLE** units that have not charged in the same turn.",
+          "cpCost": null,
+          "isReaction": false
+        }
+      ]
+    },
+    {
+      "id": "60f55734-6105-507e-8d66-a2bc3bb843de",
+      "name": "Looting Leviathans",
+      "cardType": "BattleFormation",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "factionTerrainLimit": 1,
+      "isLegends": false,
+      "points": null,
+      "rules": [
+        {
+          "name": "Get To The Goods",
+          "phase": "combatPhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Each time a friendly **BIG** or **LITTLE** unit that charged in the same turn makes a pile-in move, that unit can pass across enemy models in non-**MONSTER** units.",
           "cpCost": null,
           "isReaction": false
         }
@@ -1578,8 +1736,8 @@
       ]
     },
     {
-      "id": "7386fb6e-0bbf-5702-87d1-f919e6d1b598",
-      "name": "Taker Tribe",
+      "id": "d771e175-7a48-538f-822e-da1f19e6b186",
+      "name": "Eager Louts",
       "cardType": "BattleFormation",
       "source": "aos-4e",
       "faction_id": "SONS_OF_BEHEMAT",
@@ -1588,12 +1746,12 @@
       "points": null,
       "rules": [
         {
-          "name": "More Stuff For Me Collection",
-          "phase": "startOfTurn",
-          "phaseDetails": "Once Per Battle, Deployment Phase",
-          "icon": "special",
-          "declare": "Pick a friendly non-**UNIQUE SONS OF BEHEMAT HERO** that does not have an artefact of power.",
-          "effect": "Give that **HERO** 1 artefact of power from ‘Titanic Trophies’.\n\n**Designer’s Note:** *This artefact of power is given to the unit during the deployment phase, not during army composition.*",
+          "name": "Ten-League Strides",
+          "phase": "movementPhase",
+          "phaseDetails": "Passive",
+          "icon": "movement",
+          "declare": null,
+          "effect": "Each time a friendly **BIG** or **LITTLE** unit uses the 'Redeploy' command or the 'Run' ability, if you roll a 1-2 when determining the distance that unit can move, you can use a value of 3 instead.",
           "cpCost": null,
           "isReaction": false
         }
@@ -1624,24 +1782,24 @@
           "phase": "chargePhase",
           "phaseDetails": "Once Per Battle (Army), Your Charge Phase",
           "icon": "movement",
-          "declare": "Pick a friendly **MEGA‑GARGANT** that has not used a **RAMPAGE** ability this turn to use this ability.",
-          "effect": "If the unit using this ability charged this turn, roll a dice. On a 3+, that unit can move 3D6\" but must end that move in combat."
+          "declare": "Pick a friendly **BIG** unit that has not used a **DESTRUCTIVE IMPULSE** ability this turn to use this ability.",
+          "effect": "If the unit using this ability charged this turn, roll a dice. On a 3+, that unit can move 3D6\" but must end that move in combat. When it does so, it can pass through terrain features and enemy models as if it had **FLY**.’"
         },
         {
           "name": "Watch This!",
           "phase": "combatPhase",
           "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "offensive",
-          "declare": "Pick a friendly **MEGA‑GARGANT** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
-          "effect": "If the target is a **HERO**, **BEAST**, **MONSTER** or **WAR MACHINE**, roll 6 dice. Otherwise, roll a dice for each model in the target unit. For each roll that is equal to or greater than the target’s Save characteristic, inflict 1 mortal damage on the target.\n\nThe **MEGA‑GARGANT** using this **RAMPAGE** has **STRIKE‑LAST** for the rest of the turn."
+          "declare": "Pick a friendly **BIG** unit that has not used a **DESTRUCTIVE IMPULSE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
+          "effect": "If the target is a **HERO**, **BEAST**, **MONSTER** or **WAR MACHINE**, roll 6 dice. Otherwise, roll a dice for each model in the target unit. For each roll that is equal to or greater than the target’s Save characteristic, inflict 1 mortal damage on the target.\n\nThe **BIG** unit using this **DESTRUCTIVE IMPULSE** ability has **STRIKE‑LAST** for the rest of the turn."
         },
         {
           "name": "Double Stomp",
           "phase": "combatPhase",
           "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "offensive",
-          "declare": "Pick a friendly **MEGA‑GARGANT** that has not used a **RAMPAGE** ability this turn to use this ability.",
-          "effect": "Roll a D6. On a 3+, for the rest of the turn, add the result to the Attacks characteristic of the **Almighty Stomp** or **Almightier Stomp** of the unit using this ability."
+          "declare": "Pick a friendly **BIG** unit that has not used a **DESTRUCTVE IMPULSE** ability this turn to use this ability.",
+          "effect": "Roll a D6. On a 3+, for the rest of the turn, add the result to the Attacks characteristic of the **Almighty Stomp** of the unit using this ability."
         },
         {
           "name": "Timberrrrr!",
@@ -1649,14 +1807,14 @@
           "phaseDetails": "Passive",
           "icon": "offensive",
           "declare": null,
-          "effect": "Each time a friendly **MEGA‐GARGANT** or **GARGANT** model is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3\" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3\" of that point that has a lower Health characteristic than that model."
+          "effect": "Each time a friendly **BIG** unit or **LITTLE** unit model is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3\" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3\" of that point that has a lower Health characteristic than that model."
         },
         {
           "name": "Smash It All To Bits",
           "phase": "shootingPhase",
           "phaseDetails": "Once Per Turn (Army), Any Shooting Phase",
           "icon": "shooting",
-          "declare": "Pick a friendly **MEGA-GARGANT** that has not used a **RAMPAGE** ability this turn to use this ability, then pick a terrain feature within its combat range. Then, pick a visible enemy unit within 18\" of that **MEGA-GARGANT** to be the target.",
+          "declare": "Pick a friendly **BIG** unit that has not used a **DESTRUCTIVE IMPULSE** ability this turn to use this ability, then pick a terrain feature within its combat range. Then, pick a visible enemy unit within 18\" of that **BIG** unit to be the target.",
           "effect": "Roll a D3 for each friendly and enemy unit on the terrain feature that was picked. On a 2+, inflict an amount of mortal damage on that unit equal to the roll. After rolling for all those units, roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll."
         },
         {
@@ -1664,7 +1822,7 @@
           "phase": "combatPhase",
           "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
           "icon": "special",
-          "declare": "Pick a friendly **MEGA‑GARGANT** that has not used a **RAMPAGE** ability this turn to use this ability. Then, pick an enemy **HERO** that has an artefact of power and is in combat with that **MEGA‑GARGANT** to be the target.",
+          "declare": "Pick a friendly **BIG** unit that has not used a **DESTRUCTIVE IMPULSE** ability this turn to use this ability. Then, pick an enemy **HERO** that has an artefact of power and is in combat with that **BIG** unit to be the target.",
           "effect": "Roll a dice. On a 3+, the target no longer has that artefact of power."
         }
       ],
@@ -1697,7 +1855,7 @@
             "phaseDetails": "Once Per Battle (Army), Reaction: You declared the ‘Wrath of Brodd’ ability for a friendly unit",
             "icon": "special",
             "declare": null,
-            "effect": "This unit can use the ‘Wrath of Brodd’ ability immediately after the ‘Wrath of Brodd’ ability used by the other friendly unit has been resolved. This unit can do so even if it has used another **RAMPAGE** ability this turn.",
+            "effect": "This unit can use the ‘Wrath of Brodd’ ability immediately after the ‘Wrath of Brodd’ ability used by the other friendly unit has been resolved. This unit can do so even if it has used another **DESTRUCTIVE IMPULSE** ability this turn.",
             "cpCost": null
           }
         ],
@@ -1737,10 +1895,11 @@
           "Scourge of Aqshy: Mancrusher Gargant",
           "Kraken-eater Mega-Gargant",
           "Scourge of Ghyran Kraken-eater Mega-Gargant",
-          "Mancrusher Mob",
           "Beast-smasher Mega-Gargant",
           "Scourge of Aqshy: Gatebreaker Mega-Gargant",
-          "King Brodd"
+          "King Brodd",
+          "Rock-hurlers",
+          "Boss-Stompers"
         ],
         "requiredWarscrolls": ["King Brodd"],
         "requiredGeneralWarscrolls": ["King Brodd"],
@@ -1770,9 +1929,395 @@
         "rosterOptions": [],
         "regimentRestrictions": []
       }
+    },
+    {
+      "id": "762cdb87-28b7-55bd-af0c-53fc5b827225",
+      "name": "Matriarch's Mob",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "parentFaction": "Sons of Behemat",
+      "isLegends": false,
+      "lore": "Should she take a liking to a gargant, her eerie mutterings can see the brute swell to a gigantic size in moments; this, it is said, is why Maegran has not achieved the stature of a Mega-Gargant herself, for she uses her own spiritual bigness to fuel this magic. But if a gargant should offend Maegran, a terrible fate waits them. Tracing glyphs in the muck and walling a curse, Maegran will arrest her victim's growth or, if bitterly displeased, shrink them to the size of a boulder, an ogor or, even worse, a human.\n\nWhen you pick the Sons of Behemat faction for your army, you can choose for it to be a Matriarch's Mob Army of Renown. If you do so, use the faction rules on these pages instead of the Sons of Behemat faction rules. Every unit in your army must be drawn from the units listed in Army of Renown: Matriacrh's Mob. All units in your army gain the **MATRIARCH'S MOB** keyword.",
+      "rules": [
+        {
+          "name": "I've Heard She Can...",
+          "phase": "heroPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Hero Phase",
+          "icon": "special",
+          "declare": null,
+          "effect": "Pick 1 of the following effects:\n\n***... Shoot Fire From Her Eyes!:*** Inflict D3 mortal damage on each visible enemy unit within 12\" of the friendly **Ma Maegran.**\n\n... ***Turn You Into a Human!:*** Pick a visible friendly unit wholly within 12\" of the friendly **Ma Maegran.** Until the start of your next turn, enemy units have a maximum control score of 1 while they are in combat with that unit.\n\n***... Make Ya Big and Strong!:*** Pick another visible friendly unit wholly within 12\" of the friendly **Ma Maegran.** Add 1 to the Attacks characteristic of that unit's weapons for the rest of the turn.\n\n. . . ***Whiz the Biggest Bangers!:*** Add 1 to casting rolls for the friendly **Ma Maegran** until the start of your next turn."
+        },
+        {
+          "name": "Oi! Gerroff!",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Battle (Army), Any Combat Phase",
+          "icon": "offensive",
+          "declare": "If the friendly **Ma Maegran** is in combat and damaged, pick up to 3 friendly **Mancrusher Gargants** on the battlefield that are visible to her to be the targets.",
+          "effect": "Each target has **STRIKE-FIRST** for the rest of the turn."
+        },
+        {
+          "name": "Summon the Herd",
+          "phase": "endOfTurn",
+          "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+          "icon": "offensive",
+          "declare": "If the friendly **Ma Maegran** is on the battlefield, pick each enemy **non-FLY non-MONSTER** unit that is visible to her to be the targets.",
+          "effect": "Roll a number of dice for each target equal to the current battle round number. For each 4+, allocate **1** mortal damage to the target (ward rolls cannot be made for those damage points)."
+        },
+        {
+          "name": "Don't Let Nuffin' Happen To Her!",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "declare": null,
+          "effect": "While the friendly **Ma Maegran** is within the combat range of another friendly **LITTLE** unit:\n• She has **WARD (5+).**\n• Each time you make a successful ward roll for her, allocate 1 mortal damage to another friendly **LITTLE** unit within her combat range after the damage sequence for her has been resolved (ward rolls cannot be made for those damage points).\n• Ignore negative modifiers to hit rolls and wound rolls for that other friendly **LITTLE** unit's combat attacks."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [],
+        "heroicTraits": [],
+        "other": [
+          {
+            "id": "cb1b06c7-6356-5c84-a668-94d7849b42c4",
+            "name": "Butt of the Lash",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Any Combat Phase",
+            "icon": "movement",
+            "declare": null,
+            "effect": "If this unit is wholly within 12\" of a friendly **Ma Maegran,** remove this unit from the battlefield and set it up again within her combat range. This unit can only be set up in combat with enemy units that are in combat with the friendly **Ma Maegran.**",
+            "cpCost": null
+          },
+          {
+            "id": "7e12fa2c-de45-59f9-9a2e-2cccac21fdce",
+            "name": "Ghyranite Whirlstone",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "End of Any Turn",
+            "icon": "defensive",
+            "declare": "Pick a visible friendly **MATRIARCH'S MOB** unit wholly within 12\" of this unit to be the target.",
+            "effect": "**Heal (D3)** the target.",
+            "cpCost": null
+          }
+        ]
+      },
+      "lores": [
+        {
+          "id": "a9cffcd7-0c41-52d6-9b47-2d1ba368ac02",
+          "name": "Matriarch's Mob Spell Lore",
+          "cardType": "Lore",
+          "source": "aos-4e",
+          "faction_id": "SONS_OF_BEHEMAT",
+          "restrictionText": null,
+          "spells": [
+            {
+              "id": "2e9e74e0-2ac8-54ec-8c51-a4f37536b3d6",
+              "name": "A Shepherd's Watchful Eye",
+              "castingValue": 6,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "defensive",
+              "declare": "Pick the friendly **Ma Maegran** to cast this spell, then make a casting roll of 2D6.",
+              "effect": "Until the start of your next turn, friendly **MATRIARCH'S MOB** units have **WARD (6+)** while they are wholly within 12\" of and visible to the caster.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "0c5cdd95-a018-50f2-8f64-e8faf096990e",
+              "name": "Mystical Demands",
+              "castingValue": 7,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "movement",
+              "declare": "Pick the friendly **Ma Maegran** to cast this spell, pick a visible friendly **MATRIARCH'S MOB** unit wholly within 18\" of her to be the target, then make a casting roll of 2D6.",
+              "effect": "If the target is in combat, it can use the 'Retreat' ability as if it were your movement phase. If the target is not in combat, it can use the 'Normal Move' ability as if it were your movement phase. In both cases, the target must end that move no further from the caster than it was at the start of the move.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            },
+            {
+              "id": "dddaa2b9-5da0-5790-a8c1-8b2786a50834",
+              "name": "Sic 'Em!",
+              "castingValue": 8,
+              "chantValue": null,
+              "phase": "heroPhase",
+              "phaseDetails": "Your Hero Phase",
+              "icon": "offensive",
+              "declare": "Pick the friendly **Ma Maegran** to cast this spell, pick a visible friendly **MATRIARCH'S MOB** unit wholly within 12\" of her to be the target, then make a casting roll of 2D6.",
+              "effect": "Add 1 to the Damage characteristic of the target's melee weapons, including **Companion** weapons, for the rest of the turn.",
+              "keywords": ["Spell"],
+              "linkedWarscroll": null
+            }
+          ]
+        }
+      ],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Ancient Ghyrochs",
+          "Ma Maegran, Chooser Of The Mighty",
+          "Rock-hurlers",
+          "Boss-Stompers",
+          "Mancrusher Gargant"
+        ],
+        "requiredWarscrolls": [],
+        "requiredGeneralWarscrolls": [],
+        "restrictionGroups": [],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
+    },
+    {
+      "id": "730fd8ec-9de9-59cf-a3a9-ec35c5d132ec",
+      "name": "Stomper Tribe",
+      "cardType": "ArmyOfRenown",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "parentFaction": "Sons of Behemat",
+      "isLegends": false,
+      "lore": "There is little difference between a gargant tribe and a gargant army, but Stomper Tribes stand out for how they embrace their violent nature. It should not be any surprise that Warstompers lead them, given how fervently these gargants maintain that a day spent without a trampling is a day wasted.\n\nWhen you pick the Sons of Behemat faction for your army, you can choose for it to be a Stomper Tribe Army of Renown. If you do so, use the faction rules on these pages instead of the Sons ofBehemat faction rules. Every unit in your army must be drawn from the units listed in Army of Renown: Stomper Tribe. All units in your army gain the **STOMPER TRIBE** keyword.",
+      "rules": [
+        {
+          "name": "Stomp! Stomp! Stomp! Stomp!",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick an enemy unit in combat with a friendly **STOMPER TRIBE** unit to be the target.",
+          "effect": "Roll a dice. Add 1 to the roll for each friendly **STOMPER TRIBE** model in combat with the target.\nOn a 5+:\n• The target has **STRIKE-LAST** for the rest of the turn.\n• Inflict 3 mortal damage on the target."
+        },
+        {
+          "name": "Get In There, You Runts!",
+          "phase": "chargePhase",
+          "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **LITTLE** unit that is within a friendly **BIG** unit's combat range, visible to it and not in combat to be the target.",
+          "effect": "You can re-roll charge rolls for the target for the rest of the turn, and the target has **FLY** for the rest of the phase."
+        },
+        {
+          "name": "Grab Those Rocks and Chuck 'Em!",
+          "phase": "shootingPhase",
+          "phaseDetails": "Once Per Battle (Army), Any Shooting Phase",
+          "icon": "shooting",
+          "declare": "Pick each friendly **LITTLE** unit wholly within 18\" of and visible to a friendly **BIG** unit and not in combat to be the targets.",
+          "effect": "Add 1 to the Attacks characteristic of each target's ranged weapons for the rest of the turn."
+        },
+        {
+          "name": "Gettin' Stuck In",
+          "phase": "combatPhase",
+          "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **STOMPER TRIBE** unit in combat to be the target.",
+          "effect": "If the target is **LITTLE,** pick a model in the target unit. Add 1 to the Damage characteristic of that model's melee weapons for the rest of the turn.\n\nIf the target is **BIG,** add 1 to the Rend characteristic of its melee weapons for the rest of the turn."
+        },
+        {
+          "name": "Stompin' About",
+          "phase": "movementPhase",
+          "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly LITTLE unit wholly within 12\" of and visible to a friendly **BIG** unit to use this ability.",
+          "effect": "That **LITTLE** unit can move D6+3\". It can pass through the combat ranges of enemy units but cannot end that move in combat. Then, you can inflict D3 mortal damage on each enemy unit that has a lower Health characteristic than that **LITTLE** unit and that it passed across during that move."
+        }
+      ],
+      "enhancements": {
+        "artefacts": [
+          {
+            "id": "16313fc4-39a4-5096-9d51-43f5788f3968",
+            "name": "Sparky Shield",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "shootingPhase",
+            "phaseDetails": "Passive",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "While they are wholly within 12\" of and visible to this unit, friendly **STOMPER TRIBE** units have **WARD (6+)** against damage inflicted by shooting attacks.",
+            "cpCost": null
+          },
+          {
+            "id": "8cd5bb11-b76e-5b1f-8f64-8d173e4b1dd8",
+            "name": "Club of the First Oak",
+            "cardType": "Enhancement",
+            "enhancementType": "artefactsOfPower",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "End of Your Turn",
+            "icon": "defensive",
+            "declare": null,
+            "effect": "**Heal (D3)** this unit.",
+            "cpCost": null
+          }
+        ],
+        "heroicTraits": [
+          {
+            "id": "eb0be1b6-2a95-548a-8bcc-fb50fd9c5645",
+            "name": "Absolutely Fuming",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Passive",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "Add 2 to the Attacks characteristic of this unit's **Almighty Stomp** if it did not use a **FIGHT** ability in the previous turn.",
+            "cpCost": null
+          },
+          {
+            "id": "4261bcf2-529d-5a81-ba75-08487a041305",
+            "name": "Eager for the Fight",
+            "cardType": "Enhancement",
+            "enhancementType": "heroicTraits",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "chargePhase",
+            "phaseDetails": "Passive",
+            "icon": "movement",
+            "declare": null,
+            "effect": "When making charge rolls for this unit, add 1 to the number of dice rolled, to a maximum of 3, then remove 1 dice of your choice and use the remaining dice as the charge roll.",
+            "cpCost": null
+          }
+        ],
+        "other": [
+          {
+            "id": "d6802cf9-b988-5e86-a5bb-d2221424942e",
+            "name": "Future Stomper",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "endOfTurn",
+            "phaseDetails": "Passive",
+            "icon": "movement",
+            "declare": null,
+            "effect": "This unit can use the 'Power Through' command even if it has not charged this turn.",
+            "cpCost": null
+          },
+          {
+            "id": "224a5db5-e736-5482-ab6c-5a2ef669eff7",
+            "name": "Carefully Watched",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "combatPhase",
+            "phaseDetails": "Reaction: You declared a FIGHT ability for this unit",
+            "icon": "offensive",
+            "declare": null,
+            "effect": "Pick a friendly **BIG** unit that has not used a **FIGHT** ability this turn and is wholly within 12\" of this unit to be the target. The target can be picked to use a **FIGHT** ability immediately after the **FIGHT** ability used by this unit has been resolved. Add 1 to hit rolls for attacks made by this unit and the target for the rest of the turn.",
+            "cpCost": null
+          },
+          {
+            "id": "6d8301df-81c0-58bd-8204-830ed0caaa2f",
+            "name": "Little Hopper",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "movementPhase",
+            "phaseDetails": "Passive",
+            "icon": "movement",
+            "declare": null,
+            "effect": "This unit can be picked to use the 'Stompin' About' ability even if it is not wholly within 12\" of and visible to a friendly **BIG** unit.",
+            "cpCost": null
+          },
+          {
+            "id": "29a84bf3-cfb3-51b3-b387-aec0b4b2ef33",
+            "name": "Keen Bean",
+            "cardType": "Enhancement",
+            "enhancementType": "otherEnhancements",
+            "source": "aos-4e",
+            "points": null,
+            "phase": "chargePhase",
+            "phaseDetails": "Passive",
+            "icon": "movement",
+            "declare": null,
+            "effect": "While this unit is wholly within 12\" of and visible to a friendly **BIG** unit, it can use **CHARGE** abilities even if it used a **RUN** ability in the same turn.",
+            "cpCost": null
+          }
+        ]
+      },
+      "lores": [],
+      "manifestationLores": [],
+      "rosterRestrictions": {
+        "unitPool": [
+          "Rock-hurlers",
+          "Rock-hurlers",
+          "Boss-Stompers",
+          "Mancrusher Gargant",
+          "Warstomper Mega-Gargant"
+        ],
+        "requiredWarscrolls": ["Warstomper Mega-Gargant"],
+        "requiredGeneralWarscrolls": ["Warstomper Mega-Gargant"],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": ["Warstomper Mega-Gargant"]
+          }
+        ],
+        "rosterOptions": [],
+        "regimentRestrictions": []
+      }
     }
   ],
   "lores": [
+    {
+      "id": "08e3a6b7-3ab0-5d32-81d3-ea68d9dc8791",
+      "name": "Lore of Behemat",
+      "cardType": "Lore",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "restrictionText": null,
+      "spells": [
+        {
+          "id": "9274e0f6-09b6-5d4c-8bd8-7d01f28feb10",
+          "name": "Pipsqueak Curse",
+          "castingValue": 7,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **SONS OF BEHEMAT WIZARD** to cast this spell, pick a visible enemy unit within 18\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "Subtract 1 from wound rolls for the target's attacks until the start of your next turn.",
+          "keywords": ["Spell"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "e94e72d7-7b05-51c3-a329-24e2c60eb9f0",
+          "name": "Thornfang's Wrath",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **SONS OF BEHEMAT WIZARD** to cast this spell, pick a visible friendly **SONS OF BEHEMAT MONSTER** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "The target's melee weapons have **Crit (Mortal)** for the rest of the turn.",
+          "keywords": ["Spell"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "2e99cb8b-e46f-51ea-9bf9-0d13a46a3472",
+          "name": "Energy Surge",
+          "castingValue": 6,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "special",
+          "declare": "Pick a friendly **SONS OF BEHEMAT WIZARD** to cast this spell, pick a visible friendly **SONS OF BEHEMAT MONSTER** unit wholly within 12\" of them to be the target, then make a casting roll of 2D6.",
+          "effect": "If the target is **BIG**, add 1 to rampage rolls for it until the start of your next turn. If the target is **LITTLE**, until the start of your next turn, it can use **CHARGE** abilities even if it used a **RUN** ability in the same turn.",
+          "keywords": ["Spell", "Unlimited"],
+          "linkedWarscroll": null
+        }
+      ]
+    },
     {
       "id": "6511ce4e-4849-51cd-869d-28d69106993b",
       "name": "Brodd's Bellows",
@@ -1821,14 +2366,133 @@
           "linkedWarscroll": null
         }
       ]
+    },
+    {
+      "id": "c86aa425-fc37-5cfa-83a3-020d55f50d54",
+      "name": "Prayers of the World Titan",
+      "cardType": "Lore",
+      "source": "aos-4e",
+      "faction_id": "SONS_OF_BEHEMAT",
+      "restrictionText": null,
+      "spells": [
+        {
+          "id": "f95d4f53-a1f2-5921-ba73-bbc34e1fcc50",
+          "name": "Might of the Earth",
+          "castingValue": 4,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "defensive",
+          "declare": "Pick a friendly **SONS OF BEHEMAT PRIEST** to chant this prayer, pick each friendly **SONS OF BEHEMAT** unit on the battlefield to be the targets, then make a chanting roll of D6.",
+          "effect": "**Heal (D3)** each target. If the chanting roll was 8+, **Heal (3)** each target instead.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "6708eaff-cf86-549a-8770-89aeece362f9",
+          "name": "World Titan's Stride",
+          "castingValue": 3,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "movement",
+          "declare": "Pick a friendly **SONS OF BEHEMAT PRIEST** to chant this prayer, pick a visible friendly **SONS OF BEHEMAT MONSTER** unit wholly within 18\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "For the rest of the turn, add 3\" to the target's Move characteristic and models in the target unit can pass across enemy models and terrain features as if it had **FLY**. In addition, if the chanting roll was 6+, for the rest of the turn, each time the target uses the 'Normal Move' or 'Run' ability, after that ability has been resolved, inflict D3 mortal damage on each enemy unit the target passed across as part of that move.",
+          "keywords": ["Prayer", "Unlimited"],
+          "linkedWarscroll": null
+        },
+        {
+          "id": "a42dc52d-7d6d-561d-95f7-015afa9a9cba",
+          "name": "Behemat's Vengeance",
+          "castingValue": 4,
+          "chantValue": null,
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "declare": "Pick a friendly **SONS OF BEHEMAT PRIEST** to chant this prayer, pick a visible friendly **SONS OF BEHEMAT MONSTER** unit wholly within 18\" of them to be the target, then make a chanting roll of D6.",
+          "effect": "If the chanting roll was 8+, you can pick another eligible unit to be a second target. Add 1 to the Attacks characteristic of each target's melee weapons for the rest of the turn.",
+          "keywords": ["Prayer"],
+          "linkedWarscroll": null
+        }
+      ]
     }
   ],
   "manifestationLores": [],
   "enhancements": {
     "artefacts": [
       {
-        "id": "5fd02675-3efc-5ccf-879d-f67bd9ef7474",
-        "name": "Glowy Shield of Protectiness",
+        "id": "8b0c1233-5ab0-5fcf-95e9-41ec6cad90be",
+        "name": "Glowy Lantern",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "If this unit is a **WIZARD** or **PRIEST**, add 1 to its power level for the rest of the battle. Otherwise, pick either the **WIZARD (1)** or **PRIEST (1)** keyword. This unit has that keyword for the rest of the battle.",
+        "cpCost": null
+      },
+      {
+        "id": "d3513990-0d73-5c3c-89b0-84530babaea3",
+        "name": "Krakenskin Sandals",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": 10,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "Add 1 to the Attacks characteristic, Rend characteristic and Damage characteristic of this unit's **Almighty Stomp**.",
+        "cpCost": null
+      },
+      {
+        "id": "ef5a001e-818a-5891-abd8-9c18bb9322ca",
+        "name": "Enchanted Portcullis",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "shootingPhase",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Ignore modifiers to save rolls for shooting attacks that target this unit (positive and negative).",
+        "cpCost": null
+      },
+      {
+        "id": "a70177a2-bca0-557b-bc52-eb4f0f3b1079",
+        "name": "Massive Stuffin' Sack",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick an enemy unit in combat with this unit to be the target.",
+        "effect": "Roll 3 dice. For each roll that is at least double the target's Health characteristic, 1 model in the target unit is automatically slain.",
+        "cpCost": null
+      },
+      {
+        "id": "d524e436-434e-50b1-8f3c-f3e884093b7a",
+        "name": "Mantle of the Wood-Kings",
+        "cardType": "Enhancement",
+        "enhancementType": "artefactsOfPower",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "If this unit charged in the same turn, while it is in combat with 2 or more enemy units, add 1 to hit rolls for its combat attacks for the rest of the turn.",
+        "cpCost": null
+      },
+      {
+        "id": "3d8980fc-d121-5c62-a1db-e26bee3de960",
+        "name": "Protecty Bits",
         "cardType": "Enhancement",
         "enhancementType": "artefactsOfPower",
         "source": "aos-4e",
@@ -1837,122 +2501,96 @@
         "phaseDetails": "Passive",
         "icon": "defensive",
         "declare": null,
-        "effect": "Each time you make an unmodified save roll of 6 for a combat attack that targets this unit, inflict 1 mortal damage on the attacking unit after the **FIGHT** ability has been resolved.",
+        "effect": "Ignore the first damage point that would be allocated to this unit in each phase.",
         "cpCost": null
-      },
+      }
+    ],
+    "heroicTraits": [
       {
-        "id": "18957da4-0a6d-5f05-9f33-37159c84b2f1",
-        "name": "Amberbone Totem",
+        "id": "1ef46c96-dbf3-57b2-9acb-e061c8fbf856",
+        "name": "Brute of Brutes",
         "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "chargePhase",
-        "phaseDetails": "Once Per Battle, Your Charge Phase",
-        "icon": "movement",
-        "declare": null,
-        "effect": "For the rest of the turn, this unit can use **CHARGE** abilities even if it used a **RUN** ability in the same turn.",
-        "cpCost": null
-      },
-      {
-        "id": "467aa80e-a778-5226-82a2-5385c0583f38",
-        "name": "Kingslaughter Cowl",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
+        "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
         "phase": "combatPhase",
         "phaseDetails": "Passive",
         "icon": "offensive",
         "declare": null,
-        "effect": "Add 1 to the Attacks characteristic of this unit’s melee weapons while this unit is in combat with an enemy **HERO**.",
+        "effect": "Ignore negative modifiers to hit rolls and wound rolls for this unit's combat attacks.",
         "cpCost": null
       },
       {
-        "id": "ef068b37-6632-5555-9e9f-fc371185ba23",
-        "name": "Extra-calloused Feet",
+        "id": "8b3a89b6-9128-5dcc-9d67-73c90558ece6",
+        "name": "Spell-Chomper",
         "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": 10,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Add 1 to the Attacks characteristic, Rend characteristic and Damage characteristic of this unit’s **Almighty Stomp** or **Almightier Stomp**.",
-        "cpCost": null
-      },
-      {
-        "id": "1ea3e962-bd1d-5eac-8891-eb91d7e6ddf9",
-        "name": "Mantle of Tusk and Horns",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
-        "source": "aos-4e",
-        "points": 10,
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Battle, Your Combat Phase",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "For the rest of the turn, add 1 to hit rolls for combat attacks made by friendly **SONS OF BEHEMAT** units while they are wholly within 12\" of this unit.",
-        "cpCost": null
-      },
-      {
-        "id": "8b0c1233-5ab0-5fcf-95e9-41ec6cad90be",
-        "name": "Glowy Lantern",
-        "cardType": "Enhancement",
-        "enhancementType": "artefactsOfPower",
+        "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
         "phase": "heroPhase",
         "phaseDetails": "Passive",
         "icon": "special",
         "declare": null,
-        "effect": "This unit can use **SUMMON** abilities from the manifestation lore you picked during army composition as if it had **WIZARD (1)**.",
+        "effect": "This unit can use **UNBIND** and **BANISH** abilities as if it had **WIZARD (1)**. In addition, each time an enemy **MANIFESTATION** within this unit's combat range is banished, **Heal (D3)** this unit.",
         "cpCost": null
-      }
-    ],
-    "heroicTraits": [
+      },
       {
-        "id": "3b9166e4-ebef-56d6-a10b-46489eef042b",
-        "name": "Monstrously Tough",
+        "id": "427f6001-6c3b-5156-9937-c794170d76e8",
+        "name": "Always First In",
         "cardType": "Enhancement",
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
-        "phase": "defensive",
-        "phaseDetails": "Passive",
-        "icon": "defensive",
+        "phase": "startOfTurn",
+        "phaseDetails": "Deployment Phase",
+        "icon": "movement",
         "declare": null,
-        "effect": "This unit has a Health characteristic of 40 instead of 35.",
+        "effect": "This unit can move 2D6\". It must end that move more than 9\" from all enemy units.",
         "cpCost": null
       },
       {
-        "id": "6b3ca781-c365-5385-ad07-e4e4f2deb9ff",
-        "name": "Rabble Rouser",
+        "id": "130b874e-9cf4-5c66-987f-3c3d13ae93d0",
+        "name": "Unreasonable Tyrant",
         "cardType": "Enhancement",
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
         "phase": "chargePhase",
-        "phaseDetails": "Passive",
+        "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
         "icon": "movement",
-        "declare": null,
-        "effect": "Add 1 to charge rolls for friendly **SONS OF BEHEMAT** units while they are wholly within 12\" of this unit.",
+        "declare": "Pick another visible friendly **SONS OF BEHEMAT MONSTER** unit wholly within 12\" of this unit to be the target.",
+        "effect": "Add 1 to charge rolls for the target for the rest of the turn.",
         "cpCost": null
       },
       {
-        "id": "359d1c80-ba82-509e-8460-a9e6ded435af",
-        "name": "Furious Temper",
+        "id": "dcc902cb-d29f-5326-9261-63edcb173c90",
+        "name": "Thundering Titan",
+        "cardType": "Enhancement",
+        "enhancementType": "heroicTraits",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "chargePhase",
+        "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+        "icon": "offensive",
+        "declare": "If this unit charged this turn, pick a non-**HERO** enemy unit in combat with it to be the target.",
+        "effect": "Make a rampage roll of D6. If the roll equals or exceeds the target's Control characteristic, this unit cannot be picked to be the target of pile-in moves made by the target while there are other friendly **SONS OF BEHEMAT** units in combat with the target.",
+        "cpCost": null,
+        "keywords": ["Rampage"]
+      },
+      {
+        "id": "d4ab6d9f-fa9b-587e-a53d-2d1a2bfce4fa",
+        "name": "One-Hit Wonder",
         "cardType": "Enhancement",
         "enhancementType": "heroicTraits",
         "source": "aos-4e",
         "points": null,
         "phase": "combatPhase",
-        "phaseDetails": "Once Per Battle, Any Combat Phase",
+        "phaseDetails": "Once Per Battle (Army), Any Combat Phase",
         "icon": "offensive",
-        "declare": null,
-        "effect": "For the rest of the turn:\n\n• Add 2 to the Attacks characteristic of this unit’s melee weapons.\n• Subtract 1 from save rolls for this unit.",
-        "cpCost": null
+        "declare": "Pick an enemy unit in combat with this unit to be the target.",
+        "effect": "This unit can make a pile-in move. Then, roll a dice. Add 1 to the roll for cach battle round in which this unit was on the battlefield in both combat phases and did not use any **FIGHT** abilities. On a 6+, inflict 4D6 mortal damage on the target.",
+        "cpCost": null,
+        "keywords": ["Core", "Rampage", "Attack", "Fight"]
       },
       {
         "id": "c3dcf5ac-e152-5608-883b-6b4299d57fc2",
@@ -1999,6 +2637,96 @@
     ],
     "other": [
       {
+        "id": "d5e20d96-beb8-5664-855e-56fbc637ecd2",
+        "name": "Hammer Throw",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "shootingPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
+        "icon": "movement",
+        "declare": "If this unit is not in combat, pick a friendly **Mancrusher Gargant** within its combat range to be the target.",
+        "effect": "Roll 3D6. On a 4+, remove the target from the battlefield and set it up again wholly within a number of inches of this unit equal to the roll and visible to this unit. It can be set up in combat. The target cannot use **CHARGE** abilities for the rest of the turn.\n\nIf the target is set up in combat:\n• Inflict D3 mortal damage on the target.\n• Inflict 1 mortal damage on each enemy unit in combat with the target.\n• The target has charged this turn.",
+        "cpCost": null,
+        "keywords": ["Core", "Rampage", "Attack", "Shoot"]
+      },
+      {
+        "id": "130e650c-212c-5913-aed6-e50aefd1c69e",
+        "name": "Earthshaking Roar",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "special",
+        "declare": "Pick an enemy unit in combat with this unit to be the target.",
+        "effect": "Make a rampage roll of D6. On a 3+, the target cannot use commands for the rest of the turn.",
+        "cpCost": null,
+        "keywords": ["Rampage"]
+      },
+      {
+        "id": "b8fbaf37-ba4c-5735-bcf4-f4d54d2c6cd7",
+        "name": "Battered Shrimp",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick an enemy non-**MONSTER HERO** in combat with this unit to be the target",
+        "effect": "Both players roll off. If you win the roll-off, roll off again. Keep rolling off in this way until you lose the roll-off. Then, inflict an amount of mortal damage on the target equal to the number of roll-offs made as part of this ability that you won this turn.",
+        "cpCost": null,
+        "keywords": ["Rampage"]
+      },
+      {
+        "id": "171db14b-3394-5b6a-9c52-53225c352c38",
+        "name": "Windmill Walloping",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "offensive",
+        "declare": "Pick an enemy **MONSTER** or **WAR MACHINE** in combat with this unit to be the target.",
+        "effect": "Roll a number of dice equal to the target's Health characteristic. Add 1 to each roll for each consecutive turn in which the target was picked to be the target of this ability. For each 6+, allocate 1 mortal damage to the target (ward rolls cannot be made for those damage points).",
+        "cpCost": null,
+        "keywords": ["Rampage"]
+      },
+      {
+        "id": "6767ee51-84b7-54bc-97f6-5b00792e32cb",
+        "name": "Colossal Slam",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "movement",
+        "declare": "Pick an enemy **MONSTER** or **WAR MACHINE** that has no more than 1 model and is in combat with this unit to be the target.",
+        "effect": "If 2 or more friendly **BIG** or **LITTLE** units are in combat with the target, apply the effect below. Otherwise, make a rampage roll of D6. Subtract 1 from the roll if the target has a higher Health characteristic than this unit. On a 3+, apply the effect below.\n\nRemove the target from the battlefield and set it up again in combat with this unit. Then, inflict D3 mortal damage on the target.",
+        "cpCost": null,
+        "keywords": ["Rampage"]
+      },
+      {
+        "id": "2e18b0f2-ea66-508d-86ab-8270e786a846",
+        "name": "Rancid Flatulence",
+        "cardType": "Enhancement",
+        "enhancementType": "otherEnhancements",
+        "source": "aos-4e",
+        "points": 20,
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Battle (Army), End of Any Turn",
+        "icon": "control",
+        "declare": null,
+        "effect": "For the rest of the turn, enemy units have a maximum control score of 1 while they are in combat with this unit.",
+        "cpCost": null,
+        "keywords": ["Rampage"]
+      },
+      {
         "id": "111deb87-2e9d-5bdd-88a9-e02dcee9253c",
         "name": "That Boy's not Right",
         "cardType": "Enhancement",
@@ -2037,72 +2765,40 @@
         "phaseDetails": "Passive",
         "icon": "defensive",
         "declare": null,
-        "effect": "This unit has **WARD (5+)** while it is wholly within 12\" of and visible to a friendly **MEGA-GARGANT**.",
+        "effect": "This unit has **WARD (5+)** while it is wholly within 12\" of and visible to a friendly **BIG** unit.",
         "cpCost": null
       },
       {
-        "id": "571fa5cc-9dec-59ab-b031-690c51153ac6",
-        "name": "Bellowing Mockery",
+        "id": "c93d5a21-33fb-55ee-8c27-c141607e29ec",
+        "name": "Titanic Stride",
         "cardType": "Enhancement",
         "enhancementType": "regimentOfRenown",
         "source": "aos-4e",
         "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "defensive",
-        "declare": "Pick this unit to use this ability if it has not used a **RAMPAGE** ability this turn, then pick an enemy unit within this unit’s combat range to be the target.",
-        "effect": "Roll a dice. On a 3+, subtract 1 from hit rolls for the target’s attacks for the rest of the turn.",
-        "cpCost": null,
-        "keywords": ["Rampage"]
-      },
-      {
-        "id": "0834eddb-27b0-5320-af7b-5dc131b3a1a8",
-        "name": "What're You Lookin' At?",
-        "cardType": "Enhancement",
-        "enhancementType": "regimentOfRenown",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "chargePhase",
-        "phaseDetails": "Once Per Turn (Army), Any Charge Phase",
+        "phase": "movementPhase",
+        "phaseDetails": "Passive",
         "icon": "movement",
-        "declare": "Pick this unit to use this ability if it charged this turn and has not used a **RAMPAGE** ability this turn. Then, pick an enemy unit within 9\" of this unit to be the target.",
-        "effect": "Roll 2D6. This unit can move a number of inches equal to the roll. It can pass through enemy models and must end that move in combat with the target.",
-        "cpCost": null,
-        "keywords": ["Rampage"]
+        "declare": null,
+        "effect": "The unit in this Regiment of Renown can use **CHARGE** abilities even if it used a **RETREAT** ability in the same turn. In addition, no mortal damage is inflicted on the unit in this Regiment of Renown by **RETREAT** abilities.",
+        "cpCost": null
       },
       {
-        "id": "facb681a-26ea-5e0b-80bc-ad3b7c64d033",
-        "name": "Projectile Vomit",
+        "id": "f2832f53-3733-579d-9246-3cddcab13e56",
+        "name": "Earth-Shaking Stomp",
         "cardType": "Enhancement",
         "enhancementType": "regimentOfRenown",
         "source": "aos-4e",
         "points": null,
-        "phase": "shootingPhase",
-        "phaseDetails": "Once Per Turn (Army), Your Shooting Phase",
-        "icon": "shooting",
-        "declare": "Pick this unit to use this ability if it has not used a **RAMPAGE** ability this turn. Then, pick a point on the battlefield within 6\" of this unit and pick each enemy unit within 3\" of that point to be the targets.",
-        "effect": "Roll a D3 for each target. On a 2+, inflict an amount of mortal damage on that target equal to the roll.",
-        "cpCost": null,
-        "keywords": ["Rampage"]
+        "phase": "defensive",
+        "phaseDetails": "Passive",
+        "icon": "defensive",
+        "declare": null,
+        "effect": "Subtract 1 from hit rolls for combat attacks made by enemy **INFANTRY** and **CAVALRY** units while they are in combat with the unit in this Regiment of Renown.",
+        "cpCost": null
       },
       {
-        "id": "0acf3c6c-3106-5ffb-9d39-25db301dfe14",
-        "name": "Shake the Earth",
-        "cardType": "Enhancement",
-        "enhancementType": "regimentOfRenown",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick an enemy unit in combat with this unit to be the target.",
-        "effect": "Roll a D3. On a 2+:\n\n• Inflict an amount of mortal damage on the target equal to the roll. If the target is **INFANTRY**, double the amount of mortal damage inflicted.\n• Subtract 1 from hit rolls for the target’s attacks for the rest of the turn.",
-        "cpCost": null,
-        "keywords": ["Rampage"]
-      },
-      {
-        "id": "7e233528-3e66-5e7e-a1a1-cbc79fd07b90",
-        "name": "Timberrrrr!",
+        "id": "bd57c5bd-ae02-5b5a-9c04-f3d827dd0da6",
+        "name": "Devastating Collapse",
         "cardType": "Enhancement",
         "enhancementType": "regimentOfRenown",
         "source": "aos-4e",
@@ -2111,8 +2807,23 @@
         "phaseDetails": "Passive",
         "icon": "offensive",
         "declare": null,
-        "effect": "When the **MEGA‑GARGANT** in this regiment of renown is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3\" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3\" of that point that has a lower Health characteristic than that model.",
+        "effect": "When the unit in this Regiment of Renown is destroyed, before removing it from play, you and your opponent must roll off. If you roll higher, inflict 3 mortal damage on each unit (friendly and enemy) within its combat range.",
         "cpCost": null
+      },
+      {
+        "id": "f344ae8a-9219-5b18-ba32-2453e6686d98",
+        "name": "Jump Up and Down",
+        "cardType": "Enhancement",
+        "enhancementType": "regimentOfRenown",
+        "source": "aos-4e",
+        "points": null,
+        "phase": "combatPhase",
+        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
+        "icon": "offensive",
+        "declare": "If the unit in this Regiment of Renown charged this turn, pick an enemy unit in combat with it to be the target.",
+        "effect": "Roll a dice for each model in the target unit. Add 1 to each roll if the target is contesting an objective you do not control. For each 6+, inflict 1 mortal damage on the target. Then, if any of the rolls were an unmodified 1, resolve the effect of the Devastating Collapse' ability as if the unit in this Regiment of Renown had been destroyed (it is neither destroyed nor removed from play).",
+        "cpCost": null,
+        "keywords": ["Rampage"]
       },
       {
         "id": "1ec5492a-f16f-5dd0-babd-eb9321438a0c",
@@ -2122,25 +2833,10 @@
         "source": "aos-4e",
         "points": null,
         "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
+        "phaseDetails": "Once Per Battle (Army), Any Combat Phase",
+        "icon": "special",
         "declare": null,
-        "effect": "For the rest of the turn, add 1 to the Attacks characteristic of this unit’s weapons.\n\nThen, roll a dice. On a 4+, this unit has **STRIKE-LAST** for the rest of the turn.",
-        "cpCost": null,
-        "keywords": ["Rampage"]
-      },
-      {
-        "id": "7e233528-3e66-5e7e-a1a1-cbc79fd07b90",
-        "name": "Timberrrrr!",
-        "cardType": "Enhancement",
-        "enhancementType": "regimentOfRenown",
-        "source": "aos-4e",
-        "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "When the **MEGA‑GARGANT** in this regiment of renown is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3\" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3\" of that point that has a lower Health characteristic than that model.",
+        "effect": "For the rest of the turn, the unit in this Regiment of Renown has **STRIKE-LAST** and **WARD (5+)**. Pick 1 of the following effects to apply for the rest of the turn:\n\n***A Kunnin' Ruse***: Other than the **Companion** ability, weapon abilities for attacks that target the unit in this Regiment of Renown have no effect.\n\n***A Nasty Surprise***: Add 1 to hit rolls for the unit in this Regiment of Renown's combat attacks and ignore negative modifiers to hit rolls and wound rolls for its combat attacks.\n\n***Tricked Ya!***: Enemy units have a maximum control score of 1 while they are in combat with the unit in this Regiment of Renown.",
         "cpCost": null
       },
       {
@@ -2153,23 +2849,22 @@
         "phase": "combatPhase",
         "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
         "icon": "offensive",
-        "declare": "Pick an enemy **MONSTER** in combat with this unit to be the target.",
-        "effect": "Roll a dice. On a 3+, inflict an amount of mortal damage on the target equal to the roll.",
-        "cpCost": null,
-        "keywords": ["Rampage"]
+        "declare": "Pick an enemy **MONSTER** in combat with the unit in this Regiment of Renown to be the target.",
+        "effect": "For the rest of the turn, the unit in this Regiment of Renown's **Menhir Club** has **Crit (2 Hits)** but all attacks made with that weapon this turn must target that enemy **MONSTER**.",
+        "cpCost": null
       },
       {
-        "id": "7e233528-3e66-5e7e-a1a1-cbc79fd07b90",
-        "name": "Timberrrrr!",
+        "id": "c1eaaa2d-3975-5427-973f-6e13e7096310",
+        "name": "Protective Wards",
         "cardType": "Enhancement",
         "enhancementType": "regimentOfRenown",
         "source": "aos-4e",
         "points": null,
-        "phase": "combatPhase",
+        "phase": "defensive",
         "phaseDetails": "Passive",
-        "icon": "offensive",
+        "icon": "defensive",
         "declare": null,
-        "effect": "When the **MEGA‑GARGANT** in this regiment of renown is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3\" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3\" of that point that has a lower Health characteristic than that model.",
+        "effect": "The unit in this Regiment of Renown has **WARD (6+)**.",
         "cpCost": null
       },
       {
@@ -2179,26 +2874,25 @@
         "enhancementType": "regimentOfRenown",
         "source": "aos-4e",
         "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick an enemy unit in combat with this unit to be the target.",
-        "effect": "Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target.",
-        "cpCost": null,
-        "keywords": ["Rampage"]
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Any Turn",
+        "icon": "special",
+        "declare": "Pick an enemy unit in combat with the unit in this Regiment of Renown to be the target.",
+        "effect": "Roll a dice for each model in the target unit. For each 6, inflict 1 mortal damage on the target. If any enemy models are slain by this ability, the target has a maximum control score of 1 for the rest of the turn.",
+        "cpCost": null
       },
       {
-        "id": "7e233528-3e66-5e7e-a1a1-cbc79fd07b90",
-        "name": "Timberrrrr!",
+        "id": "05948d21-c975-5887-b300-6bc483fbf55a",
+        "name": "Fortress Wrekka",
         "cardType": "Enhancement",
         "enhancementType": "regimentOfRenown",
         "source": "aos-4e",
         "points": null,
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
+        "phase": "shootingPhase",
+        "phaseDetails": "Once Per Battle (Army), Reaction: You delcared the 'Rip It Up and Chuck It' ability for the unit in this Regiment of Renown",
+        "icon": "shooting",
         "declare": null,
-        "effect": "When the **MEGA‑GARGANT** in this regiment of renown is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3\" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3\" of that point that has a lower Health characteristic than that model.",
+        "effect": "After picking the target for that ability, roll a number of dice equal to the current battle round number. For each 4+, add 1 to the Attacks characteristic of the unit in this Regiment of Renown's **Hurled Boulder** for the rest of the turn.",
         "cpCost": null
       }
     ]
@@ -2223,44 +2917,44 @@
   "rules": {
     "battleTraits": [
       {
-        "name": "Gargant Charge",
+        "name": "Take A Run At It",
+        "phase": "movementPhase",
+        "phaseDetails": "Once Per Turn (Army), Your Movement Phase",
+        "icon": "special",
+        "declare": "Pick any number of friendly **BIG** or **LITTLE** units to be the targets.",
+        "effect": "Roll a dice. If the roll is lower than the number of targets picked, this ability has no effect. Otherwise, pick an effect for each target. The effects must be different unless specified otherwise.\n\n• Pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll. You can pick this effect for multiple targets.\n• The target is **building momentum** for the rest of the turn.\n• If the target is within 3\" of a battlefield edge, remove it from the battlefield and set it up in reserve **beyond the horizon**.\n• For the rest of the phase, the target can pass through enemy models and terrain features when using **MOVE** abilities as if it had **FLY**."
+      },
+      {
+        "name": "Argy Bargy",
         "phase": "chargePhase",
-        "phaseDetails": "Any Charge Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **MEGA-GARGANT** or **GARGANT** unit that charged this turn to use this ability, then pick an enemy unit that has not been picked as the target of this ability this turn and that is in combat with that unit to be the target.\n\n**Designer’s Note**: *This ability can be used by any number of friendly **MEGA-GARGANT** and **GARGANT** units that charged in each turn.*",
-        "effect": "Inflict D3 mortal damage on the target."
+        "phaseDetails": "Once Per Turn (Army), Your Charge Phase",
+        "icon": "special",
+        "declare": "Pick any number of friendly **BIG** or **LITTLE** units to be the targets.",
+        "effect": "Roll a dice. If the roll is lower than the number of targets picked, this ability has no effect. Otherwise, pick an effect for each target. The effects must be different unless specified otherwise.\n\n• Pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll. You can pick this effect for multiple targets.\n• If the target is **building momentum**, it is no longer **building momentum** and is **getting ready** for the rest of the turn instead.\n• For the rest of the turn, each time the target makes a pile-in move, add 3\" to the distance it can move."
       },
       {
-        "name": "Colossal Slam",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **MEGA‐GARGANT** that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy **MONSTER** or **WAR MACHINE** that has a unit size of 1 and is within 1\" of it to be the target.",
-        "effect": "Roll a dice. On a 3+, remove the target from the battlefield and set it up again within 1\" of the unit using this ability. Then, inflict D3 mortal damage on the target."
-      },
-      {
-        "name": "Jump Up and Down",
-        "phase": "combatPhase",
-        "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
-        "icon": "offensive",
-        "declare": "Pick a friendly **MEGA‑GARGANT** or **GARGANT** unit that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy **INFANTRY** unit in combat with it to be the target.",
-        "effect": "Roll a dice. On a 3+, roll a dice for each model in the target unit. If the unit using this ability is a **GARGANT**, inflict 1 mortal damage on the target for each 6. If it is a **MEGA-GARGANT,** inflict 1 mortal damage on the target for each 5+."
-      },
-      {
-        "name": "Timberrrrr!",
-        "phase": "combatPhase",
-        "phaseDetails": "Passive",
-        "icon": "offensive",
-        "declare": null,
-        "effect": "Each time a friendly **MEGA‑GARGANT** or **GARGANT** model is slain, before removing it from play, the players must roll off. The winner picks a point on the battlefield within 3\" of that model. Inflict D3 mortal damage on each unit (friendly and enemy) within 3\" of that point that has a lower Health characteristic than that model."
-      },
-      {
-        "name": "Earthshaking Roar",
+        "name": "Wrathful Rampage",
         "phase": "combatPhase",
         "phaseDetails": "Once Per Turn (Army), Any Combat Phase",
         "icon": "special",
-        "declare": "Pick a friendly **MEGA‑GARGANT** or **GARGANT** unit that has not used a **RAMPAGE** ability this turn to use this ability, then pick an enemy unit in combat with it to be the target.",
-        "effect": "Roll a dice. On a 3+, the target cannot use commands for the rest of the turn."
+        "declare": "Pick any number of friendly **SONS OF BEHEMAT** units to be the targets.",
+        "effect": "Roll a dice. If the roll is lower than the number of targets picked, this ability has no effect. Otherwise, pick an effect for each target. The effects must be different unless specified otherwise.\n\n• Pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll. You can pick this effect for multiple targets.\n• If the target is **LITTLE** and is **getting ready**, it is no longer **getting ready** and has **STRIKE-FIRST** for the rest of the turn instead.\n• If the target is **BIG** and is **getting ready**, it is no longer **getting ready**. Instead, either it has **STRIKE-FIRST** for the rest of the turn or it is **prepping the big one** for the rest of the turn."
+      },
+      {
+        "name": "Haring Back",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Your Turn",
+        "icon": "movement",
+        "declare": "If a friendly unit is in reserve **beyond the horizon**, you must pick that unit to use this ability.",
+        "effect": "Set up that unit within 1\" of a battlefield edge and more than 9\" from all enemy units. If it is not possible to set it up, it wanders off and is automatically destroyed."
+      },
+      {
+        "name": "The Big One",
+        "phase": "endOfTurn",
+        "phaseDetails": "Once Per Turn (Army), End of Your Turn",
+        "icon": "offensive",
+        "declare": "Pick any number of friendly **BIG** or **LITTLE** units to be the targets.",
+        "effect": "Roll a dice. If the roll is lower than the number of targets picked, this ability has no effect. Otherwise, pick an effect for each target. The effects must be different unless specified otherwise.\n\n• Pick an enemy unit in combat with the target and roll a D3. On a 2+, inflict an amount of mortal damage on that enemy unit equal to the roll. You can pick this effect for multiple targets.\n• If the target is **prepping the big one**, pick an enemy unit in combat with it and roll any number of dice. If any of the rolls are a 1, the target is no longer **prepping the big one**. Otherwise, add the results together, then inflict an amount of mortal damage on that enemy unit equal to the total."
       }
     ]
   }
