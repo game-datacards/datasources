@@ -6,8 +6,8 @@
     "banner": "#2E0B03",
     "header": "#1A3037"
   },
-  "compatibleDataVersion": 946,
-  "updated": "2026-09-02T09:15:31.495Z",
+  "compatibleDataVersion": 963,
+  "updated": "2026-09-30T09:24:38.347Z",
   "parent_id": null,
   "parent_name": null,
   "rules": {
@@ -90,7 +90,7 @@
                 "order": 1,
                 "type": "text",
                 "text": {
-                  "en": "When a friendly <k>Emperor’s Children Battleline</k> unit is selected to make an <b>advance/fall‑back move</b>, that unit’s attacks have +1 <b>S</b> until the end of the turn.\rThis <b>detachment</b> has the <k>host</k> tag and cannot be taken with another <k>host</k> <b>detachment</b>.",
+                  "en": "When a friendly <k>Emperor’s Children Battleline</k> unit is selected to make an <b>advance/fall‑back move</b>, that unit’s <k>BATTLELINE</k> models' attacks have <b>[SUSTAINED HITS 1]</b> until the end of the turn.",
                   "de": "Wenn eine befreundete <k>Emperor’s</k>-<k>Children</k>-<k>Linientruppen</k>-Einheit für das Ausführen einer <b>Vorrücken-/Rückzugsbewegung</b> gewählt wird, haben Attacken jener Einheit bis zum Ende des Zugs +1 <b>S</b>.\rDieses <b>Kontingent</b> hat die Kennzeichnung <k>Heerschar</k> und kann nicht zusammen mit einem anderen <b>Kontingent</b> mit der Kennzeichnung <k>Heerschar</k> gewählt werden.",
                   "es": "Cuando una unidad <k>Línea de batalla Hijos del Emperador</k> amiga se elija para hacer un <b>movimiento de avanzar/de retroceder</b>, los ataques de esa unidad tienen +1 a <b>F</b> hasta el final del turno.",
                   "fr": "Quand une unité de <k>Ligne</k> d’<k>Emperor’s Children</k> amie est choisie pour faire un <b>mouvement d’avance/de retraite</b>, ses attaques ont +1 en <b>F</b> jusqu'à la fin du tour.",
@@ -350,7 +350,7 @@
         "en": "Slaanesh’s Chosen"
       },
       "faction": "Emperor’s Children",
-      "detachmentPoints": 2,
+      "detachmentPoints": 1,
       "forceDisposition": {
         "id": "c9572fd5-d8cd-41b6-b613-13265ac1c04f",
         "name": {
@@ -427,7 +427,7 @@
         "en": "Carnival of Excess"
       },
       "faction": "Emperor’s Children",
-      "detachmentPoints": 2,
+      "detachmentPoints": 3,
       "forceDisposition": {
         "id": "6a24433b-0910-4386-8169-ac2b2ef9e377",
         "name": {
@@ -1214,13 +1214,13 @@
       "type": "Strategic Ploy",
       "phase": ["shooting"],
       "target": {
-        "en": "One **EMPEROR’S CHILDREN CHARACTER** unit from your army that was selected as the target of one or more of the attacking unit’s attacks."
+        "en": "That **EMPEROR’S CHILDREN CHARACTER** unit."
       },
       "when": {
-        "en": "Your opponent’s Shooting phase, just after an enemy unit has selected its targets."
+        "en": "Your opponent’s Shooting phase, when an enemy unit that targeted a friendly **unengaged EMPEROR’S CHILDREN CHARACTER** unit this phase has shot."
       },
       "effect": {
-        "en": "Your unit can make a **surge move** of up to D6\". If your unit is not your army's Favoured Champions, you can re-roll the dice to determine the distance of that **surge move**."
+        "en": "Your unit can make a **surge move** of up to D6\". If your unit is not your army’s Favoured Champions, you can re-roll the dice to determine the distance of that **surge move**."
       },
       "fluff": {
         "en": "Consumed by their obsessive desire for revenge, the Emperor’s Children surge into oncoming fusillades."
@@ -3106,10 +3106,30 @@
               "range": "24\"",
               "attacks": "2",
               "skill": "3+",
-              "strength": "4",
-              "ap": "0",
+              "strength": "5",
+              "ap": "-1",
               "damage": "1",
-              "keywords": ["Rapid Fire 2"]
+              "keywords": ["RAPID FIRE 2"]
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": {
+                "en": "Combi-weapon"
+              },
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "1",
+              "damage": "1",
+              "keywords": [
+                "RAPID FIRE 1",
+                "DEVASTATING WOUNDS",
+                "ANTI-INFANTRY 4+"
+              ]
             }
           ]
         },
@@ -3142,26 +3162,6 @@
               "ap": "0",
               "damage": "1",
               "keywords": ["Blast"]
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": {
-                "en": "Combi-weapon"
-              },
-              "range": "24\"",
-              "attacks": "1",
-              "skill": "4+",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 1",
-                "Devastating Wounds",
-                "Anti-infantry 4+"
-              ]
             }
           ]
         },
@@ -3258,7 +3258,7 @@
       },
       "points": [
         {
-          "cost": "220",
+          "cost": "210",
           "models": "1",
           "keyword": null,
           "faction": null,
@@ -3438,10 +3438,30 @@
               "range": "24\"",
               "attacks": "2",
               "skill": "3+",
-              "strength": "4",
-              "ap": "0",
+              "strength": "5",
+              "ap": "-1",
               "damage": "1",
-              "keywords": ["Rapid Fire 2"]
+              "keywords": ["RAPID FIRE 2"]
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": {
+                "en": "Combi-weapon"
+              },
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "1",
+              "damage": "1",
+              "keywords": [
+                "RAPID FIRE 1",
+                "DEVASTATING WOUNDS",
+                "ANTI-INFANTRY 4+"
+              ]
             }
           ]
         },
@@ -3458,26 +3478,6 @@
               "ap": "0",
               "damage": "1",
               "keywords": ["Blast"]
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": {
-                "en": "Combi-weapon"
-              },
-              "range": "24\"",
-              "attacks": "1",
-              "skill": "4+",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 1",
-                "Devastating Wounds",
-                "Anti-infantry 4+"
-              ]
             }
           ]
         }
@@ -3820,7 +3820,7 @@
             "en": "Chaos Terminator"
           },
           "m": "6\"",
-          "t": "5",
+          "t": "6",
           "sv": "2+",
           "w": "3",
           "ld": "6+",
@@ -3854,10 +3854,30 @@
               "range": "24\"",
               "attacks": "2",
               "skill": "3+",
-              "strength": "4",
-              "ap": "0",
+              "strength": "5",
+              "ap": "-1",
               "damage": "1",
-              "keywords": ["Rapid Fire 2"]
+              "keywords": ["RAPID FIRE 2"]
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": {
+                "en": "Combi-weapon"
+              },
+              "range": "24\"",
+              "attacks": "1",
+              "skill": "4+",
+              "strength": "5",
+              "ap": "1",
+              "damage": "1",
+              "keywords": [
+                "RAPID FIRE 1",
+                "DEVASTATING WOUNDS",
+                "ANTI-INFANTRY 4+"
+              ]
             }
           ]
         },
@@ -3874,26 +3894,6 @@
               "ap": "-1",
               "damage": "1",
               "keywords": ["Sustained Hits 1", "Devastating Wounds"]
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": {
-                "en": "Combi-weapon"
-              },
-              "range": "24\"",
-              "attacks": "1",
-              "skill": "4+",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1",
-              "keywords": [
-                "Rapid Fire 1",
-                "Devastating Wounds",
-                "Anti-infantry 4+"
-              ]
             }
           ]
         }
@@ -4029,7 +4029,7 @@
       },
       "points": [
         {
-          "cost": "145",
+          "cost": "155",
           "models": "5",
           "keyword": null,
           "faction": null,
@@ -4398,7 +4398,7 @@
       },
       "points": [
         {
-          "cost": "170",
+          "cost": "165",
           "models": "1",
           "keyword": null,
           "faction": null,
@@ -4657,7 +4657,7 @@
         }
       ],
       "additionalCost": {
-        "cost": "30",
+        "cost": "20",
         "afterSelections": 1
       }
     },
@@ -5197,8 +5197,8 @@
               "range": "12\"",
               "attacks": "1",
               "skill": "3+",
-              "strength": "4",
-              "ap": "0",
+              "strength": "5",
+              "ap": "-1",
               "damage": "1",
               "keywords": ["Pistol"]
             }
@@ -5392,7 +5392,14 @@
           "zh": "色孽"
         },
         {
-          "en": "Primarch"
+          "en": "Primarch",
+          "de": "Primarch",
+          "es": "Primarca",
+          "fr": "Primarque",
+          "it": "Primarca",
+          "ja": "総主長",
+          "ko": "프라이마크",
+          "zh": "基因原体"
         },
         {
           "en": "Fulgrim"
@@ -5921,7 +5928,7 @@
             "en": "Infractor"
           },
           "m": "7\"",
-          "t": "4",
+          "t": "5",
           "sv": "3+",
           "w": "2",
           "ld": "6+",
@@ -5939,8 +5946,8 @@
               "range": "12\"",
               "attacks": "1",
               "skill": "3+",
-              "strength": "4",
-              "ap": "0",
+              "strength": "5",
+              "ap": "-1",
               "damage": "1",
               "keywords": ["Pistol"]
             }
@@ -5985,7 +5992,7 @@
               "range": "Melee",
               "attacks": "4",
               "skill": "3+",
-              "strength": "4",
+              "strength": "5",
               "ap": "-1",
               "damage": "1",
               "keywords": ["Precision"]
@@ -6091,14 +6098,14 @@
       },
       "points": [
         {
-          "cost": "160",
+          "cost": "175",
           "models": "10",
           "keyword": null,
           "faction": null,
           "detachment": null
         },
         {
-          "cost": "85",
+          "cost": "95",
           "models": "5",
           "keyword": null,
           "faction": null,
@@ -6266,22 +6273,6 @@
           "profiles": [
             {
               "name": {
-                "en": "Bolt Pistol"
-              },
-              "range": "12\"",
-              "attacks": "1",
-              "skill": "2+",
-              "strength": "4",
-              "ap": "0",
-              "damage": "1",
-              "keywords": ["Pistol"]
-            }
-          ]
-        },
-        {
-          "profiles": [
-            {
-              "name": {
                 "en": "Plasma pistol – Standard"
               },
               "range": "12\"",
@@ -6319,6 +6310,22 @@
               "ap": "-1",
               "damage": "2",
               "keywords": ["Pistol", "Ignores Cover"]
+            }
+          ]
+        },
+        {
+          "profiles": [
+            {
+              "name": {
+                "en": "Bolt Pistol"
+              },
+              "range": "12\"",
+              "attacks": "1",
+              "skill": "2+",
+              "strength": "5",
+              "ap": "-1",
+              "damage": "1",
+              "keywords": ["Pistol"]
             }
           ]
         }
@@ -6365,7 +6372,7 @@
               "range": "Melee",
               "attacks": "6",
               "skill": "2+",
-              "strength": "4",
+              "strength": "5",
               "ap": "0",
               "damage": "1",
               "keywords": []
@@ -6476,7 +6483,7 @@
       },
       "points": [
         {
-          "cost": "90",
+          "cost": "95",
           "models": "1",
           "keyword": null,
           "faction": null,
@@ -6643,7 +6650,7 @@
             "en": "Lord Kakophonist"
           },
           "m": "6\"",
-          "t": "5",
+          "t": "6",
           "sv": "2+",
           "w": "6",
           "ld": "6+",
@@ -6678,7 +6685,7 @@
               "range": "Melee",
               "attacks": "6",
               "skill": "2+",
-              "strength": "4",
+              "strength": "5",
               "ap": "0",
               "damage": "1",
               "keywords": []
@@ -6899,7 +6906,7 @@
             "en": "Lucius the Eternal"
           },
           "m": "8\"",
-          "t": "5",
+          "t": "6",
           "sv": "2+",
           "w": "6",
           "ld": "6+",
@@ -7009,7 +7016,7 @@
       },
       "points": [
         {
-          "cost": "120",
+          "cost": "130",
           "models": "1",
           "keyword": null,
           "faction": null,
@@ -7339,7 +7346,7 @@
           "m": "6\"",
           "t": "5",
           "sv": "3+",
-          "w": "2",
+          "w": "3",
           "ld": "6+",
           "oc": "1",
           "showName": true
@@ -7412,12 +7419,12 @@
           "profiles": [
             {
               "name": {
-                "en": "Close combat weapon"
+                "en": "Close Combat Weapon"
               },
               "range": "Melee",
               "attacks": "3",
               "skill": "3+",
-              "strength": "4",
+              "strength": "5",
               "ap": "0",
               "damage": "1",
               "keywords": []
@@ -7487,7 +7494,7 @@
       },
       "points": [
         {
-          "cost": "145",
+          "cost": "160",
           "models": "6",
           "keyword": null,
           "faction": null,
@@ -7508,7 +7515,7 @@
             },
             {
               "name": {
-                "en": "Close combat weapon"
+                "en": "Close Combat Weapon"
               },
               "cost": "0"
             }
@@ -7527,7 +7534,7 @@
             },
             {
               "name": {
-                "en": "Close combat weapon"
+                "en": "Close Combat Weapon"
               },
               "cost": "0"
             }
@@ -7660,8 +7667,8 @@
               "range": "12\"",
               "attacks": "1",
               "skill": "3+",
-              "strength": "4",
-              "ap": "0",
+              "strength": "5",
+              "ap": "-1",
               "damage": "1",
               "keywords": ["Pistol"]
             }
@@ -7929,8 +7936,8 @@
               "range": "24\"",
               "attacks": "2",
               "skill": "3+",
-              "strength": "4",
-              "ap": "0",
+              "strength": "5",
+              "ap": "-1",
               "damage": "1",
               "keywords": ["Precision"]
             }
@@ -7973,8 +7980,8 @@
               "range": "12\"",
               "attacks": "1",
               "skill": "3+",
-              "strength": "4",
-              "ap": "0",
+              "strength": "5",
+              "ap": "-1",
               "damage": "1",
               "keywords": ["Precision", "Pistol"]
             }
@@ -8014,12 +8021,12 @@
           "profiles": [
             {
               "name": {
-                "en": "Close combat weapon"
+                "en": "Close Combat Weapon"
               },
               "range": "Melee",
               "attacks": "3",
               "skill": "3+",
-              "strength": "4",
+              "strength": "5",
               "ap": "0",
               "damage": "1",
               "keywords": []
@@ -8131,14 +8138,14 @@
       },
       "points": [
         {
-          "cost": "160",
+          "cost": "170",
           "models": "10",
           "keyword": null,
           "faction": null,
           "detachment": null
         },
         {
-          "cost": "80",
+          "cost": "85",
           "models": "5",
           "keyword": null,
           "faction": null,
@@ -8178,7 +8185,7 @@
             },
             {
               "name": {
-                "en": "Close combat weapon"
+                "en": "Close Combat Weapon"
               },
               "cost": "0"
             }

@@ -1,0 +1,330 @@
+Dark Angels datasheet updates
+
+**Dark Angels**
+- Lion El'Jonson: added
+- Lion El’Jonson: removed
+- Asmodai: increased points (70→80)
+- Asmodai: increased Toughness (4→5)
+- Asmodai: gained "Heavy Bolt Pistol" ranged weapon
+- Asmodai: removed "Heavy bolt pistol" ranged weapon
+- Asmodai: gained "Heavy Bolt Pistol" wargear option at 0 pts
+- Asmodai: gained "Crozius Arcanum and Power Weapon" wargear option at 0 pts
+- Asmodai: removed "Heavy bolt pistol" wargear option
+- Asmodai: removed "Crozius arcanum and power weapon" wargear option
+- Asmodai: gained "Crozius Arcanum and Power Weapon – Strike" melee weapon
+- Asmodai: gained "Crozius Arcanum and Power Weapon – Sweep" melee weapon
+- Asmodai: removed "Crozius arcanum and power weapon – Strike" melee weapon
+- Asmodai: removed "Crozius arcanum and power weapon – Sweep" melee weapon
+- Asmodai: gained "Combat Doctrines" faction ability
+- Asmodai: gained "Transhuman Strategist" faction ability
+- Asmodai: removed "Oath of Moment" faction ability
+- Asmodai: updated "Feared Interrogator" ability
+- Asmodai: updated "Exemplar of Hate" ability
+- Asmodai: gained "Explosives" keyword
+- Asmodai: removed "Grenades" keyword
+- Asmodai: removed "Asmodai" keyword
+- Asmodai: can no longer be attached to Tactical Squad (Leader)
+- Asmodai: updated unit composition
+- Asmodai: updated loadout
+- Asmodai: updated lore
+- Asmodai: updated leader
+- Azrael: increased points (140→150)
+- Azrael: increased Toughness (4→5)
+- Azrael: gained "Lion's Wrath" ranged weapon
+- Azrael: removed "Lion’s Wrath" ranged weapon
+- Azrael: gained "Lion's Wrath" wargear option at 0 pts
+- Azrael: removed "Lion’s Wrath" wargear option
+- Azrael: updated "The Sword of Secrets" (gained [DEVASTATING WOUNDS] keyword; removed [Devastating Wounds] keyword)
+- Azrael: gained "Combat Doctrines" faction ability
+- Azrael: gained "Transhuman Strategist" faction ability
+- Azrael: removed "Oath of Moment" faction ability
+- Azrael: updated "Masterful Tactician" ability
+- Azrael: gained "Watcher in the Dark (Once per battle, per unit)" ability
+- Azrael: updated "Supreme Grand Master" ability
+- Azrael: updated "The Lion Helm" wargear ability
+- Azrael: gained "Explosives" keyword
+- Azrael: removed "Grenades" keyword
+- Azrael: removed "Azrael" keyword
+- Azrael: can now be attached to Company Heroes (Leader)
+- Azrael: can no longer be attached to Tactical Squad (Leader)
+- Azrael: updated unit composition
+- Azrael: updated loadout
+- Azrael: updated lore
+- Azrael: updated leader
+- Belial: increased points (75→100)
+- Belial: increased Toughness (5→6)
+- Belial: gained "Master-crafted Storm Bolter" ranged weapon
+- Belial: removed "Master-crafted storm bolter" ranged weapon
+- Belial: gained "Master-crafted Storm Bolter" wargear option at 0 pts
+- Belial: removed "Master-crafted storm bolter" wargear option
+- Belial: updated "The Sword of Silence" (AP: -2→-3; removed [Precision] keyword)
+- Belial: gained "Combat Doctrines" faction ability
+- Belial: gained "Transhuman Strategist" faction ability
+- Belial: removed "Oath of Moment" faction ability
+- Belial: updated "Grand Master of the Deathwing" ability
+- Belial: updated "Strikes of Retribution" ability
+- Belial: removed "Belial" keyword
+- Belial: can no longer be attached to Terminator Assault Squad (Leader)
+- Belial: updated unit composition
+- Belial: updated loadout
+- Belial: updated lore
+- Belial: updated leader
+- Deathwing Knights: increased points (240→255)
+- Deathwing Knights: increased Toughness (5→6)
+- Deathwing Knights: gained "Great Weapon of the Unforgiven" wargear option at 0 pts
+- Deathwing Knights: gained "Mace of Absolution" wargear option at 0 pts
+- Deathwing Knights: removed "Great weapon of the Unforgiven" wargear option
+- Deathwing Knights: removed "Mace of absolution" wargear option
+- Deathwing Knights: updated wargear option instructions
+- Deathwing Knights: gained "Relic Weapon" wargear option at 0 pts
+- Deathwing Knights: gained "Power Weapon" wargear option at 0 pts
+- Deathwing Knights: removed "Relic weapon" wargear option
+- Deathwing Knights: removed "Power weapon" wargear option
+- Deathwing Knights: gained "Relic Weapon" melee weapon
+- Deathwing Knights: gained "Power Weapon" melee weapon
+- Deathwing Knights: gained "Great Weapon of the Unforgiven" melee weapon
+- Deathwing Knights: gained "Mace of Absolution" melee weapon
+- Deathwing Knights: removed "Great weapon of the Unforgiven" melee weapon
+- Deathwing Knights: removed "Power weapon" melee weapon
+- Deathwing Knights: removed "Relic weapon" melee weapon
+- Deathwing Knights: removed "Mace of absolution" melee weapon
+- Deathwing Knights: gained "Combat Doctrines" faction ability
+- Deathwing Knights: removed "Oath of Moment" faction ability
+- Deathwing Knights: updated "Inner Circle" ability
+- Deathwing Knights: gained "Teleport Homer (Once per battle, per unit)" ability
+- Deathwing Knights: removed "Teleport Homer" ability
+- Deathwing Knights: removed "Attached Unit" ability
+- Deathwing Knights: removed "Deathwing Knights" keyword
+- Deathwing Knights: updated unit composition
+- Deathwing Knights: updated loadout
+- Deathwing Knights: updated lore
+- Deathwing Terminator Squad: increased points (330→380, 165→190)
+- Deathwing Terminator Squad: added additional selection cost (+40 pts)
+- Deathwing Terminator Squad: increased Toughness (5→6)
+- Deathwing Terminator Squad: gained "Plasma Cannon – Standard" ranged weapon
+- Deathwing Terminator Squad: gained "Plasma Cannon – Supercharge" ranged weapon
+- Deathwing Terminator Squad: gained "Storm Bolter" ranged weapon
+- Deathwing Terminator Squad: gained "Heavy Flamer" ranged weapon
+- Deathwing Terminator Squad: updated "Assault Cannon" (AP: 0→-2; gained [SUSTAINED HITS 1] keyword; removed [Devastating Wounds] keyword)
+- Deathwing Terminator Squad: gained "Cyclone Missile Launcher – Frag" ranged weapon
+- Deathwing Terminator Squad: gained "Cyclone Missile Launcher – Krak" ranged weapon
+- Deathwing Terminator Squad: removed "Storm bolter" ranged weapon
+- Deathwing Terminator Squad: removed "Heavy flamer" ranged weapon
+- Deathwing Terminator Squad: removed "Cyclone missile launcher – Krak" ranged weapon
+- Deathwing Terminator Squad: removed "Cyclone missile launcher – Frag" ranged weapon
+- Deathwing Terminator Squad: removed "Plasma cannon – Standard" ranged weapon
+- Deathwing Terminator Squad: removed "Plasma cannon – Supercharge" ranged weapon
+- Deathwing Terminator Squad: gained "Storm Bolter" wargear option at 0 pts
+- Deathwing Terminator Squad: gained "Power Fist" wargear option at 0 pts
+- Deathwing Terminator Squad: removed "Storm bolter" wargear option
+- Deathwing Terminator Squad: removed "Power weapon" wargear option
+- Deathwing Terminator Squad: removed "Power fist" wargear option
+- Deathwing Terminator Squad: updated wargear option instructions
+- Deathwing Terminator Squad: gained "Power Weapon" wargear option at 0 pts
+- Deathwing Terminator Squad: gained "Chainfist" wargear option at 0 pts
+- Deathwing Terminator Squad: gained "Assault Cannon" wargear option at 0 pts
+- Deathwing Terminator Squad: gained "Heavy Flamer" wargear option at 0 pts
+- Deathwing Terminator Squad: gained "Plasma Cannon" wargear option at 0 pts
+- Deathwing Terminator Squad: gained "Cyclone Missile Launcher" wargear option at 10 pts
+- Deathwing Terminator Squad: removed "Assault cannon" wargear option
+- Deathwing Terminator Squad: removed "Heavy flamer" wargear option
+- Deathwing Terminator Squad: removed "Plasma cannon" wargear option
+- Deathwing Terminator Squad: removed "Storm bolter" wargear option
+- Deathwing Terminator Squad: removed "Cyclone missile launcher" wargear option
+- Deathwing Terminator Squad: gained "Power Weapon" melee weapon
+- Deathwing Terminator Squad: gained "Power Fist" melee weapon
+- Deathwing Terminator Squad: updated "Chainfist" (BS/WS: 4+→3+; Strength: 8→12; Damage: 2→3; removed [Anti-vehicle 3+] keyword)
+- Deathwing Terminator Squad: removed "Power fist" melee weapon
+- Deathwing Terminator Squad: removed "Power weapon" melee weapon
+- Deathwing Terminator Squad: gained "Combat Doctrines" faction ability
+- Deathwing Terminator Squad: removed "Oath of Moment" faction ability
+- Deathwing Terminator Squad: updated "Deathwing" ability
+- Deathwing Terminator Squad: removed "Teleport Homer" ability
+- Deathwing Terminator Squad: removed "Attached Unit" ability
+- Deathwing Terminator Squad: removed "Deathwing Terminator Squad" keyword
+- Deathwing Terminator Squad: updated unit composition
+- Deathwing Terminator Squad: updated loadout
+- Deathwing Terminator Squad: updated lore
+- Ezekiel: increased points (75→110)
+- Ezekiel: increased Toughness (4→5)
+- Ezekiel: increased Wounds (4→5)
+- Ezekiel: gained "Mind Wipe – Focused Witchfire" ranged weapon
+- Ezekiel: updated "Mind Wipe – Witchfire" (gained [PSYCHIC, PRECISION, DEVASTATING WOUNDS, CLOSE-QUARTERS] keywords; removed [Psychic, Precision, Devastating Wounds] keywords)
+- Ezekiel: updated "The Deliverer" (Strength: 4→5; gained [PRECISION, CLOSE-QUARTERS] keywords; removed [Precision, Pistol] keywords)
+- Ezekiel: removed "Mind Wipe – Focused witchfire" ranged weapon
+- Ezekiel: gained "Traitor's Bane" wargear option at 0 pts
+- Ezekiel: removed "Traitor’s Bane" wargear option
+- Ezekiel: removed "Book of Salvation" wargear option
+- Ezekiel: gained "Traitor's Bane" melee weapon
+- Ezekiel: removed "Traitor’s Bane" melee weapon
+- Ezekiel: gained "Combat Doctrines" faction ability
+- Ezekiel: removed "Oath of Moment" faction ability
+- Ezekiel: updated "Psychic Hood" ability
+- Ezekiel: gained "Book of Salvation" ability
+- Ezekiel: gained "Chief Librarian (psyker level 3)" ability
+- Ezekiel: removed "Engulfing Fear" ability
+- Ezekiel: removed "Book of Salvation" wargear ability
+- Ezekiel: gained "Explosives" keyword
+- Ezekiel: gained "Tacticus" keyword
+- Ezekiel: removed "Grenades" keyword
+- Ezekiel: removed "Ezekiel" keyword
+- Ezekiel: can no longer be attached to Tactical Squad (Leader)
+- Ezekiel: updated unit composition
+- Ezekiel: updated loadout
+- Ezekiel: updated lore
+- Ezekiel: updated leader
+- Inner Circle Companions: increased points (160→180, 80→90)
+- Inner Circle Companions: increased additional selection cost (+10→+15)
+- Inner Circle Companions: increased Toughness (4→5)
+- Inner Circle Companions: gained "Heavy Bolt Pistol" ranged weapon
+- Inner Circle Companions: removed "Heavy bolt pistol" ranged weapon
+- Inner Circle Companions: gained "Heavy Bolt Pistol" wargear option at 0 pts
+- Inner Circle Companions: gained "Calibanite Greatsword" wargear option at 0 pts
+- Inner Circle Companions: removed "Heavy bolt pistol" wargear option
+- Inner Circle Companions: removed "Calibanite greatsword" wargear option
+- Inner Circle Companions: gained "Calibanite Greatsword – Strike" melee weapon
+- Inner Circle Companions: gained "Calibanite Greatsword – Sweep" melee weapon
+- Inner Circle Companions: removed "Calibanite greatsword – Strike" melee weapon
+- Inner Circle Companions: removed "Calibanite greatsword – Sweep" melee weapon
+- Inner Circle Companions: gained "Combat Doctrines" faction ability
+- Inner Circle Companions: removed "Oath of Moment" faction ability
+- Inner Circle Companions: updated "Braziers of Judgement" ability
+- Inner Circle Companions: gained "Emnity for the Unworthy" ability
+- Inner Circle Companions: removed "Enmity for the Unworthy" ability
+- Inner Circle Companions: removed "Attached Unit" ability
+- Inner Circle Companions: removed "Inner Circle Companions" keyword
+- Inner Circle Companions: updated unit composition
+- Inner Circle Companions: updated loadout
+- Inner Circle Companions: updated lore
+- Land Speeder Vengeance: increased points (130→150)
+- Land Speeder Vengeance: increased Toughness (8→9)
+- Land Speeder Vengeance: increased Wounds (10→11)
+- Land Speeder Vengeance: updated "Assault Cannon" (AP: 0→-2; gained [SUSTAINED HITS 1] keyword; removed [Devastating Wounds] keyword)
+- Land Speeder Vengeance: gained "Heavy Bolter" ranged weapon
+- Land Speeder Vengeance: gained "Plasma Storm Battery – Standard" ranged weapon
+- Land Speeder Vengeance: gained "Plasma Storm Battery – Supercharge" ranged weapon
+- Land Speeder Vengeance: removed "Heavy bolter" ranged weapon
+- Land Speeder Vengeance: removed "Plasma storm battery – Standard" ranged weapon
+- Land Speeder Vengeance: removed "Plasma storm battery – Supercharge" ranged weapon
+- Land Speeder Vengeance: gained "Heavy Bolter" wargear option at 0 pts
+- Land Speeder Vengeance: gained "Plasma Storm Battery" wargear option at 0 pts
+- Land Speeder Vengeance: gained "Armoured Hull" wargear option at 0 pts
+- Land Speeder Vengeance: removed "Heavy bolter" wargear option
+- Land Speeder Vengeance: removed "Plasma storm battery" wargear option
+- Land Speeder Vengeance: removed "Close combat weapon" wargear option
+- Land Speeder Vengeance: gained "Assault Cannon" wargear option at 0 pts
+- Land Speeder Vengeance: removed "Assault cannon" wargear option
+- Land Speeder Vengeance: gained "Armoured Hull" melee weapon
+- Land Speeder Vengeance: removed "Close combat weapon" melee weapon
+- Land Speeder Vengeance: gained "Combat Doctrines" faction ability
+- Land Speeder Vengeance: removed "Oath of Moment" faction ability
+- Land Speeder Vengeance: gained "Deep Strike" core ability
+- Land Speeder Vengeance: gained "Storm of Vengeance (Once per turn, per unit)" ability
+- Land Speeder Vengeance: removed "Storm of Vengeance" ability
+- Land Speeder Vengeance: gained "Speeder" keyword
+- Land Speeder Vengeance: removed "Land Speeder Vengeance" keyword
+- Land Speeder Vengeance: updated unit composition
+- Land Speeder Vengeance: updated loadout
+- Land Speeder Vengeance: updated lore
+- Lazarus: increased points (70→80)
+- Lazarus: increased Toughness (4→5)
+- Lazarus: updated "Bolt Pistol" (Strength: 4→5; AP: 0→-1; gained [CLOSE-QUARTERS] keyword; removed [Pistol] keyword)
+- Lazarus: gained "Enmity's Edge" wargear option at 0 pts
+- Lazarus: removed "Enmity’s Edge" wargear option
+- Lazarus: gained "Enmity's Edge" melee weapon
+- Lazarus: removed "Enmity’s Edge" melee weapon
+- Lazarus: gained "Combat Doctrines" faction ability
+- Lazarus: gained "Transhuman Strategist" faction ability
+- Lazarus: removed "Oath of Moment" faction ability
+- Lazarus: updated "The Spiritshield Helm" ability
+- Lazarus: updated "Intractable Will" ability
+- Lazarus: gained "Explosives" keyword
+- Lazarus: removed "Grenades" keyword
+- Lazarus: removed "Lazarus" keyword
+- Lazarus: can now be attached to Company Heroes (Leader)
+- Lazarus: can no longer be attached to Tactical Squad (Leader)
+- Lazarus: updated unit composition
+- Lazarus: updated loadout
+- Lazarus: updated lore
+- Lazarus: updated leader
+- Nephilim Jetfighter: increased points (180→200)
+- Nephilim Jetfighter: gained "Blacksword Missiles" ranged weapon
+- Nephilim Jetfighter: gained "Nephilim Lascannons" ranged weapon
+- Nephilim Jetfighter: gained "Avenger Mega Bolter" ranged weapon
+- Nephilim Jetfighter: gained "Twin Heavy Bolter" ranged weapon
+- Nephilim Jetfighter: removed "Blacksword missiles" ranged weapon
+- Nephilim Jetfighter: removed "Nephilim lascannons" ranged weapon
+- Nephilim Jetfighter: removed "Avenger mega bolter" ranged weapon
+- Nephilim Jetfighter: removed "Twin heavy bolter" ranged weapon
+- Nephilim Jetfighter: gained "Avenger Mega Bolter" wargear option at 0 pts
+- Nephilim Jetfighter: gained "Blacksword Missiles" wargear option at 0 pts
+- Nephilim Jetfighter: gained "Twin Heavy Bolter" wargear option at 0 pts
+- Nephilim Jetfighter: gained "Armoured Hull" wargear option at 0 pts
+- Nephilim Jetfighter: removed "Avenger mega bolter" wargear option
+- Nephilim Jetfighter: removed "Blacksword missiles" wargear option
+- Nephilim Jetfighter: removed "Twin heavy bolter" wargear option
+- Nephilim Jetfighter: removed "Armoured hull" wargear option
+- Nephilim Jetfighter: gained "Nephilim Lascannons" wargear option at 0 pts
+- Nephilim Jetfighter: removed "Nephilim lascannons" wargear option
+- Nephilim Jetfighter: gained "Armoured Hull" melee weapon
+- Nephilim Jetfighter: removed "Armoured hull" melee weapon
+- Nephilim Jetfighter: gained "Combat Doctrines" faction ability
+- Nephilim Jetfighter: removed "Oath of Moment" faction ability
+- Nephilim Jetfighter: gained "Damaged 3" core ability
+- Nephilim Jetfighter: updated "Lightning-fast Manoeuvres" ability
+- Nephilim Jetfighter: updated damaged profile
+- Nephilim Jetfighter: removed "Nephilim Jetfighter" keyword
+- Nephilim Jetfighter: updated unit composition
+- Nephilim Jetfighter: updated loadout
+- Nephilim Jetfighter: updated lore
+- Ravenwing Black Knights: increased points (150→170, 75→85)
+- Ravenwing Black Knights: increased Toughness (5→6)
+- Ravenwing Black Knights: gained "Grenade Launcher – Frag" ranged weapon
+- Ravenwing Black Knights: gained "Grenade Launcher – Krak" ranged weapon
+- Ravenwing Black Knights: gained "Bolt Pistol" ranged weapon
+- Ravenwing Black Knights: gained "Plasma Talon – Standard" ranged weapon
+- Ravenwing Black Knights: gained "Plasma Talon – Supercharge" ranged weapon
+- Ravenwing Black Knights: removed "Bolt pistol" ranged weapon
+- Ravenwing Black Knights: removed "Plasma talon – Standard" ranged weapon
+- Ravenwing Black Knights: removed "Plasma talon – Supercharge" ranged weapon
+- Ravenwing Black Knights: removed "Astartes grenade launcher – Krak" ranged weapon
+- Ravenwing Black Knights: removed "Astartes grenade launcher – Frag" ranged weapon
+- Ravenwing Black Knights: gained "Bolt Pistol" wargear option at 0 pts
+- Ravenwing Black Knights: gained "Plasma Talon" wargear option at 0 pts
+- Ravenwing Black Knights: gained "Corvus Hammers" wargear option at 0 pts
+- Ravenwing Black Knights: removed "Bolt pistol" wargear option
+- Ravenwing Black Knights: removed "Plasma talon" wargear option
+- Ravenwing Black Knights: removed "Black Knight combat weapon" wargear option
+- Ravenwing Black Knights: gained "Grenade Launcher" wargear option at 0 pts
+- Ravenwing Black Knights: removed "Astartes grenade launcher" wargear option
+- Ravenwing Black Knights: gained "Corvus Hammers" melee weapon
+- Ravenwing Black Knights: removed "Black Knight combat weapon" melee weapon
+- Ravenwing Black Knights: gained "Combat Doctrines" faction ability
+- Ravenwing Black Knights: removed "Oath of Moment" faction ability
+- Ravenwing Black Knights: updated "Knights of Caliban" ability
+- Ravenwing Black Knights: removed "Attached Unit" ability
+- Ravenwing Black Knights: gained "Explosives" keyword
+- Ravenwing Black Knights: removed "Grenades" keyword
+- Ravenwing Black Knights: removed "Ravenwing Black Knights" keyword
+- Ravenwing Black Knights: updated unit composition
+- Ravenwing Black Knights: updated loadout
+- Ravenwing Black Knights: updated lore
+- Ravenwing Command Squad: increased points (105→115)
+- Ravenwing Command Squad: increased additional selection cost (+10→+20)
+- Ravenwing Command Squad: increased Toughness (5→6)
+- Ravenwing Command Squad: gained "Bolt Pistol" ranged weapon
+- Ravenwing Command Squad: gained "Plasma Talon – Standard" ranged weapon
+- Ravenwing Command Squad: gained "Plasma Talon – Supercharge" ranged weapon
+- Ravenwing Command Squad: gained "Grenade Launcher – Frag" ranged weapon
+- Ravenwing Command Squad: gained "Grenade Launcher – Krak" ranged weapon
+- Ravenwing Command Squad: removed "Bolt pistol" ranged weapon
+- Ravenwing Command Squad: removed "Plasma talon – Standard" ranged weapon
+- Ravenwing Command Squad: removed "Plasma talon – Supercharge" ranged weapon
+- Ravenwing Command Squad: removed "Astartes grenade launcher – Krak" ranged weapon
+- Ravenwing Command Squad: removed "Astartes grenade launcher – Frag" ranged weapon
+- Ravenwing Command Squad: gained "Bolt Pistol" wargear option at 0 pts
+- Ravenwing Command Squad: gained "Plasma Talon" wargear option at 0 pts
+- Ravenwing Command Squad: gained "Master-crafted Power Weapon" wargear option at 0 pts
+- Ravenwing Command Squad: gained "Corvus Hammers" wargear option at 0 pts
+- Ravenwing Command Squad: removed "Bolt pistol" wargear option
+- Ravenwing Command Squad: removed "Plasma talon" wargear option

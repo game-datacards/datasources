@@ -6,8 +6,8 @@
     "banner": "#202224",
     "header": "#393940"
   },
-  "compatibleDataVersion": 946,
-  "updated": "2026-09-02T09:15:27.971Z",
+  "compatibleDataVersion": 963,
+  "updated": "2026-09-30T09:24:34.487Z",
   "parent_id": null,
   "parent_name": null,
   "rules": {
@@ -1482,25 +1482,25 @@
       "source": "40k-11e"
     },
     {
-      "id": "1f7aff80-0e3d-56d6-8316-5000853d9ff3",
+      "id": "c22e59b9-e4b1-5ca6-99e4-6b8634cfdec6",
       "name": {
-        "en": "Thieves of Pain"
+        "en": "Rapturous Agony"
       },
       "cost": 1,
       "turn": "either",
       "type": "Strategic Ploy",
-      "phase": ["any"],
+      "phase": ["charge", "command", "fight", "movement", "shooting"],
       "target": {
         "en": "That **LEGIONES DAEMONICA SLAANESH** unit."
       },
       "when": {
-        "en": "Any phase, when an enemy unit targets a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTER/VEHICLE** units), or when a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTER/VEHICLE** units) suffers a **mortal wound**."
+        "en": "Your opponent’s Shooting phase or the Fight phase, when an enemy unit targets a friendly **LEGIONES DAEMONICA SLAANESH** unit (excluding **MONSTER/VEHICLE** units)."
       },
       "effect": {
-        "en": "Select one other friendly **LEGIONES DAEMONICA SLAANESH** unit that is within 9\" of and visible to your unit. Until the end of the phase, while the selected unit is on the battlefield, each time a model in your unit would lose a wound, inflict 1 mortal wound on the selected unit instead."
+        "en": "Attacks that target your unit with a **S** greater than your unit’s **T** have -1 to wound rolls."
       },
       "fluff": {
-        "en": "To exist, however fleetingly, in realspace is an opportunity to indulge in every physical sensation. So enraptured do the daemons of Slaanesh become that they even steal one another’s agonies to enjoy."
+        "en": "Those made from the essence of Slaanesh revel in every sensation, from blissful euphoria to agonising pain. Even a devastating wound is seen as a gift to be savoured by the daemons of the Dark Prince."
       },
       "faction_id": "40a70c91-675a-4ac5-aa97-daedb9cb6f11",
       "detachment": "Legion of Excess",
@@ -1524,7 +1524,7 @@
         "en": "Your Command phase."
       },
       "effect": {
-        "en": "Each unit on the battlefield that is within your army’s Shadow of Chaos must take a Battle‑shock test, subtracting 1 from that test if they are Below Half‑strength.\n\n**Designer’s Note**: *This Stratagem forces all friendly and enemy units alike within your army’s Shadow of Chaos to take a Battle‑shock test. This can allow a Chaos Daemons player to heal units from their army through the Daemonic Terror army rule, at the risk of causing some of their own units to become Battle‑shocked.*"
+        "en": "Each unit on the battlefield that is within your army’s Shadow of Chaos must take a Battle‑shock test, subtracting 1 from that test if they are Below Half‑strength.\n\n**Designer’s Note**: *This Stratagem forces all friendly and enemy units alike within your army’s Shadow of Chaos to take a Battle‑shock test. This can allow a Chaos Daemons player to heal units from their army through the Daemonic Manifestation army rule, at the risk of causing some of their own units to become Battle‑shocked.*"
       },
       "fluff": {
         "en": "This entity causes the battlefield to flicker wildly between the debauched Slaaneshi Warp interstice and the most brutally mundane reality, faster than even supernatural senses can perceive. The result is a psychically devastating barrage of excess and deprivation."
@@ -1613,68 +1613,6 @@
       "faction_id": "40a70c91-675a-4ac5-aa97-daedb9cb6f11",
       "detachment": "Plague Legion",
       "detachment_id": "778d3486-9f71-4253-90b9-c7ca150fc011",
-      "detachment_faction": "Legiones Daemonica",
-      "source": "40k-11e"
-    },
-    {
-      "id": "810d5f80-dc70-51af-8212-7ef0abd09053",
-      "name": {
-        "en": "From Beyond the Veil",
-        "de": "Von jenseits des Schleiers",
-        "es": "De más allá del Velo",
-        "fr": "Par-delà le Voile",
-        "it": "Da Oltre il Velo",
-        "ja": "帳からの襲来",
-        "ko": "장막 너머로부터",
-        "zh": "来自现实之外"
-      },
-      "cost": 1,
-      "turn": "your",
-      "type": "",
-      "phase": ["movement"],
-      "target": {
-        "en": "One friendly <k>Legiones Daemonica Mounted</k> unit in <b>strategic reserves</b>.",
-        "de": "Eine befreundete <k>berittene Legiones</k>-<k>Daemonica</k>-Einheit in <b>strategischer Reserve</b>",
-        "es": "1 unidad <k>Montada Legiones Daemónicas</k> amiga que esté en la <b>reserva estratégica</b>.",
-        "fr": "Une unité <k>montée</k> des <k>Legiones Daemonica</k> amie en <b>réserve stratégique</b>.",
-        "it": "Un’unità <k>In Sella</k> delle <k>Legiones Daemonica</k> amica nelle <b>riserve strategiche</b>.",
-        "ja": "<b>戦略的予備戦力</b>に配置されている味方<k>レギオネス・ディーモニカ・騎乗</k>・ユニット1個。",
-        "ko": "<b>전략 예비대</b>에 편성된 아군 <k>레기오네스 데모니카</k> 기승 유닛 하나.",
-        "zh": "一个位于<b>战略预备队</b>中的己方<k>逆理魔军骑乘</k>单位。"
-      },
-      "when": {
-        "en": "End of the Movement phase, from the start of the battle.",
-        "de": "Ende der Bewegungsphase, ab Beginn der Schlacht",
-        "es": "Al final de la fase de movimiento, desde el inicio de la batalla.",
-        "fr": "À la fin de la phase de Mouvement, à partir du début de la bataille.",
-        "it": "Alla fine della fase di Movimento, dall’inizio della battaglia.",
-        "ja": "バトル開始以降、移動フェイズ終了時。",
-        "ko": "전투 시작부터 이동 페이즈 종료 시.",
-        "zh": "从战斗开始，移动阶段结束时。"
-      },
-      "effect": {
-        "en": "Your unit can make an <b>ingress move</b>.",
-        "de": "Deine Einheit kann eine <b>Einsatzbewegung</b> ausführen.",
-        "es": "Tu unidad hace un <b>movimiento de inserción</b>.",
-        "fr": "Votre unité peut faire un <b>mouvement d’arrivée</b>.",
-        "it": "La tua unità può effettuare un <b>movimento di inserzione</b>.",
-        "ja": "その自軍ユニットは<b>突入移動</b>を行える。",
-        "ko": "이 유닛이 <b>진입 이동</b>을 수행할 수 있습니다.",
-        "zh": "您的单位可以进行一次<b>入场移动</b>。"
-      },
-      "fluff": {
-        "en": "Erupting from a rippling warp portal, the cavalry of the Chaos Gods fall upon their shocked foes as though manifesting from nowhere.",
-        "de": "Die Kavallerie der Chaosgötter galoppiert wie aus dem Nichts aus einem tosenden Warpportal hervor und fällt über ihre verängstigten Feinde her.",
-        "es": "Surgiendo de un portal disforme ondulante, la caballería de los Dioses del Caos cae sobre sus atónitos enemigos como si surgiera de la nada.",
-        "fr": "Surgissant d’un portail warp ondulant, la cavalerie des Dieux du Chaos s’abat sur des ennemis stupéfaits comme si elle sortait ne nulle part.",
-        "it": "La cavalleria degli Dei del Caos emerge da uno sfrigolante portale warp e si abbatte sui nemici sorpresi come se apparisse dal nulla.",
-        "ja": "ざわめく〈歪み〉の門から涌き出る渾沌神の騎兵は、無から現れたかのごとく、驚き戸惑う敵を急襲する。",
-        "ko": "파문이 이는 워프 차원문에서 카오스 신의 기병대가 뛰쳐나와 넋이 나간 상대를 집어삼킨다.",
-        "zh": "仿佛无中生有，混沌诸神的骑兵部队从闪烁的传送门中冲出，向震惊的敌人发起进攻。"
-      },
-      "faction_id": "40a70c91-675a-4ac5-aa97-daedb9cb6f11",
-      "detachment": "Cavalcade of Chaos",
-      "detachment_id": "b3ac1391-84a9-4f8b-8755-d75eccfa5b70",
       "detachment_faction": "Legiones Daemonica",
       "source": "40k-11e"
     },
@@ -2175,9 +2113,9 @@
       "source": "40k-11e"
     },
     {
-      "id": "b250feda-dc31-5457-93cb-371fdc903f7c",
+      "id": "0d2b9b7f-4445-5c1c-ad65-b93895bc0636",
       "name": {
-        "en": "skirling magicks",
+        "en": "Skirling Magicks",
         "de": "Schrilles Hexenwerk",
         "es": "Magias revoloteantes",
         "fr": "Magie Stridente",
@@ -2233,6 +2171,68 @@
       "faction_id": "40a70c91-675a-4ac5-aa97-daedb9cb6f11",
       "detachment": "Lords of the Warp",
       "detachment_id": "fe916344-deef-4c81-99ed-2adae0a8c296",
+      "detachment_faction": "Legiones Daemonica",
+      "source": "40k-11e"
+    },
+    {
+      "id": "810d5f80-dc70-51af-8212-7ef0abd09053",
+      "name": {
+        "en": "From Beyond the Veil",
+        "de": "Von jenseits des Schleiers",
+        "es": "De más allá del Velo",
+        "fr": "Par-delà le Voile",
+        "it": "Da Oltre il Velo",
+        "ja": "帳からの襲来",
+        "ko": "장막 너머로부터",
+        "zh": "来自现实之外"
+      },
+      "cost": 2,
+      "turn": "your",
+      "type": "",
+      "phase": ["movement"],
+      "target": {
+        "en": "One friendly <k>Legiones Daemonica Mounted</k> unit in <b>strategic reserves</b>.",
+        "de": "Eine befreundete <k>berittene Legiones</k>-<k>Daemonica</k>-Einheit in <b>strategischer Reserve</b>",
+        "es": "1 unidad <k>Montada Legiones Daemónicas</k> amiga que esté en la <b>reserva estratégica</b>.",
+        "fr": "Une unité <k>montée</k> des <k>Legiones Daemonica</k> amie en <b>réserve stratégique</b>.",
+        "it": "Un’unità <k>In Sella</k> delle <k>Legiones Daemonica</k> amica nelle <b>riserve strategiche</b>.",
+        "ja": "<b>戦略的予備戦力</b>に配置されている味方<k>レギオネス・ディーモニカ・騎乗</k>・ユニット1個。",
+        "ko": "<b>전략 예비대</b>에 편성된 아군 <k>레기오네스 데모니카</k> 기승 유닛 하나.",
+        "zh": "一个位于<b>战略预备队</b>中的己方<k>逆理魔军骑乘</k>单位。"
+      },
+      "when": {
+        "en": "End of the Movement phase, from the start of the battle.",
+        "de": "Ende der Bewegungsphase, ab Beginn der Schlacht",
+        "es": "Al final de la fase de movimiento, desde el inicio de la batalla.",
+        "fr": "À la fin de la phase de Mouvement, à partir du début de la bataille.",
+        "it": "Alla fine della fase di Movimento, dall’inizio della battaglia.",
+        "ja": "バトル開始以降、移動フェイズ終了時。",
+        "ko": "전투 시작부터 이동 페이즈 종료 시.",
+        "zh": "从战斗开始，移动阶段结束时。"
+      },
+      "effect": {
+        "en": "Your unit can make an <b>ingress move</b>.",
+        "de": "Deine Einheit kann eine <b>Einsatzbewegung</b> ausführen.",
+        "es": "Tu unidad hace un <b>movimiento de inserción</b>.",
+        "fr": "Votre unité peut faire un <b>mouvement d’arrivée</b>.",
+        "it": "La tua unità può effettuare un <b>movimento di inserzione</b>.",
+        "ja": "その自軍ユニットは<b>突入移動</b>を行える。",
+        "ko": "이 유닛이 <b>진입 이동</b>을 수행할 수 있습니다.",
+        "zh": "您的单位可以进行一次<b>入场移动</b>。"
+      },
+      "fluff": {
+        "en": "Erupting from a rippling warp portal, the cavalry of the Chaos Gods fall upon their shocked foes as though manifesting from nowhere.",
+        "de": "Die Kavallerie der Chaosgötter galoppiert wie aus dem Nichts aus einem tosenden Warpportal hervor und fällt über ihre verängstigten Feinde her.",
+        "es": "Surgiendo de un portal disforme ondulante, la caballería de los Dioses del Caos cae sobre sus atónitos enemigos como si surgiera de la nada.",
+        "fr": "Surgissant d’un portail warp ondulant, la cavalerie des Dieux du Chaos s’abat sur des ennemis stupéfaits comme si elle sortait ne nulle part.",
+        "it": "La cavalleria degli Dei del Caos emerge da uno sfrigolante portale warp e si abbatte sui nemici sorpresi come se apparisse dal nulla.",
+        "ja": "ざわめく〈歪み〉の門から涌き出る渾沌神の騎兵は、無から現れたかのごとく、驚き戸惑う敵を急襲する。",
+        "ko": "파문이 이는 워프 차원문에서 카오스 신의 기병대가 뛰쳐나와 넋이 나간 상대를 집어삼킨다.",
+        "zh": "仿佛无中生有，混沌诸神的骑兵部队从闪烁的传送门中冲出，向震惊的敌人发起进攻。"
+      },
+      "faction_id": "40a70c91-675a-4ac5-aa97-daedb9cb6f11",
+      "detachment": "Cavalcade of Chaos",
+      "detachment_id": "b3ac1391-84a9-4f8b-8755-d75eccfa5b70",
       "detachment_faction": "Legiones Daemonica",
       "source": "40k-11e"
     }
@@ -3516,7 +3516,7 @@
       },
       "points": [
         {
-          "cost": "200",
+          "cost": "210",
           "models": "6",
           "keyword": null,
           "faction": null,
@@ -7098,7 +7098,7 @@
         }
       ],
       "additionalCost": {
-        "cost": "15",
+        "cost": "25",
         "afterSelections": 2
       }
     },
@@ -7489,7 +7489,7 @@
           "detachment": null
         },
         {
-          "cost": "75",
+          "cost": "80",
           "models": "5",
           "keyword": null,
           "faction": null,
@@ -12699,7 +12699,7 @@
       },
       "points": [
         {
-          "cost": "315",
+          "cost": "330",
           "models": "1",
           "keyword": null,
           "faction": null,
