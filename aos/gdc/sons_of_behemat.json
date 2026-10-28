@@ -8,8 +8,8 @@
     "banner": "#2a2a1a",
     "header": "#2a2a1a"
   },
-  "updated": "2026-09-23T10:20:11.309Z",
-  "compatibleDataVersion": 483,
+  "updated": "2026-10-28T16:52:02.340Z",
+  "compatibleDataVersion": 488,
   "warscrolls": [
     {
       "id": "f640b6fc-2465-5102-8c0e-263b84b659a9",
@@ -1144,7 +1144,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 490,
+      "points": 400,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -1267,7 +1267,9 @@
       "factionKeywords": [
         "Sons of Behemat",
         "Grand Alliance Destruction",
-        "King Brodd's Stomp"
+        "King Brodd's Stomp",
+        "Matriarch's Mob",
+        "Stomper Tribe"
       ],
       "referenceKeywords": "Monster, Destruction, Sons of Behemat, Little",
       "stats": {
@@ -1279,7 +1281,7 @@
         "wizard": null,
         "priest": null
       },
-      "points": 120,
+      "points": 150,
       "modelCount": 1,
       "cannotBeReinforced": true,
       "isSpearhead": false,
@@ -2063,13 +2065,45 @@
         "unitPool": [
           "Ancient Ghyrochs",
           "Ma Maegran, Chooser Of The Mighty",
+          "Scourge of Aqshy: Mancrusher Gargant",
+          "Scourge of Aqshy: Mancrusher Gargant",
           "Rock-hurlers",
           "Boss-Stompers",
+          "Mancrusher Gargant",
           "Mancrusher Gargant"
         ],
-        "requiredWarscrolls": [],
-        "requiredGeneralWarscrolls": [],
-        "restrictionGroups": [],
+        "requiredWarscrolls": ["Ma Maegran, Chooser Of The Mighty"],
+        "requiredGeneralWarscrolls": ["Ma Maegran, Chooser Of The Mighty"],
+        "restrictionGroups": [
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Mancrusher Gargant",
+              "Scourge of Aqshy: Mancrusher Gargant"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Aqshy: Mancrusher Gargant",
+              "Mancrusher Gargant"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Aqshy: Mancrusher Gargant",
+              "Mancrusher Gargant"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Mancrusher Gargant",
+              "Scourge of Aqshy: Mancrusher Gargant"
+            ]
+          }
+        ],
         "rosterOptions": [],
         "regimentRestrictions": []
       }
@@ -2253,7 +2287,10 @@
           "Rock-hurlers",
           "Boss-Stompers",
           "Mancrusher Gargant",
-          "Warstomper Mega-Gargant"
+          "Warstomper Mega-Gargant",
+          "Scourge of Aqshy: Mancrusher Gargant",
+          "Mancrusher Gargant",
+          "Scourge of Aqshy: Mancrusher Gargant"
         ],
         "requiredWarscrolls": ["Warstomper Mega-Gargant"],
         "requiredGeneralWarscrolls": ["Warstomper Mega-Gargant"],
@@ -2261,6 +2298,34 @@
           {
             "limit": 1,
             "warscrolls": ["Warstomper Mega-Gargant"]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Aqshy: Mancrusher Gargant",
+              "Mancrusher Gargant"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Mancrusher Gargant",
+              "Scourge of Aqshy: Mancrusher Gargant"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Mancrusher Gargant",
+              "Scourge of Aqshy: Mancrusher Gargant"
+            ]
+          },
+          {
+            "limit": 1,
+            "warscrolls": [
+              "Scourge of Aqshy: Mancrusher Gargant",
+              "Mancrusher Gargant"
+            ]
           }
         ],
         "rosterOptions": [],
@@ -2588,7 +2653,7 @@
         "phaseDetails": "Once Per Battle (Army), Any Combat Phase",
         "icon": "offensive",
         "declare": "Pick an enemy unit in combat with this unit to be the target.",
-        "effect": "This unit can make a pile-in move. Then, roll a dice. Add 1 to the roll for cach battle round in which this unit was on the battlefield in both combat phases and did not use any **FIGHT** abilities. On a 6+, inflict 4D6 mortal damage on the target.",
+        "effect": "This unit can make a pile-in move. Then, roll a dice. Add 1 to the roll for each battle round in which this unit was on the battlefield in both combat phases and did not use any **FIGHT** abilities. On a 6+, inflict 4D6 mortal damage on the target.",
         "cpCost": null,
         "keywords": ["Core", "Rampage", "Attack", "Fight"]
       },
