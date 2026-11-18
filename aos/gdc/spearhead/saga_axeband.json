@@ -1,9 +1,9 @@
 {
-  "name": "Spearhead: Fyreslayers",
-  "id": "fc706ffc-7f50-5622-a333-86ad0af2010c",
+  "name": "Spearhead: Khazalite Holds",
+  "id": "a7df6073-b213-576b-9b60-fa951db96251",
   "isSpearhead": true,
-  "faction_id": "FYRESLAYERS",
-  "factionName": "Fyreslayers",
+  "faction_id": "KHAZALITE_HOLDS",
+  "factionName": "Khazalite Holds",
   "warscrolls": [
     {
       "id": "72b358b4-425d-5420-b94b-e9a9c96cc9d5",
@@ -11,10 +11,10 @@
       "subname": null,
       "cardType": "Warscroll",
       "source": "aos-4e",
-      "faction_id": "FYRESLAYERS",
-      "factions": ["Fyreslayers"],
+      "faction_id": "KHAZALITE_HOLDS",
+      "factions": ["Khazalite Holds"],
       "keywords": ["Infantry", "Ward (6+)", "Hero"],
-      "factionKeywords": ["Fyreslayers"],
+      "factionKeywords": ["Khazalite Holds"],
       "referenceKeywords": "Hero, Infantry, Ward (6+)",
       "stats": {
         "move": "4\"",
@@ -77,15 +77,74 @@
       "notes": null
     },
     {
+      "id": "338a396d-a449-5f9d-8886-4ca480f8ebbe",
+      "name": "Clanshields",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHAZALITE_HOLDS",
+      "factions": ["Khazalite Holds"],
+      "keywords": ["Reinforcements", "Infantry"],
+      "factionKeywords": ["Grand Alliance Order", "Khazalite Holds"],
+      "referenceKeywords": "Infantry, Reinforcements",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "1",
+        "health": "1",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 10,
+      "cannotBeReinforced": false,
+      "isSpearhead": true,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Kromdron Weapons",
+            "type": "melee",
+            "range": null,
+            "attacks": "2",
+            "hit": "3+",
+            "wound": "4+",
+            "rend": "-",
+            "damage": "1",
+            "abilities": ["Anti-INFANTRY (+1 Rend)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Tough As Stone",
+          "phase": "defensive",
+          "phaseDetails": "Passive",
+          "icon": "defensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": null,
+          "effect": "Subtract 1 from the Rend characteristic of weapons used for combat attacks that target this unit while every model in this unit is contesting an objective you control.\n\nWhile this unit has any **grudge marks**, instead, subtract 1 from the Rend characteristic of weapons used for attacks that target this uni while this unit is wholly within enemy territory."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "28.5mm",
+      "notes": null
+    },
+    {
       "id": "e477cd23-3058-5a0a-a1d1-686481249fd3",
       "name": "Hearthguard Berzerkers",
       "subname": null,
       "cardType": "Warscroll",
       "source": "aos-4e",
-      "faction_id": "FYRESLAYERS",
-      "factions": ["Fyreslayers"],
+      "faction_id": "KHAZALITE_HOLDS",
+      "factions": ["Khazalite Holds"],
       "keywords": ["Infantry", "Ward (6+)"],
-      "factionKeywords": ["Fyreslayers"],
+      "factionKeywords": ["Khazalite Holds"],
       "referenceKeywords": "Infantry, Ward (6+)",
       "stats": {
         "move": "4\"",
@@ -136,15 +195,74 @@
       "notes": null
     },
     {
+      "id": "cc9d5fe2-f81a-5977-9d5b-2c309fdfab5c",
+      "name": "Hjulda Drakkblud",
+      "subname": null,
+      "cardType": "Warscroll",
+      "source": "aos-4e",
+      "faction_id": "KHAZALITE_HOLDS",
+      "factions": ["Khazalite Holds"],
+      "keywords": ["Infantry", "Hero"],
+      "factionKeywords": ["Grand Alliance Order", "Khazalite Holds"],
+      "referenceKeywords": "Hero, Infantry",
+      "stats": {
+        "move": "4\"",
+        "save": "3+",
+        "control": "2",
+        "health": "5",
+        "ward": null,
+        "wizard": null,
+        "priest": null
+      },
+      "points": null,
+      "modelCount": 1,
+      "cannotBeReinforced": true,
+      "isSpearhead": true,
+      "isLegends": false,
+      "weapons": {
+        "melee": [
+          {
+            "name": "Azangrom",
+            "type": "melee",
+            "range": null,
+            "attacks": "6",
+            "hit": "3+",
+            "wound": "3+",
+            "rend": "2",
+            "damage": "2",
+            "abilities": ["Crit (Mortal)"]
+          }
+        ]
+      },
+      "abilities": [
+        {
+          "name": "Browbeater",
+          "phase": "heroPhase",
+          "phaseDetails": "Your Hero Phase",
+          "icon": "offensive",
+          "castingValue": null,
+          "chantValue": null,
+          "cpCost": null,
+          "isReaction": false,
+          "declare": "Pick a visible friendly **Clanshields** unit wholly within 12\" of this unit to be the target.",
+          "effect": "Roll a dice. If this unit has any **grudge marks**, you can re-roll the roll. On a 3+, add 1 to the Rend characteristic of the target’s melee weapons until the start of your next turn."
+        }
+      ],
+      "summonedBy": null,
+      "loadout": null,
+      "baseSize": "32mm",
+      "notes": null
+    },
+    {
       "id": "45420b8d-7499-5ea7-a724-4392d886bbd8",
       "name": "Vulkite Berzerkers",
       "subname": null,
       "cardType": "Warscroll",
       "source": "aos-4e",
-      "faction_id": "FYRESLAYERS",
-      "factions": ["Fyreslayers"],
+      "faction_id": "KHAZALITE_HOLDS",
+      "factions": ["Khazalite Holds"],
       "keywords": ["Infantry", "Ward (6+)"],
-      "factionKeywords": ["Fyreslayers"],
+      "factionKeywords": ["Khazalite Holds"],
       "referenceKeywords": "Infantry, Ward (6+)",
       "stats": {
         "move": "4\"",
@@ -197,6 +315,62 @@
   ],
   "enhancements": [
     {
+      "id": "e084af10-4cd2-5b28-89e3-43d6f5b9d691",
+      "name": "Eager for Battle",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "startOfTurn",
+      "phaseDetails": "Once Per Battle (Army), Deployment Phase",
+      "icon": "movement",
+      "declare": "Pick a friendly non-**MONSTER** unit to be the target.",
+      "effect": "The target can use the ‘Normal Move’ ability as if it were your movement phase.",
+      "cpCost": null
+    },
+    {
+      "id": "01b851a3-2c4f-5bb2-bb6a-691859895fe8",
+      "name": "Flaming Runes",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "endOfTurn",
+      "phaseDetails": "Once Per Turn (Army), End of Enemy Turn",
+      "icon": "offensive",
+      "declare": "Pick a friendly unit to use this ability, then pick an enemy unit in combat with it to be the target.",
+      "effect": "Roll 6 dice. For each 4+, inflict 1 mortal damage on the target. The unit using this ability cannot use this ability for the rest of the battle.",
+      "cpCost": null
+    },
+    {
+      "id": "10100c1d-332c-56e9-92d3-41c4eab5a5af",
+      "name": "Guided by Inghilde",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "heroPhase",
+      "phaseDetails": "Once Per Battle, Any Hero Phase",
+      "icon": "movement",
+      "declare": "Pick a friendly **INFANTRY** unit to be the target.",
+      "effect": "Remove the target from the battlefield and set it up again on the battlefield more than 6\" from all enemy units.",
+      "cpCost": null
+    },
+    {
+      "id": "8e0c90b4-a4a0-5b4c-9955-dc8ed5c709cc",
+      "name": "Settle the Grudge",
+      "cardType": "Enhancement",
+      "enhancementType": "regimentAbilities",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "startOfTurn",
+      "phaseDetails": "Once Per Battle, Deployment Phase",
+      "icon": "offensive",
+      "declare": "Pick an enemy unit to be **grudged**.",
+      "effect": "For the rest of the battle, you can re-roll hit rolls of 1 for combat attacks made by friendly **INFANTRY** units that target the **grudged** unit.",
+      "cpCost": null
+    },
+    {
       "id": "78dfbf6a-0fb8-5a1a-b294-e18405a50b3e",
       "name": "Magmic Tunnels",
       "cardType": "Enhancement",
@@ -222,6 +396,62 @@
       "icon": "shooting",
       "declare": "Pick any number of friendly units that are not in combat and are within 10\" of any enemy units.",
       "effect": "For each of those units, pick a visible enemy unit within 10\" of it and roll a dice. On a 4+, inflict D3 mortal damage on that enemy unit.",
+      "cpCost": null
+    },
+    {
+      "id": "f7e4cf7e-8e2e-5a65-8c85-21b5dd909448",
+      "name": "Brazen Intimidation",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "heroPhase",
+      "phaseDetails": "Once Per Battle, Your Hero Phase",
+      "icon": "control",
+      "declare": "Pick a visible enemy unit within 12\" of your general to be the target.",
+      "effect": "Subtract D6 from the target’s control score until the start of your next turn.",
+      "cpCost": null
+    },
+    {
+      "id": "89213988-e50c-5cc4-8134-3683b230c2b0",
+      "name": "Well-honed Tactics",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "movementPhase",
+      "phaseDetails": "Once Per Battle, Your Movement Phase",
+      "icon": "movement",
+      "declare": "Pick a visible friendly unit wholly within 12\" of your general to be the target.",
+      "effect": "The target can use **RETREAT** abilities and still use **CHARGE** abilities later in the turn. In addition, no mortal damage is inflicted on the target by **RETREAT** abilities it uses this turn.",
+      "cpCost": null
+    },
+    {
+      "id": "ff098dab-8e96-5b19-90e5-4bcdb7f5e393",
+      "name": "Ragnisson's Cobalt Ale",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "combatPhase",
+      "phaseDetails": "Passive",
+      "icon": "offensive",
+      "declare": null,
+      "effect": "Add 2 to the Attacks characteristic of your general’s melee weapon.",
+      "cpCost": null
+    },
+    {
+      "id": "b26aacd4-d132-5970-a9df-92626981862c",
+      "name": "Grudge-Led Retribution",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "shootingPhase",
+      "phaseDetails": "Enemy Shooting Phase",
+      "icon": "movement",
+      "declare": "Pick a friendly unit that is not in combat and had any damage points allocated to it this phase to be the target.",
+      "effect": "The target can use the ‘Normal Move’ ability as if it were your movement phase.",
       "cpCost": null
     },
     {
@@ -279,11 +509,91 @@
       "declare": null,
       "effect": "You can re-roll **activation rolls** you make for the ‘Ur-gold Runes’ ability (see Battle Traits).",
       "cpCost": null
+    },
+    {
+      "id": "f8e0928e-1e5b-5704-9170-42e1a575a763",
+      "name": "Halo of Flames",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "combatPhase",
+      "phaseDetails": "Once Per Battle, Any Combat Phase",
+      "icon": "defensive",
+      "declare": null,
+      "effect": "Your general has **WARD (4+)** for the rest of the turn. Then, from the start of the next turn, subtract 1 from ward rolls for your general for the rest of the battle.",
+      "cpCost": null
+    },
+    {
+      "id": "bf13a995-4381-5762-b894-5bf00c5a29eb",
+      "name": "Stoke the Fire",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "shootingPhase",
+      "phaseDetails": "Once Per Battle, Your Shooting Phase",
+      "icon": "shooting",
+      "declare": null,
+      "effect": "For the rest of the phase:\n• The Attacks characteristic of your general’s **Roaring Fyrestream** is D3+4 instead of 4.\n• For each unmodified hit roll of 1 for your general’s shooting attacks, allocate D3 damage points to your general after the **SHOOT** ability has been resolved (ward rolls cannot be made for those damage points).",
+      "cpCost": null
+    },
+    {
+      "id": "e5a37750-ccfc-53d6-9d90-1d44ff822507",
+      "name": "Fyrespawn",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "endOfTurn",
+      "phaseDetails": "End of Any Turn",
+      "icon": "offensive",
+      "declare": "Pick an enemy unit in combat with your general to be the target.",
+      "effect": "Inflict 1 mortal damage on the target.",
+      "cpCost": null
+    },
+    {
+      "id": "ca3ce658-0c93-5835-869f-60ca5c051efc",
+      "name": "Lodgefather",
+      "cardType": "Enhancement",
+      "enhancementType": "spearheadEnhancements",
+      "source": "aos-4e",
+      "points": null,
+      "phase": "defensive",
+      "phaseDetails": "Passive",
+      "icon": "defensive",
+      "declare": null,
+      "effect": "Add 1 to ward rolls for friendly non‑**MONSTER** units while they are wholly within 3\" of your general.",
+      "cpCost": null
     }
   ],
   "lores": [],
   "rules": {
     "battleTraits": [
+      {
+        "name": "Fury for the Fallen",
+        "phase": "combatPhase",
+        "phaseDetails": "Passive",
+        "icon": "offensive",
+        "declare": null,
+        "effect": "Add 1 to the Attacks characteristic of melee weapons used by your **Vulkyn Flameseekers** and **Auric Hearthguard** units while they have half or less than half of their starting models.\n\nAdd 1 to the Attacks characteristic of your **Auric Runesmiter**’s melee weapons while it has 3 or more damage points.\n\nAdd 1 to the Attacks characteristic of your general’s melee weapons while they have 8 or more damage points."
+      },
+      {
+        "name": "Fiery Reinforcements",
+        "phase": "startOfTurn",
+        "phaseDetails": "Start of Your Turn",
+        "icon": "movement",
+        "declare": null,
+        "effect": "Set up this unit on the battlefield, within 1\" of a battlefield edge and more than 6\" from all enemy units."
+      },
+      {
+        "name": "Berserk Charge",
+        "phase": "chargePhase",
+        "phaseDetails": "Once Per Battle (Army), Reaction: You declared a Charge ability for a friendly unit",
+        "icon": "special",
+        "declare": null,
+        "effect": "You can re-roll the charge roll. If you do, until the start of your next turn, the unit using that **CHARGE** ability has **STRIKE‑FIRST** if it charged in the same turn."
+      },
       {
         "name": "Awaken the Runes",
         "phase": "startOfTurn",
@@ -291,9 +601,17 @@
         "icon": "special",
         "declare": "Pick 1 of the ur-gold runes from the **ur-gold runes** table, then make an **activation roll** of D6. Each urgold rune can only be activated once per battle.",
         "effect": "On a 1-5, the rune’s **standard effect** applies. On a 6, the rune’s **enhanced effect** applies as well. The effects last until the start of your next turn."
+      },
+      {
+        "name": "Honour Those With Gazul",
+        "phase": "heroPhase",
+        "phaseDetails": "Once Per Turn, Your Hero Phase",
+        "icon": "special",
+        "declare": null,
+        "effect": "Give 1 **grudge mark** to a friendly unit."
       }
     ]
   },
-  "updated": "2026-10-28T16:52:14.763Z",
-  "compatibleDataVersion": 488
+  "updated": "2026-11-18T12:01:05.758Z",
+  "compatibleDataVersion": 499
 }
